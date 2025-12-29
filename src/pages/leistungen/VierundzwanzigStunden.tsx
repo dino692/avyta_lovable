@@ -21,7 +21,7 @@ const VierundzwanzigStunden = () => {
   return (
     <>
       <Helmet>
-        <title>24-Stunden-Pflege Frankfurt | Rund-um-die-Uhr Betreuung | HerzPflege</title>
+        <title>24-Stunden-Pflege Frankfurt | Rund-um-die-Uhr Betreuung | AVYTA</title>
         <meta name="description" content="24-Stunden-Pflege in Frankfurt. Rund-um-die-Uhr Betreuung zu Hause durch qualifizierte Pflegekräfte. Alternative zum Pflegeheim. Jetzt beraten lassen!" />
       </Helmet>
       <div className="min-h-screen bg-background">

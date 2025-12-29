@@ -21,7 +21,7 @@ const Intensivpflege = () => {
   return (
     <>
       <Helmet>
-        <title>Intensivpflege Frankfurt | Beatmungspflege zu Hause | HerzPflege</title>
+        <title>Intensivpflege Frankfurt | Beatmungspflege zu Hause | AVYTA</title>
         <meta name="description" content="Spezialisierte Intensivpflege in Frankfurt. Professionelle Betreuung für beatmungspflichtige Patienten zu Hause. 24/7 Versorgung. Jetzt beraten lassen!" />
       </Helmet>
       <div className="min-h-screen bg-background">

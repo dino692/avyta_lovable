@@ -67,13 +67,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 pb-12 border-b border-background/10">
           <div className="lg:col-span-2 space-y-6">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
-                <Heart className="w-5 h-5 text-accent-foreground" />
-              </div>
-              <span className="font-display text-xl font-semibold">HerzPflege</span>
+              <img src="/images/avyta-logo.png" alt="AVYTA Pflegegesellschaft mbH" className="h-12 brightness-0 invert" />
             </Link>
             <p className="text-background/70 leading-relaxed max-w-md">
-              Professionelle ambulante Pflege mit Herz in Frankfurt und Umgebung. 
+              AVYTA Pflegegesellschaft mbH – Ambulanter Pflegedienst mit Herz in Frankfurt und Umgebung. 
               Unser Ziel ist es, Menschen ein selbstbestimmtes Leben zu ermöglichen.
             </p>
             <div className="flex gap-3">
@@ -121,7 +118,7 @@ const Footer = () => {
 
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-background/50">
-            © {new Date().getFullYear()} HerzPflege GmbH. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} AVYTA Pflegegesellschaft mbH. Alle Rechte vorbehalten.
           </p>
           <button
             onClick={scrollToTop}

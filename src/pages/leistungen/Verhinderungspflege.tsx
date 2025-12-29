@@ -21,7 +21,7 @@ const Verhinderungspflege = () => {
   return (
     <>
       <Helmet>
-        <title>Verhinderungspflege Frankfurt | Entlastung für Angehörige | HerzPflege</title>
+        <title>Verhinderungspflege Frankfurt | Entlastung für Angehörige | AVYTA</title>
         <meta name="description" content="Verhinderungspflege in Frankfurt. Professionelle Vertretung pflegender Angehöriger bei Urlaub, Krankheit oder Erholung. Bis zu 1.612€ im Jahr. Jetzt beraten lassen!" />
       </Helmet>
       <div className="min-h-screen bg-background">

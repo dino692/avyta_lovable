@@ -49,7 +49,7 @@ const teamVideos = [
     name: "Maria Schmidt",
     role: "Geschäftsführung",
     thumbnail: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=225&fit=crop",
-    title: "Warum ich HerzPflege gegründet habe",
+    title: "Warum ich AVYTA gegründet habe",
   },
   {
     name: "Thomas Weber",
@@ -68,20 +68,20 @@ const teamVideos = [
 const customerTestimonials = [
   {
     name: "Familie Schneider",
-    location: "Berlin-Charlottenburg",
-    text: "Das Team von HerzPflege hat sich liebevoll um unsere Mutter gekümmert. Wir sind unendlich dankbar für die professionelle und herzliche Betreuung.",
+    location: "Frankfurt-Bornheim",
+    text: "Das Team von AVYTA hat sich liebevoll um unsere Mutter gekümmert. Wir sind unendlich dankbar für die professionelle und herzliche Betreuung.",
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
   },
   {
     name: "Herr Meier",
-    location: "Potsdam",
-    text: "Nach meinem Schlaganfall hat mir das HerzPflege-Team geholfen, wieder selbstständig zu werden. Die Therapeuten sind wahre Engel!",
+    location: "Bad Vilbel",
+    text: "Nach meinem Schlaganfall hat mir das AVYTA-Team geholfen, wieder selbstständig zu werden. Die Pflegerinnen sind wahre Engel!",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
   },
   {
     name: "Familie Wagner",
-    location: "Berlin-Spandau",
-    text: "Seit über 3 Jahren betreut HerzPflege meinen Vater. Die Zuverlässigkeit und das Engagement sind beispiellos.",
+    location: "Frankfurt-Sachsenhausen",
+    text: "Seit über 3 Jahren betreut AVYTA meinen Vater. Die Zuverlässigkeit und das Engagement sind beispiellos.",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
   },
 ];
@@ -148,7 +148,7 @@ const Team = () => {
               Unser Team
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 animate-fade-up">
-              Die Menschen hinter <span className="text-primary">HerzPflege</span>
+              Die Menschen hinter <span className="text-primary">AVYTA</span>
             </h1>
             <p className="text-lg text-muted-foreground animate-fade-up" style={{ animationDelay: "0.1s" }}>
               Lernen Sie unser engagiertes Team kennen – Menschen mit Herz, Kompetenz und Leidenschaft für die Pflege.
@@ -211,7 +211,7 @@ const Team = () => {
               Was unser Team sagt
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Hören Sie direkt von unseren Mitarbeitern, was sie an ihrer Arbeit bei HerzPflege schätzen.
+              Hören Sie direkt von unseren Mitarbeitern, was sie an ihrer Arbeit bei AVYTA schätzen.
             </p>
           </div>
 

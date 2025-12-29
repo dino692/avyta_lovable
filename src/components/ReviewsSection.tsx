@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const certifications = [
   {
     name: "MDK Qualitätsprüfung",
-    grade: "Note 1,0",
+    grade: "Note 1,4",
     description: "Sehr gute Bewertung durch den Medizinischen Dienst",
     icon: Award,
   },
@@ -25,7 +25,7 @@ const certifications = [
 const reviews = [
   {
     platform: "Google",
-    rating: 4.9,
+    rating: 5.0,
     count: 328,
     logo: "⭐",
   },

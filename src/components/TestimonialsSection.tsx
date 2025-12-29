@@ -10,7 +10,7 @@ const videoTestimonials = [
     role: "Angehörige aus Frankfurt",
     thumbnail: "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=600&h=400&fit=crop",
     videoUrl: "#",
-    quote: "Die Pflegerinnen von HerzPflege haben unserem Vater so viel Lebensqualität zurückgegeben.",
+    quote: "Die Pflegerinnen von AVYTA haben unserem Vater so viel Lebensqualität zurückgegeben.",
   },
   {
     type: "employee",
@@ -37,7 +37,7 @@ const TestimonialsSection = () => {
             Echte Stimmen, echte Erfahrungen
           </h2>
           <p className="text-lg opacity-80">
-            Hören Sie direkt von unseren Kunden und Mitarbeitern, was HerzPflege besonders macht.
+            Hören Sie direkt von unseren Kunden und Mitarbeitern, was AVYTA besonders macht.
           </p>
         </div>
 

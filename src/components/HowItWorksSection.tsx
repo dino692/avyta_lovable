@@ -10,15 +10,15 @@ const steps = [
   },
   {
     number: "02",
-    icon: FileText,
-    title: "Bedarfsanalyse",
-    description: "Gemeinsam ermitteln wir Ihren individuellen Pflegebedarf und besprechen alle Möglichkeiten.",
-  },
-  {
-    number: "03",
     icon: Users,
     title: "Persönliches Kennenlernen",
     description: "Wir besuchen Sie zu Hause und lernen Sie und Ihre Situation persönlich kennen.",
+  },
+  {
+    number: "03",
+    icon: FileText,
+    title: "Bedarfsanalyse",
+    description: "Gemeinsam ermitteln wir Ihren individuellen Pflegebedarf und besprechen alle Möglichkeiten.",
   },
   {
     number: "04",

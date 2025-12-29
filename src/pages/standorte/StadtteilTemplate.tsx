@@ -12,7 +12,7 @@ const StadtteilTemplate = ({ name }: StadtteilTemplateProps) => {
   return (
     <>
       <Helmet>
-        <title>Ambulante Pflege Frankfurt {name} | HerzPflege</title>
+        <title>Ambulante Pflege Frankfurt {name} | AVYTA</title>
         <meta name="description" content={`Ambulante Pflege in Frankfurt ${name}. Professioneller Pflegedienst für Behandlungspflege, Grundpflege und 24h-Betreuung. Tel: 069 153 914 05`} />
       </Helmet>
       <div className="min-h-screen bg-background">

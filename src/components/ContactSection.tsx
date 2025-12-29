@@ -9,25 +9,25 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Telefon",
-    value: "030 / 123 456 789",
-    href: "tel:+4930123456789",
+    value: "069 153 914 05",
+    href: "tel:+496915391405",
   },
   {
     icon: Mail,
     label: "E-Mail",
-    value: "info@herzpflege.de",
-    href: "mailto:info@herzpflege.de",
+    value: "info@avyta.de",
+    href: "mailto:info@avyta.de",
   },
   {
     icon: MapPin,
     label: "Hauptsitz",
-    value: "Friedrichstraße 123, 10117 Berlin",
+    value: "Allerheiligentor 2-4, 60311 Frankfurt",
     href: "#",
   },
   {
     icon: Clock,
     label: "Bürozeiten",
-    value: "Mo-Fr: 8-18 Uhr | Pflege: 24/7",
+    value: "Mo-Fr: 8-12 Uhr | Pflege: 24/7",
     href: "#",
   },
 ];
@@ -101,11 +101,11 @@ const ContactSection = () => {
                 Unsere Notfall-Hotline ist 24 Stunden am Tag, 7 Tage die Woche erreichbar.
               </p>
               <a
-                href="tel:+4930123456789"
+                href="tel:+496915391405"
                 className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all"
               >
                 <Phone className="w-4 h-4" />
-                030 / 123 456 789
+                069 153 914 05
               </a>
             </div>
           </div>
