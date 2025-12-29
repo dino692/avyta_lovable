@@ -1,176 +1,125 @@
 import { useState } from "react";
-import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const testimonials = [
+const videoTestimonials = [
   {
-    type: "patient",
-    name: "Helga Müller, 78",
-    role: "Patientin seit 2019",
-    content: "Seit die Pflegerinnen von HerzPflege zu mir kommen, fühle ich mich nicht mehr allein. Sie geben mir nicht nur medizinische Hilfe, sondern auch das Gefühl, dass jemand sich wirklich kümmert.",
-    rating: 5,
+    type: "customer",
+    name: "Familie Weber",
+    role: "Angehörige aus Frankfurt",
+    thumbnail: "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=600&h=400&fit=crop",
+    videoUrl: "#",
+    quote: "Die Pflegerinnen von HerzPflege haben unserem Vater so viel Lebensqualität zurückgegeben.",
   },
   {
     type: "employee",
     name: "Sandra Krause",
     role: "Pflegefachkraft, 8 Jahre im Team",
-    content: "Ich habe schon bei vielen Pflegediensten gearbeitet, aber hier ist es anders. Die Wertschätzung für unsere Arbeit und der Zusammenhalt im Team sind außergewöhnlich.",
-    rating: 5,
-  },
-  {
-    type: "patient",
-    name: "Familie Weber",
-    role: "Angehörige",
-    content: "Als wir Hilfe für unseren Vater brauchten, waren wir überfordert. HerzPflege hat uns durch den ganzen Prozess begleitet und nimmt uns heute so viel Last von den Schultern.",
-    rating: 5,
-  },
-  {
-    type: "employee",
-    name: "Michael Hoffmann",
-    role: "Pflegehelfer, 3 Jahre im Team",
-    content: "Die flexiblen Arbeitszeiten und die faire Bezahlung haben mein Leben verbessert. Und die Fortbildungsmöglichkeiten sind großartig!",
-    rating: 5,
+    thumbnail: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=400&fit=crop",
+    videoUrl: "#",
+    quote: "Hier wird Wertschätzung großgeschrieben. Der Zusammenhalt im Team ist außergewöhnlich.",
   },
 ];
 
 const TestimonialsSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [filter, setFilter] = useState<"all" | "patient" | "employee">("all");
-
-  const filteredTestimonials = testimonials.filter(
-    (t) => filter === "all" || t.type === filter
-  );
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) =>
-      prev >= filteredTestimonials.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev <= 0 ? filteredTestimonials.length - 1 : prev - 1
-    );
-  };
+  const [activeVideo, setActiveVideo] = useState<number | null>(null);
 
   return (
     <section className="py-24 bg-primary text-primary-foreground" id="testimonials">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-2 bg-primary-foreground/10 text-primary-foreground rounded-full text-sm font-medium mb-4">
-            Stimmen & Erfahrungen
+            Video-Stimmen
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Was andere über uns sagen
+            Echte Stimmen, echte Erfahrungen
           </h2>
           <p className="text-lg opacity-80">
-            Hören Sie, was unsere Patienten, ihre Familien und unsere Mitarbeiter 
-            über die Arbeit bei HerzPflege berichten.
+            Hören Sie direkt von unseren Kunden und Mitarbeitern, was HerzPflege besonders macht.
           </p>
         </div>
 
-        {/* Filter Tabs */}
-        <div className="flex justify-center gap-2 mb-12">
-          {[
-            { key: "all", label: "Alle" },
-            { key: "patient", label: "Patienten & Angehörige" },
-            { key: "employee", label: "Mitarbeiter" },
-          ].map((tab) => (
-            <button
-              key={tab.key}
-              onClick={() => {
-                setFilter(tab.key as typeof filter);
-                setCurrentIndex(0);
-              }}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                filter === tab.key
-                  ? "bg-primary-foreground text-primary"
-                  : "bg-primary-foreground/10 hover:bg-primary-foreground/20"
-              }`}
+        {/* Video Grid */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {videoTestimonials.map((testimonial, index) => (
+            <Card 
+              key={testimonial.name} 
+              variant="glass" 
+              className="bg-primary-foreground/10 border-primary-foreground/20 overflow-hidden group"
             >
-              {tab.label}
-            </button>
+              <CardContent className="p-0">
+                {/* Video Thumbnail */}
+                <div className="relative aspect-video overflow-hidden">
+                  <img 
+                    src={testimonial.thumbnail} 
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-primary/40 flex items-center justify-center">
+                    <button 
+                      onClick={() => setActiveVideo(index)}
+                      className="w-20 h-20 rounded-full bg-primary-foreground/90 flex items-center justify-center hover:bg-primary-foreground hover:scale-110 transition-all shadow-2xl"
+                    >
+                      <Play className="w-8 h-8 text-primary ml-1" fill="currentColor" />
+                    </button>
+                  </div>
+                  {/* Badge */}
+                  <div className="absolute top-4 left-4">
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      testimonial.type === 'customer' 
+                        ? 'bg-accent text-accent-foreground' 
+                        : 'bg-primary-foreground text-primary'
+                    }`}>
+                      {testimonial.type === 'customer' ? 'Kundenstimme' : 'Mitarbeiterstimme'}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <p className="text-lg italic opacity-90 mb-4">
+                    "{testimonial.quote}"
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary-foreground/20 flex items-center justify-center text-xl">
+                      {testimonial.type === 'employee' ? '👩‍⚕️' : '👨‍👩‍👧'}
+                    </div>
+                    <div>
+                      <div className="font-semibold">{testimonial.name}</div>
+                      <div className="text-sm opacity-75">{testimonial.role}</div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
-        {/* Testimonial Cards */}
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            {filteredTestimonials.length > 0 && (
-              <Card variant="glass" className="bg-primary-foreground/10 border-primary-foreground/20">
-                <CardContent className="p-8 md:p-12">
-                  <Quote className="w-12 h-12 opacity-30 mb-6" />
-
-                  <p className="text-xl md:text-2xl leading-relaxed mb-8 font-light">
-                    "{filteredTestimonials[currentIndex].content}"
-                  </p>
-
-                  <div className="flex items-center justify-between flex-wrap gap-4">
-                    <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 rounded-full bg-primary-foreground/20 flex items-center justify-center text-2xl">
-                        {filteredTestimonials[currentIndex].type === "employee" ? "👩‍⚕️" : "👤"}
-                      </div>
-                      <div>
-                        <div className="font-semibold text-lg">
-                          {filteredTestimonials[currentIndex].name}
-                        </div>
-                        <div className="text-sm opacity-75">
-                          {filteredTestimonials[currentIndex].role}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-1">
-                      {[...Array(filteredTestimonials[currentIndex].rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                      ))}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            )}
-
-            {/* Navigation */}
-            {filteredTestimonials.length > 1 && (
-              <div className="flex justify-center gap-4 mt-8">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={prevSlide}
-                  className="hover:bg-primary-foreground/10"
-                >
-                  <ChevronLeft className="w-6 h-6" />
-                </Button>
-
-                {/* Dots */}
-                <div className="flex items-center gap-2">
-                  {filteredTestimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        index === currentIndex
-                          ? "bg-primary-foreground w-6"
-                          : "bg-primary-foreground/30"
-                      }`}
-                    />
-                  ))}
+        {/* Video Modal Placeholder */}
+        {activeVideo !== null && (
+          <div 
+            className="fixed inset-0 z-50 bg-foreground/90 flex items-center justify-center p-4"
+            onClick={() => setActiveVideo(null)}
+          >
+            <div className="relative w-full max-w-4xl aspect-video bg-foreground rounded-xl overflow-hidden">
+              <div className="absolute inset-0 flex items-center justify-center text-background">
+                <div className="text-center">
+                  <Play className="w-16 h-16 mx-auto mb-4 opacity-50" />
+                  <p className="text-lg opacity-75">Video-Player Platzhalter</p>
+                  <p className="text-sm opacity-50 mt-2">Hier wird das Testimonial-Video eingebettet</p>
                 </div>
-
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={nextSlide}
-                  className="hover:bg-primary-foreground/10"
-                >
-                  <ChevronRight className="w-6 h-6" />
-                </Button>
               </div>
-            )}
+              <button 
+                onClick={() => setActiveVideo(null)}
+                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"
+              >
+                ✕
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
