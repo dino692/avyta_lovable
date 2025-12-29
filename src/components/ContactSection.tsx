@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -35,8 +34,6 @@ const contactInfo = [
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
-    phone: "",
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -44,7 +41,7 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setFormData({ name: "", message: "" });
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
@@ -53,21 +50,34 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-24 bg-foreground text-background" id="contact">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16">
+    <section className="py-28 relative overflow-hidden" id="contact">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent" />
+      
+      {/* Decorative elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 left-10 w-32 h-32 border border-white rounded-full" />
+        <div className="absolute top-32 left-32 w-16 h-16 border border-white rounded-full" />
+        <div className="absolute bottom-10 right-10 w-48 h-48 border border-white rounded-full" />
+        <div className="absolute bottom-32 right-32 w-24 h-24 border border-white rounded-full" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Contact Info */}
-          <div className="space-y-8">
+          <div className="space-y-8 text-white">
             <div>
-              <span className="inline-block px-4 py-2 bg-background/10 rounded-full text-sm font-medium mb-4">
-                Kontakt
-              </span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                Wir freuen uns auf Sie
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
+                <MessageSquare className="w-4 h-4" />
+                <span className="text-sm font-medium">Kontakt</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+                Wir freuen uns
+                <span className="block">auf Sie</span>
               </h2>
-              <p className="text-lg opacity-80 leading-relaxed">
+              <p className="text-xl text-white/80 leading-relaxed">
                 Haben Sie Fragen oder möchten Sie ein unverbindliches Beratungsgespräch? 
-                Wir sind für Sie da – persönlich, telefonisch oder per E-Mail.
+                Wir sind für Sie da.
               </p>
             </div>
 
@@ -77,15 +87,15 @@ const ContactSection = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="group p-4 rounded-xl bg-background/5 hover:bg-background/10 transition-colors"
+                  className="group p-5 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-5 h-5 text-accent" />
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0 group-hover:bg-white/30 transition-colors">
+                      <item.icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="text-sm opacity-60 mb-1">{item.label}</div>
-                      <div className="font-medium">{item.value}</div>
+                      <div className="text-sm text-white/60 mb-1">{item.label}</div>
+                      <div className="font-semibold">{item.value}</div>
                     </div>
                   </div>
                 </a>
@@ -93,95 +103,99 @@ const ContactSection = () => {
             </div>
 
             {/* Emergency note */}
-            <div className="p-6 rounded-xl bg-accent/20 border border-accent/30">
-              <h3 className="font-display font-semibold text-lg mb-2">
+            <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30">
+              <h3 className="font-display font-semibold text-xl mb-2">
                 🚨 Pflegenotfall?
               </h3>
-              <p className="opacity-80 mb-3">
-                Unsere Notfall-Hotline ist 24 Stunden am Tag, 7 Tage die Woche erreichbar.
+              <p className="text-white/80 mb-4">
+                Unsere Notfall-Hotline ist 24/7 erreichbar.
               </p>
               <a
                 href="tel:+496915391405"
-                className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-white text-primary font-bold rounded-full hover:bg-white/90 transition-colors"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-5 h-5" />
                 069 153 914 05
               </a>
             </div>
           </div>
 
           {/* Contact Form */}
-          <Card variant="glass" className="bg-background/5 border-background/10">
-            <CardContent className="p-8">
-              <h3 className="font-display font-semibold text-2xl mb-6">
+          <div className="relative">
+            <div className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl">
+              <h3 className="font-display font-bold text-2xl md:text-3xl text-foreground mb-2">
                 Nachricht senden
               </h3>
+              <p className="text-muted-foreground mb-8">
+                Schreiben Sie uns – wir melden uns schnellstmöglich!
+              </p>
 
               {isSubmitted ? (
-                <div className="text-center py-12">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-accent/20 flex items-center justify-center">
-                    <CheckCircle className="w-8 h-8 text-accent" />
+                <div className="text-center py-16">
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-emerald-100 flex items-center justify-center">
+                    <CheckCircle className="w-10 h-10 text-emerald-600" />
                   </div>
-                  <h4 className="font-display font-semibold text-xl mb-2">
+                  <h4 className="font-display font-bold text-2xl text-foreground mb-3">
                     Vielen Dank!
                   </h4>
-                  <p className="opacity-80">
-                    Wir haben Ihre Nachricht erhalten und melden uns schnellstmöglich bei Ihnen.
+                  <p className="text-muted-foreground">
+                    Wir haben Ihre Nachricht erhalten und melden uns schnellstmöglich.
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                      Ihr Name *
+                    </label>
                     <Input
+                      id="name"
                       name="name"
-                      placeholder="Ihr Name *"
+                      placeholder="Max Mustermann"
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="bg-background/10 border-background/20 placeholder:text-background/50 text-background"
-                    />
-                  </div>
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <Input
-                      name="email"
-                      type="email"
-                      placeholder="E-Mail *"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="bg-background/10 border-background/20 placeholder:text-background/50 text-background"
-                    />
-                    <Input
-                      name="phone"
-                      type="tel"
-                      placeholder="Telefon"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="bg-background/10 border-background/20 placeholder:text-background/50 text-background"
+                      className="h-14 text-lg border-2 border-border focus:border-primary bg-secondary/30 placeholder:text-muted-foreground/60"
                     />
                   </div>
                   <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                      Ihre Nachricht *
+                    </label>
                     <Textarea
+                      id="message"
                       name="message"
-                      placeholder="Ihre Nachricht *"
+                      placeholder="Wie können wir Ihnen helfen?"
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      rows={5}
-                      className="bg-background/10 border-background/20 placeholder:text-background/50 text-background resize-none"
+                      rows={6}
+                      className="text-lg border-2 border-border focus:border-primary bg-secondary/30 placeholder:text-muted-foreground/60 resize-none"
                     />
                   </div>
-                  <Button type="submit" variant="hero" size="lg" className="w-full group">
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full h-14 text-lg font-bold bg-primary hover:bg-primary/90 group"
+                  >
                     Nachricht senden
-                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <Send className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
-                  <p className="text-sm opacity-60 text-center">
-                    Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu.
+                  <p className="text-sm text-muted-foreground text-center">
+                    Mit dem Absenden stimmen Sie unserer{" "}
+                    <a href="/datenschutz" className="text-primary hover:underline">
+                      Datenschutzerklärung
+                    </a>{" "}
+                    zu.
                   </p>
                 </form>
               )}
-            </CardContent>
-          </Card>
+            </div>
+
+            {/* Decorative floating element */}
+            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-accent/20 rounded-full blur-2xl" />
+            <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl" />
+          </div>
         </div>
       </div>
     </section>
