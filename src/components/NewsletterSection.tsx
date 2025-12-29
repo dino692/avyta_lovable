@@ -1,88 +1,128 @@
 import { useState } from "react";
-import { Mail, ArrowRight, CheckCircle } from "lucide-react";
+import { BookOpen, ArrowRight, CheckCircle, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
+const benefits = [
+  "Checkliste: Erste Schritte bei Pflegebedürftigkeit",
+  "So beantragen Sie den richtigen Pflegegrad",
+  "Welche Leistungen Ihnen zustehen",
+  "Tipps zur Entlastung pflegender Angehöriger",
+  "Wichtige Kontakte und Anlaufstellen",
+];
+
 const NewsletterSection = () => {
-  const [email, setEmail] = useState("");
+  const [formData, setFormData] = useState({ name: "", email: "" });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (formData.email && formData.name) {
       setIsSubmitted(true);
-      setEmail("");
-      setTimeout(() => setIsSubmitted(false), 3000);
+      setFormData({ name: "", email: "" });
     }
   };
 
   return (
     <section className="py-24 relative overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          {/* Icon */}
-          <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
-            <Mail className="w-8 h-8 text-primary" />
-          </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div>
+              <div className="w-16 h-16 mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
+                <BookOpen className="w-8 h-8 text-primary" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+                Kostenloser Ratgeber für pflegende Angehörige
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Laden Sie jetzt unseren umfassenden Pflege-Ratgeber herunter und erhalten Sie 
+                wertvolle Tipps für den Pflegealltag – kompakt und verständlich zusammengefasst.
+              </p>
 
-          {/* Content */}
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Bleiben Sie informiert
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-            Erhalten Sie wertvolle Tipps zur häuslichen Pflege, Neuigkeiten zu 
-            unseren Leistungen und wichtige Gesundheits-Informationen.
-          </p>
-
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <div className="flex-1 relative">
-              <Input
-                type="email"
-                placeholder="Ihre E-Mail-Adresse"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="h-14 pr-4 bg-card"
-                required
-              />
+              <h3 className="font-display font-semibold text-foreground mb-4">
+                Das erwartet Sie im Ratgeber:
+              </h3>
+              <ul className="space-y-3 mb-8">
+                {benefits.map((benefit) => (
+                  <li key={benefit} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <Button type="submit" variant="hero" size="lg" className="group">
+
+            {/* Form */}
+            <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
               {isSubmitted ? (
-                <>
-                  <CheckCircle className="w-5 h-5" />
-                  Angemeldet!
-                </>
+                <div className="text-center py-8">
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Download className="w-10 h-10 text-primary" />
+                  </div>
+                  <h3 className="font-display font-bold text-2xl text-foreground mb-3">
+                    Vielen Dank!
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    Der Ratgeber wurde an Ihre E-Mail-Adresse gesendet. 
+                    Bitte überprüfen Sie auch Ihren Spam-Ordner.
+                  </p>
+                  <Button variant="outline" onClick={() => setIsSubmitted(false)}>
+                    Nochmal herunterladen
+                  </Button>
+                </div>
               ) : (
                 <>
-                  Anmelden
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <h3 className="font-display font-bold text-xl text-foreground mb-2">
+                    Jetzt kostenlos herunterladen
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-6">
+                    Tragen Sie Ihre Daten ein und erhalten Sie den Ratgeber direkt per E-Mail.
+                  </p>
+                  
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div>
+                      <Input
+                        type="text"
+                        placeholder="Ihr Vorname *"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        required
+                        className="h-12"
+                      />
+                    </div>
+                    <div>
+                      <Input
+                        type="email"
+                        placeholder="Ihre E-Mail-Adresse *"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        required
+                        className="h-12"
+                      />
+                    </div>
+                    <Button type="submit" variant="hero" size="lg" className="w-full group">
+                      <Download className="w-5 h-5" />
+                      Ratgeber herunterladen
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </form>
+
+                  <p className="text-xs text-muted-foreground mt-4 text-center">
+                    Mit dem Absenden stimmen Sie unserer{" "}
+                    <a href="/datenschutz" className="text-primary hover:underline">
+                      Datenschutzerklärung
+                    </a>{" "}
+                    zu. Kein Spam, Abmeldung jederzeit möglich.
+                  </p>
                 </>
               )}
-            </Button>
-          </form>
-
-          {/* Privacy note */}
-          <p className="text-sm text-muted-foreground mt-4">
-            Mit der Anmeldung stimmen Sie unserer{" "}
-            <a href="/datenschutz" className="text-primary hover:underline">
-              Datenschutzerklärung
-            </a>{" "}
-            zu. Kein Spam, jederzeit abmelden.
-          </p>
-
-          {/* Benefits */}
-          <div className="flex flex-wrap justify-center gap-6 mt-8">
-            {["Kostenlos", "Monatlich", "Abmeldung jederzeit"].map((benefit) => (
-              <div key={benefit} className="flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle className="w-4 h-4 text-primary" />
-                {benefit}
-              </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
