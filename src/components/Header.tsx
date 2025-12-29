@@ -58,7 +58,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src="/images/avyta-logo.png" alt="AVYTA Pflegegesellschaft mbH" className="h-12" />
+            <img src="/images/avyta-logo.png" alt="AVYTA Pflegegesellschaft mbH" className="h-8" />
           </Link>
 
           {/* Desktop Navigation */}

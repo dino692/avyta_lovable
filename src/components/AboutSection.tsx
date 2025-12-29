@@ -50,7 +50,7 @@ const AboutSection = () => {
               <div className="absolute -bottom-8 -right-8 bg-card rounded-xl p-6 shadow-lg border border-border">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
-                    <div className="text-2xl font-display font-bold text-accent">50+</div>
+                    <div className="text-2xl font-display font-bold text-accent">20+</div>
                     <div className="text-xs text-muted-foreground">Mitarbeiter</div>
                   </div>
                   <div className="text-center">
