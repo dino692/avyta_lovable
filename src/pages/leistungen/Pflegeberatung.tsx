@@ -21,7 +21,7 @@ const Pflegeberatung = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegeberatung Frankfurt | Kostenlose Beratung | HerzPflege</title>
+        <title>Pflegeberatung Frankfurt | Kostenlose Beratung | AVYTA</title>
         <meta name="description" content="Kostenlose Pflegeberatung in Frankfurt. Beratung zu Pflegeleistungen, Pflegegrad-Antrag und MDK-Begutachtung. Kompetente Hilfe für Pflegebedürftige und Angehörige." />
       </Helmet>
       <div className="min-h-screen bg-background">

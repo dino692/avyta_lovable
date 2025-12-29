@@ -1,10 +1,10 @@
 import { Heart, Users, Clock, Award } from "lucide-react";
 
 const features = [
-  { icon: Heart, title: "Pflege mit Herz", description: "Wir behandeln jeden Patienten wie ein Familienmitglied. Empathie und Respekt stehen bei uns an erster Stelle." },
-  { icon: Users, title: "Feste Bezugspfleger", description: "Ein vertrautes Gesicht – bei uns werden Sie von denselben Pflegekräften betreut, die Sie kennen und denen Sie vertrauen." },
+  { icon: Users, title: "Nur Frauen als Pflegerinnen", description: "Unser Team besteht ausschließlich aus qualifizierten Pflegerinnen – für ein besonders vertrauensvolles Pflegeerlebnis." },
   { icon: Clock, title: "24/7 Erreichbarkeit", description: "Ob Tag oder Nacht – wir sind immer für Sie da. Unsere Notfall-Hotline ist rund um die Uhr besetzt." },
-  { icon: Award, title: "Höchste Qualität", description: "Regelmäßige Fortbildungen und strenge Qualitätskontrollen garantieren erstklassige Pflege nach neuesten Standards." },
+  { icon: Heart, title: "Spezialisiert auf Demenz", description: "Wir sind speziell geschult im Umgang mit Demenzerkrankungen und bieten einfühlsame, kompetente Betreuung." },
+  { icon: Award, title: "Spezialisiert auf Diabetes", description: "Unsere Pflegekräfte sind Experten für die Betreuung von Diabetes-Patienten mit allen notwendigen Versorgungsleistungen." },
 ];
 
 const AboutSection = () => {
@@ -43,7 +43,7 @@ const AboutSection = () => {
                   <div className="w-14 h-14 rounded-full bg-primary-foreground/20 flex items-center justify-center text-2xl">👩‍⚕️</div>
                   <div>
                     <div className="font-semibold">Jasmina Müller</div>
-                    <div className="text-sm opacity-75">Gründerin, Geschäftsleitung, PDL & Praxisanleitung</div>
+                    <div className="text-sm opacity-75">Geschäftsleitung, PDL & Praxisanleitung</div>
                   </div>
                 </div>
               </div>

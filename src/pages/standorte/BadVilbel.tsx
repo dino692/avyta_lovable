@@ -8,7 +8,7 @@ const BadVilbel = () => {
   return (
     <>
       <Helmet>
-        <title>Ambulante Pflege Bad Vilbel | HerzPflege Pflegedienst</title>
+        <title>Ambulante Pflege Bad Vilbel | AVYTA Pflegedienst</title>
         <meta name="description" content="Ambulante Pflege in Bad Vilbel. Professioneller Pflegedienst für Behandlungspflege, Grundpflege und 24h-Betreuung. Tel: 069 153 914 05" />
       </Helmet>
       <div className="min-h-screen bg-background">
