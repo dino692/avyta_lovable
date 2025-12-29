@@ -1,26 +1,10 @@
 import { Heart, Users, Clock, Award } from "lucide-react";
 
 const features = [
-  {
-    icon: Heart,
-    title: "Pflege mit Herz",
-    description: "Wir behandeln jeden Patienten wie ein Familienmitglied. Empathie und Respekt stehen bei uns an erster Stelle.",
-  },
-  {
-    icon: Users,
-    title: "Feste Bezugspfleger",
-    description: "Ein vertrautes Gesicht – bei uns werden Sie von denselben Pflegekräften betreut, die Sie kennen und denen Sie vertrauen.",
-  },
-  {
-    icon: Clock,
-    title: "24/7 Erreichbarkeit",
-    description: "Ob Tag oder Nacht – wir sind immer für Sie da. Unsere Notfall-Hotline ist rund um die Uhr besetzt.",
-  },
-  {
-    icon: Award,
-    title: "Höchste Qualität",
-    description: "Regelmäßige Fortbildungen und strenge Qualitätskontrollen garantieren erstklassige Pflege nach neuesten Standards.",
-  },
+  { icon: Heart, title: "Pflege mit Herz", description: "Wir behandeln jeden Patienten wie ein Familienmitglied. Empathie und Respekt stehen bei uns an erster Stelle." },
+  { icon: Users, title: "Feste Bezugspfleger", description: "Ein vertrautes Gesicht – bei uns werden Sie von denselben Pflegekräften betreut, die Sie kennen und denen Sie vertrauen." },
+  { icon: Clock, title: "24/7 Erreichbarkeit", description: "Ob Tag oder Nacht – wir sind immer für Sie da. Unsere Notfall-Hotline ist rund um die Uhr besetzt." },
+  { icon: Award, title: "Höchste Qualität", description: "Regelmäßige Fortbildungen und strenge Qualitätskontrollen garantieren erstklassige Pflege nach neuesten Standards." },
 ];
 
 const AboutSection = () => {
@@ -28,84 +12,54 @@ const AboutSection = () => {
     <section className="py-24 overflow-hidden" id="about">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
           <div className="space-y-8">
             <div>
-              <span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium mb-4">
-                Wer sind wir
-              </span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-                Was uns besonders macht
-              </h2>
+              <span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium mb-4">Wer sind wir</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">Was uns besonders macht</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Seit über 15 Jahren pflegen wir mit Leidenschaft. Unser Team aus 
-                qualifizierten Pflegekräften versteht, dass gute Pflege mehr ist als 
-                nur medizinische Versorgung – es geht um Menschlichkeit, Würde und 
-                Lebensqualität.
+                Unser Team aus qualifizierten Pflegekräften versteht, dass gute Pflege mehr ist als nur medizinische Versorgung – es geht um Menschlichkeit, Würde und Lebensqualität.
               </p>
             </div>
-
             <div className="grid sm:grid-cols-2 gap-6">
               {features.map((feature, index) => (
-                <div
-                  key={feature.title}
-                  className="group p-6 rounded-xl bg-card border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
+                <div key={feature.title} className="group p-6 rounded-xl bg-card border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300" style={{ animationDelay: `${index * 0.1}s` }}>
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                     <feature.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
                   </div>
-                  <h3 className="font-display font-semibold text-foreground mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {feature.description}
-                  </p>
+                  <h3 className="font-display font-semibold text-foreground mb-2">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Visual Element */}
           <div className="relative">
             <div className="relative z-10">
-              {/* Main Card */}
               <div className="bg-primary rounded-2xl p-8 text-primary-foreground">
-                <h3 className="font-display text-2xl font-bold mb-4">
-                  Unsere Mission
-                </h3>
+                <h3 className="font-display text-2xl font-bold mb-4">Unsere Mission</h3>
                 <p className="leading-relaxed opacity-90 mb-6">
-                  "Wir glauben daran, dass jeder Mensch das Recht hat, in Würde 
-                  und Selbstbestimmung zu leben – egal in welchem Alter oder 
-                  Gesundheitszustand. Unser Ziel ist es, genau das möglich zu machen."
+                  "Wir glauben daran, dass jeder Mensch das Recht hat, in Würde und Selbstbestimmung zu leben – egal in welchem Alter oder Gesundheitszustand."
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-primary-foreground/20 flex items-center justify-center text-2xl">
-                    👩‍⚕️
-                  </div>
+                  <div className="w-14 h-14 rounded-full bg-primary-foreground/20 flex items-center justify-center text-2xl">👩‍⚕️</div>
                   <div>
-                    <div className="font-semibold">Dr. Maria Schmidt</div>
-                    <div className="text-sm opacity-75">Gründerin & Pflegedienstleitung</div>
+                    <div className="font-semibold">Jasmina Müller</div>
+                    <div className="text-sm opacity-75">Gründerin, Geschäftsleitung, PDL & Praxisanleitung</div>
                   </div>
                 </div>
               </div>
-
-              {/* Stats Card */}
               <div className="absolute -bottom-8 -right-8 bg-card rounded-xl p-6 shadow-lg border border-border">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
-                    <div className="text-2xl font-display font-bold text-accent">120+</div>
+                    <div className="text-2xl font-display font-bold text-accent">50+</div>
                     <div className="text-xs text-muted-foreground">Mitarbeiter</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-display font-bold text-accent">5</div>
+                    <div className="text-2xl font-display font-bold text-accent">2</div>
                     <div className="text-xs text-muted-foreground">Standorte</div>
                   </div>
                 </div>
               </div>
             </div>
-
-            {/* Background decoration */}
             <div className="absolute -top-10 -left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
             <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-primary/10 rounded-full blur-2xl" />
           </div>
