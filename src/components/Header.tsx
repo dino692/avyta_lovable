@@ -3,13 +3,13 @@ import { Menu, X, Phone, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { name: "Start", href: "#" },
-  { name: "Team", href: "#about" },
-  { name: "Leistungen", href: "#services" },
-  { name: "Standorte", href: "#locations" },
-  { name: "Karriere", href: "#testimonials" },
-  { name: "Blog", href: "#blog" },
-  { name: "Kontakt", href: "#contact" },
+  { name: "Start", href: "/" },
+  { name: "Team", href: "/team" },
+  { name: "Leistungen", href: "/#services" },
+  { name: "Standorte", href: "/#locations" },
+  { name: "Karriere", href: "/#testimonials" },
+  { name: "Blog", href: "/#blog" },
+  { name: "Kontakt", href: "/#contact" },
 ];
 
 const Header = () => {
