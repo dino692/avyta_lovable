@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, Newspaper, Lightbulb, Scale, Activity, BookOpen, Stethoscope, HandHelping, HeartPulse, Home, Clock, MessageCircle, CalendarCheck, LucideIcon } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, Newspaper, Lightbulb, Scale, Activity, BookOpen, Stethoscope, HandHelping, HeartPulse, Home, Clock, MessageCircle, CalendarCheck, LucideIcon, Building2, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -139,30 +139,32 @@ const Header = () => {
                   Standorte
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[400px] p-4">
+                  <div className="w-[420px] p-4">
                     <div className="mb-4">
-                      <div className="text-sm font-medium text-muted-foreground mb-2">Hauptstandorte</div>
-                      <div className="flex gap-2">
+                      <div className="text-sm font-medium text-muted-foreground mb-3">Hauptstandorte</div>
+                      <div className="flex gap-3">
                         {standorte.hauptstandorte.map((item) => (
                           <Link
                             key={item.name}
                             to={item.href}
-                            className="px-4 py-2 rounded-lg bg-primary/10 text-primary font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
+                            className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary/10 text-primary font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
                           >
+                            <Building2 className="w-4 h-4" />
                             {item.name}
                           </Link>
                         ))}
                       </div>
                     </div>
                     <div>
-                      <div className="text-sm font-medium text-muted-foreground mb-2">Frankfurt Stadtteile</div>
+                      <div className="text-sm font-medium text-muted-foreground mb-3">Frankfurt Stadtteile</div>
                       <div className="grid grid-cols-3 gap-2">
                         {standorte.frankfurtStadtteile.map((item) => (
                           <Link
                             key={item.name}
                             to={item.href}
-                            className="px-3 py-2 rounded-lg text-sm hover:bg-primary/5 text-foreground hover:text-primary transition-colors"
+                            className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm hover:bg-primary/5 text-foreground hover:text-primary transition-colors group"
                           >
+                            <MapPin className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
                             {item.name}
                           </Link>
                         ))}
