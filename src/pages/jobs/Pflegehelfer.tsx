@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JobsSidebar from "@/components/JobsSidebar";
 import { Heart, CheckCircle2, MapPin, Clock, Euro, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -79,7 +80,7 @@ const Pflegehelfer = () => {
         {/* Content */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2 space-y-12">
                   <div>
@@ -122,7 +123,7 @@ const Pflegehelfer = () => {
                   </div>
                 </div>
 
-                <div>
+                <div className="space-y-6">
                   <div className="sticky top-28 space-y-6">
                     <div className="p-6 bg-muted/30 rounded-2xl">
                       <h3 className="font-semibold text-foreground mb-4">Das bieten wir</h3>
@@ -147,6 +148,8 @@ const Pflegehelfer = () => {
                       oder rufen Sie uns an: <br />
                       <a href="tel:+496915391405" className="text-primary font-medium">069 153 914 05</a>
                     </p>
+
+                    <JobsSidebar />
                   </div>
                 </div>
               </div>

@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Briefcase, Users, Heart, Clock, MapPin, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
+import { Briefcase, Users, Heart, Clock, MapPin, ArrowRight, CheckCircle2, Sparkles, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const jobCategories = [
@@ -11,14 +11,14 @@ const jobCategories = [
     href: "/jobs/stellenangebote",
     description: "Übersicht aller offenen Positionen bei AVYTA",
     icon: Briefcase,
-    count: "4 Stellen",
+    count: "5 Stellen",
   },
   {
-    title: "Pflegehelfer/in",
-    href: "/jobs/pflegehelfer",
-    description: "Einstieg in die Pflege ohne Ausbildung",
-    icon: Heart,
-    count: "2 Stellen",
+    title: "Pflegefachkraft",
+    href: "/jobs/pflegefachkraft",
+    description: "Examinierte Fachkräfte gesucht",
+    icon: Sparkles,
+    count: "1 Stelle",
   },
   {
     title: "Pflegehilfskraft",
@@ -28,10 +28,17 @@ const jobCategories = [
     count: "1 Stelle",
   },
   {
-    title: "Pflegefachkraft",
-    href: "/jobs/pflegefachkraft",
-    description: "Examinierte Fachkräfte gesucht",
-    icon: Sparkles,
+    title: "Pflegehelfer/in",
+    href: "/jobs/pflegehelfer",
+    description: "Einstieg in die Pflege ohne Ausbildung",
+    icon: Heart,
+    count: "2 Stellen",
+  },
+  {
+    title: "Haushaltshilfe",
+    href: "/jobs/haushaltshilfe",
+    description: "Unterstützung im Alltag",
+    icon: Home,
     count: "1 Stelle",
   },
 ];
@@ -96,7 +103,7 @@ const Jobs = () => {
             <h2 className="text-3xl font-display font-bold text-foreground mb-12 text-center">
               Offene Positionen
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {jobCategories.map((category) => (
                 <Link
                   key={category.href}
