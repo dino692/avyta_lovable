@@ -3,27 +3,39 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, FileText } from "lucide-react";
+import { CheckCircle, ArrowRight, FileText, Users, Heart, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
-const leistungen = [
-  "Ermittlung des Pflegebedarfs",
-  "Beratung zu Pflegeleistungen",
-  "Hilfe bei der Antragstellung",
-  "Vorbereitung auf die MDK-Begutachtung",
-  "Beratung zu Pflegehilfsmitteln",
-  "Wohnraumanpassung",
-  "Entlastungsangebote für Angehörige",
-  "Finanzierungsberatung",
+const faqs = [
+  {
+    question: "Wie kann ich bettlägerige Angehörige mit einer Pflegeberatung in Frankfurt zu Hause pflegen?",
+    answer: "Zur Versorgung und Pflege von Intensivpatienten zu Hause entwickeln wir bei Avyta spezielle Pflegepläne. Angehörige mit Bedarf leiten wir Schritt für Schritt dazu an, auch schwere medizinische Aufgaben selbst zu übernehmen. Ihre Angehörigen können Sie so in jeder Lebenslage im gewohnten Umfeld pflegen."
+  },
+  {
+    question: "Wie kann die Avyta Pflegeberatung in Frankfurt eingeschränkte Menschen unterstützen?",
+    answer: "Wir entwickeln individuelle Pflegepläne, die auf die persönlichen Bedürfnisse und Wünsche von Pflegebedürftigen zugeschnitten sind. Unsere Berater arbeiten eng mit Familien und Betroffenen zusammen, um sicherzustellen, dass die Pflege im Einklang mit den individuellen Vorlieben und Gewohnheiten erfolgt."
+  },
+  {
+    question: "Wann sollte ich die Pflegeberatung in Frankfurt von Avyta in Anspruch nehmen?",
+    answer: "Sie sollten uns kontaktieren, sobald eine Pflegebedürftigkeit eintritt oder absehbar ist – sei es durch einen Unfall, eine Operation, Krankheit oder das Alter. Je früher wir gemeinsam planen können, desto besser können wir Ihnen und Ihren Angehörigen helfen."
+  },
 ];
 
 const Pflegeberatung = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegeberatung Frankfurt | Kostenlose Beratung | AVYTA</title>
-        <meta name="description" content="Kostenlose Pflegeberatung in Frankfurt. Beratung zu Pflegeleistungen, Pflegegrad-Antrag und MDK-Begutachtung. Kompetente Hilfe für Pflegebedürftige und Angehörige." />
+        <title>Avyta Pflegeberatung in Frankfurt | Unterstützung mit Herz | AVYTA</title>
+        <meta name="description" content="Pflegeberatung in Frankfurt von Avyta. Individuelle Pflegepläne, Unterstützung bei Anträgen und Koordination von Pflegedienstleistungen. Kostenlose Beratung!" />
+        <meta name="keywords" content="Pflegeberatung Frankfurt, Pflegeplanung, Häusliche Pflege Beratung" />
+        <link rel="canonical" href="https://www.avyta.de/leistungen/pflegeberatung" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -36,11 +48,10 @@ const Pflegeberatung = () => {
                   <FileText className="w-10 h-10 text-primary" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-                  Pflegeberatung
+                  Avyta Pflegeberatung in Frankfurt: Unterstützung mit Herz
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Kostenlose und unverbindliche Beratung zu allen Fragen rund um 
-                  Pflege, Pflegegrad und Leistungsansprüche.
+                  Wir von Avyta stellen Familien und Menschen mit Pflegebedarf die nötigen Ressourcen für individuelle Pflege zur Verfügung.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -49,83 +60,208 @@ const Pflegeberatung = () => {
             </div>
           </section>
 
-          {/* Content */}
+          {/* Intro Content */}
           <section className="py-24">
             <div className="container mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-16">
+              <div className="max-w-4xl mx-auto">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  In hektischen Metropolen wie in Frankfurt am Main fällt es vielen Familien schwer, Haushalt, Job und Pflege 
+                  von Angehörigen im Alltag zu bewältigen. Wird ein Familienmitglied krank, fühlen sich Angehörige oft überfordert 
+                  und alleingelassen. Wenn Aufgaben wie die Vergabe von Injektionen und Medikamenten, Wundversorgung oder 
+                  Blutzuckerkontrolle Angehörigen über den Kopf wachsen, ist es beruhigend, einen erfahrenen Partner an ihrer 
+                  Seite zu wissen.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Unsere Pflegeberatung in Frankfurt steht für Angehörige und Menschen mit körperlichen oder geistigen 
+                  Einschränkungen offen.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Von Fall zu Fall */}
+          <section className="py-24 bg-secondary/30">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                  Von Fall zu Fall die passende Pflegeberatung in Frankfurt
+                </h2>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Ein Unfall, eine Operation, Krankheit, oder das Alter: Manchmal können Menschen ihren Alltag schleichend 
+                  oder ganz plötzlich nicht mehr wie gewohnt bewältigen. Für viele Familien kommt die stationäre Unterbringung 
+                  von Angehörigen jedoch nicht in Frage. In unserer Pflegeberatung in Frankfurt entwickeln wir individuelle 
+                  Pflegepläne, die auf die persönlichen Bedürfnisse und Wünsche von Pflegebedürftigen zugeschnitten sind.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Unsere Berater arbeiten eng mit Familien und Betroffenen zusammen, um sicherzustellen, dass die Pflege im 
+                  Einklang mit den individuellen Vorlieben und Gewohnheiten erfolgt. Viele Angehörige möchten so viel wie möglich 
+                  selbst für ihre Lieben erledigen. Unsere Pflegeberatung ist darauf ausgerichtet, Menschen mit körperlichen und 
+                  geistigen Einschränkungen so viel Selbstbestimmung wie möglich zu lassen.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Mit ambulanten Pflegediensten unterstützen wir Sie auch bei der intensivmedizinischen Pflege zu Hause. 
+                  Unsere Avyta Pflegeberatung in Frankfurt ermöglicht Pflegebedürftigen auch in schweren Zeiten einen normalen 
+                  Alltag zu Hause.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Lebensqualität */}
+          <section className="py-24">
+            <div className="container mx-auto px-4">
+              <div className="grid lg:grid-cols-2 gap-16 items-start">
                 <div>
                   <h2 className="text-3xl font-display font-bold text-foreground mb-6">
-                    Was ist Pflegeberatung?
+                    Avyta Pflegeberatung in Frankfurt für volle Lebensqualität
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Wenn ein Angehöriger pflegebedürftig wird, stehen viele Fragen im Raum: 
-                    Welche Leistungen stehen uns zu? Wie beantrage ich einen Pflegegrad? 
-                    Wie bereite ich mich auf die MDK-Begutachtung vor?
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed mb-8">
-                    Unsere erfahrenen Pflegeberater helfen Ihnen durch den Dschungel der 
-                    Pflegeversicherung. Wir beraten Sie kostenlos, unabhängig und persönlich 
-                    – bei Ihnen zu Hause oder telefonisch.
+                    Unsere Pflegeberater verfügen über jahrelange Erfahrung im Bereich der häuslichen Pflege. Wir stehen Ihnen 
+                    mit umfassendem Fachwissen und Mitgefühl zur Seite und entwickeln Pflegepläne, die Betroffene und Angehörige 
+                    entlasten. Während des gesamten Pflegezeitraums ist unsere Pflegeberatung in Frankfurt Ihr Ansprechpartner 
+                    für alle Fragen rund um die Behandlungs- und Alltagspflege. Gemeinsam arbeiten wir daran, die Lebensqualität 
+                    von Menschen in der Heimpflege zu erhalten und zu verbessern.
                   </p>
 
-                  <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                    Unsere Beratungsthemen
-                  </h3>
-                  <div className="grid sm:grid-cols-2 gap-3">
-                    {leistungen.map((item) => (
-                      <div key={item} className="flex items-center gap-2">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                        <span className="text-muted-foreground">{item}</span>
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-start gap-4 p-4 bg-secondary/30 rounded-xl">
+                      <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-muted-foreground">
+                          Wir unterstützen Sie bei allen alltäglichen medizinischen und hygienischen Belangen. Von der Planung 
+                          einer unterstützten Morgenroutine über die pünktliche Medikamentenvergabe bis hin zur psychosozialen 
+                          Pflegeberatung in Frankfurt.
+                        </p>
                       </div>
-                    ))}
+                    </div>
+                    <div className="flex items-start gap-4 p-4 bg-secondary/30 rounded-xl">
+                      <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-muted-foreground">
+                          Die Koordination von Arztbesuchen, Amtsgängen und Pflegedienstleistungen ist für viele Betroffene gar 
+                          nicht möglich. Unsere Avyta Pflegeberatung in Frankfurt übernimmt organisatorische Aufgaben rund um 
+                          die Pflege, damit Sie Ihren Alltag trotz Einschränkungen bewältigen können.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4 p-4 bg-secondary/30 rounded-xl">
+                      <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-muted-foreground">
+                          In Krisenzeiten sind wir Ihr zuverlässiger Ansprechpartner. Unsere Pflegeberatung in Frankfurt 
+                          unterstützt Betroffene und Angehörige bei allen Fragen rund um die Pflege. Verschlechtert sich der 
+                          Gesundheitszustand oder steigt der Pflegebedarf plötzlich an, ist unsere Pflegeberatung in Frankfurt 
+                          für Sie da.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 <div className="space-y-6">
                   <Card variant="elevated">
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                        §37.3 Beratungseinsatz
-                      </h3>
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Users className="w-6 h-6 text-primary" />
+                        </div>
+                        <h3 className="text-xl font-display font-semibold text-foreground">
+                          Erfahrene Berater
+                        </h3>
+                      </div>
                       <p className="text-muted-foreground">
-                        Wenn Sie Pflegegeld beziehen, sind regelmäßige Beratungseinsätze 
-                        vorgeschrieben. Wir führen diese Einsätze durch und beraten Sie 
-                        dabei umfassend.
+                        Unsere Pflegeberater verfügen über jahrelange Erfahrung 
+                        im Bereich der häuslichen Pflege und stehen Ihnen mit 
+                        umfassendem Fachwissen zur Seite.
                       </p>
                     </CardContent>
                   </Card>
 
                   <Card variant="elevated">
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                        MDK-Vorbereitung
-                      </h3>
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Heart className="w-6 h-6 text-primary" />
+                        </div>
+                        <h3 className="text-xl font-display font-semibold text-foreground">
+                          Individuelle Pflegepläne
+                        </h3>
+                      </div>
                       <p className="text-muted-foreground">
-                        Wir bereiten Sie optimal auf die Begutachtung durch den 
-                        Medizinischen Dienst vor. So erreichen Sie den Pflegegrad, 
-                        der Ihnen zusteht.
+                        Wir entwickeln Pflegepläne, die auf die persönlichen 
+                        Bedürfnisse und Wünsche von Pflegebedürftigen 
+                        zugeschnitten sind.
                       </p>
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-primary text-primary-foreground">
+                  <Card variant="elevated">
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-display font-semibold mb-4">
-                        Kostenlose Beratung
-                      </h3>
-                      <p className="opacity-90 mb-4">
-                        Unsere Pflegeberatung ist für Sie komplett kostenlos. 
-                        Vereinbaren Sie jetzt Ihren persönlichen Beratungstermin.
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Phone className="w-6 h-6 text-primary" />
+                        </div>
+                        <h3 className="text-xl font-display font-semibold text-foreground">
+                          Immer erreichbar
+                        </h3>
+                      </div>
+                      <p className="text-muted-foreground">
+                        In Krisenzeiten sind wir Ihr zuverlässiger Ansprechpartner. 
+                        Bei plötzlich steigendem Pflegebedarf sind wir für Sie da.
                       </p>
-                      <Button variant="secondary" asChild>
-                        <a href="/#contact">
-                          Beratung anfragen
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </a>
-                      </Button>
                     </CardContent>
                   </Card>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Gemeinsam für mehr Lebensqualität */}
+          <section className="py-24 bg-secondary/30">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                  Pflegeberatung Frankfurt – gemeinsam für mehr Lebensqualität
+                </h2>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Wir sind davon überzeugt, dass häusliche Pflege nicht nur eine Pflicht, sondern auch eine wertvolle Gelegenheit 
+                  ist, bedürftigen Menschen die Unterstützung zukommen zu lassen, die sie brauchen. In unserer Avyta Pflegeberatung 
+                  in Frankfurt begleiten wir pflegebedürftige Menschen und ihre Angehörigen in jeder Phase der häuslichen Pflege.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  Herausforderungen wie die Alltagsgestaltung, Intensivpflege für bettlägerige Menschen oder medizinische 
+                  Wundversorgung können Angehörige mit engagierten ambulanten Helfern und einem durchdachten Pflegeplan leichter 
+                  bewältigen. Kontaktieren Sie unser freundliches Beratungsteam für alle Fragen rund um die Pflege. Mit individuellen 
+                  Pflege- und Behandlungsplänen können Sie Ihren Alltag zu Hause auch mit Pflegebedarf selbstbestimmt bestreiten.
+                </p>
+                <CTADropdownButton />
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ */}
+          <section className="py-24">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+                  Häufige Fragen
+                </h2>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {faqs.map((faq, index) => (
+                    <AccordionItem 
+                      key={index} 
+                      value={`item-${index}`}
+                      className="bg-secondary/30 rounded-xl border border-border/50 px-6"
+                    >
+                      <AccordionTrigger className="text-left font-medium text-foreground hover:text-primary">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </div>
             </div>
           </section>
