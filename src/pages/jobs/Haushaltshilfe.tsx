@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
-import { Home, CheckCircle2, MapPin, Clock, Euro, ArrowRight } from "lucide-react";
+import { Home, CheckCircle2, ArrowRight, Car, Calendar, Gift, Dumbbell, Award, Building2, Shirt, Euro, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -12,45 +12,57 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const requirements = [
-  "Freude am Helfen und Unterstützen älterer Menschen",
-  "Zuverlässigkeit und Pünktlichkeit",
-  "Selbstständige Arbeitsweise",
-  "Gute Deutschkenntnisse (min. B1)",
-  "Erfahrung im Haushalt wünschenswert",
-  "Führerschein Klasse B von Vorteil",
+const aufgaben = [
+  "Unterstützung bei der Reinigung und Ordnung des Haushalts",
+  "Zubereitung von Mahlzeiten und Unterstützung bei Einkäufen",
+  "Hilfe bei der Wäschepflege (Waschen, Bügeln, Sortieren)",
+  "Begleitung zu Arztterminen und bei Freizeitaktivitäten",
+  "Empathische Kommunikation und Aufbau einer vertrauensvollen Beziehung zu den Klienten",
 ];
 
-const tasks = [
-  "Haushaltsführung und Reinigung",
-  "Einkäufe und Besorgungen",
-  "Wäschepflege und Bügeln",
-  "Mahlzeitenzubereitung",
-  "Begleitung bei Spaziergängen",
-  "Gesellschaft und Aktivierung",
+const qualifikationen = [
+  "Berufserfahrung als Haushaltshilfe oder Pflegehelfer",
+  "Freundliches, respektvolles Auftreten",
+  "Gute Deutschkenntnisse (mindestens B1)",
+  "Kommunikationsfähigkeit",
+  "Zuverlässigkeit und Verantwortungsbewusstsein",
+  "Führerschein Klasse B (empfohlen)",
+  "Auge fürs Detail",
 ];
 
 const benefits = [
-  "Flexible Arbeitszeiten",
-  "Faire Vergütung",
-  "Unbefristeter Arbeitsvertrag",
-  "Einarbeitung und Unterstützung",
+  { icon: Euro, title: "Überdurchschnittliches Gehalt", description: "Abhängig von Qualifikation und Erfahrung" },
+  { icon: Clock, title: "Zuschläge", description: "Für Sonn- und Feiertage sowie Nachtarbeit" },
+  { icon: Calendar, title: "Urlaub", description: "30 Tage jährlich" },
+  { icon: Car, title: "Firmenwagen", description: "Zur privaten Nutzung" },
+  { icon: Dumbbell, title: "Firmenfitness", description: "Monatliche Wellpass-Mitgliedschaft" },
+  { icon: Award, title: "Prämien", description: "Urlaubs-, Feiertags- und leistungsbasierte Prämien" },
+  { icon: Gift, title: "Teamzusammenhalt", description: "Geburtstagsgeschenke bis zu 60 Euro" },
+  { icon: Building2, title: "Unterkunft", description: "Bei Bedarf eine angemessene Wohnung oder WG" },
+  { icon: Shirt, title: "Berufskleidung", description: "Für alle Wetterbedingungen, stets ein gepflegtes Erscheinungsbild" },
+];
+
+const sidebarBenefits = [
+  "Überdurchschnittliches Gehalt",
+  "30 Tage Urlaub jährlich",
+  "Firmenwagen zur privaten Nutzung",
+  "Wellpass-Mitgliedschaft",
+  "Sonn- und Feiertagszuschläge",
   "Familiäres Arbeitsumfeld",
-  "Kurze Wege – Einsätze in Ihrer Nähe",
 ];
 
 const faqs = [
   {
-    question: "Brauche ich eine Ausbildung als Haushaltshilfe?",
-    answer: "Nein, für die Tätigkeit als Haushaltshilfe ist keine besondere Ausbildung erforderlich. Wichtig sind Zuverlässigkeit, ein freundlicher Umgang mit Menschen und praktische Erfahrung im Haushalt."
+    question: "Welche Aufgaben übernimmt eine Haushaltshilfe in Frankfurt?",
+    answer: "Eine Haushaltshilfe in Frankfurt unterstützt bei vielfältigen Tätigkeiten des täglichen Lebens. Dazu zählen die Reinigung der Wohnräume, Wäschepflege, Zubereitung von Mahlzeiten sowie Einkäufe. Zudem kann sie bei der Körperpflege helfen und Begleitung zu Arztterminen oder Freizeitaktivitäten bieten. Durch diese Unterstützung wird der Alltag erleichtert und die Lebensqualität gesteigert."
   },
   {
-    question: "Welche Arbeitszeiten sind möglich?",
-    answer: "Wir bieten flexible Arbeitszeiten an – ob Teilzeit oder Minijob, wir passen uns Ihren Möglichkeiten an. Die Einsätze finden überwiegend tagsüber statt."
+    question: "Wird die Stelle als Haushaltshilfe in Frankfurt auch als Teilzeitstelle angeboten?",
+    answer: "Ja, bei Avyta bieten wir die Position als Haushaltshilfe in Frankfurt sowohl in Vollzeit als auch in Teilzeit und als geringfügige Beschäftigung an. So können Sie Ihre Arbeitszeit flexibel an Ihre persönliche Lebenssituation anpassen."
   },
   {
-    question: "Wo sind die Einsatzorte?",
-    answer: "Wir planen Ihre Einsätze wohnortnah, um unnötige Fahrwege zu vermeiden. Die meisten Einsätze sind in Frankfurt und Bad Vilbel."
+    question: "Welche Vorteile bietet die Position als Haushaltshilfe in Frankfurt bei Avyta?",
+    answer: "Bei Avyta profitieren Sie von einem überdurchschnittlichen Gehalt, 30 Tagen Urlaub, einem Firmenwagen zur privaten Nutzung, einer Wellpass-Mitgliedschaft für Firmenfitness sowie attraktiven Prämien. Zudem bieten wir bei Bedarf eine Unterkunft und stellen Berufskleidung für alle Wetterbedingungen."
   },
 ];
 
@@ -58,8 +70,8 @@ const HaushaltshilfeJob = () => {
   return (
     <>
       <Helmet>
-        <title>Haushaltshilfe | Jobs bei AVYTA Frankfurt</title>
-        <meta name="description" content="Werden Sie Haushaltshilfe bei AVYTA in Frankfurt. Unterstützen Sie ältere Menschen im Alltag. Flexible Arbeitszeiten. Jetzt bewerben!" />
+        <title>Haushaltshilfe Frankfurt | Jobs bei AVYTA Pflegedienst</title>
+        <meta name="description" content="Werden Sie Haushaltshilfe bei AVYTA in Frankfurt. Überdurchschnittliches Gehalt, 30 Tage Urlaub, Firmenwagen. Flexible Arbeitszeiten. Jetzt bewerben!" />
       </Helmet>
 
       <Header />
@@ -80,20 +92,9 @@ const HaushaltshilfeJob = () => {
                   <h1 className="text-4xl font-display font-bold text-foreground mb-4">
                     Haushaltshilfe (m/w/d)
                   </h1>
-                  <div className="flex flex-wrap gap-4 text-muted-foreground">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      Teilzeit / Minijob
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <MapPin className="w-4 h-4" />
-                      Frankfurt am Main
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Euro className="w-4 h-4" />
-                      Ab 14€ / Stunde
-                    </span>
-                  </div>
+                  <p className="text-lg text-muted-foreground">
+                    Ihre Karriere bei AVYTA in Frankfurt
+                  </p>
                 </div>
               </div>
             </div>
@@ -106,47 +107,125 @@ const HaushaltshilfeJob = () => {
             <div className="max-w-5xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2 space-y-12">
+                  {/* Intro */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Über die Stelle
+                      Haushaltshilfe in Frankfurt gesucht
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
-                      Als Haushaltshilfe bei AVYTA unterstützen Sie ältere und pflegebedürftige Menschen 
-                      bei der Bewältigung ihres Alltags. Sie helfen im Haushalt, bei Einkäufen und 
-                      sorgen dafür, dass sich unsere Klienten in ihrem Zuhause wohlfühlen. 
-                      Keine Pflegeausbildung erforderlich!
+                      In einer lebendigen Stadt wie Frankfurt kann der Alltag eine echte Herausforderung sein, 
+                      insbesondere wenn gesundheitliche Einschränkungen hinzukommen. Als führender Anbieter in 
+                      der ambulanten Pflege sucht Avyta engagierte und einfühlsame Haushaltshilfen in Frankfurt, 
+                      die unseren Klienten mit Herz und Kompetenz zur Seite stehen. Unterstützen Sie Menschen 
+                      dabei, ihren Alltag zu bewältigen und ihre Lebensqualität zu steigern.
                     </p>
                   </div>
 
+                  {/* Warum Haushaltshilfe */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Ihre Aufgaben
+                      Warum eine Tätigkeit als Haushaltshilfe in Frankfurt?
                     </h2>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Als Haushaltshilfe in Frankfurt tragen Sie dazu bei, das Leben unserer Klienten zu erleichtern, 
+                      indem Sie alltägliche Aufgaben wie Reinigung, Wäschepflege und Einkäufe übernehmen. Ihre Arbeit 
+                      sorgt dafür, dass Menschen, vor allem Senioren und mobilitätseingeschränkte Personen, ein hohes 
+                      Maß an Selbstständigkeit und Lebensqualität bewahren können.
+                    </p>
+                  </div>
+
+                  {/* Aufgaben */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Ihre Aufgaben als Haushaltshilfe in Frankfurt
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      In Ihrer neuen Rolle erwartet Sie ein abwechslungsreiches Aufgabenspektrum, das individuell 
+                      auf die Bedürfnisse unserer Klienten abgestimmt wird. Zu Ihren Aufgaben gehören unter anderem:
+                    </p>
                     <ul className="space-y-3">
-                      {tasks.map((task, index) => (
+                      {aufgaben.map((aufgabe, index) => (
                         <li key={index} className="flex items-start gap-3">
                           <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{task}</span>
+                          <span className="text-muted-foreground">{aufgabe}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
+                  {/* Qualifikationen */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Was Sie mitbringen
+                      Qualifikationen für Haushaltshilfen in Frankfurt bei Avyta
                     </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Für eine erfolgreiche Tätigkeit als Haushaltshilfe in Frankfurt bei Avyta legen wir großen 
+                      Wert auf sowohl fachliche Kompetenz als auch Einfühlungsvermögen. Idealerweise bringen Sie mit:
+                    </p>
                     <ul className="space-y-3">
-                      {requirements.map((req, index) => (
+                      {qualifikationen.map((qual, index) => (
                         <li key={index} className="flex items-start gap-3">
                           <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{req}</span>
+                          <span className="text-muted-foreground">{qual}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* FAQ Section */}
+                  {/* Benefits */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Ihre Vorteile als Haushaltshilfe in Frankfurt
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Bei Avyta erwarten Sie nicht nur abwechslungsreiche und erfüllende Aufgaben, sondern auch 
+                      ein Arbeitsumfeld, das Ihre Leistung und Ihr Engagement besonders wertschätzt. Wir legen 
+                      großen Wert darauf, dass sich unsere Haushaltshilfen in ihrem Beruf wohlfühlen und motiviert 
+                      bleiben. Daher bieten wir Ihnen attraktive Arbeitsbedingungen:
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      {benefits.map((benefit, index) => (
+                        <div key={index} className="flex items-start gap-3 p-4 bg-muted/30 rounded-xl border border-border/50">
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <benefit.icon className="w-5 h-5 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-medium text-foreground">{benefit.title}</h4>
+                            <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Teil des Teams werden */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Werden Sie Teil unseres Teams als Haushaltshilfe in Frankfurt
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Wenn Sie eine neue berufliche Herausforderung suchen und Freude daran haben, Menschen in 
+                      ihrem Alltag zu unterstützen, freuen wir uns auf Ihre Bewerbung. Nach einer persönlichen 
+                      Beratung und einer individuellen Einarbeitung sorgen wir dafür, dass Sie sich bei uns gut 
+                      aufgehoben fühlen. Regelmäßige Abstimmungen und Weiterbildungen stellen sicher, dass Sie 
+                      in Ihrer Rolle wachsen und langfristig zufrieden sind. Zögern Sie nicht, uns zu kontaktieren 
+                      und mehr über die Möglichkeiten bei Avyta zu erfahren. Wir freuen uns, Sie bald in unserem 
+                      Team begrüßen zu dürfen!
+                    </p>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
+                    <p className="text-foreground font-medium mb-2">
+                      Ergreifen Sie Ihre Chance und starten Sie Ihre Karriere als Haushaltshilfe in Frankfurt!
+                    </p>
+                    <p className="text-muted-foreground">
+                      Rufen Sie uns noch heute an oder senden Sie uns Ihre Bewerbung per E-Mail. 
+                      Wir freuen uns darauf, Sie kennenzulernen!
+                    </p>
+                  </div>
+
+                  {/* FAQ */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-6">
                       Häufige Fragen
@@ -170,12 +249,13 @@ const HaushaltshilfeJob = () => {
                   </div>
                 </div>
 
+                {/* Sidebar */}
                 <div className="space-y-6">
                   <div className="sticky top-28 space-y-6">
                     <div className="p-6 bg-muted/30 rounded-2xl">
-                      <h3 className="font-semibold text-foreground mb-4">Das bieten wir</h3>
+                      <h3 className="font-semibold text-foreground mb-4">Benefits</h3>
                       <ul className="space-y-3">
-                        {benefits.map((benefit, index) => (
+                        {sidebarBenefits.map((benefit, index) => (
                           <li key={index} className="flex items-start gap-2 text-sm">
                             <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                             <span className="text-muted-foreground">{benefit}</span>
