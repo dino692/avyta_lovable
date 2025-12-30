@@ -74,7 +74,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 pb-12 border-b border-background/10">
           <div className="lg:col-span-2 space-y-6">
             <Link to="/" className="flex items-center gap-2">
-              <img src="/images/avyta-logo.png" alt="AVYTA Pflegegesellschaft mbH" className="h-8 brightness-0 invert" />
+              <img src="/images/avyta-logo.png" alt="AVYTA Pflegegesellschaft mbH" className="h-10 brightness-0 invert" />
             </Link>
             <p className="text-background/70 leading-relaxed max-w-md">
               AVYTA Pflegegesellschaft mbH – Ambulanter Pflegedienst mit Herz in Frankfurt und Umgebung. 

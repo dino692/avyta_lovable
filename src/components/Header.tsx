@@ -95,27 +95,27 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src="/images/avyta-logo.png" alt="AVYTA Pflegegesellschaft mbH" className="h-8" />
+            <img src="/images/avyta-logo.png" alt="AVYTA Pflegegesellschaft mbH" className="h-10" />
           </Link>
 
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
+                <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
                   Start
                 </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link to="/team" className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
+                <Link to="/team" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
                   Team
                 </Link>
               </NavigationMenuItem>
 
               {/* Leistungen Dropdown */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-muted-foreground hover:text-primary font-medium bg-transparent">
+                <NavigationMenuTrigger className="text-sm text-muted-foreground hover:text-primary font-medium bg-transparent">
                   Leistungen
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -155,7 +155,7 @@ const Header = () => {
 
               {/* Standorte Dropdown */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-muted-foreground hover:text-primary font-medium bg-transparent">
+                <NavigationMenuTrigger className="text-sm text-muted-foreground hover:text-primary font-medium bg-transparent">
                   Standorte
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -196,7 +196,7 @@ const Header = () => {
 
               {/* Jobs Dropdown */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-muted-foreground hover:text-primary font-medium bg-transparent">
+                <NavigationMenuTrigger className="text-sm text-muted-foreground hover:text-primary font-medium bg-transparent">
                   Jobs
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -236,7 +236,7 @@ const Header = () => {
 
               {/* Blog Dropdown */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-muted-foreground hover:text-primary font-medium bg-transparent">
+                <NavigationMenuTrigger className="text-sm text-muted-foreground hover:text-primary font-medium bg-transparent">
                   Blog
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -275,7 +275,7 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link to="/kontakt" className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
+                <Link to="/kontakt" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
                   Kontakt
                 </Link>
               </NavigationMenuItem>
