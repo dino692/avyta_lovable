@@ -12,14 +12,14 @@ const benefits = [
 ];
 
 const NewsletterSection = () => {
-  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [formData, setFormData] = useState({ name: "", phone: "", email: "" });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (formData.email && formData.name) {
       setIsSubmitted(true);
-      setFormData({ name: "", email: "" });
+      setFormData({ name: "", phone: "", email: "" });
     }
   };
 
@@ -93,6 +93,15 @@ const NewsletterSection = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         required
+                        className="h-12"
+                      />
+                    </div>
+                    <div>
+                      <Input
+                        type="tel"
+                        placeholder="Ihre Telefonnummer"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="h-12"
                       />
                     </div>

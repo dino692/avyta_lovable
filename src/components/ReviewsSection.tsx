@@ -82,13 +82,13 @@ const ReviewsSection = () => {
                   <p className="text-muted-foreground mb-6">Basierend auf Google Bewertungen</p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
-                      href="https://google.com/maps/place//data=!4m3!3m2!1s0x47bd0ea26295cf3d:0x419b1bced25993f1!12e1?source=g.page.m._&laa=merchant-review-solicitation"
+                      href="https://www.google.com/search?sca_esv=207ca25c77663f86&q=avyta+pflegegesellschaft+mbh&si=AMgyJEvkVjFQtirYNBhM3ZJIRTaSJ6PxY6y1_6WZHGInbzDnMYYyayZzDczz8T-nilhYEThfPqZVI7WvFNdcdcpuxjJFwonmwxZ7Ujtup9HAmKu1bW5u9Ns%3D&uds=AOm0WdH7vAu8qM0e-khCodkgPL2noXzCJ2kvwrznI0OSXdCSHv7ieuiFH72boVTz_PjiicMe9pbvL2oQXE6rIzVyUJwQPopEK7XGY-umsJ-5Lsw0CU-xNP97jqteOxkejNvze8d0ROXh&sa=X&ved=2ahUKEwix9_z_tOWRAxXD9AIHHVhVATgQ3PALegQIGxAE&biw=1470&bih=736&dpr=2"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
                     >
                       <Star className="w-5 h-5" />
-                      Alle Bewertungen ansehen
+                      Alle Bewertungen
                     </a>
                     <a
                       href="https://google.com/maps/place//data=!4m3!3m2!1s0x47bd0ea26295cf3d:0x419b1bced25993f1!12e1?source=g.page.m._&laa=merchant-review-solicitation"

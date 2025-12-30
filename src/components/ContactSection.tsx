@@ -34,6 +34,7 @@ const contactInfo = [
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
+    phone: "",
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -41,7 +42,7 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
-    setFormData({ name: "", message: "" });
+    setFormData({ name: "", phone: "", message: "" });
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
@@ -155,6 +156,20 @@ const ContactSection = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      className="h-14 text-lg border-2 border-border focus:border-primary bg-secondary/30 placeholder:text-muted-foreground/60"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                      Ihre Telefonnummer
+                    </label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="069 123 456 78"
+                      value={formData.phone}
+                      onChange={handleChange}
                       className="h-14 text-lg border-2 border-border focus:border-primary bg-secondary/30 placeholder:text-muted-foreground/60"
                     />
                   </div>
