@@ -262,7 +262,7 @@ const Stellenangebote = () => {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                       <Button variant="hero" size="lg" asChild>
-                        <a href="mailto:jobs@avyta.de?subject=Bewerbung Stellenangebot">
+                        <a href="mailto:info@avyta.de?subject=Bewerbung Stellenangebot">
                           Jetzt bewerben
                           <ArrowRight className="w-4 h-4 ml-2" />
                         </a>
@@ -315,7 +315,7 @@ const Stellenangebote = () => {
                     </div>
 
                     <Button variant="hero" size="lg" className="w-full" asChild>
-                      <a href="mailto:jobs@avyta.de?subject=Bewerbung Stellenangebot">
+                      <a href="mailto:info@avyta.de?subject=Bewerbung Stellenangebot">
                         Jetzt bewerben
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>

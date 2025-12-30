@@ -254,7 +254,7 @@ const Pflegehilfskraft = () => {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Button variant="hero" size="lg" asChild>
-                        <a href="mailto:jobs@avyta.de?subject=Bewerbung als Pflegehilfskraft in Frankfurt">
+                        <a href="mailto:info@avyta.de?subject=Bewerbung als Pflegehilfskraft in Frankfurt">
                           Jetzt bewerben
                           <ArrowRight className="w-4 h-4 ml-2" />
                         </a>
@@ -307,7 +307,7 @@ const Pflegehilfskraft = () => {
                     </div>
 
                     <Button variant="hero" size="lg" className="w-full" asChild>
-                      <a href="mailto:jobs@avyta.de?subject=Bewerbung als Pflegehilfskraft in Frankfurt">
+                      <a href="mailto:info@avyta.de?subject=Bewerbung als Pflegehilfskraft in Frankfurt">
                         Jetzt bewerben
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>

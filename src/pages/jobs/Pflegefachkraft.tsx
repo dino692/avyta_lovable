@@ -273,7 +273,7 @@ const Pflegefachkraft = () => {
                     </div>
 
                     <Button variant="hero" size="lg" className="w-full" asChild>
-                      <a href="mailto:jobs@avyta.de?subject=Bewerbung als Pflegefachkraft">
+                      <a href="mailto:info@avyta.de?subject=Bewerbung als Pflegefachkraft">
                         Jetzt bewerben
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
