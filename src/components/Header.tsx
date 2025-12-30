@@ -186,7 +186,7 @@ const Header = () => {
                             to={item.href}
                             className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm hover:bg-primary/5 text-foreground hover:text-primary transition-colors group"
                           >
-                            <MapPin className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
+                            <MapPin className="w-4 h-4 text-primary/60 group-hover:text-primary transition-colors flex-shrink-0" />
                             {item.name}
                           </Link>
                         ))}
