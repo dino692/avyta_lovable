@@ -32,7 +32,7 @@ const footerLinks = {
       { name: "Team", href: "/team" },
       { name: "Leistungen", href: "/leistungen" },
       { name: "Standorte", href: "/standorte/frankfurt" },
-      { name: "Karriere", href: "/karriere" },
+      { name: "Jobs", href: "/jobs" },
       { name: "Blog", href: "/blog" },
       { name: "Kontakt", href: "/#contact" },
     ],
