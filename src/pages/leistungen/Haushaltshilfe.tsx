@@ -24,6 +24,11 @@ const Haushaltshilfe = () => {
       <Helmet>
         <title>Haushaltshilfe Frankfurt | Hauswirtschaft & Alltagsbegleitung | AVYTA</title>
         <meta name="description" content="Professionelle Haushaltshilfe in Frankfurt. Unterstützung im Haushalt, beim Einkaufen und Kochen. Entlastung für Senioren und pflegende Angehörige. Jetzt beraten lassen!" />
+        <meta name="keywords" content="Haushaltshilfe Frankfurt, Hauswirtschaft, Alltagsbegleitung, Senioren Haushalt, Entlastung Angehörige" />
+        <meta property="og:title" content="Haushaltshilfe Frankfurt | AVYTA Pflegedienst" />
+        <meta property="og:description" content="Professionelle Haushaltshilfe in Frankfurt. Unterstützung im Haushalt für Senioren." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://avyta.de/leistungen/haushaltshilfe" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

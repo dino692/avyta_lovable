@@ -60,6 +60,11 @@ const Stellenangebote = () => {
       <Helmet>
         <title>Stellenangebote | AVYTA Pflegegesellschaft mbH</title>
         <meta name="description" content="Aktuelle Stellenangebote bei AVYTA. Finden Sie Ihren neuen Job in der ambulanten Pflege in Frankfurt und Umgebung." />
+        <meta name="keywords" content="Stellenangebote Pflege Frankfurt, Pflege Jobs, Pflegefachkraft gesucht, Pflegehelfer Jobs" />
+        <meta property="og:title" content="Stellenangebote | AVYTA Pflegedienst Frankfurt" />
+        <meta property="og:description" content="Aktuelle Stellenangebote bei AVYTA. Jobs in der ambulanten Pflege." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://avyta.de/jobs/stellenangebote" />
       </Helmet>
 
       <Header />

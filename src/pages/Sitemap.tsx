@@ -86,6 +86,7 @@ const Sitemap = () => {
       <Helmet>
         <title>Sitemap | AVYTA Pflegegesellschaft mbH</title>
         <meta name="description" content="Sitemap der AVYTA Pflegegesellschaft mbH - Übersicht aller Seiten unserer Website." />
+        <link rel="canonical" href="https://avyta.de/sitemap" />
       </Helmet>
       <Header />
       <main className="pt-28 pb-20 min-h-screen bg-gradient-to-b from-secondary/30 to-background">

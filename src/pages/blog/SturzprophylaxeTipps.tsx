@@ -11,6 +11,11 @@ const SturzprophylaxeTipps = () => {
       <Helmet>
         <title>Sturzprophylaxe: So vermeiden Sie Stürze im Alter | AVYTA Blog</title>
         <meta name="description" content="Praktische Tipps zur Sturzvorbeugung für Senioren. So gestalten Sie die Wohnung sicher und bleiben mobil." />
+        <meta name="keywords" content="Sturzprophylaxe, Sturzprävention Senioren, Sturz vermeiden, sichere Wohnung Alter" />
+        <meta property="og:title" content="Sturzprophylaxe Tipps | AVYTA Blog" />
+        <meta property="og:description" content="Praktische Tipps zur Sturzvorbeugung für Senioren." />
+        <meta property="og:type" content="article" />
+        <link rel="canonical" href="https://avyta.de/blog/sturzprophylaxe-tipps" />
       </Helmet>
 
       <Header />

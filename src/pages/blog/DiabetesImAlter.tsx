@@ -11,6 +11,11 @@ const DiabetesImAlter = () => {
       <Helmet>
         <title>Diabetes im Alter: Worauf Sie achten sollten | AVYTA Blog</title>
         <meta name="description" content="Wichtige Informationen zur Diabetesversorgung für Senioren und ihre Angehörigen. Tipps für den Alltag und professionelle Unterstützung." />
+        <meta name="keywords" content="Diabetes im Alter, Diabetesversorgung Senioren, Blutzucker messen, Diabetes Pflege" />
+        <meta property="og:title" content="Diabetes im Alter | AVYTA Blog" />
+        <meta property="og:description" content="Wichtige Informationen zur Diabetesversorgung für Senioren." />
+        <meta property="og:type" content="article" />
+        <link rel="canonical" href="https://avyta.de/blog/diabetes-im-alter" />
       </Helmet>
 
       <Header />

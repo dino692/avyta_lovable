@@ -11,6 +11,11 @@ const VerhinderungspflegeNutzen = () => {
       <Helmet>
         <title>Verhinderungspflege richtig nutzen | AVYTA Blog</title>
         <meta name="description" content="So nutzen Sie die Verhinderungspflege optimal. Bis zu 1.612 Euro jährlich für Entlastung pflegender Angehöriger." />
+        <meta name="keywords" content="Verhinderungspflege, Verhinderungspflege beantragen, 1612 Euro Pflege, Entlastung Angehörige" />
+        <meta property="og:title" content="Verhinderungspflege richtig nutzen | AVYTA Blog" />
+        <meta property="og:description" content="So nutzen Sie die Verhinderungspflege optimal. Bis zu 1.612€ jährlich." />
+        <meta property="og:type" content="article" />
+        <link rel="canonical" href="https://avyta.de/blog/verhinderungspflege-nutzen" />
       </Helmet>
 
       <Header />

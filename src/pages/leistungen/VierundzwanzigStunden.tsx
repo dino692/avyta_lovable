@@ -24,6 +24,11 @@ const VierundzwanzigStunden = () => {
       <Helmet>
         <title>24-Stunden-Pflege Frankfurt | Rund-um-die-Uhr Betreuung | AVYTA</title>
         <meta name="description" content="24-Stunden-Pflege in Frankfurt. Rund-um-die-Uhr Betreuung zu Hause durch qualifizierte Pflegekräfte. Alternative zum Pflegeheim. Jetzt beraten lassen!" />
+        <meta name="keywords" content="24 Stunden Pflege Frankfurt, Rund um die Uhr Betreuung, Alternative Pflegeheim, häusliche Betreuung" />
+        <meta property="og:title" content="24-Stunden-Pflege Frankfurt | AVYTA Pflegedienst" />
+        <meta property="og:description" content="24-Stunden-Pflege in Frankfurt. Rund-um-die-Uhr Betreuung zu Hause." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://avyta.de/leistungen/24-stunden" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
