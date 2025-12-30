@@ -1,6 +1,5 @@
-import { Play, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-image.jpg";
 
 const HeroSection = () => {
   return (
@@ -39,10 +38,6 @@ const HeroSection = () => {
                 Kostenlos beraten lassen
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="hero-outline" size="lg" className="group">
-                <Play className="w-5 h-5" />
-                Video ansehen
-              </Button>
             </div>
 
             {/* Trust badges */}
@@ -64,20 +59,17 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Hero Image with Video Overlay */}
+          {/* YouTube Video */}
           <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={heroImage}
-                alt="Pflegekraft bei der liebevollen Betreuung"
-                className="w-full h-auto object-cover"
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/ITIyAG6rOUY?si=tPuFV7w-FSBCewNE"
+                title="AVYTA Pflegedienst"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
               />
-              {/* Video Play Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-foreground/10">
-                <button className="w-20 h-20 rounded-full bg-accent text-accent-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 group">
-                  <Play className="w-8 h-8 ml-1 group-hover:scale-110 transition-transform" />
-                </button>
-              </div>
             </div>
             
             {/* Floating card */}
