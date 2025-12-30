@@ -20,97 +20,46 @@ const Impressum = () => {
             <div className="bg-card rounded-2xl border border-border p-8 md:p-12 space-y-8">
               <section>
                 <h2 className="text-xl font-display font-semibold text-foreground mb-4">
-                  Angaben gemäß § 5 TMG
+                  Inhaltlich Verantwortlicher
                 </h2>
                 <div className="text-muted-foreground space-y-1">
-                  <p className="font-semibold text-foreground">AVYTA Pflegegesellschaft mbH</p>
-                  <p>Musterstraße 123</p>
+                  <p className="font-semibold text-foreground">Avyta Pflegegesellschaft mbH</p>
+                  <p>Allerheiligentor 2-4</p>
                   <p>60311 Frankfurt am Main</p>
+                  <p className="mt-3">Tel. 069 / 153 914 – 05</p>
+                  <p>Fax 069 / 153 914 – 06</p>
+                  <p>Email: info(at)avyta.de</p>
                 </div>
               </section>
 
               <section>
                 <h2 className="text-xl font-display font-semibold text-foreground mb-4">
-                  Kontakt
+                  Geschäftsführer
                 </h2>
-                <div className="text-muted-foreground space-y-1">
-                  <p>Telefon: 069 153 914 05</p>
-                  <p>E-Mail: info@avyta-pflege.de</p>
-                </div>
-              </section>
-
-              <section>
-                <h2 className="text-xl font-display font-semibold text-foreground mb-4">
-                  Vertretungsberechtigte Geschäftsführung
-                </h2>
-                <p className="text-muted-foreground">Max Mustermann</p>
+                <p className="text-muted-foreground">Dino Lalic</p>
               </section>
 
               <section>
                 <h2 className="text-xl font-display font-semibold text-foreground mb-4">
                   Registereintrag
                 </h2>
-                <div className="text-muted-foreground space-y-1">
-                  <p>Eintragung im Handelsregister</p>
-                  <p>Registergericht: Amtsgericht Frankfurt am Main</p>
-                  <p>Registernummer: HRB XXXXX</p>
-                </div>
+                <p className="text-muted-foreground">Amtsgericht Frankfurt am Main HRB: 96683</p>
               </section>
 
               <section>
                 <h2 className="text-xl font-display font-semibold text-foreground mb-4">
-                  Umsatzsteuer-ID
+                  Umsatzsteuer
                 </h2>
                 <p className="text-muted-foreground">
-                  Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE XXXXXXXXX
+                  USt-IdNr: Umsatzsteuerbefreit gemäß § 4 Nr. 16e UStG
                 </p>
               </section>
 
               <section>
                 <h2 className="text-xl font-display font-semibold text-foreground mb-4">
-                  Aufsichtsbehörde
+                  Institutionskennzeichen
                 </h2>
-                <div className="text-muted-foreground space-y-1">
-                  <p>Hessisches Landesamt für Gesundheit und Pflege</p>
-                  <p>Zuständig für die Zulassung und Überwachung von Pflegediensten</p>
-                </div>
-              </section>
-
-              <section>
-                <h2 className="text-xl font-display font-semibold text-foreground mb-4">
-                  Berufsbezeichnung und berufsrechtliche Regelungen
-                </h2>
-                <div className="text-muted-foreground space-y-1">
-                  <p>Berufsbezeichnung: Ambulanter Pflegedienst</p>
-                  <p>Zuständige Kammer: Pflegekammer Hessen (sofern vorhanden)</p>
-                  <p>Verliehen in: Deutschland</p>
-                </div>
-              </section>
-
-              <section>
-                <h2 className="text-xl font-display font-semibold text-foreground mb-4">
-                  Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
-                </h2>
-                <div className="text-muted-foreground space-y-1">
-                  <p className="font-semibold text-foreground">Max Mustermann</p>
-                  <p>Musterstraße 123</p>
-                  <p>60311 Frankfurt am Main</p>
-                </div>
-              </section>
-
-              <section>
-                <h2 className="text-xl font-display font-semibold text-foreground mb-4">
-                  Streitschlichtung
-                </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
-                  <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">
-                    https://ec.europa.eu/consumers/odr/
-                  </a>
-                  <br /><br />
-                  Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
-                  Verbraucherschlichtungsstelle teilzunehmen.
-                </p>
+                <p className="text-muted-foreground">IK-Nr. 462645797</p>
               </section>
 
               <section>
@@ -119,9 +68,13 @@ const Impressum = () => {
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
                   Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach 
-                  den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter 
+                  den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Dienstanbieter 
                   jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen 
-                  oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                  oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. 
+                  Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den 
+                  allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch 
+                  erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei 
+                  Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
                 </p>
               </section>
 
@@ -130,10 +83,14 @@ const Impressum = () => {
                   Haftung für Links
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen 
+                  Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen 
                   Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. 
                   Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der 
-                  Seiten verantwortlich.
+                  Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf 
+                  mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der 
+                  Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten 
+                  ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei 
+                  Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
                 </p>
               </section>
 
@@ -145,7 +102,16 @@ const Impressum = () => {
                   Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen 
                   dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art 
                   der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen 
-                  Zustimmung des jeweiligen Autors bzw. Erstellers.
+                  Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind 
+                  nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf 
+                  dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter 
+                  beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie 
+                  trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen 
+                  entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige 
+                  Inhalte umgehend entfernen.
+                </p>
+                <p className="text-muted-foreground mt-4 text-sm">
+                  Quelle: www.e-recht24.de
                 </p>
               </section>
             </div>
