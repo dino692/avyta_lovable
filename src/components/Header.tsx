@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone, Heart, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, Newspaper, Lightbulb, Scale, Activity, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -39,6 +39,21 @@ const standorte = {
   ],
 };
 
+const jobs = [
+  { name: "Stellenangebote", href: "/jobs/stellenangebote", description: "Alle offenen Positionen im Überblick", icon: Briefcase },
+  { name: "Pflegefachkraft", href: "/jobs/pflegefachkraft", description: "Examinierte Pflegekräfte (m/w/d)", icon: UserCheck },
+  { name: "Pflegehilfskraft", href: "/jobs/pflegehilfskraft", description: "Mit Qualifikation nach §43b", icon: Users },
+  { name: "Pflegehelfer", href: "/jobs/pflegehelfer", description: "Quereinsteiger willkommen", icon: Heart },
+];
+
+const blogCategories = [
+  { name: "Empfehlungen", href: "/blog?kategorie=empfehlungen", description: "Unsere Top-Tipps für Sie", icon: Lightbulb },
+  { name: "Pflegetipps", href: "/blog?kategorie=pflegetipps", description: "Praktische Ratschläge für den Alltag", icon: BookOpen },
+  { name: "Gesundheit", href: "/blog?kategorie=gesundheit", description: "Wichtiges rund um Ihre Gesundheit", icon: Activity },
+  { name: "Neuigkeiten", href: "/blog?kategorie=neuigkeiten", description: "Aktuelles von AVYTA", icon: Newspaper },
+  { name: "Recht & Finanzen", href: "/blog?kategorie=recht-finanzen", description: "Rechtliche und finanzielle Themen", icon: Scale },
+];
+
 const navLinks = [
   { name: "Start", href: "/" },
   { name: "Team", href: "/team" },
@@ -51,6 +66,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mobileLeistungenOpen, setMobileLeistungenOpen] = useState(false);
   const [mobileStandorteOpen, setMobileStandorteOpen] = useState(false);
+  const [mobileJobsOpen, setMobileJobsOpen] = useState(false);
+  const [mobileBlogOpen, setMobileBlogOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
@@ -150,16 +167,84 @@ const Header = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
+              {/* Jobs Dropdown */}
               <NavigationMenuItem>
-                <Link to="/jobs" className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
+                <NavigationMenuTrigger className="text-muted-foreground hover:text-primary font-medium bg-transparent">
                   Jobs
-                </Link>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="w-[420px] p-4">
+                    <div className="grid gap-3">
+                      {jobs.map((item) => (
+                        <Link
+                          key={item.name}
+                          to={item.href}
+                          className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
+                        >
+                          <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                            <item.icon className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <div className="font-medium text-foreground group-hover:text-primary">
+                              {item.name}
+                            </div>
+                            <div className="text-sm text-muted-foreground mt-0.5">
+                              {item.description}
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="border-t border-border mt-3 pt-3">
+                      <Link
+                        to="/jobs"
+                        className="text-primary font-medium text-sm hover:underline"
+                      >
+                        Alle Jobs ansehen →
+                      </Link>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
               </NavigationMenuItem>
 
+              {/* Blog Dropdown */}
               <NavigationMenuItem>
-                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
+                <NavigationMenuTrigger className="text-muted-foreground hover:text-primary font-medium bg-transparent">
                   Blog
-                </Link>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="w-[480px] p-4">
+                    <div className="grid grid-cols-2 gap-3">
+                      {blogCategories.map((item) => (
+                        <Link
+                          key={item.name}
+                          to={item.href}
+                          className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
+                        >
+                          <div className="p-2 rounded-lg bg-accent/50 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                            <item.icon className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="font-medium text-foreground group-hover:text-primary text-sm">
+                              {item.name}
+                            </div>
+                            <div className="text-xs text-muted-foreground mt-0.5">
+                              {item.description}
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="border-t border-border mt-3 pt-3">
+                      <Link
+                        to="/blog"
+                        className="text-primary font-medium text-sm hover:underline"
+                      >
+                        Alle Artikel ansehen →
+                      </Link>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
@@ -272,20 +357,56 @@ const Header = () => {
                 )}
               </div>
 
-              <Link
-                to="/jobs"
-                className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Jobs
-              </Link>
-              <Link
-                to="/blog"
-                className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Blog
-              </Link>
+              {/* Mobile Jobs */}
+              <div>
+                <button
+                  onClick={() => setMobileJobsOpen(!mobileJobsOpen)}
+                  className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+                >
+                  Jobs
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileJobsOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileJobsOpen && (
+                  <div className="pl-4 space-y-2 mt-2">
+                    {jobs.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className="block text-muted-foreground hover:text-primary py-1 text-sm"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile Blog */}
+              <div>
+                <button
+                  onClick={() => setMobileBlogOpen(!mobileBlogOpen)}
+                  className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+                >
+                  Blog
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileBlogOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileBlogOpen && (
+                  <div className="pl-4 space-y-2 mt-2">
+                    {blogCategories.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className="block text-muted-foreground hover:text-primary py-1 text-sm"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <a
                 href="/#contact"
                 className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
