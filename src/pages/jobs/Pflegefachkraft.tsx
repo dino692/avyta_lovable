@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
-import { Sparkles, CheckCircle2, MapPin, Clock, Euro, ArrowRight } from "lucide-react";
+import { Sparkles, CheckCircle2, ArrowRight, Euro, GraduationCap, Building2, TrendingUp, Calendar, Car, Dumbbell, Shirt } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -12,47 +12,65 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const requirements = [
-  "Abgeschlossene Ausbildung als Gesundheits- und Krankenpfleger/in, Altenpfleger/in oder Pflegefachmann/frau",
-  "Erfahrung in der ambulanten Pflege von Vorteil",
-  "Spezialisierung auf Demenz oder Diabetes wünschenswert",
-  "Einfühlungsvermögen und professionelles Auftreten",
-  "Führerschein Klasse B",
-  "Gute Deutschkenntnisse (min. B1)",
+const aufgaben = [
+  "Durchführung der medizinischen Pflege, inklusive Medikamentengabe und Verbandswechsel",
+  "Unterstützung bei alltäglichen Aktivitäten wie Körperpflege, Ernährung und Mobilisation",
+  "Ansprechpartner für Patienten und deren Angehörige, mit Fokus auf psychosoziale Betreuung",
+  "Enge Zusammenarbeit mit anderen Pflegekräften und medizinischen Fachkräften",
+  "Reaktion auf Notfallsituationen",
+  "Begleitung zu Terminen und bei Aktivitäten, einschließlich Transport und Unterstützung bei Freizeitaktivitäten",
 ];
 
-const tasks = [
-  "Eigenständige Durchführung der Behandlungspflege",
-  "Medikamentengabe und Wundversorgung",
-  "Anleitung von Pflegehelfern und Hilfskräften",
-  "Pflegedokumentation und Qualitätssicherung",
-  "Beratung von Patienten und Angehörigen",
-  "Zusammenarbeit mit Ärzten und Therapeuten",
+const anforderungen = [
+  "Abgeschlossene Ausbildung als Pflegefachkraft",
+  "Berufserfahrung im Pflegebereich",
+  "Belastungsfähige Persönlichkeit, die auch in stressigen Situationen Ruhe bewahrt",
+  "Teamfähigkeit und Kommunikationsstärke",
+  "Bereitschaft zur kontinuierlichen Fortbildung",
+  "Kenntnisse in der modernen Pflegedokumentation und digitale Kompetenzen",
+  "Führerschein Klasse B (Voraussetzung)",
+];
+
+const karrierechancen = [
+  "Spezialisierung auf Intensivpflege, Geriatrie oder Palliativpflege",
+  "Führungsverantwortung im Pflegemanagement",
+  "Karriere in der Pflegepädagogik oder -beratung",
+  "Flexible Arbeitsmodelle bei Avyta",
+  "Teil eines engagierten und professionellen Teams",
 ];
 
 const benefits = [
-  "Gehalt nach Tarif + attraktive Zulagen",
-  "Unbefristeter Arbeitsvertrag",
-  "Dienstwagen auch zur privaten Nutzung möglich",
-  "30 Tage Urlaub + Sonderurlaub",
-  "Fort- und Weiterbildungen (auch extern)",
-  "Betriebliche Altersvorsorge",
-  "Gesundheitsbonus",
-  "Wertschätzendes Arbeitsumfeld",
+  { icon: Euro, title: "Attraktives Gehalt", description: "Überdurchschnittliche Vergütung mit Zuschlägen für Nacht-, Sonntags- und Feiertagsarbeit sowie leistungsbasierte Prämien und Urlaubsprämien. Geburtstagsgeschenke bis zu 60 Euro." },
+  { icon: GraduationCap, title: "Fortbildungsmöglichkeiten", description: "Zugang zu zahlreichen Weiterbildungsangeboten, von Fachkursen bis zu akademischen Studiengängen." },
+  { icon: Building2, title: "Lebensqualität", description: "Leben und Arbeiten in einer Metropole mit hervorragender Infrastruktur, kultureller Vielfalt und vielfältigen Freizeitmöglichkeiten. Bei Bedarf stellen wir Ihnen eine Unterkunft." },
+  { icon: TrendingUp, title: "Karriereperspektiven", description: "Frankfurt bietet zahlreiche Aufstiegschancen in einem dynamischen Arbeitsmarkt." },
+  { icon: Calendar, title: "Urlaub", description: "30 Urlaubstage pro Jahr." },
+  { icon: Car, title: "Firmenwagen", description: "Auch zur privaten Nutzung." },
+  { icon: Dumbbell, title: "Firmenfitness", description: "Wellpass-Mitgliedschaft zusätzlich zum Gehalt." },
+  { icon: Shirt, title: "Berufskleidung", description: "Bereitstellung von Berufskleidung für alle Wetterbedingungen, um stets ein gepflegtes Erscheinungsbild zu gewährleisten." },
+];
+
+const sidebarBenefits = [
+  "Überdurchschnittliches Gehalt",
+  "30 Tage Urlaub jährlich",
+  "Firmenwagen zur privaten Nutzung",
+  "Wellpass-Mitgliedschaft",
+  "Fort- und Weiterbildungen",
+  "Karriereperspektiven",
 ];
 
 const faqs = [
   {
-    question: "Welche Spezialisierungen sind bei AVYTA gefragt?",
-    answer: "Wir sind auf die Pflege von Menschen mit Demenz und Diabetes spezialisiert. Erfahrungen in diesen Bereichen sind von Vorteil, aber keine Voraussetzung. Wir bieten auch interne Fortbildungen an, um Sie in diesen Bereichen weiterzubilden."
+    question: "Welche Aufgaben übernimmt eine Pflegefachkraft in Frankfurt?",
+    answer: "Eine Pflegefachkraft in Frankfurt ist für die medizinische und pflegerische Betreuung von Patienten verantwortlich. Dazu gehören Aufgaben wie die Grundpflege, das Verabreichen von Medikamenten, die Wundversorgung und die Dokumentation der Pflegemaßnahmen. Im ambulanten Bereich, etwa bei Avyta, unterstützen Pflegefachkräfte Patienten direkt in deren häuslichem Umfeld, fördern deren Selbstständigkeit und stehen in enger Kommunikation mit Angehörigen und Ärzten."
   },
   {
-    question: "Wie sieht der typische Arbeitsalltag aus?",
-    answer: "Sie betreuen Patienten in deren häuslichem Umfeld, führen Behandlungspflege durch und koordinieren die Arbeit Ihres Teams. Die Touren werden so geplant, dass unnötige Fahrwege vermieden werden."
+    question: "Was ist der Unterschied zwischen einer Pflegehilfskraft und einer Pflegefachkraft in Frankfurt?",
+    answer: "Der wesentliche Unterschied liegt in der Ausbildung und den Aufgabenbereichen. Eine Pflegefachkraft hat eine dreijährige Ausbildung absolviert und ist für die medizinische Versorgung und Koordination der Pflege verantwortlich. Pflegehilfskräfte unterstützen die Fachkräfte bei der Grundpflege und benötigen eine kürzere Qualifikation."
   },
   {
-    question: "Kann ich den Dienstwagen auch privat nutzen?",
-    answer: "Ja, wir stellen Ihnen einen Dienstwagen zur Verfügung, den Sie auch privat nutzen können. Die genauen Konditionen besprechen wir im Vorstellungsgespräch."
+    question: "Welche Qualifikationen benötigt eine Pflegefachkraft in Frankfurt?",
+    answer: "Um als Pflegefachkraft in Frankfurt zu arbeiten, benötigen Sie eine abgeschlossene dreijährige Ausbildung an einer staatlich anerkannten Pflegeschule. Berufserfahrung ist von Vorteil, ebenso wie Kenntnisse in der digitalen Pflegedokumentation. Ein Führerschein der Klasse B ist für die ambulante Pflege Voraussetzung."
   },
 ];
 
@@ -60,8 +78,8 @@ const Pflegefachkraft = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegefachkraft | Jobs bei AVYTA Frankfurt</title>
-        <meta name="description" content="Examinierte Pflegefachkraft bei AVYTA in Frankfurt gesucht. Attraktive Vergütung, Dienstwagen möglich, 30 Tage Urlaub. Jetzt bewerben!" />
+        <title>Pflegefachkraft Frankfurt | Jobs bei AVYTA Pflegedienst</title>
+        <meta name="description" content="Werden Sie Pflegefachkraft bei AVYTA in Frankfurt. Überdurchschnittliches Gehalt, 30 Tage Urlaub, Firmenwagen, Weiterbildungen. Jetzt bewerben!" />
       </Helmet>
 
       <Header />
@@ -87,20 +105,9 @@ const Pflegefachkraft = () => {
                       Dringend gesucht
                     </span>
                   </div>
-                  <div className="flex flex-wrap gap-4 text-muted-foreground">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      Vollzeit / Teilzeit
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <MapPin className="w-4 h-4" />
-                      Frankfurt am Main
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Euro className="w-4 h-4" />
-                      Ab 3.800€ / Monat
-                    </span>
-                  </div>
+                  <p className="text-lg text-muted-foreground">
+                    Chancen, Aufgaben und Perspektiven in Frankfurt
+                  </p>
                 </div>
               </div>
             </div>
@@ -113,46 +120,120 @@ const Pflegefachkraft = () => {
             <div className="max-w-5xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2 space-y-12">
+                  {/* Intro */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Über die Stelle
+                      Pflegefachkraft in Frankfurt gesucht
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
-                      Als examinierte Pflegefachkraft bei AVYTA übernehmen Sie verantwortungsvolle Aufgaben 
-                      in der ambulanten Pflege. Wir sind spezialisiert auf Demenz und Diabetes und suchen 
-                      Fachkräfte, die unser Team mit ihrer Expertise verstärken.
+                      Als Pflegefachkraft in Frankfurt übernehmen Sie eine zentrale Verantwortung für die Betreuung 
+                      und Versorgung von pflegebedürftigen Menschen. Ihre Arbeit geht weit über die reine medizinische 
+                      Pflege hinaus – Sie leisten einen wichtigen Beitrag zur Verbesserung der Lebensqualität Ihrer 
+                      Patienten. In einer Stadt wie Frankfurt, die sowohl berufliche Chancen als auch ein attraktives 
+                      Lebensumfeld bietet, erwarten Sie spannende und vielseitige Perspektiven.
                     </p>
                   </div>
 
+                  {/* Aufgaben */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Ihre Aufgaben
+                      Ihr Aufgabenbereich als Pflegefachkraft in Frankfurt
                     </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Die Tätigkeit als Pflegefachkraft in Frankfurt umfasst ein breites Spektrum an Aufgaben, 
+                      bei denen Sie sowohl medizinische als auch soziale Kompetenzen einbringen. Zu Ihren 
+                      Hauptaufgaben zählen:
+                    </p>
                     <ul className="space-y-3">
-                      {tasks.map((task, index) => (
+                      {aufgaben.map((aufgabe, index) => (
                         <li key={index} className="flex items-start gap-3">
                           <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{task}</span>
+                          <span className="text-muted-foreground">{aufgabe}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
+                  {/* Anforderungen */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Was Sie mitbringen
+                      Anforderungen an eine Pflegefachkraft in Frankfurt
                     </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Um als Pflegefachkraft in Frankfurt arbeiten zu können, benötigen Sie eine entsprechende 
+                      abgeschlossene Ausbildung sowie Berufserfahrung im Pflegebereich. Darüber hinaus werden 
+                      belastungsfähige Persönlichkeiten gesucht, die auch in stressigen Situationen Ruhe bewahren.
+                    </p>
                     <ul className="space-y-3">
-                      {requirements.map((req, index) => (
+                      {anforderungen.map((anf, index) => (
                         <li key={index} className="flex items-start gap-3">
                           <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{req}</span>
+                          <span className="text-muted-foreground">{anf}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* FAQ Section */}
+                  {/* Karrierechancen */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Karrierechancen für Pflegefachkräfte in Frankfurt
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Frankfurt bietet Pflegefachkräften zahlreiche Entwicklungsmöglichkeiten. Neben der klassischen 
+                      Pflegearbeit können Sie sich auf spezifische Fachbereiche wie Intensivpflege, Geriatrie oder 
+                      Palliativpflege spezialisieren. Wer Führungsverantwortung übernehmen möchte, hat die Option, 
+                      im Pflegemanagement tätig zu werden. Ebenso bietet sich eine Karriere in der Pflegepädagogik 
+                      oder -beratung an, wenn Sie Ihr Wissen an Nachwuchskräfte weitergeben möchten.
+                    </p>
+                    <ul className="space-y-3">
+                      {karrierechancen.map((chance, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{chance}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Benefits */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-6">
+                      Vorteile einer Tätigkeit als Pflegefachkraft in Frankfurt
+                    </h2>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      {benefits.map((benefit, index) => (
+                        <div key={index} className="flex items-start gap-3 p-4 bg-muted/30 rounded-xl border border-border/50">
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <benefit.icon className="w-5 h-5 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-medium text-foreground">{benefit.title}</h4>
+                            <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
+                    <h3 className="text-xl font-display font-bold text-foreground mb-3">
+                      Starten Sie Ihre Karriere bei Avyta!
+                    </h3>
+                    <p className="text-muted-foreground mb-4">
+                      Als Pflegefachkraft bei Avyta in Frankfurt profitieren Sie nicht nur von einer sicheren 
+                      beruflichen Perspektive, sondern auch von einer hohen Wertschätzung Ihrer Arbeit. Wir bieten 
+                      Ihnen ein motivierendes Arbeitsumfeld, in dem Sie sich entfalten können.
+                    </p>
+                    <p className="text-foreground font-medium">
+                      Sichern Sie sich Ihre berufliche Zukunft in einem aufgeschlossenen Team und profitieren Sie 
+                      von umfangreichen Entwicklungsmöglichkeiten. Bewerben Sie sich noch heute, ob in Vollzeit, 
+                      Teilzeit oder als geringfügige Beschäftigung – wir freuen uns, Sie kennenzulernen!
+                    </p>
+                  </div>
+
+                  {/* FAQ */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-6">
                       Häufige Fragen
@@ -176,12 +257,13 @@ const Pflegefachkraft = () => {
                   </div>
                 </div>
 
+                {/* Sidebar */}
                 <div className="space-y-6">
                   <div className="sticky top-28 space-y-6">
                     <div className="p-6 bg-muted/30 rounded-2xl">
-                      <h3 className="font-semibold text-foreground mb-4">Das bieten wir</h3>
+                      <h3 className="font-semibold text-foreground mb-4">Benefits</h3>
                       <ul className="space-y-3">
-                        {benefits.map((benefit, index) => (
+                        {sidebarBenefits.map((benefit, index) => (
                           <li key={index} className="flex items-start gap-2 text-sm">
                             <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                             <span className="text-muted-foreground">{benefit}</span>
