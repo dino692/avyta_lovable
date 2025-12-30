@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, Stethoscope, Home, Pill, Activity, HeartPulse, Utensils, Check } from "lucide-react";
+import { ArrowRight, Stethoscope, Home, Activity, Utensils, Clock, FileText, UserCheck, Check, HeartPulse } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -38,21 +38,6 @@ const services = [
     ],
   },
   {
-    id: "medikamente",
-    icon: Pill,
-    title: "Medikamentenmanagement",
-    shortDescription: "Sichere Verwaltung Ihrer Medikamente",
-    description: "Sichere Verwaltung und Verabreichung Ihrer Medikamente – pünktlich und zuverlässig.",
-    details: [
-      "Medikamente stellen und verabreichen",
-      "Überwachung der Einnahme",
-      "Dokumentation der Medikation",
-      "Abstimmung mit Ärzten und Apotheken",
-      "Beratung zu Wechselwirkungen",
-      "Rezeptmanagement",
-    ],
-  },
-  {
     id: "intensivpflege",
     icon: Activity,
     title: "Intensivpflege",
@@ -68,24 +53,9 @@ const services = [
     ],
   },
   {
-    id: "palliativ",
-    icon: HeartPulse,
-    title: "Palliativpflege",
-    shortDescription: "Würdevolle Begleitung in der letzten Lebensphase",
-    description: "Einfühlsame Begleitung in der letzten Lebensphase – würdevoll und schmerzfrei.",
-    details: [
-      "Schmerzmanagement",
-      "Symptomkontrolle",
-      "Psychosoziale Betreuung",
-      "Begleitung der Angehörigen",
-      "Trauerbegleitung",
-      "Koordination mit Hospizen",
-    ],
-  },
-  {
-    id: "hauswirtschaft",
+    id: "haushaltshilfe",
     icon: Utensils,
-    title: "Hauswirtschaft",
+    title: "Haushaltshilfe",
     shortDescription: "Hilfe im Haushalt und Alltag",
     description: "Hilfe im Haushalt: Einkaufen, Kochen, Reinigung und Organisation des Alltags.",
     details: [
@@ -95,6 +65,51 @@ const services = [
       "Wäschepflege",
       "Begleitung bei Aktivitäten",
       "Administrative Unterstützung",
+    ],
+  },
+  {
+    id: "24-stunden",
+    icon: Clock,
+    title: "24-Stunden-Pflege",
+    shortDescription: "Rund-um-die-Uhr Betreuung zu Hause",
+    description: "Rund-um-die-Uhr Betreuung zu Hause – die Alternative zum Pflegeheim.",
+    details: [
+      "Betreuung rund um die Uhr",
+      "Hauswirtschaftliche Versorgung",
+      "Gesellschaft und Aktivierung",
+      "Unterstützung im Alltag",
+      "Flexible Betreuungsmodelle",
+      "Entlastung pflegender Angehöriger",
+    ],
+  },
+  {
+    id: "pflegeberatung",
+    icon: FileText,
+    title: "Pflegeberatung",
+    shortDescription: "Kostenlose Beratung zu Pflegeleistungen",
+    description: "Kostenlose Beratung zu Pflegeleistungen, Pflegegrad und Ansprüchen.",
+    details: [
+      "Beratung nach § 37.3 SGB XI",
+      "Unterstützung bei Pflegegradantrag",
+      "Informationen zu Leistungsansprüchen",
+      "Hilfe bei Widerspruchsverfahren",
+      "Vermittlung weiterer Hilfsangebote",
+      "Entlastung pflegender Angehöriger",
+    ],
+  },
+  {
+    id: "verhinderungspflege",
+    icon: UserCheck,
+    title: "Verhinderungspflege",
+    shortDescription: "Vertretung für pflegende Angehörige",
+    description: "Professionelle Vertretung für pflegende Angehörige bei Urlaub oder Krankheit.",
+    details: [
+      "Stundenweise Entlastung",
+      "Tageweise Vertretung",
+      "Urlaubsvertretung",
+      "Vertretung bei Krankheit",
+      "Flexible Einsatzzeiten",
+      "Kombinierbar mit Kurzzeitpflege",
     ],
   },
 ];
