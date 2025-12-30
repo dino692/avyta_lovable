@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 const leistungen: { name: string; href: string; description: string; icon: LucideIcon }[] = [
+  { name: "Alle Leistungen", href: "/leistungen", description: "Übersicht aller Pflegeleistungen", icon: FileText },
   { name: "Behandlungspflege", href: "/leistungen/behandlungspflege", description: "Medizinische Versorgung nach ärztlicher Verordnung", icon: Stethoscope },
   { name: "Grundpflege", href: "/leistungen/grundpflege", description: "Unterstützung bei alltäglichen Verrichtungen", icon: HandHelping },
   { name: "Intensivpflege", href: "/leistungen/intensivpflege", description: "Betreuung für beatmungspflichtige Patienten", icon: HeartPulse },
@@ -40,8 +41,9 @@ const standorte = {
 };
 
 const jobs = [
+  { name: "Alle Jobs", href: "/jobs", description: "Übersicht aller Stellenangebote", icon: Briefcase },
   { name: "Pflege Jobs", href: "/jobs/pflege-jobs", description: "Alle Pflegestellen im Überblick", icon: Heart },
-  { name: "Stellenangebote", href: "/jobs/stellenangebote", description: "Alle offenen Positionen im Überblick", icon: Briefcase },
+  { name: "Stellenangebote", href: "/jobs/stellenangebote", description: "Alle offenen Positionen im Überblick", icon: FileText },
   { name: "Pflegefachkraft", href: "/jobs/pflegefachkraft", description: "Examinierte Pflegekräfte (m/w/d)", icon: UserCheck },
   { name: "Pflegehilfskraft", href: "/jobs/pflegehilfskraft", description: "Mit Qualifikation nach §43b", icon: Users },
   { name: "Pflegehelfer", href: "/jobs/pflegehelfer", description: "Quereinsteiger willkommen", icon: Heart },
@@ -143,14 +145,6 @@ const Header = () => {
                         </Link>
                       ))}
                     </div>
-                    <div className="border-t border-border mt-3 pt-3">
-                      <Link
-                        to="/leistungen"
-                        className="text-primary font-medium text-sm hover:underline"
-                      >
-                        Alle Leistungen ansehen →
-                      </Link>
-                    </div>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -223,14 +217,6 @@ const Header = () => {
                           </div>
                         </Link>
                       ))}
-                    </div>
-                    <div className="border-t border-border mt-3 pt-3">
-                      <Link
-                        to="/jobs"
-                        className="text-primary font-medium text-sm hover:underline"
-                      >
-                        Alle Jobs ansehen →
-                      </Link>
                     </div>
                   </div>
                 </NavigationMenuContent>
