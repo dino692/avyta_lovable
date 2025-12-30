@@ -24,7 +24,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-20 overflow-x-clip">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-hero" />
       
