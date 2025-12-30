@@ -37,7 +37,7 @@ const AboutSection = () => {
               <div className="bg-primary rounded-2xl p-8 text-primary-foreground">
                 <h3 className="font-display text-2xl font-bold mb-4">Unsere Mission</h3>
                 <p className="leading-relaxed opacity-90 mb-6">
-                  Im Laufe der Jahre und mit stetiger Nachfrage haben wir entschieden unsere Fähigkeiten zu erweitern und uns für ein Fachgebiet spezialisiert und zertifiziert für: Demenz- und Diabetes Erkrankungen.
+                  Im Laufe der Jahre und mit stetiger Nachfrage haben wir entschieden unsere Fähigkeiten zu erweitern und uns für ein Fachgebiet spezialisiert und zertifiziert: Demenz- und Diabetes Erkrankungen.
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-full bg-primary-foreground/20 flex items-center justify-center text-2xl">👩‍⚕️</div>
