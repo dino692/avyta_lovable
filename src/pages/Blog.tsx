@@ -3,8 +3,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { BookOpen, Heart, Stethoscope, Newspaper, Scale, ArrowRight, Calendar, Clock, User, LayoutGrid } from "lucide-react";
+import { BookOpen, Heart, Stethoscope, Newspaper, Scale, ArrowRight, Calendar, Clock, User, LayoutGrid, Mail, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
 
 const categories = [
   {
@@ -136,10 +138,39 @@ const categoryMap: Record<string, string> = {
 
 const Blog = () => {
   const [activeCategory, setActiveCategory] = useState("alle");
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
   const filteredPosts = activeCategory === "alle" 
     ? blogPosts 
     : blogPosts.filter(post => categoryMap[post.category] === activeCategory);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email || !email.includes("@")) {
+      toast({
+        title: "Ungültige E-Mail",
+        description: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+    
+    // Simulate API call - replace with actual newsletter service integration
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    toast({
+      title: "Erfolgreich angemeldet!",
+      description: "Vielen Dank für Ihre Newsletter-Anmeldung.",
+    });
+    
+    setEmail("");
+    setIsLoading(false);
+  };
 
   return (
     <>
@@ -294,12 +325,35 @@ const Blog = () => {
             <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">
               Erhalten Sie regelmäßig neue Artikel und Tipps direkt in Ihr Postfach.
             </p>
-            <Button variant="secondary" size="lg" asChild>
-              <a href="/#newsletter">
-                Jetzt anmelden
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-            </Button>
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <div className="relative flex-1">
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                <Input
+                  type="email"
+                  placeholder="Ihre E-Mail-Adresse"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="pl-10 h-12 bg-background border-border"
+                  required
+                />
+              </div>
+              <Button 
+                type="submit" 
+                variant="secondary" 
+                size="lg" 
+                className="h-12"
+                disabled={isLoading}
+              >
+                {isLoading ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <>
+                    Jetzt anmelden
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </>
+                )}
+              </Button>
+            </form>
           </div>
         </section>
       </main>
