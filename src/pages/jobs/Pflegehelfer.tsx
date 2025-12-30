@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
-import { Heart, CheckCircle2, MapPin, Clock, Euro, ArrowRight } from "lucide-react";
+import { Heart, CheckCircle2, ArrowRight, Sparkles, Users, Home, Dumbbell, Infinity, Palette, Globe, CalendarCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -12,43 +12,83 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const requirements = [
-  "Freude am Umgang mit Menschen",
-  "Einfühlungsvermögen und Geduld",
-  "Zuverlässigkeit und Pünktlichkeit",
-  "Gute Deutschkenntnisse (min. B1)",
-  "Führerschein Klasse B von Vorteil",
+const stellenangebote = [
+  { title: "Pflegefachkraft in Frankfurt", href: "/jobs/pflegefachkraft", icon: Sparkles },
+  { title: "Pflegehelfer/in in Frankfurt", href: "/jobs/pflegehelfer", icon: Heart },
+  { title: "Pflegehilfskraft in Frankfurt", href: "/jobs/pflegehilfskraft", icon: Users },
+  { title: "Haushaltshilfen in Frankfurt", href: "/jobs/haushaltshilfe", icon: Home },
 ];
 
-const tasks = [
-  "Unterstützung bei der Grundpflege",
-  "Begleitung zu Arztbesuchen",
-  "Hilfe im Haushalt",
-  "Gesellschaft und Betreuung",
-  "Dokumentation der Pflegeleistungen",
+const aufgaben = [
+  "Grundpflege (Duschen, Waschen Intimzone, Windelwechseln, etc.)",
+  "Beobachtung und Meldung über Gesundheitszustand von Betreuten",
+  "Vitalwerte, Größe und Gewicht prüfen",
+  "Betreuten bei Versorgung mit Nahrungsmitteln und beim Essen helfen",
+  "Wartung der Pflegeausrüstung von Betreuten",
+  "Auf Notfallsituationen reagieren",
+  "Verabreichen von Medikamenten",
+  "Betreute zu Terminen begleiten und fahren",
+  "Aktivitäten und Gemeinschaftsanlässe, einschließlich des Transports",
+  "Betreute bei ihren Aktivitäten und Interessen unterstützen",
 ];
 
 const benefits = [
-  "Keine Vorkenntnisse erforderlich",
-  "Einarbeitung durch erfahrene Kolleginnen",
-  "Flexible Arbeitszeiten",
-  "Überdurchschnittliche Vergütung",
-  "Weiterbildungsmöglichkeiten",
-  "Familiäres Arbeitsumfeld",
+  "Gehalt: Sie erwartet ein übertarifliches Gehalt, je nach Qualifikation und Erfahrung",
+  "Zuschläge: Sonntag, Feiertag und Nachtzuschläge",
+  "Urlaub: Jährlich genießen unsere Mitarbeiter 30 Urlaubstage",
+  "PKW: Stellen wir Ihnen auch privat zur Verfügung, damit Sie stets mobil bleiben",
+  "Firmenfitness: Wellpass-Mitgliedschaft monatlich zusätzlich zum Gehalt",
+  "Prämien: Urlaubsprämien, Feiertagsprämien und leistungsbasierte Prämien",
+  "Teamzusammenhalt: Geburtstage mit steuerfreien Geschenken bis 60€",
+  "Unterkunft: Bei Bedarf Apartment oder WG",
+  "Berufskleidung: Für alle Wetterbedingungen gerüstet",
+  "Digital: Größtenteils papierlose Arbeit",
+];
+
+const qualifikation = [
+  "Berufserfahrung oder abgeschlossene Ausbildung in der Pflegebranche",
+  "Sie sind flexibel, belastbar, zuverlässig und haben Einfühlungsvermögen",
+  "Führerschein Klasse B (zwingend)",
+  "Deutschkenntnisse (zwingend)",
+];
+
+const haushaltBenefits = [
+  "Überdurchschnittliches Gehalt",
+  "Toyota Aygo auch zur privaten Nutzung",
+  "Wohnung/Apartment – einzeln oder in einer WG in Frankfurt!",
+  "Feiertags- und Sonntagszuschläge",
+  "50€ Einkaufsgutschein (monatlich)",
+  "30 Tage Urlaub",
+  "Zusätzliche Rentenversicherung",
+  "Eine hohe Wertschätzung – wir wissen, was Sie jeden Tag leisten!",
+];
+
+const haushaltAnforderungen = [
+  "Berufserfahrung als Haushaltshilfe oder Pflegehelfer in Frankfurt",
+  "Führerschein Klasse B (empfohlen)",
+  "Deutschkenntnisse (min. B1)",
+  "Eine Brise Perfektionismus",
+];
+
+const wellpassFeatures = [
+  { icon: Infinity, label: "Unlimitiert" },
+  { icon: Palette, label: "Vielfältig" },
+  { icon: Globe, label: "Überall" },
+  { icon: CalendarCheck, label: "Flexibel" },
 ];
 
 const faqs = [
   {
-    question: "Brauche ich eine Ausbildung als Pflegehelfer?",
-    answer: "Nein, als Pflegehelfer benötigen Sie keine formale Ausbildung. Wir arbeiten Sie umfassend ein und begleiten Sie in den ersten Wochen intensiv. Ihre Bereitschaft zu lernen und Ihr Einfühlungsvermögen sind für uns wichtiger als formale Qualifikationen."
+    question: "Welche Jobs als Pflegehelfer in Frankfurt bietet Avyta an?",
+    answer: "Bei Avyta schreiben wir aktuell Pflege Jobs in Frankfurt als Pflegefachkraft, Pflegehelfer/Pflegehilfskraft sowie Haushaltshilfen aus. Gerne nehmen wir Ihre Bewerbung in einem dieser Bereiche entgegen – werden Sie Teil eines tollen Teams und entwickeln Sie sich beruflich weiter."
   },
   {
-    question: "Welche Arbeitszeiten sind möglich?",
-    answer: "Wir bieten flexible Arbeitszeitmodelle an – ob Vollzeit, Teilzeit oder Minijob. Gemeinsam finden wir ein Modell, das zu Ihrer Lebenssituation passt."
+    question: "Welche Voraussetzungen braucht man als Pflegehelfer in Frankfurt?",
+    answer: "Als Pflegehelfer in Frankfurt benötigen Sie eine einjährige Ausbildung an einer staatlich anerkannten Krankenfachschule. Wichtig sind außerdem Flexibilität, Belastbarkeit, Zuverlässigkeit und Einfühlungsvermögen. Ein Führerschein Klasse B und gute Deutschkenntnisse sind zwingend erforderlich."
   },
   {
-    question: "Wie sieht die Einarbeitung aus?",
-    answer: "Sie werden von erfahrenen Kolleginnen und Kollegen begleitet und lernen alle Aufgaben Schritt für Schritt kennen. Die Einarbeitungszeit richtet sich nach Ihren Vorkenntnissen und Ihrem Lerntempo."
+    question: "Wie ist die Bezahlung als Pflegehelfer in Frankfurt?",
+    answer: "Bei Avyta erwartet Sie ein übertarifliches Gehalt, das sich nach Ihrer Qualifikation und Erfahrung richtet. Zusätzlich profitieren Sie von Sonntags-, Feiertags- und Nachtzuschlägen sowie weiteren attraktiven Benefits wie 30 Urlaubstage und einem Firmenwagen zur privaten Nutzung."
   },
 ];
 
@@ -56,8 +96,8 @@ const Pflegehelfer = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegehelfer/in | Jobs bei AVYTA Frankfurt</title>
-        <meta name="description" content="Werden Sie Pflegehelfer/in bei AVYTA in Frankfurt. Keine Ausbildung erforderlich – wir arbeiten Sie ein. Flexible Arbeitszeiten. Jetzt bewerben!" />
+        <title>Pflegehelfer Frankfurt | Jobs bei AVYTA Pflegedienst</title>
+        <meta name="description" content="Werden Sie Pflegehelfer/in bei AVYTA in Frankfurt. Übertarifliche Bezahlung, 30 Tage Urlaub, Firmenwagen. Jetzt bewerben!" />
       </Helmet>
 
       <Header />
@@ -78,20 +118,9 @@ const Pflegehelfer = () => {
                   <h1 className="text-4xl font-display font-bold text-foreground mb-4">
                     Pflegehelfer/in (m/w/d)
                   </h1>
-                  <div className="flex flex-wrap gap-4 text-muted-foreground">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      Vollzeit / Teilzeit / Minijob
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <MapPin className="w-4 h-4" />
-                      Frankfurt am Main
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Euro className="w-4 h-4" />
-                      Ab 2.400€ / Monat
-                    </span>
-                  </div>
+                  <p className="text-lg text-muted-foreground">
+                    Ihre Karriere bei AVYTA in Frankfurt
+                  </p>
                 </div>
               </div>
             </div>
@@ -104,46 +133,210 @@ const Pflegehelfer = () => {
             <div className="max-w-5xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2 space-y-12">
+                  {/* Intro */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Über die Stelle
+                      Pflegehelfer in Frankfurt gesucht
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
-                      Sie suchen einen sinnvollen Job, bei dem Sie Menschen helfen können? Als Pflegehelfer/in 
-                      bei AVYTA unterstützen Sie unsere Pflegefachkräfte bei der Betreuung unserer Patienten. 
-                      Keine Ausbildung erforderlich – wir arbeiten Sie umfassend ein!
+                      Ambulante Pflege nimmt einen immer größeren Stellenwert in unserer Gesellschaft ein. Das ist 
+                      insbesondere eine Folge des demographischen Wandels. Denn einerseits bringt dieser eine höhere 
+                      Lebenserwartung mit sich, andererseits aber führt er dazu, dass die Anzahl pflegebedürftiger 
+                      Personen steigt und weniger Pflegehilfskräfte in Frankfurt auf dem Stellenmarkt verfügbar sind. 
+                      Wir von Avyta sind stets auf der Suche nach motivierten Personen, die sich eine Karriere in 
+                      unserem ambulanten Pflegedienst vorstellen können. Als Pflegehelfer in Frankfurt erwartet Sie 
+                      in unserem Team ein familiäres Arbeitsumfeld, in dem Sie sich im Rahmen einer flachen Hierarchie 
+                      mit einem angenehmen Betriebsklima optimal entwickeln können.
                     </p>
                   </div>
 
+                  {/* Stellenangebote Links */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-6">
+                      Stellen für Pflegehelfer in Frankfurt – Stellenangebote aktuell bei Avyta
+                    </h2>
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {stellenangebote.map((job) => (
+                        <Link
+                          key={job.href}
+                          to={job.href}
+                          className="group flex items-center gap-3 p-4 bg-muted/30 rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all"
+                        >
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
+                            <job.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground" />
+                          </div>
+                          <span className="font-medium text-foreground group-hover:text-primary transition-colors flex-1">
+                            {job.title}
+                          </span>
+                          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Arbeiten bei Avyta */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Ihre Aufgaben
+                      Arbeiten bei Avyta – Eine Zukunft voller Möglichkeiten
                     </h2>
-                    <ul className="space-y-3">
-                      {tasks.map((task, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{task}</span>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Wir sind Ihr zuverlässiger Partner und Arbeitgeber in der Pflegebranche mit Sitz im Herzen 
+                      von Frankfurt. Bei uns stehen nicht nur die Bedürfnisse unserer Patienten im Mittelpunkt, 
+                      sondern auch das Wohlbefinden und die berufliche Entwicklung unserer Mitarbeiter.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Als Teil unseres Teams genießen Sie nicht nur die Sicherheit und die Vorzüge eines etablierten 
+                      Pflegedienstes, sondern auch Gesundheits- und Wellnessangebote durch unsere Mitgliedschaft bei 
+                      Wellpass. Wir glauben daran, dass die Gesundheit unserer Mitarbeiter direkt zu einer höheren 
+                      Qualität in der Pflege unserer Kunden beiträgt und einer gesunden Work-Life-Balance.
+                    </p>
+
+                    {/* Wellpass Box */}
+                    <div className="p-6 bg-muted/30 rounded-2xl border border-border/50">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <Dumbbell className="w-5 h-5 text-primary" />
+                        </div>
+                        <h3 className="font-semibold text-foreground">Firmenfitness mit Wellpass</h3>
+                      </div>
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        {wellpassFeatures.map((feature, index) => (
+                          <div key={index} className="flex items-center gap-2">
+                            <feature.icon className="w-4 h-4 text-primary" />
+                            <span className="text-sm text-muted-foreground">{feature.label}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bewerbung als Pflegehelfer */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Bewerbung als Pflegehelfer in Frankfurt
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Sowohl in Voll- als auch in Teilzeit vergeben wir Pflege Jobs als Pflegehelfer in Frankfurt 
+                      an Personen, die ein hohes Maß an eigenverantwortlichem Handeln aufweisen und zugleich Spaß 
+                      am Umgang mit Menschen haben.
+                    </p>
+
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-3">
+                      Ihr Tätigkeitsfeld als Pflegehelfer in Frankfurt
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Die Tätigkeiten von Pflegekräften sind umfangreicher als die von Pflegehelfern. Denn während 
+                      eine Pflegehelferin oder ein Pflegehelfer in Frankfurt eine einjährige Ausbildung durchläuft, 
+                      sind es bei der Pflegefachkraft drei Jahre an einer staatlich anerkannten Krankenfachschule 
+                      sowie in ambulanten und stationären Pflegeeinrichtungen. Dabei liefern das theoretische und 
+                      praktische Know-how eine Fülle an Informationen für Pflege Jobs in Frankfurt, die die 
+                      Pflegefachkraft dazu befähigen, die Pflegehelfer zu koordinieren sowie die medizinische 
+                      Versorgung von Patienten zu übernehmen.
+                    </p>
+
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-3">
+                      Was hätten Sie als Pflegehelfer in Frankfurt zu tun?
+                    </h3>
+                    <div className="grid sm:grid-cols-2 gap-2 mb-6">
+                      {aufgaben.map((aufgabe, index) => (
+                        <div key={index} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                          <span className="text-sm text-muted-foreground">{aufgabe}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-3">
+                      Was wir von Pflegehelfern in Frankfurt erwarten
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Wir geben viel und zeigen uns Bewerbern jeden Geschlechts und jeder Herkunft offen. Unser 
+                      ambulanter Pflegedienst freut sich über Bewerbungen als Pflegekraft oder als Pflegehelfer 
+                      in Frankfurt!
+                    </p>
+
+                    <h4 className="font-semibold text-foreground mb-3">Qualifikation:</h4>
+                    <ul className="space-y-2 mb-6">
+                      {qualifikation.map((qual, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                          <span className="text-sm text-muted-foreground">{qual}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <h4 className="font-semibold text-foreground mb-3">Benefits:</h4>
+                    <div className="grid sm:grid-cols-2 gap-2">
+                      {benefits.map((benefit, index) => (
+                        <div key={index} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                          <span className="text-sm text-muted-foreground">{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Haushaltshilfe Alternative */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Keine Ausbildung als Pflegehelfer? Bewerbung als Haushaltshilfe
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Für diese Pflege Jobs in Frankfurt dürfen sich alle Personen angesprochen fühlen, die 
+                      freundliche Umgangsformen pflegen und ehrlich sowie zuverlässig sind. Diese Pflege Jobs 
+                      in Frankfurt haben wir in Voll-, Teilzeit und auch als geringfügige Beschäftigung anzubieten.
+                    </p>
+
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-3">
+                      Ihr Tätigkeitsfeld
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Für die Tätigkeit als Haushaltshilfe bedarf es im Vergleich zur Anstellung als Pflegehelfer 
+                      in Frankfurt keiner besonderen und umfangreichen Kenntnisse. Wie der Name der Pflege Jobs 
+                      in Frankfurt schon sagt, geht es hier hauptsächlich um Tätigkeiten im Haushalt, bei denen 
+                      Sie den Pflegebedürftigen helfen. Da Sie allerdings auch hier Kontakt zu den Klienten haben, 
+                      ist wie bei anderen Pflege Jobs in Frankfurt ein freundlicher und professioneller Umgang 
+                      sowie ein Gefühl für die jeweilige Situation des Klienten Voraussetzung. Ansonsten dürfen 
+                      Sie sich bei diesen Pflege Jobs in Frankfurt darauf einstellen, dass Sie im Haushalt typische 
+                      Reinigungsarbeiten, Wechseln und Waschen der Wäsche, Blumen gießen, Mülltrennung- und 
+                      -entsorgung sowie viele weitere Aufgaben übernehmen.
+                    </p>
+
+                    <h4 className="font-semibold text-foreground mb-3">Benefits:</h4>
+                    <div className="grid sm:grid-cols-2 gap-2 mb-6">
+                      {haushaltBenefits.map((benefit, index) => (
+                        <div key={index} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                          <span className="text-sm text-muted-foreground">{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <h4 className="font-semibold text-foreground mb-3">Unsere Anforderungen an Sie:</h4>
+                    <ul className="space-y-2">
+                      {haushaltAnforderungen.map((anf, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                          <span className="text-sm text-muted-foreground">{anf}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div>
-                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Was Sie mitbringen
-                    </h2>
-                    <ul className="space-y-3">
-                      {requirements.map((req, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{req}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  {/* CTA */}
+                  <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
+                    <p className="text-foreground font-medium mb-2">
+                      Rufen Sie heute an oder schicken Sie uns Ihre Bewerbung per E-Mail.
+                    </p>
+                    <p className="text-muted-foreground">
+                      Wir freuen uns Sie kennenzulernen! Ergreifen Sie Ihre Chance und starten Sie Ihre Karriere 
+                      als Pflegehelfer in Frankfurt. Sie haben bei uns die Gelegenheit, sich eine sichere Basis 
+                      für Ihre berufliche Karriere aufzubauen. Bei uns stehen Ihnen alle Türen offen, um Ihre 
+                      persönlichen und beruflichen Perspektiven zu erweitern.
+                    </p>
                   </div>
 
-                  {/* FAQ Section */}
+                  {/* FAQ */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-6">
                       Häufige Fragen
@@ -167,12 +360,13 @@ const Pflegehelfer = () => {
                   </div>
                 </div>
 
+                {/* Sidebar */}
                 <div className="space-y-6">
                   <div className="sticky top-28 space-y-6">
                     <div className="p-6 bg-muted/30 rounded-2xl">
-                      <h3 className="font-semibold text-foreground mb-4">Das bieten wir</h3>
+                      <h3 className="font-semibold text-foreground mb-4">Benefits</h3>
                       <ul className="space-y-3">
-                        {benefits.map((benefit, index) => (
+                        {benefits.slice(0, 6).map((benefit, index) => (
                           <li key={index} className="flex items-start gap-2 text-sm">
                             <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                             <span className="text-muted-foreground">{benefit}</span>
