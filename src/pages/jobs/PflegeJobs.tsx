@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
-import { Briefcase, CheckCircle2, MapPin, Clock, Euro, ArrowRight, Heart, Users, Sparkles, Home } from "lucide-react";
+import { Briefcase, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -12,39 +12,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const pflegeJobs = [
-  {
-    title: "Pflegefachkraft (m/w/d)",
-    type: "Vollzeit / Teilzeit",
-    location: "Frankfurt & Bad Vilbel",
-    salary: "Ab 3.800€ / Monat",
-    href: "/jobs/pflegefachkraft",
-    icon: Sparkles,
-  },
-  {
-    title: "Pflegehilfskraft (m/w/d)",
-    type: "Vollzeit / Teilzeit",
-    location: "Frankfurt & Bad Vilbel",
-    salary: "Ab 2.800€ / Monat",
-    href: "/jobs/pflegehilfskraft",
-    icon: Users,
-  },
-  {
-    title: "Pflegehelfer/in (m/w/d)",
-    type: "Vollzeit / Teilzeit / Minijob",
-    location: "Frankfurt & Bad Vilbel",
-    salary: "Ab 2.400€ / Monat",
-    href: "/jobs/pflegehelfer",
-    icon: Heart,
-  },
-  {
-    title: "Haushaltshilfe (m/w/d)",
-    type: "Teilzeit / Minijob",
-    location: "Frankfurt & Bad Vilbel",
-    salary: "Ab 14€ / Stunde",
-    href: "/jobs/haushaltshilfe",
-    icon: Home,
-  },
+const benefits = [
+  "Übertarifliches Gehalt",
+  "30 Urlaubstage jährlich",
+  "Firmenwagen auch privat",
+  "Wellpass-Mitgliedschaft",
+  "Familiäres Arbeitsumfeld",
+  "Flache Hierarchien",
 ];
 
 const faqs = [
@@ -103,7 +77,6 @@ const PflegeJobs = () => {
             <div className="max-w-5xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2 space-y-12">
-                  {/* Intro Text */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
                       Ihre Karriere bei AVYTA
@@ -121,47 +94,6 @@ const PflegeJobs = () => {
                     </p>
                   </div>
 
-                  {/* Job Cards */}
-                  <div>
-                    <h2 className="text-2xl font-display font-bold text-foreground mb-6">
-                      Aktuelle Stellenangebote
-                    </h2>
-                    <div className="space-y-4">
-                      {pflegeJobs.map((job) => (
-                        <Link
-                          key={job.href}
-                          to={job.href}
-                          className="group flex items-center gap-4 p-4 bg-muted/30 rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all"
-                        >
-                          <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                            <job.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground" />
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
-                              {job.title}
-                            </h3>
-                            <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
-                              <span className="flex items-center gap-1">
-                                <Clock className="w-3 h-3" />
-                                {job.type}
-                              </span>
-                              <span className="flex items-center gap-1">
-                                <MapPin className="w-3 h-3" />
-                                {job.location}
-                              </span>
-                              <span className="flex items-center gap-1">
-                                <Euro className="w-3 h-3" />
-                                {job.salary}
-                              </span>
-                            </div>
-                          </div>
-                          <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Placeholder for additional text */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
                       Ergreifen Sie Ihre Chance
@@ -198,22 +130,26 @@ const PflegeJobs = () => {
                   </div>
                 </div>
 
-                {/* Sidebar */}
                 <div className="space-y-6">
                   <div className="sticky top-28 space-y-6">
-                    <div className="p-6 bg-primary text-primary-foreground rounded-2xl">
-                      <h3 className="font-semibold mb-4">Jetzt bewerben</h3>
-                      <p className="text-sm opacity-90 mb-4">
-                        Rufen Sie heute an oder schicken Sie uns Ihre Bewerbung per E-Mail. 
-                        Wir freuen uns Sie kennenzulernen!
-                      </p>
-                      <Button variant="secondary" className="w-full" asChild>
-                        <a href="mailto:jobs@avyta.de?subject=Bewerbung Pflege Job">
-                          Bewerbung senden
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </a>
-                      </Button>
+                    <div className="p-6 bg-muted/30 rounded-2xl">
+                      <h3 className="font-semibold text-foreground mb-4">Das bieten wir</h3>
+                      <ul className="space-y-3">
+                        {benefits.map((benefit, index) => (
+                          <li key={index} className="flex items-start gap-2 text-sm">
+                            <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span className="text-muted-foreground">{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
+
+                    <Button variant="hero" size="lg" className="w-full" asChild>
+                      <a href="mailto:jobs@avyta.de?subject=Bewerbung Pflege Job">
+                        Jetzt bewerben
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </a>
+                    </Button>
 
                     <p className="text-sm text-muted-foreground text-center">
                       oder rufen Sie uns an: <br />
