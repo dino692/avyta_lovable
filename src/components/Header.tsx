@@ -49,6 +49,7 @@ const jobs = [
 ];
 
 const blogCategories = [
+  { name: "Alle Artikel", href: "/blog", description: "Übersicht aller Blog-Beiträge", icon: FileText },
   { name: "Empfehlungen", href: "/blog?kategorie=empfehlungen", description: "Unsere Top-Tipps für Sie", icon: Lightbulb },
   { name: "Pflegetipps", href: "/blog?kategorie=pflegetipps", description: "Praktische Ratschläge für den Alltag", icon: BookOpen },
   { name: "Gesundheit", href: "/blog?kategorie=gesundheit", description: "Wichtiges rund um Ihre Gesundheit", icon: Activity },
@@ -96,7 +97,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src="/images/avyta-logo.png" alt="AVYTA Pflegegesellschaft mbH" className="h-10" />
+            <img src="/images/avyta-logo.png" alt="AVYTA Pflegegesellschaft mbH" className="h-6" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -249,7 +250,7 @@ const Header = () => {
                           to={item.href}
                           className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
                         >
-                          <div className="p-2 rounded-lg bg-accent/50 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                          <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                             <item.icon className="w-4 h-4" />
                           </div>
                           <div>
@@ -262,14 +263,6 @@ const Header = () => {
                           </div>
                         </Link>
                       ))}
-                    </div>
-                    <div className="border-t border-border mt-3 pt-3">
-                      <Link
-                        to="/blog"
-                        className="text-primary font-medium text-sm hover:underline"
-                      >
-                        Alle Artikel ansehen →
-                      </Link>
                     </div>
                   </div>
                 </NavigationMenuContent>
