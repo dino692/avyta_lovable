@@ -191,10 +191,6 @@ const PflegeJobs = () => {
             <div className="flex flex-col lg:flex-row gap-12">
               {/* Main Content */}
               <div className="flex-1">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-8">
-                  Pflegedienst in Frankfurt – Stellenangebote aktuell bei Avyta:
-                </h2>
-                
                 <div className="space-y-6 mb-12">
                   {pflegeJobs.map((job) => (
                     <Link

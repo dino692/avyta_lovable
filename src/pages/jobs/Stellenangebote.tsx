@@ -145,9 +145,6 @@ const Stellenangebote = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-display font-bold text-foreground mb-4 text-center">
-                Freie Stellenangebote in der Pflege Frankfurt
-              </h2>
               <p className="text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
                 Unsere Aufgaben im privaten Umfeld von Pflegebedürftigen sind so vielfältig wie die Menschen, die wir täglich versorgen. 
                 Darum ist auch unser Team breit aufgestellt und Sie können sich mit unterschiedlichen Qualifikationen bewerben. 
