@@ -40,6 +40,7 @@ const standorte = {
 };
 
 const jobs = [
+  { name: "Pflege Jobs", href: "/jobs/pflege-jobs", description: "Alle Pflegestellen im Überblick", icon: Heart },
   { name: "Stellenangebote", href: "/jobs/stellenangebote", description: "Alle offenen Positionen im Überblick", icon: Briefcase },
   { name: "Pflegefachkraft", href: "/jobs/pflegefachkraft", description: "Examinierte Pflegekräfte (m/w/d)", icon: UserCheck },
   { name: "Pflegehilfskraft", href: "/jobs/pflegehilfskraft", description: "Mit Qualifikation nach §43b", icon: Users },

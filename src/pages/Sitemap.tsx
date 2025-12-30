@@ -50,6 +50,7 @@ const sitemapData = [
     icon: Briefcase,
     links: [
       { name: "Alle Jobs", href: "/jobs" },
+      { name: "Pflege Jobs", href: "/jobs/pflege-jobs" },
       { name: "Stellenangebote", href: "/jobs/stellenangebote" },
       { name: "Pflegefachkraft", href: "/jobs/pflegefachkraft" },
       { name: "Pflegehilfskraft", href: "/jobs/pflegehilfskraft" },
