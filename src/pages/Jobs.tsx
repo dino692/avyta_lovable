@@ -7,6 +7,13 @@ import { Button } from "@/components/ui/button";
 
 const jobCategories = [
   {
+    title: "Pflege Jobs",
+    href: "/jobs/pflege-jobs",
+    description: "Alle Pflegestellen im Überblick",
+    icon: Heart,
+    count: "4 Stellen",
+  },
+  {
     title: "Alle Stellenangebote",
     href: "/jobs/stellenangebote",
     description: "Übersicht aller offenen Positionen bei AVYTA",
@@ -103,7 +110,7 @@ const Jobs = () => {
             <h2 className="text-3xl font-display font-bold text-foreground mb-12 text-center">
               Offene Positionen
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {jobCategories.map((category) => (
                 <Link
                   key={category.href}

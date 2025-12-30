@@ -26,6 +26,7 @@ import VerhinderungspflegeNutzen from "./pages/blog/VerhinderungspflegeNutzen";
 import SturzprophylaxeTipps from "./pages/blog/SturzprophylaxeTipps";
 import AvytaTeamWaechst from "./pages/blog/AvytaTeamWaechst";
 import Jobs from "./pages/Jobs";
+import PflegeJobs from "./pages/jobs/PflegeJobs";
 import Kontakt from "./pages/Kontakt";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
@@ -75,6 +76,7 @@ const App = () => (
             <Route path="/blog/sturzprophylaxe-tipps" element={<SturzprophylaxeTipps />} />
             <Route path="/blog/team-waechst" element={<AvytaTeamWaechst />} />
             <Route path="/jobs" element={<Jobs />} />
+            <Route path="/jobs/pflege-jobs" element={<PflegeJobs />} />
             <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />

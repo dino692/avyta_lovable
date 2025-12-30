@@ -251,55 +251,6 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Customer Testimonials */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-              Kundenstimmen
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Was unsere Kunden sagen
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Die Zufriedenheit unserer Patienten und ihrer Familien ist unser größter Antrieb.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {customerTestimonials.map((testimonial, index) => (
-              <Card 
-                key={testimonial.name}
-                variant="elevated"
-                className="animate-fade-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-6">
-                  <Quote className="w-10 h-10 text-primary/20 mb-4" />
-                  <p className="text-foreground mb-6 leading-relaxed">
-                    "{testimonial.text}"
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div>
-                      <p className="font-semibold text-foreground">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground flex items-center gap-1">
-                        <MapPin className="w-3 h-3" />
-                        {testimonial.location}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Event Gallery */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
