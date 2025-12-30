@@ -3,44 +3,42 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
-import { Sparkles, CheckCircle2, MapPin, Clock, Euro, ArrowRight } from "lucide-react";
+import { Home, CheckCircle2, MapPin, Clock, Euro, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const requirements = [
-  "Abgeschlossene Ausbildung als Gesundheits- und Krankenpfleger/in, Altenpfleger/in oder Pflegefachmann/frau",
-  "Erfahrung in der ambulanten Pflege von Vorteil",
-  "Spezialisierung auf Demenz oder Diabetes wünschenswert",
-  "Einfühlungsvermögen und professionelles Auftreten",
-  "Führerschein Klasse B",
+  "Freude am Helfen und Unterstützen älterer Menschen",
+  "Zuverlässigkeit und Pünktlichkeit",
+  "Selbstständige Arbeitsweise",
   "Gute Deutschkenntnisse",
+  "Erfahrung im Haushalt wünschenswert",
+  "Führerschein Klasse B von Vorteil",
 ];
 
 const tasks = [
-  "Eigenständige Durchführung der Behandlungspflege",
-  "Medikamentengabe und Wundversorgung",
-  "Anleitung von Pflegehelfern und Hilfskräften",
-  "Pflegedokumentation und Qualitätssicherung",
-  "Beratung von Patienten und Angehörigen",
-  "Zusammenarbeit mit Ärzten und Therapeuten",
+  "Haushaltsführung und Reinigung",
+  "Einkäufe und Besorgungen",
+  "Wäschepflege und Bügeln",
+  "Mahlzeitenzubereitung",
+  "Begleitung bei Spaziergängen",
+  "Gesellschaft und Aktivierung",
 ];
 
 const benefits = [
-  "Gehalt nach Tarif + attraktive Zulagen",
+  "Flexible Arbeitszeiten",
+  "Faire Vergütung",
   "Unbefristeter Arbeitsvertrag",
-  "Dienstwagen auch zur privaten Nutzung möglich",
-  "30 Tage Urlaub + Sonderurlaub",
-  "Fort- und Weiterbildungen (auch extern)",
-  "Betriebliche Altersvorsorge",
-  "Gesundheitsbonus",
-  "Wertschätzendes Arbeitsumfeld",
+  "Einarbeitung und Unterstützung",
+  "Familiäres Arbeitsumfeld",
+  "Kurze Wege – Einsätze in Ihrer Nähe",
 ];
 
-const Pflegefachkraft = () => {
+const HaushaltshilfeJob = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegefachkraft | Jobs bei AVYTA</title>
-        <meta name="description" content="Examinierte Pflegefachkraft bei AVYTA in Frankfurt gesucht. Attraktive Vergütung, Dienstwagen möglich. Jetzt bewerben!" />
+        <title>Haushaltshilfe | Jobs bei AVYTA</title>
+        <meta name="description" content="Werden Sie Haushaltshilfe bei AVYTA in Frankfurt. Unterstützen Sie ältere Menschen im Alltag. Flexible Arbeitszeiten. Jetzt bewerben!" />
       </Helmet>
 
       <Header />
@@ -55,21 +53,16 @@ const Pflegefachkraft = () => {
               </Link>
               <div className="flex items-start gap-6">
                 <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Sparkles className="w-10 h-10 text-primary" />
+                  <Home className="w-10 h-10 text-primary" />
                 </div>
                 <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <h1 className="text-4xl font-display font-bold text-foreground">
-                      Pflegefachkraft (m/w/d)
-                    </h1>
-                    <span className="px-3 py-1 bg-rose-500/10 text-rose-600 text-sm font-medium rounded-full">
-                      Dringend gesucht
-                    </span>
-                  </div>
+                  <h1 className="text-4xl font-display font-bold text-foreground mb-4">
+                    Haushaltshilfe (m/w/d)
+                  </h1>
                   <div className="flex flex-wrap gap-4 text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
-                      Vollzeit / Teilzeit
+                      Teilzeit / Minijob
                     </span>
                     <span className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" />
@@ -77,7 +70,7 @@ const Pflegefachkraft = () => {
                     </span>
                     <span className="flex items-center gap-1">
                       <Euro className="w-4 h-4" />
-                      Nach Tarif + Zulagen
+                      Nach Vereinbarung
                     </span>
                   </div>
                 </div>
@@ -97,9 +90,10 @@ const Pflegefachkraft = () => {
                       Über die Stelle
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
-                      Als examinierte Pflegefachkraft bei AVYTA übernehmen Sie verantwortungsvolle Aufgaben 
-                      in der ambulanten Pflege. Wir sind spezialisiert auf Demenz und Diabetes und suchen 
-                      Fachkräfte, die unser Team mit ihrer Expertise verstärken.
+                      Als Haushaltshilfe bei AVYTA unterstützen Sie ältere und pflegebedürftige Menschen 
+                      bei der Bewältigung ihres Alltags. Sie helfen im Haushalt, bei Einkäufen und 
+                      sorgen dafür, dass sich unsere Klienten in ihrem Zuhause wohlfühlen. 
+                      Keine Pflegeausbildung erforderlich!
                     </p>
                   </div>
 
@@ -147,7 +141,7 @@ const Pflegefachkraft = () => {
                     </div>
 
                     <Button variant="hero" size="lg" className="w-full" asChild>
-                      <a href="mailto:jobs@avyta.de?subject=Bewerbung als Pflegefachkraft">
+                      <a href="mailto:jobs@avyta.de?subject=Bewerbung als Haushaltshilfe">
                         Jetzt bewerben
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
@@ -172,4 +166,4 @@ const Pflegefachkraft = () => {
   );
 };
 
-export default Pflegefachkraft;
+export default HaushaltshilfeJob;

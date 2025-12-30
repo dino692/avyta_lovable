@@ -28,6 +28,7 @@ import Stellenangebote from "./pages/jobs/Stellenangebote";
 import Pflegehelfer from "./pages/jobs/Pflegehelfer";
 import Pflegehilfskraft from "./pages/jobs/Pflegehilfskraft";
 import Pflegefachkraft from "./pages/jobs/Pflegefachkraft";
+import HaushaltshilfeJob from "./pages/jobs/Haushaltshilfe";
 
 const queryClient = new QueryClient();
 
@@ -70,6 +71,7 @@ const App = () => (
             <Route path="/jobs/pflegehelfer" element={<Pflegehelfer />} />
             <Route path="/jobs/pflegehilfskraft" element={<Pflegehilfskraft />} />
             <Route path="/jobs/pflegefachkraft" element={<Pflegefachkraft />} />
+            <Route path="/jobs/haushaltshilfe" element={<HaushaltshilfeJob />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

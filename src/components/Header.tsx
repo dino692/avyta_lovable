@@ -44,6 +44,7 @@ const jobs = [
   { name: "Pflegefachkraft", href: "/jobs/pflegefachkraft", description: "Examinierte Pflegekräfte (m/w/d)", icon: UserCheck },
   { name: "Pflegehilfskraft", href: "/jobs/pflegehilfskraft", description: "Mit Qualifikation nach §43b", icon: Users },
   { name: "Pflegehelfer", href: "/jobs/pflegehelfer", description: "Quereinsteiger willkommen", icon: Heart },
+  { name: "Haushaltshilfe", href: "/jobs/haushaltshilfe", description: "Unterstützung im Alltag", icon: Home },
 ];
 
 const blogCategories = [
