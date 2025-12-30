@@ -265,7 +265,7 @@ const HaushaltshilfeJob = () => {
                     </div>
 
                     <Button variant="hero" size="lg" className="w-full" asChild>
-                      <a href="mailto:jobs@avyta.de?subject=Bewerbung als Haushaltshilfe">
+                      <a href="mailto:info@avyta.de?subject=Bewerbung als Haushaltshilfe">
                         Jetzt bewerben
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
