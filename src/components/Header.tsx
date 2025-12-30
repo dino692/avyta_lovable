@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, Newspaper, Lightbulb, Scale, Activity, BookOpen } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, Newspaper, Lightbulb, Scale, Activity, BookOpen, Stethoscope, HandHelping, HeartPulse, Home, Clock, MessageCircle, CalendarCheck, LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -11,14 +11,14 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-const leistungen = [
-  { name: "Behandlungspflege", href: "/leistungen/behandlungspflege", description: "Medizinische Versorgung nach ärztlicher Verordnung" },
-  { name: "Grundpflege", href: "/leistungen/grundpflege", description: "Unterstützung bei alltäglichen Verrichtungen" },
-  { name: "Intensivpflege", href: "/leistungen/intensivpflege", description: "Betreuung für beatmungspflichtige Patienten" },
-  { name: "Haushaltshilfe", href: "/leistungen/haushaltshilfe", description: "Hilfe im Haushalt und Alltag" },
-  { name: "24-Stunden-Pflege", href: "/leistungen/24-stunden", description: "Rund-um-die-Uhr Betreuung zu Hause" },
-  { name: "Pflegeberatung", href: "/leistungen/pflegeberatung", description: "Beratung zu Pflegeleistungen und Ansprüchen" },
-  { name: "Verhinderungspflege", href: "/leistungen/verhinderungspflege", description: "Vertretung pflegender Angehöriger" },
+const leistungen: { name: string; href: string; description: string; icon: LucideIcon }[] = [
+  { name: "Behandlungspflege", href: "/leistungen/behandlungspflege", description: "Medizinische Versorgung nach ärztlicher Verordnung", icon: Stethoscope },
+  { name: "Grundpflege", href: "/leistungen/grundpflege", description: "Unterstützung bei alltäglichen Verrichtungen", icon: HandHelping },
+  { name: "Intensivpflege", href: "/leistungen/intensivpflege", description: "Betreuung für beatmungspflichtige Patienten", icon: HeartPulse },
+  { name: "Haushaltshilfe", href: "/leistungen/haushaltshilfe", description: "Hilfe im Haushalt und Alltag", icon: Home },
+  { name: "24-Stunden-Pflege", href: "/leistungen/24-stunden", description: "Rund-um-die-Uhr Betreuung zu Hause", icon: Clock },
+  { name: "Pflegeberatung", href: "/leistungen/pflegeberatung", description: "Beratung zu Pflegeleistungen und Ansprüchen", icon: MessageCircle },
+  { name: "Verhinderungspflege", href: "/leistungen/verhinderungspflege", description: "Vertretung pflegender Angehöriger", icon: CalendarCheck },
 ];
 
 const standorte = {
@@ -99,19 +99,24 @@ const Header = () => {
                   Leistungen
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[500px] p-4">
+                  <div className="w-[520px] p-4">
                     <div className="grid grid-cols-2 gap-3">
                       {leistungen.map((item) => (
                         <Link
                           key={item.name}
                           to={item.href}
-                          className="block p-3 rounded-lg hover:bg-primary/5 transition-colors group"
+                          className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
                         >
-                          <div className="font-medium text-foreground group-hover:text-primary">
-                            {item.name}
+                          <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                            <item.icon className="w-4 h-4" />
                           </div>
-                          <div className="text-sm text-muted-foreground mt-1">
-                            {item.description}
+                          <div>
+                            <div className="font-medium text-foreground group-hover:text-primary">
+                              {item.name}
+                            </div>
+                            <div className="text-xs text-muted-foreground mt-0.5">
+                              {item.description}
+                            </div>
                           </div>
                         </Link>
                       ))}
