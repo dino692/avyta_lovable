@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
-import { Briefcase, CheckCircle2, ArrowRight } from "lucide-react";
+import { Briefcase, CheckCircle2, ArrowRight, Sparkles, Heart, Users, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -12,13 +12,51 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const benefits = [
-  "Übertarifliches Gehalt",
-  "30 Urlaubstage jährlich",
-  "Firmenwagen auch privat",
-  "Wellpass-Mitgliedschaft",
-  "Familiäres Arbeitsumfeld",
-  "Flache Hierarchien",
+const stellenangebote = [
+  { title: "Pflegefachkraft in Frankfurt", href: "/jobs/pflegefachkraft", icon: Sparkles },
+  { title: "Pflegehelfer/Pflegehelferin", href: "/jobs/pflegehelfer", icon: Heart },
+  { title: "Pflegehilfskraft in Frankfurt", href: "/jobs/pflegehilfskraft", icon: Users },
+  { title: "Haushaltshilfen in Frankfurt", href: "/jobs/haushaltshilfe", icon: Home },
+];
+
+const pflegeAufgaben = [
+  "Grundpflege (Duschen, Waschen Intimzone, Windelwechseln, etc.)",
+  "Betreute auf Veränderungen beobachten und melden",
+  "Vitalwerte, Größe und Gewicht prüfen",
+  "Bei der Versorgung mit Nahrungsmitteln und beim Essen helfen",
+  "Wartung der Pflegeausrüstung von Betreuten",
+  "Auf Notfallsituationen reagieren",
+  "Verabreichen eines Medikaments",
+  "Betreute zu Terminen begleiten und fahren",
+  "Begleitung Aktivitäten und Gemeinschaftsanlässe inkl. Transport",
+  "Betreute bei ihren Aktivitäten und Interessen unterstützen",
+];
+
+const pflegeBenefits = [
+  "Gehalt: Übertarifliches Gehalt, je nach Qualifikation und Erfahrung",
+  "Zuschläge: Sonntag, Feiertag und Nachtzuschläge",
+  "Urlaub: Jährlich genießen unsere Mitarbeiter 30 Urlaubstage",
+  "PKW: Stellen wir Ihnen auch privat zur Verfügung",
+  "Firmenfitness: Wellpass-Mitgliedschaft zusätzlich zum Gehalt",
+  "Prämien: Urlaubsprämien, Feiertagsprämien und leistungsbasierte Prämien",
+  "Teamzusammenhalt: Geburtstage mit steuerfreien Geschenken bis 60€",
+  "Unterkunft: Bei Bedarf Apartment oder WG",
+  "Berufskleidung: Für alle Wetterbedingungen gerüstet",
+  "Digital: Größtenteils papierlose Arbeit",
+];
+
+const pflegeQualifikation = [
+  "Berufserfahrung im Pflegebereich",
+  "Führerschein Klasse B (zwingend)",
+  "Deutschkenntnisse (min. B1)",
+  "Auge fürs Detail vorteilhaft",
+];
+
+const haushaltQualifikation = [
+  "Berufserfahrung als Haushaltshilfe oder Pflegehelfer",
+  "Führerschein Klasse B (empfohlen)",
+  "Deutschkenntnisse (min. B1)",
+  "Auge fürs Detail",
 ];
 
 const faqs = [
@@ -77,6 +115,7 @@ const PflegeJobs = () => {
             <div className="max-w-5xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2 space-y-12">
+                  {/* Intro */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
                       Ihre Karriere bei AVYTA
@@ -94,19 +133,127 @@ const PflegeJobs = () => {
                     </p>
                   </div>
 
+                  {/* Stellenangebote Links */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-6">
+                      Pflegedienst in Frankfurt – Stellenangebote aktuell bei Avyta
+                    </h2>
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {stellenangebote.map((job) => (
+                        <Link
+                          key={job.href}
+                          to={job.href}
+                          className="group flex items-center gap-3 p-4 bg-muted/30 rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all"
+                        >
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
+                            <job.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground" />
+                          </div>
+                          <span className="font-medium text-foreground group-hover:text-primary transition-colors flex-1">
+                            {job.title}
+                          </span>
+                          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Pflegefachkräfte & Pflegehelfer */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Ergreifen Sie Ihre Chance
+                      Bewerbung als Pflegefachkräfte & Pflegehelfer/innen
                     </h2>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Sie haben bei uns die Gelegenheit, sich mit unseren Pflege Jobs in Frankfurt im Markt der Zukunft ein beachtliches berufliches 
-                      Standbein aufzubauen. Dabei sind persönlichen und beruflichen Perspektiven zur Weiterentwicklung in den Pflege Jobs in Frankfurt 
-                      bei uns alle Türen offen. Zudem ist der Beruf der Pflegedienste ein angesehener und in der Gesellschaft sehr beliebter. 
-                      Sichern Sie sich Ihre Chance, in einem sympathischen Team einen eigenen Karriereweg einzuschlagen!
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Sowohl in Voll- als auch in Teilzeit vergeben wir Pflege Jobs als Pflegehelfer in Frankfurt an Personen, 
+                      die ein hohes Maß an eigenverantwortlichem Handeln aufweisen und zugleich Spaß am Umgang mit Menschen haben.
+                    </p>
+
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-3">
+                      Ihr Tätigkeitsfeld
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Die Tätigkeiten als Pflegefachkraft sind umfangreicher als die von Pflegehelfern. Denn während eine 
+                      Pflegehelferin oder ein Pflegehelfer in Frankfurt eine einjährige Ausbildung durchläuft, sind es bei 
+                      der Pflegefachkraft drei Jahre an einer staatlich anerkannten Krankenfachschule sowie ambulanten und 
+                      stationären Pflegeeinrichtungen. Dabei liefern das theoretische und praktische Knowhow eine Fülle an 
+                      Informationen für Pflege Jobs in Frankfurt, die die Pflegefachkraft dazu befähigen, die Pflegehelfer 
+                      zu koordinieren sowie die medizinische Versorgung von Patienten zu übernehmen.
+                    </p>
+
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-3">
+                      Was hätten Sie bei diesen Pflege Jobs in Frankfurt zu tun?
+                    </h3>
+                    <div className="grid sm:grid-cols-2 gap-2 mb-6">
+                      {pflegeAufgaben.map((aufgabe, index) => (
+                        <div key={index} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                          <span className="text-sm text-muted-foreground">{aufgabe}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Wir geben viel aber erwarten wenig, unser Ambulanter Pflegedienst freut sich über Bewerbungen auf 
+                      beide Pflege Jobs in Frankfurt!
+                    </p>
+
+                    <h4 className="font-semibold text-foreground mb-3">Qualifikation:</h4>
+                    <ul className="space-y-2 mb-6">
+                      {pflegeQualifikation.map((qual, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                          <span className="text-sm text-muted-foreground">{qual}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Haushaltshilfe */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Bewerbung als Haushaltshilfe im Pflegedienst
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Für diese Pflege Jobs in Frankfurt dürfen sich alle Personen angesprochen fühlen, die freundliche 
+                      Umgangsformen pflegen und ehrlich sowie zuverlässig sind. Diese Pflege Jobs in Frankfurt haben wir 
+                      in Voll-, Teilzeit und auch als geringfügige Beschäftigung anzubieten.
+                    </p>
+
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-3">
+                      Ihr Tätigkeitsfeld
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Für die Tätigkeit als Haushaltshilfe bedarf es keiner besonderen und umfangreichen Kenntnisse. 
+                      Wie es der Name dieser Pflege Jobs in Frankfurt schon sagt, geht es hier hauptsächlich um 
+                      Tätigkeiten im Haushalt, bei denen Sie den Pflegebedürftigen helfen. Da Sie allerdings auch 
+                      hier Kontakt zu den Klienten haben, ist wie bei anderen Pflege Jobs in Frankfurt ein freundlicher 
+                      und professioneller Umgang sowie ein Gefühl für die jeweilige Situation des Klienten Voraussetzung. 
+                      Ansonsten dürfen Sie sich bei diesen Pflege Jobs in Frankfurt darauf einstellen, dass Sie im 
+                      Haushalt typische Reinigungsarbeiten, Wechseln und Waschen der Wäsche, Blumen gießen, 
+                      Mülltrennung- und -entsorgung sowie viele weitere Aufgaben übernehmen.
+                    </p>
+
+                    <h4 className="font-semibold text-foreground mb-3">Unsere Anforderungen an Sie:</h4>
+                    <ul className="space-y-2">
+                      {haushaltQualifikation.map((qual, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                          <span className="text-sm text-muted-foreground">{qual}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* CTA Text */}
+                  <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
+                    <p className="text-foreground font-medium mb-2">
+                      Rufen Sie heute an oder schicken Sie uns Ihre Bewerbung per E-Mail.
+                    </p>
+                    <p className="text-muted-foreground">
+                      Wir freuen uns Sie kennenzulernen! Ergreifen Sie Ihre Chance und starten Sie Ihre Karriere bei AVYTA!
                     </p>
                   </div>
 
-                  {/* FAQ Section */}
+                  {/* FAQ */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-6">
                       Häufige Fragen
@@ -130,12 +277,13 @@ const PflegeJobs = () => {
                   </div>
                 </div>
 
+                {/* Sidebar */}
                 <div className="space-y-6">
                   <div className="sticky top-28 space-y-6">
                     <div className="p-6 bg-muted/30 rounded-2xl">
-                      <h3 className="font-semibold text-foreground mb-4">Das bieten wir</h3>
+                      <h3 className="font-semibold text-foreground mb-4">Benefits</h3>
                       <ul className="space-y-3">
-                        {benefits.map((benefit, index) => (
+                        {pflegeBenefits.slice(0, 6).map((benefit, index) => (
                           <li key={index} className="flex items-start gap-2 text-sm">
                             <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                             <span className="text-muted-foreground">{benefit}</span>
