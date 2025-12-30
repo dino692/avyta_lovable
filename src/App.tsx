@@ -21,6 +21,9 @@ import StadtteilTemplate from "./pages/standorte/StadtteilTemplate";
 import Blog from "./pages/Blog";
 import Jobs from "./pages/Jobs";
 import Kontakt from "./pages/Kontakt";
+import Impressum from "./pages/Impressum";
+import Datenschutz from "./pages/Datenschutz";
+import Sitemap from "./pages/Sitemap";
 import Stellenangebote from "./pages/jobs/Stellenangebote";
 import Pflegehelfer from "./pages/jobs/Pflegehelfer";
 import Pflegehilfskraft from "./pages/jobs/Pflegehilfskraft";
@@ -60,6 +63,9 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/kontakt" element={<Kontakt />} />
+            <Route path="/impressum" element={<Impressum />} />
+            <Route path="/datenschutz" element={<Datenschutz />} />
+            <Route path="/sitemap" element={<Sitemap />} />
             <Route path="/jobs/stellenangebote" element={<Stellenangebote />} />
             <Route path="/jobs/pflegehelfer" element={<Pflegehelfer />} />
             <Route path="/jobs/pflegehilfskraft" element={<Pflegehilfskraft />} />
