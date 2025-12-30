@@ -18,6 +18,12 @@ import Verhinderungspflege from "./pages/leistungen/Verhinderungspflege";
 import Frankfurt from "./pages/standorte/Frankfurt";
 import BadVilbel from "./pages/standorte/BadVilbel";
 import StadtteilTemplate from "./pages/standorte/StadtteilTemplate";
+import Blog from "./pages/Blog";
+import Jobs from "./pages/Jobs";
+import Stellenangebote from "./pages/jobs/Stellenangebote";
+import Pflegehelfer from "./pages/jobs/Pflegehelfer";
+import Pflegehilfskraft from "./pages/jobs/Pflegehilfskraft";
+import Pflegefachkraft from "./pages/jobs/Pflegefachkraft";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +56,12 @@ const App = () => (
             <Route path="/standorte/frankfurt/niederrad" element={<StadtteilTemplate name="Niederrad" />} />
             <Route path="/standorte/frankfurt/hoechst" element={<StadtteilTemplate name="Höchst" />} />
             <Route path="/standorte/frankfurt/roedelheim" element={<StadtteilTemplate name="Rödelheim" />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/jobs" element={<Jobs />} />
+            <Route path="/jobs/stellenangebote" element={<Stellenangebote />} />
+            <Route path="/jobs/pflegehelfer" element={<Pflegehelfer />} />
+            <Route path="/jobs/pflegehilfskraft" element={<Pflegehilfskraft />} />
+            <Route path="/jobs/pflegefachkraft" element={<Pflegefachkraft />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

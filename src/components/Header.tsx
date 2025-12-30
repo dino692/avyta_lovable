@@ -42,7 +42,7 @@ const standorte = {
 const navLinks = [
   { name: "Start", href: "/" },
   { name: "Team", href: "/team" },
-  { name: "Karriere", href: "/karriere" },
+  { name: "Jobs", href: "/jobs" },
   { name: "Blog", href: "/blog" },
   { name: "Kontakt", href: "/#contact" },
 ];
@@ -151,8 +151,8 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link to="/karriere" className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
-                  Karriere
+                <Link to="/jobs" className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
+                  Jobs
                 </Link>
               </NavigationMenuItem>
 
@@ -273,11 +273,11 @@ const Header = () => {
               </div>
 
               <Link
-                to="/karriere"
+                to="/jobs"
                 className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Karriere
+                Jobs
               </Link>
               <Link
                 to="/blog"
