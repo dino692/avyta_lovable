@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, Newspaper, Lightbulb, Scale, Activity, BookOpen, Stethoscope, HandHelping, HeartPulse, Home, Clock, MessageCircle, CalendarCheck, LucideIcon, Building2, MapPin } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, Newspaper, Lightbulb, Scale, Activity, BookOpen, Stethoscope, HandHelping, HeartPulse, Home, Clock, MessageCircle, CalendarCheck, LucideIcon, Building2, MapPin, Mail, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -69,6 +69,25 @@ const Header = () => {
   const [mobileStandorteOpen, setMobileStandorteOpen] = useState(false);
   const [mobileJobsOpen, setMobileJobsOpen] = useState(false);
   const [mobileBlogOpen, setMobileBlogOpen] = useState(false);
+  const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
+  const ctaDropdownRef = useRef<HTMLDivElement>(null);
+
+  const ctaOptions = [
+    { label: "Anruf", icon: Phone, href: "tel:+496915391405" },
+    { label: "Email", icon: Mail, href: "mailto:info@avyta.de" },
+    { label: "Kontaktformular", icon: FileText, href: "/#contact" },
+    { label: "Termin direkt buchen", icon: Calendar, href: "/#contact" },
+  ];
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ctaDropdownRef.current && !ctaDropdownRef.current.contains(event.target as Node)) {
+        setIsCtaDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
@@ -263,15 +282,37 @@ const Header = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          {/* CTA Button */}
+          {/* CTA Button with Dropdown */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+496915391405" className="flex items-center gap-2 text-primary font-medium">
-              <Phone className="w-4 h-4" />
-              069 153 914 05
-            </a>
-            <Button variant="hero" asChild>
-              <a href="/#contact">Kostenloses Erstgespräch</a>
-            </Button>
+            <div className="relative" ref={ctaDropdownRef}>
+              <Button 
+                variant="hero"
+                onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+                className="group"
+              >
+                Kostenloses Erstgespräch
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isCtaDropdownOpen ? 'rotate-180' : ''}`} />
+              </Button>
+              
+              {/* Dropdown Menu */}
+              {isCtaDropdownOpen && (
+                <div className="absolute top-full right-0 mt-2 w-64 bg-card rounded-xl border border-border shadow-2xl z-[100] overflow-hidden animate-fade-in">
+                  {ctaOptions.map((option) => (
+                    <a
+                      key={option.label}
+                      href={option.href}
+                      onClick={() => setIsCtaDropdownOpen(false)}
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 transition-colors group/item"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover/item:bg-primary group-hover/item:text-primary-foreground transition-colors">
+                        <option.icon className="w-5 h-5 text-primary group-hover/item:text-primary-foreground" />
+                      </div>
+                      <span className="font-medium text-foreground">{option.label}</span>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
