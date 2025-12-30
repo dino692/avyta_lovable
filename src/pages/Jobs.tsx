@@ -65,8 +65,12 @@ const Jobs = () => {
   return (
     <>
       <Helmet>
-        <title>Jobs & Karriere | AVYTA Pflegegesellschaft mbH</title>
-        <meta name="description" content="Werden Sie Teil unseres Teams! Aktuelle Stellenangebote für Pflegehelfer, Pflegehilfskräfte und Pflegefachkräfte bei AVYTA in Frankfurt." />
+        <title>Pflege Jobs Frankfurt: Ihre Karriere bei AVYTA | Stellenangebote</title>
+        <meta name="description" content="Pflege Jobs in Frankfurt am Main bei AVYTA. Stellenangebote für Pflegefachkräfte, Pflegehelfer und Haushaltshilfen. Überdurchschnittliche Vergütung, flexible Arbeitszeiten, familiäres Team. Jetzt bewerben!" />
+        <meta name="keywords" content="Pflege Jobs Frankfurt, Pflegefachkraft Stellenangebote Frankfurt, Pflegehelfer Jobs, Karriere Pflegedienst Frankfurt" />
+        <meta property="og:title" content="Pflege Jobs Frankfurt: Ihre Karriere bei AVYTA" />
+        <meta property="og:description" content="Die Wichtigkeit der Ambulanten Pflege steigt! Bewerben Sie sich jetzt bei AVYTA für ein familiäres Arbeitsumfeld mit flacher Hierarchie." />
+        <link rel="canonical" href="https://www.avyta.de/karriere" />
       </Helmet>
 
       <Header />

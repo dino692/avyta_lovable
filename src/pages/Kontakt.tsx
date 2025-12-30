@@ -7,8 +7,12 @@ const Kontakt = () => {
   return (
     <>
       <Helmet>
-        <title>Kontakt | AVYTA Pflegegesellschaft mbH</title>
-        <meta name="description" content="Kontaktieren Sie AVYTA Pflegegesellschaft mbH für eine kostenlose Erstberatung. Wir sind für Sie da!" />
+        <title>Kontakt | AVYTA Ambulanter Pflegedienst Frankfurt</title>
+        <meta name="description" content="Kontaktieren Sie AVYTA Pflegegesellschaft mbH in Frankfurt am Main. Kostenlose Erstberatung: Tel. 069/15391405. Allerheiligentor 2-4, 60311 Frankfurt. Wir sind für Sie da!" />
+        <meta name="keywords" content="Pflegedienst Kontakt Frankfurt, Ambulante Pflege Frankfurt Telefon, Pflegeberatung Frankfurt" />
+        <meta property="og:title" content="Kontakt | AVYTA Ambulanter Pflegedienst Frankfurt" />
+        <meta property="og:description" content="Kontaktieren Sie uns für eine kostenlose Pflegeberatung. AVYTA - Ihr ambulanter Pflegedienst in Frankfurt am Main." />
+        <link rel="canonical" href="https://www.avyta.de/kontakt" />
       </Helmet>
       <Header />
       <main className="pt-20">

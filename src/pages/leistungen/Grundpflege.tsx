@@ -22,8 +22,10 @@ const Grundpflege = () => {
   return (
     <>
       <Helmet>
-        <title>Grundpflege Frankfurt | Körperpflege & Alltagsunterstützung | AVYTA</title>
-        <meta name="description" content="Professionelle Grundpflege in Frankfurt. Unterstützung bei Körperpflege, Mobilität und alltäglichen Verrichtungen. Würdevolle Pflege zu Hause. Jetzt beraten lassen!" />
+        <title>Grundpflege in Frankfurt am Main | AVYTA Pflegedienst</title>
+        <meta name="description" content="Professionelle Grundpflege in Frankfurt am Main. Körperpflege, Mobilisation, Haushaltshilfe. Würdevolle Pflege zu Hause mit erfahrenen Pflegekräften. Finanzierung über Pflegekasse!" />
+        <meta name="keywords" content="Grundpflege Frankfurt, Körperpflege Frankfurt, Ambulante Pflege Frankfurt" />
+        <link rel="canonical" href="https://www.avyta.de/leistungen/grundpflege" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
