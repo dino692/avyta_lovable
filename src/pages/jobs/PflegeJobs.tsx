@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
-import { Briefcase, CheckCircle2, ArrowRight, Sparkles, Heart, Users, Home } from "lucide-react";
+import { Briefcase, CheckCircle2, ArrowRight, Sparkles, Heart, Users, Home, Dumbbell, Infinity, Palette, Globe, CalendarCheck, Euro, Calendar, Car, Award, Gift, Building2, Shirt, Laptop } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -32,17 +32,26 @@ const pflegeAufgaben = [
   "Betreute bei ihren Aktivitäten und Interessen unterstützen",
 ];
 
-const pflegeBenefits = [
-  "Gehalt: Übertarifliches Gehalt, je nach Qualifikation und Erfahrung",
-  "Zuschläge: Sonntag, Feiertag und Nachtzuschläge",
-  "Urlaub: Jährlich genießen unsere Mitarbeiter 30 Urlaubstage",
-  "PKW: Stellen wir Ihnen auch privat zur Verfügung",
-  "Firmenfitness: Wellpass-Mitgliedschaft zusätzlich zum Gehalt",
-  "Prämien: Urlaubsprämien, Feiertagsprämien und leistungsbasierte Prämien",
-  "Teamzusammenhalt: Geburtstage mit steuerfreien Geschenken bis 60€",
-  "Unterkunft: Bei Bedarf Apartment oder WG",
-  "Berufskleidung: Für alle Wetterbedingungen gerüstet",
-  "Digital: Größtenteils papierlose Arbeit",
+const benefits = [
+  { icon: Euro, title: "Übertarifliches Gehalt", description: "Je nach Qualifikation und Erfahrung" },
+  { icon: Award, title: "Zuschläge", description: "Sonntag, Feiertag und Nachtzuschläge" },
+  { icon: Calendar, title: "30 Urlaubstage", description: "Jährlich garantiert" },
+  { icon: Car, title: "PKW", description: "Auch privat zur Verfügung" },
+  { icon: Dumbbell, title: "Firmenfitness", description: "Wellpass-Mitgliedschaft monatlich" },
+  { icon: Gift, title: "Prämien", description: "Urlaubsprämien, Feiertagsprämien und leistungsbasierte Prämien" },
+  { icon: Users, title: "Teamzusammenhalt", description: "Geburtstage mit steuerfreien Geschenken bis 60€" },
+  { icon: Building2, title: "Unterkunft", description: "Bei Bedarf Apartment oder WG" },
+  { icon: Shirt, title: "Berufskleidung", description: "Für alle Wetterbedingungen gerüstet" },
+  { icon: Laptop, title: "Digital", description: "Größtenteils papierlose Arbeit" },
+];
+
+const sidebarBenefits = [
+  "Übertarifliches Gehalt",
+  "30 Tage Urlaub jährlich",
+  "Firmenwagen zur privaten Nutzung",
+  "Wellpass-Mitgliedschaft",
+  "Zuschläge für Sonn- und Feiertage",
+  "Familiäres Arbeitsumfeld",
 ];
 
 const pflegeQualifikation = [
@@ -57,6 +66,13 @@ const haushaltQualifikation = [
   "Führerschein Klasse B (empfohlen)",
   "Deutschkenntnisse (min. B1)",
   "Auge fürs Detail",
+];
+
+const wellpassFeatures = [
+  { icon: Infinity, label: "Unlimitiert" },
+  { icon: Palette, label: "Vielfältig" },
+  { icon: Globe, label: "Überall" },
+  { icon: CalendarCheck, label: "Flexibel" },
 ];
 
 const faqs = [
@@ -174,34 +190,27 @@ const PflegeJobs = () => {
                       Die Tätigkeiten als Pflegefachkraft sind umfangreicher als die von Pflegehelfern. Denn während eine 
                       Pflegehelferin oder ein Pflegehelfer in Frankfurt eine einjährige Ausbildung durchläuft, sind es bei 
                       der Pflegefachkraft drei Jahre an einer staatlich anerkannten Krankenfachschule sowie ambulanten und 
-                      stationären Pflegeeinrichtungen. Dabei liefern das theoretische und praktische Knowhow eine Fülle an 
-                      Informationen für Pflege Jobs in Frankfurt, die die Pflegefachkraft dazu befähigen, die Pflegehelfer 
-                      zu koordinieren sowie die medizinische Versorgung von Patienten zu übernehmen.
+                      stationären Pflegeeinrichtungen.
                     </p>
 
                     <h3 className="text-xl font-display font-semibold text-foreground mb-3">
                       Was hätten Sie bei diesen Pflege Jobs in Frankfurt zu tun?
                     </h3>
-                    <div className="grid sm:grid-cols-2 gap-2 mb-6">
+                    <ul className="space-y-2 mb-6">
                       {pflegeAufgaben.map((aufgabe, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                          <span className="text-sm text-muted-foreground">{aufgabe}</span>
-                        </div>
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{aufgabe}</span>
+                        </li>
                       ))}
-                    </div>
-
-                    <p className="text-muted-foreground leading-relaxed mb-4">
-                      Wir geben viel aber erwarten wenig, unser Ambulanter Pflegedienst freut sich über Bewerbungen auf 
-                      beide Pflege Jobs in Frankfurt!
-                    </p>
+                    </ul>
 
                     <h4 className="font-semibold text-foreground mb-3">Qualifikation:</h4>
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-2">
                       {pflegeQualifikation.map((qual, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                          <span className="text-sm text-muted-foreground">{qual}</span>
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{qual}</span>
                         </li>
                       ))}
                     </ul>
@@ -218,39 +227,94 @@ const PflegeJobs = () => {
                       in Voll-, Teilzeit und auch als geringfügige Beschäftigung anzubieten.
                     </p>
 
-                    <h3 className="text-xl font-display font-semibold text-foreground mb-3">
-                      Ihr Tätigkeitsfeld
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-6">
-                      Für die Tätigkeit als Haushaltshilfe bedarf es keiner besonderen und umfangreichen Kenntnisse. 
-                      Wie es der Name dieser Pflege Jobs in Frankfurt schon sagt, geht es hier hauptsächlich um 
-                      Tätigkeiten im Haushalt, bei denen Sie den Pflegebedürftigen helfen. Da Sie allerdings auch 
-                      hier Kontakt zu den Klienten haben, ist wie bei anderen Pflege Jobs in Frankfurt ein freundlicher 
-                      und professioneller Umgang sowie ein Gefühl für die jeweilige Situation des Klienten Voraussetzung. 
-                      Ansonsten dürfen Sie sich bei diesen Pflege Jobs in Frankfurt darauf einstellen, dass Sie im 
-                      Haushalt typische Reinigungsarbeiten, Wechseln und Waschen der Wäsche, Blumen gießen, 
-                      Mülltrennung- und -entsorgung sowie viele weitere Aufgaben übernehmen.
-                    </p>
-
                     <h4 className="font-semibold text-foreground mb-3">Unsere Anforderungen an Sie:</h4>
                     <ul className="space-y-2">
                       {haushaltQualifikation.map((qual, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                          <span className="text-sm text-muted-foreground">{qual}</span>
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{qual}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* CTA Text */}
+                  {/* Benefits */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-6">
+                      Ihre Vorteile bei AVYTA
+                    </h2>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      {benefits.map((benefit, index) => (
+                        <div key={index} className="flex items-start gap-3 p-4 bg-muted/30 rounded-xl border border-border/50">
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <benefit.icon className="w-5 h-5 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-medium text-foreground">{benefit.title}</h4>
+                            <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Arbeiten bei Avyta */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Arbeiten bei Avyta – Eine Zukunft voller Möglichkeiten
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Wir sind Ihr zuverlässiger Partner und Arbeitgeber in der Pflegebranche mit Sitz im Herzen 
+                      von Frankfurt. Bei uns stehen nicht nur die Bedürfnisse unserer Patienten im Mittelpunkt, 
+                      sondern auch das Wohlbefinden und die berufliche Entwicklung unserer Mitarbeiter.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Als Teil unseres Teams genießen Sie nicht nur die Sicherheit und die Vorzüge eines etablierten 
+                      Pflegedienstes, sondern auch Gesundheits- und Wellnessangebote durch unsere Mitgliedschaft bei 
+                      Wellpass. Wir glauben daran, dass die Gesundheit unserer Mitarbeiter direkt zu einer höheren 
+                      Qualität in der Pflege unserer Kunden beiträgt und einer gesunden Work-Life-Balance.
+                    </p>
+
+                    {/* Wellpass Box */}
+                    <div className="p-6 bg-muted/30 rounded-2xl border border-border/50">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <Dumbbell className="w-5 h-5 text-primary" />
+                        </div>
+                        <h3 className="font-semibold text-foreground">Firmenfitness mit Wellpass</h3>
+                      </div>
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        {wellpassFeatures.map((feature, index) => (
+                          <div key={index} className="flex items-center gap-2">
+                            <feature.icon className="w-4 h-4 text-primary" />
+                            <span className="text-sm text-muted-foreground">{feature.label}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CTA */}
                   <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
                     <p className="text-foreground font-medium mb-2">
                       Rufen Sie heute an oder schicken Sie uns Ihre Bewerbung per E-Mail.
                     </p>
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground mb-4">
                       Wir freuen uns Sie kennenzulernen! Ergreifen Sie Ihre Chance und starten Sie Ihre Karriere bei AVYTA!
                     </p>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Button variant="hero" size="lg" asChild>
+                        <a href="mailto:jobs@avyta.de?subject=Bewerbung Pflege Job">
+                          Jetzt bewerben
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </a>
+                      </Button>
+                      <Button variant="outline" size="lg" asChild>
+                        <a href="tel:+496915391405">
+                          Anrufen: 069 153 914 05
+                        </a>
+                      </Button>
+                    </div>
                   </div>
 
                   {/* FAQ */}
@@ -283,7 +347,7 @@ const PflegeJobs = () => {
                     <div className="p-6 bg-muted/30 rounded-2xl">
                       <h3 className="font-semibold text-foreground mb-4">Benefits</h3>
                       <ul className="space-y-3">
-                        {pflegeBenefits.slice(0, 6).map((benefit, index) => (
+                        {sidebarBenefits.map((benefit, index) => (
                           <li key={index} className="flex items-start gap-2 text-sm">
                             <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                             <span className="text-muted-foreground">{benefit}</span>

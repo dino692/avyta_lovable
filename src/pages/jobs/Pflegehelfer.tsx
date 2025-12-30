@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
-import { Heart, CheckCircle2, ArrowRight, Sparkles, Users, Home, Dumbbell, Infinity, Palette, Globe, CalendarCheck } from "lucide-react";
+import { Heart, CheckCircle2, ArrowRight, Sparkles, Users, Home, Dumbbell, Infinity, Palette, Globe, CalendarCheck, Euro, Calendar, Car, Award, Gift, Building2, Shirt, Laptop } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -33,16 +33,25 @@ const aufgaben = [
 ];
 
 const benefits = [
-  "Gehalt: Sie erwartet ein übertarifliches Gehalt, je nach Qualifikation und Erfahrung",
-  "Zuschläge: Sonntag, Feiertag und Nachtzuschläge",
-  "Urlaub: Jährlich genießen unsere Mitarbeiter 30 Urlaubstage",
-  "PKW: Stellen wir Ihnen auch privat zur Verfügung, damit Sie stets mobil bleiben",
-  "Firmenfitness: Wellpass-Mitgliedschaft monatlich zusätzlich zum Gehalt",
-  "Prämien: Urlaubsprämien, Feiertagsprämien und leistungsbasierte Prämien",
-  "Teamzusammenhalt: Geburtstage mit steuerfreien Geschenken bis 60€",
-  "Unterkunft: Bei Bedarf Apartment oder WG",
-  "Berufskleidung: Für alle Wetterbedingungen gerüstet",
-  "Digital: Größtenteils papierlose Arbeit",
+  { icon: Euro, title: "Übertarifliches Gehalt", description: "Je nach Qualifikation und Erfahrung" },
+  { icon: Award, title: "Zuschläge", description: "Sonntag, Feiertag und Nachtzuschläge" },
+  { icon: Calendar, title: "30 Urlaubstage", description: "Jährlich garantiert" },
+  { icon: Car, title: "PKW", description: "Auch privat zur Verfügung" },
+  { icon: Dumbbell, title: "Firmenfitness", description: "Wellpass-Mitgliedschaft monatlich" },
+  { icon: Gift, title: "Prämien", description: "Urlaubsprämien, Feiertagsprämien und leistungsbasierte Prämien" },
+  { icon: Users, title: "Teamzusammenhalt", description: "Geburtstage mit steuerfreien Geschenken bis 60€" },
+  { icon: Building2, title: "Unterkunft", description: "Bei Bedarf Apartment oder WG" },
+  { icon: Shirt, title: "Berufskleidung", description: "Für alle Wetterbedingungen gerüstet" },
+  { icon: Laptop, title: "Digital", description: "Größtenteils papierlose Arbeit" },
+];
+
+const sidebarBenefits = [
+  "Übertarifliches Gehalt",
+  "30 Tage Urlaub jährlich",
+  "Firmenwagen zur privaten Nutzung",
+  "Wellpass-Mitgliedschaft",
+  "Zuschläge für Sonn- und Feiertage",
+  "Familiäres Arbeitsumfeld",
 ];
 
 const qualifikation = [
@@ -53,14 +62,12 @@ const qualifikation = [
 ];
 
 const haushaltBenefits = [
-  "Überdurchschnittliches Gehalt",
-  "Toyota Aygo auch zur privaten Nutzung",
-  "Wohnung/Apartment – einzeln oder in einer WG in Frankfurt!",
-  "Feiertags- und Sonntagszuschläge",
-  "50€ Einkaufsgutschein (monatlich)",
-  "30 Tage Urlaub",
-  "Zusätzliche Rentenversicherung",
-  "Eine hohe Wertschätzung – wir wissen, was Sie jeden Tag leisten!",
+  { icon: Euro, title: "Überdurchschnittliches Gehalt", description: "Attraktive Vergütung" },
+  { icon: Car, title: "Toyota Aygo", description: "Auch zur privaten Nutzung" },
+  { icon: Building2, title: "Wohnung/Apartment", description: "Einzeln oder in einer WG" },
+  { icon: Award, title: "Zuschläge", description: "Feiertags- und Sonntagszuschläge" },
+  { icon: Gift, title: "50€ Einkaufsgutschein", description: "Monatlich" },
+  { icon: Calendar, title: "30 Tage Urlaub", description: "Jährlich garantiert" },
 ];
 
 const haushaltAnforderungen = [
@@ -228,23 +235,20 @@ const Pflegehelfer = () => {
                       Die Tätigkeiten von Pflegekräften sind umfangreicher als die von Pflegehelfern. Denn während 
                       eine Pflegehelferin oder ein Pflegehelfer in Frankfurt eine einjährige Ausbildung durchläuft, 
                       sind es bei der Pflegefachkraft drei Jahre an einer staatlich anerkannten Krankenfachschule 
-                      sowie in ambulanten und stationären Pflegeeinrichtungen. Dabei liefern das theoretische und 
-                      praktische Know-how eine Fülle an Informationen für Pflege Jobs in Frankfurt, die die 
-                      Pflegefachkraft dazu befähigen, die Pflegehelfer zu koordinieren sowie die medizinische 
-                      Versorgung von Patienten zu übernehmen.
+                      sowie in ambulanten und stationären Pflegeeinrichtungen.
                     </p>
 
                     <h3 className="text-xl font-display font-semibold text-foreground mb-3">
                       Was hätten Sie als Pflegehelfer in Frankfurt zu tun?
                     </h3>
-                    <div className="grid sm:grid-cols-2 gap-2 mb-6">
+                    <ul className="space-y-2 mb-6">
                       {aufgaben.map((aufgabe, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                          <span className="text-sm text-muted-foreground">{aufgabe}</span>
-                        </div>
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{aufgabe}</span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
 
                     <h3 className="text-xl font-display font-semibold text-foreground mb-3">
                       Was wir von Pflegehelfern in Frankfurt erwarten
@@ -256,21 +260,31 @@ const Pflegehelfer = () => {
                     </p>
 
                     <h4 className="font-semibold text-foreground mb-3">Qualifikation:</h4>
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-2">
                       {qualifikation.map((qual, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                          <span className="text-sm text-muted-foreground">{qual}</span>
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{qual}</span>
                         </li>
                       ))}
                     </ul>
+                  </div>
 
-                    <h4 className="font-semibold text-foreground mb-3">Benefits:</h4>
-                    <div className="grid sm:grid-cols-2 gap-2">
+                  {/* Benefits Pflegehelfer */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-6">
+                      Ihre Vorteile als Pflegehelfer
+                    </h2>
+                    <div className="grid sm:grid-cols-2 gap-4">
                       {benefits.map((benefit, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                          <span className="text-sm text-muted-foreground">{benefit}</span>
+                        <div key={index} className="flex items-start gap-3 p-4 bg-muted/30 rounded-xl border border-border/50">
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <benefit.icon className="w-5 h-5 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-medium text-foreground">{benefit.title}</h4>
+                            <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -294,20 +308,20 @@ const Pflegehelfer = () => {
                       Für die Tätigkeit als Haushaltshilfe bedarf es im Vergleich zur Anstellung als Pflegehelfer 
                       in Frankfurt keiner besonderen und umfangreichen Kenntnisse. Wie der Name der Pflege Jobs 
                       in Frankfurt schon sagt, geht es hier hauptsächlich um Tätigkeiten im Haushalt, bei denen 
-                      Sie den Pflegebedürftigen helfen. Da Sie allerdings auch hier Kontakt zu den Klienten haben, 
-                      ist wie bei anderen Pflege Jobs in Frankfurt ein freundlicher und professioneller Umgang 
-                      sowie ein Gefühl für die jeweilige Situation des Klienten Voraussetzung. Ansonsten dürfen 
-                      Sie sich bei diesen Pflege Jobs in Frankfurt darauf einstellen, dass Sie im Haushalt typische 
-                      Reinigungsarbeiten, Wechseln und Waschen der Wäsche, Blumen gießen, Mülltrennung- und 
-                      -entsorgung sowie viele weitere Aufgaben übernehmen.
+                      Sie den Pflegebedürftigen helfen.
                     </p>
 
-                    <h4 className="font-semibold text-foreground mb-3">Benefits:</h4>
-                    <div className="grid sm:grid-cols-2 gap-2 mb-6">
+                    <h4 className="font-semibold text-foreground mb-3">Benefits für Haushaltshilfen:</h4>
+                    <div className="grid sm:grid-cols-2 gap-4 mb-6">
                       {haushaltBenefits.map((benefit, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                          <span className="text-sm text-muted-foreground">{benefit}</span>
+                        <div key={index} className="flex items-start gap-3 p-4 bg-muted/30 rounded-xl border border-border/50">
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <benefit.icon className="w-5 h-5 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-medium text-foreground">{benefit.title}</h4>
+                            <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -315,9 +329,9 @@ const Pflegehelfer = () => {
                     <h4 className="font-semibold text-foreground mb-3">Unsere Anforderungen an Sie:</h4>
                     <ul className="space-y-2">
                       {haushaltAnforderungen.map((anf, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                          <span className="text-sm text-muted-foreground">{anf}</span>
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{anf}</span>
                         </li>
                       ))}
                     </ul>
@@ -325,15 +339,27 @@ const Pflegehelfer = () => {
 
                   {/* CTA */}
                   <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
-                    <p className="text-foreground font-medium mb-2">
-                      Rufen Sie heute an oder schicken Sie uns Ihre Bewerbung per E-Mail.
-                    </p>
-                    <p className="text-muted-foreground">
-                      Wir freuen uns Sie kennenzulernen! Ergreifen Sie Ihre Chance und starten Sie Ihre Karriere 
-                      als Pflegehelfer in Frankfurt. Sie haben bei uns die Gelegenheit, sich eine sichere Basis 
+                    <h3 className="text-xl font-display font-bold text-foreground mb-3">
+                      Ergreifen Sie Ihre Chance!
+                    </h3>
+                    <p className="text-muted-foreground mb-4">
+                      Sie haben bei uns die Gelegenheit, sich als Pflegehelfer in Frankfurt eine sichere Basis 
                       für Ihre berufliche Karriere aufzubauen. Bei uns stehen Ihnen alle Türen offen, um Ihre 
-                      persönlichen und beruflichen Perspektiven zu erweitern.
+                      persönlichen und beruflichen Perspektiven zu erweitern. Bewerben Sie sich noch heute!
                     </p>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Button variant="hero" size="lg" asChild>
+                        <a href="mailto:jobs@avyta.de?subject=Bewerbung als Pflegehelfer">
+                          Jetzt bewerben
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </a>
+                      </Button>
+                      <Button variant="outline" size="lg" asChild>
+                        <a href="tel:+496915391405">
+                          Anrufen: 069 153 914 05
+                        </a>
+                      </Button>
+                    </div>
                   </div>
 
                   {/* FAQ */}
@@ -366,7 +392,7 @@ const Pflegehelfer = () => {
                     <div className="p-6 bg-muted/30 rounded-2xl">
                       <h3 className="font-semibold text-foreground mb-4">Benefits</h3>
                       <ul className="space-y-3">
-                        {benefits.slice(0, 6).map((benefit, index) => (
+                        {sidebarBenefits.map((benefit, index) => (
                           <li key={index} className="flex items-start gap-2 text-sm">
                             <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                             <span className="text-muted-foreground">{benefit}</span>
@@ -376,7 +402,7 @@ const Pflegehelfer = () => {
                     </div>
 
                     <Button variant="hero" size="lg" className="w-full" asChild>
-                      <a href="mailto:jobs@avyta.de?subject=Bewerbung als Pflegehelfer/in">
+                      <a href="mailto:jobs@avyta.de?subject=Bewerbung als Pflegehelfer">
                         Jetzt bewerben
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>

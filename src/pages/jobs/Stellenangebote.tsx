@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
-import { Briefcase, CheckCircle2, ArrowRight, Sparkles, Heart, Users, Home, Dumbbell, Infinity, Palette, Globe, CalendarCheck } from "lucide-react";
+import { Briefcase, CheckCircle2, ArrowRight, Sparkles, Heart, Users, Home, Dumbbell, Infinity, Palette, Globe, CalendarCheck, Euro, Calendar, Car, Award, Gift, Building2, Shirt, Laptop } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -29,7 +29,7 @@ const stellenangebote = [
     title: "Pflegehilfskraft", 
     href: "/jobs/pflegehilfskraft", 
     icon: Users,
-    description: "Pflegehilfskräfte begleiten unsere Fachkräfte im ambulanten Dienst und liefern körperliche und soziale Unterstützung. Von der Aufstellung von Gehhilfen und Rollstühlen bis hin zum Anziehen von Kompressionsstrümpfen erwarten Sie als Hilfskraft täglich neue Aufgaben, die Pflegebedürftigen das Leben erleichtern."
+    description: "Pflegehilfskräfte begleiten unsere Fachkräfte im ambulanten Dienst und liefern körperliche und soziale Unterstützung. Von der Aufstellung von Gehhilfen und Rollstühlen bis hin zum Anziehen von Kompressionsstrümpfen erwarten Sie als Hilfskraft täglich neue Aufgaben."
   },
   { 
     title: "Haushaltshilfen", 
@@ -40,16 +40,25 @@ const stellenangebote = [
 ];
 
 const benefits = [
-  "Gehalt: Sie erwartet ein übertarifliches Gehalt, je nach Qualifikation und Erfahrung",
-  "Zuschläge: Sonntag, Feiertag und Nachtzuschläge",
-  "Urlaub: Jährlich genießen unsere Mitarbeiter 30 Urlaubstage",
-  "PKW: Stellen wir Ihnen auch privat zur Verfügung, damit Sie stets mobil bleiben",
-  "Firmenfitness: Wellpass-Mitgliedschaft monatlich zusätzlich zum Gehalt",
-  "Prämien: Urlaubsprämien, Feiertagsprämien und leistungsbasierte Prämien vergeben wir bei guter Leistung gern",
-  "Teamzusammenhalt: Ist uns wichtig! Darum feiern wir auch Geburtstage von Angestellten mit steuerfreien Geschenken im Wert von bis zu 60 Euro",
-  "Unterkunft: Bei Bedarf stellen wir Angestellten eine angemessene Unterkunft in einem Apartment oder in einer WG",
-  "Berufskleidung: Ob kalt oder warm, immer gut ausgestattet! Durch ein gepflegtes Bild nach außen zeichnen wir uns aus",
-  "Digital: Wir arbeiten größtenteils papierlos (digital) und verbessern uns dahingehend stetig",
+  { icon: Euro, title: "Übertarifliches Gehalt", description: "Je nach Qualifikation und Erfahrung" },
+  { icon: Award, title: "Zuschläge", description: "Sonntag, Feiertag und Nachtzuschläge" },
+  { icon: Calendar, title: "30 Urlaubstage", description: "Jährlich garantiert" },
+  { icon: Car, title: "PKW", description: "Auch privat zur Verfügung" },
+  { icon: Dumbbell, title: "Firmenfitness", description: "Wellpass-Mitgliedschaft monatlich" },
+  { icon: Gift, title: "Prämien", description: "Urlaubsprämien, Feiertagsprämien und leistungsbasierte Prämien" },
+  { icon: Users, title: "Teamzusammenhalt", description: "Geburtstage mit steuerfreien Geschenken bis 60€" },
+  { icon: Building2, title: "Unterkunft", description: "Bei Bedarf Apartment oder WG" },
+  { icon: Shirt, title: "Berufskleidung", description: "Für alle Wetterbedingungen" },
+  { icon: Laptop, title: "Digital", description: "Größtenteils papierlose Arbeit" },
+];
+
+const sidebarBenefits = [
+  "Übertarifliches Gehalt",
+  "30 Tage Urlaub jährlich",
+  "Firmenwagen zur privaten Nutzung",
+  "Wellpass-Mitgliedschaft",
+  "Zuschläge für Sonn- und Feiertage",
+  "Familiäres Arbeitsumfeld",
 ];
 
 const wellpassFeatures = [
@@ -62,7 +71,7 @@ const wellpassFeatures = [
 const faqs = [
   {
     question: "Wann kann ich mich als Pflegehilfskraft oder Haushaltshilfe bewerben?",
-    answer: "Pflegehilfskräfte und Haushaltshilfen benötigen keine besondere Vorausbildung und können sich sofort auf Stellenangebote in der Pflege Frankfurt bewerben und in den Beruf einsteigen. Sie sollten ein Händchen für den freundlichen Umgang mit Menschen haben und auch engen Kontakt nicht scheuen. Im privaten Umfeld von Pflegebedürftigen ist Vertrauen das A und O. Auch mit geringer Berufserfahrung lernen wir Sie im Bewerbungsgespräch gern kennen."
+    answer: "Pflegehilfskräfte und Haushaltshilfen benötigen keine besondere Vorausbildung und können sich sofort auf Stellenangebote in der Pflege Frankfurt bewerben und in den Beruf einsteigen. Sie sollten ein Händchen für den freundlichen Umgang mit Menschen haben und auch engen Kontakt nicht scheuen."
   },
   {
     question: "Welche Aufgaben erwarten mich in der ambulanten Pflege?",
@@ -126,8 +135,7 @@ const Stellenangebote = () => {
                       Pflegefachkräfte, Pflegehelfer und Haushaltshilfen sind bei uns stets gefragt. Bei uns erwartet 
                       Sie ein abwechslungsreicher Arbeitsalltag mit größter Wertschätzung für Ihren Einsatz und Ihre 
                       Fähigkeiten. Unsere ambulante Pflege mit Stellenangeboten für Frankfurt begrüßt Bewerber jeden 
-                      Alters, jeden Geschlechts und jeder Herkunft. Werden Sie Teil des Avyta Teams und genießen Sie 
-                      unsere besonderen Vorteile für Angestellte und eine übertarifliche Bezahlung.
+                      Alters, jeden Geschlechts und jeder Herkunft. Werden Sie Teil des Avyta Teams!
                     </p>
                   </div>
 
@@ -139,8 +147,7 @@ const Stellenangebote = () => {
                     <p className="text-muted-foreground leading-relaxed mb-6">
                       Unsere Aufgaben im privaten Umfeld von Pflegebedürftigen sind so vielfältig wie die Menschen, 
                       die wir täglich versorgen. Darum ist auch unser Team breit aufgestellt und Sie können sich mit 
-                      unterschiedlichen Qualifikationen bewerben. In Teilzeit und in Vollzeit vergeben wir Stellenangebote 
-                      in der Pflege in Frankfurt für ausgebildete Fachkräfte und für sozialaffine Hilfskräfte:
+                      unterschiedlichen Qualifikationen bewerben:
                     </p>
 
                     <div className="space-y-4">
@@ -169,16 +176,6 @@ const Stellenangebote = () => {
                     </div>
                   </div>
 
-                  {/* CTA */}
-                  <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
-                    <p className="text-foreground font-medium mb-2">
-                      Wir stehen Ihnen gerne zur Verfügung
-                    </p>
-                    <p className="text-muted-foreground">
-                      Rufen Sie uns an und vereinbaren einen unverbindlichen Termin – gerne bei Ihnen zu Hause.
-                    </p>
-                  </div>
-
                   {/* Benefits */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
@@ -186,18 +183,21 @@ const Stellenangebote = () => {
                     </h2>
                     <p className="text-muted-foreground leading-relaxed mb-6">
                       Grundpflege, Behandlungspflege, Intensivpflege oder einfache Haushaltshilfe – wir helfen 
-                      Pflegebedürftigen dort, wo sie Hilfe benötigen. Unsere Avyta Einsatzteams in Frankfurt und 
-                      Umgebung setzen sich deshalb ständig neu zusammen. Als Teil des Teams leisten Sie einen 
-                      wichtigen Beitrag zum sozialen Zusammenleben in der Region. Wir wissen Ihren herzlichen 
+                      Pflegebedürftigen dort, wo sie Hilfe benötigen. Wir wissen Ihren herzlichen 
                       Einsatz zu schätzen, darum bieten wir für Stellenangebote in der Pflege Frankfurt eine 
                       Reihe von besonderen Benefits für Angestellte:
                     </p>
 
-                    <div className="grid sm:grid-cols-2 gap-3">
+                    <div className="grid sm:grid-cols-2 gap-4">
                       {benefits.map((benefit, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                          <span className="text-sm text-muted-foreground">{benefit}</span>
+                        <div key={index} className="flex items-start gap-3 p-4 bg-muted/30 rounded-xl border border-border/50">
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <benefit.icon className="w-5 h-5 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-medium text-foreground">{benefit.title}</h4>
+                            <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -217,7 +217,7 @@ const Stellenangebote = () => {
                       Als Teil unseres Teams genießen Sie nicht nur die Sicherheit und die Vorzüge eines etablierten 
                       Pflegedienstes, sondern auch Gesundheits- und Wellnessangebote durch unsere Mitgliedschaft bei 
                       Wellpass. Wir glauben daran, dass die Gesundheit unserer Mitarbeiter direkt zu einer höheren 
-                      Qualität in der Pflege unserer Kunden beiträgt und einer gesunden Work-Life-Balance.
+                      Qualität in der Pflege unserer Kunden beiträgt.
                     </p>
 
                     {/* Wellpass Box */}
@@ -244,16 +244,35 @@ const Stellenangebote = () => {
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
                       Arbeiten mit Wertschätzung
                     </h2>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-muted-foreground leading-relaxed">
                       Sie sprechen Deutsch auf B1-Niveau oder höher und haben eine Fahrerlaubnis für Klasse B Fahrzeuge? 
                       Damit sind die ersten Hürden für eine Bewerbung auf unsere Stellenangebote in der Pflege in Frankfurt 
                       bereits überwunden. Menschen mit Freude an sozialer Arbeit und neuen Kontakten sind bei uns stets 
-                      willkommen, unabhängig von ihrem Qualifikationsgrad. Für Pflegehelfer, Pflegefachkräfte, 
-                      Pflegehilfskräfte und Haushaltshilfen mit Berufserfahrung ist in unserem Team stets Platz.
+                      willkommen, unabhängig von ihrem Qualifikationsgrad.
                     </p>
-                    <p className="text-foreground font-medium">
+                  </div>
+
+                  {/* CTA */}
+                  <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
+                    <p className="text-foreground font-medium mb-2">
+                      Wir stehen Ihnen gerne zur Verfügung
+                    </p>
+                    <p className="text-muted-foreground mb-4">
                       Bewerben Sie sich jetzt und lernen Sie unser freundliches Arbeitsumfeld kennen.
                     </p>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Button variant="hero" size="lg" asChild>
+                        <a href="mailto:jobs@avyta.de?subject=Bewerbung Stellenangebot">
+                          Jetzt bewerben
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </a>
+                      </Button>
+                      <Button variant="outline" size="lg" asChild>
+                        <a href="tel:+496915391405">
+                          Anrufen: 069 153 914 05
+                        </a>
+                      </Button>
+                    </div>
                   </div>
 
                   {/* FAQ */}
@@ -286,7 +305,7 @@ const Stellenangebote = () => {
                     <div className="p-6 bg-muted/30 rounded-2xl">
                       <h3 className="font-semibold text-foreground mb-4">Benefits</h3>
                       <ul className="space-y-3">
-                        {benefits.slice(0, 6).map((benefit, index) => (
+                        {sidebarBenefits.map((benefit, index) => (
                           <li key={index} className="flex items-start gap-2 text-sm">
                             <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                             <span className="text-muted-foreground">{benefit}</span>
