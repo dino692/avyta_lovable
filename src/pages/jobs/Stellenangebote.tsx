@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
-import { Briefcase, CheckCircle2, MapPin, Clock, Euro, ArrowRight, Heart, Users, Sparkles, Home } from "lucide-react";
+import { Briefcase, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -12,56 +12,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const jobs = [
-  {
-    title: "Pflegefachkraft (m/w/d)",
-    type: "Vollzeit / Teilzeit",
-    location: "Frankfurt am Main",
-    salary: "Ab 3.800€ / Monat",
-    href: "/jobs/pflegefachkraft",
-    icon: Sparkles,
-    description: "Als Pflegefachkraft übernehmen Sie die medizinische Versorgung von Patienten in der häuslichen Pflege. Sie stehen in engem Kontakt mit Pflegebedürftigen und ihren Angehörigen und koordinieren die Aufgaben Ihrer Kollegen.",
-  },
-  {
-    title: "Pflegehelfer (m/w/d)",
-    type: "Vollzeit / Teilzeit",
-    location: "Frankfurt am Main",
-    salary: "Ab 2.400€ / Monat",
-    href: "/jobs/pflegehelfer",
-    icon: Heart,
-    description: "Nach einjähriger Ausbildung an einer staatlich anerkannten Krankenfachschule können Sie als Pflegehelfer im ambulanten Dienst tätig werden. Diese Anstellungsform ist für Berufseinsteiger und Berufswechsler besonders interessant.",
-  },
-  {
-    title: "Pflegehilfskraft (m/w/d)",
-    type: "Vollzeit / Teilzeit",
-    location: "Frankfurt am Main",
-    salary: "Ab 2.800€ / Monat",
-    href: "/jobs/pflegehilfskraft",
-    icon: Users,
-    description: "Pflegehilfskräfte begleiten unsere Fachkräfte im ambulanten Dienst und liefern körperliche und soziale Unterstützung. Von der Aufstellung von Gehhilfen und Rollstühlen bis hin zum Anziehen von Kompressionsstrümpfen erwarten Sie täglich neue Aufgaben.",
-  },
-  {
-    title: "Haushaltshilfe (m/w/d)",
-    type: "Teilzeit / Minijob",
-    location: "Frankfurt am Main",
-    salary: "Ab 14€ / Stunde",
-    href: "/jobs/haushaltshilfe",
-    icon: Home,
-    description: "Unsere ambulante Pflege Stellenangebote für Frankfurt stehen auch für Haushaltshilfen ohne besondere Vorausbildung offen. Im ambulanten Einsatz tragen Sie mit der Erledigung von Haushaltsaufgaben zum Wohlbefinden von Pflegebedürftigen bei.",
-  },
-];
-
 const benefits = [
-  "Übertarifliches Gehalt, je nach Qualifikation und Erfahrung",
+  "Übertarifliches Gehalt",
   "Sonntag, Feiertag und Nachtzuschläge",
   "30 Urlaubstage jährlich",
   "PKW auch privat zur Verfügung",
   "Wellpass-Mitgliedschaft monatlich",
-  "Urlaubsprämien, Feiertagsprämien und leistungsbasierte Prämien",
-  "Geburtstage mit steuerfreien Geschenken bis 60€",
-  "Unterkunft bei Bedarf (Apartment oder WG)",
-  "Berufskleidung für alle Wetterbedingungen",
-  "Größtenteils papierlose Arbeit",
+  "Urlaubsprämien und Leistungsprämien",
 ];
 
 const faqs = [
@@ -120,7 +77,6 @@ const Stellenangebote = () => {
             <div className="max-w-5xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2 space-y-12">
-                  {/* Intro Text */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
                       Arbeiten mit Wertschätzung
@@ -138,69 +94,17 @@ const Stellenangebote = () => {
                     </p>
                   </div>
 
-                  {/* Job Cards */}
-                  <div>
-                    <h2 className="text-2xl font-display font-bold text-foreground mb-6">
-                      Aktuelle Stellenangebote
-                    </h2>
-                    <div className="space-y-4">
-                      {jobs.map((job) => (
-                        <Link
-                          key={job.href}
-                          to={job.href}
-                          className="group block p-5 bg-muted/30 rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all"
-                        >
-                          <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
-                              <job.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground" />
-                            </div>
-                            <div className="flex-1">
-                              <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
-                                {job.title}
-                              </h3>
-                              <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mb-2">
-                                <span className="flex items-center gap-1">
-                                  <Clock className="w-3 h-3" />
-                                  {job.type}
-                                </span>
-                                <span className="flex items-center gap-1">
-                                  <MapPin className="w-3 h-3" />
-                                  {job.location}
-                                </span>
-                                <span className="flex items-center gap-1">
-                                  <Euro className="w-3 h-3" />
-                                  {job.salary}
-                                </span>
-                              </div>
-                              <p className="text-sm text-muted-foreground leading-relaxed">
-                                {job.description}
-                              </p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0" />
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Benefits */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Das bieten wir Ihnen
+                      Bewerben Sie sich jetzt
                     </h2>
-                    <p className="text-muted-foreground leading-relaxed mb-6">
-                      Grundpflege, Behandlungspflege, Intensivpflege oder einfache Haushaltshilfe – wir helfen 
-                      Pflegebedürftigen dort, wo sie Hilfe benötigen. Als Teil des Teams leisten Sie einen 
-                      wichtigen Beitrag zum sozialen Zusammenleben in der Region.
+                    <p className="text-muted-foreground leading-relaxed">
+                      Sie sprechen Deutsch auf B1-Niveau oder höher und haben eine Fahrerlaubnis für Klasse B Fahrzeuge? 
+                      Damit sind die ersten Hürden für eine Bewerbung auf unsere Stellenangebote in der Pflege in Frankfurt 
+                      bereits überwunden. Menschen mit Freude an sozialer Arbeit und neuen Kontakten sind bei uns stets willkommen, 
+                      unabhängig von ihrem Qualifikationsgrad. Für Pflegehelfer, Pflegefachkräfte, Pflegehilfskräfte und Haushaltshilfen 
+                      mit Berufserfahrung ist in unserem Team stets Platz.
                     </p>
-                    <ul className="grid sm:grid-cols-2 gap-3">
-                      {benefits.map((benefit, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground text-sm">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
 
                   {/* FAQ Section */}
@@ -227,22 +131,26 @@ const Stellenangebote = () => {
                   </div>
                 </div>
 
-                {/* Sidebar */}
                 <div className="space-y-6">
                   <div className="sticky top-28 space-y-6">
-                    <div className="p-6 bg-primary text-primary-foreground rounded-2xl">
-                      <h3 className="font-semibold mb-4">Jetzt bewerben</h3>
-                      <p className="text-sm opacity-90 mb-4">
-                        Sie sprechen Deutsch auf B1-Niveau oder höher und haben eine Fahrerlaubnis für Klasse B Fahrzeuge? 
-                        Bewerben Sie sich jetzt!
-                      </p>
-                      <Button variant="secondary" className="w-full" asChild>
-                        <a href="mailto:jobs@avyta.de?subject=Bewerbung Stellenangebot">
-                          Bewerbung senden
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </a>
-                      </Button>
+                    <div className="p-6 bg-muted/30 rounded-2xl">
+                      <h3 className="font-semibold text-foreground mb-4">Das bieten wir</h3>
+                      <ul className="space-y-3">
+                        {benefits.map((benefit, index) => (
+                          <li key={index} className="flex items-start gap-2 text-sm">
+                            <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span className="text-muted-foreground">{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
+
+                    <Button variant="hero" size="lg" className="w-full" asChild>
+                      <a href="mailto:jobs@avyta.de?subject=Bewerbung Stellenangebot">
+                        Jetzt bewerben
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </a>
+                    </Button>
 
                     <p className="text-sm text-muted-foreground text-center">
                       oder rufen Sie uns an: <br />
