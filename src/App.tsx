@@ -19,6 +19,12 @@ import Frankfurt from "./pages/standorte/Frankfurt";
 import BadVilbel from "./pages/standorte/BadVilbel";
 import StadtteilTemplate from "./pages/standorte/StadtteilTemplate";
 import Blog from "./pages/Blog";
+import DemenzPflege from "./pages/blog/DemenzPflege";
+import PflegegradBeantragen from "./pages/blog/PflegegradBeantragen";
+import DiabetesImAlter from "./pages/blog/DiabetesImAlter";
+import VerhinderungspflegeNutzen from "./pages/blog/VerhinderungspflegeNutzen";
+import SturzprophylaxeTipps from "./pages/blog/SturzprophylaxeTipps";
+import AvytaTeamWaechst from "./pages/blog/AvytaTeamWaechst";
 import Jobs from "./pages/Jobs";
 import Kontakt from "./pages/Kontakt";
 import Impressum from "./pages/Impressum";
@@ -62,6 +68,12 @@ const App = () => (
             <Route path="/standorte/frankfurt/hoechst" element={<StadtteilTemplate name="Höchst" />} />
             <Route path="/standorte/frankfurt/roedelheim" element={<StadtteilTemplate name="Rödelheim" />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/demenz-pflege-tipps" element={<DemenzPflege />} />
+            <Route path="/blog/pflegegrad-beantragen" element={<PflegegradBeantragen />} />
+            <Route path="/blog/diabetes-im-alter" element={<DiabetesImAlter />} />
+            <Route path="/blog/verhinderungspflege-nutzen" element={<VerhinderungspflegeNutzen />} />
+            <Route path="/blog/sturzprophylaxe-tipps" element={<SturzprophylaxeTipps />} />
+            <Route path="/blog/team-waechst" element={<AvytaTeamWaechst />} />
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/impressum" element={<Impressum />} />
