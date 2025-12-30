@@ -8,6 +8,7 @@ const Impressum = () => {
       <Helmet>
         <title>Impressum | AVYTA Pflegegesellschaft mbH</title>
         <meta name="description" content="Impressum der AVYTA Pflegegesellschaft mbH - Rechtliche Informationen und Kontaktdaten." />
+        <link rel="canonical" href="https://avyta.de/impressum" />
       </Helmet>
       <Header />
       <main className="pt-28 pb-20 min-h-screen bg-gradient-to-b from-secondary/30 to-background">

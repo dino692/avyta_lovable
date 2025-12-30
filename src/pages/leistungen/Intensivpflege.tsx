@@ -24,6 +24,11 @@ const Intensivpflege = () => {
       <Helmet>
         <title>Intensivpflege Frankfurt | Beatmungspflege zu Hause | AVYTA</title>
         <meta name="description" content="Spezialisierte Intensivpflege in Frankfurt. Professionelle Betreuung für beatmungspflichtige Patienten zu Hause. 24/7 Versorgung. Jetzt beraten lassen!" />
+        <meta name="keywords" content="Intensivpflege Frankfurt, Beatmungspflege, außerklinische Intensivpflege, 24 Stunden Pflege, Heimbeatmung, Trachealkanüle" />
+        <meta property="og:title" content="Intensivpflege Frankfurt | AVYTA Pflegedienst" />
+        <meta property="og:description" content="Spezialisierte Intensivpflege in Frankfurt. 24/7 Versorgung für beatmungspflichtige Patienten." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://avyta.de/leistungen/intensivpflege" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

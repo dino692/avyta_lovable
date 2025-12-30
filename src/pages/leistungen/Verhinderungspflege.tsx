@@ -24,6 +24,11 @@ const Verhinderungspflege = () => {
       <Helmet>
         <title>Verhinderungspflege Frankfurt | Entlastung für Angehörige | AVYTA</title>
         <meta name="description" content="Verhinderungspflege in Frankfurt. Professionelle Vertretung pflegender Angehöriger bei Urlaub, Krankheit oder Erholung. Bis zu 1.612€ im Jahr. Jetzt beraten lassen!" />
+        <meta name="keywords" content="Verhinderungspflege Frankfurt, Entlastung Angehörige, Urlaubsvertretung Pflege, 1612 Euro Pflegekasse" />
+        <meta property="og:title" content="Verhinderungspflege Frankfurt | AVYTA Pflegedienst" />
+        <meta property="og:description" content="Verhinderungspflege in Frankfurt. Bis zu 1.612€ im Jahr für Entlastung." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://avyta.de/leistungen/verhinderungspflege" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

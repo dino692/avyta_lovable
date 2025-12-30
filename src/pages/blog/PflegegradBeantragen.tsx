@@ -11,6 +11,11 @@ const PflegegradBeantragen = () => {
       <Helmet>
         <title>Pflegegrad beantragen: Schritt für Schritt erklärt | AVYTA Blog</title>
         <meta name="description" content="Alles was Sie wissen müssen, um erfolgreich einen Pflegegrad zu beantragen. Von der Antragstellung bis zur Begutachtung." />
+        <meta name="keywords" content="Pflegegrad beantragen, MDK Begutachtung, Pflegegrad Antrag, Pflegestufe, Pflegegrad 1 2 3 4 5" />
+        <meta property="og:title" content="Pflegegrad beantragen | AVYTA Blog" />
+        <meta property="og:description" content="Schritt für Schritt zum Pflegegrad. Anleitung und Tipps." />
+        <meta property="og:type" content="article" />
+        <link rel="canonical" href="https://avyta.de/blog/pflegegrad-beantragen" />
       </Helmet>
 
       <Header />

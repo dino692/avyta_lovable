@@ -10,6 +10,11 @@ const BadVilbel = () => {
       <Helmet>
         <title>Ambulante Pflege Bad Vilbel | AVYTA Pflegedienst</title>
         <meta name="description" content="Ambulante Pflege in Bad Vilbel. Professioneller Pflegedienst für Behandlungspflege, Grundpflege und 24h-Betreuung. Tel: 069 153 914 05" />
+        <meta name="keywords" content="ambulante Pflege Bad Vilbel, Pflegedienst Bad Vilbel, häusliche Pflege, Behandlungspflege, Grundpflege" />
+        <meta property="og:title" content="Ambulante Pflege Bad Vilbel | AVYTA" />
+        <meta property="og:description" content="Professioneller Pflegedienst in Bad Vilbel und Umgebung." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://avyta.de/standorte/bad-vilbel" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

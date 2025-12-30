@@ -14,6 +14,10 @@ const StadtteilTemplate = ({ name }: StadtteilTemplateProps) => {
       <Helmet>
         <title>Ambulante Pflege Frankfurt {name} | AVYTA</title>
         <meta name="description" content={`Ambulante Pflege in Frankfurt ${name}. Professioneller Pflegedienst für Behandlungspflege, Grundpflege und 24h-Betreuung. Tel: 069 153 914 05`} />
+        <meta name="keywords" content={`ambulante Pflege Frankfurt ${name}, Pflegedienst ${name}, häusliche Pflege Frankfurt`} />
+        <meta property="og:title" content={`Ambulante Pflege Frankfurt ${name} | AVYTA`} />
+        <meta property="og:description" content={`Professioneller Pflegedienst in Frankfurt ${name}.`} />
+        <meta property="og:type" content="website" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
