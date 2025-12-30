@@ -5,13 +5,19 @@ import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
 import { Users, CheckCircle2, MapPin, Clock, Euro, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const requirements = [
   "Abgeschlossene Basisqualifikation (z.B. LG1/LG2 oder Pflegebasiskurs)",
   "Erste Erfahrung in der Pflege wünschenswert",
   "Einfühlungsvermögen und Geduld",
   "Zuverlässigkeit und Teamfähigkeit",
-  "Gute Deutschkenntnisse",
+  "Gute Deutschkenntnisse (min. B1)",
   "Führerschein Klasse B von Vorteil",
 ];
 
@@ -33,12 +39,27 @@ const benefits = [
   "30 Tage Urlaub",
 ];
 
+const faqs = [
+  {
+    question: "Was ist der Unterschied zwischen Pflegehilfskraft und Pflegehelfer?",
+    answer: "Als Pflegehilfskraft verfügen Sie über eine Basisqualifikation (z.B. LG1/LG2 Kurs), die Sie zu erweiterten Pflegetätigkeiten befähigt. Pflegehelfer können auch ohne formale Qualifikation einsteigen und werden von uns eingearbeitet."
+  },
+  {
+    question: "Welche Weiterbildungsmöglichkeiten gibt es?",
+    answer: "Wir unterstützen Sie bei Ihrer beruflichen Entwicklung. Sie können weitere Qualifikationen erwerben, an Fortbildungen teilnehmen und sich zur examinierten Pflegefachkraft weiterbilden – wir fördern das aktiv."
+  },
+  {
+    question: "Wie sind die Arbeitszeiten geregelt?",
+    answer: "Wir bieten verschiedene Arbeitszeitmodelle an und versuchen, Ihre Wünsche bestmöglich zu berücksichtigen. Schichtdienste werden fair im Team verteilt."
+  },
+];
+
 const Pflegehilfskraft = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegehilfskraft | Jobs bei AVYTA</title>
-        <meta name="description" content="Werden Sie Pflegehilfskraft bei AVYTA in Frankfurt. Mit Basisqualifikation ins Team – übertarifliche Vergütung. Jetzt bewerben!" />
+        <title>Pflegehilfskraft | Jobs bei AVYTA Frankfurt</title>
+        <meta name="description" content="Werden Sie Pflegehilfskraft bei AVYTA in Frankfurt. Mit Basisqualifikation ins Team – übertarifliche Vergütung, 30 Tage Urlaub. Jetzt bewerben!" />
       </Helmet>
 
       <Header />
@@ -70,7 +91,7 @@ const Pflegehilfskraft = () => {
                     </span>
                     <span className="flex items-center gap-1">
                       <Euro className="w-4 h-4" />
-                      Übertariflich
+                      Ab 2.800€ / Monat
                     </span>
                   </div>
                 </div>
@@ -122,6 +143,29 @@ const Pflegehilfskraft = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+
+                  {/* FAQ Section */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-6">
+                      Häufige Fragen
+                    </h2>
+                    <Accordion type="single" collapsible className="space-y-3">
+                      {faqs.map((faq, index) => (
+                        <AccordionItem 
+                          key={index} 
+                          value={`item-${index}`}
+                          className="bg-muted/30 rounded-xl border border-border/50 px-6"
+                        >
+                          <AccordionTrigger className="text-left font-medium text-foreground hover:text-primary">
+                            {faq.question}
+                          </AccordionTrigger>
+                          <AccordionContent className="text-muted-foreground">
+                            {faq.answer}
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
                   </div>
                 </div>
 
