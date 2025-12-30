@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
-import { Briefcase, CheckCircle2, ArrowRight } from "lucide-react";
+import { Briefcase, CheckCircle2, ArrowRight, Sparkles, Heart, Users, Home, Dumbbell, Infinity, Palette, Globe, CalendarCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -12,13 +12,51 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const stellenangebote = [
+  { 
+    title: "Pflegefachkräfte", 
+    href: "/jobs/pflegefachkraft", 
+    icon: Sparkles,
+    description: "Als Pflegefachkraft übernehmen Sie die medizinische Versorgung von Patienten in der häuslichen Pflege. Sie stehen in engem Kontakt mit Pflegebedürftigen und ihren Angehörigen und koordinieren die Aufgaben Ihrer Kollegen."
+  },
+  { 
+    title: "Pflegehelfer (m/w/d)", 
+    href: "/jobs/pflegehelfer", 
+    icon: Heart,
+    description: "Nach einjähriger Ausbildung an einer staatlich anerkannten Krankenfachschule können Sie als Pflegehelfer im ambulanten Dienst tätig werden. Diese Anstellungsform ist für Berufseinsteiger und Berufswechsler besonders interessant."
+  },
+  { 
+    title: "Pflegehilfskraft", 
+    href: "/jobs/pflegehilfskraft", 
+    icon: Users,
+    description: "Pflegehilfskräfte begleiten unsere Fachkräfte im ambulanten Dienst und liefern körperliche und soziale Unterstützung. Von der Aufstellung von Gehhilfen und Rollstühlen bis hin zum Anziehen von Kompressionsstrümpfen erwarten Sie als Hilfskraft täglich neue Aufgaben, die Pflegebedürftigen das Leben erleichtern."
+  },
+  { 
+    title: "Haushaltshilfen", 
+    href: "/jobs/haushaltshilfe", 
+    icon: Home,
+    description: "Unsere ambulante Pflege Stellenangebote für Frankfurt stehen auch für Haushaltshilfen ohne besondere Vorausbildung offen. Im ambulanten Einsatz tragen Sie mit der Erledigung von Haushaltsaufgaben wie Kochen, Wäsche waschen oder Reinigen zum Wohlbefinden von Pflegebedürftigen bei."
+  },
+];
+
 const benefits = [
-  "Übertarifliches Gehalt",
-  "Sonntag, Feiertag und Nachtzuschläge",
-  "30 Urlaubstage jährlich",
-  "PKW auch privat zur Verfügung",
-  "Wellpass-Mitgliedschaft monatlich",
-  "Urlaubsprämien und Leistungsprämien",
+  "Gehalt: Sie erwartet ein übertarifliches Gehalt, je nach Qualifikation und Erfahrung",
+  "Zuschläge: Sonntag, Feiertag und Nachtzuschläge",
+  "Urlaub: Jährlich genießen unsere Mitarbeiter 30 Urlaubstage",
+  "PKW: Stellen wir Ihnen auch privat zur Verfügung, damit Sie stets mobil bleiben",
+  "Firmenfitness: Wellpass-Mitgliedschaft monatlich zusätzlich zum Gehalt",
+  "Prämien: Urlaubsprämien, Feiertagsprämien und leistungsbasierte Prämien vergeben wir bei guter Leistung gern",
+  "Teamzusammenhalt: Ist uns wichtig! Darum feiern wir auch Geburtstage von Angestellten mit steuerfreien Geschenken im Wert von bis zu 60 Euro",
+  "Unterkunft: Bei Bedarf stellen wir Angestellten eine angemessene Unterkunft in einem Apartment oder in einer WG",
+  "Berufskleidung: Ob kalt oder warm, immer gut ausgestattet! Durch ein gepflegtes Bild nach außen zeichnen wir uns aus",
+  "Digital: Wir arbeiten größtenteils papierlos (digital) und verbessern uns dahingehend stetig",
+];
+
+const wellpassFeatures = [
+  { icon: Infinity, label: "Unlimitiert" },
+  { icon: Palette, label: "Vielfältig" },
+  { icon: Globe, label: "Überall" },
+  { icon: CalendarCheck, label: "Flexibel" },
 ];
 
 const faqs = [
@@ -77,37 +115,148 @@ const Stellenangebote = () => {
             <div className="max-w-5xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2 space-y-12">
+                  {/* Intro */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Stellenangebote für die Pflege in Frankfurt
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Sie arbeiten gern eng mit Menschen zusammen und fühlen sich wohl im sozialen Arbeitsumfeld? 
+                      Wir von Avyta vergrößern regelmäßig unser familiäres Team in der ambulanten Pflege. 
+                      Pflegefachkräfte, Pflegehelfer und Haushaltshilfen sind bei uns stets gefragt. Bei uns erwartet 
+                      Sie ein abwechslungsreicher Arbeitsalltag mit größter Wertschätzung für Ihren Einsatz und Ihre 
+                      Fähigkeiten. Unsere ambulante Pflege mit Stellenangeboten für Frankfurt begrüßt Bewerber jeden 
+                      Alters, jeden Geschlechts und jeder Herkunft. Werden Sie Teil des Avyta Teams und genießen Sie 
+                      unsere besonderen Vorteile für Angestellte und eine übertarifliche Bezahlung.
+                    </p>
+                  </div>
+
+                  {/* Freie Stellenangebote */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Freie Stellenangebote in der Pflege Frankfurt
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Unsere Aufgaben im privaten Umfeld von Pflegebedürftigen sind so vielfältig wie die Menschen, 
+                      die wir täglich versorgen. Darum ist auch unser Team breit aufgestellt und Sie können sich mit 
+                      unterschiedlichen Qualifikationen bewerben. In Teilzeit und in Vollzeit vergeben wir Stellenangebote 
+                      in der Pflege in Frankfurt für ausgebildete Fachkräfte und für sozialaffine Hilfskräfte:
+                    </p>
+
+                    <div className="space-y-4">
+                      {stellenangebote.map((job) => (
+                        <Link
+                          key={job.href}
+                          to={job.href}
+                          className="group block p-5 bg-muted/30 rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all"
+                        >
+                          <div className="flex items-start gap-4">
+                            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
+                              <job.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground" />
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                                {job.title}
+                              </h3>
+                              <p className="text-sm text-muted-foreground leading-relaxed">
+                                {job.description}
+                              </p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
+                    <p className="text-foreground font-medium mb-2">
+                      Wir stehen Ihnen gerne zur Verfügung
+                    </p>
+                    <p className="text-muted-foreground">
+                      Rufen Sie uns an und vereinbaren einen unverbindlichen Termin – gerne bei Ihnen zu Hause.
+                    </p>
+                  </div>
+
+                  {/* Benefits */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Diese Vorteile erwarten Sie
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Grundpflege, Behandlungspflege, Intensivpflege oder einfache Haushaltshilfe – wir helfen 
+                      Pflegebedürftigen dort, wo sie Hilfe benötigen. Unsere Avyta Einsatzteams in Frankfurt und 
+                      Umgebung setzen sich deshalb ständig neu zusammen. Als Teil des Teams leisten Sie einen 
+                      wichtigen Beitrag zum sozialen Zusammenleben in der Region. Wir wissen Ihren herzlichen 
+                      Einsatz zu schätzen, darum bieten wir für Stellenangebote in der Pflege Frankfurt eine 
+                      Reihe von besonderen Benefits für Angestellte:
+                    </p>
+
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {benefits.map((benefit, index) => (
+                        <div key={index} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                          <span className="text-sm text-muted-foreground">{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Arbeiten bei Avyta */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Arbeiten bei Avyta – Eine Zukunft voller Möglichkeiten
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Wir sind Ihr zuverlässiger Partner und Arbeitgeber in der Pflegebranche mit Sitz im Herzen 
+                      von Frankfurt. Bei uns stehen nicht nur die Bedürfnisse unserer Patienten im Mittelpunkt, 
+                      sondern auch das Wohlbefinden und die berufliche Entwicklung unserer Mitarbeiter.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Als Teil unseres Teams genießen Sie nicht nur die Sicherheit und die Vorzüge eines etablierten 
+                      Pflegedienstes, sondern auch Gesundheits- und Wellnessangebote durch unsere Mitgliedschaft bei 
+                      Wellpass. Wir glauben daran, dass die Gesundheit unserer Mitarbeiter direkt zu einer höheren 
+                      Qualität in der Pflege unserer Kunden beiträgt und einer gesunden Work-Life-Balance.
+                    </p>
+
+                    {/* Wellpass Box */}
+                    <div className="p-6 bg-muted/30 rounded-2xl border border-border/50">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <Dumbbell className="w-5 h-5 text-primary" />
+                        </div>
+                        <h3 className="font-semibold text-foreground">Firmenfitness mit Wellpass</h3>
+                      </div>
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        {wellpassFeatures.map((feature, index) => (
+                          <div key={index} className="flex items-center gap-2">
+                            <feature.icon className="w-4 h-4 text-primary" />
+                            <span className="text-sm text-muted-foreground">{feature.label}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Arbeiten mit Wertschätzung */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
                       Arbeiten mit Wertschätzung
                     </h2>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Sie arbeiten gern eng mit Menschen zusammen und fühlen sich wohl im sozialen Arbeitsumfeld? 
-                      Wir von Avyta vergrößern regelmäßig unser familiäres Team in der ambulanten Pflege. 
-                      Pflegefachkräfte, Pflegehelfer und Haushaltshilfen sind bei uns stets gefragt.
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Bei uns erwartet Sie ein abwechslungsreicher Arbeitsalltag mit größter Wertschätzung für Ihren Einsatz 
-                      und Ihre Fähigkeiten. Unsere ambulante Pflege mit Stellenangeboten für Frankfurt begrüßt Bewerber 
-                      jeden Alters, jeden Geschlechts und jeder Herkunft. Werden Sie Teil des Avyta Teams und genießen Sie 
-                      unsere besonderen Vorteile für Angestellte und eine übertarifliche Bezahlung.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Bewerben Sie sich jetzt
-                    </h2>
-                    <p className="text-muted-foreground leading-relaxed">
                       Sie sprechen Deutsch auf B1-Niveau oder höher und haben eine Fahrerlaubnis für Klasse B Fahrzeuge? 
                       Damit sind die ersten Hürden für eine Bewerbung auf unsere Stellenangebote in der Pflege in Frankfurt 
-                      bereits überwunden. Menschen mit Freude an sozialer Arbeit und neuen Kontakten sind bei uns stets willkommen, 
-                      unabhängig von ihrem Qualifikationsgrad. Für Pflegehelfer, Pflegefachkräfte, Pflegehilfskräfte und Haushaltshilfen 
-                      mit Berufserfahrung ist in unserem Team stets Platz.
+                      bereits überwunden. Menschen mit Freude an sozialer Arbeit und neuen Kontakten sind bei uns stets 
+                      willkommen, unabhängig von ihrem Qualifikationsgrad. Für Pflegehelfer, Pflegefachkräfte, 
+                      Pflegehilfskräfte und Haushaltshilfen mit Berufserfahrung ist in unserem Team stets Platz.
+                    </p>
+                    <p className="text-foreground font-medium">
+                      Bewerben Sie sich jetzt und lernen Sie unser freundliches Arbeitsumfeld kennen.
                     </p>
                   </div>
 
-                  {/* FAQ Section */}
+                  {/* FAQ */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-6">
                       Häufige Fragen
@@ -131,12 +280,13 @@ const Stellenangebote = () => {
                   </div>
                 </div>
 
+                {/* Sidebar */}
                 <div className="space-y-6">
                   <div className="sticky top-28 space-y-6">
                     <div className="p-6 bg-muted/30 rounded-2xl">
-                      <h3 className="font-semibold text-foreground mb-4">Das bieten wir</h3>
+                      <h3 className="font-semibold text-foreground mb-4">Benefits</h3>
                       <ul className="space-y-3">
-                        {benefits.map((benefit, index) => (
+                        {benefits.slice(0, 6).map((benefit, index) => (
                           <li key={index} className="flex items-start gap-2 text-sm">
                             <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                             <span className="text-muted-foreground">{benefit}</span>
