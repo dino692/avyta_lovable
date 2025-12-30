@@ -1,28 +1,4 @@
-import { Star, Award, Shield, CheckCircle, TrendingUp } from "lucide-react";
-
-const certifications = [
-  {
-    name: "MDK Qualitätsprüfung",
-    grade: "Note 1,4",
-    description: "Sehr gute Bewertung durch den Medizinischen Dienst",
-    icon: Award,
-    color: "from-amber-500 to-orange-600",
-  },
-  {
-    name: "TÜV Zertifiziert",
-    grade: "ISO 9001:2015",
-    description: "Qualitätsmanagement nach höchsten Standards",
-    icon: Shield,
-    color: "from-blue-500 to-indigo-600",
-  },
-  {
-    name: "Dekra Prüfsiegel",
-    grade: "Exzellent",
-    description: "Arbeitssicherheit und Hygiene geprüft",
-    icon: CheckCircle,
-    color: "from-emerald-500 to-teal-600",
-  },
-];
+import { Star, Shield, CheckCircle, Award, TrendingUp } from "lucide-react";
 
 const ReviewsSection = () => {
   return (
@@ -106,49 +82,8 @@ const ReviewsSection = () => {
           </div>
         </div>
 
-        {/* Certifications */}
-        <div className="relative">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-display font-bold text-foreground">
-              Unsere Zertifizierungen
-            </h3>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {certifications.map((cert, index) => (
-              <div
-                key={cert.name}
-                className="group animate-fade-up"
-                style={{ animationDelay: `${(index + 3) * 0.1}s` }}
-              >
-                <div className="relative bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-500 hover:shadow-lg overflow-hidden">
-                  {/* Gradient line at top */}
-                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${cert.color}`} />
-                  
-                  <div className="flex items-start gap-5">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${cert.color} flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <cert.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${cert.color} text-white mb-2`}>
-                        {cert.grade}
-                      </div>
-                      <h3 className="font-display font-semibold text-xl text-foreground mb-2 group-hover:text-primary transition-colors">
-                        {cert.name}
-                      </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {cert.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Trust badges */}
-        <div className="mt-16 text-center">
+        <div className="text-center">
           <div className="inline-flex flex-wrap justify-center items-center gap-4 px-8 py-4 bg-card rounded-full border border-border shadow-sm">
             <div className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-primary" />
