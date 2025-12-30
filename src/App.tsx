@@ -20,6 +20,7 @@ import BadVilbel from "./pages/standorte/BadVilbel";
 import StadtteilTemplate from "./pages/standorte/StadtteilTemplate";
 import Blog from "./pages/Blog";
 import Jobs from "./pages/Jobs";
+import Kontakt from "./pages/Kontakt";
 import Stellenangebote from "./pages/jobs/Stellenangebote";
 import Pflegehelfer from "./pages/jobs/Pflegehelfer";
 import Pflegehilfskraft from "./pages/jobs/Pflegehilfskraft";
@@ -58,6 +59,7 @@ const App = () => (
             <Route path="/standorte/frankfurt/roedelheim" element={<StadtteilTemplate name="Rödelheim" />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/jobs" element={<Jobs />} />
+            <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/jobs/stellenangebote" element={<Stellenangebote />} />
             <Route path="/jobs/pflegehelfer" element={<Pflegehelfer />} />
             <Route path="/jobs/pflegehilfskraft" element={<Pflegehilfskraft />} />
