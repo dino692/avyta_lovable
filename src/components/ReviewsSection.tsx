@@ -80,15 +80,26 @@ const ReviewsSection = () => {
                   </div>
                   <div className="font-display font-bold text-5xl text-foreground mb-2">5.0</div>
                   <p className="text-muted-foreground mb-6">Basierend auf Google Bewertungen</p>
-                  <a
-                    href="https://share.google/blwWksE64bKMjILdq"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
-                  >
-                    <Star className="w-5 h-5" />
-                    Alle Bewertungen ansehen
-                  </a>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a
+                      href="https://google.com/maps/place//data=!4m3!3m2!1s0x47bd0ea26295cf3d:0x419b1bced25993f1!12e1?source=g.page.m._&laa=merchant-review-solicitation"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
+                    >
+                      <Star className="w-5 h-5" />
+                      Alle Bewertungen ansehen
+                    </a>
+                    <a
+                      href="https://google.com/maps/place//data=!4m3!3m2!1s0x47bd0ea26295cf3d:0x419b1bced25993f1!12e1?source=g.page.m._&laa=merchant-review-solicitation"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-full font-medium hover:bg-accent/90 transition-colors shadow-lg hover:shadow-xl"
+                    >
+                      <Star className="w-5 h-5 fill-current" />
+                      Jetzt Bewerten
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
