@@ -6,29 +6,49 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, UserCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const leistungen = [
-  "Stundenweise Entlastung",
-  "Tageweise Vertretung",
-  "Urlaubsvertretung (bis zu 6 Wochen)",
-  "Grundpflege",
-  "Behandlungspflege",
-  "Hauswirtschaftliche Versorgung",
-  "Betreuung und Begleitung",
-  "Nachtpflege bei Bedarf",
+  "Grundpflege: Hilfe beim An- und Auskleiden, bei der täglichen Hygiene und bei Toilettengängen",
+  "Haushaltshilfe: Unterstützung beim Kochen, Wäsche säubern oder bei der Reinigung der Wohnung",
+  "Unterstützung bei der Mobilität: Beim Aufstehen aus dem Bett, beim Treppensteigen oder während kurzer Spaziergänge",
+  "Medikamentenmanagement: Pünktliche Medikamentenvergabe",
+  "Bekannte Gesellschaft: Fest zugeteilte Mitarbeiter für vertraute Gesichter",
+  "Behandlungspflege bei Bedarf",
+  "Intensivpflege bei Bedarf",
+];
+
+const faqs = [
+  {
+    question: "Wie wird die Verhinderungspflege in Frankfurt finanziell abgewickelt?",
+    answer: "Die Verhinderungspflege wird über das Budget der Verhinderungspflege Ihrer Pflegekasse abgerechnet. Die Pflegekasse übernimmt die Kosten für bis zu 6 Wochen Verhinderungspflege im Jahr (bis zu 1.612€). Zusätzlich können Sie bis zu 50% des Kurzzeitpflege-Budgets (806€) nutzen, sodass Ihnen insgesamt bis zu 2.418€ zur Verfügung stehen."
+  },
+  {
+    question: "Wie lange kann ich die Verhinderungspflege in Anspruch nehmen?",
+    answer: "Die Verhinderungspflege kann bei Bedarf unbegrenzt verlängert werden, solange Sie über ein entsprechendes Budget verfügen. Wir passen unsere Leistungen flexibel an Ihre Bedürfnisse an – ob stundenweise Entlastung, tageweise Vertretung oder längere Urlaubsvertretung."
+  },
+  {
+    question: "Wer führt die Verhinderungspflege durch?",
+    answer: "Nach Möglichkeit setzen wir fest zugeteilte Mitarbeiter für die ambulante Verhinderungspflege ein. Ihre Angehörigen werden so täglich von bekannten Gesichtern begrüßt, die in Urlaubs- und Krankheitsphasen zuverlässig für Sie einspringen."
+  }
 ];
 
 const Verhinderungspflege = () => {
   return (
     <>
       <Helmet>
-        <title>Verhinderungspflege Frankfurt | Entlastung für Angehörige | AVYTA</title>
-        <meta name="description" content="Verhinderungspflege in Frankfurt. Professionelle Vertretung pflegender Angehöriger bei Urlaub, Krankheit oder Erholung. Bis zu 1.612€ im Jahr. Jetzt beraten lassen!" />
-        <meta name="keywords" content="Verhinderungspflege Frankfurt, Entlastung Angehörige, Urlaubsvertretung Pflege, 1612 Euro Pflegekasse" />
+        <title>Verhinderungspflege Frankfurt | Ihre Zeit liegt uns am Herzen | AVYTA</title>
+        <meta name="description" content="Verhinderungspflege in Frankfurt – professionelle Vertretung für pflegende Angehörige bei Urlaub, Krankheit oder Terminen. Bis zu 2.418€ Budget. Grundpflege, Behandlungspflege & mehr." />
+        <meta name="keywords" content="Verhinderungspflege Frankfurt, Entlastung Angehörige, Urlaubsvertretung Pflege, Pflegekasse Budget" />
         <meta property="og:title" content="Verhinderungspflege Frankfurt | AVYTA Pflegedienst" />
-        <meta property="og:description" content="Verhinderungspflege in Frankfurt. Bis zu 1.612€ im Jahr für Entlastung." />
+        <meta property="og:description" content="Verhinderungspflege in Frankfurt. Bis zu 2.418€ Budget für Entlastung." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://avyta.de/leistungen/verhinderungspflege" />
+        <link rel="canonical" href="https://www.avyta.de/leistungen/verhinderungspflege-frankfurt" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -41,11 +61,11 @@ const Verhinderungspflege = () => {
                   <UserCheck className="w-10 h-10 text-primary" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-                  Verhinderungspflege
+                  Avyta Verhinderungspflege in Frankfurt – Ihre Zeit liegt uns am Herzen
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Professionelle Vertretung für pflegende Angehörige – 
-                  damit auch Sie mal durchatmen können.
+                  Pflegende Angehörige leisten jeden Tag viel für ihre Lieben. Bei Ihrem Einsatz für andere 
+                  sollten Sie jedoch nicht Ihre eigenen Bedürfnisse zurückstellen müssen.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -60,26 +80,26 @@ const Verhinderungspflege = () => {
               <div className="grid lg:grid-cols-2 gap-16">
                 <div>
                   <h2 className="text-3xl font-display font-bold text-foreground mb-6">
-                    Was ist Verhinderungspflege?
+                    Sorgenfrei das Leben meistern mit Verhinderungspflege in Frankfurt
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Die Verhinderungspflege springt ein, wenn die private Pflegeperson 
-                    verhindert ist – sei es durch Urlaub, Krankheit, berufliche 
-                    Verpflichtungen oder einfach zur Erholung.
+                    Wenn Angehörige aufgrund von Krankheit, Termindruck oder aus anderen Gründen mal nicht 
+                    voll einsatzfähig für die Pflege sind, helfen wir von Avyta bei allen anstehenden Aufgaben. 
+                    Sie sind kurzfristig verhindert, haben einen wichtigen Termin oder benötigen einfach mal Urlaub?
                   </p>
                   <p className="text-muted-foreground leading-relaxed mb-8">
-                    Als pflegender Angehöriger haben Sie Anspruch auf bis zu 1.612€ 
-                    pro Jahr für die Verhinderungspflege. Wir übernehmen während Ihrer 
-                    Abwesenheit die komplette Versorgung Ihres Angehörigen.
+                    Unser Angebot für die Verhinderungspflege in Frankfurt umfasst die stellvertretende 
+                    Grundpflege, Behandlungspflege und Intensivpflege. Wir können Menschen von Pflegegrad 1 bis 5 
+                    versorgen und unterstützen Ihre Angehörigen im Haushalt oder leihen ihnen ein offenes Ohr.
                   </p>
 
                   <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                    Unsere Leistungen im Überblick
+                    Aufgaben der Verhinderungspflege in Frankfurt
                   </h3>
-                  <div className="grid sm:grid-cols-2 gap-3">
+                  <div className="space-y-3">
                     {leistungen.map((item) => (
-                      <div key={item} className="flex items-center gap-2">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                      <div key={item} className="flex items-start gap-2">
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                         <span className="text-muted-foreground">{item}</span>
                       </div>
                     ))}
@@ -90,12 +110,12 @@ const Verhinderungspflege = () => {
                   <Card variant="elevated">
                     <CardContent className="p-6">
                       <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                        Bis zu 1.612€ pro Jahr
+                        Bis zu 2.418€ pro Jahr
                       </h3>
                       <p className="text-muted-foreground">
-                        Die Pflegekasse übernimmt die Kosten für bis zu 6 Wochen 
-                        Verhinderungspflege im Jahr. Dieser Anspruch kann auch stundenweise 
-                        genutzt werden.
+                        Die Pflegekasse übernimmt die Kosten für bis zu 6 Wochen Verhinderungspflege im Jahr 
+                        (1.612€). Sie können zusätzlich bis zu 50% des Kurzzeitpflege-Budgets (806€) nutzen – 
+                        insgesamt also bis zu 2.418€.
                       </p>
                     </CardContent>
                   </Card>
@@ -103,12 +123,12 @@ const Verhinderungspflege = () => {
                   <Card variant="elevated">
                     <CardContent className="p-6">
                       <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                        Kombination möglich
+                        Zuverlässig über kurz oder lang
                       </h3>
                       <p className="text-muted-foreground">
-                        Sie können bis zu 50% des Kurzzeitpflege-Budgets (806€) zusätzlich 
-                        für Verhinderungspflege nutzen. So stehen Ihnen insgesamt bis zu 
-                        2.418€ zur Verfügung.
+                        Die Verhinderungspflege in Frankfurt ermöglicht es Angehörigen, volle Verantwortung 
+                        für pflegebedürftige Personen zu übernehmen, ohne sich selbst allzu sehr einschränken 
+                        zu müssen. Wir fördern ein soziales und enges Miteinander.
                       </p>
                     </CardContent>
                   </Card>
@@ -119,12 +139,12 @@ const Verhinderungspflege = () => {
                         Planen Sie Ihre Auszeit
                       </h3>
                       <p className="opacity-90 mb-4">
-                        Wir beraten Sie zur optimalen Nutzung Ihrer Ansprüche und 
-                        organisieren die Vertretung für Ihren Angehörigen.
+                        Wir stehen Ihnen gerne zur Verfügung. Rufen Sie uns an und vereinbaren 
+                        einen unverbindlichen Termin – gerne bei Ihnen zu Hause.
                       </p>
                       <Button variant="secondary" asChild>
-                        <a href="/#contact">
-                          Erstberatung anfragen
+                        <a href="tel:+496915391405">
+                          Jetzt anrufen
                           <ArrowRight className="w-4 h-4 ml-2" />
                         </a>
                       </Button>
@@ -135,8 +155,31 @@ const Verhinderungspflege = () => {
             </div>
           </section>
 
-          {/* Other Services */}
+          {/* FAQ Section */}
           <section className="py-24 bg-secondary/30">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+                  Häufige Fragen zur Verhinderungspflege
+                </h2>
+                <Accordion type="single" collapsible className="w-full">
+                  {faqs.map((faq, index) => (
+                    <AccordionItem key={index} value={`item-${index}`}>
+                      <AccordionTrigger className="text-left">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            </div>
+          </section>
+
+          {/* Other Services */}
+          <section className="py-24">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
                 Weitere Leistungen
@@ -149,16 +192,13 @@ const Verhinderungspflege = () => {
                   <Link to="/leistungen/grundpflege">Grundpflege</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/leistungen/intensivpflege">Intensivpflege</Link>
+                  <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main">Intensivpflege</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/leistungen/haushaltshilfe">Haushaltshilfe</Link>
+                  <Link to="/leistungen/24-stunden-pflege">24-Stunden-Pflege</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/leistungen/24-stunden">24-Stunden-Pflege</Link>
-                </Button>
-                <Button variant="outline" asChild>
-                  <Link to="/leistungen/pflegeberatung">Pflegeberatung</Link>
+                  <Link to="/leistungen/pflegeberatung-frankfurt">Pflegeberatung</Link>
                 </Button>
               </div>
             </div>
