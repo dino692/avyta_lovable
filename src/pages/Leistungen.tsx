@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { ArrowRight, Stethoscope, Home, Activity, Utensils, Clock, FileText, UserCheck, Check, HeartPulse } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -119,8 +120,17 @@ const Leistungen = () => {
   const [selectedService, setSelectedService] = useState(services[0]);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <>
+      <Helmet>
+        <title>Unsere Leistungen | Ambulante Pflege Frankfurt | AVYTA</title>
+        <meta name="description" content="Professionelle Pflegeleistungen in Frankfurt: Grundpflege, Behandlungspflege, Intensivpflege, 24-Stunden-Pflege, Verhinderungspflege, Haushaltshilfe und Pflegeberatung. Jetzt beraten lassen!" />
+        <meta name="keywords" content="Ambulante Pflege Leistungen Frankfurt, Grundpflege, Behandlungspflege, Intensivpflege, 24 Stunden Pflege, Pflegeberatung" />
+        <meta property="og:title" content="Unsere Leistungen | AVYTA Ambulanter Pflegedienst" />
+        <meta property="og:description" content="Von der Grundpflege bis zur spezialisierten Intensivpflege – alle Leistungen aus einer Hand." />
+        <link rel="canonical" href="https://www.avyta.de/leistungen" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
+        <Header />
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-primary/5 to-background">
@@ -290,6 +300,7 @@ const Leistungen = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 

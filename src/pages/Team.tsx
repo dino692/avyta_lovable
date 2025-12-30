@@ -133,11 +133,22 @@ const eventGalleries = [
   },
 ];
 
+import { Helmet } from "react-helmet-async";
+
 const Team = () => {
   const [selectedEvent, setSelectedEvent] = useState(eventGalleries[0]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>AVYTA - Wir stellen uns vor | Ambulanter Pflegedienst Frankfurt</title>
+        <meta name="description" content="Lernen Sie das AVYTA Team kennen. Erfahrene Pflegekräfte mit Herz in Frankfurt am Main. Rasche und unbürokratische Hilfe in schwierigen Betreuungssituationen." />
+        <meta name="keywords" content="Pflegeteam Frankfurt, Ambulante Pflege Team, Pflegekräfte Frankfurt am Main" />
+        <meta property="og:title" content="AVYTA - Wir stellen uns vor" />
+        <meta property="og:description" content="Lernen Sie unser engagiertes Team kennen – Menschen mit Herz, Kompetenz und Leidenschaft für die Pflege." />
+        <link rel="canonical" href="https://www.avyta.de/ueber-uns" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -351,6 +362,7 @@ const Team = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
