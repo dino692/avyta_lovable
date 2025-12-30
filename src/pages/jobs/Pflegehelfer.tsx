@@ -5,12 +5,18 @@ import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
 import { Heart, CheckCircle2, MapPin, Clock, Euro, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const requirements = [
   "Freude am Umgang mit Menschen",
   "Einfühlungsvermögen und Geduld",
   "Zuverlässigkeit und Pünktlichkeit",
-  "Gute Deutschkenntnisse",
+  "Gute Deutschkenntnisse (min. B1)",
   "Führerschein Klasse B von Vorteil",
 ];
 
@@ -31,12 +37,27 @@ const benefits = [
   "Familiäres Arbeitsumfeld",
 ];
 
+const faqs = [
+  {
+    question: "Brauche ich eine Ausbildung als Pflegehelfer?",
+    answer: "Nein, als Pflegehelfer benötigen Sie keine formale Ausbildung. Wir arbeiten Sie umfassend ein und begleiten Sie in den ersten Wochen intensiv. Ihre Bereitschaft zu lernen und Ihr Einfühlungsvermögen sind für uns wichtiger als formale Qualifikationen."
+  },
+  {
+    question: "Welche Arbeitszeiten sind möglich?",
+    answer: "Wir bieten flexible Arbeitszeitmodelle an – ob Vollzeit, Teilzeit oder Minijob. Gemeinsam finden wir ein Modell, das zu Ihrer Lebenssituation passt."
+  },
+  {
+    question: "Wie sieht die Einarbeitung aus?",
+    answer: "Sie werden von erfahrenen Kolleginnen und Kollegen begleitet und lernen alle Aufgaben Schritt für Schritt kennen. Die Einarbeitungszeit richtet sich nach Ihren Vorkenntnissen und Ihrem Lerntempo."
+  },
+];
+
 const Pflegehelfer = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegehelfer/in | Jobs bei AVYTA</title>
-        <meta name="description" content="Werden Sie Pflegehelfer/in bei AVYTA in Frankfurt. Keine Ausbildung erforderlich – wir arbeiten Sie ein. Jetzt bewerben!" />
+        <title>Pflegehelfer/in | Jobs bei AVYTA Frankfurt</title>
+        <meta name="description" content="Werden Sie Pflegehelfer/in bei AVYTA in Frankfurt. Keine Ausbildung erforderlich – wir arbeiten Sie ein. Flexible Arbeitszeiten. Jetzt bewerben!" />
       </Helmet>
 
       <Header />
@@ -60,7 +81,7 @@ const Pflegehelfer = () => {
                   <div className="flex flex-wrap gap-4 text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
-                      Vollzeit / Teilzeit
+                      Vollzeit / Teilzeit / Minijob
                     </span>
                     <span className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" />
@@ -68,7 +89,7 @@ const Pflegehelfer = () => {
                     </span>
                     <span className="flex items-center gap-1">
                       <Euro className="w-4 h-4" />
-                      Nach Vereinbarung
+                      Ab 2.400€ / Monat
                     </span>
                   </div>
                 </div>
@@ -120,6 +141,29 @@ const Pflegehelfer = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+
+                  {/* FAQ Section */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-6">
+                      Häufige Fragen
+                    </h2>
+                    <Accordion type="single" collapsible className="space-y-3">
+                      {faqs.map((faq, index) => (
+                        <AccordionItem 
+                          key={index} 
+                          value={`item-${index}`}
+                          className="bg-muted/30 rounded-xl border border-border/50 px-6"
+                        >
+                          <AccordionTrigger className="text-left font-medium text-foreground hover:text-primary">
+                            {faq.question}
+                          </AccordionTrigger>
+                          <AccordionContent className="text-muted-foreground">
+                            {faq.answer}
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
                   </div>
                 </div>
 

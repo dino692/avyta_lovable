@@ -5,12 +5,18 @@ import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
 import { Home, CheckCircle2, MapPin, Clock, Euro, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const requirements = [
   "Freude am Helfen und Unterstützen älterer Menschen",
   "Zuverlässigkeit und Pünktlichkeit",
   "Selbstständige Arbeitsweise",
-  "Gute Deutschkenntnisse",
+  "Gute Deutschkenntnisse (min. B1)",
   "Erfahrung im Haushalt wünschenswert",
   "Führerschein Klasse B von Vorteil",
 ];
@@ -33,11 +39,26 @@ const benefits = [
   "Kurze Wege – Einsätze in Ihrer Nähe",
 ];
 
+const faqs = [
+  {
+    question: "Brauche ich eine Ausbildung als Haushaltshilfe?",
+    answer: "Nein, für die Tätigkeit als Haushaltshilfe ist keine besondere Ausbildung erforderlich. Wichtig sind Zuverlässigkeit, ein freundlicher Umgang mit Menschen und praktische Erfahrung im Haushalt."
+  },
+  {
+    question: "Welche Arbeitszeiten sind möglich?",
+    answer: "Wir bieten flexible Arbeitszeiten an – ob Teilzeit oder Minijob, wir passen uns Ihren Möglichkeiten an. Die Einsätze finden überwiegend tagsüber statt."
+  },
+  {
+    question: "Wo sind die Einsatzorte?",
+    answer: "Wir planen Ihre Einsätze wohnortnah, um unnötige Fahrwege zu vermeiden. Die meisten Einsätze sind in Frankfurt und Bad Vilbel."
+  },
+];
+
 const HaushaltshilfeJob = () => {
   return (
     <>
       <Helmet>
-        <title>Haushaltshilfe | Jobs bei AVYTA</title>
+        <title>Haushaltshilfe | Jobs bei AVYTA Frankfurt</title>
         <meta name="description" content="Werden Sie Haushaltshilfe bei AVYTA in Frankfurt. Unterstützen Sie ältere Menschen im Alltag. Flexible Arbeitszeiten. Jetzt bewerben!" />
       </Helmet>
 
@@ -70,7 +91,7 @@ const HaushaltshilfeJob = () => {
                     </span>
                     <span className="flex items-center gap-1">
                       <Euro className="w-4 h-4" />
-                      Nach Vereinbarung
+                      Ab 14€ / Stunde
                     </span>
                   </div>
                 </div>
@@ -123,6 +144,29 @@ const HaushaltshilfeJob = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+
+                  {/* FAQ Section */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-6">
+                      Häufige Fragen
+                    </h2>
+                    <Accordion type="single" collapsible className="space-y-3">
+                      {faqs.map((faq, index) => (
+                        <AccordionItem 
+                          key={index} 
+                          value={`item-${index}`}
+                          className="bg-muted/30 rounded-xl border border-border/50 px-6"
+                        >
+                          <AccordionTrigger className="text-left font-medium text-foreground hover:text-primary">
+                            {faq.question}
+                          </AccordionTrigger>
+                          <AccordionContent className="text-muted-foreground">
+                            {faq.answer}
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
                   </div>
                 </div>
 

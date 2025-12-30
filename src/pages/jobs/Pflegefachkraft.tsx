@@ -5,6 +5,12 @@ import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
 import { Sparkles, CheckCircle2, MapPin, Clock, Euro, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const requirements = [
   "Abgeschlossene Ausbildung als Gesundheits- und Krankenpfleger/in, Altenpfleger/in oder Pflegefachmann/frau",
@@ -12,7 +18,7 @@ const requirements = [
   "Spezialisierung auf Demenz oder Diabetes wünschenswert",
   "Einfühlungsvermögen und professionelles Auftreten",
   "Führerschein Klasse B",
-  "Gute Deutschkenntnisse",
+  "Gute Deutschkenntnisse (min. B1)",
 ];
 
 const tasks = [
@@ -35,12 +41,27 @@ const benefits = [
   "Wertschätzendes Arbeitsumfeld",
 ];
 
+const faqs = [
+  {
+    question: "Welche Spezialisierungen sind bei AVYTA gefragt?",
+    answer: "Wir sind auf die Pflege von Menschen mit Demenz und Diabetes spezialisiert. Erfahrungen in diesen Bereichen sind von Vorteil, aber keine Voraussetzung. Wir bieten auch interne Fortbildungen an, um Sie in diesen Bereichen weiterzubilden."
+  },
+  {
+    question: "Wie sieht der typische Arbeitsalltag aus?",
+    answer: "Sie betreuen Patienten in deren häuslichem Umfeld, führen Behandlungspflege durch und koordinieren die Arbeit Ihres Teams. Die Touren werden so geplant, dass unnötige Fahrwege vermieden werden."
+  },
+  {
+    question: "Kann ich den Dienstwagen auch privat nutzen?",
+    answer: "Ja, wir stellen Ihnen einen Dienstwagen zur Verfügung, den Sie auch privat nutzen können. Die genauen Konditionen besprechen wir im Vorstellungsgespräch."
+  },
+];
+
 const Pflegefachkraft = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegefachkraft | Jobs bei AVYTA</title>
-        <meta name="description" content="Examinierte Pflegefachkraft bei AVYTA in Frankfurt gesucht. Attraktive Vergütung, Dienstwagen möglich. Jetzt bewerben!" />
+        <title>Pflegefachkraft | Jobs bei AVYTA Frankfurt</title>
+        <meta name="description" content="Examinierte Pflegefachkraft bei AVYTA in Frankfurt gesucht. Attraktive Vergütung, Dienstwagen möglich, 30 Tage Urlaub. Jetzt bewerben!" />
       </Helmet>
 
       <Header />
@@ -77,7 +98,7 @@ const Pflegefachkraft = () => {
                     </span>
                     <span className="flex items-center gap-1">
                       <Euro className="w-4 h-4" />
-                      Nach Tarif + Zulagen
+                      Ab 3.800€ / Monat
                     </span>
                   </div>
                 </div>
@@ -129,6 +150,29 @@ const Pflegefachkraft = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+
+                  {/* FAQ Section */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-6">
+                      Häufige Fragen
+                    </h2>
+                    <Accordion type="single" collapsible className="space-y-3">
+                      {faqs.map((faq, index) => (
+                        <AccordionItem 
+                          key={index} 
+                          value={`item-${index}`}
+                          className="bg-muted/30 rounded-xl border border-border/50 px-6"
+                        >
+                          <AccordionTrigger className="text-left font-medium text-foreground hover:text-primary">
+                            {faq.question}
+                          </AccordionTrigger>
+                          <AccordionContent className="text-muted-foreground">
+                            {faq.answer}
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
                   </div>
                 </div>
 
