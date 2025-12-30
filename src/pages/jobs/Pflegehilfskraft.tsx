@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
-import { Users, CheckCircle2, MapPin, Clock, Euro, ArrowRight } from "lucide-react";
+import { Users, CheckCircle2, MapPin, Clock, Euro, ArrowRight, Heart, Award, Car, Dumbbell, Gift, Home, Shirt, TrendingUp, Calendar, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -12,45 +12,90 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const requirements = [
-  "Abgeschlossene Basisqualifikation (z.B. LG1/LG2 oder Pflegebasiskurs)",
-  "Erste Erfahrung in der Pflege wünschenswert",
-  "Einfühlungsvermögen und Geduld",
-  "Zuverlässigkeit und Teamfähigkeit",
-  "Gute Deutschkenntnisse (min. B1)",
-  "Führerschein Klasse B von Vorteil",
+const aufgaben = [
+  "Hilfe bei der Körperpflege",
+  "Unterstützung bei der Nahrungsaufnahme",
+  "Mobilisation der Patienten",
+  "Hauswirtschaftliche Tätigkeiten wie Reinigen der Wohnräume",
+  "Zubereitung von Mahlzeiten",
+  "Unterstützung der Pflegefachkräfte bei der täglichen Versorgung",
 ];
 
-const tasks = [
-  "Durchführung der Grundpflege",
-  "Unterstützung bei der Behandlungspflege",
-  "Begleitung und Betreuung der Patienten",
-  "Dokumentation der Pflegeleistungen",
-  "Kommunikation mit Angehörigen",
+const anforderungen = [
+  "Berufserfahrung oder abgeschlossene Ausbildung im Pflegebereich",
+  "Einfühlungsvermögen und Geduld",
+  "Verantwortungsbewusstsein",
+  "Körperliche Belastbarkeit",
+  "Freude am Umgang mit Menschen",
+  "Führerschein Klasse B (zwingend)",
+  "Gute Deutschkenntnisse",
 ];
 
 const benefits = [
-  "Übertarifliche Vergütung",
-  "Flexible Arbeitszeitmodelle",
-  "Fort- und Weiterbildungen",
-  "Unbefristeter Arbeitsvertrag",
-  "Betriebliche Altersvorsorge",
-  "Familiäres Arbeitsumfeld",
+  {
+    icon: Euro,
+    title: "Überdurchschnittliches Gehalt",
+    description: "Je nach Qualifikation und Erfahrung"
+  },
+  {
+    icon: Moon,
+    title: "Zuschläge",
+    description: "Für Nacht-, Sonn- und Feiertagsarbeit"
+  },
+  {
+    icon: Calendar,
+    title: "30 Urlaubstage",
+    description: "Jährlich garantiert"
+  },
+  {
+    icon: Car,
+    title: "PKW",
+    description: "Auch zur privaten Nutzung"
+  },
+  {
+    icon: Dumbbell,
+    title: "Firmenfitness",
+    description: "Wellpass-Mitgliedschaft monatlich"
+  },
+  {
+    icon: Gift,
+    title: "Prämien",
+    description: "Urlaubs-, Feiertags- und Leistungsprämien"
+  },
+  {
+    icon: Home,
+    title: "Unterkunft",
+    description: "Bei Bedarf Apartment oder WG"
+  },
+  {
+    icon: Shirt,
+    title: "Berufskleidung",
+    description: "Für alle Wetterbedingungen"
+  },
+];
+
+const sidebarBenefits = [
+  "Überdurchschnittliches Gehalt",
   "30 Tage Urlaub",
+  "PKW zur privaten Nutzung",
+  "Wellpass-Mitgliedschaft",
+  "Weiterbildungsmöglichkeiten",
+  "Zusätzliche Rentenversicherung",
+  "Familiäres Arbeitsumfeld",
 ];
 
 const faqs = [
   {
-    question: "Was ist der Unterschied zwischen Pflegehilfskraft und Pflegehelfer?",
-    answer: "Als Pflegehilfskraft verfügen Sie über eine Basisqualifikation (z.B. LG1/LG2 Kurs), die Sie zu erweiterten Pflegetätigkeiten befähigt. Pflegehelfer können auch ohne formale Qualifikation einsteigen und werden von uns eingearbeitet."
+    question: "Welche Aufgaben übernimmt eine Pflegehilfskraft in Frankfurt?",
+    answer: "Als Pflegehilfskraft in Frankfurt unterstützen Sie Pflegefachkräfte bei der Betreuung und Versorgung von Patienten im häuslichen Umfeld. Ihre Aufgaben umfassen die Hilfe bei der Körperpflege, Unterstützung bei der Nahrungsaufnahme, Mobilisation der Patienten sowie hauswirtschaftliche Tätigkeiten wie das Reinigen der Wohnräume oder das Zubereiten von Mahlzeiten. Durch Ihre Arbeit ermöglichen Sie es den Patienten, so lange wie möglich in ihrer vertrauten Umgebung zu bleiben und tragen somit zur Erhaltung ihrer Lebensqualität bei."
   },
   {
-    question: "Welche Weiterbildungsmöglichkeiten gibt es?",
-    answer: "Wir unterstützen Sie bei Ihrer beruflichen Entwicklung. Sie können weitere Qualifikationen erwerben, an Fortbildungen teilnehmen und sich zur examinierten Pflegefachkraft weiterbilden – wir fördern das aktiv."
+    question: "Wird die Stelle als Pflegehilfskraft in Frankfurt auch als Teilzeitstelle angeboten?",
+    answer: "Ja, wir bieten die Position als Pflegehilfskraft in Frankfurt sowohl in Vollzeit als auch in Teilzeit an. Wir sind flexibel und passen die Arbeitszeiten an Ihre Bedürfnisse an."
   },
   {
-    question: "Wie sind die Arbeitszeiten geregelt?",
-    answer: "Wir bieten verschiedene Arbeitszeitmodelle an und versuchen, Ihre Wünsche bestmöglich zu berücksichtigen. Schichtdienste werden fair im Team verteilt."
+    question: "Welche Vorteile bietet die Position als Pflegehilfskraft in Frankfurt bei Avyta?",
+    answer: "Als Pflegehilfskraft bei Avyta profitieren Sie von überdurchschnittlichem Gehalt, 30 Urlaubstagen, einem Firmenwagen zur privaten Nutzung, Wellpass-Firmenfitness, Prämien sowie Weiterbildungsmöglichkeiten. Zudem bieten wir bei Bedarf eine Unterkunft und legen großen Wert auf ein familiäres Arbeitsumfeld."
   },
 ];
 
@@ -58,8 +103,8 @@ const Pflegehilfskraft = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegehilfskraft | Jobs bei AVYTA Frankfurt</title>
-        <meta name="description" content="Werden Sie Pflegehilfskraft bei AVYTA in Frankfurt. Mit Basisqualifikation ins Team – übertarifliche Vergütung, 30 Tage Urlaub. Jetzt bewerben!" />
+        <title>Pflegehilfskraft in Frankfurt | Jobs bei AVYTA</title>
+        <meta name="description" content="Pflegehilfskraft in Frankfurt gesucht! Überdurchschnittliches Gehalt, 30 Tage Urlaub, Firmenwagen & Wellpass. Jetzt bei AVYTA bewerben!" />
       </Helmet>
 
       <Header />
@@ -78,7 +123,7 @@ const Pflegehilfskraft = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl font-display font-bold text-foreground mb-4">
-                    Pflegehilfskraft (m/w/d)
+                    Pflegehilfskraft in Frankfurt – Ihre Chance in der ambulanten Pflege
                   </h1>
                   <div className="flex flex-wrap gap-4 text-muted-foreground">
                     <span className="flex items-center gap-1">
@@ -91,7 +136,7 @@ const Pflegehilfskraft = () => {
                     </span>
                     <span className="flex items-center gap-1">
                       <Euro className="w-4 h-4" />
-                      Ab 2.800€ / Monat
+                      Übertarifliche Vergütung
                     </span>
                   </div>
                 </div>
@@ -106,43 +151,120 @@ const Pflegehilfskraft = () => {
             <div className="max-w-5xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2 space-y-12">
+                  {/* Intro */}
                   <div>
-                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Über die Stelle
-                    </h2>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Als Pflegehilfskraft mit Basisqualifikation übernehmen Sie wichtige Aufgaben in der 
-                      ambulanten Pflege. Sie arbeiten eng mit unseren examinierten Pflegefachkräften zusammen 
-                      und sorgen für das Wohlbefinden unserer Patienten.
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      Als Pflegehilfskraft in Frankfurt leisten Sie einen wertvollen Beitrag zur Betreuung und Unterstützung pflegebedürftiger Menschen in ihrem häuslichen Umfeld. Ihre Tätigkeit ist essenziell für das Wohlbefinden der Patienten und trägt maßgeblich zur Entlastung des Pflegefachpersonals bei. In einer Stadt wie Frankfurt, die für ihre Vielfalt und Dynamik bekannt ist, bieten sich zahlreiche Möglichkeiten, Ihre Fähigkeiten im Bereich der ambulanten Pflege einzusetzen und weiterzuentwickeln.
                     </p>
                   </div>
 
+                  {/* Aufgaben */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Ihre Aufgaben
+                      Aufgaben einer Pflegehilfskraft in Frankfurt
                     </h2>
+                    <p className="text-muted-foreground mb-6">
+                      Als Pflegehilfskraft in Frankfurt unterstützen Sie Pflegefachkräfte bei der täglichen Versorgung der Patienten. Ihre Aufgaben umfassen die Hilfe bei der Körperpflege, Unterstützung bei der Nahrungsaufnahme und Mobilisation der Patienten. Zudem übernehmen Sie hauswirtschaftliche Tätigkeiten wie das Reinigen der Wohnräume oder das Zubereiten von Mahlzeiten. Durch Ihre Arbeit ermöglichen Sie es den Patienten, so lange wie möglich in ihrer vertrauten Umgebung zu bleiben.
+                    </p>
                     <ul className="space-y-3">
-                      {tasks.map((task, index) => (
+                      {aufgaben.map((aufgabe, index) => (
                         <li key={index} className="flex items-start gap-3">
                           <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">{task}</span>
+                          <span className="text-muted-foreground">{aufgabe}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
+                  {/* Anforderungen */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Was Sie mitbringen
+                      Anforderungen an eine Pflegehilfskraft in Frankfurt
                     </h2>
+                    <p className="text-muted-foreground mb-6">
+                      Berufserfahrung oder eine abgeschlossene Ausbildung im Pflegebereich sind Voraussetzung für die Tätigkeit als Pflegehilfskraft in Frankfurt. Einfühlungsvermögen, Geduld und Verantwortungsbewusstsein sind essenziell, um den Bedürfnissen der Patienten gerecht zu werden. Zudem sollten Sie körperlich belastbar sein und Freude am Umgang mit Menschen haben.
+                    </p>
                     <ul className="space-y-3">
-                      {requirements.map((req, index) => (
+                      {anforderungen.map((req, index) => (
                         <li key={index} className="flex items-start gap-3">
                           <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <span className="text-muted-foreground">{req}</span>
                         </li>
                       ))}
                     </ul>
+                  </div>
+
+                  {/* Vorteile */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Vorteile einer Tätigkeit als Pflegehilfskraft in Frankfurt
+                    </h2>
+                    <p className="text-muted-foreground mb-6">
+                      Eine Tätigkeit als Pflegehilfskraft in Frankfurt bietet nicht nur vielfältige Einsatzmöglichkeiten, sondern ist auch sinnstiftend, da Sie direkt zur Verbesserung der Lebensqualität pflegebedürftiger Menschen beitragen. Sie können in verschiedenen Stadtteilen Frankfurts arbeiten, die ideal zu Ihrem Wohnort passen. Dabei profitieren Sie von flexiblen Arbeitszeiten, die es Ihnen ermöglichen, je nach Bedarf in Teilzeit oder Vollzeit zu arbeiten. Zudem bieten wir Ihnen umfangreiche Weiterbildungsangebote, um Ihre beruflichen Fähigkeiten kontinuierlich zu erweitern.
+                    </p>
+                  </div>
+
+                  {/* Benefits Grid */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-6">
+                      Benefits
+                    </h2>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {benefits.map((benefit, index) => (
+                        <div key={index} className="flex items-start gap-4 p-4 bg-muted/30 rounded-xl">
+                          <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <benefit.icon className="w-6 h-6 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-foreground">{benefit.title}</h4>
+                            <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Karrierechancen */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Karrierechancen für Pflegehilfskräfte bei Avyta in Frankfurt
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Als Pflegehilfskraft in Frankfurt haben Sie die Möglichkeit, sich beruflich weiterzuentwickeln. Durch den Besuch von Fortbildungen können Sie zusätzliche Qualifikationen erwerben und beispielsweise in die Position einer Pflegefachkraft aufsteigen. Wir bieten interne Schulungsprogramme an, die Ihnen den Erwerb von Fachwissen erleichtern. Zudem besteht die Möglichkeit, sich auf bestimmte Fachbereiche wie Demenzbetreuung oder Palliativpflege zu spezialisieren, was Ihre Einsatzmöglichkeiten erweitert.
+                    </p>
+                  </div>
+
+                  {/* Unterstützung */}
+                  <div>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Unterstützung durch Avyta für Pflegehilfskräfte in Frankfurt
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Avyta, als Anbieter für ambulante Pflege in Frankfurt, legt großen Wert auf die Unterstützung und Weiterentwicklung seiner Mitarbeiter. Als Pflegehilfskraft bei Avyta profitieren Sie von einem angenehmen Betriebsklima mit flachen Hierarchien und einem engagierten Team. Zudem bietet Avyta überdurchschnittliche Gehälter und zusätzliche Rentenversicherungen. Durch regelmäßige Schulungen und Fortbildungen werden Sie in Ihrer beruflichen Entwicklung gefördert und erhalten die Möglichkeit, Ihre Fähigkeiten kontinuierlich zu erweitern.
+                    </p>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 text-center">
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      Jetzt als Pflegehilfskraft in Frankfurt bewerben
+                    </h2>
+                    <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                      Ergreifen Sie Ihre Chance und starten Sie Ihre Karriere als Pflegehilfskraft in Frankfurt! Werden Sie Teil von Avyta und profitieren Sie von vielfältigen beruflichen und persönlichen Perspektiven. Arbeiten Sie in einem sympathischen Team, das Ihnen mit Wertschätzung und Anerkennung begegnet. Bewerben Sie sich noch heute und gestalten Sie Ihre Zukunft in der Pflege!
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Button variant="hero" size="lg" asChild>
+                        <a href="mailto:jobs@avyta.de?subject=Bewerbung als Pflegehilfskraft in Frankfurt">
+                          Jetzt bewerben
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </a>
+                      </Button>
+                      <Button variant="outline" size="lg" asChild>
+                        <a href="tel:+496915391405">
+                          Anrufen: 069 153 914 05
+                        </a>
+                      </Button>
+                    </div>
                   </div>
 
                   {/* FAQ Section */}
@@ -169,12 +291,13 @@ const Pflegehilfskraft = () => {
                   </div>
                 </div>
 
+                {/* Sidebar */}
                 <div className="space-y-6">
                   <div className="sticky top-28 space-y-6">
                     <div className="p-6 bg-muted/30 rounded-2xl">
                       <h3 className="font-semibold text-foreground mb-4">Das bieten wir</h3>
                       <ul className="space-y-3">
-                        {benefits.map((benefit, index) => (
+                        {sidebarBenefits.map((benefit, index) => (
                           <li key={index} className="flex items-start gap-2 text-sm">
                             <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                             <span className="text-muted-foreground">{benefit}</span>
@@ -184,7 +307,7 @@ const Pflegehilfskraft = () => {
                     </div>
 
                     <Button variant="hero" size="lg" className="w-full" asChild>
-                      <a href="mailto:jobs@avyta.de?subject=Bewerbung als Pflegehilfskraft">
+                      <a href="mailto:jobs@avyta.de?subject=Bewerbung als Pflegehilfskraft in Frankfurt">
                         Jetzt bewerben
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
