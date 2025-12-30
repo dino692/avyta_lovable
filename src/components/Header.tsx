@@ -15,32 +15,39 @@ const leistungen: { name: string; href: string; description: string; icon: Lucid
   { name: "Alle Leistungen", href: "/leistungen", description: "Übersicht aller Pflegeleistungen", icon: FileText },
   { name: "Behandlungspflege", href: "/leistungen/behandlungspflege", description: "Medizinische Versorgung nach ärztlicher Verordnung", icon: Stethoscope },
   { name: "Grundpflege", href: "/leistungen/grundpflege", description: "Unterstützung bei alltäglichen Verrichtungen", icon: HandHelping },
-  { name: "Intensivpflege", href: "/leistungen/ausserklinische-intensivpflege-frankfurt-am-main", description: "Betreuung für beatmungspflichtige Patienten", icon: HeartPulse },
-  { name: "24-Stunden-Pflege", href: "/leistungen/24-stunden-pflege", description: "Rund-um-die-Uhr Betreuung zu Hause", icon: Clock },
-  { name: "Pflegeberatung", href: "/leistungen/pflegeberatung-frankfurt", description: "Beratung zu Pflegeleistungen und Ansprüchen", icon: MessageCircle },
-  { name: "Verhinderungspflege", href: "/leistungen/verhinderungspflege-frankfurt", description: "Vertretung pflegender Angehöriger", icon: CalendarCheck },
+  { name: "Intensivpflege", href: "/leistungen/intensivpflege", description: "Betreuung für beatmungspflichtige Patienten", icon: HeartPulse },
+  { name: "Haushaltshilfe", href: "/leistungen/haushaltshilfe", description: "Hilfe im Haushalt und Alltag", icon: Home },
+  { name: "24-Stunden-Pflege", href: "/leistungen/24-stunden", description: "Rund-um-die-Uhr Betreuung zu Hause", icon: Clock },
+  { name: "Pflegeberatung", href: "/leistungen/pflegeberatung", description: "Beratung zu Pflegeleistungen und Ansprüchen", icon: MessageCircle },
+  { name: "Verhinderungspflege", href: "/leistungen/verhinderungspflege", description: "Vertretung pflegender Angehöriger", icon: CalendarCheck },
 ];
 
 const standorte = {
   hauptstandorte: [
-    { name: "Bad Vilbel", href: "/pflegedienst-bad-vilbel" },
+    { name: "Frankfurt", href: "/standorte/frankfurt" },
+    { name: "Bad Vilbel", href: "/standorte/bad-vilbel" },
   ],
   frankfurtStadtteile: [
-    { name: "Bornheim", href: "/pflegedienst-bornheim" },
-    { name: "Bockenheim", href: "/pflegedienst-bockenheim" },
-    { name: "Griesheim", href: "/pflegedienst-griesheim" },
-    { name: "Sachsenhausen", href: "/pflegedienst-frankfurt-sachsenhausen" },
-    { name: "Niederrad", href: "/pflegedienst-niederrad" },
-    { name: "Höchst", href: "/pflegedienst-frankfurt-hoechst" },
+    { name: "Bornheim", href: "/standorte/frankfurt/bornheim" },
+    { name: "Bockenheim", href: "/standorte/frankfurt/bockenheim" },
+    { name: "Griesheim", href: "/standorte/frankfurt/griesheim" },
+    { name: "Ginnheim", href: "/standorte/frankfurt/ginnheim" },
+    { name: "Sachsenhausen", href: "/standorte/frankfurt/sachsenhausen" },
+    { name: "Praunheim", href: "/standorte/frankfurt/praunheim" },
+    { name: "Niederrad", href: "/standorte/frankfurt/niederrad" },
+    { name: "Höchst", href: "/standorte/frankfurt/hoechst" },
+    { name: "Rödelheim", href: "/standorte/frankfurt/roedelheim" },
   ],
 };
 
 const jobs = [
-  { name: "Karriere", href: "/karriere", description: "Übersicht aller Stellenangebote", icon: Briefcase },
-  { name: "Pflegefachkraft", href: "/karriere/pflegefachkraft", description: "Examinierte Pflegekräfte (m/w/d)", icon: UserCheck },
-  { name: "Pflegehilfskraft", href: "/karriere/pflegehilfskraft", description: "Mit Qualifikation nach §43b", icon: Users },
-  { name: "Pflegehelfer", href: "/karriere/pflegehelfer", description: "Quereinsteiger willkommen", icon: Heart },
-  { name: "Haushaltshilfe", href: "/karriere/haushaltshilfe", description: "Unterstützung im Alltag", icon: Home },
+  { name: "Alle Jobs", href: "/jobs", description: "Übersicht aller Stellenangebote", icon: Briefcase },
+  { name: "Pflege Jobs", href: "/jobs/pflege-jobs", description: "Alle Pflegestellen im Überblick", icon: Heart },
+  { name: "Stellenangebote", href: "/jobs/stellenangebote", description: "Alle offenen Positionen im Überblick", icon: FileText },
+  { name: "Pflegefachkraft", href: "/jobs/pflegefachkraft", description: "Examinierte Pflegekräfte (m/w/d)", icon: UserCheck },
+  { name: "Pflegehilfskraft", href: "/jobs/pflegehilfskraft", description: "Mit Qualifikation nach §43b", icon: Users },
+  { name: "Pflegehelfer", href: "/jobs/pflegehelfer", description: "Quereinsteiger willkommen", icon: Heart },
+  { name: "Haushaltshilfe", href: "/jobs/haushaltshilfe", description: "Unterstützung im Alltag", icon: Home },
 ];
 
 const blogCategories = [

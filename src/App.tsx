@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import Team from "./pages/Team";
-import UeberUns from "./pages/UeberUns";
 import Leistungen from "./pages/Leistungen";
 import NotFound from "./pages/NotFound";
 import Behandlungspflege from "./pages/leistungen/Behandlungspflege";
@@ -16,6 +15,9 @@ import Haushaltshilfe from "./pages/leistungen/Haushaltshilfe";
 import VierundzwanzigStunden from "./pages/leistungen/VierundzwanzigStunden";
 import Pflegeberatung from "./pages/leistungen/Pflegeberatung";
 import Verhinderungspflege from "./pages/leistungen/Verhinderungspflege";
+import Frankfurt from "./pages/standorte/Frankfurt";
+import BadVilbel from "./pages/standorte/BadVilbel";
+import StadtteilTemplate from "./pages/standorte/StadtteilTemplate";
 import Blog from "./pages/Blog";
 import DemenzPflege from "./pages/blog/DemenzPflege";
 import PflegegradBeantragen from "./pages/blog/PflegegradBeantragen";
@@ -23,7 +25,8 @@ import DiabetesImAlter from "./pages/blog/DiabetesImAlter";
 import VerhinderungspflegeNutzen from "./pages/blog/VerhinderungspflegeNutzen";
 import SturzprophylaxeTipps from "./pages/blog/SturzprophylaxeTipps";
 import AvytaTeamWaechst from "./pages/blog/AvytaTeamWaechst";
-import Karriere from "./pages/Karriere";
+import Jobs from "./pages/Jobs";
+import PflegeJobs from "./pages/jobs/PflegeJobs";
 import Kontakt from "./pages/Kontakt";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
@@ -33,13 +36,6 @@ import Pflegehelfer from "./pages/jobs/Pflegehelfer";
 import Pflegehilfskraft from "./pages/jobs/Pflegehilfskraft";
 import Pflegefachkraft from "./pages/jobs/Pflegefachkraft";
 import HaushaltshilfeJob from "./pages/jobs/Haushaltshilfe";
-import PflegedienstBadVilbel from "./pages/standorte/BadVilbel";
-import PflegedienstBockenheim from "./pages/standorte/Bockenheim";
-import PflegedienstBornheim from "./pages/standorte/Bornheim";
-import PflegedienstGriesheim from "./pages/standorte/Griesheim";
-import PflegedienstSachsenhausen from "./pages/standorte/Sachsenhausen";
-import PflegedienstNiederrad from "./pages/standorte/Niederrad";
-import PflegedienstHoechst from "./pages/standorte/Hoechst";
 
 const queryClient = new QueryClient();
 
@@ -51,56 +47,27 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            {/* Main Pages */}
             <Route path="/" element={<Index />} />
             <Route path="/team" element={<Team />} />
-            <Route path="/ueber-uns" element={<UeberUns />} />
-            <Route path="/kontakt" element={<Kontakt />} />
-            <Route path="/impressum" element={<Impressum />} />
-            <Route path="/datenschutz" element={<Datenschutz />} />
-            <Route path="/datenschutzerklaerung" element={<Datenschutz />} />
-            <Route path="/sitemap" element={<Sitemap />} />
-            
-            {/* Leistungen */}
             <Route path="/leistungen" element={<Leistungen />} />
             <Route path="/leistungen/behandlungspflege" element={<Behandlungspflege />} />
             <Route path="/leistungen/grundpflege" element={<Grundpflege />} />
-            <Route path="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" element={<Intensivpflege />} />
-            <Route path="/leistungen/24-stunden-pflege" element={<VierundzwanzigStunden />} />
-            <Route path="/leistungen/pflegeberatung-frankfurt" element={<Pflegeberatung />} />
-            <Route path="/leistungen/verhinderungspflege-frankfurt" element={<Verhinderungspflege />} />
-            {/* Legacy routes for backwards compatibility */}
             <Route path="/leistungen/intensivpflege" element={<Intensivpflege />} />
             <Route path="/leistungen/haushaltshilfe" element={<Haushaltshilfe />} />
             <Route path="/leistungen/24-stunden" element={<VierundzwanzigStunden />} />
             <Route path="/leistungen/pflegeberatung" element={<Pflegeberatung />} />
             <Route path="/leistungen/verhinderungspflege" element={<Verhinderungspflege />} />
-            
-            {/* Karriere / Jobs */}
-            <Route path="/karriere" element={<Karriere />} />
-            <Route path="/karriere/stellenangebote" element={<Stellenangebote />} />
-            <Route path="/karriere/pflegehelfer" element={<Pflegehelfer />} />
-            <Route path="/karriere/pflegehilfskraft" element={<Pflegehilfskraft />} />
-            <Route path="/karriere/pflegefachkraft" element={<Pflegefachkraft />} />
-            <Route path="/karriere/haushaltshilfe" element={<HaushaltshilfeJob />} />
-            {/* Legacy job routes */}
-            <Route path="/jobs" element={<Karriere />} />
-            <Route path="/jobs/stellenangebote" element={<Stellenangebote />} />
-            <Route path="/jobs/pflegehelfer" element={<Pflegehelfer />} />
-            <Route path="/jobs/pflegehilfskraft" element={<Pflegehilfskraft />} />
-            <Route path="/jobs/pflegefachkraft" element={<Pflegefachkraft />} />
-            <Route path="/jobs/haushaltshilfe" element={<HaushaltshilfeJob />} />
-            
-            {/* Standorte - avyta.de URL structure */}
-            <Route path="/pflegedienst-bad-vilbel" element={<PflegedienstBadVilbel />} />
-            <Route path="/pflegedienst-bockenheim" element={<PflegedienstBockenheim />} />
-            <Route path="/pflegedienst-bornheim" element={<PflegedienstBornheim />} />
-            <Route path="/pflegedienst-griesheim" element={<PflegedienstGriesheim />} />
-            <Route path="/pflegedienst-frankfurt-sachsenhausen" element={<PflegedienstSachsenhausen />} />
-            <Route path="/pflegedienst-niederrad" element={<PflegedienstNiederrad />} />
-            <Route path="/pflegedienst-frankfurt-hoechst" element={<PflegedienstHoechst />} />
-            
-            {/* Blog */}
+            <Route path="/standorte/frankfurt" element={<Frankfurt />} />
+            <Route path="/standorte/bad-vilbel" element={<BadVilbel />} />
+            <Route path="/standorte/frankfurt/bornheim" element={<StadtteilTemplate name="Bornheim" />} />
+            <Route path="/standorte/frankfurt/bockenheim" element={<StadtteilTemplate name="Bockenheim" />} />
+            <Route path="/standorte/frankfurt/griesheim" element={<StadtteilTemplate name="Griesheim" />} />
+            <Route path="/standorte/frankfurt/ginnheim" element={<StadtteilTemplate name="Ginnheim" />} />
+            <Route path="/standorte/frankfurt/sachsenhausen" element={<StadtteilTemplate name="Sachsenhausen" />} />
+            <Route path="/standorte/frankfurt/praunheim" element={<StadtteilTemplate name="Praunheim" />} />
+            <Route path="/standorte/frankfurt/niederrad" element={<StadtteilTemplate name="Niederrad" />} />
+            <Route path="/standorte/frankfurt/hoechst" element={<StadtteilTemplate name="Höchst" />} />
+            <Route path="/standorte/frankfurt/roedelheim" element={<StadtteilTemplate name="Rödelheim" />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/demenz-pflege-tipps" element={<DemenzPflege />} />
             <Route path="/blog/pflegegrad-beantragen" element={<PflegegradBeantragen />} />
@@ -108,8 +75,17 @@ const App = () => (
             <Route path="/blog/verhinderungspflege-nutzen" element={<VerhinderungspflegeNutzen />} />
             <Route path="/blog/sturzprophylaxe-tipps" element={<SturzprophylaxeTipps />} />
             <Route path="/blog/team-waechst" element={<AvytaTeamWaechst />} />
-            
-            {/* 404 */}
+            <Route path="/jobs" element={<Jobs />} />
+            <Route path="/jobs/pflege-jobs" element={<PflegeJobs />} />
+            <Route path="/kontakt" element={<Kontakt />} />
+            <Route path="/impressum" element={<Impressum />} />
+            <Route path="/datenschutz" element={<Datenschutz />} />
+            <Route path="/sitemap" element={<Sitemap />} />
+            <Route path="/jobs/stellenangebote" element={<Stellenangebote />} />
+            <Route path="/jobs/pflegehelfer" element={<Pflegehelfer />} />
+            <Route path="/jobs/pflegehilfskraft" element={<Pflegehilfskraft />} />
+            <Route path="/jobs/pflegefachkraft" element={<Pflegefachkraft />} />
+            <Route path="/jobs/haushaltshilfe" element={<HaushaltshilfeJob />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

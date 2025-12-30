@@ -6,37 +6,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Stethoscope } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTADropdownButton from "@/components/CTADropdownButton";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 const leistungen = [
-  "Medikamentenmanagement: Wir gewährleisten, dass Ihre Angehörigen ihre Medikamente pünktlich und korrekt einnehmen",
-  "Verbandswechsel und Wundversorgung: Unsere qualifizierten Pflegekräfte sorgen für eine fachgerechte Versorgung von Wunden",
-  "Injektionen und Infusionen: Wir führen medizinische Injektionen und Infusionen durch",
-  "Kontrolle von Vitalwerten: Wir überwachen und dokumentieren regelmäßig wichtige Vitalparameter",
-  "Krankenhausnachsorge: Bei Bedarf begleiten wir Ihre Angehörigen bei Arztbesuchen",
+  "Wundversorgung und Verbandswechsel",
+  "Injektionen und Infusionen",
+  "Medikamentengabe",
+  "Blutdruck- und Blutzuckermessung",
   "Stomaversorgung",
   "Katheterversorgung",
   "Portversorgung",
-];
-
-const faqs = [
-  {
-    question: "Wie wird die Behandlungspflege in Frankfurt finanziert?",
-    answer: "Die Leistungen der Behandlungspflege werden in der Regel über die Kranken- oder Pflegekasse abgerechnet. Die finanzielle Unterstützung hängt vom jeweiligen Pflegegrad ab. Wir helfen Ihnen gerne bei der Beantragung und der finanziellen Planung der Behandlungspflege in Frankfurt."
-  },
-  {
-    question: "Wie lange kann ich die Behandlungspflege in Frankfurt in Anspruch nehmen?",
-    answer: "Die Dauer der Behandlungspflege in Frankfurt kann je nach Gesundheitszustand variieren. Wir passen unsere Pflegepläne flexibel an Ihre individuellen Bedürfnisse an und bieten Ihnen die notwendige Unterstützung so lange wie nötig."
-  },
-  {
-    question: "Welche Qualifikationen haben die Pflegekräfte im Bereich der Behandlungspflege?",
-    answer: "Unser Team besteht aus hochqualifizierten Pflegefachkräften mit einer Ausbildung in Gesundheits- und Krankenpflege oder Altenpflege. Sie werden regelmäßig geschult und fortgebildet, um höchste medizinische Qualität und Sicherheit zu gewährleisten."
-  }
+  "Dekubitusprophylaxe",
 ];
 
 const Behandlungspflege = () => {
@@ -44,8 +23,8 @@ const Behandlungspflege = () => {
     <>
       <Helmet>
         <title>Behandlungspflege in Frankfurt am Main | AVYTA Pflegedienst</title>
-        <meta name="description" content="Professionelle Behandlungspflege in Frankfurt am Main. Medikamentenmanagement, Wundversorgung, Injektionen & Infusionen. Erfahrene Pflegefachkräfte. Kostenübernahme durch Krankenkasse!" />
-        <meta name="keywords" content="Behandlungspflege Frankfurt, Medizinische Pflege Frankfurt, Wundversorgung, Injektionen, Medikamentenmanagement" />
+        <meta name="description" content="Professionelle Behandlungspflege in Frankfurt am Main. Wundversorgung, Injektionen, Verbandswechsel, Medikamentengabe. Examinierte Pflegefachkräfte. Kostenübernahme durch Krankenkasse!" />
+        <meta name="keywords" content="Behandlungspflege Frankfurt, Medizinische Pflege Frankfurt, Wundversorgung, Injektionen" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/behandlungspflege" />
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -59,11 +38,11 @@ const Behandlungspflege = () => {
                   <Stethoscope className="w-10 h-10 text-primary" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-                  Behandlungspflege in Frankfurt am Main
+                  Behandlungspflege
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Suchen Sie nach professioneller Behandlungspflege in Frankfurt? Bei Avyta steht Ihre Gesundheit im Mittelpunkt. 
-                  Unsere Pflegefachkräfte und Pflegehelfer übernehmen die Behandlungspflege Ihrer Angehörigen gewissenhaft und mit Herz.
+                  Professionelle medizinische Versorgung nach ärztlicher Verordnung – 
+                  durchgeführt von examinierten Pflegefachkräften.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -78,26 +57,27 @@ const Behandlungspflege = () => {
               <div className="grid lg:grid-cols-2 gap-16">
                 <div>
                   <h2 className="text-3xl font-display font-bold text-foreground mb-6">
-                    Avyta übernimmt Ihre Behandlungspflege in Frankfurt am Main
+                    Was ist Behandlungspflege?
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Unsere Behandlungspflege in Frankfurt bietet Ihnen die Sicherheit, die Sie benötigen, um Ihre 
-                    Gesundheit optimal zu schützen. Unser umfangreiches Angebot umfasst verschiedene Aspekte der 
-                    Behandlungspflege, um Ihnen eine Rundumversorgung zu bieten.
+                    Behandlungspflege umfasst alle medizinischen Maßnahmen, die von einem Arzt 
+                    verordnet und von qualifizierten Pflegefachkräften durchgeführt werden. 
+                    Im Gegensatz zur Grundpflege handelt es sich hierbei um medizinisch 
+                    notwendige Leistungen, die direkt von der Krankenkasse übernommen werden.
                   </p>
                   <p className="text-muted-foreground leading-relaxed mb-8">
-                    Unabhängig vom Pflegegrad Ihrer Angehörigen sind wir in Frankfurt für Sie da und unterstützen 
-                    Sie nicht nur bei der medizinischen Versorgung, sondern sind auch eine verlässliche Stütze im 
-                    Alltag Ihrer Angehörigen.
+                    Unser Team aus examinierten Pflegefachkräften übernimmt die komplette 
+                    medizinische Versorgung in Ihrem Zuhause – professionell, zuverlässig 
+                    und mit viel Einfühlungsvermögen.
                   </p>
 
                   <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                    Unsere Behandlungspflege in Frankfurt umfasst
+                    Unsere Leistungen im Überblick
                   </h3>
-                  <div className="space-y-3">
+                  <div className="grid sm:grid-cols-2 gap-3">
                     {leistungen.map((item) => (
-                      <div key={item} className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div key={item} className="flex items-center gap-2">
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
                         <span className="text-muted-foreground">{item}</span>
                       </div>
                     ))}
@@ -108,12 +88,12 @@ const Behandlungspflege = () => {
                   <Card variant="elevated">
                     <CardContent className="p-6">
                       <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                        Behandlungspflege durch erfahrene Mitarbeiter
+                        Kostenübernahme
                       </h3>
                       <p className="text-muted-foreground">
-                        Vertrauen Sie auf unsere Erfahrung. Wir dokumentieren medizinische Maßnahmen und 
-                        Gesundheitsdaten sorgfältig, um Ihnen volle Transparenz zu bieten. Unsere Behandlungspflege 
-                        in Frankfurt passt sich flexibel Ihren Bedürfnissen an.
+                        Die Kosten für Behandlungspflege werden bei ärztlicher Verordnung 
+                        vollständig von Ihrer Krankenkasse übernommen. Wir kümmern uns um 
+                        alle Formalitäten und rechnen direkt mit Ihrer Kasse ab.
                       </p>
                     </CardContent>
                   </Card>
@@ -121,12 +101,12 @@ const Behandlungspflege = () => {
                   <Card variant="elevated">
                     <CardContent className="p-6">
                       <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                        Individuelle Pflegepläne
+                        Qualifiziertes Personal
                       </h3>
                       <p className="text-muted-foreground">
-                        Wir erstellen individuelle Pflegepläne für kurzfristige oder langfristige Betreuung, 
-                        ganz nach Ihren Anforderungen. In enger Absprache mit Ihnen und Ihren Angehörigen passen 
-                        wir unsere Termine und Leistungen an Ihre aktuelle Situation an.
+                        Alle unsere Behandlungspflegekräfte sind examiniert und werden 
+                        regelmäßig geschult. So gewährleisten wir höchste medizinische 
+                        Qualität und Sicherheit.
                       </p>
                     </CardContent>
                   </Card>
@@ -137,12 +117,12 @@ const Behandlungspflege = () => {
                         Jetzt beraten lassen
                       </h3>
                       <p className="opacity-90 mb-4">
-                        Kontaktieren Sie uns noch heute, um die Behandlungspflege in Frankfurt 
-                        unkompliziert und bedarfsgerecht einzurichten.
+                        Wir beraten Sie kostenlos und unverbindlich zu allen Fragen 
+                        rund um die Behandlungspflege.
                       </p>
                       <Button variant="secondary" asChild>
-                        <a href="tel:+496915391405">
-                          Jetzt anrufen
+                        <a href="/#contact">
+                          Erstberatung anfragen
                           <ArrowRight className="w-4 h-4 ml-2" />
                         </a>
                       </Button>
@@ -153,31 +133,8 @@ const Behandlungspflege = () => {
             </div>
           </section>
 
-          {/* FAQ Section */}
-          <section className="py-24 bg-secondary/30">
-            <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
-                  Häufige Fragen zur Behandlungspflege
-                </h2>
-                <Accordion type="single" collapsible className="w-full">
-                  {faqs.map((faq, index) => (
-                    <AccordionItem key={index} value={`item-${index}`}>
-                      <AccordionTrigger className="text-left">
-                        {faq.question}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        {faq.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
-            </div>
-          </section>
-
           {/* Other Services */}
-          <section className="py-24">
+          <section className="py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
                 Weitere Leistungen
@@ -187,16 +144,19 @@ const Behandlungspflege = () => {
                   <Link to="/leistungen/grundpflege">Grundpflege</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main">Intensivpflege</Link>
+                  <Link to="/leistungen/intensivpflege">Intensivpflege</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/leistungen/24-stunden-pflege">24-Stunden-Pflege</Link>
+                  <Link to="/leistungen/haushaltshilfe">Haushaltshilfe</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/leistungen/pflegeberatung-frankfurt">Pflegeberatung</Link>
+                  <Link to="/leistungen/24-stunden">24-Stunden-Pflege</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/leistungen/verhinderungspflege-frankfurt">Verhinderungspflege</Link>
+                  <Link to="/leistungen/pflegeberatung">Pflegeberatung</Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link to="/leistungen/verhinderungspflege">Verhinderungspflege</Link>
                 </Button>
               </div>
             </div>

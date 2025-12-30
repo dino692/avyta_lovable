@@ -39,13 +39,8 @@ const Pflegefachkraft = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegefachkraft (m/w/d) Frankfurt | Jobs bei AVYTA</title>
+        <title>Pflegefachkraft | Jobs bei AVYTA</title>
         <meta name="description" content="Examinierte Pflegefachkraft bei AVYTA in Frankfurt gesucht. Attraktive Vergütung, Dienstwagen möglich. Jetzt bewerben!" />
-        <meta name="keywords" content="Pflegefachkraft Frankfurt, examinierte Pflegekraft Job, Altenpfleger Stellenangebot, Krankenpfleger Frankfurt" />
-        <meta property="og:title" content="Pflegefachkraft Job Frankfurt | AVYTA" />
-        <meta property="og:description" content="Examinierte Pflegefachkraft bei AVYTA gesucht. Attraktive Vergütung." />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://avyta.de/jobs/pflegefachkraft" />
       </Helmet>
 
       <Header />

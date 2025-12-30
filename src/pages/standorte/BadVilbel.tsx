@@ -4,17 +4,12 @@ import Footer from "@/components/Footer";
 import { MapPin } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 
-const PflegedienstBadVilbel = () => {
+const BadVilbel = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Bad Vilbel | AVYTA Ambulante Pflege</title>
+        <title>Ambulante Pflege Bad Vilbel | AVYTA Pflegedienst</title>
         <meta name="description" content="Ambulante Pflege in Bad Vilbel. Professioneller Pflegedienst für Behandlungspflege, Grundpflege und 24h-Betreuung. Tel: 069 153 914 05" />
-        <meta name="keywords" content="Pflegedienst Bad Vilbel, ambulante Pflege Bad Vilbel, häusliche Pflege, Behandlungspflege" />
-        <meta property="og:title" content="Pflegedienst Bad Vilbel | AVYTA" />
-        <meta property="og:description" content="Professioneller Pflegedienst in Bad Vilbel und Umgebung." />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://avyta.de/pflegedienst-bad-vilbel" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -26,33 +21,14 @@ const PflegedienstBadVilbel = () => {
                   <MapPin className="w-10 h-10 text-primary" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-                  Pflegedienst Bad Vilbel
+                  Ambulante Pflege in Bad Vilbel
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Ihr zuverlässiger ambulanter Pflegedienst in Bad Vilbel und Umgebung.
+                  Ihr zuverlässiger Pflegedienst in Bad Vilbel und Umgebung.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
                 </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="py-24">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto prose prose-lg text-muted-foreground">
-                <p className="mb-6 leading-relaxed">
-                  Als <strong>ambulanter Pflegedienst in Bad Vilbel</strong> bieten wir Ihnen und Ihren 
-                  Angehörigen professionelle Pflege in vertrauter Umgebung. Unser erfahrenes Team 
-                  unterstützt Sie bei der Grundpflege, Behandlungspflege und im Haushalt.
-                </p>
-                <p className="mb-6 leading-relaxed">
-                  Wir sind spezialisiert auf die Betreuung von Menschen mit <strong>Demenz und 
-                  Diabetes</strong> und passen unsere Leistungen individuell an Ihre Bedürfnisse an.
-                </p>
-                <p className="leading-relaxed">
-                  Kontaktieren Sie uns für ein kostenloses Beratungsgespräch – wir sind für Sie da!
-                </p>
               </div>
             </div>
           </section>
@@ -63,4 +39,4 @@ const PflegedienstBadVilbel = () => {
   );
 };
 
-export default PflegedienstBadVilbel;
+export default BadVilbel;

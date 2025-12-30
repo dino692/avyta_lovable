@@ -6,50 +6,24 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTADropdownButton from "@/components/CTADropdownButton";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 const leistungen = [
-  "Koordination von Arztbesuchen und Amtsgängen",
-  "Erstellung individueller Pflegepläne",
-  "Psychosoziale Beratung",
-  "Krisenintervention bei plötzlichem Mehrbedarf",
-  "Beratung zu Pflegeleistungen und Finanzierung",
-  "Hilfe bei der Antragstellung für Pflegegrade",
+  "Ermittlung des Pflegebedarfs",
+  "Beratung zu Pflegeleistungen",
+  "Hilfe bei der Antragstellung",
   "Vorbereitung auf die MDK-Begutachtung",
-  "Anleitung für Angehörige",
-];
-
-const faqs = [
-  {
-    question: "Können Sie auch Angehörige zur Pflege von Intensivpatienten anleiten?",
-    answer: "Ja, unsere erfahrenen Pflegeberater können Angehörige zur Pflege von Intensivpatienten anleiten. Wir zeigen Ihnen, wie Sie bestimmte Pflegemaßnahmen durchführen können und stehen Ihnen mit Rat und Tat zur Seite."
-  },
-  {
-    question: "Unterstützen Sie auch bei vorübergehenden Einschränkungen nach Unfällen?",
-    answer: "Selbstverständlich! Auch wenn Sie nach einem Unfall nur vorübergehend eingeschränkt sind, helfen wir Ihnen bei der Organisation der Pflege, koordinieren Arztbesuche und unterstützen Sie bei allen notwendigen Anträgen."
-  },
-  {
-    question: "Kann ich die Pflegeberatung auch vor Beantragung einer Pflegestufe in Anspruch nehmen?",
-    answer: "Ja, unsere Pflegeberatung steht Ihnen schon vor der Beantragung einer Pflegestufe zur Verfügung. Wir beraten Sie umfassend, welche Leistungen Ihnen zustehen und wie Sie diese am besten beantragen."
-  }
+  "Beratung zu Pflegehilfsmitteln",
+  "Wohnraumanpassung",
+  "Entlastungsangebote für Angehörige",
+  "Finanzierungsberatung",
 ];
 
 const Pflegeberatung = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegeberatung Frankfurt | Individuelle Pflegepläne | AVYTA</title>
-        <meta name="description" content="Professionelle Pflegeberatung in Frankfurt. Individuelle Pflegepläne, Koordination von Arztbesuchen, Hilfe bei Anträgen. Für maximale Selbstbestimmung. Jetzt beraten lassen!" />
-        <meta name="keywords" content="Pflegeberatung Frankfurt, Pflegeplan, MDK Begutachtung, Pflegegrad beantragen, Pflegeorganisation" />
-        <meta property="og:title" content="Pflegeberatung Frankfurt | AVYTA Pflegedienst" />
-        <meta property="og:description" content="Professionelle Pflegeberatung in Frankfurt. Individuelle Pflegepläne für maximale Selbstbestimmung." />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://www.avyta.de/leistungen/pflegeberatung-frankfurt" />
+        <title>Pflegeberatung Frankfurt | Kostenlose Beratung | AVYTA</title>
+        <meta name="description" content="Kostenlose Pflegeberatung in Frankfurt. Beratung zu Pflegeleistungen, Pflegegrad-Antrag und MDK-Begutachtung. Kompetente Hilfe für Pflegebedürftige und Angehörige." />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -62,12 +36,11 @@ const Pflegeberatung = () => {
                   <FileText className="w-10 h-10 text-primary" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-                  Pflegeberatung in Frankfurt
+                  Pflegeberatung
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Wir unterstützen Sie bei der Organisation und Erstellung individueller Pflegepläne 
-                  für maximale Selbstbestimmung. Unsere erfahrenen Berater helfen Ihnen durch den 
-                  Dschungel der Pflegeversicherung.
+                  Kostenlose und unverbindliche Beratung zu allen Fragen rund um 
+                  Pflege, Pflegegrad und Leistungsansprüche.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -82,26 +55,26 @@ const Pflegeberatung = () => {
               <div className="grid lg:grid-cols-2 gap-16">
                 <div>
                   <h2 className="text-3xl font-display font-bold text-foreground mb-6">
-                    Umfassende Pflegeberatung für Sie und Ihre Angehörigen
+                    Was ist Pflegeberatung?
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Wenn ein Angehöriger pflegebedürftig wird, stehen viele Fragen im Raum: Welche 
-                    Leistungen stehen uns zu? Wie beantrage ich einen Pflegegrad? Wie koordiniere ich 
-                    Arztbesuche und Amtsgänge?
+                    Wenn ein Angehöriger pflegebedürftig wird, stehen viele Fragen im Raum: 
+                    Welche Leistungen stehen uns zu? Wie beantrage ich einen Pflegegrad? 
+                    Wie bereite ich mich auf die MDK-Begutachtung vor?
                   </p>
                   <p className="text-muted-foreground leading-relaxed mb-8">
-                    Unsere Pflegeberatung in Frankfurt unterstützt Sie bei der kompletten Organisation – 
-                    von der Erstellung individueller Pflegepläne über psychosoziale Beratung bis hin zur 
-                    Krisenintervention bei plötzlichem Mehrbedarf.
+                    Unsere erfahrenen Pflegeberater helfen Ihnen durch den Dschungel der 
+                    Pflegeversicherung. Wir beraten Sie kostenlos, unabhängig und persönlich 
+                    – bei Ihnen zu Hause oder telefonisch.
                   </p>
 
                   <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                    Unsere Beratungsleistungen
+                    Unsere Beratungsthemen
                   </h3>
-                  <div className="space-y-3">
+                  <div className="grid sm:grid-cols-2 gap-3">
                     {leistungen.map((item) => (
-                      <div key={item} className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div key={item} className="flex items-center gap-2">
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
                         <span className="text-muted-foreground">{item}</span>
                       </div>
                     ))}
@@ -115,9 +88,9 @@ const Pflegeberatung = () => {
                         §37.3 Beratungseinsatz
                       </h3>
                       <p className="text-muted-foreground">
-                        Wenn Sie Pflegegeld beziehen, sind regelmäßige Beratungseinsätze vorgeschrieben. 
-                        Wir führen diese Einsätze durch und beraten Sie dabei umfassend zu allen Fragen 
-                        rund um die Pflege.
+                        Wenn Sie Pflegegeld beziehen, sind regelmäßige Beratungseinsätze 
+                        vorgeschrieben. Wir führen diese Einsätze durch und beraten Sie 
+                        dabei umfassend.
                       </p>
                     </CardContent>
                   </Card>
@@ -125,12 +98,12 @@ const Pflegeberatung = () => {
                   <Card variant="elevated">
                     <CardContent className="p-6">
                       <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                        Krisenintervention
+                        MDK-Vorbereitung
                       </h3>
                       <p className="text-muted-foreground">
-                        Bei plötzlichem Mehrbedarf – etwa nach einem Krankenhausaufenthalt oder einer 
-                        Verschlechterung des Gesundheitszustands – stehen wir Ihnen schnell und unkompliziert 
-                        zur Seite.
+                        Wir bereiten Sie optimal auf die Begutachtung durch den 
+                        Medizinischen Dienst vor. So erreichen Sie den Pflegegrad, 
+                        der Ihnen zusteht.
                       </p>
                     </CardContent>
                   </Card>
@@ -138,15 +111,15 @@ const Pflegeberatung = () => {
                   <Card className="bg-primary text-primary-foreground">
                     <CardContent className="p-6">
                       <h3 className="text-xl font-display font-semibold mb-4">
-                        Kostenlose Erstberatung
+                        Kostenlose Beratung
                       </h3>
                       <p className="opacity-90 mb-4">
-                        Unsere Pflegeberatung ist für Sie kostenlos. Vereinbaren Sie jetzt 
-                        Ihren persönlichen Beratungstermin – bei Ihnen zu Hause oder telefonisch.
+                        Unsere Pflegeberatung ist für Sie komplett kostenlos. 
+                        Vereinbaren Sie jetzt Ihren persönlichen Beratungstermin.
                       </p>
                       <Button variant="secondary" asChild>
-                        <a href="tel:+496915391405">
-                          Jetzt anrufen
+                        <a href="/#contact">
+                          Beratung anfragen
                           <ArrowRight className="w-4 h-4 ml-2" />
                         </a>
                       </Button>
@@ -157,31 +130,8 @@ const Pflegeberatung = () => {
             </div>
           </section>
 
-          {/* FAQ Section */}
-          <section className="py-24 bg-secondary/30">
-            <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
-                  Häufige Fragen zur Pflegeberatung
-                </h2>
-                <Accordion type="single" collapsible className="w-full">
-                  {faqs.map((faq, index) => (
-                    <AccordionItem key={index} value={`item-${index}`}>
-                      <AccordionTrigger className="text-left">
-                        {faq.question}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        {faq.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
-            </div>
-          </section>
-
           {/* Other Services */}
-          <section className="py-24">
+          <section className="py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
                 Weitere Leistungen
@@ -194,13 +144,16 @@ const Pflegeberatung = () => {
                   <Link to="/leistungen/grundpflege">Grundpflege</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main">Intensivpflege</Link>
+                  <Link to="/leistungen/intensivpflege">Intensivpflege</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/leistungen/24-stunden-pflege">24-Stunden-Pflege</Link>
+                  <Link to="/leistungen/haushaltshilfe">Haushaltshilfe</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/leistungen/verhinderungspflege-frankfurt">Verhinderungspflege</Link>
+                  <Link to="/leistungen/24-stunden">24-Stunden-Pflege</Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link to="/leistungen/verhinderungspflege">Verhinderungspflege</Link>
                 </Button>
               </div>
             </div>

@@ -11,11 +11,6 @@ const AvytaTeamWaechst = () => {
       <Helmet>
         <title>Unser Team wächst: Neue Kolleginnen bei AVYTA | AVYTA Blog</title>
         <meta name="description" content="AVYTA Pflegedienst wächst weiter. Wir begrüßen neue Pflegekräfte in unserem Team und erweitern unser Leistungsangebot." />
-        <meta name="keywords" content="AVYTA Team, Pflegekräfte Frankfurt, Pflegedienst wächst, neue Mitarbeiter" />
-        <meta property="og:title" content="Unser Team wächst | AVYTA Blog" />
-        <meta property="og:description" content="Wir begrüßen neue Pflegekräfte in unserem Team." />
-        <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://avyta.de/blog/team-waechst" />
       </Helmet>
 
       <Header />

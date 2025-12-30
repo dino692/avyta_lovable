@@ -37,13 +37,8 @@ const HaushaltshilfeJob = () => {
   return (
     <>
       <Helmet>
-        <title>Haushaltshilfe (m/w/d) Frankfurt | Jobs bei AVYTA</title>
+        <title>Haushaltshilfe | Jobs bei AVYTA</title>
         <meta name="description" content="Werden Sie Haushaltshilfe bei AVYTA in Frankfurt. Unterstützen Sie ältere Menschen im Alltag. Flexible Arbeitszeiten. Jetzt bewerben!" />
-        <meta name="keywords" content="Haushaltshilfe Frankfurt, Haushaltshilfe Job, Alltagsbegleiter Senioren, Hauswirtschaft Job" />
-        <meta property="og:title" content="Haushaltshilfe Job Frankfurt | AVYTA" />
-        <meta property="og:description" content="Haushaltshilfe bei AVYTA gesucht. Flexible Arbeitszeiten." />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://avyta.de/jobs/haushaltshilfe" />
       </Helmet>
 
       <Header />

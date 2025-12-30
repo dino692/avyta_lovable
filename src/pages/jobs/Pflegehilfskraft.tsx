@@ -37,13 +37,8 @@ const Pflegehilfskraft = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegehilfskraft (m/w/d) Frankfurt | Jobs bei AVYTA</title>
+        <title>Pflegehilfskraft | Jobs bei AVYTA</title>
         <meta name="description" content="Werden Sie Pflegehilfskraft bei AVYTA in Frankfurt. Mit Basisqualifikation ins Team – übertarifliche Vergütung. Jetzt bewerben!" />
-        <meta name="keywords" content="Pflegehilfskraft Frankfurt, Pflegehilfskraft Job, LG1 LG2 Pflege, Pflegeassistent Stellenangebot" />
-        <meta property="og:title" content="Pflegehilfskraft Job Frankfurt | AVYTA" />
-        <meta property="og:description" content="Pflegehilfskraft bei AVYTA gesucht. Übertarifliche Vergütung." />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://avyta.de/jobs/pflegehilfskraft" />
       </Helmet>
 
       <Header />

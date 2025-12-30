@@ -35,13 +35,8 @@ const Pflegehelfer = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegehelfer/in (m/w/d) Frankfurt | Jobs bei AVYTA</title>
+        <title>Pflegehelfer/in | Jobs bei AVYTA</title>
         <meta name="description" content="Werden Sie Pflegehelfer/in bei AVYTA in Frankfurt. Keine Ausbildung erforderlich – wir arbeiten Sie ein. Jetzt bewerben!" />
-        <meta name="keywords" content="Pflegehelfer Frankfurt, Pflegehelfer Job ohne Ausbildung, Quereinsteiger Pflege, Pflegeassistent" />
-        <meta property="og:title" content="Pflegehelfer Job Frankfurt | AVYTA" />
-        <meta property="og:description" content="Pflegehelfer bei AVYTA gesucht. Keine Ausbildung erforderlich." />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://avyta.de/jobs/pflegehelfer" />
       </Helmet>
 
       <Header />
