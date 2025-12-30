@@ -86,12 +86,24 @@ const HeroSection = () => {
                   </div>
                 )}
               </div>
+
+              {/* Download Brochure Button */}
+              <Button 
+                variant="outline" 
+                size="lg" 
+                asChild
+              >
+                <a href="https://www.avyta.de/images/avyta_infobroschuere.pdf" target="_blank" rel="noopener noreferrer">
+                  <FileText className="w-5 h-5 mr-2" />
+                  Infobroschüre herunterladen
+                </a>
+              </Button>
             </div>
 
             {/* Trust badges */}
             <div className="flex items-center gap-8 pt-4">
               <div className="text-center">
-                <div className="text-3xl font-display font-bold text-primary">15+</div>
+                <div className="text-3xl font-display font-bold text-primary">12+</div>
                 <div className="text-sm text-muted-foreground">Jahre Erfahrung</div>
               </div>
               <div className="w-px h-12 bg-border" />
