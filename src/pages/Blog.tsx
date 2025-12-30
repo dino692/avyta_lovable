@@ -1,11 +1,19 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { BookOpen, Heart, Stethoscope, Newspaper, Scale, ArrowRight, Calendar, Clock, User } from "lucide-react";
+import { BookOpen, Heart, Stethoscope, Newspaper, Scale, ArrowRight, Calendar, Clock, User, LayoutGrid } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const categories = [
+  {
+    name: "Alle Artikel",
+    slug: "alle",
+    icon: LayoutGrid,
+    description: "Alle Beiträge anzeigen",
+    color: "bg-primary/10 text-primary",
+  },
   {
     name: "Empfehlungen",
     slug: "empfehlungen",
@@ -118,10 +126,21 @@ const blogPosts = [
   },
 ];
 
-const featuredPosts = blogPosts.filter(post => post.featured);
-const recentPosts = blogPosts.filter(post => !post.featured);
+const categoryMap: Record<string, string> = {
+  "Empfehlungen": "empfehlungen",
+  "Pflegetipps": "pflegetipps",
+  "Gesundheit": "gesundheit",
+  "Neuigkeiten": "neuigkeiten",
+  "Recht & Finanzen": "recht-finanzen",
+};
 
 const Blog = () => {
+  const [activeCategory, setActiveCategory] = useState("alle");
+
+  const filteredPosts = activeCategory === "alle" 
+    ? blogPosts 
+    : blogPosts.filter(post => categoryMap[post.category] === activeCategory);
+
   return (
     <>
       <Helmet>
@@ -162,134 +181,107 @@ const Blog = () => {
             <h2 className="text-2xl font-display font-bold text-foreground mb-8 text-center">
               Kategorien
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-4">
               {categories.map((category) => (
-                <div
+                <button
                   key={category.slug}
-                  className="group p-6 bg-background rounded-2xl border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+                  onClick={() => setActiveCategory(category.slug)}
+                  className={`group p-6 bg-background rounded-2xl border transition-all duration-300 text-left ${
+                    activeCategory === category.slug 
+                      ? "border-primary shadow-lg ring-2 ring-primary/20" 
+                      : "border-border/50 hover:border-primary/30 hover:shadow-lg"
+                  }`}
                 >
                   <div className={`w-12 h-12 rounded-xl ${category.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <category.icon className="w-6 h-6" />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <h3 className={`font-semibold mb-2 transition-colors ${
+                    activeCategory === category.slug ? "text-primary" : "text-foreground group-hover:text-primary"
+                  }`}>
                     {category.name}
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     {category.description}
                   </p>
-                </div>
+                </button>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Featured Posts */}
+        {/* All Posts */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between mb-12">
               <h2 className="text-3xl font-display font-bold text-foreground">
-                Aktuelle Artikel
+                {activeCategory === "alle" 
+                  ? "Alle Artikel" 
+                  : categories.find(c => c.slug === activeCategory)?.name}
               </h2>
+              <span className="text-muted-foreground">
+                {filteredPosts.length} {filteredPosts.length === 1 ? "Artikel" : "Artikel"}
+              </span>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredPosts.map((post, index) => (
-                <Link
-                  key={index}
-                  to={`/blog/${post.slug}`}
-                  className="group bg-background rounded-2xl border border-border/50 overflow-hidden hover:shadow-xl transition-all duration-300"
+            {filteredPosts.length > 0 ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredPosts.map((post, index) => (
+                  <Link
+                    key={index}
+                    to={`/blog/${post.slug}`}
+                    className="group bg-background rounded-2xl border border-border/50 overflow-hidden hover:shadow-xl transition-all duration-300"
+                  >
+                    <div className="aspect-video overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                        <span className={`px-3 py-1 rounded-full ${post.categoryColor} text-xs font-medium`}>
+                          {post.category}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-3.5 h-3.5" />
+                          {post.date}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-muted-foreground mb-4 line-clamp-2">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between pt-4 border-t border-border/50">
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <User className="w-4 h-4" />
+                          {post.author}
+                        </div>
+                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                          <Clock className="w-4 h-4" />
+                          {post.readTime}
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16">
+                <p className="text-muted-foreground text-lg">
+                  Keine Artikel in dieser Kategorie gefunden.
+                </p>
+                <Button 
+                  variant="outline" 
+                  className="mt-4"
+                  onClick={() => setActiveCategory("alle")}
                 >
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                      <span className={`px-3 py-1 rounded-full ${post.categoryColor} text-xs font-medium`}>
-                        {post.category}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5" />
-                        {post.date}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
-                      {post.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-4 line-clamp-2">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <User className="w-4 h-4" />
-                        {post.author}
-                      </div>
-                      <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                        <Clock className="w-4 h-4" />
-                        {post.readTime}
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* More Posts */}
-        <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-display font-bold text-foreground mb-12">
-              Weitere Artikel
-            </h2>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {recentPosts.map((post, index) => (
-                <Link
-                  key={index}
-                  to={`/blog/${post.slug}`}
-                  className="group bg-background rounded-2xl border border-border/50 overflow-hidden hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                      <span className={`px-3 py-1 rounded-full ${post.categoryColor} text-xs font-medium`}>
-                        {post.category}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5" />
-                        {post.date}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
-                      {post.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-4 line-clamp-2">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <User className="w-4 h-4" />
-                        {post.author}
-                      </div>
-                      <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                        <Clock className="w-4 h-4" />
-                        {post.readTime}
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
+                  Alle Artikel anzeigen
+                </Button>
+              </div>
+            )}
           </div>
         </section>
 
