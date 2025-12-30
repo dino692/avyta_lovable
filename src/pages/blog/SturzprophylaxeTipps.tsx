@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowLeft, Calendar, Clock, User, BookOpen, CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import CTADropdownButton from "@/components/CTADropdownButton";
 
 const SturzprophylaxeTipps = () => {
   return (
@@ -147,9 +147,7 @@ const SturzprophylaxeTipps = () => {
                 <p className="text-muted-foreground mb-6">
                   Wir analysieren Ihr Zuhause auf Sturzgefahren und geben praktische Tipps für mehr Sicherheit.
                 </p>
-                <Button asChild>
-                  <Link to="/kontakt">Beratung anfragen</Link>
-                </Button>
+                <CTADropdownButton size="default" />
               </div>
             </div>
           </div>

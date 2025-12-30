@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowLeft, Calendar, Clock, User, Heart, Euro } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import CTADropdownButton from "@/components/CTADropdownButton";
 
 const VerhinderungspflegeNutzen = () => {
   return (
@@ -139,9 +139,7 @@ const VerhinderungspflegeNutzen = () => {
                   Nutzen Sie Ihr Budget für Verhinderungspflege. Wir beraten Sie gerne zu den 
                   Möglichkeiten und übernehmen die Pflege.
                 </p>
-                <Button asChild>
-                  <Link to="/kontakt">Jetzt beraten lassen</Link>
-                </Button>
+                <CTADropdownButton size="default" />
               </div>
             </div>
           </div>

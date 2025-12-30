@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Phone, ArrowRight, Activity } from "lucide-react";
 import { Link } from "react-router-dom";
+import CTADropdownButton from "@/components/CTADropdownButton";
 
 const leistungen = [
   "Beatmungspflege (invasiv und non-invasiv)",
@@ -42,9 +43,7 @@ const Intensivpflege = () => {
                   komplexe Pflegesituationen – rund um die Uhr, bei Ihnen zu Hause.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="hero" size="lg" asChild>
-                    <a href="/#contact">Kostenlose Erstberatung</a>
-                  </Button>
+                  <CTADropdownButton />
                   <Button variant="outline" size="lg" asChild>
                     <a href="tel:+496915391405">
                       <Phone className="w-4 h-4 mr-2" />
