@@ -1,4 +1,4 @@
-import { Star, Award, Shield, CheckCircle, TrendingUp, Heart, ThumbsUp } from "lucide-react";
+import { Star, Award, Shield, CheckCircle, TrendingUp } from "lucide-react";
 
 const certifications = [
   {
@@ -24,33 +24,6 @@ const certifications = [
   },
 ];
 
-const reviews = [
-  {
-    platform: "Google",
-    rating: 5.0,
-    count: 328,
-    icon: Star,
-    color: "from-blue-500 to-blue-600",
-    bgColor: "bg-blue-50",
-  },
-  {
-    platform: "Jameda",
-    rating: 4.8,
-    count: 156,
-    icon: Heart,
-    color: "from-green-500 to-emerald-600",
-    bgColor: "bg-green-50",
-  },
-  {
-    platform: "Pflegelotse",
-    rating: 4.9,
-    count: 89,
-    icon: ThumbsUp,
-    color: "from-purple-500 to-violet-600",
-    bgColor: "bg-purple-50",
-  },
-];
-
 const ReviewsSection = () => {
   return (
     <section className="py-28 relative overflow-hidden">
@@ -62,7 +35,7 @@ const ReviewsSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 rounded-full mb-6">
             <TrendingUp className="w-4 h-4 text-primary" />
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">
@@ -78,47 +51,48 @@ const ReviewsSection = () => {
           </p>
         </div>
 
-        {/* Online Reviews */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {reviews.map((review, index) => (
-            <div 
-              key={review.platform} 
-              className="group relative animate-fade-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className={`relative ${review.bgColor} rounded-3xl p-8 border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 overflow-hidden`}>
-                {/* Decorative gradient blob */}
-                <div className={`absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br ${review.color} opacity-10 rounded-full blur-2xl group-hover:opacity-20 transition-opacity`} />
-                
-                {/* Platform icon */}
-                <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${review.color} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <review.icon className="w-8 h-8 text-white" />
-                </div>
-
-                {/* Rating */}
-                <div className="relative">
-                  <div className="font-display font-bold text-5xl text-foreground mb-3">
-                    {review.rating}
+        {/* Google Reviews Widget */}
+        <div className="mb-20">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-card rounded-3xl border border-border shadow-lg overflow-hidden">
+              <div className="p-6 bg-gradient-to-r from-primary/5 to-accent/5 border-b border-border">
+                <div className="flex items-center justify-center gap-3">
+                  <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                    <svg viewBox="0 0 24 24" className="w-6 h-6">
+                      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
                   </div>
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`w-5 h-5 ${
-                          i < Math.floor(review.rating)
-                            ? "fill-amber-400 text-amber-400"
-                            : "text-muted-foreground/30"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  <div className="text-muted-foreground font-medium">
-                    {review.count} Bewertungen auf <span className="text-foreground">{review.platform}</span>
+                  <div>
+                    <h3 className="font-display font-bold text-xl text-foreground">Google Bewertungen</h3>
+                    <p className="text-sm text-muted-foreground">Echte Erfahrungen unserer Kunden</p>
                   </div>
                 </div>
               </div>
+              <div className="p-8">
+                <div className="flex flex-col items-center justify-center text-center">
+                  <div className="flex items-center gap-2 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-8 h-8 fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
+                  <div className="font-display font-bold text-5xl text-foreground mb-2">5.0</div>
+                  <p className="text-muted-foreground mb-6">Basierend auf Google Bewertungen</p>
+                  <a
+                    href="https://share.google/blwWksE64bKMjILdq"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
+                  >
+                    <Star className="w-5 h-5" />
+                    Alle Bewertungen ansehen
+                  </a>
+                </div>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
 
         {/* Certifications */}
