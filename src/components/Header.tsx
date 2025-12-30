@@ -248,9 +248,9 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <a href="/#contact" className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
+                <Link to="/kontakt" className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
                   Kontakt
-                </a>
+                </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -407,13 +407,13 @@ const Header = () => {
                 )}
               </div>
 
-              <a
-                href="/#contact"
+              <Link
+                to="/kontakt"
                 className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Kontakt
-              </a>
+              </Link>
 
               <div className="pt-4 border-t border-border flex flex-col gap-3">
                 <a href="tel:+496915391405" className="flex items-center gap-2 text-primary font-medium">
