@@ -3,8 +3,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Phone, ArrowRight, Utensils } from "lucide-react";
+import { CheckCircle, ArrowRight, Utensils } from "lucide-react";
 import { Link } from "react-router-dom";
+import CTADropdownButton from "@/components/CTADropdownButton";
 
 const leistungen = [
   "Reinigung der Wohnung",
@@ -41,16 +42,8 @@ const Haushaltshilfe = () => {
                   Professionelle Unterstützung im Haushalt – damit Sie sich auf das 
                   Wesentliche konzentrieren können.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="hero" size="lg" asChild>
-                    <a href="/#contact">Kostenlose Erstberatung</a>
-                  </Button>
-                  <Button variant="outline" size="lg" asChild>
-                    <a href="tel:+496915391405">
-                      <Phone className="w-4 h-4 mr-2" />
-                      069 153 914 05
-                    </a>
-                  </Button>
+                <div className="flex justify-center">
+                  <CTADropdownButton />
                 </div>
               </div>
             </div>
