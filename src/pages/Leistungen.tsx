@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight, Stethoscope, Home, Activity, Utensils, Clock, FileText, UserCheck, Check, HeartPulse } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -227,8 +228,8 @@ const Leistungen = () => {
                   {/* CTA */}
                   <div className="flex flex-col sm:flex-row gap-4">
                     <CTADropdownButton />
-                    <Button size="lg" variant="outline">
-                      Mehr erfahren
+                    <Button size="lg" variant="outline" asChild>
+                      <Link to={`/leistungen/${selectedService.id}`}>Mehr erfahren</Link>
                     </Button>
                   </div>
                 </CardContent>
