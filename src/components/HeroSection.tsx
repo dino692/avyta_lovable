@@ -56,7 +56,7 @@ const HeroSection = () => {
 
             <div className="flex flex-wrap gap-4">
               {/* CTA Dropdown Button */}
-              <div className="relative" ref={dropdownRef}>
+              <div className="relative z-50" ref={dropdownRef}>
                 <Button 
                   variant="hero" 
                   size="lg" 
@@ -69,7 +69,7 @@ const HeroSection = () => {
                 
                 {/* Dropdown Menu */}
                 {isDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-card rounded-xl border border-border shadow-xl z-50 overflow-hidden animate-fade-in">
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-card rounded-xl border border-border shadow-2xl z-[100] overflow-hidden animate-fade-in">
                     {ctaOptions.map((option) => (
                       <a
                         key={option.label}

@@ -270,7 +270,7 @@ const Header = () => {
               069 153 914 05
             </a>
             <Button variant="hero" asChild>
-              <a href="/#contact">Kostenlose Erstberatung</a>
+              <a href="/#contact">Kostenloses Erstgespräch</a>
             </Button>
           </div>
 
