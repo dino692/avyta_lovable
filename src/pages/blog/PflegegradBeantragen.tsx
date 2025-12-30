@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowLeft, Calendar, Clock, User, Scale, CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import CTADropdownButton from "@/components/CTADropdownButton";
 
 const PflegegradBeantragen = () => {
   return (
@@ -152,9 +152,7 @@ const PflegegradBeantragen = () => {
                   Wir beraten Sie umfassend zu Pflegegraden und allen Leistungen der Pflegeversicherung. 
                   Vereinbaren Sie jetzt einen Termin.
                 </p>
-                <Button asChild>
-                  <Link to="/kontakt">Beratungstermin vereinbaren</Link>
-                </Button>
+                <CTADropdownButton size="default" />
               </div>
             </div>
           </div>

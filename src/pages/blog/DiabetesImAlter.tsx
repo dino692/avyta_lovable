@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowLeft, Calendar, Clock, User, Stethoscope, AlertTriangle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import CTADropdownButton from "@/components/CTADropdownButton";
 
 const DiabetesImAlter = () => {
   return (
@@ -149,9 +149,7 @@ const DiabetesImAlter = () => {
                   Wir unterstützen Sie bei der täglichen Diabetesversorgung. Vereinbaren Sie ein 
                   kostenloses Beratungsgespräch.
                 </p>
-                <Button asChild>
-                  <Link to="/kontakt">Jetzt Kontakt aufnehmen</Link>
-                </Button>
+                <CTADropdownButton size="default" />
               </div>
             </div>
           </div>

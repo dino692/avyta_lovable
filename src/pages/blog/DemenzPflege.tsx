@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import CTADropdownButton from "@/components/CTADropdownButton";
 
 const DemenzPflege = () => {
   return (
@@ -141,9 +141,7 @@ const DemenzPflege = () => {
                   Unser Team ist speziell für die Betreuung von Demenzpatienten geschult. 
                   Kontaktieren Sie uns für ein kostenloses Beratungsgespräch.
                 </p>
-                <Button asChild>
-                  <Link to="/kontakt">Jetzt Beratung anfragen</Link>
-                </Button>
+                <CTADropdownButton size="default" />
               </div>
             </div>
           </div>

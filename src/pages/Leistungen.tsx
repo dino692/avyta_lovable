@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CTADropdownButton from "@/components/CTADropdownButton";
 
 const services = [
   {
@@ -210,10 +211,7 @@ const Leistungen = () => {
 
                   {/* CTA */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="group">
-                      Jetzt Beratung anfragen
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                    <CTADropdownButton />
                     <Button size="lg" variant="outline">
                       Mehr erfahren
                     </Button>

@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone } from "lucide-react";
+import CTADropdownButton from "@/components/CTADropdownButton";
 
 interface StadtteilTemplateProps {
   name: string;
@@ -31,9 +32,7 @@ const StadtteilTemplate = ({ name }: StadtteilTemplateProps) => {
                   Ihr zuverlässiger Pflegedienst in {name} und Umgebung.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="hero" size="lg" asChild>
-                    <a href="/#contact">Kostenlose Erstberatung</a>
-                  </Button>
+                  <CTADropdownButton />
                   <Button variant="outline" size="lg" asChild>
                     <a href="tel:+496915391405"><Phone className="w-4 h-4 mr-2" />069 153 914 05</a>
                   </Button>
