@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Phone, ArrowRight, Activity } from "lucide-react";
+import { CheckCircle, ArrowRight, Activity } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTADropdownButton from "@/components/CTADropdownButton";
 
@@ -42,14 +42,8 @@ const Intensivpflege = () => {
                   Spezialisierte Betreuung für beatmungspflichtige Patienten und 
                   komplexe Pflegesituationen – rund um die Uhr, bei Ihnen zu Hause.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex justify-center">
                   <CTADropdownButton />
-                  <Button variant="outline" size="lg" asChild>
-                    <a href="tel:+496915391405">
-                      <Phone className="w-4 h-4 mr-2" />
-                      069 153 914 05
-                    </a>
-                  </Button>
                 </div>
               </div>
             </div>
