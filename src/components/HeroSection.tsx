@@ -1,7 +1,28 @@
-import { ArrowRight } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { Phone, Mail, FileText, Calendar, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const ctaOptions = [
+    { label: "Anruf", icon: Phone, href: "tel:+496915391405" },
+    { label: "Email", icon: Mail, href: "mailto:info@avyta.de" },
+    { label: "Kontaktformular", icon: FileText, href: "#contact" },
+    { label: "Termin direkt buchen", icon: Calendar, href: "#contact" },
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background gradient */}
@@ -34,10 +55,37 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="group">
-                Kostenlos beraten lassen
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              {/* CTA Dropdown Button */}
+              <div className="relative" ref={dropdownRef}>
+                <Button 
+                  variant="hero" 
+                  size="lg" 
+                  className="group"
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                >
+                  Kostenloses Erstgespräch
+                  <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                </Button>
+                
+                {/* Dropdown Menu */}
+                {isDropdownOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-card rounded-xl border border-border shadow-xl z-50 overflow-hidden animate-fade-in">
+                    {ctaOptions.map((option) => (
+                      <a
+                        key={option.label}
+                        href={option.href}
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 transition-colors group/item"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover/item:bg-primary group-hover/item:text-primary-foreground transition-colors">
+                          <option.icon className="w-5 h-5 text-primary group-hover/item:text-primary-foreground" />
+                        </div>
+                        <span className="font-medium text-foreground">{option.label}</span>
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Trust badges */}
