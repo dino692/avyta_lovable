@@ -26,8 +26,8 @@ const Impressum = () => {
                   <p className="font-semibold text-foreground">Avyta Pflegegesellschaft mbH</p>
                   <p>Allerheiligentor 2-4</p>
                   <p>60311 Frankfurt am Main</p>
-                  <p className="mt-3">Tel. 069 / 153 914 – 05</p>
-                  <p>Fax 069 / 153 914 – 06</p>
+                  <p className="mt-3">Tel. 069 / 153 014 – 05</p>
+                  <p>Fax 069 / 153 014 – 06</p>
                   <p>Email: info(at)avyta.de</p>
                 </div>
               </section>

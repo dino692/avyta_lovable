@@ -34,8 +34,8 @@ const JobCTADropdownButton = ({
 
   const ctaOptions = [
     { label: "Per E-Mail bewerben", icon: Mail, href: `mailto:info@avyta.de?subject=${encodeURIComponent(emailSubject)}` },
-    { label: "Anrufen", icon: Phone, href: "tel:+496915391405" },
-    { label: "Kontaktformular", icon: FileText, href: "/#contact" },
+    { label: "Anrufen", icon: Phone, href: "tel:+496915301405" },
+    { label: "Kontaktformular", icon: FileText, href: "/kontakt" },
   ];
 
   return (
