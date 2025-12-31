@@ -34,14 +34,15 @@ const HeroSection = () => {
               selbstbestimmtes Leben in vertrauter Umgebung.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               {/* CTA Dropdown Button */}
-              <CTADropdownButton />
+              <CTADropdownButton className="w-full sm:w-auto" />
 
               {/* Download Brochure Button */}
               <Button 
                 variant="outline" 
                 size="lg" 
+                className="w-full sm:w-auto justify-center"
                 asChild
               >
                 <a href="https://www.avyta.de/images/avyta_infobroschuere.pdf" target="_blank" rel="noopener noreferrer">
@@ -52,20 +53,20 @@ const HeroSection = () => {
             </div>
 
             {/* Trust badges */}
-            <div className="flex items-center gap-8 pt-4">
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-8 pt-4">
               <div className="text-center">
-                <div className="text-3xl font-display font-bold text-primary">12+</div>
-                <div className="text-sm text-muted-foreground">Jahre Erfahrung</div>
+                <div className="text-2xl sm:text-3xl font-display font-bold text-primary">12+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Jahre Erfahrung</div>
               </div>
-              <div className="w-px h-12 bg-border" />
+              <div className="w-px h-10 sm:h-12 bg-border" />
               <div className="text-center">
-                <div className="text-3xl font-display font-bold text-primary">2.500+</div>
-                <div className="text-sm text-muted-foreground">Betreute Patienten</div>
+                <div className="text-2xl sm:text-3xl font-display font-bold text-primary">2.500+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Betreute Patienten</div>
               </div>
-              <div className="w-px h-12 bg-border" />
+              <div className="w-px h-10 sm:h-12 bg-border" />
               <div className="text-center">
-                <div className="text-3xl font-display font-bold text-primary">98%</div>
-                <div className="text-sm text-muted-foreground">Zufriedenheit</div>
+                <div className="text-2xl sm:text-3xl font-display font-bold text-primary">98%</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Zufriedenheit</div>
               </div>
             </div>
           </div>

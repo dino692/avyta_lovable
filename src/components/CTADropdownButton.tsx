@@ -33,11 +33,11 @@ const CTADropdownButton = ({ size = "lg", variant = "hero", className = "" }: CT
       <Button 
         variant={variant} 
         size={size} 
-        className="group"
+        className="group w-full justify-center"
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
       >
         Kostenlose Erstberatung
-        <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`w-5 h-5 ml-2 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
       </Button>
       
       {/* Dropdown Menu */}
