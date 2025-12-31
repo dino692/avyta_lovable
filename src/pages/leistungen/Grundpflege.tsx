@@ -64,16 +64,16 @@ const Grundpflege = () => {
         <Header />
         <main className="pt-20">
           {/* Hero */}
-          <section className="py-24 bg-gradient-hero">
+          <section className="py-12 md:py-24 bg-gradient-hero">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <Home className="w-10 h-10 text-primary" />
+                <div className="w-14 h-14 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Home className="w-7 h-7 md:w-10 md:h-10 text-primary" />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+                <h1 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Grundpflege in Frankfurt am Main
                 </h1>
-                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                   Suchen Sie nach professioneller Grundpflege in Frankfurt? Avyta versteht die Bedeutung Ihrer Zeit und Ihres Wohlbefindens.
                 </p>
                 <div className="flex justify-center">
@@ -84,10 +84,10 @@ const Grundpflege = () => {
           </section>
 
           {/* Intro Content */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
                   Als pflegender Angehöriger geben Sie täglich Ihr Bestes, um Ihre Lieben zu versorgen. Diese Fürsorge 
                   erfordert Zeit, körperlichen Einsatz und viel Herz. Dennoch sollten Sie nicht Ihre eigenen Bedürfnisse 
                   vernachlässigen müssen, wenn Sie aufgrund von Krankheit, Terminen oder anderen Verpflichtungen einmal 
@@ -101,13 +101,13 @@ const Grundpflege = () => {
           </section>
 
           {/* Avyta übernimmt */}
-          <section className="py-24 bg-secondary/30">
+          <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Avyta übernimmt Ihre Grundpflege in Frankfurt am Main
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
                   Unsere Grundpflege in Frankfurt bietet Ihnen die Sicherheit, die Sie benötigen, um Ihr Leben sorgenfrei 
                   zu gestalten. Unser Leistungsspektrum umfasst die Grundpflege für Menschen mit verschiedenen Pflegegraden. 
                   Wir sind da, um Ihre Angehörigen im Haushalt zu unterstützen und ein offenes Ohr für sie zu haben. 
@@ -117,16 +117,16 @@ const Grundpflege = () => {
                   Umgebung zu versorgen.
                 </p>
 
-                <h3 className="text-xl font-display font-semibold text-foreground mb-6">
+                <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-4 md:mb-6">
                   Unsere Aufgaben in der Grundpflege in Frankfurt umfassen:
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-3 md:space-y-4">
                   {leistungen.map((item, index) => (
-                    <div key={index} className="flex items-start gap-4 p-4 bg-background rounded-xl border border-border/50">
-                      <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div key={index} className="flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-background rounded-xl border border-border/50">
+                      <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
-                        <p className="text-muted-foreground">{item.description}</p>
+                        <h4 className="font-semibold text-sm md:text-base text-foreground mb-1">{item.title}</h4>
+                        <p className="text-sm md:text-base text-muted-foreground">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -136,44 +136,44 @@ const Grundpflege = () => {
           </section>
 
           {/* Erfahrene Mitarbeiter */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div>
-                  <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                  <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                     Grundpflege in Frankfurt am Main durch erfahrene Mitarbeiter
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                     Die Grundpflege in Frankfurt – zuverlässig, ob kurz oder lang. Als Ihr vertrauensvoller 
                     Ansprechpartner in allen Fragen der häuslichen Pflege ermöglichen wir Pflegebedürftigen, 
                     auch in Ihrer Abwesenheit einen normalen Alltag fortzuführen. Während Ihrer Abwesenheit 
                     dokumentieren wir Pflegemaßnahmen und Gesundheitsdaten genau, um Ihnen volle Transparenz zu bieten.
                   </p>
-                  <p className="text-muted-foreground leading-relaxed mb-8">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
                     Die Dauer unserer Grundpflege in Frankfurt richtet sich nach Ihrem Bedarf. Wir erstellen 
                     individuelle Pflegepläne für wenige Stunden, mehrere Tage oder sogar Wochen. In enger 
                     Absprache mit Ihnen und Ihren Angehörigen passen wir unsere Termine und Leistungen an 
                     Ihre aktuelle Situation an.
                   </p>
-                  <p className="text-foreground font-medium mb-6">
+                  <p className="text-sm md:text-base text-foreground font-medium mb-4 md:mb-6">
                     Kontaktieren Sie uns noch heute, um die Grundpflege in Frankfurt flexibel und 
                     bedarfsgerecht einzurichten.
                   </p>
                   <CTADropdownButton />
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6 mt-6 lg:mt-0">
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Users className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Users className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Qualifiziertes Personal
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Alle unsere Pflegekräfte sind qualifiziert und werden 
                         regelmäßig geschult. So gewährleisten wir höchste 
                         Qualität und Sicherheit in der Grundpflege.
@@ -182,16 +182,16 @@ const Grundpflege = () => {
                   </Card>
 
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <FileCheck className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <FileCheck className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Finanzierung über Pflegekasse
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Bei anerkanntem Pflegegrad werden die Kosten für Grundpflege von 
                         der Pflegekasse übernommen. Wir beraten Sie zu Ihren Ansprüchen 
                         und helfen bei der Antragstellung.
@@ -200,16 +200,16 @@ const Grundpflege = () => {
                   </Card>
 
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Clock className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Clock className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Flexible Zeiten
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Wir passen unsere Termine flexibel an Ihre Bedürfnisse an – 
                         für kurzfristige oder langfristige Betreuung, ganz nach Ihren 
                         Anforderungen.
@@ -222,23 +222,23 @@ const Grundpflege = () => {
           </section>
 
           {/* FAQ */}
-          <section className="py-24 bg-secondary/30">
+          <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                   Häufige Fragen
                 </h2>
-                <Accordion type="single" collapsible className="space-y-3">
+                <Accordion type="single" collapsible className="space-y-2 md:space-y-3">
                   {faqs.map((faq, index) => (
                     <AccordionItem 
                       key={index} 
                       value={`item-${index}`}
-                      className="bg-background rounded-xl border border-border/50 px-6"
+                      className="bg-background rounded-xl border border-border/50 px-4 md:px-6"
                     >
-                      <AccordionTrigger className="text-left font-medium text-foreground hover:text-primary">
+                      <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
+                      <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -249,28 +249,28 @@ const Grundpflege = () => {
           </section>
 
           {/* Other Services */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
-              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                 Weitere Leistungen
               </h2>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button variant="outline" asChild>
+              <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/behandlungspflege">Behandlungspflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/intensivpflege">Intensivpflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/haushaltshilfe">Haushaltshilfe</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/24-stunden">24-Stunden-Pflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/pflegeberatung">Pflegeberatung</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/verhinderungspflege">Verhinderungspflege</Link>
                 </Button>
               </div>

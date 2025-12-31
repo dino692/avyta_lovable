@@ -64,16 +64,16 @@ const Verhinderungspflege = () => {
         <Header />
         <main className="pt-20">
           {/* Hero */}
-          <section className="py-24 bg-gradient-hero">
+          <section className="py-12 md:py-24 bg-gradient-hero">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <UserCheck className="w-10 h-10 text-primary" />
+                <div className="w-14 h-14 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <UserCheck className="w-7 h-7 md:w-10 md:h-10 text-primary" />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+                <h1 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Avyta Verhinderungspflege in Frankfurt – Ihre Zeit liegt uns am Herzen
                 </h1>
-                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                   Unsere Pflegefachkräfte und Pflegehelfer springen gern als Stellvertreter für Sie ein und übernehmen die Pflege Ihrer Angehörigen gewissenhaft und mit Herz.
                 </p>
                 <div className="flex justify-center">
