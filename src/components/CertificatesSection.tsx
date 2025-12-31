@@ -1,79 +1,155 @@
-import { Award, Shield } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Award, Shield, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 // Import partner logos
+import bkkLogo from "@/assets/partners/bkk-logo.png";
+import dakLogo from "@/assets/partners/dak-logo.jpg";
 import frankfurtLogo from "@/assets/partners/frankfurt-logo.png";
-import dealsoftLogo from "@/assets/partners/dealsoft-logo.png";
-import apothekeLogo from "@/assets/partners/apotheke-logo.webp";
-import optadataLogo from "@/assets/partners/optadata-logo.png";
-import mdkLogo from "@/assets/partners/mdk-logo.png";
+import gkvLogo from "@/assets/partners/gkv-logo.svg";
+import barmerLogo from "@/assets/partners/barmer-logo.png";
+import mdkLogo from "@/assets/partners/mdk-logo.webp";
+import aokLogo from "@/assets/partners/aok-logo.jpg";
+import vdekLogo from "@/assets/partners/vdek-logo.jpg";
+import pkvLogo from "@/assets/partners/pkv-logo.png";
 
 const partners = [
+  { name: "AOK", logo: aokLogo },
+  { name: "BARMER", logo: barmerLogo },
+  { name: "DAK Gesundheit", logo: dakLogo },
+  { name: "BKK", logo: bkkLogo },
+  { name: "GKV Spitzenverband", logo: gkvLogo },
+  { name: "MDK", logo: mdkLogo },
   { name: "Stadt Frankfurt am Main", logo: frankfurtLogo },
-  { name: "dealSoft GmbH", logo: dealsoftLogo },
-  { name: "Sandweg Apotheke", logo: apothekeLogo },
-  { name: "opta data", logo: optadataLogo },
-  { name: "MDK Note 1,6", logo: mdkLogo },
+  { name: "vdek - Die Ersatzkassen", logo: vdekLogo },
+  { name: "PKV - Verband der Privaten Krankenversicherung", logo: pkvLogo },
 ];
 
 const CertificatesSection = () => {
+  const [api, setApi] = useState<any>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const onSelect = () => {
+      setCurrent(api.selectedScrollSnap());
+    };
+
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
+
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Decorative background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/3 to-background" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-background via-primary/5 to-background">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[80px] animate-pulse" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-primary/10 rounded-full mb-6">
+          <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-primary/10 backdrop-blur-sm rounded-full mb-6 border border-primary/20">
             <Award className="w-5 h-5 text-primary" />
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">
               Zertifikate & Partner
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Vertrauen durch <span className="text-primary">Qualität</span>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+            Vertrauen durch{" "}
+            <span className="relative">
+              <span className="text-primary">Qualität</span>
+              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
+                <path d="M2 10C50 4 150 4 198 10" stroke="hsl(var(--primary))" strokeWidth="3" strokeLinecap="round" className="animate-pulse" />
+              </svg>
+            </span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Unsere Arbeit wird regelmäßig von unabhängigen Institutionen geprüft. 
-            Wir sind stolzer Partner führender Unternehmen und Institutionen.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Wir arbeiten mit allen gesetzlichen und privaten Krankenkassen zusammen. 
+            Unsere Qualität wird regelmäßig geprüft und zertifiziert.
           </p>
         </div>
 
-        {/* Partner Logos */}
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
-            {partners.map((partner, index) => (
-              <div
-                key={partner.name}
-                className="group animate-fade-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="relative bg-card rounded-2xl p-6 border border-border hover:border-primary/40 transition-all duration-500 hover:shadow-lg hover:-translate-y-1 flex items-center justify-center min-w-[160px] min-h-[100px]">
-                  {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-                  
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="relative max-h-16 max-w-[140px] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 dark:brightness-0 dark:invert dark:group-hover:brightness-100 dark:group-hover:invert-0"
-                  />
+        {/* Carousel */}
+        <div className="max-w-6xl mx-auto relative">
+          <Carousel
+            setApi={setApi}
+            opts={{
+              align: "center",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: true,
+              }),
+            ]}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {partners.map((partner, index) => (
+                <CarouselItem key={partner.name} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div
+                    className={`group relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 border transition-all duration-500 h-[160px] flex items-center justify-center ${
+                      current === index 
+                        ? "border-primary/40 shadow-xl shadow-primary/10 scale-105" 
+                        : "border-border hover:border-primary/30 hover:shadow-lg"
+                    }`}
+                  >
+                    {/* Glow effect */}
+                    <div className={`absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${current === index ? "opacity-100" : ""}`} />
+                    
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="relative max-h-20 max-w-[160px] object-contain transition-all duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            
+            {/* Custom navigation */}
+            <CarouselPrevious className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 bg-card/90 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all duration-300 h-12 w-12 shadow-lg" />
+            <CarouselNext className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 bg-card/90 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all duration-300 h-12 w-12 shadow-lg" />
+          </Carousel>
 
-                  {/* Decorative corner */}
-                  <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-500" />
-                </div>
-              </div>
+          {/* Dots indicator */}
+          <div className="flex justify-center gap-2 mt-8">
+            {partners.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  current === index 
+                    ? "w-8 bg-primary" 
+                    : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
             ))}
           </div>
         </div>
 
         {/* Trust message */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-accent/10 rounded-full">
-            <Shield className="w-5 h-5 text-accent" />
-            <span className="text-sm font-medium text-foreground">
-              Geprüfte Qualität • Alle Kassen zugelassen • Regelmäßige Audits
+          <div className="inline-flex items-center gap-3 px-6 py-4 bg-card/80 backdrop-blur-sm rounded-full border border-border shadow-lg">
+            <Shield className="w-6 h-6 text-accent" />
+            <span className="text-sm md:text-base font-medium text-foreground">
+              Geprüfte Qualität • Alle Kassen zugelassen • MDK Note 1,6
             </span>
           </div>
         </div>
