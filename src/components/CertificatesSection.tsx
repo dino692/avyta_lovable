@@ -102,13 +102,7 @@ const CertificatesSection = () => {
             <CarouselContent className="-ml-4">
               {partners.map((partner, index) => (
                 <CarouselItem key={partner.name} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                  <div
-                    className={`group relative bg-white rounded-2xl p-6 border-2 transition-all duration-300 h-[140px] flex items-center justify-center shadow-sm ${
-                      current === index 
-                        ? "border-primary shadow-lg shadow-primary/20 scale-[1.02]" 
-                        : "border-gray-100 hover:border-primary/40 hover:shadow-md"
-                    }`}
-                  >
+                  <div className="group bg-white rounded-2xl p-6 border border-gray-100 transition-all duration-300 h-[140px] flex items-center justify-center shadow-sm hover:shadow-md">
                     <img
                       src={partner.logo}
                       alt={partner.name}
