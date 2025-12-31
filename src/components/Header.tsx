@@ -306,8 +306,8 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border animate-fade-in max-h-[80vh] overflow-y-auto">
-            <nav className="flex flex-col gap-2">
+          <div className="lg:hidden fixed top-20 left-0 right-0 bottom-0 bg-background border-t border-border animate-fade-in overflow-y-auto z-50">
+            <nav className="flex flex-col gap-2 p-4">
               <Link
                 to="/"
                 className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
@@ -443,14 +443,44 @@ const Header = () => {
                 Kontakt
               </Link>
 
-              <div className="pt-4 border-t border-border flex flex-col gap-3">
-                <a href="tel:+496915391405" className="flex items-center gap-2 text-primary font-medium">
+              <div className="pt-4 mt-4 border-t border-border flex flex-col gap-3">
+                <a href="tel:+496915391405" className="flex items-center justify-center gap-2 text-primary font-medium py-3 bg-primary/10 rounded-lg">
                   <Phone className="w-4 h-4" />
                   069 153 914 05
                 </a>
-                <Button variant="hero" className="w-full" asChild>
-                  <a href="/#contact">Kostenlose Erstberatung</a>
-                </Button>
+                
+                {/* Mobile CTA Dropdown */}
+                <div className="relative">
+                  <Button 
+                    variant="hero"
+                    className="w-full justify-center"
+                    onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+                  >
+                    Kostenloses Erstgespräch
+                    <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-200 ${isCtaDropdownOpen ? 'rotate-180' : ''}`} />
+                  </Button>
+                  
+                  {isCtaDropdownOpen && (
+                    <div className="mt-2 w-full bg-card rounded-xl border border-border shadow-lg overflow-hidden">
+                      {ctaOptions.map((option) => (
+                        <a
+                          key={option.label}
+                          href={option.href}
+                          onClick={() => {
+                            setIsCtaDropdownOpen(false);
+                            setIsMenuOpen(false);
+                          }}
+                          className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 transition-colors"
+                        >
+                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                            <option.icon className="w-5 h-5 text-primary" />
+                          </div>
+                          <span className="font-medium text-foreground">{option.label}</span>
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             </nav>
           </div>
