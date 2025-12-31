@@ -37,7 +37,7 @@ const Westend = () => {
     <>
       <Helmet>
         <title>Pflegedienst Frankfurt Westend | AVYTA Ambulante Pflege</title>
-        <meta name="description" content="Pflegedienst Frankfurt Westend - erstklassige ambulante Pflege in gehobener Umgebung. Grundpflege, Behandlungspflege, Intensivpflege. Tel: 069 153 914 05" />
+        <meta name="description" content="Pflegedienst Frankfurt Westend - Ihr ambulanter Pflegedienst im eleganten Frankfurter Westend. Grundpflege, Behandlungspflege, Intensivpflege. Diskret & professionell. Tel: 069 153 914 05" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -53,7 +53,7 @@ const Westend = () => {
                   Pflegedienst Frankfurt Westend – Erstklassige Pflege für Sie
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Im eleganten Frankfurter Westend bieten wir Ihnen einen Pflegeservice auf höchstem Niveau. Diskret, professionell und mit dem Anspruch, Ihre Lebensqualität bestmöglich zu erhalten.
+                  Suchen Sie einen diskreten und professionellen Pflegedienst in Frankfurt Westend? Unser ambulanter Pflegedienst bietet Ihnen erstklassige Betreuung auf höchstem Niveau in der eleganten Umgebung des Frankfurter Westends.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -66,12 +66,15 @@ const Westend = () => {
           <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                  Ihr ambulanter Pflegedienst in Frankfurt Westend
+                </h2>
                 <div className="prose prose-lg max-w-none text-muted-foreground">
                   <p className="mb-6">
-                    Das Westend zählt zu den vornehmsten Wohngegenden Frankfurts. Wir verstehen, dass Sie auch bei Pflegebedürftigkeit Ihren gewohnten Lebensstandard beibehalten möchten. Unser ambulanter Pflegedienst fügt sich diskret in Ihren Alltag ein und bietet Ihnen professionelle Unterstützung auf höchstem Niveau.
+                    Der Pflegedienst Frankfurt Westend von AVYTA versteht, dass Sie auch bei Pflegebedürftigkeit Ihren gewohnten Lebensstandard beibehalten möchten. Das Westend zählt zu den vornehmsten Wohngegenden Frankfurts – und unser Pflegedienst fügt sich diskret in Ihren Alltag ein.
                   </p>
                   <p className="mb-6">
-                    Unsere erfahrenen Pflegekräfte behandeln Sie mit Würde und Respekt. Wir passen unsere Dienstleistungen individuell an Ihre Wünsche an und sorgen dafür, dass Sie sich in Ihrem Zuhause weiterhin rundum wohlfühlen.
+                    Unser Pflegedienst in Frankfurt Westend behandelt Sie mit Würde und Respekt. Die erfahrenen Pflegekräfte unseres Pflegedienstes passen ihre Dienstleistungen individuell an Ihre Wünsche an und sorgen dafür, dass Sie sich in Ihrem Zuhause im Westend weiterhin rundum wohlfühlen.
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center my-8">
                     <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
@@ -92,18 +95,21 @@ const Westend = () => {
           <section className="py-20 bg-card/50">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-display font-bold text-foreground mb-4 text-center">
-                Premium-Pflegeleistungen im Westend
+                Premium-Leistungen unseres Pflegedienstes in Frankfurt Westend
               </h2>
               <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-                Unser umfassendes Leistungsspektrum deckt alle Bereiche der häuslichen Pflege ab.
+                Der Pflegedienst Frankfurt Westend bietet Ihnen ein umfassendes Leistungsspektrum, das alle Bereiche der häuslichen Pflege abdeckt.
               </p>
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <Card variant="elevated">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-display font-semibold text-foreground mb-4 flex items-center gap-2">
                       <Heart className="w-5 h-5 text-primary" />
-                      Grundpflege
+                      Grundpflege im Westend
                     </h3>
+                    <p className="text-muted-foreground mb-4 text-sm">
+                      Unser Pflegedienst unterstützt Sie bei allen Verrichtungen des täglichen Lebens:
+                    </p>
                     <ul className="space-y-2">
                       {grundpflegeLeistungen.map((leistung, index) => (
                         <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -119,8 +125,11 @@ const Westend = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-display font-semibold text-foreground mb-4 flex items-center gap-2">
                       <Shield className="w-5 h-5 text-primary" />
-                      Behandlungspflege
+                      Behandlungspflege im Westend
                     </h3>
+                    <p className="text-muted-foreground mb-4 text-sm">
+                      Medizinische Maßnahmen durch qualifizierte Pflegefachkräfte unseres Pflegedienstes:
+                    </p>
                     <ul className="space-y-2">
                       {behandlungspflegeLeistungen.map((leistung, index) => (
                         <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -132,6 +141,19 @@ const Westend = () => {
                   </CardContent>
                 </Card>
               </div>
+
+              <div className="mt-8 max-w-3xl mx-auto">
+                <Card variant="elevated" className="bg-primary/5 border-primary/20">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-display font-semibold text-foreground mb-3">
+                      Intensivpflege vom Pflegedienst Frankfurt Westend
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      Auch Intensivpflege mit Heimbeatmung bietet unser Pflegedienst in Frankfurt Westend an. Unsere examinierten Pflegefachkräfte übernehmen die Überwachung und Vitalisierung, das Legen von Blasenkathetern, endotracheales Absaugen sowie Lagerungsbehandlungen und Mobilisation.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </section>
 
@@ -140,10 +162,10 @@ const Westend = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-3xl font-display font-bold text-foreground mb-6">
-                  Exzellente Pflege im Westend
+                  AVYTA – Ihr Pflegedienst in Frankfurt Westend
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Erleben Sie Pflegedienstleistungen, die Ihren Ansprüchen gerecht werden. Kontaktieren Sie uns für ein persönliches Beratungsgespräch – selbstverständlich bei Ihnen zu Hause.
+                  Der Pflegedienst Frankfurt Westend von AVYTA bietet Ihnen exzellente Pflegedienstleistungen, die Ihren Ansprüchen gerecht werden. Kontaktieren Sie uns für ein persönliches Beratungsgespräch – selbstverständlich bei Ihnen zu Hause im Westend.
                 </p>
                 <CTADropdownButton />
               </div>
@@ -156,31 +178,31 @@ const Westend = () => {
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center flex items-center justify-center gap-3">
                   <HelpCircle className="w-8 h-8 text-primary" />
-                  Häufige Fragen
+                  Häufige Fragen zum Pflegedienst Westend
                 </h2>
                 <Accordion type="single" collapsible className="space-y-4">
                   <AccordionItem value="item-1" className="bg-card rounded-xl border border-border/50 px-6">
                     <AccordionTrigger className="text-left font-display font-semibold">
-                      Bieten Sie auch Begleitung zu Terminen an?
+                      Bietet der Pflegedienst Frankfurt Westend auch Begleitung zu Terminen an?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Ja, wir begleiten Sie gerne zu Arztterminen, Therapien oder anderen wichtigen Terminen. Sprechen Sie uns einfach an.
+                      Ja, unser Pflegedienst im Westend begleitet Sie gerne zu Arztterminen, Therapien oder anderen wichtigen Terminen. Sprechen Sie uns einfach an.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-2" className="bg-card rounded-xl border border-border/50 px-6">
                     <AccordionTrigger className="text-left font-display font-semibold">
-                      Wie flexibel sind die Pflegezeiten?
+                      Wie flexibel sind die Pflegezeiten des Pflegedienstes Westend?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Wir richten uns nach Ihren Wünschen. Ob früh morgens oder spät abends – wir passen unsere Zeiten an Ihren Tagesablauf an.
+                      Unser Pflegedienst in Frankfurt Westend richtet sich nach Ihren Wünschen. Ob früh morgens oder spät abends – wir passen unsere Zeiten an Ihren Tagesablauf an.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-3" className="bg-card rounded-xl border border-border/50 px-6">
                     <AccordionTrigger className="text-left font-display font-semibold">
-                      Werden auch Privatpatienten betreut?
+                      Werden vom Pflegedienst Westend auch Privatpatienten betreut?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Selbstverständlich betreuen wir sowohl gesetzlich als auch privat versicherte Patienten. Wir beraten Sie gerne zu den Abrechnungsmodalitäten.
+                      Selbstverständlich betreut unser Pflegedienst in Frankfurt Westend sowohl gesetzlich als auch privat versicherte Patienten. Wir beraten Sie gerne zu den Abrechnungsmodalitäten.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
