@@ -86,19 +86,19 @@ const Pflegeberatung = () => {
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Von Fall zu Fall die passende Pflegeberatung in Frankfurt
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                   Ein Unfall, eine Operation, Krankheit, oder das Alter: Manchmal können Menschen ihren Alltag schleichend 
                   oder ganz plötzlich nicht mehr wie gewohnt bewältigen. Für viele Familien kommt die stationäre Unterbringung 
                   von Angehörigen jedoch nicht in Frage. In unserer Pflegeberatung in Frankfurt entwickeln wir individuelle 
                   Pflegepläne, die auf die persönlichen Bedürfnisse und Wünsche von Pflegebedürftigen zugeschnitten sind.
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                   Unsere Berater arbeiten eng mit Familien und Betroffenen zusammen, um sicherzustellen, dass die Pflege im 
                   Einklang mit den individuellen Vorlieben und Gewohnheiten erfolgt. Viele Angehörige möchten so viel wie möglich 
                   selbst für ihre Lieben erledigen. Unsere Pflegeberatung ist darauf ausgerichtet, Menschen mit körperlichen und 
                   geistigen Einschränkungen so viel Selbstbestimmung wie möglich zu lassen.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                   Mit ambulanten Pflegediensten unterstützen wir Sie auch bei der intensivmedizinischen Pflege zu Hause. 
                   Unsere Avyta Pflegeberatung in Frankfurt ermöglicht Pflegebedürftigen auch in schweren Zeiten einen normalen 
                   Alltag zu Hause.
@@ -115,7 +115,7 @@ const Pflegeberatung = () => {
                   <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                     Avyta Pflegeberatung in Frankfurt für volle Lebensqualität
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                     Unsere Pflegeberater verfügen über jahrelange Erfahrung im Bereich der häuslichen Pflege. Wir stehen Ihnen 
                     mit umfassendem Fachwissen und Mitgefühl zur Seite und entwickeln Pflegepläne, die Betroffene und Angehörige 
                     entlasten. Während des gesamten Pflegezeitraums ist unsere Pflegeberatung in Frankfurt Ihr Ansprechpartner 
@@ -123,31 +123,31 @@ const Pflegeberatung = () => {
                     von Menschen in der Heimpflege zu erhalten und zu verbessern.
                   </p>
 
-                  <div className="space-y-4 mb-8">
-                    <div className="flex items-start gap-4 p-4 bg-secondary/30 rounded-xl">
-                      <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                    <div className="flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-secondary/30 rounded-xl">
+                      <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-muted-foreground">
+                        <p className="text-sm md:text-base text-muted-foreground">
                           Wir unterstützen Sie bei allen alltäglichen medizinischen und hygienischen Belangen. Von der Planung 
                           einer unterstützten Morgenroutine über die pünktliche Medikamentenvergabe bis hin zur psychosozialen 
                           Pflegeberatung in Frankfurt.
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-4 p-4 bg-secondary/30 rounded-xl">
-                      <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div className="flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-secondary/30 rounded-xl">
+                      <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-muted-foreground">
+                        <p className="text-sm md:text-base text-muted-foreground">
                           Die Koordination von Arztbesuchen, Amtsgängen und Pflegedienstleistungen ist für viele Betroffene gar 
                           nicht möglich. Unsere Avyta Pflegeberatung in Frankfurt übernimmt organisatorische Aufgaben rund um 
                           die Pflege, damit Sie Ihren Alltag trotz Einschränkungen bewältigen können.
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-4 p-4 bg-secondary/30 rounded-xl">
-                      <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div className="flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-secondary/30 rounded-xl">
+                      <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-muted-foreground">
+                        <p className="text-sm md:text-base text-muted-foreground">
                           In Krisenzeiten sind wir Ihr zuverlässiger Ansprechpartner. Unsere Pflegeberatung in Frankfurt 
                           unterstützt Betroffene und Angehörige bei allen Fragen rund um die Pflege. Verschlechtert sich der 
                           Gesundheitszustand oder steigt der Pflegebedarf plötzlich an, ist unsere Pflegeberatung in Frankfurt 
@@ -158,18 +158,18 @@ const Pflegeberatung = () => {
                   </div>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6 mt-6 lg:mt-0">
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Users className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Users className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Erfahrene Berater
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Unsere Pflegeberater verfügen über jahrelange Erfahrung 
                         im Bereich der häuslichen Pflege und stehen Ihnen mit 
                         umfassendem Fachwissen zur Seite.
@@ -178,16 +178,16 @@ const Pflegeberatung = () => {
                   </Card>
 
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Heart className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Heart className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Individuelle Pflegepläne
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Wir entwickeln Pflegepläne, die auf die persönlichen 
                         Bedürfnisse und Wünsche von Pflegebedürftigen 
                         zugeschnitten sind.
@@ -196,16 +196,16 @@ const Pflegeberatung = () => {
                   </Card>
 
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Phone className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Phone className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Immer erreichbar
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         In Krisenzeiten sind wir Ihr zuverlässiger Ansprechpartner. 
                         Bei plötzlich steigendem Pflegebedarf sind wir für Sie da.
                       </p>
@@ -223,12 +223,12 @@ const Pflegeberatung = () => {
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Pflegeberatung Frankfurt – gemeinsam für mehr Lebensqualität
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                   Wir sind davon überzeugt, dass häusliche Pflege nicht nur eine Pflicht, sondern auch eine wertvolle Gelegenheit 
                   ist, bedürftigen Menschen die Unterstützung zukommen zu lassen, die sie brauchen. In unserer Avyta Pflegeberatung 
                   in Frankfurt begleiten wir pflegebedürftige Menschen und ihre Angehörigen in jeder Phase der häuslichen Pflege.
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
                   Herausforderungen wie die Alltagsgestaltung, Intensivpflege für bettlägerige Menschen oder medizinische 
                   Wundversorgung können Angehörige mit engagierten ambulanten Helfern und einem durchdachten Pflegeplan leichter 
                   bewältigen. Kontaktieren Sie unser freundliches Beratungsteam für alle Fragen rund um die Pflege. Mit individuellen 
@@ -246,17 +246,17 @@ const Pflegeberatung = () => {
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                   Häufige Fragen
                 </h2>
-                <Accordion type="single" collapsible className="space-y-3">
+                <Accordion type="single" collapsible className="space-y-2 md:space-y-3">
                   {faqs.map((faq, index) => (
                     <AccordionItem 
                       key={index} 
                       value={`item-${index}`}
-                      className="bg-secondary/30 rounded-xl border border-border/50 px-6"
+                      className="bg-secondary/30 rounded-xl border border-border/50 px-4 md:px-6"
                     >
-                      <AccordionTrigger className="text-left font-medium text-foreground hover:text-primary">
+                      <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
+                      <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -272,23 +272,23 @@ const Pflegeberatung = () => {
               <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                 Weitere Leistungen
               </h2>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button variant="outline" asChild>
+              <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/behandlungspflege">Behandlungspflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/grundpflege">Grundpflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/intensivpflege">Intensivpflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/haushaltshilfe">Haushaltshilfe</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/24-stunden">24-Stunden-Pflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/verhinderungspflege">Verhinderungspflege</Link>
                 </Button>
               </div>

@@ -125,7 +125,7 @@ const VierundzwanzigStunden = () => {
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Leistungen in der 24 Stunden Pflege in Frankfurt
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
                   Als Anbieter für die 24 Stunden Pflege in Frankfurt ist es uns bei Avyta wichtig, dass wir Ihnen ein individuell 
                   abgestimmtes Leistungspaket bieten, welches sowohl Ihre Bedürfnisse hinsichtlich der Pflege berücksichtigt, als 
                   auch Ihren kulturellen, sozialen und religiösen Hintergrund. Wir setzen ganz auf unser Motto der Pflege „von 
@@ -141,9 +141,9 @@ const VierundzwanzigStunden = () => {
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {alltagshilfe.map((item, index) => (
-                      <div key={index} className="flex items-center gap-2 p-3 bg-background rounded-lg border border-border/50">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                        <span className="text-muted-foreground">{item}</span>
+                      <div key={index} className="flex items-center gap-2 p-2 md:p-3 bg-background rounded-lg border border-border/50">
+                        <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
+                        <span className="text-sm md:text-base text-muted-foreground">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -156,9 +156,9 @@ const VierundzwanzigStunden = () => {
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {grundpflege.map((item, index) => (
-                      <div key={index} className="flex items-center gap-2 p-3 bg-background rounded-lg border border-border/50">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                        <span className="text-muted-foreground">{item}</span>
+                      <div key={index} className="flex items-center gap-2 p-2 md:p-3 bg-background rounded-lg border border-border/50">
+                        <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
+                        <span className="text-sm md:text-base text-muted-foreground">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -171,9 +171,9 @@ const VierundzwanzigStunden = () => {
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {behandlungspflege.map((item, index) => (
-                      <div key={index} className="flex items-center gap-2 p-3 bg-background rounded-lg border border-border/50">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                        <span className="text-muted-foreground">{item}</span>
+                      <div key={index} className="flex items-center gap-2 p-2 md:p-3 bg-background rounded-lg border border-border/50">
+                        <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
+                        <span className="text-sm md:text-base text-muted-foreground">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -186,9 +186,9 @@ const VierundzwanzigStunden = () => {
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {intensivpflege.map((item, index) => (
-                      <div key={index} className="flex items-center gap-2 p-3 bg-background rounded-lg border border-border/50">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                        <span className="text-muted-foreground">{item}</span>
+                      <div key={index} className="flex items-center gap-2 p-2 md:p-3 bg-background rounded-lg border border-border/50">
+                        <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
+                        <span className="text-sm md:text-base text-muted-foreground">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -205,13 +205,13 @@ const VierundzwanzigStunden = () => {
                   <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                     24 Stunden Pflege in Frankfurt: Unsere Mitarbeiter sind für Sie da
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                     Über die Pflege wird gerade in letzter Zeit viel gesprochen – der demografische Wandel sorgt für immer 
                     mehr pflegebedürftige Patienten und immer weniger Arbeitskräfte in dem Bereich. Wir können mit Stolz 
                     sagen, dass wir mit einem starken Team aufgestellt sind, um Ihre 24 Stunden Pflege in Frankfurt ohne 
                     Probleme abdecken zu können.
                   </p>
-                  <p className="text-muted-foreground leading-relaxed mb-8">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
                     Unser Team besteht aus hochmotivierten und einfühlsamen Pflegefachkräften, Pflegehelfern und 
                     Haushaltshilfskräften, die Sie und Ihre Angehörigen unterstützen. Da viele unsere Mitarbeiter 
                     mehrsprachig sind, können wir auch Patienten betreuen, die kein oder nur wenig Deutsch sprechen. 
@@ -221,18 +221,18 @@ const VierundzwanzigStunden = () => {
                   <CTADropdownButton />
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6 mt-6 lg:mt-0">
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Users className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Users className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Starkes Team
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Unser Team besteht aus hochmotivierten und einfühlsamen 
                         Pflegefachkräften, Pflegehelfern und Haushaltshilfskräften.
                       </p>
@@ -240,16 +240,16 @@ const VierundzwanzigStunden = () => {
                   </Card>
 
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <FileCheck className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <FileCheck className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Über 10 Jahre Erfahrung
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Mit mehr als 10 Jahren Erfahrung im Pflegebereich bieten wir 
                         sowohl das fachliche Know-how als auch die Menschlichkeit.
                       </p>
@@ -257,16 +257,16 @@ const VierundzwanzigStunden = () => {
                   </Card>
 
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Heart className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Heart className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Mehrsprachiges Team
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Viele unserer Mitarbeiter sind mehrsprachig und können auch 
                         Patienten betreuen, die kein oder nur wenig Deutsch sprechen.
                       </p>
@@ -284,17 +284,17 @@ const VierundzwanzigStunden = () => {
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                   Häufige Fragen
                 </h2>
-                <Accordion type="single" collapsible className="space-y-3">
+                <Accordion type="single" collapsible className="space-y-2 md:space-y-3">
                   {faqs.map((faq, index) => (
                     <AccordionItem 
                       key={index} 
                       value={`item-${index}`}
-                      className="bg-background rounded-xl border border-border/50 px-6"
+                      className="bg-background rounded-xl border border-border/50 px-4 md:px-6"
                     >
-                      <AccordionTrigger className="text-left font-medium text-foreground hover:text-primary">
+                      <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
+                      <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -310,23 +310,23 @@ const VierundzwanzigStunden = () => {
               <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                 Weitere Leistungen
               </h2>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button variant="outline" asChild>
+              <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/behandlungspflege">Behandlungspflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/grundpflege">Grundpflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/intensivpflege">Intensivpflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/haushaltshilfe">Haushaltshilfe</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/pflegeberatung">Pflegeberatung</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/verhinderungspflege">Verhinderungspflege</Link>
                 </Button>
               </div>
