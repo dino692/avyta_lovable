@@ -52,16 +52,16 @@ const Intensivpflege = () => {
         <Header />
         <main className="pt-20">
           {/* Hero */}
-          <section className="py-24 bg-gradient-hero">
+          <section className="py-12 md:py-24 bg-gradient-hero">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <Activity className="w-10 h-10 text-primary" />
+                <div className="w-14 h-14 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Activity className="w-7 h-7 md:w-10 md:h-10 text-primary" />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+                <h1 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Ausserklinische Intensivpflege in Frankfurt am Main
                 </h1>
-                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                   Mit mehr als 10 Jahren Erfahrung in der Pflege und einem hochmotivierten, verlässlichen und einfühlsamen Team stehen wir Ihnen zur Seite.
                 </p>
                 <div className="flex justify-center">
@@ -72,16 +72,16 @@ const Intensivpflege = () => {
           </section>
 
           {/* Intro Content */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
                   Pflegebedürftig sein ist das eine – aber es gibt Fälle, in denen eine besonders enge medizinische Betreuung 
                   notwendig ist. Dennoch ist es auch für diese Patienten oft wichtig, nicht aus Ihrem gewohnten Umfeld gerissen 
                   zu werden. Hier kommt die ausserklinische Intensivpflege in Frankfurt am Main ins Spiel. Bei Avyta können wir 
                   für Sie oder Ihre Angehörigen das gesamte Spektrum an intensivpflegerischen Leistungen übernehmen.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   Sprechen Sie gerne mit uns dazu, welche Pflegeleistungen in Ihrem individuellen Fall benötigt werden – wir 
                   erstellen gemeinsam mit Ihnen einen Pflegeplan, der genau auf Ihre Situation abgestimmt ist.
                 </p>
@@ -90,13 +90,13 @@ const Intensivpflege = () => {
           </section>
 
           {/* Avyta übernimmt */}
-          <section className="py-24 bg-secondary/30">
+          <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Avyta übernimmt Ihre ausserklinische Intensivpflege in Frankfurt am Main
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                   Dank unserer langjährigen Erfahrung wissen wir bei Avyta, wie wichtig die ausserklinische Intensivpflege 
                   in Frankfurt am Main für die Betroffenen ist. Eigentlich spielen die Gründe für die Pflegebedürftigkeit 
                   nur eine zweitrangige Rolle, in jedem Fall möchten die Pflegebedürftigen es am liebsten vermeiden, im 
@@ -104,26 +104,26 @@ const Intensivpflege = () => {
                   sich um eine altersbedingte Pflege, eine Pflege nach einem schweren Unfall oder wegen allgemein körperlicher 
                   und geistiger Einschränkungen handelt. Das eigene Zuhause kann ein Gefühl der Sicherheit und Beruhigung bieten.
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
                   Diesem wichtigen Faktor geben wir mit unserer ausserklinischen Intensivpflege in Frankfurt am Main den nötigen 
                   Raum. Unsere speziell ausgebildeten Mitarbeiter können Ihnen auch bei komplexen intensivmedizinischen 
                   Pflegeleistungen helfen.
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
                   Darüber hinaus können wir selbstverständlich auch Unterstützung in weiteren Bereichen rund um den Alltag bieten, 
                   so zum Beispiel beim Ausfüllen von Anträgen, dem Besorgen von Medikamenten oder generell Hilfe im Haushalt 
                   leisten. So müssen Sie sich um Ihre Angehörigen nicht sorgen: Wir versorgen Sie mit einem individuell 
                   abgestimmten Leistungspaket rund um die Uhr.
                 </p>
 
-                <h3 className="text-xl font-display font-semibold text-foreground mb-6">
+                <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-4 md:mb-6">
                   Eine kurze Übersicht unserer Leistungen in der ausserklinischen Intensivpflege:
                 </h3>
-                <div className="grid sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3">
                   {leistungen.map((item, index) => (
-                    <div key={index} className="flex items-center gap-2 p-3 bg-background rounded-lg border border-border/50">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span className="text-muted-foreground">{item}</span>
+                    <div key={index} className="flex items-center gap-2 p-2 md:p-3 bg-background rounded-lg border border-border/50">
+                      <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
+                      <span className="text-sm md:text-base text-muted-foreground">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -132,27 +132,27 @@ const Intensivpflege = () => {
           </section>
 
           {/* Erfahrene Mitarbeiter */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div>
-                  <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                  <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                     Ausserklinische Intensivpflege in Frankfurt am Main durch erfahrene Mitarbeiter
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                     In der ausserklinischen Intensivpflege in Frankfurt am Main geht es selbstverständlich nicht nur um die 
                     medizinische Betreuung. Es geht auch darum, den betroffenen Patienten in vertrauter Umgebung die Pflege 
                     so angenehm wie möglich zu gestalten. Dazu gehört eben auch, dass man den Menschen und nicht nur den 
                     Patienten sieht.
                   </p>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                     „Von Menschen, für Menschen" – das ist das Motto bei Avyta und nach diesem Prinzip gehen wir auch die 
                     ausserklinische Intensivpflege in Frankfurt am Main an. Unsere Mitarbeiter sind zum Großteil mehrsprachig 
                     und können sich damit auch mit Angehörigen verständigen, die kein oder nur wenig Deutsch können. Ebenso 
                     ist es uns sehr wichtig, dass wir das kulturelle, religiöse und soziale Umfeld unserer Patienten 
                     berücksichtigen. Wir möchten, dass sich unsere Patienten auch in diesen Aspekten mit Ihrer Pflege wohlfühlen.
                   </p>
-                  <p className="text-foreground font-medium mb-6">
+                  <p className="text-sm md:text-base text-foreground font-medium mb-4 md:mb-6">
                     Sie haben darüber hinaus noch Fragen rund um das Thema ausserklinische Intensivpflege in Frankfurt am Main 
                     mit Avyta? Sprechen Sie uns gerne an! Wir nehmen uns Zeit für Sie und klären mit Ihnen alle offenen Punkte 
                     zu unseren Leistungen.
@@ -160,18 +160,18 @@ const Intensivpflege = () => {
                   <CTADropdownButton />
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6 mt-6 lg:mt-0">
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Users className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Users className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Mehrsprachiges Team
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Unsere Mitarbeiter sind zum Großteil mehrsprachig und können 
                         sich auch mit Angehörigen verständigen, die kein oder nur 
                         wenig Deutsch können.
@@ -180,16 +180,16 @@ const Intensivpflege = () => {
                   </Card>
 
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <FileCheck className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <FileCheck className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Über 10 Jahre Erfahrung
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Mit mehr als 10 Jahren Erfahrung in der Pflege bieten wir 
                         sowohl das fachliche Know-how als auch die Menschlichkeit, 
                         die in einer guten Intensivpflege wichtig sind.
@@ -198,16 +198,16 @@ const Intensivpflege = () => {
                   </Card>
 
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Clock className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Clock className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           24/7 Versorgung
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Wir versorgen Sie mit einem individuell abgestimmten 
                         Leistungspaket rund um die Uhr – immer wenn Sie uns 
                         brauchen.
@@ -220,23 +220,23 @@ const Intensivpflege = () => {
           </section>
 
           {/* FAQ */}
-          <section className="py-24 bg-secondary/30">
+          <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                   Häufige Fragen
                 </h2>
-                <Accordion type="single" collapsible className="space-y-3">
+                <Accordion type="single" collapsible className="space-y-2 md:space-y-3">
                   {faqs.map((faq, index) => (
                     <AccordionItem 
                       key={index} 
                       value={`item-${index}`}
-                      className="bg-background rounded-xl border border-border/50 px-6"
+                      className="bg-background rounded-xl border border-border/50 px-4 md:px-6"
                     >
-                      <AccordionTrigger className="text-left font-medium text-foreground hover:text-primary">
+                      <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
+                      <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -247,28 +247,28 @@ const Intensivpflege = () => {
           </section>
 
           {/* Other Services */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
-              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                 Weitere Leistungen
               </h2>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button variant="outline" asChild>
+              <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/behandlungspflege">Behandlungspflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/grundpflege">Grundpflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/haushaltshilfe">Haushaltshilfe</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/24-stunden">24-Stunden-Pflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/pflegeberatung">Pflegeberatung</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/verhinderungspflege">Verhinderungspflege</Link>
                 </Button>
               </div>
