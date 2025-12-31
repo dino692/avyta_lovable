@@ -100,10 +100,10 @@ const VierundzwanzigStunden = () => {
           </section>
 
           {/* Intro Content */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
                   Eine Pflegebedürftigkeit kann jeden treffen. Fortschreitendes Alter, geistige oder körperliche Einschränkungen 
                   als auch ein schwerer Unfall können dazu führen, dass die pflegerische Betreuung nötig wird. Gerade in schweren 
                   Fällen ist es beruhigend, immer Hilfe an Ihrer Seite zu wissen – die 24 Stunden Pflege in Frankfurt von Avyta 
@@ -119,10 +119,10 @@ const VierundzwanzigStunden = () => {
           </section>
 
           {/* Leistungen */}
-          <section className="py-24 bg-secondary/30">
+          <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Leistungen in der 24 Stunden Pflege in Frankfurt
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
@@ -135,8 +135,8 @@ const VierundzwanzigStunden = () => {
                 </p>
 
                 {/* Alltagshilfe */}
-                <div className="mb-8">
-                  <h3 className="text-xl font-display font-semibold text-foreground mb-4">
+                <div className="mb-6 md:mb-8">
+                  <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-3 md:mb-4">
                     Im Bereich der einfachen Alltagshilfe können wir für Sie die folgenden Leistungen übernehmen:
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-3">
@@ -150,8 +150,8 @@ const VierundzwanzigStunden = () => {
                 </div>
 
                 {/* Grundpflege */}
-                <div className="mb-8">
-                  <h3 className="text-xl font-display font-semibold text-foreground mb-4">
+                <div className="mb-6 md:mb-8">
+                  <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-3 md:mb-4">
                     In der Grundpflege können unsere Leistungen für Sie so aussehen:
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-3">
@@ -165,8 +165,8 @@ const VierundzwanzigStunden = () => {
                 </div>
 
                 {/* Behandlungspflege */}
-                <div className="mb-8">
-                  <h3 className="text-xl font-display font-semibold text-foreground mb-4">
+                <div className="mb-6 md:mb-8">
+                  <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-3 md:mb-4">
                     Diese Aufgaben können in der Behandlungspflege abgedeckt werden:
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-3">
@@ -181,7 +181,7 @@ const VierundzwanzigStunden = () => {
 
                 {/* Intensivpflege */}
                 <div>
-                  <h3 className="text-xl font-display font-semibold text-foreground mb-4">
+                  <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-3 md:mb-4">
                     In der Intensivpflege decken wir unter anderem folgende Bereiche ab:
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-3">
@@ -198,11 +198,11 @@ const VierundzwanzigStunden = () => {
           </section>
 
           {/* Mitarbeiter */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div>
-                  <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                  <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                     24 Stunden Pflege in Frankfurt: Unsere Mitarbeiter sind für Sie da
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
@@ -278,10 +278,10 @@ const VierundzwanzigStunden = () => {
           </section>
 
           {/* FAQ */}
-          <section className="py-24 bg-secondary/30">
+          <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                   Häufige Fragen
                 </h2>
                 <Accordion type="single" collapsible className="space-y-3">
@@ -305,9 +305,9 @@ const VierundzwanzigStunden = () => {
           </section>
 
           {/* Other Services */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
-              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                 Weitere Leistungen
               </h2>
               <div className="flex flex-wrap justify-center gap-4">

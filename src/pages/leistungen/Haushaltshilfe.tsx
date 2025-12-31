@@ -29,16 +29,16 @@ const Haushaltshilfe = () => {
         <Header />
         <main className="pt-20">
           {/* Hero */}
-          <section className="py-24 bg-gradient-hero">
+          <section className="py-12 md:py-24 bg-gradient-hero">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <Utensils className="w-10 h-10 text-primary" />
+                <div className="w-14 h-14 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Utensils className="w-7 h-7 md:w-10 md:h-10 text-primary" />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+                <h1 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Haushaltshilfe
                 </h1>
-                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                   Professionelle Unterstützung im Haushalt – damit Sie sich auf das 
                   Wesentliche konzentrieren können.
                 </p>
@@ -50,11 +50,11 @@ const Haushaltshilfe = () => {
           </section>
 
           {/* Content */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-16">
+              <div className="grid lg:grid-cols-2 gap-8 md:gap-16">
                 <div>
-                  <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                  <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                     Was ist Haushaltshilfe?
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
@@ -68,7 +68,7 @@ const Haushaltshilfe = () => {
                     machen wir das möglich und sorgen gleichzeitig für soziale Kontakte.
                   </p>
 
-                  <h3 className="text-xl font-display font-semibold text-foreground mb-4">
+                  <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-3 md:mb-4">
                     Unsere Leistungen im Überblick
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-3">
@@ -130,9 +130,9 @@ const Haushaltshilfe = () => {
           </section>
 
           {/* Other Services */}
-          <section className="py-24 bg-secondary/30">
+          <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
-              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                 Weitere Leistungen
               </h2>
               <div className="flex flex-wrap justify-center gap-4">
