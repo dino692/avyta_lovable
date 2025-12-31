@@ -1,0 +1,205 @@
+import { Helmet } from "react-helmet-async";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Card, CardContent } from "@/components/ui/card";
+import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle } from "lucide-react";
+import CTADropdownButton from "@/components/CTADropdownButton";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Link } from "react-router-dom";
+
+const grundpflegeLeistungen = [
+  "Hilfe bei der Körperpflege",
+  "Unterstützung beim An- und Auskleiden",
+  "Hilfe beim Essen und Trinken",
+  "Hilfe bei der Ausscheidung",
+  "Maßnahmen zur Mobilität",
+  "Hauswirtschaftliche Hilfe"
+];
+
+const behandlungspflegeLeistungen = [
+  "Herrichten und Verabreichen von Medikamenten",
+  "Kompressionsstrümpfe an- und ausziehen",
+  "Injektionen und Infusionen",
+  "Blutdruck- und Blutzuckerkontrolle",
+  "Wundversorgung",
+  "Tracheostomaversorgung",
+  "Versorgung von Anus Praeter und Urostoma",
+  "Parenterale und enterale Ernährung"
+];
+
+const Preungesheim = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Pflegedienst Frankfurt Preungesheim | AVYTA Ambulante Pflege</title>
+        <meta name="description" content="Pflegedienst Frankfurt Preungesheim - liebevolle Pflege in Ihrem Stadtteil. Grundpflege, Behandlungspflege, Intensivpflege. Qualifiziert und herzlich. Tel: 069 153 914 05" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main className="pt-20">
+          {/* Hero Section */}
+          <section className="py-24 bg-gradient-hero">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto text-center">
+                <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <MapPin className="w-10 h-10 text-primary" />
+                </div>
+                <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+                  Pflegedienst Frankfurt Preungesheim – Liebevolle Pflege für Sie
+                </h1>
+                <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                  In Preungesheim bieten wir Ihnen professionelle ambulante Pflege mit Herz. Unser erfahrenes Team unterstützt Sie dabei, in Ihrer gewohnten Umgebung ein selbstbestimmtes Leben zu führen.
+                </p>
+                <div className="flex justify-center">
+                  <CTADropdownButton />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Intro Section */}
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="prose prose-lg max-w-none text-muted-foreground">
+                  <p className="mb-6">
+                    Preungesheim ist ein Stadtteil mit starkem Zusammenhalt und guter Nachbarschaft. Genau diese Werte leben wir auch in unserer Pflege. Wir verstehen uns als Teil Ihrer Gemeinschaft und behandeln jeden Patienten wie ein Familienmitglied.
+                  </p>
+                  <p className="mb-6">
+                    Von der morgendlichen Pflege bis zur abendlichen Betreuung – wir sind da, wenn Sie uns brauchen. Unser Pflegeplan wird individuell auf Ihre Bedürfnisse abgestimmt und regelmäßig angepasst.
+                  </p>
+                  <div className="flex flex-wrap gap-4 justify-center my-8">
+                    <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+                      <Clock className="w-5 h-5 text-primary" />
+                      <span className="text-foreground font-medium">Immer erreichbar</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+                      <Heart className="w-5 h-5 text-primary" />
+                      <span className="text-foreground font-medium">Mit Liebe gepflegt</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Leistungen */}
+          <section className="py-20 bg-card/50">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl font-display font-bold text-foreground mb-4 text-center">
+                Unsere Leistungen in Preungesheim
+              </h2>
+              <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">
+                Umfassende Pflege, die sich an Ihren Bedürfnissen orientiert.
+              </p>
+              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <Card variant="elevated">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-4 flex items-center gap-2">
+                      <Heart className="w-5 h-5 text-primary" />
+                      Grundpflege
+                    </h3>
+                    <ul className="space-y-2">
+                      {grundpflegeLeistungen.map((leistung, index) => (
+                        <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          {leistung}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card variant="elevated">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-4 flex items-center gap-2">
+                      <Shield className="w-5 h-5 text-primary" />
+                      Behandlungspflege
+                    </h3>
+                    <ul className="space-y-2">
+                      {behandlungspflegeLeistungen.map((leistung, index) => (
+                        <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          {leistung}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-20 bg-gradient-hero">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                  Ihr Pflegeteam in Preungesheim
+                </h2>
+                <p className="text-muted-foreground mb-8">
+                  Wir sind stolz darauf, Ihnen eine Pflege zu bieten, die über das Übliche hinausgeht. Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch.
+                </p>
+                <CTADropdownButton />
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="py-20">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center flex items-center justify-center gap-3">
+                  <HelpCircle className="w-8 h-8 text-primary" />
+                  Häufige Fragen
+                </h2>
+                <Accordion type="single" collapsible className="space-y-4">
+                  <AccordionItem value="item-1" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Wie läuft das Erstgespräch ab?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Im Erstgespräch lernen wir Sie und Ihre Situation kennen. Wir besprechen Ihre Wünsche und erstellen gemeinsam einen ersten Pflegeplan. Das Gespräch findet gerne bei Ihnen zu Hause statt.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-2" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Können Sie auch nachts kommen?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Bei Bedarf bieten wir auch nächtliche Pflege und Betreuung an. Bei Notfällen sind wir rund um die Uhr erreichbar.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-3" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Arbeiten Sie mit meinem Hausarzt zusammen?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, wir arbeiten eng mit Ihren behandelnden Ärzten zusammen, um eine optimale Versorgung sicherzustellen.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-8">
+            <div className="container mx-auto px-4 text-center">
+              <Link to="/standorte/frankfurt" className="text-primary hover:underline font-medium">
+                ← Zurück zur Übersicht Frankfurt
+              </Link>
+            </div>
+          </section>
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default Preungesheim;
