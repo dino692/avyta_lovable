@@ -303,189 +303,189 @@ const Header = () => {
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden fixed top-20 left-0 right-0 bottom-0 bg-background border-t border-border animate-fade-in overflow-y-auto z-50">
-            <nav className="flex flex-col gap-2 p-4">
-              <Link
-                to="/"
-                className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Start
-              </Link>
-              <Link
-                to="/team"
-                className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Team
-              </Link>
-
-              {/* Mobile Leistungen */}
-              <div>
-                <button
-                  onClick={() => setMobileLeistungenOpen(!mobileLeistungenOpen)}
-                  className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
-                >
-                  Leistungen
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileLeistungenOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {mobileLeistungenOpen && (
-                  <div className="pl-4 space-y-2 mt-2">
-                    {leistungen.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        className="block text-muted-foreground hover:text-primary py-1 text-sm"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Standorte */}
-              <div>
-                <button
-                  onClick={() => setMobileStandorteOpen(!mobileStandorteOpen)}
-                  className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
-                >
-                  Standorte
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileStandorteOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {mobileStandorteOpen && (
-                  <div className="pl-4 space-y-2 mt-2">
-                    <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-1">Hauptstandorte</div>
-                    {standorte.hauptstandorte.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        className="block text-muted-foreground hover:text-primary py-1 text-sm"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                    <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mt-3 mb-1">Frankfurt</div>
-                    {standorte.frankfurtStadtteile.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        className="block text-muted-foreground hover:text-primary py-1 text-sm"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Jobs */}
-              <div>
-                <button
-                  onClick={() => setMobileJobsOpen(!mobileJobsOpen)}
-                  className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
-                >
-                  Jobs
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileJobsOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {mobileJobsOpen && (
-                  <div className="pl-4 space-y-2 mt-2">
-                    {jobs.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        className="block text-muted-foreground hover:text-primary py-1 text-sm"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Blog */}
-              <div>
-                <button
-                  onClick={() => setMobileBlogOpen(!mobileBlogOpen)}
-                  className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
-                >
-                  Blog
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileBlogOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {mobileBlogOpen && (
-                  <div className="pl-4 space-y-2 mt-2">
-                    {blogCategories.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        className="block text-muted-foreground hover:text-primary py-1 text-sm"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <Link
-                to="/kontakt"
-                className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Kontakt
-              </Link>
-
-              <div className="pt-4 mt-4 border-t border-border flex flex-col gap-3">
-                <a href="tel:+496915391405" className="flex items-center justify-center gap-2 text-primary font-medium py-3 bg-primary/10 rounded-lg">
-                  <Phone className="w-4 h-4" />
-                  069 153 914 05
-                </a>
-                
-                {/* Mobile CTA Dropdown */}
-                <div className="relative">
-                  <Button 
-                    variant="hero"
-                    className="w-full justify-center"
-                    onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
-                  >
-                    Kostenloses Erstgespräch
-                    <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-200 ${isCtaDropdownOpen ? 'rotate-180' : ''}`} />
-                  </Button>
-                  
-                  {isCtaDropdownOpen && (
-                    <div className="mt-2 w-full bg-card rounded-xl border border-border shadow-lg overflow-hidden">
-                      {ctaOptions.map((option) => (
-                        <a
-                          key={option.label}
-                          href={option.href}
-                          onClick={() => {
-                            setIsCtaDropdownOpen(false);
-                            setIsMenuOpen(false);
-                          }}
-                          className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 transition-colors"
-                        >
-                          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                            <option.icon className="w-5 h-5 text-primary" />
-                          </div>
-                          <span className="font-medium text-foreground">{option.label}</span>
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </nav>
-          </div>
-        )}
       </div>
+      
+      {/* Mobile Navigation - Outside container for proper fixed positioning */}
+      {isMenuOpen && (
+        <div className="lg:hidden fixed top-20 left-0 right-0 bottom-0 bg-background border-t border-border animate-fade-in overflow-y-auto z-50">
+          <nav className="flex flex-col gap-2 p-4">
+            <Link
+              to="/"
+              className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Start
+            </Link>
+            <Link
+              to="/team"
+              className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Team
+            </Link>
+
+            {/* Mobile Leistungen */}
+            <div>
+              <button
+                onClick={() => setMobileLeistungenOpen(!mobileLeistungenOpen)}
+                className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+              >
+                Leistungen
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileLeistungenOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileLeistungenOpen && (
+                <div className="pl-4 space-y-2 mt-2">
+                  {leistungen.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="block text-muted-foreground hover:text-primary py-1 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Standorte */}
+            <div>
+              <button
+                onClick={() => setMobileStandorteOpen(!mobileStandorteOpen)}
+                className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+              >
+                Standorte
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileStandorteOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileStandorteOpen && (
+                <div className="pl-4 space-y-2 mt-2">
+                  <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-1">Hauptstandorte</div>
+                  {standorte.hauptstandorte.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="block text-muted-foreground hover:text-primary py-1 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                  <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mt-3 mb-1">Frankfurt</div>
+                  {standorte.frankfurtStadtteile.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="block text-muted-foreground hover:text-primary py-1 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Jobs */}
+            <div>
+              <button
+                onClick={() => setMobileJobsOpen(!mobileJobsOpen)}
+                className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+              >
+                Jobs
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileJobsOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileJobsOpen && (
+                <div className="pl-4 space-y-2 mt-2">
+                  {jobs.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="block text-muted-foreground hover:text-primary py-1 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Blog */}
+            <div>
+              <button
+                onClick={() => setMobileBlogOpen(!mobileBlogOpen)}
+                className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+              >
+                Blog
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileBlogOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileBlogOpen && (
+                <div className="pl-4 space-y-2 mt-2">
+                  {blogCategories.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="block text-muted-foreground hover:text-primary py-1 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link
+              to="/kontakt"
+              className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Kontakt
+            </Link>
+
+            <div className="pt-4 mt-4 border-t border-border flex flex-col gap-3">
+              <a href="tel:+496915391405" className="flex items-center justify-center gap-2 text-primary font-medium py-3 bg-primary/10 rounded-lg">
+                <Phone className="w-4 h-4" />
+                069 153 914 05
+              </a>
+              
+              {/* Mobile CTA Dropdown */}
+              <div className="relative">
+                <Button 
+                  variant="hero"
+                  className="w-full justify-center"
+                  onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+                >
+                  Kostenloses Erstgespräch
+                  <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-200 ${isCtaDropdownOpen ? 'rotate-180' : ''}`} />
+                </Button>
+                
+                {isCtaDropdownOpen && (
+                  <div className="mt-2 w-full bg-card rounded-xl border border-border shadow-lg overflow-hidden">
+                    {ctaOptions.map((option) => (
+                      <a
+                        key={option.label}
+                        href={option.href}
+                        onClick={() => {
+                          setIsCtaDropdownOpen(false);
+                          setIsMenuOpen(false);
+                        }}
+                        className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 transition-colors"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <option.icon className="w-5 h-5 text-primary" />
+                        </div>
+                        <span className="font-medium text-foreground">{option.label}</span>
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
