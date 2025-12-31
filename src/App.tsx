@@ -26,6 +26,16 @@ import Sachsenhausen from "./pages/standorte/Sachsenhausen";
 import Roedelheim from "./pages/standorte/Roedelheim";
 import Praunheim from "./pages/standorte/Praunheim";
 import Ginnheim from "./pages/standorte/Ginnheim";
+import Nordend from "./pages/standorte/Nordend";
+import Ostend from "./pages/standorte/Ostend";
+import Westend from "./pages/standorte/Westend";
+import Dornbusch from "./pages/standorte/Dornbusch";
+import Heddernheim from "./pages/standorte/Heddernheim";
+import Preungesheim from "./pages/standorte/Preungesheim";
+import Eschersheim from "./pages/standorte/Eschersheim";
+import Eckenheim from "./pages/standorte/Eckenheim";
+import NiederEschbach from "./pages/standorte/NiederEschbach";
+import Seckbach from "./pages/standorte/Seckbach";
 import StadtteilTemplate from "./pages/standorte/StadtteilTemplate";
 import Blog from "./pages/Blog";
 import DemenzPflege from "./pages/blog/DemenzPflege";
@@ -77,6 +87,16 @@ const App = () => (
             <Route path="/standorte/frankfurt/roedelheim" element={<Roedelheim />} />
             <Route path="/standorte/frankfurt/praunheim" element={<Praunheim />} />
             <Route path="/standorte/frankfurt/ginnheim" element={<Ginnheim />} />
+            <Route path="/standorte/frankfurt/nordend" element={<Nordend />} />
+            <Route path="/standorte/frankfurt/ostend" element={<Ostend />} />
+            <Route path="/standorte/frankfurt/westend" element={<Westend />} />
+            <Route path="/standorte/frankfurt/dornbusch" element={<Dornbusch />} />
+            <Route path="/standorte/frankfurt/heddernheim" element={<Heddernheim />} />
+            <Route path="/standorte/frankfurt/preungesheim" element={<Preungesheim />} />
+            <Route path="/standorte/frankfurt/eschersheim" element={<Eschersheim />} />
+            <Route path="/standorte/frankfurt/eckenheim" element={<Eckenheim />} />
+            <Route path="/standorte/frankfurt/nieder-eschbach" element={<NiederEschbach />} />
+            <Route path="/standorte/frankfurt/seckbach" element={<Seckbach />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/demenz-pflege-tipps" element={<DemenzPflege />} />
             <Route path="/blog/pflegegrad-beantragen" element={<PflegegradBeantragen />} />
