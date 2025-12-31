@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Users } from "lucide-react";
@@ -174,8 +175,9 @@ const Team = () => {
                   variant="secondary" 
                   size="lg"
                   className="whitespace-nowrap"
+                  asChild
                 >
-                  Karriere entdecken
+                  <Link to="/jobs">Alle Pflegejobs</Link>
                 </Button>
               </div>
             </CardContent>
