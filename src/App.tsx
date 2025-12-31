@@ -59,15 +59,12 @@ const App = () => (
             <Route path="/leistungen/verhinderungspflege" element={<Verhinderungspflege />} />
             <Route path="/standorte/frankfurt" element={<Frankfurt />} />
             <Route path="/standorte/bad-vilbel" element={<BadVilbel />} />
-            <Route path="/standorte/frankfurt/bornheim" element={<StadtteilTemplate name="Bornheim" />} />
-            <Route path="/standorte/frankfurt/bockenheim" element={<StadtteilTemplate name="Bockenheim" />} />
-            <Route path="/standorte/frankfurt/griesheim" element={<StadtteilTemplate name="Griesheim" />} />
-            <Route path="/standorte/frankfurt/ginnheim" element={<StadtteilTemplate name="Ginnheim" />} />
-            <Route path="/standorte/frankfurt/sachsenhausen" element={<StadtteilTemplate name="Sachsenhausen" />} />
-            <Route path="/standorte/frankfurt/praunheim" element={<StadtteilTemplate name="Praunheim" />} />
-            <Route path="/standorte/frankfurt/niederrad" element={<StadtteilTemplate name="Niederrad" />} />
-            <Route path="/standorte/frankfurt/hoechst" element={<StadtteilTemplate name="Höchst" />} />
-            <Route path="/standorte/frankfurt/roedelheim" element={<StadtteilTemplate name="Rödelheim" />} />
+            <Route path="/standorte/frankfurt/bornheim" element={<Bornheim />} />
+            <Route path="/standorte/frankfurt/bockenheim" element={<Bockenheim />} />
+            <Route path="/standorte/frankfurt/griesheim" element={<Griesheim />} />
+            <Route path="/standorte/frankfurt/sachsenhausen" element={<Sachsenhausen />} />
+            <Route path="/standorte/frankfurt/niederrad" element={<Niederrad />} />
+            <Route path="/standorte/frankfurt/hoechst" element={<Hoechst />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/demenz-pflege-tipps" element={<DemenzPflege />} />
             <Route path="/blog/pflegegrad-beantragen" element={<PflegegradBeantragen />} />
