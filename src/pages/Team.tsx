@@ -4,6 +4,7 @@ import { Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Helmet } from "react-helmet-async";
+import teamGroupImage from "@/assets/team/team-group.jpg";
 import jasminaMuellerImage from "@/assets/team/jasmina-mueller.webp";
 import prokuristImage from "@/assets/team/prokurist.webp";
 import assistenzImage from "@/assets/team/assistenz.webp";
@@ -56,6 +57,21 @@ const Team = () => {
             <p className="text-lg text-muted-foreground animate-fade-up" style={{ animationDelay: "0.1s" }}>
               Lernen Sie unser engagiertes Team kennen – Menschen mit Herz, Kompetenz und Leidenschaft für die Pflege.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Group Image */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={teamGroupImage}
+                alt="Das AVYTA Team - Ambulanter Pflegedienst Frankfurt"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
