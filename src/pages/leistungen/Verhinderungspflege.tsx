@@ -84,10 +84,10 @@ const Verhinderungspflege = () => {
           </section>
 
           {/* Intro Content */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
                   Pflegende Angehörige leisten jeden Tag viel für ihre Lieben. Die tägliche Fürsorge bedeutet für Sie als 
                   Pflegeverantwortliche Einsatz von Zeit, Körper und Herz. Bei Ihrem Einsatz für andere sollten Sie jedoch 
                   nicht ihre eigenen Bedürfnisse zurückstellen müssen. Wenn Angehörige aufgrund von Krankheit, Termindruck 
@@ -104,10 +104,10 @@ const Verhinderungspflege = () => {
           </section>
 
           {/* Sorgenfrei das Leben meistern */}
-          <section className="py-24 bg-secondary/30">
+          <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Sorgenfrei das Leben meistern mit Verhinderungspflege in Frankfurt
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
@@ -120,7 +120,7 @@ const Verhinderungspflege = () => {
                   gewohnten Umfeld zu versorgen.
                 </p>
 
-                <h3 className="text-xl font-display font-semibold text-foreground mb-6">
+                <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-4 md:mb-6">
                   Aufgaben der Verhinderungspflege in Frankfurt
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -144,11 +144,11 @@ const Verhinderungspflege = () => {
           </section>
 
           {/* Zuverlässig über kurz oder lang */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div>
-                  <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                  <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                     Verhinderungspflege in Frankfurt – zuverlässig über kurz oder lang
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
@@ -231,10 +231,10 @@ const Verhinderungspflege = () => {
           </section>
 
           {/* FAQ */}
-          <section className="py-24 bg-secondary/30">
+          <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                   Häufige Fragen
                 </h2>
                 <Accordion type="single" collapsible className="space-y-3">
@@ -258,9 +258,9 @@ const Verhinderungspflege = () => {
           </section>
 
           {/* Other Services */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
-              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                 Weitere Leistungen
               </h2>
               <div className="flex flex-wrap justify-center gap-4">

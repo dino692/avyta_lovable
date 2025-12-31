@@ -61,17 +61,17 @@ const Pflegeberatung = () => {
           </section>
 
           {/* Intro Content */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  In hektischen Metropolen wie in Frankfurt am Main fällt es vielen Familien schwer, Haushalt, Job und Pflege 
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
+                  In hektischen Metropolen wie in Frankfurt am Main fällt es vielen Familien schwer, Haushalt, Job und Pflege
                   von Angehörigen im Alltag zu bewältigen. Wird ein Familienmitglied krank, fühlen sich Angehörige oft überfordert 
                   und alleingelassen. Wenn Aufgaben wie die Vergabe von Injektionen und Medikamenten, Wundversorgung oder 
                   Blutzuckerkontrolle Angehörigen über den Kopf wachsen, ist es beruhigend, einen erfahrenen Partner an ihrer 
                   Seite zu wissen.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   Unsere Pflegeberatung in Frankfurt steht für Angehörige und Menschen mit körperlichen oder geistigen 
                   Einschränkungen offen.
                 </p>
@@ -80,10 +80,10 @@ const Pflegeberatung = () => {
           </section>
 
           {/* Von Fall zu Fall */}
-          <section className="py-24 bg-secondary/30">
+          <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Von Fall zu Fall die passende Pflegeberatung in Frankfurt
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -108,11 +108,11 @@ const Pflegeberatung = () => {
           </section>
 
           {/* Lebensqualität */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-16 items-start">
+              <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-start">
                 <div>
-                  <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                  <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                     Avyta Pflegeberatung in Frankfurt für volle Lebensqualität
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
@@ -217,10 +217,10 @@ const Pflegeberatung = () => {
           </section>
 
           {/* Gemeinsam für mehr Lebensqualität */}
-          <section className="py-24 bg-secondary/30">
+          <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Pflegeberatung Frankfurt – gemeinsam für mehr Lebensqualität
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -240,10 +240,10 @@ const Pflegeberatung = () => {
           </section>
 
           {/* FAQ */}
-          <section className="py-24">
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                   Häufige Fragen
                 </h2>
                 <Accordion type="single" collapsible className="space-y-3">
@@ -267,9 +267,9 @@ const Pflegeberatung = () => {
           </section>
 
           {/* Other Services */}
-          <section className="py-24 bg-secondary/30">
+          <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
-              <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                 Weitere Leistungen
               </h2>
               <div className="flex flex-wrap justify-center gap-4">
