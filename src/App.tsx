@@ -23,6 +23,9 @@ import Griesheim from "./pages/standorte/Griesheim";
 import Hoechst from "./pages/standorte/Hoechst";
 import Niederrad from "./pages/standorte/Niederrad";
 import Sachsenhausen from "./pages/standorte/Sachsenhausen";
+import Roedelheim from "./pages/standorte/Roedelheim";
+import Praunheim from "./pages/standorte/Praunheim";
+import Ginnheim from "./pages/standorte/Ginnheim";
 import StadtteilTemplate from "./pages/standorte/StadtteilTemplate";
 import Blog from "./pages/Blog";
 import DemenzPflege from "./pages/blog/DemenzPflege";
@@ -71,6 +74,9 @@ const App = () => (
             <Route path="/standorte/frankfurt/sachsenhausen" element={<Sachsenhausen />} />
             <Route path="/standorte/frankfurt/niederrad" element={<Niederrad />} />
             <Route path="/standorte/frankfurt/hoechst" element={<Hoechst />} />
+            <Route path="/standorte/frankfurt/roedelheim" element={<Roedelheim />} />
+            <Route path="/standorte/frankfurt/praunheim" element={<Praunheim />} />
+            <Route path="/standorte/frankfurt/ginnheim" element={<Ginnheim />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/demenz-pflege-tipps" element={<DemenzPflege />} />
             <Route path="/blog/pflegegrad-beantragen" element={<PflegegradBeantragen />} />
