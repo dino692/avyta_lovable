@@ -57,7 +57,7 @@ const CertificatesSection = () => {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="relative max-h-16 max-w-[140px] object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="relative max-h-16 max-w-[140px] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 dark:brightness-0 dark:invert dark:group-hover:brightness-100 dark:group-hover:invert-0"
                   />
 
                   {/* Decorative corner */}
