@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
 import { Sparkles, CheckCircle2, ArrowRight, Euro, GraduationCap, Building2, TrendingUp, Calendar, Car, Dumbbell, Shirt } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import JobCTADropdownButton from "@/components/JobCTADropdownButton";
 import {
   Accordion,
   AccordionContent,
@@ -272,12 +273,7 @@ const Pflegefachkraft = () => {
                       </ul>
                     </div>
 
-                    <Button variant="hero" size="lg" className="w-full" asChild>
-                      <a href="mailto:info@avyta.de?subject=Bewerbung als Pflegefachkraft">
-                        Jetzt bewerben
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </a>
-                    </Button>
+                    <JobCTADropdownButton jobTitle="Pflegefachkraft" />
 
                     <p className="text-sm text-muted-foreground text-center">
                       oder rufen Sie uns an: <br />

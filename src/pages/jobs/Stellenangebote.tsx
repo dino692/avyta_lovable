@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
 import { Briefcase, CheckCircle2, ArrowRight, Sparkles, Heart, Users, Home, Dumbbell, Infinity, Palette, Globe, CalendarCheck, Euro, Calendar, Car, Award, Gift, Building2, Shirt, Laptop } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import JobCTADropdownButton from "@/components/JobCTADropdownButton";
 import {
   Accordion,
   AccordionContent,
@@ -261,12 +262,7 @@ const Stellenangebote = () => {
                       Bewerben Sie sich jetzt und lernen Sie unser freundliches Arbeitsumfeld kennen.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
-                      <Button variant="hero" size="lg" asChild>
-                        <a href="mailto:info@avyta.de?subject=Bewerbung Stellenangebot">
-                          Jetzt bewerben
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </a>
-                      </Button>
+                      <JobCTADropdownButton jobTitle="Stellenangebot" />
                       <Button variant="outline" size="lg" asChild>
                         <a href="tel:+496915391405">
                           Anrufen: 069 153 914 05
@@ -314,12 +310,7 @@ const Stellenangebote = () => {
                       </ul>
                     </div>
 
-                    <Button variant="hero" size="lg" className="w-full" asChild>
-                      <a href="mailto:info@avyta.de?subject=Bewerbung Stellenangebot">
-                        Jetzt bewerben
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </a>
-                    </Button>
+                    <JobCTADropdownButton jobTitle="Stellenangebot" />
 
                     <p className="text-sm text-muted-foreground text-center">
                       oder rufen Sie uns an: <br />

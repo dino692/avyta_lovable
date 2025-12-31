@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
 import { Users, CheckCircle2, MapPin, Clock, Euro, ArrowRight, Heart, Award, Car, Dumbbell, Gift, Home, Shirt, TrendingUp, Calendar, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import JobCTADropdownButton from "@/components/JobCTADropdownButton";
 import {
   Accordion,
   AccordionContent,
@@ -253,12 +254,7 @@ const Pflegehilfskraft = () => {
                       Ergreifen Sie Ihre Chance und starten Sie Ihre Karriere als Pflegehilfskraft in Frankfurt! Werden Sie Teil von Avyta und profitieren Sie von vielfältigen beruflichen und persönlichen Perspektiven. Arbeiten Sie in einem sympathischen Team, das Ihnen mit Wertschätzung und Anerkennung begegnet. Bewerben Sie sich noch heute und gestalten Sie Ihre Zukunft in der Pflege!
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Button variant="hero" size="lg" asChild>
-                        <a href="mailto:info@avyta.de?subject=Bewerbung als Pflegehilfskraft in Frankfurt">
-                          Jetzt bewerben
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </a>
-                      </Button>
+                      <JobCTADropdownButton jobTitle="Pflegehilfskraft" />
                       <Button variant="outline" size="lg" asChild>
                         <a href="tel:+496915391405">
                           Anrufen: 069 153 914 05
@@ -306,12 +302,7 @@ const Pflegehilfskraft = () => {
                       </ul>
                     </div>
 
-                    <Button variant="hero" size="lg" className="w-full" asChild>
-                      <a href="mailto:info@avyta.de?subject=Bewerbung als Pflegehilfskraft in Frankfurt">
-                        Jetzt bewerben
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </a>
-                    </Button>
+                    <JobCTADropdownButton jobTitle="Pflegehilfskraft" />
 
                     <p className="text-sm text-muted-foreground text-center">
                       oder rufen Sie uns an: <br />
