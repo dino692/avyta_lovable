@@ -103,19 +103,16 @@ const CertificatesSection = () => {
               {partners.map((partner, index) => (
                 <CarouselItem key={partner.name} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <div
-                    className={`group relative bg-card/80 backdrop-blur-sm rounded-3xl p-8 border transition-all duration-500 h-[160px] flex items-center justify-center ${
+                    className={`group relative bg-white rounded-2xl p-6 border-2 transition-all duration-300 h-[140px] flex items-center justify-center shadow-sm ${
                       current === index 
-                        ? "border-primary/40 shadow-xl shadow-primary/10 scale-105" 
-                        : "border-border hover:border-primary/30 hover:shadow-lg"
+                        ? "border-primary shadow-lg shadow-primary/20 scale-[1.02]" 
+                        : "border-gray-100 hover:border-primary/40 hover:shadow-md"
                     }`}
                   >
-                    {/* Glow effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${current === index ? "opacity-100" : ""}`} />
-                    
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="relative max-h-20 max-w-[160px] object-contain transition-all duration-500 group-hover:scale-110"
+                      className="max-h-16 max-w-[140px] object-contain grayscale-[30%] group-hover:grayscale-0 transition-all duration-300"
                     />
                   </div>
                 </CarouselItem>
