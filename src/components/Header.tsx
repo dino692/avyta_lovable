@@ -74,6 +74,7 @@ const Header = () => {
   const [mobileJobsOpen, setMobileJobsOpen] = useState(false);
   const [mobileBlogOpen, setMobileBlogOpen] = useState(false);
   const [isCtaDropdownOpen, setIsCtaDropdownOpen] = useState(false);
+  const [isMobileCtaOpen, setIsMobileCtaOpen] = useState(false);
   const ctaDropdownRef = useRef<HTMLDivElement>(null);
 
   const ctaOptions = [
@@ -447,30 +448,28 @@ const Header = () => {
             </Link>
 
             <div className="pt-4 mt-4 border-t border-border flex flex-col gap-3">
-              <a href="tel:+496915391405" className="flex items-center justify-center gap-2 text-primary font-medium py-3 bg-primary/10 rounded-lg">
-                <Phone className="w-4 h-4" />
-                069 153 914 05
-              </a>
-              
               {/* Mobile CTA Dropdown */}
               <div className="relative">
                 <Button 
                   variant="hero"
                   className="w-full justify-center"
-                  onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsMobileCtaOpen(!isMobileCtaOpen);
+                  }}
                 >
                   Kostenloses Erstgespräch
-                  <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-200 ${isCtaDropdownOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-200 ${isMobileCtaOpen ? 'rotate-180' : ''}`} />
                 </Button>
                 
-                {isCtaDropdownOpen && (
-                  <div className="mt-2 w-full bg-card rounded-xl border border-border shadow-lg overflow-hidden">
+                {isMobileCtaOpen && (
+                  <div className="mt-2 w-full bg-card rounded-xl border border-border shadow-lg overflow-hidden z-50">
                     {ctaOptions.map((option) => (
                       <a
                         key={option.label}
                         href={option.href}
                         onClick={() => {
-                          setIsCtaDropdownOpen(false);
+                          setIsMobileCtaOpen(false);
                           setIsMenuOpen(false);
                         }}
                         className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 transition-colors"
