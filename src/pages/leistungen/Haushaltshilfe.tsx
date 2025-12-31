@@ -57,12 +57,12 @@ const Haushaltshilfe = () => {
                   <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                     Was ist Haushaltshilfe?
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                     Unsere Haushaltshilfe unterstützt Sie bei allen anfallenden Aufgaben 
                     im Haushalt. Ob Putzen, Waschen, Einkaufen oder Kochen – wir nehmen 
                     Ihnen die Arbeit ab, die Sie selbst nicht mehr bewältigen können.
                   </p>
-                  <p className="text-muted-foreground leading-relaxed mb-8">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
                     Für viele Menschen ist es wichtig, so lange wie möglich in den 
                     eigenen vier Wänden wohnen zu bleiben. Mit unserer Haushaltshilfe 
                     machen wir das möglich und sorgen gleichzeitig für soziale Kontakte.
@@ -71,23 +71,23 @@ const Haushaltshilfe = () => {
                   <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-3 md:mb-4">
                     Unsere Leistungen im Überblick
                   </h3>
-                  <div className="grid sm:grid-cols-2 gap-3">
+                  <div className="grid sm:grid-cols-2 gap-2 md:gap-3">
                     {leistungen.map((item) => (
-                      <div key={item} className="flex items-center gap-2">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                        <span className="text-muted-foreground">{item}</span>
+                      <div key={item} className="flex items-center gap-2 p-2 md:p-3 bg-secondary/30 rounded-lg">
+                        <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
+                        <span className="text-sm md:text-base text-muted-foreground">{item}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6 mt-6 lg:mt-0">
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-display font-semibold text-foreground mb-4">
+                    <CardContent className="p-4 md:p-6">
+                      <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-3 md:mb-4">
                         Finanzierung
                       </h3>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Bei einem anerkannten Pflegegrad können hauswirtschaftliche Leistungen 
                         über den Entlastungsbetrag (125€/Monat) oder als Sachleistung 
                         finanziert werden.
@@ -96,11 +96,11 @@ const Haushaltshilfe = () => {
                   </Card>
 
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-display font-semibold text-foreground mb-4">
+                    <CardContent className="p-4 md:p-6">
+                      <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-3 md:mb-4">
                         Flexible Zeiten
                       </h3>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Wir passen uns Ihrem Tagesablauf an. Ob morgens, mittags oder 
                         nachmittags – wir kommen, wann es Ihnen am besten passt.
                       </p>
@@ -108,18 +108,18 @@ const Haushaltshilfe = () => {
                   </Card>
 
                   <Card className="bg-primary text-primary-foreground">
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-display font-semibold mb-4">
+                    <CardContent className="p-4 md:p-6">
+                      <h3 className="text-lg md:text-xl font-display font-semibold mb-3 md:mb-4">
                         Jetzt beraten lassen
                       </h3>
-                      <p className="opacity-90 mb-4">
+                      <p className="text-sm md:text-base opacity-90 mb-3 md:mb-4">
                         Wir beraten Sie kostenlos und unverbindlich zu allen Fragen 
                         rund um die Haushaltshilfe.
                       </p>
-                      <Button variant="secondary" asChild>
+                      <Button variant="secondary" size="sm" className="text-xs md:text-sm" asChild>
                         <a href="/#contact">
                           Erstberatung anfragen
-                          <ArrowRight className="w-4 h-4 ml-2" />
+                          <ArrowRight className="w-3 h-3 md:w-4 md:h-4 ml-2" />
                         </a>
                       </Button>
                     </CardContent>
@@ -135,23 +135,23 @@ const Haushaltshilfe = () => {
               <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                 Weitere Leistungen
               </h2>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button variant="outline" asChild>
+              <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/behandlungspflege">Behandlungspflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/grundpflege">Grundpflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/intensivpflege">Intensivpflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/24-stunden">24-Stunden-Pflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/pflegeberatung">Pflegeberatung</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/verhinderungspflege">Verhinderungspflege</Link>
                 </Button>
               </div>

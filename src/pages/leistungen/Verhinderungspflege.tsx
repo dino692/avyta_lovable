@@ -110,7 +110,7 @@ const Verhinderungspflege = () => {
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                   Sorgenfrei das Leben meistern mit Verhinderungspflege in Frankfurt
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
                   Unser Angebot für die Verhinderungspflege in Frankfurt umfasst die stellvertretende Grundpflege, 
                   Behandlungspflege und Intensivpflege. Wir können Menschen von Pflegegrad 1 bis 5 versorgen und 
                   unterstützen Ihre Angehörigen im Haushalt oder leihen ihnen ein offenes Ohr. Die Verhinderungspflege 
@@ -120,21 +120,21 @@ const Verhinderungspflege = () => {
                   gewohnten Umfeld zu versorgen.
                 </p>
 
-                <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-4 md:mb-6">
+                <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-3 md:mb-4">
                   Aufgaben der Verhinderungspflege in Frankfurt
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                   Häusliche Pflege ist eine gemeinschaftliche Aufgabe, die niemand allein bewältigen kann. Wir von Avyta 
                   bieten in der Verhinderungspflege in Frankfurt eine große Bandbreite von Pflegemaßnahmen an, um Sie bei 
                   der Pflege Ihrer Angehörigen zu unterstützen:
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-3 md:space-y-4">
                   {leistungen.map((item, index) => (
-                    <div key={index} className="flex items-start gap-4 p-4 bg-background rounded-xl border border-border/50">
-                      <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div key={index} className="flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-background rounded-xl border border-border/50">
+                      <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
-                        <p className="text-muted-foreground">{item.description}</p>
+                        <h4 className="font-semibold text-sm md:text-base text-foreground mb-1">{item.title}</h4>
+                        <p className="text-sm md:text-base text-muted-foreground">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -151,38 +151,38 @@ const Verhinderungspflege = () => {
                   <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6">
                     Verhinderungspflege in Frankfurt – zuverlässig über kurz oder lang
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                     Wir von Avyta sind Ihr vertrauensvoller Ansprechpartner zu allen Fragen rund um die häusliche Pflege. 
                     Mit dem Angebot der Verhinderungspflege in Frankfurt ermöglichen wir Pflegebedürftigen, auch bei 
                     Abwesenheit von pflegenden Familienmitgliedern einen normalen Alltag weiterzuführen. Während Ihrer 
                     Abwesenheit dokumentieren wir Pflegemaßnahmen und Daten zum Gesundheitszustand genau, um volle 
                     Transparenz zu schaffen.
                   </p>
-                  <p className="text-muted-foreground leading-relaxed mb-8">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
                     Die Dauer der Verhinderungspflege in Frankfurt variiert ganz nach Ihrem Bedarf. Unsere temporären 
                     Pflegepläne erstellen wir individuell über die Dauer von wenigen Stunden, mehreren Tagen oder sogar 
                     über einige Wochen. In enger Absprache mit Pflegebedürftigen und Angehörigen passen wir Termine und 
                     erforderliche Maßnahmen an Ihre aktuelle Situation an.
                   </p>
-                  <p className="text-foreground font-medium mb-6">
+                  <p className="text-sm md:text-base text-foreground font-medium mb-4 md:mb-6">
                     Kontaktieren Sie uns noch heute, um abrufbare Entlastung in Form von Verhinderungspflege in Frankfurt 
                     einzurichten.
                   </p>
                   <CTADropdownButton />
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6 mt-6 lg:mt-0">
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Users className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Users className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Feste Bezugspfleger
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Nach Möglichkeit setzen wir fest zugeteilte Mitarbeiter ein. 
                         Ihre Angehörigen werden so von bekannten Gesichtern begrüßt, 
                         die zuverlässig für Sie einspringen.
@@ -191,16 +191,16 @@ const Verhinderungspflege = () => {
                   </Card>
 
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <FileCheck className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <FileCheck className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Volle Transparenz
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Während Ihrer Abwesenheit dokumentieren wir Pflegemaßnahmen 
                         und Daten zum Gesundheitszustand genau, um Ihnen volle 
                         Transparenz zu bieten.
@@ -209,16 +209,16 @@ const Verhinderungspflege = () => {
                   </Card>
 
                   <Card variant="elevated">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Clock className="w-6 h-6 text-primary" />
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Clock className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <h3 className="text-xl font-display font-semibold text-foreground">
+                        <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
                           Flexible Dauer
                         </h3>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         Unsere temporären Pflegepläne erstellen wir individuell über 
                         die Dauer von wenigen Stunden, mehreren Tagen oder sogar 
                         über einige Wochen.
@@ -237,17 +237,17 @@ const Verhinderungspflege = () => {
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                   Häufige Fragen
                 </h2>
-                <Accordion type="single" collapsible className="space-y-3">
+                <Accordion type="single" collapsible className="space-y-2 md:space-y-3">
                   {faqs.map((faq, index) => (
                     <AccordionItem 
                       key={index} 
                       value={`item-${index}`}
-                      className="bg-background rounded-xl border border-border/50 px-6"
+                      className="bg-background rounded-xl border border-border/50 px-4 md:px-6"
                     >
-                      <AccordionTrigger className="text-left font-medium text-foreground hover:text-primary">
+                      <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
+                      <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -263,23 +263,23 @@ const Verhinderungspflege = () => {
               <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                 Weitere Leistungen
               </h2>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button variant="outline" asChild>
+              <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/behandlungspflege">Behandlungspflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/grundpflege">Grundpflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/intensivpflege">Intensivpflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/haushaltshilfe">Haushaltshilfe</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/24-stunden">24-Stunden-Pflege</Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/pflegeberatung">Pflegeberatung</Link>
                 </Button>
               </div>
