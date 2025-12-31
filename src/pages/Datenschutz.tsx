@@ -33,7 +33,7 @@ const Datenschutz = () => {
                   <p className="font-semibold text-foreground">Avyta Pflegegesellschaft mbH</p>
                   <p>Allerheiligentor 2-4</p>
                   <p>60311 Frankfurt</p>
-                  <p className="mt-2">Telefon: 069/15301405</p>
+                  <p className="mt-2">Telefon: 069/15391405</p>
                   <p>E-Mail: info@avyta.de</p>
                 </div>
               </section>
