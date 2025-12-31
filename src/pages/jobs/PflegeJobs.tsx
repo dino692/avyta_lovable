@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
 import { Briefcase, CheckCircle2, ArrowRight, Sparkles, Heart, Users, Home, Dumbbell, Infinity, Palette, Globe, CalendarCheck, Euro, Calendar, Car, Award, Gift, Building2, Shirt, Laptop } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import JobCTADropdownButton from "@/components/JobCTADropdownButton";
 import {
   Accordion,
   AccordionContent,
@@ -303,12 +304,7 @@ const PflegeJobs = () => {
                       Wir freuen uns Sie kennenzulernen! Ergreifen Sie Ihre Chance und starten Sie Ihre Karriere bei AVYTA!
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
-                      <Button variant="hero" size="lg" asChild>
-                        <a href="mailto:info@avyta.de?subject=Bewerbung Pflege Job">
-                          Jetzt bewerben
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </a>
-                      </Button>
+                      <JobCTADropdownButton jobTitle="Pflege Job" />
                       <Button variant="outline" size="lg" asChild>
                         <a href="tel:+496915391405">
                           Anrufen: 069 153 914 05
@@ -356,12 +352,7 @@ const PflegeJobs = () => {
                       </ul>
                     </div>
 
-                    <Button variant="hero" size="lg" className="w-full" asChild>
-                      <a href="mailto:info@avyta.de?subject=Bewerbung Pflege Job">
-                        Jetzt bewerben
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </a>
-                    </Button>
+                    <JobCTADropdownButton jobTitle="Pflege Job" />
 
                     <p className="text-sm text-muted-foreground text-center">
                       oder rufen Sie uns an: <br />

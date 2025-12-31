@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import JobsSidebar from "@/components/JobsSidebar";
 import { Home, CheckCircle2, ArrowRight, Car, Calendar, Gift, Dumbbell, Award, Building2, Shirt, Euro, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import JobCTADropdownButton from "@/components/JobCTADropdownButton";
 import {
   Accordion,
   AccordionContent,
@@ -264,12 +265,7 @@ const HaushaltshilfeJob = () => {
                       </ul>
                     </div>
 
-                    <Button variant="hero" size="lg" className="w-full" asChild>
-                      <a href="mailto:info@avyta.de?subject=Bewerbung als Haushaltshilfe">
-                        Jetzt bewerben
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </a>
-                    </Button>
+                    <JobCTADropdownButton jobTitle="Haushaltshilfe" />
 
                     <p className="text-sm text-muted-foreground text-center">
                       oder rufen Sie uns an: <br />
