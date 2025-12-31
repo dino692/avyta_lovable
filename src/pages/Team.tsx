@@ -17,14 +17,14 @@ const teamMembers = [
     description: "Führt AVYTA mit Leidenschaft und langjähriger Erfahrung in der Pflege.",
   },
   {
-    name: "Prokurist",
-    role: "Finanzen & Marketing",
+    name: "Dino Lalic",
+    role: "Prokurist, Finanzen & Marketing",
     image: prokuristImage,
     description: "Verantwortet die Finanzen und das Marketing von AVYTA.",
   },
   {
-    name: "Assistenz der Geschäftsleitung",
-    role: "Assistenz der Geschäftsleitung",
+    name: "Andrea Knezevic",
+    role: "Assistenz",
     image: assistenzImage,
     description: "Unterstützt die Geschäftsleitung in allen organisatorischen Belangen.",
   },
