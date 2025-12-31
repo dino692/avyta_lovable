@@ -264,8 +264,8 @@ const Stellenangebote = () => {
                     <div className="flex flex-col sm:flex-row gap-4">
                       <JobCTADropdownButton jobTitle="Stellenangebot" />
                       <Button variant="outline" size="lg" asChild>
-                        <a href="tel:+496915391405">
-                          Anrufen: 069 153 914 05
+                        <a href="tel:+496915301405">
+                          Anrufen: 069 153 014 05
                         </a>
                       </Button>
                     </div>
@@ -314,7 +314,7 @@ const Stellenangebote = () => {
 
                     <p className="text-sm text-muted-foreground text-center">
                       oder rufen Sie uns an: <br />
-                      <a href="tel:+496915391405" className="text-primary font-medium">069 153 914 05</a>
+                      <a href="tel:+496915301405" className="text-primary font-medium">069 153 014 05</a>
                     </p>
 
                     <JobsSidebar />

@@ -23,9 +23,9 @@ const CTADropdownButton = ({ size = "lg", variant = "hero", className = "" }: CT
   }, []);
 
   const ctaOptions = [
-    { label: "Anruf", icon: Phone, href: "tel:+496915391405" },
+    { label: "Anruf", icon: Phone, href: "tel:+496915301405" },
     { label: "Email", icon: Mail, href: "mailto:info@avyta.de" },
-    { label: "Kontaktformular", icon: FileText, href: "/#contact" },
+    { label: "Kontaktformular", icon: FileText, href: "/kontakt" },
   ];
 
   return (
