@@ -151,15 +151,44 @@ const Leistungen = () => {
       </section>
 
       {/* Services Selection Section */}
-      <section className="py-16">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Service List - Left Side */}
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+            {/* Service List - Left Side / Top on Mobile */}
             <div className="lg:col-span-1">
-              <h2 className="text-xl font-display font-semibold text-foreground mb-6">
+              <h2 className="text-lg md:text-xl font-display font-semibold text-foreground mb-4 md:mb-6">
                 Wählen Sie eine Leistung
               </h2>
-              <div className="space-y-3">
+              
+              {/* Mobile: Horizontal Scrollable Pills */}
+              <div className="lg:hidden overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
+                <div className="flex gap-2 min-w-max">
+                  {services.map((service) => {
+                    const Icon = service.icon;
+                    const isSelected = selectedService.id === service.id;
+                    
+                    return (
+                      <button
+                        key={service.id}
+                        onClick={() => setSelectedService(service)}
+                        className={`flex items-center gap-2 px-4 py-2.5 rounded-full whitespace-nowrap transition-all duration-300 ${
+                          isSelected 
+                            ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25" 
+                            : "bg-card border border-border hover:border-primary/30"
+                        }`}
+                      >
+                        <Icon className={`w-4 h-4 ${isSelected ? "text-primary-foreground" : "text-primary"}`} />
+                        <span className={`text-sm font-medium ${isSelected ? "text-primary-foreground" : "text-foreground"}`}>
+                          {service.title}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Desktop: Vertical List */}
+              <div className="hidden lg:block space-y-3">
                 {services.map((service) => {
                   const Icon = service.icon;
                   const isSelected = selectedService.id === service.id;
@@ -196,49 +225,49 @@ const Leistungen = () => {
               </div>
             </div>
 
-            {/* Service Details - Right Side */}
+            {/* Service Details - Right Side / Below on Mobile */}
             <div className="lg:col-span-2">
               <Card variant="elevated" className="h-full">
-                <CardContent className="p-8">
+                <CardContent className="p-5 md:p-8">
                   {/* Service Header */}
-                  <div className="flex items-start gap-6 mb-8">
-                    <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center">
-                      <selectedService.icon className="w-10 h-10 text-primary" />
+                  <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6 mb-6 md:mb-8">
+                    <div className="w-14 h-14 md:w-20 md:h-20 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <selectedService.icon className="w-7 h-7 md:w-10 md:h-10 text-primary" />
                     </div>
                     <div>
-                      <h2 className="text-3xl font-display font-bold text-foreground mb-2">
+                      <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-2">
                         {selectedService.title}
                       </h2>
-                      <p className="text-lg text-muted-foreground">
+                      <p className="text-base md:text-lg text-muted-foreground">
                         {selectedService.description}
                       </p>
                     </div>
                   </div>
 
                   {/* Service Details List */}
-                  <div className="mb-8">
-                    <h3 className="text-xl font-semibold text-foreground mb-4">
+                  <div className="mb-6 md:mb-8">
+                    <h3 className="text-lg md:text-xl font-semibold text-foreground mb-3 md:mb-4">
                       Was wir bieten
                     </h3>
-                    <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                       {selectedService.details.map((detail, index) => (
                         <div 
                           key={index}
                           className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50"
                         >
-                          <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <Check className="w-4 h-4 text-primary" />
+                          <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Check className="w-3 h-3 md:w-4 md:h-4 text-primary" />
                           </div>
-                          <span className="text-foreground">{detail}</span>
+                          <span className="text-sm md:text-base text-foreground">{detail}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
                   {/* CTA */}
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                     <CTADropdownButton />
-                    <Button size="lg" variant="outline" asChild>
+                    <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
                       <Link to={`/leistungen/${selectedService.id}`}>Mehr erfahren</Link>
                     </Button>
                   </div>
@@ -250,46 +279,46 @@ const Leistungen = () => {
       </section>
 
       {/* Additional Info Section */}
-      <section className="py-16 bg-secondary/30">
+      <section className="py-12 md:py-16 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card variant="flat" className="text-center p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+            <Card variant="flat" className="text-center p-4 md:p-6">
               <CardContent className="p-0">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Check className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <Check className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                 </div>
-                <h3 className="font-display font-semibold text-lg text-foreground mb-2">
+                <h3 className="font-display font-semibold text-base md:text-lg text-foreground mb-2">
                   Kostenlose Beratung
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-sm md:text-base text-muted-foreground">
                   Wir beraten Sie unverbindlich zu allen Leistungen und Fördermöglichkeiten.
                 </p>
               </CardContent>
             </Card>
             
-            <Card variant="flat" className="text-center p-6">
+            <Card variant="flat" className="text-center p-4 md:p-6">
               <CardContent className="p-0">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <HeartPulse className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <HeartPulse className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                 </div>
-                <h3 className="font-display font-semibold text-lg text-foreground mb-2">
+                <h3 className="font-display font-semibold text-base md:text-lg text-foreground mb-2">
                   Individuelle Pflege
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-sm md:text-base text-muted-foreground">
                   Jeder Pflegeplan wird individuell auf Ihre Bedürfnisse abgestimmt.
                 </p>
               </CardContent>
             </Card>
             
-            <Card variant="flat" className="text-center p-6">
+            <Card variant="flat" className="text-center p-4 md:p-6 sm:col-span-2 md:col-span-1">
               <CardContent className="p-0">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Activity className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <Activity className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                 </div>
-                <h3 className="font-display font-semibold text-lg text-foreground mb-2">
+                <h3 className="font-display font-semibold text-base md:text-lg text-foreground mb-2">
                   24/7 Erreichbarkeit
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-sm md:text-base text-muted-foreground">
                   Wir sind rund um die Uhr für Sie da – auch an Wochenenden und Feiertagen.
                 </p>
               </CardContent>
