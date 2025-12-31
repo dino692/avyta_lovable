@@ -9,15 +9,25 @@ const locations = [
 ];
 
 const stadtteile = [
-  { name: "Bornheim", link: "/standorte/frankfurt/bornheim" },
   { name: "Bockenheim", link: "/standorte/frankfurt/bockenheim" },
-  { name: "Griesheim", link: "/standorte/frankfurt/griesheim" },
+  { name: "Bornheim", link: "/standorte/frankfurt/bornheim" },
+  { name: "Dornbusch", link: "/standorte/frankfurt/dornbusch" },
+  { name: "Eckenheim", link: "/standorte/frankfurt/eckenheim" },
+  { name: "Eschersheim", link: "/standorte/frankfurt/eschersheim" },
   { name: "Ginnheim", link: "/standorte/frankfurt/ginnheim" },
-  { name: "Sachsenhausen", link: "/standorte/frankfurt/sachsenhausen" },
-  { name: "Praunheim", link: "/standorte/frankfurt/praunheim" },
-  { name: "Niederrad", link: "/standorte/frankfurt/niederrad" },
+  { name: "Griesheim", link: "/standorte/frankfurt/griesheim" },
+  { name: "Heddernheim", link: "/standorte/frankfurt/heddernheim" },
   { name: "Höchst", link: "/standorte/frankfurt/hoechst" },
+  { name: "Nieder-Eschbach", link: "/standorte/frankfurt/nieder-eschbach" },
+  { name: "Niederrad", link: "/standorte/frankfurt/niederrad" },
+  { name: "Nordend", link: "/standorte/frankfurt/nordend" },
+  { name: "Ostend", link: "/standorte/frankfurt/ostend" },
+  { name: "Praunheim", link: "/standorte/frankfurt/praunheim" },
+  { name: "Preungesheim", link: "/standorte/frankfurt/preungesheim" },
   { name: "Rödelheim", link: "/standorte/frankfurt/roedelheim" },
+  { name: "Sachsenhausen", link: "/standorte/frankfurt/sachsenhausen" },
+  { name: "Seckbach", link: "/standorte/frankfurt/seckbach" },
+  { name: "Westend", link: "/standorte/frankfurt/westend" },
 ];
 
 const LocationsSection = () => {
