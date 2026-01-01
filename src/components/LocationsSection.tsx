@@ -9,12 +9,12 @@ const locations = [
 ];
 
 const stadtteile = [
-  { name: "Bockenheim", link: "/standorte/frankfurt/bockenheim" },
+  { name: "Bockenheim", link: "/standorte/frankfurt/pflegedienst-bockenheim" },
   { name: "Bornheim", link: "/standorte/frankfurt/bornheim" },
   { name: "Dornbusch", link: "/standorte/frankfurt/dornbusch" },
   { name: "Eckenheim", link: "/standorte/frankfurt/eckenheim" },
   { name: "Eschersheim", link: "/standorte/frankfurt/eschersheim" },
-  { name: "Ginnheim", link: "/standorte/frankfurt/ginnheim" },
+  { name: "Ginnheim", link: "/standorte/frankfurt/pflegedienst-ginnheim" },
   { name: "Griesheim", link: "/standorte/frankfurt/griesheim" },
   { name: "Heddernheim", link: "/standorte/frankfurt/heddernheim" },
   { name: "Höchst", link: "/standorte/frankfurt/hoechst" },
@@ -22,10 +22,10 @@ const stadtteile = [
   { name: "Niederrad", link: "/standorte/frankfurt/niederrad" },
   { name: "Nordend", link: "/standorte/frankfurt/nordend" },
   { name: "Ostend", link: "/standorte/frankfurt/ostend" },
-  { name: "Praunheim", link: "/standorte/frankfurt/praunheim" },
+  { name: "Praunheim", link: "/standorte/frankfurt/pflegedienst-praunheim" },
   { name: "Preungesheim", link: "/standorte/frankfurt/preungesheim" },
-  { name: "Rödelheim", link: "/standorte/frankfurt/roedelheim" },
-  { name: "Sachsenhausen", link: "/standorte/frankfurt/sachsenhausen" },
+  { name: "Rödelheim", link: "/standorte/frankfurt/pflegedienst-roedelheim" },
+  { name: "Sachsenhausen", link: "/standorte/frankfurt/pflegedienst-frankfurt-sachsenhausen" },
   { name: "Seckbach", link: "/standorte/frankfurt/seckbach" },
   { name: "Westend", link: "/standorte/frankfurt/westend" },
 ];

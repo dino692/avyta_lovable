@@ -13,12 +13,12 @@ import {
 } from "@/components/ui/accordion";
 
 const stadtteile = [
-  { name: "Bockenheim", href: "/standorte/frankfurt/bockenheim" },
+  { name: "Bockenheim", href: "/standorte/frankfurt/pflegedienst-bockenheim" },
   { name: "Bornheim", href: "/standorte/frankfurt/bornheim" },
   { name: "Dornbusch", href: "/standorte/frankfurt/dornbusch" },
   { name: "Eckenheim", href: "/standorte/frankfurt/eckenheim" },
   { name: "Eschersheim", href: "/standorte/frankfurt/eschersheim" },
-  { name: "Ginnheim", href: "/standorte/frankfurt/ginnheim" },
+  { name: "Ginnheim", href: "/standorte/frankfurt/pflegedienst-ginnheim" },
   { name: "Griesheim", href: "/standorte/frankfurt/griesheim" },
   { name: "Heddernheim", href: "/standorte/frankfurt/heddernheim" },
   { name: "Höchst", href: "/standorte/frankfurt/hoechst" },
@@ -26,10 +26,10 @@ const stadtteile = [
   { name: "Niederrad", href: "/standorte/frankfurt/niederrad" },
   { name: "Nordend", href: "/standorte/frankfurt/nordend" },
   { name: "Ostend", href: "/standorte/frankfurt/ostend" },
-  { name: "Praunheim", href: "/standorte/frankfurt/praunheim" },
+  { name: "Praunheim", href: "/standorte/frankfurt/pflegedienst-praunheim" },
   { name: "Preungesheim", href: "/standorte/frankfurt/preungesheim" },
-  { name: "Rödelheim", href: "/standorte/frankfurt/roedelheim" },
-  { name: "Sachsenhausen", href: "/standorte/frankfurt/sachsenhausen" },
+  { name: "Rödelheim", href: "/standorte/frankfurt/pflegedienst-roedelheim" },
+  { name: "Sachsenhausen", href: "/standorte/frankfurt/pflegedienst-frankfurt-sachsenhausen" },
   { name: "Seckbach", href: "/standorte/frankfurt/seckbach" },
   { name: "Westend", href: "/standorte/frankfurt/westend" },
 ];

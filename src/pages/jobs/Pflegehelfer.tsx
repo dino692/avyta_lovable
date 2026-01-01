@@ -14,10 +14,10 @@ import {
 } from "@/components/ui/accordion";
 
 const stellenangebote = [
-  { title: "Pflegefachkraft in Frankfurt", href: "/jobs/pflegefachkraft", icon: Sparkles },
-  { title: "Pflegehelfer/in in Frankfurt", href: "/jobs/pflegehelfer", icon: Heart },
-  { title: "Pflegehilfskraft in Frankfurt", href: "/jobs/pflegehilfskraft", icon: Users },
-  { title: "Haushaltshilfen in Frankfurt", href: "/jobs/haushaltshilfe", icon: Home },
+  { title: "Pflegefachkraft in Frankfurt", href: "/karriere/pflegefachkraft-frankfurt", icon: Sparkles },
+  { title: "Pflegehelfer/in in Frankfurt", href: "/karriere/pflegehelfer-frankfurt", icon: Heart },
+  { title: "Pflegehilfskraft in Frankfurt", href: "/karriere/pflegehilfskraft-frankfurt", icon: Users },
+  { title: "Haushaltshilfen in Frankfurt", href: "/karriere/haushaltshilfe-frankfurt", icon: Home },
 ];
 
 const aufgaben = [

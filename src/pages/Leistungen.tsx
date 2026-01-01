@@ -85,7 +85,7 @@ const services = [
     ],
   },
   {
-    id: "pflegeberatung",
+    id: "pflegeberatung-frankfurt",
     icon: FileText,
     title: "Pflegeberatung",
     shortDescription: "Kostenlose Beratung zu Pflegeleistungen",
@@ -100,7 +100,7 @@ const services = [
     ],
   },
   {
-    id: "verhinderungspflege",
+    id: "verhinderungspflege-frankfurt",
     icon: UserCheck,
     title: "Verhinderungspflege",
     shortDescription: "Vertretung für pflegende Angehörige",

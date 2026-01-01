@@ -9,6 +9,8 @@ import teamGroupImage from "@/assets/team/team-group.jpg";
 import jasminaMuellerImage from "@/assets/team/jasmina-mueller.webp";
 import prokuristImage from "@/assets/team/prokurist.webp";
 import assistenzImage from "@/assets/team/assistenz.webp";
+import weihnachtsfeier01 from "@/assets/team/weihnachtsfeier-2023-01.webp";
+import weihnachtsfeier02 from "@/assets/team/weihnachtsfeier-2023-02.webp";
 
 const teamMembers = [
   {
@@ -62,16 +64,35 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Team Group Image */}
+      {/* Team Group Image & Gallery */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto space-y-6">
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
                 src={teamGroupImage}
                 alt="Das AVYTA Team - Ambulanter Pflegedienst Frankfurt"
                 className="w-full h-auto"
               />
+            </div>
+            <div className="text-center">
+              <h3 className="font-display text-xl font-semibold text-foreground mb-4">Weihnachtsfeier 2023</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src={weihnachtsfeier01}
+                  alt="AVYTA Team Weihnachtsfeier 2023 - Gruppenfoto"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src={weihnachtsfeier02}
+                  alt="AVYTA Team Weihnachtsfeier 2023 - Teamfoto"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
