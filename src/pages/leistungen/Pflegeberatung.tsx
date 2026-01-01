@@ -35,7 +35,7 @@ const Pflegeberatung = () => {
         <title>Avyta Pflegeberatung in Frankfurt | Unterstützung mit Herz | AVYTA</title>
         <meta name="description" content="Pflegeberatung in Frankfurt von Avyta. Individuelle Pflegepläne, Unterstützung bei Anträgen und Koordination von Pflegedienstleistungen. Kostenlose Beratung!" />
         <meta name="keywords" content="Pflegeberatung Frankfurt, Pflegeplanung, Häusliche Pflege Beratung" />
-        <link rel="canonical" href="https://www.avyta.de/leistungen/pflegeberatung" />
+        <link rel="canonical" href="https://www.avyta.de/leistungen/pflegeberatung-frankfurt" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -289,7 +289,7 @@ const Pflegeberatung = () => {
                   <Link to="/leistungen/24-stunden-pflege">24-Stunden-Pflege</Link>
                 </Button>
                 <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
-                  <Link to="/leistungen/verhinderungspflege">Verhinderungspflege</Link>
+                  <Link to="/leistungen/verhinderungspflege-frankfurt">Verhinderungspflege</Link>
                 </Button>
               </div>
             </div>

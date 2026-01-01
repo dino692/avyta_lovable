@@ -74,19 +74,19 @@ const App = () => (
             <Route path="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" element={<Intensivpflege />} />
             <Route path="/leistungen/haushaltshilfe" element={<Haushaltshilfe />} />
             <Route path="/leistungen/24-stunden-pflege" element={<VierundzwanzigStunden />} />
-            <Route path="/leistungen/pflegeberatung" element={<Pflegeberatung />} />
-            <Route path="/leistungen/verhinderungspflege" element={<Verhinderungspflege />} />
+            <Route path="/leistungen/pflegeberatung-frankfurt" element={<Pflegeberatung />} />
+            <Route path="/leistungen/verhinderungspflege-frankfurt" element={<Verhinderungspflege />} />
             <Route path="/standorte/frankfurt" element={<Frankfurt />} />
             <Route path="/standorte/bad-vilbel" element={<BadVilbel />} />
             <Route path="/standorte/frankfurt/bornheim" element={<Bornheim />} />
-            <Route path="/standorte/frankfurt/bockenheim" element={<Bockenheim />} />
+            <Route path="/standorte/frankfurt/pflegedienst-bockenheim" element={<Bockenheim />} />
             <Route path="/standorte/frankfurt/griesheim" element={<Griesheim />} />
-            <Route path="/standorte/frankfurt/sachsenhausen" element={<Sachsenhausen />} />
+            <Route path="/standorte/frankfurt/pflegedienst-frankfurt-sachsenhausen" element={<Sachsenhausen />} />
             <Route path="/standorte/frankfurt/niederrad" element={<Niederrad />} />
             <Route path="/standorte/frankfurt/hoechst" element={<Hoechst />} />
-            <Route path="/standorte/frankfurt/roedelheim" element={<Roedelheim />} />
-            <Route path="/standorte/frankfurt/praunheim" element={<Praunheim />} />
-            <Route path="/standorte/frankfurt/ginnheim" element={<Ginnheim />} />
+            <Route path="/standorte/frankfurt/pflegedienst-roedelheim" element={<Roedelheim />} />
+            <Route path="/standorte/frankfurt/pflegedienst-praunheim" element={<Praunheim />} />
+            <Route path="/standorte/frankfurt/pflegedienst-ginnheim" element={<Ginnheim />} />
             <Route path="/standorte/frankfurt/nordend" element={<Nordend />} />
             <Route path="/standorte/frankfurt/ostend" element={<Ostend />} />
             <Route path="/standorte/frankfurt/westend" element={<Westend />} />
@@ -110,11 +110,11 @@ const App = () => (
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
             <Route path="/sitemap" element={<Sitemap />} />
-            <Route path="/jobs/stellenangebote" element={<Stellenangebote />} />
-            <Route path="/jobs/pflegehelfer" element={<Pflegehelfer />} />
-            <Route path="/jobs/pflegehilfskraft" element={<Pflegehilfskraft />} />
-            <Route path="/jobs/pflegefachkraft" element={<Pflegefachkraft />} />
-            <Route path="/jobs/haushaltshilfe" element={<HaushaltshilfeJob />} />
+            <Route path="/karriere/stellenangebote-pflege-frankfurt" element={<Stellenangebote />} />
+            <Route path="/karriere/pflegehelfer-frankfurt" element={<Pflegehelfer />} />
+            <Route path="/karriere/pflegehilfskraft-frankfurt" element={<Pflegehilfskraft />} />
+            <Route path="/karriere/pflegefachkraft-frankfurt" element={<Pflegefachkraft />} />
+            <Route path="/karriere/haushaltshilfe-frankfurt" element={<HaushaltshilfeJob />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

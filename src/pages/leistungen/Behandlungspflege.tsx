@@ -266,10 +266,10 @@ const Behandlungspflege = () => {
                   <Link to="/leistungen/24-stunden-pflege">24-Stunden-Pflege</Link>
                 </Button>
                 <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
-                  <Link to="/leistungen/pflegeberatung">Pflegeberatung</Link>
+                  <Link to="/leistungen/pflegeberatung-frankfurt">Pflegeberatung</Link>
                 </Button>
                 <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
-                  <Link to="/leistungen/verhinderungspflege">Verhinderungspflege</Link>
+                  <Link to="/leistungen/verhinderungspflege-frankfurt">Verhinderungspflege</Link>
                 </Button>
               </div>
             </div>

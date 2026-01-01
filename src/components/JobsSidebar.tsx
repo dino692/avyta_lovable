@@ -3,11 +3,11 @@ import { Briefcase, Sparkles, Users, Heart, Home } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const jobLinks = [
-  { name: "Alle Stellenangebote", href: "/jobs/stellenangebote", icon: Briefcase },
-  { name: "Pflegefachkraft", href: "/jobs/pflegefachkraft", icon: Sparkles },
-  { name: "Pflegehilfskraft", href: "/jobs/pflegehilfskraft", icon: Users },
-  { name: "Pflegehelfer/in", href: "/jobs/pflegehelfer", icon: Heart },
-  { name: "Haushaltshilfe", href: "/jobs/haushaltshilfe", icon: Home },
+  { name: "Alle Stellenangebote", href: "/karriere/stellenangebote-pflege-frankfurt", icon: Briefcase },
+  { name: "Pflegefachkraft", href: "/karriere/pflegefachkraft-frankfurt", icon: Sparkles },
+  { name: "Pflegehilfskraft", href: "/karriere/pflegehilfskraft-frankfurt", icon: Users },
+  { name: "Pflegehelfer/in", href: "/karriere/pflegehelfer-frankfurt", icon: Heart },
+  { name: "Haushaltshilfe", href: "/karriere/haushaltshilfe-frankfurt", icon: Home },
 ];
 
 const JobsSidebar = () => {

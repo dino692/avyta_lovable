@@ -28,8 +28,8 @@ const footerLinks = {
       { name: "Intensivpflege", href: "/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" },
       { name: "Haushaltshilfe", href: "/leistungen/haushaltshilfe" },
       { name: "24-Stunden-Pflege", href: "/leistungen/24-stunden-pflege" },
-      { name: "Pflegeberatung", href: "/leistungen/pflegeberatung" },
-      { name: "Verhinderungspflege", href: "/leistungen/verhinderungspflege" },
+      { name: "Pflegeberatung", href: "/leistungen/pflegeberatung-frankfurt" },
+      { name: "Verhinderungspflege", href: "/leistungen/verhinderungspflege-frankfurt" },
     ],
   },
   company: {

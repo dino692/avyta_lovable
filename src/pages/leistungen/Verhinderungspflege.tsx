@@ -58,7 +58,7 @@ const Verhinderungspflege = () => {
         <title>Avyta Verhinderungspflege in Frankfurt | Ihre Zeit liegt uns am Herzen | AVYTA</title>
         <meta name="description" content="Verhinderungspflege in Frankfurt von Avyta. Professionelle Vertretung pflegender Angehöriger bei Urlaub, Krankheit oder Erholung. Grundpflege, Behandlungspflege und Intensivpflege. Jetzt beraten lassen!" />
         <meta name="keywords" content="Verhinderungspflege Frankfurt, Kurzzeitpflege, Urlaubsvertretung Pflege" />
-        <link rel="canonical" href="https://www.avyta.de/leistungen/verhinderungspflege" />
+        <link rel="canonical" href="https://www.avyta.de/leistungen/verhinderungspflege-frankfurt" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -280,7 +280,7 @@ const Verhinderungspflege = () => {
                   <Link to="/leistungen/24-stunden-pflege">24-Stunden-Pflege</Link>
                 </Button>
                 <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
-                  <Link to="/leistungen/pflegeberatung">Pflegeberatung</Link>
+                  <Link to="/leistungen/pflegeberatung-frankfurt">Pflegeberatung</Link>
                 </Button>
               </div>
             </div>

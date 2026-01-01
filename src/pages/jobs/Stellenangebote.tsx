@@ -16,25 +16,25 @@ import {
 const stellenangebote = [
   { 
     title: "Pflegefachkräfte", 
-    href: "/jobs/pflegefachkraft", 
+    href: "/karriere/pflegefachkraft-frankfurt", 
     icon: Sparkles,
     description: "Als Pflegefachkraft übernehmen Sie die medizinische Versorgung von Patienten in der häuslichen Pflege. Sie stehen in engem Kontakt mit Pflegebedürftigen und ihren Angehörigen und koordinieren die Aufgaben Ihrer Kollegen."
   },
   { 
     title: "Pflegehelfer (m/w/d)", 
-    href: "/jobs/pflegehelfer", 
+    href: "/karriere/pflegehelfer-frankfurt", 
     icon: Heart,
     description: "Nach einjähriger Ausbildung an einer staatlich anerkannten Krankenfachschule können Sie als Pflegehelfer im ambulanten Dienst tätig werden. Diese Anstellungsform ist für Berufseinsteiger und Berufswechsler besonders interessant."
   },
   { 
     title: "Pflegehilfskraft", 
-    href: "/jobs/pflegehilfskraft", 
+    href: "/karriere/pflegehilfskraft-frankfurt", 
     icon: Users,
     description: "Pflegehilfskräfte begleiten unsere Fachkräfte im ambulanten Dienst und liefern körperliche und soziale Unterstützung. Von der Aufstellung von Gehhilfen und Rollstühlen bis hin zum Anziehen von Kompressionsstrümpfen erwarten Sie als Hilfskraft täglich neue Aufgaben."
   },
   { 
     title: "Haushaltshilfen", 
-    href: "/jobs/haushaltshilfe", 
+    href: "/karriere/haushaltshilfe-frankfurt", 
     icon: Home,
     description: "Unsere ambulante Pflege Stellenangebote für Frankfurt stehen auch für Haushaltshilfen ohne besondere Vorausbildung offen. Im ambulanten Einsatz tragen Sie mit der Erledigung von Haushaltsaufgaben wie Kochen, Wäsche waschen oder Reinigen zum Wohlbefinden von Pflegebedürftigen bei."
   },
