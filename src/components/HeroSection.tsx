@@ -75,7 +75,7 @@ const HeroSection = () => {
           <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video">
               <iframe
-                src="https://www.youtube.com/embed/ITIyAG6rOUY?si=tPuFV7w-FSBCewNE"
+                src="https://www.youtube-nocookie.com/embed/ITIyAG6rOUY?si=tPuFV7w-FSBCewNE"
                 title="AVYTA Pflegedienst"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
