@@ -129,7 +129,7 @@ const Leistungen = () => {
         <meta property="og:description" content="Von der Grundpflege bis zur spezialisierten Intensivpflege – alle Leistungen aus einer Hand." />
         <link rel="canonical" href="https://www.avyta.de/leistungen" />
       </Helmet>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background overflow-x-hidden">
         <Header />
       
       {/* Hero Section */}
@@ -161,8 +161,8 @@ const Leistungen = () => {
               </h2>
               
               {/* Mobile: Horizontal Scrollable Pills */}
-              <div className="lg:hidden overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
-                <div className="flex gap-2 min-w-max">
+              <div className="lg:hidden overflow-x-auto pb-4 scrollbar-hide">
+                <div className="flex flex-wrap gap-2">
                   {services.map((service) => {
                     const Icon = service.icon;
                     const isSelected = selectedService.id === service.id;
@@ -171,7 +171,7 @@ const Leistungen = () => {
                       <button
                         key={service.id}
                         onClick={() => setSelectedService(service)}
-                        className={`flex items-center gap-2 px-4 py-2.5 rounded-full whitespace-nowrap transition-all duration-300 ${
+                        className={`flex items-center gap-2 px-3 py-2 rounded-full transition-all duration-300 ${
                           isSelected 
                             ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25" 
                             : "bg-card border border-border hover:border-primary/30"
