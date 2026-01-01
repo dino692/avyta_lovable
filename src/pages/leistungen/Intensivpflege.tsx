@@ -46,7 +46,7 @@ const Intensivpflege = () => {
         <title>Ausserklinische Intensivpflege in Frankfurt am Main | AVYTA</title>
         <meta name="description" content="Spezialisierte ausserklinische Intensivpflege in Frankfurt am Main. Professionelle Betreuung für beatmungspflichtige Patienten zu Hause. Über 10 Jahre Erfahrung. Jetzt beraten lassen!" />
         <meta name="keywords" content="Intensivpflege Frankfurt, Ausserklinische Intensivpflege, Beatmungspflege Frankfurt, Heimbeatmung" />
-        <link rel="canonical" href="https://www.avyta.de/leistungen/intensivpflege" />
+        <link rel="canonical" href="https://www.avyta.de/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -263,7 +263,7 @@ const Intensivpflege = () => {
                   <Link to="/leistungen/haushaltshilfe">Haushaltshilfe</Link>
                 </Button>
                 <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
-                  <Link to="/leistungen/24-stunden">24-Stunden-Pflege</Link>
+                  <Link to="/leistungen/24-stunden-pflege">24-Stunden-Pflege</Link>
                 </Button>
                 <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/pflegeberatung">Pflegeberatung</Link>

@@ -74,7 +74,7 @@ const VierundzwanzigStunden = () => {
         <title>24 Stunden Pflege in Frankfurt mit Avyta | AVYTA Pflegedienst</title>
         <meta name="description" content="24 Stunden Pflege in Frankfurt von Avyta. Rund-um-die-Uhr Betreuung zu Hause durch qualifizierte Pflegekräfte. Über 10 Jahre Erfahrung. Jetzt beraten lassen!" />
         <meta name="keywords" content="24 Stunden Pflege Frankfurt, Rund um die Uhr Pflege, Häusliche Pflege Frankfurt" />
-        <link rel="canonical" href="https://www.avyta.de/leistungen/24-stunden" />
+        <link rel="canonical" href="https://www.avyta.de/leistungen/24-stunden-pflege" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -318,7 +318,7 @@ const VierundzwanzigStunden = () => {
                   <Link to="/leistungen/grundpflege">Grundpflege</Link>
                 </Button>
                 <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
-                  <Link to="/leistungen/intensivpflege">Intensivpflege</Link>
+                  <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main">Intensivpflege</Link>
                 </Button>
                 <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/haushaltshilfe">Haushaltshilfe</Link>

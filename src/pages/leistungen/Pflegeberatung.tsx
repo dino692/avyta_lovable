@@ -280,13 +280,13 @@ const Pflegeberatung = () => {
                   <Link to="/leistungen/grundpflege">Grundpflege</Link>
                 </Button>
                 <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
-                  <Link to="/leistungen/intensivpflege">Intensivpflege</Link>
+                  <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main">Intensivpflege</Link>
                 </Button>
                 <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/haushaltshilfe">Haushaltshilfe</Link>
                 </Button>
                 <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
-                  <Link to="/leistungen/24-stunden">24-Stunden-Pflege</Link>
+                  <Link to="/leistungen/24-stunden-pflege">24-Stunden-Pflege</Link>
                 </Button>
                 <Button variant="outline" size="sm" className="text-xs md:text-sm" asChild>
                   <Link to="/leistungen/verhinderungspflege">Verhinderungspflege</Link>

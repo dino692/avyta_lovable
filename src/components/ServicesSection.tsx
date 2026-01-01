@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 const services = [
   { icon: Stethoscope, title: "Behandlungspflege", description: "Medizinische Versorgung nach ärztlicher Verordnung: Wundversorgung, Injektionen, Verbandswechsel.", link: "/leistungen/behandlungspflege" },
   { icon: Home, title: "Grundpflege", description: "Unterstützung bei der Körperpflege, An- und Auskleiden, Mobilität und alltäglichen Verrichtungen.", link: "/leistungen/grundpflege" },
-  { icon: Activity, title: "Intensivpflege", description: "Spezialisierte Betreuung für beatmungspflichtige Patienten und komplexe Pflegesituationen.", link: "/leistungen/intensivpflege" },
+  { icon: Activity, title: "Intensivpflege", description: "Spezialisierte Betreuung für beatmungspflichtige Patienten und komplexe Pflegesituationen.", link: "/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" },
   { icon: Utensils, title: "Haushaltshilfe", description: "Hilfe im Haushalt: Einkaufen, Kochen, Reinigung und Organisation des Alltags.", link: "/leistungen/haushaltshilfe" },
-  { icon: Clock, title: "24-Stunden-Pflege", description: "Rund-um-die-Uhr Betreuung zu Hause – die Alternative zum Pflegeheim.", link: "/leistungen/24-stunden" },
+  { icon: Clock, title: "24-Stunden-Pflege", description: "Rund-um-die-Uhr Betreuung zu Hause – die Alternative zum Pflegeheim.", link: "/leistungen/24-stunden-pflege" },
   { icon: FileText, title: "Pflegeberatung", description: "Kostenlose Beratung zu Pflegeleistungen, Pflegegrad und Ansprüchen.", link: "/leistungen/pflegeberatung" },
   { icon: UserCheck, title: "Verhinderungspflege", description: "Professionelle Vertretung für pflegende Angehörige bei Urlaub oder Krankheit.", link: "/leistungen/verhinderungspflege" },
 ];

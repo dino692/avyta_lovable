@@ -25,9 +25,9 @@ const footerLinks = {
     links: [
       { name: "Behandlungspflege", href: "/leistungen/behandlungspflege" },
       { name: "Grundpflege", href: "/leistungen/grundpflege" },
-      { name: "Intensivpflege", href: "/leistungen/intensivpflege" },
+      { name: "Intensivpflege", href: "/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" },
       { name: "Haushaltshilfe", href: "/leistungen/haushaltshilfe" },
-      { name: "24-Stunden-Pflege", href: "/leistungen/24-stunden" },
+      { name: "24-Stunden-Pflege", href: "/leistungen/24-stunden-pflege" },
       { name: "Pflegeberatung", href: "/leistungen/pflegeberatung" },
       { name: "Verhinderungspflege", href: "/leistungen/verhinderungspflege" },
     ],
