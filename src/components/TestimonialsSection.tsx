@@ -90,6 +90,7 @@ const TestimonialsSection = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <button 
                       onClick={() => setActiveVideo(index)}
+                      aria-label={`Video von ${testimonial.name} abspielen`}
                       className="relative w-24 h-24 rounded-full bg-white flex items-center justify-center transition-all duration-500 group-hover:scale-110 shadow-2xl"
                     >
                       {/* Pulse animation ring */}
@@ -186,6 +187,7 @@ const TestimonialsSection = () => {
             </div>
             <button 
               onClick={() => setActiveVideo(null)}
+              aria-label="Video schließen"
               className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors border border-white/20"
             >
               <X className="w-6 h-6 text-white" />
