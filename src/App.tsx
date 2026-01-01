@@ -40,10 +40,10 @@ import StadtteilTemplate from "./pages/standorte/StadtteilTemplate";
 import Blog from "./pages/Blog";
 import DemenzPflege from "./pages/blog/DemenzPflege";
 import PflegegradBeantragen from "./pages/blog/PflegegradBeantragen";
-import DiabetesImAlter from "./pages/blog/DiabetesImAlter";
 import VerhinderungspflegeNutzen from "./pages/blog/VerhinderungspflegeNutzen";
-import SturzprophylaxeTipps from "./pages/blog/SturzprophylaxeTipps";
-import AvytaTeamWaechst from "./pages/blog/AvytaTeamWaechst";
+import PflegegeldTabelle from "./pages/blog/PflegegeldTabelle";
+import EntlastungsbetragNutzen from "./pages/blog/EntlastungsbetragNutzen";
+import KombinationsleistungPflege from "./pages/blog/KombinationsleistungPflege";
 import Jobs from "./pages/Jobs";
 import PflegeJobs from "./pages/jobs/PflegeJobs";
 import Kontakt from "./pages/Kontakt";
@@ -100,10 +100,10 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/demenz-pflege-tipps" element={<DemenzPflege />} />
             <Route path="/blog/pflegegrad-beantragen" element={<PflegegradBeantragen />} />
-            <Route path="/blog/diabetes-im-alter" element={<DiabetesImAlter />} />
             <Route path="/blog/verhinderungspflege-nutzen" element={<VerhinderungspflegeNutzen />} />
-            <Route path="/blog/sturzprophylaxe-tipps" element={<SturzprophylaxeTipps />} />
-            <Route path="/blog/team-waechst" element={<AvytaTeamWaechst />} />
+            <Route path="/blog/pflegegeld-tabelle-2025" element={<PflegegeldTabelle />} />
+            <Route path="/blog/entlastungsbetrag-125-euro" element={<EntlastungsbetragNutzen />} />
+            <Route path="/blog/kombinationsleistung-pflege" element={<KombinationsleistungPflege />} />
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/jobs/pflege-jobs" element={<PflegeJobs />} />
             <Route path="/kontakt" element={<Kontakt />} />
