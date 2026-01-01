@@ -40,7 +40,7 @@ const services = [
     ],
   },
   {
-    id: "intensivpflege",
+    id: "ausserklinische-intensivpflege-frankfurt-am-main",
     icon: Activity,
     title: "Intensivpflege",
     shortDescription: "Spezialisierte Betreuung rund um die Uhr",
@@ -70,7 +70,7 @@ const services = [
     ],
   },
   {
-    id: "24-stunden",
+    id: "24-stunden-pflege",
     icon: Clock,
     title: "24-Stunden-Pflege",
     shortDescription: "Rund-um-die-Uhr Betreuung zu Hause",

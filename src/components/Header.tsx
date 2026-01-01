@@ -15,9 +15,9 @@ const leistungen: { name: string; href: string; description: string; icon: Lucid
   { name: "Alle Leistungen", href: "/leistungen", description: "Übersicht aller Pflegeleistungen", icon: FileText },
   { name: "Behandlungspflege", href: "/leistungen/behandlungspflege", description: "Medizinische Versorgung nach ärztlicher Verordnung", icon: Stethoscope },
   { name: "Grundpflege", href: "/leistungen/grundpflege", description: "Unterstützung bei alltäglichen Verrichtungen", icon: HandHelping },
-  { name: "Intensivpflege", href: "/leistungen/intensivpflege", description: "Betreuung für beatmungspflichtige Patienten", icon: HeartPulse },
+  { name: "Intensivpflege", href: "/leistungen/ausserklinische-intensivpflege-frankfurt-am-main", description: "Betreuung für beatmungspflichtige Patienten", icon: HeartPulse },
   { name: "Haushaltshilfe", href: "/leistungen/haushaltshilfe", description: "Hilfe im Haushalt und Alltag", icon: Home },
-  { name: "24-Stunden-Pflege", href: "/leistungen/24-stunden", description: "Rund-um-die-Uhr Betreuung zu Hause", icon: Clock },
+  { name: "24-Stunden-Pflege", href: "/leistungen/24-stunden-pflege", description: "Rund-um-die-Uhr Betreuung zu Hause", icon: Clock },
   { name: "Pflegeberatung", href: "/leistungen/pflegeberatung", description: "Beratung zu Pflegeleistungen und Ansprüchen", icon: MessageCircle },
   { name: "Verhinderungspflege", href: "/leistungen/verhinderungspflege", description: "Vertretung pflegender Angehöriger", icon: CalendarCheck },
 ];
