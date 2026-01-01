@@ -111,7 +111,7 @@ const blogPosts = [
     readTime: "5 Min.",
     author: "AVYTA Team",
     slug: "verhinderungspflege-nutzen",
-    image: "https://images.unsplash.com/photo-1516733968668-dbdce39c0651?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&h=400&fit=crop",
     featured: false,
   },
   {

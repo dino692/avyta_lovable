@@ -52,7 +52,7 @@ const VerhinderungspflegeNutzen = () => {
             {/* Featured Image */}
             <div className="max-w-4xl mx-auto mb-12">
               <img
-                src="https://images.unsplash.com/photo-1516733968668-dbdce39c0651?w=1200&h=600&fit=crop"
+                src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1200&h=600&fit=crop"
                 alt="Pflegerin mit Seniorin"
                 className="w-full rounded-2xl shadow-lg"
               />
