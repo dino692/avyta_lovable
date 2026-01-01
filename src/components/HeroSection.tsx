@@ -1,8 +1,13 @@
-import { FileText } from "lucide-react";
+import { useState } from "react";
+import { FileText, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CTADropdownButton from "@/components/CTADropdownButton";
 
+const YOUTUBE_VIDEO_ID = "ITIyAG6rOUY";
+
 const HeroSection = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-x-clip">
       {/* Background gradient */}
@@ -71,17 +76,39 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* YouTube Video */}
+          {/* YouTube Video - Lazy loaded */}
           <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/ITIyAG6rOUY?si=tPuFV7w-FSBCewNE"
-                title="AVYTA Pflegedienst"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video bg-muted">
+              {videoLoaded ? (
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&si=tPuFV7w-FSBCewNE`}
+                  title="AVYTA Pflegedienst"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              ) : (
+                <button
+                  onClick={() => setVideoLoaded(true)}
+                  aria-label="Video abspielen"
+                  className="absolute inset-0 w-full h-full cursor-pointer group"
+                >
+                  {/* YouTube thumbnail */}
+                  <img
+                    src={`https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`}
+                    alt="AVYTA Pflegedienst Video Vorschau"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  {/* Play button overlay */}
+                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+                    <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <Play className="w-10 h-10 text-primary-foreground ml-1" fill="currentColor" />
+                    </div>
+                  </div>
+                </button>
+              )}
             </div>
             
             {/* Floating card */}
