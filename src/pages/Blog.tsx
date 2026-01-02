@@ -339,15 +339,15 @@ const Blog = () => {
             <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">
               Erhalten Sie regelmäßig neue Artikel und Tipps direkt in Ihr Postfach.
             </p>
-            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <div className="relative flex-1">
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+              <div className="relative flex-1 min-w-[280px]">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input
                   type="email"
                   placeholder="Ihre E-Mail-Adresse"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="pl-10 h-12 bg-background border-border"
+                  className="pl-10 h-12 w-full bg-background border-border"
                   required
                 />
               </div>

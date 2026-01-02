@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NewsletterSection from "@/components/NewsletterSection";
 import JobsSidebar from "@/components/JobsSidebar";
 import { Heart, CheckCircle2, ArrowRight, Sparkles, Users, Home, Dumbbell, Infinity, Palette, Globe, CalendarCheck, Euro, Calendar, Car, Award, Gift, Building2, Shirt, Laptop } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -413,6 +414,7 @@ const Pflegehelfer = () => {
         </section>
       </main>
 
+      <NewsletterSection />
       <Footer />
     </>
   );

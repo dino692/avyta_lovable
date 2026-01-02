@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, Euro, Calculator, CheckCircle, ArrowRight } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 
@@ -203,6 +204,7 @@ const KombinationsleistungPflege = () => {
         </article>
       </main>
 
+      <NewsletterSection />
       <Footer />
     </>
   );

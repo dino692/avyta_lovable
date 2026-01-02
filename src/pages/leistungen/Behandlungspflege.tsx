@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NewsletterSection from "@/components/NewsletterSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Stethoscope, Users, FileCheck, Clock } from "lucide-react";
@@ -275,6 +276,7 @@ const Behandlungspflege = () => {
             </div>
           </section>
         </main>
+        <NewsletterSection />
         <Footer />
       </div>
     </>

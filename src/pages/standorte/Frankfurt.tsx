@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NewsletterSection from "@/components/NewsletterSection";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, ArrowRight, Phone, Clock, Heart, Shield, Users, Home, Stethoscope, CheckCircle, HelpCircle } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -387,6 +388,7 @@ const Frankfurt = () => {
             </div>
           </section>
         </main>
+        <NewsletterSection />
         <Footer />
       </div>
     </>

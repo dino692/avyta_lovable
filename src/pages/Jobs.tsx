@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NewsletterSection from "@/components/NewsletterSection";
 import { Briefcase, Users, Heart, Clock, MapPin, ArrowRight, CheckCircle2, Sparkles, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -142,6 +143,7 @@ const Jobs = () => {
 
       </main>
 
+      <NewsletterSection />
       <Footer />
     </>
   );

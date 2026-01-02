@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NewsletterSection from "@/components/NewsletterSection";
 import { MapPin } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 
@@ -37,6 +38,7 @@ const StadtteilTemplate = ({ name }: StadtteilTemplateProps) => {
             </div>
           </section>
         </main>
+        <NewsletterSection />
         <Footer />
       </div>
     </>

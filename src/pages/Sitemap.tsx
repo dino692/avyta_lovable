@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NewsletterSection from "@/components/NewsletterSection";
 import { Home, Users, Briefcase, FileText, MapPin, Phone, Heart, Scale, Shield } from "lucide-react";
 
 const sitemapData = [
@@ -131,6 +132,7 @@ const Sitemap = () => {
           </div>
         </div>
       </main>
+      <NewsletterSection />
       <Footer />
     </>
   );

@@ -121,7 +121,7 @@ const NewsletterSection = () => {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         required
-                        className="h-12"
+                        className="h-12 w-full min-w-[280px]"
                       />
                     </div>
                     <Button type="submit" variant="hero" size="lg" className="w-full group" disabled={isLoading}>

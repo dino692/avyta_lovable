@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NewsletterSection from "@/components/NewsletterSection";
 import JobsSidebar from "@/components/JobsSidebar";
 import { Users, CheckCircle2, MapPin, Clock, Euro, ArrowRight, Heart, Award, Car, Dumbbell, Gift, Home, Shirt, TrendingUp, Calendar, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -318,6 +319,7 @@ const Pflegehilfskraft = () => {
         </section>
       </main>
 
+      <NewsletterSection />
       <Footer />
     </>
   );
