@@ -35,13 +35,6 @@ const galleryCategories: GalleryCategory[] = [
       { src: weihnachtsfeier02, alt: "AVYTA Team Weihnachtsfeier 2023 - Teamfoto" },
     ],
   },
-  {
-    id: "team-alltag",
-    label: "Team Alltag",
-    images: [
-      { src: teamGroupImage, alt: "Das AVYTA Team - Ambulanter Pflegedienst Frankfurt" },
-    ],
-  },
 ];
 
 const teamMembers = [
@@ -94,6 +87,19 @@ const Team = () => {
             <p className="text-lg text-muted-foreground animate-fade-up" style={{ animationDelay: "0.1s" }}>
               Lernen Sie unser engagiertes Team kennen – Menschen mit Herz, Kompetenz und Leidenschaft für die Pflege.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Group Image */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <img
+              src={teamGroupImage}
+              alt="Das AVYTA Team - Ambulanter Pflegedienst Frankfurt"
+              className="w-full h-auto rounded-2xl shadow-lg"
+            />
           </div>
         </div>
       </section>
