@@ -56,7 +56,7 @@ const handler = async (req: Request): Promise<Response> => {
           firstname: firstName,
           lastname: lastName,
           lifecyclestage: "subscriber",
-          zugehoerigkeit: "avyta.de: Newsletter",
+          hs_lead_status: "NEW",
         },
       }),
     });
@@ -108,7 +108,6 @@ const handler = async (req: Request): Promise<Response> => {
               properties: {
                 firstname: firstName,
                 lastname: lastName,
-                zugehoerigkeit: "avyta.de: Newsletter",
               },
             }),
           });
