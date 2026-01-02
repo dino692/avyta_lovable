@@ -32,9 +32,9 @@ const AboutSection = () => {
               ))}
             </div>
           </div>
-          <div className="relative">
+          <div className="relative pb-16 lg:pb-0">
             <div className="relative z-10">
-              <div className="bg-primary rounded-2xl p-8 text-primary-foreground">
+              <div className="bg-primary rounded-2xl p-8 text-primary-foreground pb-24 lg:pb-8">
                 <h3 className="font-display text-2xl font-bold mb-4">Unsere Mission</h3>
                 <p className="leading-relaxed opacity-90 mb-6">
                   Im Laufe der Jahre und mit stetiger Nachfrage haben wir entschieden unsere Fähigkeiten zu erweitern und uns für ein Fachgebiet spezialisiert und zertifiziert: Demenz- und Diabetes Erkrankungen.
@@ -47,7 +47,7 @@ const AboutSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute -bottom-8 -right-8 bg-card rounded-xl p-6 shadow-lg border border-border">
+              <div className="absolute -bottom-8 right-4 lg:-right-8 bg-card rounded-xl p-6 shadow-lg border border-border">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
                     <div className="text-2xl font-display font-bold text-accent">20+</div>
