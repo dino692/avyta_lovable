@@ -14,6 +14,7 @@ import prokuristImage from "@/assets/team/prokurist.webp";
 import assistenzImage from "@/assets/team/assistenz.webp";
 import weihnachtsfeier01 from "@/assets/team/weihnachtsfeier-2023-01.webp";
 import weihnachtsfeier02 from "@/assets/team/weihnachtsfeier-2023-02.webp";
+import weihnachtsfeier2024_01 from "@/assets/team/weihnachtsfeier-2024-01.jpg";
 
 interface GalleryImage {
   src: string;
@@ -27,6 +28,13 @@ interface GalleryCategory {
 }
 
 const galleryCategories: GalleryCategory[] = [
+  {
+    id: "weihnachtsfeier-2024",
+    label: "Weihnachtsfeier 2024",
+    images: [
+      { src: weihnachtsfeier2024_01, alt: "AVYTA Team Weihnachtsfeier 2024 - Gruppenfoto" },
+    ],
+  },
   {
     id: "weihnachtsfeier-2023",
     label: "Weihnachtsfeier 2023",
