@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NewsletterSection from "@/components/NewsletterSection";
 import JobsSidebar from "@/components/JobsSidebar";
 import { Home, CheckCircle2, ArrowRight, Car, Calendar, Gift, Dumbbell, Award, Building2, Shirt, Euro, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -281,6 +282,7 @@ const HaushaltshilfeJob = () => {
         </section>
       </main>
 
+      <NewsletterSection />
       <Footer />
     </>
   );

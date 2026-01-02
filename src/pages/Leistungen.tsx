@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NewsletterSection from "@/components/NewsletterSection";
 import CTADropdownButton from "@/components/CTADropdownButton";
 
 const services = [
@@ -327,6 +328,7 @@ const Leistungen = () => {
         </div>
       </section>
 
+      <NewsletterSection />
       <Footer />
     </div>
     </>
