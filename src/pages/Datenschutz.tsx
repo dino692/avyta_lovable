@@ -300,23 +300,29 @@ const Datenschutz = () => {
               {/* Newsletter */}
               <section>
                 <h2 className="text-xl font-display font-semibold text-foreground mb-4">
-                  Newsletter und Postwerbung
+                  Newsletter
                 </h2>
 
-                <h3 className="text-lg font-semibold text-foreground mb-2">Brevo</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">HubSpot</h3>
                 <p className="text-muted-foreground leading-relaxed mb-2">
-                  <strong>Was ist Brevo?</strong> Dienst zum Versand von Newslettern und Nachrichten und zur Analyse des Empfängerverhaltens sowie zur Verwaltung von Marketingaktivitäten
+                  <strong>Was ist HubSpot?</strong> HubSpot ist eine CRM-Plattform für Marketing, Vertrieb und Kundenservice, die wir für die Verwaltung unserer Newsletter-Abonnenten nutzen.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-2">
-                  <strong>Wer verarbeitet Ihre Daten?</strong> Sendinblue GmbH, Köpenicker Str. 126, 10179 Berlin, Deutschland
+                  <strong>Wer verarbeitet Ihre Daten?</strong> HubSpot, Inc., 25 First Street, 2nd Floor, Cambridge, MA 02141, USA (zertifiziert unter dem EU-US Data Privacy Framework)
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Brevo ermöglicht uns die Verwaltung einer Datenbank mit E-Mail-Kontakten, Rufnummern oder jeglichen weiteren Kontaktinformationen, um mit Kunden und anderen Interessenten zu kommunizieren.
+                  Wenn Sie sich für unseren Newsletter anmelden, werden Ihre E-Mail-Adresse und Ihr Name an HubSpot übermittelt und dort gespeichert. HubSpot ermöglicht uns die Verwaltung unserer Newsletter-Abonnenten, den Versand von Newslettern sowie die Analyse des Öffnungs- und Klickverhaltens.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  <strong>Welche Daten werden gespeichert?</strong> E-Mail-Adresse, Name, Anmeldedatum, Interaktionsdaten (z.B. Öffnungen, Klicks).
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a) DSGVO (Einwilligung). Sie können Ihre Einwilligung jederzeit durch Klick auf den Abmeldelink in jedem Newsletter oder durch eine E-Mail an info@avyta.de widerrufen.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Weitere Informationen:{" "}
-                  <a href="https://www.brevo.com/de/legal/privacypolicy/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    https://www.brevo.com/de/legal/privacypolicy/
+                  <a href="https://legal.hubspot.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    https://legal.hubspot.com/privacy-policy
                   </a>
                 </p>
               </section>
