@@ -7,6 +7,7 @@ import { BookOpen, Heart, Stethoscope, Newspaper, Scale, ArrowRight, Calendar, C
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const categories = [
   {
@@ -160,16 +161,29 @@ const Blog = () => {
 
     setIsLoading(true);
     
-    // Simulate API call - replace with actual newsletter service integration
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Erfolgreich angemeldet!",
-      description: "Vielen Dank für Ihre Newsletter-Anmeldung.",
-    });
-    
-    setEmail("");
-    setIsLoading(false);
+    try {
+      const { data, error } = await supabase.functions.invoke("hubspot-newsletter", {
+        body: { email: email, name: "Blog Abonnent" },
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Erfolgreich angemeldet!",
+        description: "Vielen Dank für Ihre Newsletter-Anmeldung.",
+      });
+      
+      setEmail("");
+    } catch (error) {
+      console.error("Newsletter signup error:", error);
+      toast({
+        title: "Fehler",
+        description: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
