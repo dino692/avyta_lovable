@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { BookOpen, ArrowRight, CheckCircle, Download } from "lucide-react";
+import { BookOpen, ArrowRight, CheckCircle, Download, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const benefits = [
   "Checkliste: Erste Schritte bei Pflegebedürftigkeit",
@@ -14,12 +16,28 @@ const benefits = [
 const NewsletterSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "" });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.email && formData.name) {
+    if (!formData.email || !formData.name) return;
+
+    setIsLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("hubspot-newsletter", {
+        body: { email: formData.email, name: formData.name },
+      });
+
+      if (error) throw error;
+
       setIsSubmitted(true);
       setFormData({ name: "", email: "" });
+      toast.success("Erfolgreich angemeldet!");
+    } catch (error) {
+      console.error("Newsletter signup error:", error);
+      toast.error("Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -106,10 +124,14 @@ const NewsletterSection = () => {
                         className="h-12"
                       />
                     </div>
-                    <Button type="submit" variant="hero" size="lg" className="w-full group">
-                      <Download className="w-5 h-5" />
-                      Ratgeber herunterladen
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <Button type="submit" variant="hero" size="lg" className="w-full group" disabled={isLoading}>
+                      {isLoading ? (
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                      ) : (
+                        <Download className="w-5 h-5" />
+                      )}
+                      {isLoading ? "Wird gesendet..." : "Ratgeber herunterladen"}
+                      {!isLoading && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
                     </Button>
                   </form>
 
