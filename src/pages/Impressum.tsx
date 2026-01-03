@@ -36,7 +36,7 @@ const Impressum = () => {
                 <h2 className="text-xl font-display font-semibold text-foreground mb-4">
                   Geschäftsführer
                 </h2>
-                <p className="text-muted-foreground">Dino Lalic</p>
+                <p className="text-muted-foreground">Jasmina Müller</p>
               </section>
 
               <section>
