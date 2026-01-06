@@ -34,7 +34,7 @@ serve(async (req) => {
 
   try {
     const token = Deno.env.get("POSTMARK_SERVER_TOKEN");
-    const toEmail = Deno.env.get("CONTACT_TO_EMAIL") ?? "info@fulda-erp.de";
+    const toEmail = Deno.env.get("CONTACT_TO_EMAIL") ?? "chanu1993@gmail.com";
     const fromEmail = Deno.env.get("CONTACT_FROM_EMAIL");
 
     if (!token) return json({ error: "Missing POSTMARK_SERVER_TOKEN" }, 500);
