@@ -33,6 +33,8 @@ serve(async (req) => {
   }
 
   try {
+    console.log("send-contact-email: POSTMARK VERSION");
+    
     const token = Deno.env.get("POSTMARK_SERVER_TOKEN");
     const toEmail = Deno.env.get("CONTACT_TO_EMAIL") ?? "chanu1993@gmail.com";
     const fromEmail = Deno.env.get("CONTACT_FROM_EMAIL");
