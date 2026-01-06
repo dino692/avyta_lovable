@@ -36,6 +36,7 @@ const contactInfo = [
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
+    email: "",
     phone: "",
     message: "",
   });
@@ -51,6 +52,7 @@ const ContactSection = () => {
       const { data, error } = await supabase.functions.invoke("send-contact-email", {
         body: {
           name: formData.name,
+          email: formData.email,
           phone: formData.phone,
           message: formData.message,
         },
@@ -59,7 +61,7 @@ const ContactSection = () => {
       if (error) throw error;
 
       setIsSubmitted(true);
-      setFormData({ name: "", phone: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "" });
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error: any) {
       console.error("Error sending contact form:", error);
@@ -181,6 +183,21 @@ const ContactSection = () => {
                       name="name"
                       placeholder="Max Mustermann"
                       value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="h-14 text-lg border-2 border-border focus:border-primary bg-secondary/30 placeholder:text-muted-foreground/60"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                      Ihre E-Mail-Adresse *
+                    </label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="max@beispiel.de"
+                      value={formData.email}
                       onChange={handleChange}
                       required
                       className="h-14 text-lg border-2 border-border focus:border-primary bg-secondary/30 placeholder:text-muted-foreground/60"
