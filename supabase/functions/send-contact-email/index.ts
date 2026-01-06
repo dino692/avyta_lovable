@@ -1,108 +1,160 @@
-import { Resend } from "https://esm.sh/resend@2.0.0";
-
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-interface ContactEmailRequest {
-  name: string;
-  phone: string;
-  message: string;
+function json(body: unknown, status = 200) {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: { ...corsHeaders, "Content-Type": "application/json" },
+  });
 }
 
-const handler = async (req: Request): Promise<Response> => {
-  console.log("Contact form submission received");
+// Prevent HTML injection from user input
+function escapeHtml(input: string) {
+  return input
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
 
-  // Handle CORS preflight requests
+serve(async (req) => {
+  // CORS preflight
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+    return new Response("ok", { headers: corsHeaders });
+  }
+
+  if (req.method !== "POST") {
+    return json({ error: "Method not allowed" }, 405);
   }
 
   try {
-    const { name, phone, message }: ContactEmailRequest = await req.json();
+    const token = Deno.env.get("POSTMARK_SERVER_TOKEN");
+    const toEmail = Deno.env.get("CONTACT_TO_EMAIL") ?? "info@fulda-erp.de";
+    const fromEmail = Deno.env.get("CONTACT_FROM_EMAIL");
 
-    console.log("Processing contact form for:", name);
+    if (!token) return json({ error: "Missing POSTMARK_SERVER_TOKEN" }, 500);
+    if (!fromEmail) return json({ error: "Missing CONTACT_FROM_EMAIL" }, 500);
 
-    // Validate required fields
-    if (!name || !message) {
-      console.error("Missing required fields");
-      return new Response(
-        JSON.stringify({ error: "Name und Nachricht sind erforderlich" }),
-        {
-          status: 400,
-          headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      );
+    // Expecting these fields from your form
+    const body = await req.json().catch(() => ({}) as any);
+
+    const name = String(body?.name ?? "").trim();
+    const email = String(body?.email ?? "").trim();
+    const phone = String(body?.phone ?? "").trim();
+    const message = String(body?.message ?? "").trim();
+
+    // Optional: simple honeypot field (add hidden input "website" in the form)
+    const honeypot = String(body?.website ?? "").trim();
+    if (honeypot) {
+      // pretend success to bots
+      return json({ ok: true });
     }
 
-    // Send notification email to AVYTA
-    const emailResponse = await resend.emails.send({
-      from: "AVYTA Kontaktformular <onboarding@resend.dev>",
-      to: ["info@avyta.de"],
-      subject: `Neue Kontaktanfrage von ${name}`,
-      html: `
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background: #006A4E; color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
-            .content { background: #f9f9f9; padding: 20px; border-radius: 0 0 8px 8px; }
-            .field { margin-bottom: 15px; }
-            .label { font-weight: bold; color: #006A4E; }
-            .value { margin-top: 5px; padding: 10px; background: white; border-radius: 4px; }
-            .footer { text-align: center; margin-top: 20px; font-size: 12px; color: #666; }
-          </style>
-        </head>
-        <body>
-          <div class="container">
-            <div class="header">
-              <h1>Neue Kontaktanfrage</h1>
-            </div>
-            <div class="content">
-              <div class="field">
-                <div class="label">Name:</div>
-                <div class="value">${name}</div>
-              </div>
-              <div class="field">
-                <div class="label">Telefon:</div>
-                <div class="value">${phone || "Nicht angegeben"}</div>
-              </div>
-              <div class="field">
-                <div class="label">Nachricht:</div>
-                <div class="value">${message.replace(/\n/g, "<br>")}</div>
-              </div>
-            </div>
-            <div class="footer">
-              Diese E-Mail wurde über das Kontaktformular auf avyta.de gesendet.
-            </div>
-          </div>
-        </body>
-        </html>
-      `,
+    if (!name || !email || !message) {
+      return json({ error: "Missing fields: name, email, message" }, 400);
+    }
+
+    // Basic validation
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!emailOk) {
+      return json({ error: "Invalid email" }, 400);
+    }
+    if (message.length > 5000) {
+      return json({ error: "Message too long" }, 400);
+    }
+
+    // Escape for safe HTML output
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safePhone = escapeHtml(phone || "Nicht angegeben");
+    const safeMessage = escapeHtml(message).replace(/\n/g, "<br>");
+
+    const subject = `Neue Kontaktanfrage von ${safeName}`;
+
+    const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background: #006A4E; color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
+    .content { background: #f9f9f9; padding: 20px; border-radius: 0 0 8px 8px; }
+    .field { margin-bottom: 15px; }
+    .label { font-weight: bold; color: #006A4E; }
+    .value { margin-top: 5px; padding: 10px; background: white; border-radius: 4px; }
+    .footer { text-align: center; margin-top: 20px; font-size: 12px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Neue Kontaktanfrage</h1>
+    </div>
+
+    <div class="content">
+      <div class="field">
+        <div class="label">Name:</div>
+        <div class="value">${safeName}</div>
+      </div>
+
+      <div class="field">
+        <div class="label">E-Mail:</div>
+        <div class="value">${safeEmail}</div>
+      </div>
+
+      <div class="field">
+        <div class="label">Telefon:</div>
+        <div class="value">${safePhone}</div>
+      </div>
+
+      <div class="field">
+        <div class="label">Nachricht:</div>
+        <div class="value">${safeMessage}</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Diese E-Mail wurde über das Kontaktformular gesendet.
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+    const postmarkResp = await fetch("https://api.postmarkapp.com/email", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        "X-Postmark-Server-Token": token,
+      },
+      body: JSON.stringify({
+        From: fromEmail,
+        To: toEmail,
+        Subject: subject,
+        HtmlBody: html,
+        ReplyTo: email, // IMPORTANT: reply goes to the person who filled the form
+        // MessageStream: "outbound", // optional (defaults to outbound if not using streams)
+      }),
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    const postmarkData = await postmarkResp.json().catch(() => ({}));
 
-    return new Response(JSON.stringify({ success: true }), {
-      status: 200,
-      headers: { "Content-Type": "application/json", ...corsHeaders },
-    });
-  } catch (error: any) {
-    console.error("Error in send-contact-email function:", error);
-    return new Response(
-      JSON.stringify({ error: error.message }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    );
+    if (!postmarkResp.ok) {
+      console.error("Postmark error:", postmarkData);
+      return json({ error: "Postmark failed", details: postmarkData }, 502);
+    }
+
+    return json({ ok: true, postmark: postmarkData });
+  } catch (e) {
+    console.error("send-contact-email error:", e);
+    return json({ error: "Unexpected error", details: String(e) }, 500);
   }
-};
-
-Deno.serve(handler);
+});
