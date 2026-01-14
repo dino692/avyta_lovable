@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Award, Shield, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import { Award, Shield, Sparkles } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -51,12 +51,13 @@ const CertificatesSection = () => {
   return (
     <section className="py-32 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/[0.02] to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
       
-      {/* Decorative elements */}
+      {/* Animated orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-[20%] left-[5%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[20%] right-[5%] w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px]" />
+        <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[100px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-accent/15 rounded-full blur-[80px] animate-pulse" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -73,9 +74,9 @@ const CertificatesSection = () => {
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Qualität</span>
               <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
-                <path d="M2 10C50 4 150 4 198 10" stroke="url(#cert-gradient)" strokeWidth="4" strokeLinecap="round" />
+                <path d="M2 10C50 4 150 4 198 10" stroke="url(#gradient)" strokeWidth="4" strokeLinecap="round" />
                 <defs>
-                  <linearGradient id="cert-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="hsl(var(--primary))" />
                     <stop offset="100%" stopColor="hsl(var(--accent))" />
                   </linearGradient>
@@ -111,16 +112,13 @@ const CertificatesSection = () => {
                 <CarouselItem key={partner.name} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <div className="group relative">
                     {/* Card glow */}
-                    <div className="absolute -inset-px bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                    <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
-                    <div className="relative bg-white rounded-2xl p-8 border border-border/50 transition-all duration-500 h-[180px] flex items-center justify-center shadow-lg group-hover:shadow-2xl group-hover:border-primary/20 group-hover:-translate-y-1">
-                      {/* Decorative corner */}
-                      <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl from-primary/5 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                      
+                    <div className="relative bg-white rounded-2xl p-8 border border-gray-100 transition-all duration-500 h-[160px] flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:border-primary/20">
                       <img
                         src={partner.logo}
                         alt={partner.name}
-                        className="max-h-16 max-w-[140px] object-contain grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+                        className="max-h-16 max-w-[140px] object-contain grayscale-[30%] group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
                       />
                     </div>
                   </div>
@@ -129,24 +127,20 @@ const CertificatesSection = () => {
             </CarouselContent>
             
             {/* Navigation */}
-            <CarouselPrevious className="absolute -left-4 md:-left-16 top-1/2 -translate-y-1/2 bg-card/95 backdrop-blur-xl border-border/50 hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white hover:border-transparent transition-all duration-300 h-14 w-14 shadow-xl">
-              <ChevronLeft className="w-6 h-6" />
-            </CarouselPrevious>
-            <CarouselNext className="absolute -right-4 md:-right-16 top-1/2 -translate-y-1/2 bg-card/95 backdrop-blur-xl border-border/50 hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white hover:border-transparent transition-all duration-300 h-14 w-14 shadow-xl">
-              <ChevronRight className="w-6 h-6" />
-            </CarouselNext>
+            <CarouselPrevious className="absolute -left-4 md:-left-14 top-1/2 -translate-y-1/2 bg-card/95 backdrop-blur-sm border-primary/20 hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white hover:border-transparent transition-all duration-300 h-14 w-14 shadow-xl" />
+            <CarouselNext className="absolute -right-4 md:-right-14 top-1/2 -translate-y-1/2 bg-card/95 backdrop-blur-sm border-primary/20 hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white hover:border-transparent transition-all duration-300 h-14 w-14 shadow-xl" />
           </Carousel>
 
           {/* Dots */}
-          <div className="flex justify-center gap-2 mt-12">
+          <div className="flex justify-center gap-2 mt-10">
             {partners.map((_, index) => (
               <button
                 key={index}
                 onClick={() => api?.scrollTo(index)}
-                className={`h-3 rounded-full transition-all duration-300 ${
+                className={`h-2.5 rounded-full transition-all duration-300 ${
                   current === index 
-                    ? "w-10 bg-gradient-to-r from-primary to-accent shadow-lg shadow-primary/30" 
-                    : "w-3 bg-muted-foreground/20 hover:bg-muted-foreground/40"
+                    ? "w-10 bg-gradient-to-r from-primary to-accent" 
+                    : "w-2.5 bg-muted-foreground/30 hover:bg-muted-foreground/50"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -156,16 +150,12 @@ const CertificatesSection = () => {
 
         {/* Trust badge */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-5 px-8 py-5 bg-card/80 backdrop-blur-xl rounded-2xl border border-border/50 shadow-xl">
-            <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-              <Shield className="w-6 h-6 text-accent" />
-            </div>
-            <span className="text-base lg:text-lg font-bold text-foreground">
+          <div className="inline-flex items-center gap-4 px-8 py-5 bg-card/80 backdrop-blur-sm rounded-2xl border border-border/50 shadow-xl">
+            <Shield className="w-7 h-7 text-accent" />
+            <span className="text-base font-semibold text-foreground">
               Geprüfte Qualität • Alle Kassen zugelassen • MDK Note 1,6
             </span>
-            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-              <Sparkles className="w-6 h-6 text-primary" />
-            </div>
+            <Sparkles className="w-5 h-5 text-primary" />
           </div>
         </div>
       </div>

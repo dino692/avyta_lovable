@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle, MessageSquare, Loader2, Heart, Sparkles, AlertCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, MessageSquare, Loader2, Heart, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -82,67 +82,68 @@ const ContactSection = () => {
   return (
     <section className="py-32 relative overflow-hidden" id="contact">
       {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-accent" />
       
-      {/* Mesh gradient overlay */}
+      {/* Animated mesh */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-[20%] w-[600px] h-[600px] bg-white/10 rounded-full blur-[150px] animate-pulse" style={{ animationDuration: "6s" }} />
-        <div className="absolute bottom-0 right-[20%] w-[500px] h-[500px] bg-accent/40 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "2s", animationDuration: "8s" }} />
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-white/10 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-accent/30 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "1s" }} />
       </div>
       
-      {/* Decorative patterns */}
+      {/* Decorative circles */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-32 h-32 border-2 border-white rounded-full" />
-        <div className="absolute top-24 left-24 w-16 h-16 border border-white rounded-full" />
-        <div className="absolute bottom-10 right-10 w-48 h-48 border-2 border-white rounded-full" />
-        <div className="absolute bottom-28 right-28 w-20 h-20 border border-white rounded-full" />
-        <div className="absolute top-1/2 left-[15%] w-12 h-12 border border-white rounded-xl rotate-45" />
+        <div className="absolute top-10 left-10 w-40 h-40 border-2 border-white rounded-full" />
+        <div className="absolute top-32 left-32 w-20 h-20 border-2 border-white rounded-full" />
+        <div className="absolute bottom-10 right-10 w-60 h-60 border-2 border-white rounded-full" />
+        <div className="absolute bottom-32 right-32 w-28 h-28 border-2 border-white rounded-full" />
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-white rounded-lg rotate-45" />
       </div>
 
       {/* Floating icons */}
-      <div className="absolute top-40 right-24 text-white/5 animate-float hidden xl:block">
-        <Heart className="w-36 h-36" fill="currentColor" />
+      <div className="absolute top-40 right-20 text-white/10 animate-float hidden lg:block">
+        <Heart className="w-24 h-24" fill="currentColor" />
       </div>
-      <div className="absolute bottom-40 left-24 text-white/5 animate-float hidden xl:block" style={{ animationDelay: "2s" }}>
-        <Sparkles className="w-28 h-28" />
+      <div className="absolute bottom-40 left-20 text-white/10 animate-float hidden lg:block" style={{ animationDelay: "2s" }}>
+        <Sparkles className="w-20 h-20" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Contact Info */}
           <div className="space-y-10 text-white">
             <div>
-              <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 mb-8 shadow-2xl">
+              <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-8 shadow-xl">
                 <MessageSquare className="w-5 h-5" />
                 <span className="text-sm font-bold uppercase tracking-wider">Kontakt</span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
                 Wir freuen uns
                 <span className="block text-white/90">auf Sie</span>
               </h2>
-              <p className="text-xl text-white/75 leading-relaxed">
+              <p className="text-xl text-white/80 leading-relaxed">
                 Haben Sie Fragen oder möchten Sie ein unverbindliches Beratungsgespräch? 
                 Wir sind für Sie da.
               </p>
             </div>
 
             {/* Contact Cards */}
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-5">
               {contactInfo.map((item, index) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="group relative block"
+                  className="group relative"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="absolute inset-0 bg-white/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                  <div className="relative p-6 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 hover:bg-white/20 transition-all duration-500 group-hover:-translate-y-1">
+                  <div className="absolute inset-0 bg-white/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-500">
                     <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center flex-shrink-0 group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                      <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0 group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300">
                         <item.icon className="w-6 h-6" />
                       </div>
                       <div>
                         <div className="text-sm text-white/60 mb-1 font-medium">{item.label}</div>
-                        <div className="font-bold text-lg leading-tight">{item.value}</div>
+                        <div className="font-bold text-lg">{item.value}</div>
                       </div>
                     </div>
                   </div>
@@ -152,23 +153,17 @@ const ContactSection = () => {
 
             {/* Emergency card */}
             <div className="relative group">
-              <div className="absolute inset-0 bg-white/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
-              <div className="relative p-8 lg:p-10 rounded-3xl bg-white/15 backdrop-blur-xl border-2 border-white/30 shadow-2xl">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="relative">
-                    <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center">
-                      <AlertCircle className="w-6 h-6" />
-                    </div>
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-white rounded-full animate-ping" />
-                  </div>
-                  <h3 className="font-display font-bold text-2xl">Pflegenotfall?</h3>
-                </div>
+              <div className="absolute inset-0 bg-white/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative p-8 rounded-2xl bg-white/15 backdrop-blur-md border-2 border-white/30 shadow-2xl">
+                <h3 className="font-display font-bold text-2xl mb-3 flex items-center gap-3">
+                  <span className="text-3xl">🚨</span> Pflegenotfall?
+                </h3>
                 <p className="text-white/80 mb-6 text-lg">
                   Unsere Notfall-Hotline ist 24/7 erreichbar.
                 </p>
                 <a
                   href="tel:+496915391405"
-                  className="inline-flex items-center gap-4 px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-white/95 transition-all duration-300 shadow-2xl hover:scale-105 text-lg"
+                  className="inline-flex items-center gap-4 px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-white/95 transition-all duration-300 shadow-xl hover:scale-105 text-lg"
                 >
                   <Phone className="w-6 h-6" />
                   069 153 914 05
@@ -180,25 +175,22 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div className="relative">
             {/* Form glow */}
-            <div className="absolute -inset-6 bg-white/15 rounded-[3rem] blur-3xl" />
+            <div className="absolute -inset-4 bg-white/10 rounded-[2rem] blur-2xl" />
             
-            <div className="relative bg-white rounded-[2rem] p-10 lg:p-12 shadow-2xl">
-              {/* Decorative corner */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/5 to-transparent rounded-bl-[4rem]" />
-              
-              <h3 className="font-display font-bold text-3xl text-foreground mb-3 relative">
+            <div className="relative bg-white rounded-3xl p-10 md:p-12 shadow-2xl">
+              <h3 className="font-display font-bold text-3xl text-foreground mb-3">
                 Nachricht senden
               </h3>
-              <p className="text-muted-foreground text-lg mb-10 relative">
+              <p className="text-muted-foreground text-lg mb-10">
                 Schreiben Sie uns – wir melden uns schnellstmöglich!
               </p>
 
               {isSubmitted ? (
-                <div className="text-center py-16 relative">
-                  <div className="relative w-28 h-28 mx-auto mb-8">
-                    <div className="absolute inset-0 bg-emerald-500/30 rounded-3xl blur-xl animate-pulse" />
-                    <div className="relative w-full h-full rounded-3xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-2xl">
-                      <CheckCircle className="w-14 h-14 text-white" />
+                <div className="text-center py-16">
+                  <div className="relative w-24 h-24 mx-auto mb-8">
+                    <div className="absolute inset-0 bg-emerald-500/30 rounded-full blur-xl" />
+                    <div className="relative w-full h-full rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+                      <CheckCircle className="w-12 h-12 text-white" />
                     </div>
                   </div>
                   <h4 className="font-display font-bold text-3xl text-foreground mb-4">
@@ -209,9 +201,9 @@ const ContactSection = () => {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6 relative">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-bold text-foreground mb-3">
+                    <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-3">
                       Ihr Name *
                     </label>
                     <Input
@@ -225,7 +217,7 @@ const ContactSection = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-bold text-foreground mb-3">
+                    <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-3">
                       Ihre E-Mail-Adresse *
                     </label>
                     <Input
@@ -240,7 +232,7 @@ const ContactSection = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-bold text-foreground mb-3">
+                    <label htmlFor="phone" className="block text-sm font-semibold text-foreground mb-3">
                       Ihre Telefonnummer
                     </label>
                     <Input
@@ -254,7 +246,7 @@ const ContactSection = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-bold text-foreground mb-3">
+                    <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-3">
                       Ihre Nachricht *
                     </label>
                     <Textarea
@@ -271,7 +263,7 @@ const ContactSection = () => {
                   <Button 
                     type="submit" 
                     size="lg" 
-                    className="w-full h-16 text-lg font-bold bg-gradient-to-r from-primary via-primary to-accent hover:opacity-90 text-white shadow-xl hover:shadow-2xl hover:shadow-primary/20 group rounded-xl"
+                    className="w-full h-16 text-lg font-bold bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white shadow-xl group rounded-xl"
                     disabled={isLoading}
                   >
                     {isLoading ? (
@@ -281,10 +273,8 @@ const ContactSection = () => {
                       </>
                     ) : (
                       <>
-                        <span>Nachricht senden</span>
-                        <div className="w-10 h-10 ml-3 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                          <Send className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                        </div>
+                        Nachricht senden
+                        <Send className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
                       </>
                     )}
                   </Button>
