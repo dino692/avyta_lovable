@@ -9,15 +9,15 @@ const HeroSection = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-20 pb-24 lg:pb-32">
       {/* Ultra modern gradient background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.15),transparent_50%),radial-gradient(ellipse_at_bottom_left,hsl(var(--accent)/0.1),transparent_50%),linear-gradient(180deg,hsl(var(--background)),hsl(var(--secondary)/0.5))]" />
       
-      {/* Animated morphing shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-[10%] right-[10%] w-[500px] h-[500px] rounded-[40%_60%_70%_30%/40%_50%_60%_50%] bg-gradient-to-br from-primary/20 via-primary/10 to-transparent blur-[80px] animate-[morph_15s_ease-in-out_infinite]" />
-        <div className="absolute bottom-[20%] left-[5%] w-[400px] h-[400px] rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-gradient-to-tr from-accent/15 via-accent/5 to-transparent blur-[60px] animate-[morph_20s_ease-in-out_infinite_reverse]" />
-        <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] rounded-full bg-gradient-to-r from-primary/5 to-accent/5 blur-[100px] animate-pulse" />
+      {/* Animated morphing shapes - contained with overflow-hidden */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[10%] right-[10%] w-[400px] h-[400px] md:w-[500px] md:h-[500px] rounded-[40%_60%_70%_30%/40%_50%_60%_50%] bg-gradient-to-br from-primary/20 via-primary/10 to-transparent blur-[80px] animate-[morph_15s_ease-in-out_infinite]" />
+        <div className="absolute bottom-[20%] left-[5%] w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-gradient-to-tr from-accent/15 via-accent/5 to-transparent blur-[60px] animate-[morph_20s_ease-in-out_infinite_reverse]" />
+        <div className="absolute top-[40%] left-[30%] w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full bg-gradient-to-r from-primary/5 to-accent/5 blur-[100px] animate-pulse" />
       </div>
       
       {/* Decorative grid with dots */}
@@ -119,13 +119,13 @@ const HeroSection = () => {
           </div>
 
           {/* YouTube Video with modern frame */}
-          <div className="relative animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            {/* Glowing backdrop */}
-            <div className="absolute -inset-8 bg-gradient-to-r from-primary/20 via-accent/15 to-primary/20 rounded-[3rem] blur-3xl opacity-60 animate-pulse" style={{ animationDuration: "4s" }} />
+          <div className="relative animate-fade-up lg:pr-8 lg:pb-8" style={{ animationDelay: "0.3s" }}>
+            {/* Glowing backdrop - contained */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/15 to-primary/20 rounded-3xl blur-2xl opacity-60 animate-pulse -z-10" style={{ animationDuration: "4s" }} />
             
             {/* Outer decorative ring */}
-            <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-primary/10 via-transparent to-accent/10 p-px">
-              <div className="w-full h-full rounded-[2.5rem] bg-background/50 backdrop-blur-sm" />
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/10 via-transparent to-accent/10 p-px -z-5">
+              <div className="w-full h-full rounded-3xl bg-background/50 backdrop-blur-sm" />
             </div>
             
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video bg-gradient-to-br from-muted to-muted/50 border border-border/50">
@@ -170,33 +170,33 @@ const HeroSection = () => {
               )}
             </div>
             
-            {/* Floating info card */}
-            <div className="absolute -bottom-6 -left-6 z-20 hidden md:block animate-float">
+            {/* Floating info card - repositioned to stay within bounds */}
+            <div className="absolute bottom-2 left-2 z-20 hidden md:block animate-float">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity" />
-                <div className="relative bg-card/95 backdrop-blur-xl p-5 rounded-2xl shadow-2xl border border-white/20">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                      <span className="text-2xl">💚</span>
+                <div className="relative bg-card/95 backdrop-blur-xl p-4 rounded-2xl shadow-2xl border border-white/20">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                      <span className="text-xl">💚</span>
                     </div>
                     <div>
-                      <div className="font-display font-bold text-foreground">Persönliche Betreuung</div>
-                      <div className="text-sm text-muted-foreground">24/7 für Sie da</div>
+                      <div className="font-display font-bold text-foreground text-sm">Persönliche Betreuung</div>
+                      <div className="text-xs text-muted-foreground">24/7 für Sie da</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Status badge */}
-            <div className="absolute -top-4 -right-4 z-20 hidden lg:block animate-float" style={{ animationDelay: "1.5s" }}>
+            {/* Status badge - repositioned to stay within bounds */}
+            <div className="absolute top-2 right-2 z-20 hidden lg:block animate-float" style={{ animationDelay: "1.5s" }}>
               <div className="relative">
                 <div className="absolute inset-0 bg-emerald-500/30 rounded-full blur-lg" />
-                <div className="relative bg-card/95 backdrop-blur-xl px-5 py-3 rounded-full shadow-xl border border-emerald-500/30">
-                  <div className="flex items-center gap-3">
-                    <span className="relative flex h-3 w-3">
+                <div className="relative bg-card/95 backdrop-blur-xl px-4 py-2.5 rounded-full shadow-xl border border-emerald-500/30">
+                  <div className="flex items-center gap-2">
+                    <span className="relative flex h-2.5 w-2.5">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                      <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
+                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
                     </span>
                     <span className="text-sm font-bold text-foreground">Jetzt erreichbar</span>
                   </div>
@@ -206,8 +206,8 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-3">
+        {/* Scroll indicator - moved to safer position */}
+        <div className="hidden lg:flex flex-col items-center gap-3 mt-16">
           <span className="text-sm text-muted-foreground font-medium">Mehr entdecken</span>
           <div className="w-6 h-10 rounded-full border-2 border-primary/30 flex items-start justify-center p-2">
             <div className="w-1.5 h-3 bg-primary rounded-full animate-bounce" />
