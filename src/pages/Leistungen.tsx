@@ -600,7 +600,7 @@ const Leistungen = () => {
                       <span className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                       
                       <Phone className="w-5 h-5 relative z-10" />
-                      <a href="tel:+4969920388770" className="relative z-10">Jetzt anrufen</a>
+                      <a href="tel:+496915391405" className="relative z-10">Jetzt anrufen</a>
                       <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </div>
