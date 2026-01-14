@@ -8,6 +8,7 @@ const corsHeaders = {
 interface NewsletterRequest {
   email: string;
   name: string;
+  website?: string; // Honeypot field - should always be empty for legitimate submissions
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -17,7 +18,17 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { email, name }: NewsletterRequest = await req.json();
+    const { email, name, website }: NewsletterRequest = await req.json();
+
+    // Honeypot check - if filled, it's likely a bot
+    if (website && website.trim() !== "") {
+      console.log("Honeypot field filled - likely bot submission, silently rejecting");
+      // Return success to not reveal detection to bots
+      return new Response(
+        JSON.stringify({ success: true }),
+        { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
 
     if (!email || !name) {
       console.error("Missing required fields:", { email: !!email, name: !!name });

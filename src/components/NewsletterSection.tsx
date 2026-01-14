@@ -14,7 +14,7 @@ const benefits = [
 ];
 
 const NewsletterSection = () => {
-  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", website: "" });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -25,13 +25,13 @@ const NewsletterSection = () => {
     setIsLoading(true);
     try {
       const { data, error } = await supabase.functions.invoke("hubspot-newsletter", {
-        body: { email: formData.email, name: formData.name },
+        body: { email: formData.email, name: formData.name, website: formData.website },
       });
 
       if (error) throw error;
 
       setIsSubmitted(true);
-      setFormData({ name: "", email: "" });
+      setFormData({ name: "", email: "", website: "" });
       toast.success("Erfolgreich angemeldet!");
     } catch (error) {
       console.error("Newsletter signup error:", error);
@@ -122,6 +122,17 @@ const NewsletterSection = () => {
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         required
                         className="h-12 w-full min-w-[280px]"
+                      />
+                    </div>
+                    {/* Honeypot field - hidden from users, bots will fill it */}
+                    <div className="absolute left-[-9999px]" aria-hidden="true">
+                      <Input
+                        type="text"
+                        name="website"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={formData.website}
+                        onChange={(e) => setFormData({ ...formData, website: e.target.value })}
                       />
                     </div>
                     <Button type="submit" variant="hero" size="lg" className="w-full group" disabled={isLoading}>
