@@ -134,24 +134,22 @@ const Header = () => {
               <NavigationMenuList className="gap-1">
                 {/* Start Link */}
                 <NavigationMenuItem>
-                  <Link to="/" className="relative text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 group overflow-hidden">
-                    <span className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                    <span className="relative z-10 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent transition-all duration-300">Start</span>
+                  <Link to="/" className="text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 text-foreground/80 hover:text-primary hover:bg-primary/10">
+                    Start
                   </Link>
                 </NavigationMenuItem>
 
                 {/* Team Link */}
                 <NavigationMenuItem>
-                  <Link to="/team" className="relative text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 group overflow-hidden">
-                    <span className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                    <span className="relative z-10 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent transition-all duration-300">Team</span>
+                  <Link to="/team" className="text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 text-foreground/80 hover:text-primary hover:bg-primary/10">
+                    Team
                   </Link>
                 </NavigationMenuItem>
 
                 {/* Leistungen Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-semibold bg-transparent hover:bg-transparent rounded-full transition-all duration-300 data-[state=open]:bg-primary/10 group px-5 py-2.5">
-                    <span className="bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent group-data-[state=open]:from-primary group-data-[state=open]:to-accent transition-all duration-300">Leistungen</span>
+                  <NavigationMenuTrigger className="text-sm font-semibold bg-transparent hover:bg-primary/10 hover:text-primary rounded-full transition-all duration-300 data-[state=open]:bg-primary/10 data-[state=open]:text-primary px-5 py-2.5 text-foreground/80">
+                    Leistungen
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="w-[560px] p-6 bg-gradient-to-br from-background via-background to-primary/5">
@@ -186,8 +184,8 @@ const Header = () => {
 
                 {/* Standorte Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-semibold bg-transparent hover:bg-transparent rounded-full transition-all duration-300 data-[state=open]:bg-primary/10 group px-5 py-2.5">
-                    <span className="bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent group-data-[state=open]:from-primary group-data-[state=open]:to-accent transition-all duration-300">Standorte</span>
+                  <NavigationMenuTrigger className="text-sm font-semibold bg-transparent hover:bg-primary/10 hover:text-primary rounded-full transition-all duration-300 data-[state=open]:bg-primary/10 data-[state=open]:text-primary px-5 py-2.5 text-foreground/80">
+                    Standorte
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="w-[480px] p-6 bg-gradient-to-br from-background via-background to-primary/5">
@@ -202,11 +200,10 @@ const Header = () => {
                             <Link
                               key={item.name}
                               to={item.href}
-                              className="group relative flex items-center gap-3 px-5 py-3 rounded-xl bg-gradient-to-br from-primary/20 to-accent/10 font-semibold text-primary hover:from-primary hover:to-accent hover:text-white transition-all duration-300 overflow-hidden"
+                              className="flex items-center gap-3 px-5 py-3 rounded-xl bg-primary/10 font-semibold text-primary hover:bg-primary hover:text-white transition-all duration-300"
                             >
-                              <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                              <Building2 className="w-5 h-5 relative z-10" />
-                              <span className="relative z-10">{item.name}</span>
+                              <Building2 className="w-5 h-5" />
+                              <span>{item.name}</span>
                             </Link>
                           ))}
                         </div>
@@ -237,8 +234,8 @@ const Header = () => {
 
                 {/* Jobs Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-semibold bg-transparent hover:bg-transparent rounded-full transition-all duration-300 data-[state=open]:bg-primary/10 group px-5 py-2.5">
-                    <span className="bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent group-data-[state=open]:from-primary group-data-[state=open]:to-accent transition-all duration-300">Jobs</span>
+                  <NavigationMenuTrigger className="text-sm font-semibold bg-transparent hover:bg-primary/10 hover:text-primary rounded-full transition-all duration-300 data-[state=open]:bg-primary/10 data-[state=open]:text-primary px-5 py-2.5 text-foreground/80">
+                    Jobs
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="w-[460px] p-6 bg-gradient-to-br from-background via-background to-primary/5">
@@ -273,8 +270,8 @@ const Header = () => {
 
                 {/* Blog Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-semibold bg-transparent hover:bg-transparent rounded-full transition-all duration-300 data-[state=open]:bg-primary/10 group px-5 py-2.5">
-                    <span className="bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent group-data-[state=open]:from-primary group-data-[state=open]:to-accent transition-all duration-300">Blog</span>
+                  <NavigationMenuTrigger className="text-sm font-semibold bg-transparent hover:bg-primary/10 hover:text-primary rounded-full transition-all duration-300 data-[state=open]:bg-primary/10 data-[state=open]:text-primary px-5 py-2.5 text-foreground/80">
+                    Blog
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="w-[520px] p-6 bg-gradient-to-br from-background via-background to-primary/5">
@@ -308,9 +305,8 @@ const Header = () => {
 
                 {/* Kontakt Link */}
                 <NavigationMenuItem>
-                  <Link to="/kontakt" className="relative text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 group overflow-hidden">
-                    <span className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                    <span className="relative z-10 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent transition-all duration-300">Kontakt</span>
+                  <Link to="/kontakt" className="text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 text-foreground/80 hover:text-primary hover:bg-primary/10">
+                    Kontakt
                   </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>
