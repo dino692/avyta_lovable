@@ -1,4 +1,4 @@
-import { MapPin, Phone, ArrowRight, Navigation } from "lucide-react";
+import { MapPin, Phone, ArrowRight, Navigation, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const locations = [
@@ -32,22 +32,28 @@ const LocationsSection = () => {
   return (
     <section className="py-32 relative overflow-hidden" id="locations">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/30" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/20" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
       
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
-      <div className="absolute top-40 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-40 right-10 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute inset-0">
+        <div className="absolute top-[20%] left-[10%] w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-[20%] right-[10%] w-[350px] h-[350px] bg-primary/5 rounded-full blur-[100px]" />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-accent/10 to-primary/10 backdrop-blur-sm rounded-full border border-accent/20 mb-6">
-            <Navigation className="w-4 h-4 text-accent" />
-            <span className="text-sm font-semibold text-accent uppercase tracking-wider">Unsere Standorte</span>
+        <div className="text-center max-w-4xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-accent/10 to-primary/10 backdrop-blur-sm rounded-full border border-accent/20 mb-8 shadow-lg">
+            <Navigation className="w-5 h-5 text-accent" />
+            <span className="text-sm font-bold text-accent uppercase tracking-wider">Unsere Standorte</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
-            Immer in <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Ihrer Nähe</span>
+            Immer in{" "}
+            <span className="relative inline-block">
+              <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Ihrer Nähe</span>
+              <div className="absolute -bottom-2 left-0 w-full h-3 bg-gradient-to-r from-accent/20 to-primary/20 blur-sm rounded-full" />
+            </span>
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
             In Frankfurt und Bad Vilbel sind wir schnell bei Ihnen – für eine optimale Versorgung vor Ort.
@@ -55,7 +61,7 @@ const LocationsSection = () => {
         </div>
 
         {/* Location Cards */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
           {locations.map((location, index) => (
             <Link 
               key={location.city}
@@ -63,40 +69,40 @@ const LocationsSection = () => {
               className="group relative block"
             >
               {/* Card glow */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-accent/30 rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="absolute -inset-px bg-gradient-to-r from-primary/30 via-accent/20 to-primary/30 rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-all duration-500" />
               
-              <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl border border-border/50 p-8 hover:border-primary/30 transition-all duration-500 overflow-hidden">
-                {/* Decorative map pattern */}
-                <div className="absolute top-0 right-0 w-40 h-40 opacity-5 group-hover:opacity-10 transition-opacity">
+              <div className="relative bg-card/80 backdrop-blur-xl rounded-3xl border border-border/50 p-8 lg:p-10 hover:border-primary/30 transition-all duration-500 overflow-hidden group-hover:-translate-y-2 group-hover:shadow-2xl">
+                {/* Decorative map illustration */}
+                <div className="absolute top-0 right-0 w-48 h-48 opacity-5 group-hover:opacity-10 transition-opacity">
                   <svg viewBox="0 0 100 100" className="w-full h-full">
-                    <circle cx="20" cy="20" r="2" fill="currentColor" />
-                    <circle cx="40" cy="30" r="2" fill="currentColor" />
-                    <circle cx="60" cy="20" r="2" fill="currentColor" />
-                    <circle cx="80" cy="40" r="2" fill="currentColor" />
-                    <circle cx="30" cy="60" r="2" fill="currentColor" />
-                    <circle cx="50" cy="50" r="3" fill="currentColor" className="text-primary" />
-                    <circle cx="70" cy="70" r="2" fill="currentColor" />
-                    <circle cx="20" cy="80" r="2" fill="currentColor" />
-                    <line x1="20" y1="20" x2="40" y2="30" stroke="currentColor" strokeWidth="0.5" />
-                    <line x1="40" y1="30" x2="50" y2="50" stroke="currentColor" strokeWidth="0.5" />
-                    <line x1="50" y1="50" x2="60" y2="20" stroke="currentColor" strokeWidth="0.5" />
-                    <line x1="50" y1="50" x2="80" y2="40" stroke="currentColor" strokeWidth="0.5" />
-                    <line x1="50" y1="50" x2="30" y2="60" stroke="currentColor" strokeWidth="0.5" />
+                    <circle cx="20" cy="20" r="3" fill="currentColor" />
+                    <circle cx="50" cy="30" r="4" fill="currentColor" className="text-primary" />
+                    <circle cx="80" cy="25" r="2" fill="currentColor" />
+                    <circle cx="35" cy="55" r="3" fill="currentColor" />
+                    <circle cx="65" cy="60" r="2" fill="currentColor" />
+                    <circle cx="45" cy="80" r="3" fill="currentColor" />
+                    <circle cx="75" cy="75" r="2" fill="currentColor" />
+                    <path d="M20 20 L50 30 L80 25 M50 30 L35 55 L65 60 M35 55 L45 80 L75 75" stroke="currentColor" strokeWidth="0.5" fill="none" />
                   </svg>
                 </div>
                 
-                <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <MapPin className="w-8 h-8 text-white" />
+                <div className="flex items-start gap-6 relative">
+                  <div className="relative">
+                    <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                      <Building2 className="w-10 h-10 text-white" />
+                    </div>
+                    <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-xl bg-card border border-border flex items-center justify-center shadow-lg">
+                      <MapPin className="w-4 h-4 text-primary" />
+                    </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-display font-bold text-2xl text-foreground mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="font-display font-bold text-3xl text-foreground mb-2 group-hover:text-primary transition-colors">
                       {location.city}
                     </h3>
-                    <p className="text-muted-foreground mb-4">{location.address}</p>
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary">
-                      <Phone className="w-4 h-4" />
-                      <span className="font-semibold">{location.phone}</span>
+                    <p className="text-muted-foreground mb-4 text-lg">{location.address}</p>
+                    <div className="inline-flex items-center gap-3 px-5 py-3 bg-primary/10 rounded-2xl text-primary group-hover:bg-primary/15 transition-colors">
+                      <Phone className="w-5 h-5" />
+                      <span className="font-bold text-lg">{location.phone}</span>
                     </div>
                   </div>
                   <ArrowRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-2 transition-all duration-300" />
@@ -108,20 +114,21 @@ const LocationsSection = () => {
 
         {/* Stadtteile */}
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary/50 backdrop-blur-sm rounded-full border border-border/50 mb-8">
-            <span className="text-sm font-semibold text-foreground">Frankfurter Stadtteile</span>
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-card/80 backdrop-blur-sm rounded-full border border-border/50 mb-10 shadow-lg">
+            <MapPin className="w-5 h-5 text-primary" />
+            <span className="text-sm font-bold text-foreground">Frankfurter Stadtteile</span>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
             {stadtteile.map((stadtteil, index) => (
               <Link 
                 key={stadtteil.name} 
                 to={stadtteil.link} 
                 className="group relative"
-                style={{ animationDelay: `${index * 0.02}s` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-lg opacity-0 group-hover:opacity-40 transition-opacity duration-300" />
-                <span className="relative inline-block px-5 py-2.5 rounded-full bg-card border border-border/50 text-foreground hover:border-primary/30 hover:text-primary transition-all duration-300 text-sm font-medium shadow-sm hover:shadow-md">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-lg opacity-0 group-hover:opacity-40 transition-all duration-300" />
+                <span className="relative inline-flex items-center gap-2 px-5 py-3 rounded-full bg-card/80 backdrop-blur-sm border border-border/50 text-foreground hover:border-primary/30 hover:text-primary transition-all duration-300 text-sm font-semibold shadow-sm hover:shadow-lg group-hover:-translate-y-0.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/50 group-hover:bg-primary transition-colors" />
                   {stadtteil.name}
                 </span>
               </Link>

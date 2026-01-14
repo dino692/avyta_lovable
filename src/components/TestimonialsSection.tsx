@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Play, Quote, Star, Users, Heart, Sparkles } from "lucide-react";
+import { Play, Quote, Star, Users, Heart, Sparkles, Video } from "lucide-react";
 
 const TestimonialsSection = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -26,40 +26,39 @@ const TestimonialsSection = () => {
 
   return (
     <section ref={sectionRef} className="py-32 relative overflow-hidden" id="testimonials">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-accent" />
+      {/* Gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent" />
       
-      {/* Animated mesh */}
+      {/* Mesh gradient overlay */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-white/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-accent/30 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-0 left-[20%] w-[600px] h-[600px] bg-white/10 rounded-full blur-[150px] animate-pulse" style={{ animationDuration: "6s" }} />
+        <div className="absolute bottom-0 right-[20%] w-[500px] h-[500px] bg-accent/40 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "2s", animationDuration: "8s" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/30 rounded-full blur-[200px]" />
       </div>
       
-      {/* Decorative patterns */}
+      {/* Decorative geometric patterns */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-40 h-40 border-2 border-white rounded-full" />
-        <div className="absolute top-40 left-20 w-20 h-20 border-2 border-white rounded-full" />
-        <div className="absolute bottom-20 right-10 w-60 h-60 border-2 border-white rounded-full" />
-        <div className="absolute bottom-40 right-40 w-32 h-32 border-2 border-white rounded-full" />
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 border border-white rounded-lg rotate-45" />
+        <div className="absolute top-10 left-10 w-32 h-32 border-2 border-white rounded-full" />
+        <div className="absolute top-20 left-20 w-20 h-20 border border-white rounded-full" />
+        <div className="absolute bottom-10 right-10 w-48 h-48 border-2 border-white rounded-full" />
+        <div className="absolute bottom-24 right-24 w-24 h-24 border border-white rounded-full" />
+        <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-white rounded-xl rotate-45" />
+        <div className="absolute bottom-1/3 left-1/4 w-12 h-12 border border-white rounded-lg rotate-12" />
       </div>
       
       {/* Floating icons */}
-      <div className="absolute top-32 right-20 text-white/10 animate-float hidden lg:block">
-        <Heart className="w-32 h-32" fill="currentColor" />
+      <div className="absolute top-32 right-24 text-white/5 animate-float hidden xl:block">
+        <Heart className="w-40 h-40" fill="currentColor" />
       </div>
-      <div className="absolute bottom-32 left-20 text-white/10 animate-float hidden lg:block" style={{ animationDelay: "2s" }}>
-        <Users className="w-24 h-24" />
-      </div>
-      <div className="absolute top-1/2 right-1/4 text-white/5 animate-float hidden lg:block" style={{ animationDelay: "3s" }}>
-        <Sparkles className="w-20 h-20" />
+      <div className="absolute bottom-32 left-24 text-white/5 animate-float hidden xl:block" style={{ animationDelay: "2s" }}>
+        <Users className="w-32 h-32" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full mb-8 border border-white/20 shadow-xl">
-            <Play className="w-5 h-5 text-white" />
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full mb-8 border border-white/20 shadow-2xl">
+            <Video className="w-5 h-5 text-white" />
             <span className="text-sm font-bold text-white uppercase tracking-wider">
               Video-Stimmen
             </span>
@@ -68,7 +67,7 @@ const TestimonialsSection = () => {
             Echte Stimmen,
             <span className="block mt-2 text-white/90">echte Erfahrungen</span>
           </h2>
-          <p className="text-xl text-white/80 leading-relaxed">
+          <p className="text-xl text-white/75 leading-relaxed">
             Hören Sie direkt von unseren Mitarbeitern, was sie an ihrer Arbeit bei AVYTA schätzen.
           </p>
         </div>
@@ -77,12 +76,12 @@ const TestimonialsSection = () => {
         <div className="max-w-sm mx-auto">
           <div className="relative group">
             {/* Card glow */}
-            <div className="absolute -inset-4 bg-white/20 rounded-[2rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="absolute -inset-6 bg-white/20 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             
-            <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/20 shadow-2xl group-hover:border-white/40 transition-all duration-500">
+            <div className="relative bg-white/10 backdrop-blur-2xl rounded-[2rem] overflow-hidden border border-white/20 shadow-2xl group-hover:border-white/40 transition-all duration-500">
               {/* Badge */}
               <div className="absolute top-5 left-5 z-10">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold bg-white text-primary shadow-lg">
+                <span className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-bold bg-white text-primary shadow-xl">
                   <Users className="w-4 h-4" />
                   Mitarbeiterstimme
                 </span>
@@ -96,14 +95,14 @@ const TestimonialsSection = () => {
               </div>
 
               {/* Video Container */}
-              <div className="relative aspect-[9/16] bg-gradient-to-b from-primary/20 to-primary/40">
+              <div className="relative aspect-[9/16] bg-gradient-to-b from-white/5 to-white/10">
                 {isVisible ? (
                   <>
                     {!videoLoaded && (
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="text-center text-white">
                           <div className="relative">
-                            <div className="absolute inset-0 bg-white/20 rounded-full blur-xl animate-pulse" />
+                            <div className="absolute inset-0 bg-white/20 rounded-full blur-xl animate-pulse scale-150" />
                             <div className="relative w-20 h-20 mx-auto mb-4 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border-2 border-white/30">
                               <Play className="w-10 h-10" />
                             </div>
@@ -141,7 +140,7 @@ const TestimonialsSection = () => {
                   "Bei AVYTA fühle ich mich wertgeschätzt und unterstützt. Der Zusammenhalt im Team ist einzigartig."
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-sm flex items-center justify-center text-2xl border-2 border-white/30">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-sm flex items-center justify-center text-2xl border-2 border-white/30 shadow-lg">
                     👩‍⚕️
                   </div>
                   <div>
@@ -158,15 +157,15 @@ const TestimonialsSection = () => {
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <p className="text-white/80 mb-6 text-lg">Möchten Sie Teil unseres Teams werden?</p>
+          <p className="text-white/75 mb-6 text-lg">Möchten Sie Teil unseres Teams werden?</p>
           <a 
             href="/jobs" 
-            className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-white/95 transition-all duration-300 shadow-2xl hover:shadow-white/20 hover:scale-105"
+            className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-primary font-bold rounded-full hover:bg-white/95 transition-all duration-300 shadow-2xl hover:shadow-white/25 hover:scale-105 text-lg"
           >
-            Jetzt bewerben
-            <span className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Heart className="w-4 h-4 text-primary" fill="currentColor" />
-            </span>
+            <span>Jetzt bewerben</span>
+            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              <Heart className="w-5 h-5 text-primary" fill="currentColor" />
+            </div>
           </a>
         </div>
       </div>
