@@ -174,7 +174,7 @@ const Jobs = () => {
                 </Link>
                 
                 <a
-                  href="tel:+4969920388770"
+                  href="tel:+496915391405"
                   className="group relative inline-flex items-center gap-3 px-8 py-4 bg-background/80 backdrop-blur-xl border-2 border-primary/30 rounded-2xl font-semibold text-foreground hover:border-primary/60 hover:bg-primary/5 transition-all duration-500 hover:scale-105 active:scale-95"
                 >
                   <Phone className="w-5 h-5 text-primary group-hover:scale-110 transition-transform duration-300" />
@@ -427,11 +427,11 @@ const Jobs = () => {
                 </Link>
                 
                 <a
-                  href="tel:+4969920388770"
+                  href="tel:+496915391405"
                   className="group relative inline-flex items-center gap-3 px-8 py-4 bg-primary-foreground/10 backdrop-blur-xl border-2 border-primary-foreground/30 rounded-2xl font-semibold text-primary-foreground hover:bg-primary-foreground/20 hover:border-primary-foreground/50 transition-all duration-500 hover:scale-105 active:scale-95"
                 >
                   <Phone className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                  <span>069 920 388 770</span>
+                  <span>069 153 914 05</span>
                 </a>
               </div>
             </div>
