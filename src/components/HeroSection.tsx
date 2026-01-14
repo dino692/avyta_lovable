@@ -45,17 +45,15 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
-          <div className="space-y-8">
-            {/* Animated badge with shimmer */}
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-primary/5 via-primary/10 to-accent/5 backdrop-blur-xl rounded-full border border-primary/20 shadow-[0_0_30px_-5px_hsl(var(--primary)/0.2)] animate-fade-up group hover:border-primary/40 transition-colors">
-              <div className="relative">
-                <Sparkles className="w-5 h-5 text-primary" />
-                <div className="absolute inset-0 blur-md bg-primary/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="space-y-6 text-center lg:text-left">
+            {/* Badge - centered on mobile, left on desktop */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 animate-fade-up">
+                <Sparkles className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-primary">
+                  Jetzt kostenlose Beratung sichern
+                </span>
               </div>
-              <span className="text-sm font-bold text-primary tracking-wide">
-                Jetzt kostenlose Beratung sichern
-              </span>
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold leading-[1.05] animate-fade-up" style={{ animationDelay: "0.1s" }}>
@@ -75,12 +73,12 @@ const HeroSection = () => {
               <span className="block text-foreground/90 mt-2">in Ihrem Zuhause</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-xl leading-relaxed animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-xl leading-relaxed animate-fade-up mx-auto lg:mx-0" style={{ animationDelay: "0.2s" }}>
               Wir begleiten Sie und Ihre Angehörigen mit Herz, Kompetenz und 
               individueller Betreuung – für ein selbstbestimmtes Leben.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-up" style={{ animationDelay: "0.3s" }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: "0.3s" }}>
               <CTADropdownButton className="w-full sm:w-auto" />
               <Button 
                 variant="outline" 
@@ -95,8 +93,8 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Trust stats with 3D card effect */}
-            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 pt-6 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+            {/* Trust stats */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               {[
                 { value: "12+", label: "Jahre Erfahrung", icon: "🏆" },
                 { value: "2.500+", label: "Betreute Patienten", icon: "💚" },
