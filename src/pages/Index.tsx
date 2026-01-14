@@ -1,10 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
-import TickerBar from "@/components/TickerBar";
-import ToirovHeroSection from "@/components/ToirovHeroSection";
+import HeroSection from "@/components/HeroSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import AboutSection from "@/components/AboutSection";
-import TabServicesSection from "@/components/TabServicesSection";
+import ServicesSection from "@/components/ServicesSection";
 import LocationsSection from "@/components/LocationsSection";
 import CertificatesSection from "@/components/CertificatesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -26,13 +25,12 @@ const Index = () => {
         <link rel="canonical" href="https://www.avyta.de/" />
       </Helmet>
       <div className="min-h-screen bg-background">
-        <TickerBar />
         <Header />
         <main>
-        <ToirovHeroSection />
+        <HeroSection />
         <HowItWorksSection />
         <AboutSection />
-        <TabServicesSection />
+        <ServicesSection />
         <LocationsSection />
         <TestimonialsSection />
         <ReviewsSection />
