@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
-import { Users, Images, X, Sparkles, Play, ArrowRight, Heart, Star } from "lucide-react";
+import { Users, Images, X, Sparkles, Play, ArrowRight, Heart, Star, Award, Clock, MapPin, ChevronDown, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Helmet } from "react-helmet-async";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -49,29 +48,97 @@ const galleryCategories: GalleryCategory[] = [
 const teamMembers = [
   {
     name: "Jasmina Müller",
-    role: "Geschäftsleitung, PDL, Praxisanleitung, Sachverständige",
+    role: "Geschäftsleitung, PDL, Praxisanleitung",
+    fullRole: "Geschäftsleitung, PDL, Praxisanleitung, Sachverständige",
     image: jasminaMuellerImage,
     description: "Führt AVYTA mit Leidenschaft und langjähriger Erfahrung in der Pflege.",
-    color: "from-rose-500 to-pink-600",
+    gradient: "from-rose-500 via-pink-500 to-fuchsia-600",
+    shadowColor: "shadow-rose-500/30",
+    icon: Award,
   },
   {
     name: "Dino Lalic",
-    role: "Prokurist, Finanzen & Marketing",
+    role: "Prokurist",
+    fullRole: "Prokurist, Finanzen & Marketing",
     image: prokuristImage,
     description: "Verantwortet die Finanzen und das Marketing von AVYTA.",
-    color: "from-blue-500 to-cyan-600",
+    gradient: "from-blue-500 via-cyan-500 to-teal-500",
+    shadowColor: "shadow-blue-500/30",
+    icon: Zap,
   },
   {
     name: "Andrea Knezevic",
     role: "Assistenz",
+    fullRole: "Assistenz der Geschäftsleitung",
     image: assistenzImage,
     description: "Unterstützt die Geschäftsleitung in allen organisatorischen Belangen.",
-    color: "from-emerald-500 to-teal-600",
+    gradient: "from-emerald-500 via-green-500 to-teal-500",
+    shadowColor: "shadow-emerald-500/30",
+    icon: Heart,
   },
 ];
 
+const stats = [
+  { value: "12+", label: "Jahre Erfahrung", icon: Clock },
+  { value: "2.500+", label: "Betreute Patienten", icon: Heart },
+  { value: "50+", label: "Teammitglieder", icon: Users },
+  { value: "15+", label: "Stadtteile", icon: MapPin },
+];
+
+// Counter animation hook
+const useCounter = (end: number, duration: number = 2000, startOnView: boolean = true) => {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!startOnView) {
+      setHasStarted(true);
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasStarted) {
+          setHasStarted(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasStarted, startOnView]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTime: number;
+    let animationFrame: number;
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      
+      setCount(Math.floor(progress * end));
+      
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrame);
+  }, [end, duration, hasStarted]);
+
+  return { count, ref };
+};
+
 const Team = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const [hoveredMember, setHoveredMember] = useState<number | null>(null);
 
   return (
     <>
@@ -86,149 +153,289 @@ const Team = () => {
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Header />
         
-        {/* Hero Section - Ultra Modern */}
-        <section className="relative pt-32 pb-24 overflow-hidden">
-          {/* Animated gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10" />
+        {/* ========== HERO SECTION - Ultra Modern ========== */}
+        <section className="relative pt-32 pb-32 lg:pb-40 overflow-hidden">
+          {/* Multi-layer gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.15),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(var(--accent)/0.1),transparent_60%)]" />
           
-          {/* Animated orbs */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-primary/30 to-accent/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-br from-accent/20 to-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/5 via-accent/10 to-primary/5 rounded-full blur-3xl" />
+          {/* Animated morphing blobs */}
+          <div className="absolute top-10 left-[5%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-gradient-to-br from-primary/25 via-accent/15 to-primary/10 animate-morph-blob blur-3xl opacity-60" />
+          <div className="absolute bottom-10 right-[5%] w-[250px] h-[250px] md:w-[400px] md:h-[400px] bg-gradient-to-br from-accent/20 via-primary/15 to-accent/10 animate-morph-blob blur-3xl opacity-50" style={{ animationDelay: "-5s" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[900px] md:h-[900px] bg-gradient-to-r from-primary/5 via-accent/8 to-primary/5 rounded-full blur-3xl animate-glow" />
           
           {/* Grid pattern overlay */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+          <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--foreground)/0.02)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--foreground)/0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+          
+          {/* Grain texture */}
+          <div className="absolute inset-0 grain-overlay" />
+          
+          {/* Floating decorative elements */}
+          <div className="absolute top-40 right-[15%] hidden lg:block">
+            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 backdrop-blur-sm border border-primary/10 animate-float-slow flex items-center justify-center">
+              <Heart className="w-8 h-8 text-primary/60" />
+            </div>
+          </div>
+          <div className="absolute bottom-40 left-[10%] hidden lg:block">
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 backdrop-blur-sm border border-accent/10 animate-float-slow flex items-center justify-center" style={{ animationDelay: "-3s" }}>
+              <Star className="w-6 h-6 text-accent/60" />
+            </div>
+          </div>
           
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              {/* Floating badge */}
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-background/80 backdrop-blur-xl border border-primary/20 rounded-full text-sm font-semibold mb-8 shadow-xl shadow-primary/10 animate-fade-in">
-                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse" />
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Unser Team</span>
-                <Sparkles className="w-4 h-4 text-primary" />
+            <div className="max-w-5xl mx-auto text-center">
+              {/* Premium floating badge */}
+              <div className="inline-flex items-center gap-3 px-6 py-3 bg-background/60 backdrop-blur-2xl border border-primary/20 rounded-full text-sm font-semibold mb-10 shadow-2xl shadow-primary/10 animate-fade-in group hover:border-primary/40 transition-all duration-500 cursor-default">
+                <div className="relative">
+                  <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse" />
+                  <div className="absolute inset-0 w-2.5 h-2.5 rounded-full bg-gradient-to-r from-primary to-accent blur-sm animate-glow" />
+                </div>
+                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-x">Über uns</span>
+                <Sparkles className="w-4 h-4 text-primary group-hover:rotate-12 transition-transform duration-300" />
               </div>
               
-              {/* Main headline with gradient */}
-              <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-8 animate-fade-up tracking-tight">
+              {/* Main headline with layered effects */}
+              <h1 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 animate-fade-up tracking-tight leading-[1.1]">
                 <span className="text-foreground">Die Menschen hinter </span>
-                <span className="relative">
-                  <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient-x_3s_ease-in-out_infinite]">AVYTA</span>
-                  <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent rounded-full opacity-50" />
+                <span className="relative inline-block">
+                  <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-x">AVYTA</span>
+                  {/* Underline decoration */}
+                  <span className="absolute -bottom-2 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-accent to-primary rounded-full opacity-60 animate-gradient-x bg-[length:200%_auto]" />
+                  {/* Glow effect */}
+                  <span className="absolute -bottom-2 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-accent to-primary rounded-full blur-md opacity-40" />
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto animate-fade-up leading-relaxed" style={{ animationDelay: "0.15s" }}>
-                Lernen Sie unser engagiertes Team kennen – Menschen mit <span className="text-primary font-semibold">Herz</span>, <span className="text-accent font-semibold">Kompetenz</span> und Leidenschaft für die Pflege.
+              <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-3xl mx-auto animate-fade-up leading-relaxed" style={{ animationDelay: "0.15s" }}>
+                Lernen Sie unser engagiertes Team kennen – Menschen mit{" "}
+                <span className="relative inline-block">
+                  <span className="text-primary font-semibold">Herz</span>
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary/40 rounded-full" />
+                </span>
+                ,{" "}
+                <span className="relative inline-block">
+                  <span className="text-accent font-semibold">Kompetenz</span>
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent/40 rounded-full" />
+                </span>{" "}
+                und Leidenschaft für die Pflege.
               </p>
               
-              {/* Decorative elements */}
-              <div className="flex justify-center gap-4 mt-12 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-                <div className="w-16 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full" />
-                <div className="w-8 h-1 bg-gradient-to-r from-transparent via-accent to-transparent rounded-full" />
-                <div className="w-4 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full" />
+              {/* Animated decorative lines */}
+              <div className="flex justify-center gap-3 mt-14 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+                <div className="w-20 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full" />
+                <div className="w-10 h-1 bg-gradient-to-r from-transparent via-accent to-transparent rounded-full" />
+                <div className="w-5 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full" />
+              </div>
+              
+              {/* Scroll indicator */}
+              <div className="mt-16 animate-fade-up" style={{ animationDelay: "0.5s" }}>
+                <div className="inline-flex flex-col items-center gap-2 text-muted-foreground/60 group cursor-pointer hover:text-primary transition-colors duration-300">
+                  <span className="text-xs font-medium tracking-widest uppercase">Entdecken</span>
+                  <ChevronDown className="w-5 h-5 animate-bounce" />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Team Group Image - Premium Display */}
-        <section className="py-16 relative">
+        {/* ========== STATS SECTION - Glassmorphism Cards ========== */}
+        <section className="py-8 relative z-20 -mt-16">
           <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                {stats.map((stat, index) => {
+                  const numericValue = parseInt(stat.value.replace(/[^0-9]/g, ""));
+                  const { count, ref } = useCounter(numericValue, 2000);
+                  const suffix = stat.value.replace(/[0-9]/g, "");
+                  
+                  return (
+                    <div
+                      key={stat.label}
+                      ref={ref}
+                      className="group relative animate-fade-up"
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      {/* Glow effect on hover */}
+                      <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-accent/30 rounded-3xl blur-xl opacity-0 group-hover:opacity-60 transition-all duration-500" />
+                      
+                      <div className="relative bg-background/80 backdrop-blur-2xl border border-primary/10 rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1 overflow-hidden">
+                        {/* Inner gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        
+                        {/* Icon */}
+                        <div className="relative mb-4">
+                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <stat.icon className="w-6 h-6 md:w-7 md:h-7 text-primary" />
+                          </div>
+                        </div>
+                        
+                        {/* Value with counter */}
+                        <div className="relative">
+                          <span className="font-display text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                            {count}{suffix}
+                          </span>
+                        </div>
+                        
+                        {/* Label */}
+                        <p className="relative text-sm md:text-base text-muted-foreground mt-2 font-medium">
+                          {stat.label}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========== TEAM GROUP IMAGE - Premium Display ========== */}
+        <section className="py-20 lg:py-28 relative">
+          {/* Background gradients */}
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/10 to-background" />
+          
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="relative group">
-                {/* Glow effect behind image */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
+                {/* Multi-layer glow effect */}
+                <div className="absolute -inset-4 md:-inset-8 bg-gradient-to-r from-primary/20 via-accent/15 to-primary/20 rounded-[2rem] md:rounded-[3rem] blur-3xl opacity-50 group-hover:opacity-70 transition-all duration-700" />
+                <div className="absolute -inset-2 md:-inset-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl md:rounded-[2.5rem] blur-xl opacity-60 group-hover:opacity-80 transition-all duration-500" />
                 
-                {/* Image container with frame */}
-                <div className="relative bg-gradient-to-br from-primary/20 to-accent/20 p-2 rounded-3xl">
-                  <div className="relative overflow-hidden rounded-2xl">
+                {/* Rotating gradient border */}
+                <div className="absolute -inset-[3px] bg-gradient-to-r from-primary via-accent to-primary rounded-3xl md:rounded-[2.5rem] opacity-40 animate-gradient-x bg-[length:200%_auto]" />
+                
+                {/* Image container */}
+                <div className="relative bg-background p-1.5 md:p-2 rounded-3xl md:rounded-[2.5rem]">
+                  <div className="relative overflow-hidden rounded-2xl md:rounded-[2rem]">
                     <img
                       src={teamGroupImage}
                       alt="Das AVYTA Team - Ambulanter Pflegedienst Frankfurt"
-                      className="w-full h-auto transition-transform duration-700 group-hover:scale-[1.02]"
+                      className="w-full h-auto transition-all duration-700 group-hover:scale-[1.02]"
                     />
-                    {/* Gradient overlay on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
-                    {/* Floating label */}
-                    <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
-                      <div className="bg-background/90 backdrop-blur-xl px-6 py-3 rounded-2xl border border-primary/20 shadow-xl opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                        <span className="font-semibold text-foreground">Unser Team</span>
-                        <span className="text-muted-foreground mx-2">•</span>
-                        <span className="text-primary">Frankfurt am Main</span>
+                    {/* Gradient overlays */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-transparent" />
+                    
+                    {/* Floating info card */}
+                    <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8 flex items-center justify-between gap-4">
+                      <div className="bg-background/95 backdrop-blur-2xl px-5 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl border border-primary/20 shadow-2xl opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                            <Users className="w-5 h-5 text-white" />
+                          </div>
+                          <div>
+                            <span className="font-display font-bold text-foreground block">Unser Team</span>
+                            <span className="text-sm text-primary">Frankfurt am Main</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 
-                {/* Decorative corner elements */}
-                <div className="absolute -top-4 -left-4 w-8 h-8 border-l-4 border-t-4 border-primary rounded-tl-xl opacity-60" />
-                <div className="absolute -bottom-4 -right-4 w-8 h-8 border-r-4 border-b-4 border-accent rounded-br-xl opacity-60" />
+                {/* Corner decorations */}
+                <div className="absolute -top-3 -left-3 md:-top-6 md:-left-6 w-8 h-8 md:w-12 md:h-12 border-l-4 border-t-4 border-primary rounded-tl-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute -bottom-3 -right-3 md:-bottom-6 md:-right-6 w-8 h-8 md:w-12 md:h-12 border-r-4 border-b-4 border-accent rounded-br-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Team Members Grid - Premium Cards */}
-        <section className="py-24 relative overflow-hidden">
-          {/* Background decoration */}
+        {/* ========== TEAM MEMBERS - Ultra Premium Cards ========== */}
+        <section className="py-24 lg:py-32 relative overflow-hidden">
+          {/* Multi-layer background */}
           <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.05),transparent_70%)]" />
+          
+          {/* Animated background blobs */}
+          <div className="absolute top-20 left-[10%] w-[300px] h-[300px] bg-gradient-to-br from-primary/10 to-accent/5 rounded-full blur-3xl animate-float-slow opacity-50" />
+          <div className="absolute bottom-20 right-[10%] w-[400px] h-[400px] bg-gradient-to-br from-accent/10 to-primary/5 rounded-full blur-3xl animate-float-slow opacity-40" style={{ animationDelay: "-4s" }} />
+          
+          {/* Top border gradient */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
           
           <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 rounded-full text-sm font-semibold mb-6 border border-primary/20">
+            {/* Section header */}
+            <div className="text-center mb-20">
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-background/80 backdrop-blur-xl border border-primary/20 rounded-full text-sm font-semibold mb-8 shadow-lg shadow-primary/5 group hover:border-primary/40 transition-all duration-300">
                 <Users className="w-4 h-4 text-primary" />
-                <span className="text-primary">Führungsteam</span>
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Führungsteam</span>
               </div>
               
-              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                <span className="bg-gradient-to-r from-foreground via-foreground to-foreground/60 bg-clip-text text-transparent">Unsere </span>
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Führungskräfte</span>
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 tracking-tight">
+                <span className="text-foreground">Unsere </span>
+                <span className="relative inline-block">
+                  <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-x">Führungskräfte</span>
+                </span>
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
                 Erfahrene Fachkräfte, die mit Herzblut für Sie da sind.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Team grid */}
+            <div className="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
               {teamMembers.map((member, index) => (
                 <div
                   key={member.name}
                   className="group relative animate-fade-up"
                   style={{ animationDelay: `${index * 0.15}s` }}
+                  onMouseEnter={() => setHoveredMember(index)}
+                  onMouseLeave={() => setHoveredMember(null)}
                 >
                   {/* Card glow effect */}
-                  <div className={`absolute -inset-1 bg-gradient-to-br ${member.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-40 transition-all duration-700`} />
+                  <div className={`absolute -inset-2 bg-gradient-to-br ${member.gradient} rounded-[2rem] blur-2xl opacity-0 group-hover:opacity-50 transition-all duration-700`} />
                   
-                  <div className="relative bg-background/80 backdrop-blur-xl border border-border/50 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                  {/* Main card */}
+                  <div className="relative bg-background/90 backdrop-blur-2xl border border-border/50 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group-hover:border-primary/30">
+                    {/* Shine effect overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
+                    
                     {/* Image section */}
-                    <div className="relative h-80 overflow-hidden">
+                    <div className="relative h-80 md:h-96 overflow-hidden">
                       <img
                         src={member.image}
                         alt={member.name}
                         className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                       />
-                      {/* Gradient overlays */}
-                      <div className={`absolute inset-0 bg-gradient-to-t ${member.color} opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
                       
-                      {/* Floating role badge */}
-                      <div className="absolute top-4 right-4 px-4 py-2 bg-background/90 backdrop-blur-xl rounded-full border border-primary/20 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-                        <Star className="w-4 h-4 text-primary inline mr-1" />
-                        <span className="text-xs font-semibold text-foreground">Führung</span>
+                      {/* Gradient overlays */}
+                      <div className={`absolute inset-0 bg-gradient-to-t ${member.gradient} opacity-0 group-hover:opacity-30 transition-all duration-500`} />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                      
+                      {/* Floating icon badge */}
+                      <div className="absolute top-5 right-5 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                        <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${member.gradient} flex items-center justify-center shadow-2xl ${member.shadowColor}`}>
+                          <member.icon className="w-7 h-7 text-white" />
+                        </div>
                       </div>
                     </div>
                     
                     {/* Content section */}
-                    <div className="relative p-8 -mt-12 z-10">
-                      <div className="bg-background/95 backdrop-blur-xl rounded-2xl p-6 border border-border/50 shadow-lg">
-                        <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                    <div className="relative p-8 -mt-20 z-10">
+                      {/* Info card */}
+                      <div className="bg-background/95 backdrop-blur-2xl rounded-2xl p-6 md:p-8 border border-border/50 shadow-xl group-hover:border-primary/20 transition-all duration-300">
+                        {/* Role badge */}
+                        <div className="mb-4">
+                          <span className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-gradient-to-r ${member.gradient} text-white shadow-lg ${member.shadowColor}`}>
+                            <Star className="w-3 h-3" />
+                            Führung
+                          </span>
+                        </div>
+                        
+                        {/* Name */}
+                        <h3 className="font-display text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
                           {member.name}
                         </h3>
-                        <p className={`bg-gradient-to-r ${member.color} bg-clip-text text-transparent font-semibold text-sm mb-4`}>
-                          {member.role}
+                        
+                        {/* Role */}
+                        <p className={`bg-gradient-to-r ${member.gradient} bg-clip-text text-transparent font-semibold text-sm mb-4`}>
+                          {member.fullRole}
                         </p>
+                        
+                        {/* Description */}
                         <p className="text-muted-foreground text-sm leading-relaxed">
                           {member.description}
                         </p>
@@ -241,39 +448,50 @@ const Team = () => {
           </div>
         </section>
 
-        {/* Team Video Section - Ultra Premium */}
-        <section className="py-24 relative overflow-hidden">
+        {/* ========== VIDEO SECTION - Ultra Premium ========== */}
+        <section className="py-24 lg:py-32 relative overflow-hidden">
           {/* Multi-layer gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(var(--primary-rgb),0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,hsl(var(--accent)/0.08),transparent_50%)]" />
           
           {/* Animated orbs */}
-          <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-accent/20 to-primary/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }} />
+          <div className="absolute top-20 right-[15%] w-64 h-64 md:w-96 md:h-96 bg-gradient-to-br from-accent/20 to-primary/10 rounded-full blur-3xl animate-glow opacity-40" />
+          <div className="absolute bottom-20 left-[10%] w-48 h-48 md:w-72 md:h-72 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl animate-glow opacity-30" style={{ animationDelay: "-2s" }} />
+          
+          {/* Grid pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--foreground)/0.015)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--foreground)/0.015)_1px,transparent_1px)] bg-[size:80px_80px]" />
           
           <div className="container mx-auto px-4 relative z-10">
+            {/* Section header */}
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-background/80 backdrop-blur-xl border border-primary/20 rounded-full text-sm font-semibold mb-6 shadow-lg">
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-background/80 backdrop-blur-2xl border border-primary/20 rounded-full text-sm font-semibold mb-8 shadow-xl shadow-primary/5">
                 <Play className="w-4 h-4 text-primary" />
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Team-Stimmen</span>
               </div>
               
-              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 tracking-tight">
                 <span className="text-foreground">Was unser </span>
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Team sagt</span>
+                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-x">Team sagt</span>
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
                 Hören Sie direkt von unseren Mitarbeitern, was sie an ihrer Arbeit bei AVYTA schätzen.
               </p>
             </div>
 
+            {/* Video container */}
             <div className="max-w-md mx-auto">
               <div className="relative group">
-                {/* Glow effect */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-3xl blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-700" />
+                {/* Multi-layer glow */}
+                <div className="absolute -inset-6 md:-inset-8 bg-gradient-to-r from-primary/40 via-accent/30 to-primary/40 rounded-[3rem] blur-3xl opacity-40 group-hover:opacity-60 transition-all duration-700 animate-glow" />
+                <div className="absolute -inset-3 md:-inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-[2.5rem] blur-xl opacity-50" />
                 
-                <div className="relative bg-gradient-to-br from-primary/10 to-accent/10 p-1 rounded-3xl">
-                  <div className="relative bg-background/90 backdrop-blur-xl rounded-[22px] overflow-hidden shadow-2xl">
+                {/* Rotating gradient border */}
+                <div className="absolute -inset-[3px] bg-gradient-to-r from-primary via-accent to-primary rounded-[2.5rem] opacity-60 animate-gradient-x bg-[length:200%_auto]" />
+                
+                {/* Video frame */}
+                <div className="relative bg-background p-1.5 rounded-[2.5rem]">
+                  <div className="relative bg-background/90 backdrop-blur-xl rounded-[2rem] overflow-hidden shadow-2xl">
                     <div className="relative aspect-[9/16] overflow-hidden">
                       <iframe
                         src="https://www.tiktok.com/embed/v2/7544857921394429206"
@@ -285,50 +503,58 @@ const Team = () => {
                   </div>
                 </div>
                 
-                {/* Decorative play button effect */}
-                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 px-6 py-3 bg-background/90 backdrop-blur-xl rounded-full border border-primary/20 shadow-xl flex items-center gap-2">
-                  <Heart className="w-4 h-4 text-red-500 animate-pulse" />
-                  <span className="text-sm font-semibold text-foreground">Authentische Einblicke</span>
+                {/* Floating badge */}
+                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-8 py-4 bg-background/95 backdrop-blur-2xl rounded-2xl border border-primary/20 shadow-2xl flex items-center gap-3 group-hover:scale-105 transition-transform duration-300">
+                  <div className="relative">
+                    <Heart className="w-5 h-5 text-red-500 animate-pulse" />
+                    <div className="absolute inset-0 w-5 h-5 text-red-500 blur-sm animate-glow" />
+                  </div>
+                  <span className="text-sm font-bold text-foreground">Authentische Einblicke</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Photo Gallery Section - Ultra Premium */}
-        <section className="py-24 relative overflow-hidden">
+        {/* ========== GALLERY SECTION - Ultra Premium ========== */}
+        <section className="py-24 lg:py-32 relative overflow-hidden">
           {/* Background */}
           <div className="absolute inset-0 bg-gradient-to-b from-muted/20 via-background to-muted/20" />
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+          
+          {/* Floating decorative elements */}
+          <div className="absolute top-40 left-[5%] w-20 h-20 bg-gradient-to-br from-primary/15 to-accent/10 rounded-2xl blur-2xl animate-float-slow" />
+          <div className="absolute bottom-40 right-[8%] w-32 h-32 bg-gradient-to-br from-accent/15 to-primary/10 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: "-3s" }} />
           
           <div className="container mx-auto px-4 relative z-10">
+            {/* Section header */}
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-full text-sm font-semibold mb-6">
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur-xl border border-primary/20 rounded-full text-sm font-semibold mb-8 shadow-lg">
                 <Images className="w-4 h-4 text-primary" />
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Galerie</span>
               </div>
               
-              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 tracking-tight">
                 <span className="text-foreground">Einblicke in </span>
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">unser Team</span>
+                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-x">unser Team</span>
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
                 Impressionen aus unserem Arbeitsalltag und von Teamevents.
               </p>
             </div>
 
             <div className="max-w-6xl mx-auto">
               <Tabs defaultValue={galleryCategories[0].id} className="w-full">
-                <TabsList className="w-full justify-center mb-12 flex-wrap h-auto gap-3 bg-transparent p-0">
+                {/* Tabs list */}
+                <TabsList className="w-full justify-center mb-14 flex-wrap h-auto gap-4 bg-transparent p-0">
                   {galleryCategories.map((category) => (
                     <TabsTrigger
                       key={category.id}
                       value={category.id}
-                      className="group relative px-8 py-4 rounded-2xl font-semibold transition-all duration-300 data-[state=active]:bg-transparent data-[state=active]:shadow-none bg-background/50 backdrop-blur-sm border border-transparent data-[state=active]:border-primary/30 hover:bg-background/80"
+                      className="group relative px-8 py-4 rounded-2xl font-semibold transition-all duration-500 bg-background/60 backdrop-blur-xl border border-transparent hover:border-primary/30 hover:bg-background/80 data-[state=active]:bg-background/90 data-[state=active]:border-primary/40 data-[state=active]:shadow-xl data-[state=active]:shadow-primary/10"
                     >
-                      {/* Active state glow */}
-                      <span className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-2xl opacity-0 data-[state=active]:opacity-100 blur-xl transition-opacity duration-300 -z-10" />
-                      <span className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-2xl opacity-0 data-[state=active]:opacity-10 transition-opacity duration-300" />
+                      {/* Active glow */}
+                      <span className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-2xl opacity-0 data-[state=active]:opacity-20 blur-xl transition-opacity duration-300" />
                       
                       <span className="relative z-10 flex items-center gap-2">
                         <Images className="w-4 h-4" />
@@ -340,7 +566,7 @@ const Team = () => {
 
                 {galleryCategories.map((category) => (
                   <TabsContent key={category.id} value={category.id} className="mt-0">
-                    <div className={`grid gap-8 ${category.images.length === 1 ? 'grid-cols-1 max-w-3xl mx-auto' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
+                    <div className={`grid gap-8 ${category.images.length === 1 ? 'grid-cols-1 max-w-4xl mx-auto' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
                       {category.images.map((image, index) => (
                         <div
                           key={index}
@@ -349,30 +575,33 @@ const Team = () => {
                           onClick={() => setSelectedImage(image)}
                         >
                           {/* Card glow */}
-                          <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-60 transition-all duration-500" />
+                          <div className="absolute -inset-3 bg-gradient-to-r from-primary/25 via-accent/20 to-primary/25 rounded-3xl blur-2xl opacity-0 group-hover:opacity-70 transition-all duration-500" />
                           
-                          <div className="relative bg-gradient-to-br from-primary/10 to-accent/10 p-1 rounded-2xl">
+                          {/* Gradient border */}
+                          <div className="absolute -inset-[2px] bg-gradient-to-r from-primary via-accent to-primary rounded-2xl opacity-0 group-hover:opacity-60 transition-all duration-300 animate-gradient-x bg-[length:200%_auto]" />
+                          
+                          <div className="relative bg-background p-1 rounded-2xl">
                             <div className="relative overflow-hidden rounded-xl">
                               <img
                                 src={image.src}
                                 alt={image.alt}
-                                className="w-full h-72 object-cover transition-all duration-700 group-hover:scale-110"
+                                className="w-full h-72 md:h-80 object-cover transition-all duration-700 group-hover:scale-110"
                               />
                               
                               {/* Hover overlay */}
-                              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                              <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
                               
                               {/* View indicator */}
                               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <div className="w-16 h-16 rounded-2xl bg-background/90 backdrop-blur-xl flex items-center justify-center shadow-2xl transform scale-75 group-hover:scale-100 transition-transform duration-300">
-                                  <Images className="w-6 h-6 text-primary" />
+                                <div className="w-20 h-20 rounded-2xl bg-background/95 backdrop-blur-2xl flex items-center justify-center shadow-2xl transform scale-50 group-hover:scale-100 transition-all duration-500">
+                                  <Images className="w-8 h-8 text-primary" />
                                 </div>
                               </div>
                               
                               {/* Bottom label */}
                               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                <div className="bg-background/90 backdrop-blur-xl px-4 py-2 rounded-xl border border-primary/20">
-                                  <span className="text-sm font-semibold text-foreground">{category.label}</span>
+                                <div className="bg-background/95 backdrop-blur-2xl px-5 py-3 rounded-xl border border-primary/20 shadow-xl">
+                                  <span className="text-sm font-bold text-foreground">{category.label}</span>
                                 </div>
                               </div>
                             </div>
@@ -387,18 +616,21 @@ const Team = () => {
           </div>
         </section>
 
-        {/* Image Lightbox Dialog - Premium */}
+        {/* ========== IMAGE LIGHTBOX - Premium ========== */}
         <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-          <DialogContent className="max-w-5xl p-0 bg-transparent border-none">
+          <DialogContent className="max-w-6xl p-0 bg-transparent border-none">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 z-10 w-12 h-12 rounded-2xl bg-background/90 backdrop-blur-xl flex items-center justify-center text-foreground hover:bg-background border border-primary/20 shadow-xl transition-all duration-300 hover:scale-110"
+              className="absolute top-4 right-4 z-10 w-14 h-14 rounded-2xl bg-background/95 backdrop-blur-2xl flex items-center justify-center text-foreground hover:bg-background border border-primary/20 shadow-2xl transition-all duration-300 hover:scale-110 hover:border-primary/40"
             >
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             </button>
             {selectedImage && (
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-3xl blur-2xl opacity-50" />
+                {/* Multi-layer glow */}
+                <div className="absolute -inset-6 bg-gradient-to-r from-primary/40 via-accent/30 to-primary/40 rounded-3xl blur-3xl opacity-50" />
+                <div className="absolute -inset-3 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-xl opacity-60" />
+                
                 <img
                   src={selectedImage.src}
                   alt={selectedImage.alt}
@@ -409,57 +641,60 @@ const Team = () => {
           </DialogContent>
         </Dialog>
 
-        {/* Join Team CTA - Ultra Premium */}
-        <section className="py-24 relative overflow-hidden">
+        {/* ========== JOIN TEAM CTA - Ultra Premium ========== */}
+        <section className="py-24 lg:py-32 relative overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="relative max-w-5xl mx-auto">
-              {/* Background glow */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-[40px] blur-3xl opacity-40" />
+            <div className="relative max-w-6xl mx-auto">
+              {/* Background glow layers */}
+              <div className="absolute -inset-8 md:-inset-12 bg-gradient-to-r from-primary/40 via-accent/30 to-primary/40 rounded-[4rem] blur-[80px] opacity-30" />
+              <div className="absolute -inset-4 md:-inset-6 bg-gradient-to-br from-primary/20 to-accent/20 rounded-[3rem] blur-3xl opacity-50" />
               
-              <div className="relative overflow-hidden rounded-3xl">
-                {/* Gradient background */}
+              <div className="relative overflow-hidden rounded-3xl md:rounded-[2.5rem]">
+                {/* Main gradient background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent" />
                 
-                {/* Animated pattern */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+                {/* Animated pattern overlay */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
                 
-                {/* Floating orbs */}
-                <div className="absolute top-10 right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-10 left-20 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+                {/* Animated morphing blobs */}
+                <div className="absolute top-0 right-0 w-60 h-60 md:w-80 md:h-80 bg-white/10 rounded-full blur-3xl animate-morph-blob" />
+                <div className="absolute bottom-0 left-0 w-48 h-48 md:w-64 md:h-64 bg-white/10 rounded-full blur-3xl animate-morph-blob" style={{ animationDelay: "-7s" }} />
                 
-                {/* Shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full animate-[shine_3s_ease-in-out_infinite]" />
+                {/* Shine sweep effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full animate-shine pointer-events-none" style={{ animationDuration: "4s" }} />
                 
-                <div className="relative p-12 md:p-16">
-                  <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
+                <div className="relative p-10 md:p-16 lg:p-20">
+                  <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
+                    {/* Content */}
                     <div className="flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
                       {/* Icon container */}
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-white/20 rounded-3xl blur-xl" />
-                        <div className="relative w-24 h-24 rounded-3xl bg-white/20 backdrop-blur-xl flex items-center justify-center border border-white/30">
-                          <Users className="w-12 h-12 text-white" />
+                      <div className="relative shrink-0">
+                        <div className="absolute inset-0 bg-white/30 rounded-3xl blur-2xl animate-glow" />
+                        <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-3xl bg-white/20 backdrop-blur-2xl flex items-center justify-center border border-white/30 shadow-2xl">
+                          <Users className="w-12 h-12 md:w-14 md:h-14 text-white" />
                         </div>
                       </div>
                       
                       <div>
-                        <h3 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                        <h3 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 tracking-tight">
                           Werden Sie Teil unseres Teams!
                         </h3>
-                        <p className="text-white/80 text-lg max-w-xl">
+                        <p className="text-white/80 text-lg md:text-xl max-w-2xl">
                           Wir suchen engagierte Pflegekräfte, die mit Herz arbeiten und gemeinsam mit uns wachsen möchten.
                         </p>
                       </div>
                     </div>
                     
+                    {/* CTA Button */}
                     <Link to="/jobs" className="group relative shrink-0">
                       {/* Button glow */}
-                      <div className="absolute -inset-1 bg-white rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
+                      <div className="absolute -inset-2 bg-white rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-300 animate-glow" />
                       
-                      <div className="relative px-10 py-5 bg-white rounded-2xl font-bold text-primary flex items-center gap-3 shadow-2xl transition-all duration-300 group-hover:scale-105 group-hover:shadow-white/25 overflow-hidden">
-                        {/* Shine effect */}
+                      <div className="relative px-10 md:px-12 py-5 md:py-6 bg-white rounded-2xl font-bold text-primary flex items-center gap-3 shadow-2xl transition-all duration-300 group-hover:scale-105 overflow-hidden">
+                        {/* Shine sweep */}
                         <span className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                         
-                        <span className="relative z-10">Alle Pflegejobs</span>
+                        <span className="relative z-10 text-lg">Alle Pflegejobs</span>
                         <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </Link>
