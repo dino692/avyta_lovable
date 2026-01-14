@@ -105,15 +105,15 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/30 shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2 group">
               <img 
                 src="/images/avyta-logo.png" 
                 alt="AVYTA Pflegegesellschaft mbH" 
-                className="h-6"
+                className="h-7 transition-transform duration-300 group-hover:scale-105"
                 width="201"
                 height="24"
                 fetchPriority="high"
@@ -122,22 +122,24 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <NavigationMenu className="hidden lg:flex">
-              <NavigationMenuList>
+              <NavigationMenuList className="gap-1">
                 <NavigationMenuItem>
-                  <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
-                    Start
+                  <Link to="/" className="relative text-sm text-foreground/80 hover:text-primary transition-all duration-300 font-semibold px-4 py-2 rounded-full hover:bg-primary/5 group">
+                    <span className="relative z-10">Start</span>
+                    <span className="absolute inset-x-4 -bottom-0.5 h-0.5 bg-gradient-to-r from-primary to-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full" />
                   </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link to="/team" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
-                    Team
+                  <Link to="/team" className="relative text-sm text-foreground/80 hover:text-primary transition-all duration-300 font-semibold px-4 py-2 rounded-full hover:bg-primary/5 group">
+                    <span className="relative z-10">Team</span>
+                    <span className="absolute inset-x-4 -bottom-0.5 h-0.5 bg-gradient-to-r from-primary to-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full" />
                   </Link>
                 </NavigationMenuItem>
 
                 {/* Leistungen Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm text-muted-foreground hover:text-primary font-medium bg-transparent">
+                  <NavigationMenuTrigger className="text-sm text-foreground/80 hover:text-primary font-semibold bg-transparent hover:bg-primary/5 rounded-full transition-all duration-300 data-[state=open]:bg-primary/10 data-[state=open]:text-primary">
                     Leistungen
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -169,7 +171,7 @@ const Header = () => {
 
                 {/* Standorte Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm text-muted-foreground hover:text-primary font-medium bg-transparent">
+                  <NavigationMenuTrigger className="text-sm text-foreground/80 hover:text-primary font-semibold bg-transparent hover:bg-primary/5 rounded-full transition-all duration-300 data-[state=open]:bg-primary/10 data-[state=open]:text-primary">
                     Standorte
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -210,7 +212,7 @@ const Header = () => {
 
                 {/* Jobs Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm text-muted-foreground hover:text-primary font-medium bg-transparent">
+                  <NavigationMenuTrigger className="text-sm text-foreground/80 hover:text-primary font-semibold bg-transparent hover:bg-primary/5 rounded-full transition-all duration-300 data-[state=open]:bg-primary/10 data-[state=open]:text-primary">
                     Jobs
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -242,7 +244,7 @@ const Header = () => {
 
                 {/* Blog Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm text-muted-foreground hover:text-primary font-medium bg-transparent">
+                  <NavigationMenuTrigger className="text-sm text-foreground/80 hover:text-primary font-semibold bg-transparent hover:bg-primary/5 rounded-full transition-all duration-300 data-[state=open]:bg-primary/10 data-[state=open]:text-primary">
                     Blog
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -273,8 +275,9 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link to="/kontakt" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
-                    Kontakt
+                  <Link to="/kontakt" className="relative text-sm text-foreground/80 hover:text-primary transition-all duration-300 font-semibold px-4 py-2 rounded-full hover:bg-primary/5 group">
+                    <span className="relative z-10">Kontakt</span>
+                    <span className="absolute inset-x-4 -bottom-0.5 h-0.5 bg-gradient-to-r from-primary to-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full" />
                   </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>
@@ -286,10 +289,10 @@ const Header = () => {
                 <Button 
                   variant="hero"
                   onClick={() => setIsCtaDropdownOpen(!isCtaDropdownOpen)}
-                  className="group"
+                  className="group font-bold shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-r from-primary to-accent hover:opacity-90"
                 >
-                  Kostenloses Erstgespräch
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isCtaDropdownOpen ? 'rotate-180' : ''}`} />
+                  <span className="font-semibold tracking-wide">Kostenloses Erstgespräch</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isCtaDropdownOpen ? 'rotate-180' : ''}`} />
                 </Button>
                 
                 {/* Dropdown Menu */}
