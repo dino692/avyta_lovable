@@ -51,9 +51,9 @@ const AnimatedCounter = ({ value, suffix, delay }: { value: number; suffix: stri
   }, [isVisible, value, delay]);
 
   return (
-    <div ref={ref} className="text-3xl md:text-4xl font-display font-bold text-primary">
+    <span ref={ref}>
       {count.toLocaleString('de-DE')}{suffix}
-    </div>
+    </span>
   );
 };
 
@@ -73,52 +73,52 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-12">
+    <section className="relative min-h-screen flex items-center pt-20 md:pt-24 pb-8 md:pb-12">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-accent/5" />
       
-      {/* Morphing blob backgrounds */}
+      {/* Morphing blob backgrounds - hidden on mobile for performance */}
       <div 
-        className="absolute top-20 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl animate-morph opacity-60"
+        className="absolute top-20 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl animate-morph opacity-40 md:opacity-60"
         style={{ transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px)` }}
       />
       <div 
-        className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-tr from-accent/15 to-primary/10 rounded-full blur-3xl animate-morph opacity-50"
+        className="hidden md:block absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-tr from-accent/15 to-primary/10 rounded-full blur-3xl animate-morph opacity-50"
         style={{ animationDelay: '-4s', transform: `translate(${mousePosition.x * -0.3}px, ${mousePosition.y * -0.3}px)` }}
       />
       
-      {/* Floating decorative elements */}
-      <div className="absolute top-1/4 left-[10%] w-3 h-3 bg-primary/40 rounded-full animate-float" />
-      <div className="absolute top-1/3 right-[15%] w-4 h-4 bg-accent/30 rounded-full animate-float-delayed" />
-      <div className="absolute bottom-1/4 left-[20%] w-2 h-2 bg-primary/50 rounded-full animate-float" style={{ animationDelay: '-3s' }} />
+      {/* Floating decorative elements - hidden on mobile */}
+      <div className="hidden md:block absolute top-1/4 left-[10%] w-3 h-3 bg-primary/40 rounded-full animate-float" />
+      <div className="hidden md:block absolute top-1/3 right-[15%] w-4 h-4 bg-accent/30 rounded-full animate-float-delayed" />
+      <div className="hidden md:block absolute bottom-1/4 left-[20%] w-2 h-2 bg-primary/50 rounded-full animate-float" style={{ animationDelay: '-3s' }} />
 
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }} />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <div className="space-y-8">
+          <div className="space-y-5 md:space-y-8">
             {/* Eyebrow */}
             <div 
-              className="animate-slide-up inline-flex items-center gap-3 px-5 py-2.5 glass rounded-full shadow-lg"
+              className="animate-slide-up inline-flex items-center gap-2 md:gap-3 px-3 md:px-5 py-2 md:py-2.5 glass rounded-full shadow-lg"
               style={{ animationDelay: '0.1s' }}
             >
-              <span className="relative flex h-3 w-3">
+              <span className="relative flex h-2 w-2 md:h-3 md:w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-primary" />
+                <span className="relative inline-flex rounded-full h-2 w-2 md:h-3 md:w-3 bg-primary" />
               </span>
-              <span className="text-sm font-semibold text-foreground">
+              <span className="text-xs md:text-sm font-semibold text-foreground">
                 Jetzt kostenlose Beratung sichern
               </span>
-              <Sparkles className="w-4 h-4 text-primary" />
+              <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-primary" />
             </div>
 
             {/* Headline */}
             <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-[1.1] text-foreground text-balance">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-[1.1] text-foreground text-balance">
                 Liebevolle Pflege
-                <span className="block mt-2 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient">
+                <span className="block mt-1 md:mt-2 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient">
                   in Ihrem Zuhause
                 </span>
               </h1>
@@ -126,7 +126,7 @@ const HeroSection = () => {
 
             {/* Description */}
             <p 
-              className="animate-slide-up text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed"
+              className="animate-slide-up text-base md:text-xl text-muted-foreground max-w-xl leading-relaxed"
               style={{ animationDelay: '0.3s' }}
             >
               Wir begleiten Sie und Ihre Angehörigen mit Herz, Kompetenz und 
@@ -136,7 +136,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div 
-              className="animate-slide-up flex flex-col sm:flex-row gap-4"
+              className="animate-slide-up flex flex-col sm:flex-row gap-3 md:gap-4"
               style={{ animationDelay: '0.4s' }}
             >
               <CTADropdownButton className="w-full sm:w-auto" />
@@ -144,11 +144,11 @@ const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="w-full sm:w-auto group border-2 hover:bg-primary/5"
+                className="w-full sm:w-auto group border-2 hover:bg-primary/5 text-sm md:text-base"
                 asChild
               >
                 <a href="https://www.avyta.de/images/avyta_infobroschuere.pdf" target="_blank" rel="noopener noreferrer">
-                  <FileText className="w-5 h-5 mr-2 transition-transform group-hover:-translate-y-0.5" />
+                  <FileText className="w-4 h-4 md:w-5 md:h-5 mr-2 transition-transform group-hover:-translate-y-0.5" />
                   Infobroschüre herunterladen
                 </a>
               </Button>
@@ -156,17 +156,19 @@ const HeroSection = () => {
 
             {/* Stats */}
             <div 
-              className="animate-slide-up pt-4"
+              className="animate-slide-up pt-2 md:pt-4"
               style={{ animationDelay: '0.5s' }}
             >
-              <div className="glass rounded-2xl p-6 shadow-lg">
-                <div className="grid grid-cols-3 gap-4 md:gap-8">
+              <div className="glass rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg">
+                <div className="grid grid-cols-3 gap-2 md:gap-8">
                   {stats.map((stat, index) => (
                     <div key={stat.label} className="text-center relative">
-                      <AnimatedCounter value={stat.value} suffix={stat.suffix} delay={stat.delay} />
-                      <div className="text-xs md:text-sm text-muted-foreground mt-1">{stat.label}</div>
+                      <div className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-primary">
+                        <AnimatedCounter value={stat.value} suffix={stat.suffix} delay={stat.delay} />
+                      </div>
+                      <div className="text-[10px] sm:text-xs md:text-sm text-muted-foreground mt-0.5 md:mt-1 leading-tight">{stat.label}</div>
                       {index < stats.length - 1 && (
-                        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-border hidden md:block" />
+                        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-px h-8 md:h-12 bg-border hidden sm:block" />
                       )}
                     </div>
                   ))}
@@ -249,13 +251,13 @@ const HeroSection = () => {
         </div>
 
         {/* Quick contact bar - mobile only */}
-        <div className="mt-12 lg:hidden animate-slide-up" style={{ animationDelay: '0.6s' }}>
+        <div className="mt-8 md:mt-12 lg:hidden animate-slide-up" style={{ animationDelay: '0.6s' }}>
           <a 
             href="tel:+496915391405"
-            className="flex items-center justify-center gap-3 w-full p-4 bg-primary text-primary-foreground rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-shadow"
+            className="flex items-center justify-center gap-2 md:gap-3 w-full p-3.5 md:p-4 bg-primary text-primary-foreground rounded-xl md:rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-shadow text-sm md:text-base"
           >
-            <Phone className="w-5 h-5" />
-            Jetzt anrufen: 069 153 914 05
+            <Phone className="w-4 h-4 md:w-5 md:h-5" />
+            <span>Jetzt anrufen: 069 153 914 05</span>
           </a>
         </div>
       </div>

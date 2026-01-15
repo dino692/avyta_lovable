@@ -58,7 +58,7 @@ const HowItWorksSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-28 relative overflow-hidden" id="how-it-works">
+    <section ref={sectionRef} className="py-16 md:py-28 relative overflow-hidden" id="how-it-works">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/50 to-background" />
       
@@ -67,18 +67,18 @@ const HowItWorksSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className={`text-center max-w-3xl mx-auto mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 rounded-full mb-6">
+        <div className={`text-center max-w-3xl mx-auto mb-10 md:mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-flex items-center gap-2 px-4 md:px-5 py-2 md:py-2.5 bg-primary/10 rounded-full mb-4 md:mb-6">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">
+            <span className="text-xs md:text-sm font-semibold text-primary uppercase tracking-wider">
               So funktioniert's
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4 md:mb-6">
             In 5 Schritten zu{" "}
             <span className="text-primary">Ihrer Pflege</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <p className="text-base md:text-xl text-muted-foreground leading-relaxed px-2">
             Wir machen es Ihnen so einfach wie möglich. Von der ersten Anfrage bis 
             zur regelmäßigen Betreuung – wir begleiten Sie auf jedem Schritt.
           </p>
@@ -137,57 +137,57 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Steps - Mobile Cards */}
-        <div className="lg:hidden space-y-4">
+        <div className="lg:hidden space-y-3">
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className={`relative p-6 rounded-2xl glass border border-border/50 shadow-sm transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+              className={`relative p-4 md:p-6 rounded-xl md:rounded-2xl glass border border-border/50 shadow-sm transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-3 md:gap-4">
                 {/* Icon */}
-                <div className={`flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center border border-primary/20`}>
-                  <step.icon className="w-6 h-6 text-primary" />
+                <div className={`flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-lg md:rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center border border-primary/20`}>
+                  <step.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                 </div>
                 
                 {/* Content */}
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded-full">
+                  <div className="flex items-center gap-2 mb-1 md:mb-2">
+                    <span className="text-[10px] md:text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 md:py-1 rounded-full">
                       Schritt {step.number}
                     </span>
                   </div>
-                  <h3 className="font-display font-semibold text-lg text-foreground mb-1">
+                  <h3 className="font-display font-semibold text-base md:text-lg text-foreground mb-0.5 md:mb-1">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
                 </div>
                 
-                {/* Arrow */}
+                {/* Arrow - hidden on smallest screens */}
                 {index < steps.length - 1 && (
-                  <ArrowRight className="w-5 h-5 text-muted-foreground/50 hidden sm:block" />
+                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground/50 hidden sm:block flex-shrink-0" />
                 )}
               </div>
               
               {/* Connection line */}
               {index < steps.length - 1 && (
-                <div className="absolute left-10 top-full w-0.5 h-4 bg-gradient-to-b from-primary/30 to-transparent" />
+                <div className="absolute left-8 md:left-10 top-full w-0.5 h-3 bg-gradient-to-b from-primary/30 to-transparent" />
               )}
             </div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className={`text-center mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`text-center mt-10 md:mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <a
             href="tel:+496915391405"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold shadow-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 group"
+            className="inline-flex items-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 bg-primary text-primary-foreground rounded-full font-semibold shadow-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 group text-sm md:text-base"
           >
-            <Phone className="w-5 h-5" />
+            <Phone className="w-4 h-4 md:w-5 md:h-5" />
             Jetzt Erstgespräch vereinbaren
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:translate-x-1" />
           </a>
         </div>
       </div>
