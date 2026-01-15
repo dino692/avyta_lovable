@@ -108,43 +108,64 @@ const Header = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            {/* Modern Logo */}
-            <Link to="/" className="group relative flex items-center gap-3">
-              {/* Animated Glow Background */}
-              <div className="absolute -inset-3 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
+            {/* Premium Modern Logo */}
+            <Link to="/" className="group relative flex items-center gap-4">
+              {/* Multi-layer Glow Background */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-accent/20 to-primary/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-700" />
+              <div className="absolute -inset-2 bg-gradient-to-r from-accent/20 to-primary/20 rounded-2xl opacity-0 group-hover:opacity-60 blur-lg transition-all duration-500 delay-100" />
               
               {/* Logo Container */}
               <div className="relative flex items-center gap-3">
-                {/* Animated Icon */}
+                {/* Premium Animated Logo Mark */}
                 <div className="relative">
-                  {/* Outer Ring */}
-                  <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 blur-sm transition-all duration-300 group-hover:animate-pulse" />
-                  
-                  {/* Icon Container */}
-                  <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-all duration-300 group-hover:scale-105">
-                    {/* Inner Shine */}
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/20 to-transparent" />
-                    
-                    {/* Heart Icon */}
-                    <Heart className="w-5 h-5 text-white fill-white/30 group-hover:scale-110 transition-transform duration-300" />
-                    
-                    {/* Pulse Effect */}
-                    <div className="absolute inset-0 rounded-xl bg-white/20 opacity-0 group-hover:opacity-100 group-hover:animate-ping" />
+                  {/* Rotating Outer Ring */}
+                  <div className="absolute -inset-2 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary via-accent to-primary animate-spin" style={{ animationDuration: "3s" }} />
                   </div>
+                  
+                  {/* Inner Background to mask the spinning border */}
+                  <div className="absolute -inset-1 rounded-xl bg-background" />
+                  
+                  {/* Main Icon Container */}
+                  <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-primary via-primary to-accent flex items-center justify-center shadow-xl shadow-primary/30 group-hover:shadow-primary/50 transition-all duration-500 group-hover:scale-110 overflow-hidden">
+                    {/* Animated Background Pattern */}
+                    <div className="absolute inset-0 opacity-30">
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.3)_0%,transparent_50%)]" />
+                      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 via-transparent to-transparent" />
+                    </div>
+                    
+                    {/* Shimmer Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+                    
+                    {/* Logo Letter "A" */}
+                    <span className="relative z-10 text-2xl font-display font-bold text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      A
+                    </span>
+                    
+                    {/* Pulse Ring */}
+                    <div className="absolute inset-0 rounded-xl border-2 border-white/30 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500" />
+                  </div>
+                  
+                  {/* Floating Particles */}
+                  <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-accent opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-opacity duration-300" style={{ animationDelay: "0.1s" }} />
+                  <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-opacity duration-300" style={{ animationDelay: "0.3s" }} />
                 </div>
                 
-                {/* Logo Image with Effects */}
-                <div className="relative">
-                  <img 
-                    src="/images/avyta-logo.png" 
-                    alt="AVYTA Pflegegesellschaft mbH" 
-                    className="h-6 relative z-10 transition-all duration-300 group-hover:brightness-110"
-                    width="201"
-                    height="24"
-                    fetchPriority="high"
-                  />
-                  {/* Underline Animation */}
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-500 rounded-full" />
+                {/* Brand Name with Effects */}
+                <div className="relative flex flex-col">
+                  {/* Main Brand Text */}
+                  <div className="relative">
+                    <span className="text-xl font-display font-bold bg-gradient-to-r from-foreground via-foreground to-foreground bg-clip-text text-transparent group-hover:from-primary group-hover:via-accent group-hover:to-primary transition-all duration-500 bg-[length:200%_auto] group-hover:bg-[length:100%_auto]">
+                      AVYTA
+                    </span>
+                    {/* Underline Animation */}
+                    <div className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-gradient-to-r from-primary via-accent to-primary group-hover:w-full transition-all duration-500 rounded-full" />
+                  </div>
+                  
+                  {/* Tagline */}
+                  <span className="text-[10px] text-muted-foreground tracking-wider uppercase opacity-70 group-hover:opacity-100 group-hover:text-primary/80 transition-all duration-300">
+                    Pflegegesellschaft
+                  </span>
                 </div>
               </div>
             </Link>
