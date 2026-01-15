@@ -105,7 +105,7 @@ const App = () => (
             <Route path="/blog/pflegegrad-beantragen" element={<PflegegradBeantragen />} />
             <Route path="/blog/verhinderungspflege-nutzen" element={<VerhinderungspflegeNutzen />} />
             <Route path="/blog/pflegegeld-tabelle-2025" element={<PflegegeldTabelle />} />
-            <Route path="/blog/entlastungsbetrag-125-euro" element={<EntlastungsbetragNutzen />} />
+            <Route path="/blog/entlastungsbetrag-nutzen" element={<EntlastungsbetragNutzen />} />
             <Route path="/blog/kombinationsleistung-pflege" element={<KombinationsleistungPflege />} />
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/jobs/pflege-jobs" element={<PflegeJobs />} />

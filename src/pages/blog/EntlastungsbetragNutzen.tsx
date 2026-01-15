@@ -10,10 +10,10 @@ const EntlastungsbetragNutzen = () => {
   return (
     <>
       <Helmet>
-        <title>Entlastungsbetrag 125 Euro: Wofür nutzen & beantragen | AVYTA</title>
-        <meta name="description" content="Der Entlastungsbetrag von 125 Euro monatlich steht allen Pflegebedürftigen ab Pflegegrad 1 zu. Erfahren Sie, wofür Sie ihn nutzen können und wie Sie ihn beantragen." />
-        <meta name="keywords" content="Entlastungsbetrag, 125 Euro Pflegegeld, Entlastungsleistungen Pflege, Pflegegrad 1 Geld, Betreuungsleistungen" />
-        <link rel="canonical" href="https://www.avyta.de/blog/entlastungsbetrag-125-euro" />
+        <title>Entlastungsbetrag 131 Euro: Wofür nutzen & beantragen | AVYTA</title>
+        <meta name="description" content="Der Entlastungsbetrag von 131 Euro monatlich steht allen Pflegebedürftigen ab Pflegegrad 1 zu. Erfahren Sie, wofür Sie ihn nutzen können und wie Sie ihn beantragen." />
+        <meta name="keywords" content="Entlastungsbetrag, 131 Euro Pflegegeld, Entlastungsleistungen Pflege, Pflegegrad 1 Geld, Betreuungsleistungen" />
+        <link rel="canonical" href="https://www.avyta.de/blog/entlastungsbetrag-nutzen" />
       </Helmet>
 
       <Header />
@@ -32,12 +32,12 @@ const EntlastungsbetragNutzen = () => {
                 Recht & Finanzen
               </span>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
-                Entlastungsbetrag 125 €: So nutzen Sie ihn richtig
+                Entlastungsbetrag 131 €: So nutzen Sie ihn richtig
               </h1>
               <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-muted-foreground text-sm md:text-base">
                 <span className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  28. Dezember 2024
+                  10. Januar 2026
                 </span>
                 <span className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />
@@ -60,7 +60,7 @@ const EntlastungsbetragNutzen = () => {
 
             <div className="max-w-3xl mx-auto">
               <p className="text-xl text-muted-foreground mb-8">
-                Der Entlastungsbetrag von 125 Euro monatlich ist eine oft unterschätzte Leistung der Pflegekasse. 
+                Der Entlastungsbetrag von 131 Euro monatlich ist eine oft unterschätzte Leistung der Pflegekasse. 
                 Schon ab Pflegegrad 1 haben Sie Anspruch darauf. Wir zeigen, wie Sie das Geld sinnvoll einsetzen.
               </p>
 
@@ -70,15 +70,15 @@ const EntlastungsbetragNutzen = () => {
                   <Euro className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <div className="text-2xl font-display font-bold text-primary">125 € monatlich</div>
-                  <div className="text-muted-foreground">= 1.500 € pro Jahr für Entlastungsleistungen</div>
+                  <div className="text-2xl font-display font-bold text-primary">131 € monatlich</div>
+                  <div className="text-muted-foreground">= 1.572 € pro Jahr für Entlastungsleistungen</div>
                 </div>
               </div>
 
               <h2 className="text-2xl font-display font-bold text-foreground mt-12 mb-4">Was ist der Entlastungsbetrag?</h2>
               <p className="text-muted-foreground mb-6">
                 Der Entlastungsbetrag nach § 45b SGB XI ist eine zweckgebundene Leistung der Pflegeversicherung. 
-                Er steht allen Pflegebedürftigen mit anerkanntem Pflegegrad (1-5) zu und beträgt 125 Euro monatlich.
+                Er steht allen Pflegebedürftigen mit anerkanntem Pflegegrad (1-5) zu und beträgt 131 Euro monatlich.
               </p>
               <p className="text-muted-foreground mb-6">
                 Anders als das Pflegegeld wird der Entlastungsbetrag nicht bar ausgezahlt, sondern gegen Nachweis 
@@ -150,7 +150,7 @@ const EntlastungsbetragNutzen = () => {
                     <h3 className="font-semibold text-foreground mb-2">Tipp: Entlastungsbetrag ansparen</h3>
                     <p className="text-muted-foreground">
                       Nicht genutzte Beträge können bis zum 30. Juni des Folgejahres angespart werden. So haben Sie bei 
-                      Bedarf bis zu 1.875 Euro zur Verfügung!
+                      Bedarf bis zu 1.965 Euro zur Verfügung!
                     </p>
                   </div>
                 </div>
@@ -161,7 +161,7 @@ const EntlastungsbetragNutzen = () => {
                 <li>Sie beauftragen einen anerkannten Dienstleister (z.B. ambulanter Pflegedienst)</li>
                 <li>Die Leistung wird erbracht und in Rechnung gestellt</li>
                 <li>Sie reichen die Rechnung bei der Pflegekasse ein</li>
-                <li>Die Pflegekasse erstattet bis zu 125 € monatlich</li>
+                <li>Die Pflegekasse erstattet bis zu 131 € monatlich</li>
               </ol>
               <p className="text-muted-foreground mb-6">
                 Alternativ kann der Pflegedienst direkt mit der Pflegekasse abrechnen – fragen Sie uns danach!

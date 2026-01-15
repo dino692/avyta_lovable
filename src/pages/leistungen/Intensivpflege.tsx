@@ -45,7 +45,7 @@ const Intensivpflege = () => {
     <>
       <Helmet>
         <title>Ausserklinische Intensivpflege in Frankfurt am Main | AVYTA</title>
-        <meta name="description" content="Spezialisierte ausserklinische Intensivpflege in Frankfurt am Main. Professionelle Betreuung für beatmungspflichtige Patienten zu Hause. Über 10 Jahre Erfahrung. Jetzt beraten lassen!" />
+        <meta name="description" content="Spezialisierte ausserklinische Intensivpflege in Frankfurt am Main. Professionelle Betreuung für beatmungspflichtige Patienten zu Hause. Über 12 Jahre Erfahrung. Jetzt beraten lassen!" />
         <meta name="keywords" content="Intensivpflege Frankfurt, Ausserklinische Intensivpflege, Beatmungspflege Frankfurt, Heimbeatmung" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" />
       </Helmet>
@@ -63,7 +63,7 @@ const Intensivpflege = () => {
                   Ausserklinische Intensivpflege in Frankfurt am Main
                 </h1>
                 <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
-                  Mit mehr als 10 Jahren Erfahrung in der Pflege und einem hochmotivierten, verlässlichen und einfühlsamen Team stehen wir Ihnen zur Seite.
+                  Mit mehr als 12 Jahren Erfahrung in der Pflege und einem hochmotivierten, verlässlichen und einfühlsamen Team stehen wir Ihnen zur Seite.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -187,11 +187,11 @@ const Intensivpflege = () => {
                           <FileCheck className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
                         <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
-                          Über 10 Jahre Erfahrung
+                          Über 12 Jahre Erfahrung
                         </h3>
                       </div>
                       <p className="text-sm md:text-base text-muted-foreground">
-                        Mit mehr als 10 Jahren Erfahrung in der Pflege bieten wir 
+                        Mit mehr als 12 Jahren Erfahrung in der Pflege bieten wir 
                         sowohl das fachliche Know-how als auch die Menschlichkeit, 
                         die in einer guten Intensivpflege wichtig sind.
                       </p>

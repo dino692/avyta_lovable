@@ -73,7 +73,7 @@ const VierundzwanzigStunden = () => {
     <>
       <Helmet>
         <title>24 Stunden Pflege in Frankfurt mit Avyta | AVYTA Pflegedienst</title>
-        <meta name="description" content="24 Stunden Pflege in Frankfurt von Avyta. Rund-um-die-Uhr Betreuung zu Hause durch qualifizierte Pflegekräfte. Über 10 Jahre Erfahrung. Jetzt beraten lassen!" />
+        <meta name="description" content="24 Stunden Pflege in Frankfurt von Avyta. Rund-um-die-Uhr Betreuung zu Hause durch qualifizierte Pflegekräfte. Über 12 Jahre Erfahrung. Jetzt beraten lassen!" />
         <meta name="keywords" content="24 Stunden Pflege Frankfurt, Rund um die Uhr Pflege, Häusliche Pflege Frankfurt" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/24-stunden-pflege" />
       </Helmet>
@@ -111,7 +111,7 @@ const VierundzwanzigStunden = () => {
                   leistet genau das für Sie.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Mit mehr als 10 Jahren Erfahrung im Pflegebereich bieten wir sowohl das fachliche Know-how als auch die 
+                  Mit mehr als 12 Jahren Erfahrung im Pflegebereich bieten wir sowohl das fachliche Know-how als auch die 
                   Menschlichkeit, die in einer guten Pflege wichtig sind. Sprechen Sie gern mit uns über Ihre Vorstellungen 
                   zur 24 Stunden Pflege in Frankfurt.
                 </p>
@@ -247,11 +247,11 @@ const VierundzwanzigStunden = () => {
                           <FileCheck className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
                         <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
-                          Über 10 Jahre Erfahrung
+                          Über 12 Jahre Erfahrung
                         </h3>
                       </div>
                       <p className="text-sm md:text-base text-muted-foreground">
-                        Mit mehr als 10 Jahren Erfahrung im Pflegebereich bieten wir 
+                        Mit mehr als 12 Jahren Erfahrung im Pflegebereich bieten wir 
                         sowohl das fachliche Know-how als auch die Menschlichkeit.
                       </p>
                     </CardContent>
