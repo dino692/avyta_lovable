@@ -108,64 +108,107 @@ const Header = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            {/* Premium Modern Logo */}
-            <Link to="/" className="group relative flex items-center gap-4">
-              {/* Multi-layer Glow Background */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-accent/20 to-primary/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-700" />
-              <div className="absolute -inset-2 bg-gradient-to-r from-accent/20 to-primary/20 rounded-2xl opacity-0 group-hover:opacity-60 blur-lg transition-all duration-500 delay-100" />
+            {/* Ultra Premium Logo */}
+            <Link to="/" className="group relative flex items-center">
+              {/* Ambient Glow Layers */}
+              <div className="absolute -inset-6 bg-gradient-to-r from-primary/40 via-accent/30 to-primary/40 rounded-[2rem] opacity-0 group-hover:opacity-100 blur-3xl transition-all duration-1000 scale-90 group-hover:scale-100" />
               
-              {/* Logo Container */}
-              <div className="relative flex items-center gap-3">
-                {/* Premium Animated Logo Mark */}
+              <div className="relative flex items-center gap-4">
+                {/* Logo Mark Container */}
                 <div className="relative">
-                  {/* Rotating Outer Ring */}
-                  <div className="absolute -inset-2 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary via-accent to-primary animate-spin" style={{ animationDuration: "3s" }} />
+                  {/* Orbiting Ring */}
+                  <div className="absolute -inset-3 opacity-0 group-hover:opacity-100 transition-all duration-700">
+                    <svg className="w-full h-full animate-spin" style={{ animationDuration: "8s" }} viewBox="0 0 100 100">
+                      <defs>
+                        <linearGradient id="orbitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="1" />
+                          <stop offset="50%" stopColor="hsl(var(--accent))" stopOpacity="0.5" />
+                          <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+                        </linearGradient>
+                      </defs>
+                      <circle cx="50" cy="50" r="45" fill="none" stroke="url(#orbitGradient)" strokeWidth="2" strokeLinecap="round" strokeDasharray="70 200" />
+                    </svg>
                   </div>
                   
-                  {/* Inner Background to mask the spinning border */}
-                  <div className="absolute -inset-1 rounded-xl bg-background" />
+                  {/* Secondary Orbit */}
+                  <div className="absolute -inset-4 opacity-0 group-hover:opacity-60 transition-all duration-700 delay-150">
+                    <svg className="w-full h-full animate-spin" style={{ animationDuration: "12s", animationDirection: "reverse" }} viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="46" fill="none" stroke="hsl(var(--accent))" strokeWidth="1" strokeLinecap="round" strokeDasharray="20 100" opacity="0.5" />
+                    </svg>
+                  </div>
                   
-                  {/* Main Icon Container */}
-                  <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-primary via-primary to-accent flex items-center justify-center shadow-xl shadow-primary/30 group-hover:shadow-primary/50 transition-all duration-500 group-hover:scale-110 overflow-hidden">
-                    {/* Animated Background Pattern */}
-                    <div className="absolute inset-0 opacity-30">
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.3)_0%,transparent_50%)]" />
-                      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 via-transparent to-transparent" />
+                  {/* Main Logo Container */}
+                  <div className="relative w-14 h-14 rounded-2xl overflow-hidden group-hover:scale-105 transition-all duration-500">
+                    {/* Animated Gradient Background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary bg-[length:300%_300%] animate-[gradient_4s_ease_infinite]" />
+                    
+                    {/* Glass Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-black/20" />
+                    
+                    {/* Grid Pattern */}
+                    <div className="absolute inset-0 opacity-20 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:8px_8px]" />
+                    
+                    {/* Shimmer */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                    
+                    {/* Logo Typography */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="relative">
+                        {/* Shadow Text */}
+                        <span className="absolute inset-0 text-3xl font-display font-black text-black/30 blur-sm translate-y-0.5">A</span>
+                        {/* Main Text */}
+                        <span className="relative text-3xl font-display font-black text-white drop-shadow-[0_2px_10px_rgba(255,255,255,0.3)]">A</span>
+                      </div>
                     </div>
                     
-                    {/* Shimmer Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+                    {/* Inner Glow */}
+                    <div className="absolute inset-0 rounded-2xl shadow-[inset_0_0_20px_rgba(255,255,255,0.2)]" />
                     
-                    {/* Logo Letter "A" */}
-                    <span className="relative z-10 text-2xl font-display font-bold text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      A
-                    </span>
+                    {/* Border Highlight */}
+                    <div className="absolute inset-0 rounded-2xl border border-white/20" />
                     
-                    {/* Pulse Ring */}
-                    <div className="absolute inset-0 rounded-xl border-2 border-white/30 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500" />
+                    {/* Pulse Effect on Hover */}
+                    <div className="absolute inset-0 rounded-2xl bg-white/20 opacity-0 group-hover:opacity-100 group-hover:animate-ping" style={{ animationDuration: "1.5s" }} />
                   </div>
                   
-                  {/* Floating Particles */}
-                  <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-accent opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-opacity duration-300" style={{ animationDelay: "0.1s" }} />
-                  <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-opacity duration-300" style={{ animationDelay: "0.3s" }} />
+                  {/* Floating Accent Dots */}
+                  <div className="absolute -top-2 -right-2 w-3 h-3 rounded-full bg-gradient-to-br from-accent to-primary shadow-lg shadow-accent/50 opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-bounce" style={{ animationDuration: "2s" }} />
+                  <div className="absolute -bottom-1 -left-2 w-2 h-2 rounded-full bg-gradient-to-br from-primary to-accent shadow-lg shadow-primary/50 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200 group-hover:animate-bounce" style={{ animationDuration: "2.5s" }} />
+                  <div className="absolute top-1/2 -right-3 w-1.5 h-1.5 rounded-full bg-white/80 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300" />
                 </div>
                 
-                {/* Brand Name with Effects */}
+                {/* Brand Typography */}
                 <div className="relative flex flex-col">
-                  {/* Main Brand Text */}
-                  <div className="relative">
-                    <span className="text-xl font-display font-bold bg-gradient-to-r from-foreground via-foreground to-foreground bg-clip-text text-transparent group-hover:from-primary group-hover:via-accent group-hover:to-primary transition-all duration-500 bg-[length:200%_auto] group-hover:bg-[length:100%_auto]">
-                      AVYTA
+                  {/* Brand Name */}
+                  <div className="relative overflow-hidden">
+                    {/* Background Highlight on Hover */}
+                    <div className="absolute -inset-x-3 -inset-y-1 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    <span className="relative text-2xl font-display font-black tracking-tight">
+                      {/* Letter by letter with stagger effect */}
+                      {"AVYTA".split("").map((letter, i) => (
+                        <span 
+                          key={i}
+                          className="inline-block text-foreground group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-primary group-hover:via-accent group-hover:to-primary group-hover:bg-clip-text transition-all duration-300"
+                          style={{ transitionDelay: `${i * 50}ms` }}
+                        >
+                          {letter}
+                        </span>
+                      ))}
                     </span>
-                    {/* Underline Animation */}
-                    <div className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-gradient-to-r from-primary via-accent to-primary group-hover:w-full transition-all duration-500 rounded-full" />
+                    
+                    {/* Animated Underline */}
+                    <div className="absolute -bottom-1 left-0 right-0 h-[3px] overflow-hidden rounded-full">
+                      <div className="h-full w-0 group-hover:w-full bg-gradient-to-r from-primary via-accent to-primary transition-all duration-700 ease-out" />
+                    </div>
                   </div>
                   
-                  {/* Tagline */}
-                  <span className="text-[10px] text-muted-foreground tracking-wider uppercase opacity-70 group-hover:opacity-100 group-hover:text-primary/80 transition-all duration-300">
-                    Pflegegesellschaft
-                  </span>
+                  {/* Tagline with Animation */}
+                  <div className="relative mt-0.5 overflow-hidden">
+                    <span className="text-[11px] font-medium text-muted-foreground tracking-[0.2em] uppercase opacity-60 group-hover:opacity-100 group-hover:text-primary transition-all duration-500 block group-hover:tracking-[0.25em]">
+                      Pflegegesellschaft
+                    </span>
+                  </div>
                 </div>
               </div>
             </Link>
