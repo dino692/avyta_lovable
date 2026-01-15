@@ -11,7 +11,7 @@ const locations = [
     description: "Unser Hauptsitz im Herzen Frankfurts – zentral gelegen für optimale Erreichbarkeit",
     gradient: "from-primary via-primary/80 to-accent",
     stats: { patients: "500+", years: "10+", rating: "5,0" },
-    hours: "Mo-Fr 8:00-18:00",
+    hours: "Mo-Fr 8-12 Uhr",
     isMain: true,
   },
   { 
@@ -22,7 +22,7 @@ const locations = [
     description: "Für die Region Wetterau – persönliche Betreuung in Ihrer Nähe",
     gradient: "from-accent via-accent/80 to-primary",
     stats: { patients: "200+", years: "5+", rating: "5,0" },
-    hours: "Mo-Fr 8:00-17:00",
+    hours: "Mo-Fr 8-12 Uhr",
     isMain: false,
   },
 ];
