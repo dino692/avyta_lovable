@@ -127,8 +127,8 @@ const benefits = [
 ];
 
 const stats = [
-  { value: "50+", label: "Mitarbeiter", icon: Users },
-  { value: "10+", label: "Jahre Erfahrung", icon: Trophy },
+  { value: "20+", label: "Mitarbeiter", icon: Users },
+  { value: "12+", label: "Jahre Erfahrung", icon: Trophy },
   { value: "500+", label: "Zufriedene Patienten", icon: Heart },
   { value: "98%", label: "Mitarbeiterzufriedenheit", icon: Star },
 ];
