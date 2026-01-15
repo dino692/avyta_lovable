@@ -408,195 +408,274 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 text-foreground"
+              className="lg:hidden relative p-2 text-foreground group"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <div className="relative w-6 h-6 flex items-center justify-center">
+                <span className={`absolute w-5 h-0.5 bg-current rounded-full transition-all duration-300 ease-out ${isMenuOpen ? 'rotate-45' : '-translate-y-1.5'}`} />
+                <span className={`absolute w-5 h-0.5 bg-current rounded-full transition-all duration-300 ease-out ${isMenuOpen ? 'opacity-0 scale-0' : 'opacity-100'}`} />
+                <span className={`absolute w-5 h-0.5 bg-current rounded-full transition-all duration-300 ease-out ${isMenuOpen ? '-rotate-45' : 'translate-y-1.5'}`} />
+              </div>
             </button>
           </div>
         </div>
       </header>
       
-      {/* Mobile Navigation - Completely outside header for proper rendering */}
-      {isMenuOpen && (
-        <div className="lg:hidden fixed top-20 left-0 right-0 bottom-0 bg-background border-t border-border overflow-y-auto z-[60]">
-          <nav className="flex flex-col gap-2 p-4">
-            <Link
-              to="/"
-              className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Start
-            </Link>
-            <Link
-              to="/team"
-              className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Team
-            </Link>
+      {/* Mobile Navigation - Full screen overlay with animations */}
+      <div 
+        className={`lg:hidden fixed inset-0 top-20 z-[60] transition-all duration-500 ease-out ${
+          isMenuOpen 
+            ? 'opacity-100 pointer-events-auto' 
+            : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        {/* Backdrop blur */}
+        <div 
+          className={`absolute inset-0 bg-background/98 backdrop-blur-xl transition-opacity duration-300 ${
+            isMenuOpen ? 'opacity-100' : 'opacity-0'
+          }`} 
+          onClick={() => setIsMenuOpen(false)}
+        />
+        
+        {/* Menu content */}
+        <div className={`relative h-full overflow-y-auto transition-all duration-500 ease-out ${
+          isMenuOpen ? 'translate-y-0' : '-translate-y-4'
+        }`}>
+          <nav className="flex flex-col gap-1 p-5 pb-32">
+            {/* Quick Links Section */}
+            <div className="mb-4">
+              <div className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-3 px-2">
+                Navigation
+              </div>
+              
+              <Link
+                to="/"
+                className="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300"
+                onClick={() => setIsMenuOpen(false)}
+                style={{ animationDelay: '50ms' }}
+              >
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Home className="w-5 h-5 text-primary" />
+                </div>
+                <span className="font-medium text-foreground group-hover:text-primary transition-colors">Start</span>
+              </Link>
+              
+              <Link
+                to="/team"
+                className="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300"
+                onClick={() => setIsMenuOpen(false)}
+                style={{ animationDelay: '100ms' }}
+              >
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-5 h-5 text-primary" />
+                </div>
+                <span className="font-medium text-foreground group-hover:text-primary transition-colors">Team</span>
+              </Link>
+            </div>
 
             {/* Mobile Leistungen */}
-            <div>
+            <div className="mb-1">
               <button
                 onClick={() => setMobileLeistungenOpen(!mobileLeistungenOpen)}
-                className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+                className="group flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300"
               >
-                Leistungen
-                <ChevronDown className={`w-4 h-4 transition-transform ${mobileLeistungenOpen ? 'rotate-180' : ''}`} />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Heart className="w-5 h-5 text-primary" />
+                  </div>
+                  <span className="font-medium text-foreground group-hover:text-primary transition-colors">Leistungen</span>
+                </div>
+                <ChevronDown className={`w-5 h-5 text-muted-foreground transition-all duration-300 ${mobileLeistungenOpen ? 'rotate-180 text-primary' : ''}`} />
               </button>
-              {mobileLeistungenOpen && (
-                <div className="pl-4 space-y-2 mt-2">
-                  {leistungen.map((item) => (
+              <div className={`overflow-hidden transition-all duration-400 ease-out ${mobileLeistungenOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className="pl-6 pr-2 py-2 space-y-1">
+                  {leistungen.map((item, index) => (
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="block text-muted-foreground hover:text-primary py-1 text-sm"
+                      className="group flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/5 transition-all duration-200"
                       onClick={() => setIsMenuOpen(false)}
+                      style={{ animationDelay: `${index * 50}ms` }}
                     >
-                      {item.name}
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-200">
+                        <item.icon className="w-4 h-4 text-primary group-hover:text-white" />
+                      </div>
+                      <div>
+                        <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors block">{item.name}</span>
+                        <span className="text-xs text-muted-foreground line-clamp-1">{item.description}</span>
+                      </div>
                     </Link>
                   ))}
                 </div>
-              )}
+              </div>
             </div>
 
             {/* Mobile Standorte */}
-            <div>
+            <div className="mb-1">
               <button
                 onClick={() => setMobileStandorteOpen(!mobileStandorteOpen)}
-                className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+                className="group flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300"
               >
-                Standorte
-                <ChevronDown className={`w-4 h-4 transition-transform ${mobileStandorteOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {mobileStandorteOpen && (
-                <div className="pl-4 space-y-2 mt-2">
-                  <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-1">Hauptstandorte</div>
-                  {standorte.hauptstandorte.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      className="block text-muted-foreground hover:text-primary py-1 text-sm"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                  <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mt-3 mb-1">Frankfurt</div>
-                  {standorte.frankfurtStadtteile.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      className="block text-muted-foreground hover:text-primary py-1 text-sm"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <MapPin className="w-5 h-5 text-accent" />
+                  </div>
+                  <span className="font-medium text-foreground group-hover:text-primary transition-colors">Standorte</span>
                 </div>
-              )}
+                <ChevronDown className={`w-5 h-5 text-muted-foreground transition-all duration-300 ${mobileStandorteOpen ? 'rotate-180 text-primary' : ''}`} />
+              </button>
+              <div className={`overflow-hidden transition-all duration-400 ease-out ${mobileStandorteOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className="pl-6 pr-2 py-2">
+                  <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-3">Hauptstandorte</div>
+                  <div className="flex gap-2 px-3 mb-3">
+                    {standorte.hauptstandorte.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-primary/10 to-accent/10 text-primary font-medium hover:from-primary hover:to-accent hover:text-white transition-all duration-300"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <Building2 className="w-4 h-4" />
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-3 mb-2 px-3">Stadtteile Frankfurt</div>
+                  <div className="grid grid-cols-2 gap-1 px-1">
+                    {standorte.frankfurtStadtteile.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-primary hover:bg-primary/5 transition-all duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary/50" />
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Mobile Jobs */}
-            <div>
+            <div className="mb-1">
               <button
                 onClick={() => setMobileJobsOpen(!mobileJobsOpen)}
-                className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+                className="group flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300"
               >
-                Jobs
-                <ChevronDown className={`w-4 h-4 transition-transform ${mobileJobsOpen ? 'rotate-180' : ''}`} />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Briefcase className="w-5 h-5 text-primary" />
+                  </div>
+                  <span className="font-medium text-foreground group-hover:text-primary transition-colors">Jobs</span>
+                </div>
+                <ChevronDown className={`w-5 h-5 text-muted-foreground transition-all duration-300 ${mobileJobsOpen ? 'rotate-180 text-primary' : ''}`} />
               </button>
-              {mobileJobsOpen && (
-                <div className="pl-4 space-y-2 mt-2">
-                  {jobs.map((item) => (
+              <div className={`overflow-hidden transition-all duration-400 ease-out ${mobileJobsOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className="pl-6 pr-2 py-2 space-y-1">
+                  {jobs.map((item, index) => (
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="block text-muted-foreground hover:text-primary py-1 text-sm"
+                      className="group flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/5 transition-all duration-200"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      {item.name}
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-200">
+                        <item.icon className="w-4 h-4 text-primary group-hover:text-white" />
+                      </div>
+                      <div>
+                        <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors block">{item.name}</span>
+                        <span className="text-xs text-muted-foreground line-clamp-1">{item.description}</span>
+                      </div>
                     </Link>
                   ))}
                 </div>
-              )}
+              </div>
             </div>
 
             {/* Mobile Blog */}
-            <div>
+            <div className="mb-1">
               <button
                 onClick={() => setMobileBlogOpen(!mobileBlogOpen)}
-                className="flex items-center justify-between w-full text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+                className="group flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300"
               >
-                Blog
-                <ChevronDown className={`w-4 h-4 transition-transform ${mobileBlogOpen ? 'rotate-180' : ''}`} />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Newspaper className="w-5 h-5 text-accent" />
+                  </div>
+                  <span className="font-medium text-foreground group-hover:text-primary transition-colors">Blog</span>
+                </div>
+                <ChevronDown className={`w-5 h-5 text-muted-foreground transition-all duration-300 ${mobileBlogOpen ? 'rotate-180 text-primary' : ''}`} />
               </button>
-              {mobileBlogOpen && (
-                <div className="pl-4 space-y-2 mt-2">
+              <div className={`overflow-hidden transition-all duration-400 ease-out ${mobileBlogOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className="pl-6 pr-2 py-2 space-y-1">
                   {blogCategories.map((item) => (
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="block text-muted-foreground hover:text-primary py-1 text-sm"
+                      className="group flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/5 transition-all duration-200"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      {item.name}
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-200">
+                        <item.icon className="w-4 h-4 text-primary group-hover:text-white" />
+                      </div>
+                      <div>
+                        <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors block">{item.name}</span>
+                        <span className="text-xs text-muted-foreground line-clamp-1">{item.description}</span>
+                      </div>
                     </Link>
                   ))}
                 </div>
-              )}
+              </div>
             </div>
 
+            {/* Kontakt Link */}
             <Link
               to="/kontakt"
-              className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium"
+              className="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
-              Kontakt
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Mail className="w-5 h-5 text-primary" />
+              </div>
+              <span className="font-medium text-foreground group-hover:text-primary transition-colors">Kontakt</span>
             </Link>
 
-            <div className="pt-4 mt-4 border-t border-border flex flex-col gap-3">
-              {/* Mobile CTA Dropdown */}
-              <div className="relative">
-                <Button 
-                  variant="hero"
-                  className="w-full justify-center"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setIsMobileCtaOpen(!isMobileCtaOpen);
-                  }}
-                >
-                  Kostenloses Erstgespräch
-                  <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-200 ${isMobileCtaOpen ? 'rotate-180' : ''}`} />
-                </Button>
-                
-                {isMobileCtaOpen && (
-                  <div className="mt-2 w-full bg-card rounded-xl border border-border shadow-lg overflow-hidden z-50">
-                    {ctaOptions.map((option) => (
-                      <a
-                        key={option.label}
-                        href={option.href}
-                        onClick={() => {
-                          setIsMobileCtaOpen(false);
-                          setIsMenuOpen(false);
-                        }}
-                        className="flex items-center gap-3 px-4 py-3 hover:bg-primary/10 transition-colors"
-                      >
-                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                          <option.icon className="w-5 h-5 text-primary" />
-                        </div>
-                        <span className="font-medium text-foreground">{option.label}</span>
-                      </a>
-                    ))}
-                  </div>
-                )}
+            {/* CTA Section */}
+            <div className="mt-6 pt-6 border-t border-border/50">
+              <div className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-3 px-2">
+                Jetzt kontaktieren
+              </div>
+              
+              <div className="grid grid-cols-1 gap-2">
+                {ctaOptions.map((option, index) => (
+                  <a
+                    key={option.label}
+                    href={option.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="group flex items-center gap-4 px-4 py-4 rounded-xl bg-gradient-to-r from-primary/5 to-accent/5 hover:from-primary/10 hover:to-accent/10 border border-border/50 hover:border-primary/30 transition-all duration-300"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/25">
+                      <option.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <span className="font-semibold text-foreground group-hover:text-primary transition-colors block">{option.label}</span>
+                      <span className="text-xs text-muted-foreground">
+                        {option.label === 'Anruf' && '069 153 914 05'}
+                        {option.label === 'Email' && 'info@avyta.de'}
+                        {option.label === 'Kontaktformular' && 'Nachricht senden'}
+                      </span>
+                    </div>
+                  </a>
+                ))}
               </div>
             </div>
           </nav>
         </div>
-      )}
+      </div>
     </>
   );
 };
