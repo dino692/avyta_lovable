@@ -108,16 +108,45 @@ const Header = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link to="/" className="flex items-center gap-2">
-              <img 
-                src="/images/avyta-logo.png" 
-                alt="AVYTA Pflegegesellschaft mbH" 
-                className="h-6"
-                width="201"
-                height="24"
-                fetchPriority="high"
-              />
+            {/* Modern Logo */}
+            <Link to="/" className="group relative flex items-center gap-3">
+              {/* Animated Glow Background */}
+              <div className="absolute -inset-3 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
+              
+              {/* Logo Container */}
+              <div className="relative flex items-center gap-3">
+                {/* Animated Icon */}
+                <div className="relative">
+                  {/* Outer Ring */}
+                  <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 blur-sm transition-all duration-300 group-hover:animate-pulse" />
+                  
+                  {/* Icon Container */}
+                  <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-all duration-300 group-hover:scale-105">
+                    {/* Inner Shine */}
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/20 to-transparent" />
+                    
+                    {/* Heart Icon */}
+                    <Heart className="w-5 h-5 text-white fill-white/30 group-hover:scale-110 transition-transform duration-300" />
+                    
+                    {/* Pulse Effect */}
+                    <div className="absolute inset-0 rounded-xl bg-white/20 opacity-0 group-hover:opacity-100 group-hover:animate-ping" />
+                  </div>
+                </div>
+                
+                {/* Logo Image with Effects */}
+                <div className="relative">
+                  <img 
+                    src="/images/avyta-logo.png" 
+                    alt="AVYTA Pflegegesellschaft mbH" 
+                    className="h-6 relative z-10 transition-all duration-300 group-hover:brightness-110"
+                    width="201"
+                    height="24"
+                    fetchPriority="high"
+                  />
+                  {/* Underline Animation */}
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-500 rounded-full" />
+                </div>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
