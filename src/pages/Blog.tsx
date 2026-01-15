@@ -182,11 +182,12 @@ const Blog = () => {
     setIsVisible(true);
   }, []);
 
-  const filteredPosts = activeCategory === "alle" 
-    ? blogPosts 
-    : blogPosts.filter(post => categoryMap[post.category] === activeCategory);
-
   const featuredPosts = blogPosts.filter(post => post.featured);
+  const nonFeaturedPosts = blogPosts.filter(post => !post.featured);
+
+  const filteredPosts = activeCategory === "alle" 
+    ? nonFeaturedPosts 
+    : blogPosts.filter(post => categoryMap[post.category] === activeCategory && !post.featured);
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -715,7 +716,7 @@ const Blog = () => {
         </section>
       </main>
 
-      <NewsletterSection />
+      
       <Footer />
     </>
   );
