@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import { Phone, Mail, FileText, Calendar, ChevronDown } from "lucide-react";
+import { Phone, Mail, FileText, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { createPortal } from "react-dom";
 
 interface CTADropdownButtonProps {
   size?: "default" | "sm" | "lg" | "icon";
@@ -10,17 +11,55 @@ interface CTADropdownButtonProps {
 
 const CTADropdownButton = ({ size = "lg", variant = "hero", className = "" }: CTADropdownButtonProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
+  const buttonRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const updatePosition = () => {
+    if (buttonRef.current) {
+      const rect = buttonRef.current.getBoundingClientRect();
+      setDropdownPosition({
+        top: rect.bottom + 8,
+        left: Math.min(rect.left, window.innerWidth - 272),
+      });
+    }
+  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      const target = event.target as Node;
+      if (
+        buttonRef.current && 
+        !buttonRef.current.contains(target) &&
+        dropdownRef.current &&
+        !dropdownRef.current.contains(target)
+      ) {
         setIsDropdownOpen(false);
       }
     };
+
+    const handleScroll = () => {
+      if (isDropdownOpen) {
+        setIsDropdownOpen(false);
+      }
+    };
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+    window.addEventListener("scroll", handleScroll, true);
+    window.addEventListener("resize", updatePosition);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll, true);
+      window.removeEventListener("resize", updatePosition);
+    };
+  }, [isDropdownOpen]);
+
+  useEffect(() => {
+    if (isDropdownOpen) {
+      updatePosition();
+    }
+  }, [isDropdownOpen]);
 
   const ctaOptions = [
     { label: "Anruf", icon: Phone, href: "tel:+496915391405" },
@@ -29,20 +68,30 @@ const CTADropdownButton = ({ size = "lg", variant = "hero", className = "" }: CT
   ];
 
   return (
-    <div className={`relative z-50 ${className}`} ref={dropdownRef}>
-      <Button 
-        variant={variant} 
-        size={size} 
-        className="group w-full justify-center"
-        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-      >
-        Kostenlose Erstberatung
-        <ChevronDown className={`w-5 h-5 ml-2 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
-      </Button>
+    <>
+      <div className={`relative ${className}`} ref={buttonRef}>
+        <Button 
+          variant={variant} 
+          size={size} 
+          className="group w-full justify-center"
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+        >
+          Kostenlose Erstberatung
+          <ChevronDown className={`w-5 h-5 ml-2 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+        </Button>
+      </div>
       
-      {/* Dropdown Menu */}
-      {isDropdownOpen && (
-        <div className="absolute top-full left-0 mt-2 w-64 bg-card rounded-xl border border-border shadow-2xl z-[100] overflow-hidden animate-fade-in">
+      {/* Dropdown Menu - Rendered via Portal */}
+      {isDropdownOpen && createPortal(
+        <div 
+          ref={dropdownRef}
+          className="fixed w-64 bg-card rounded-xl border border-border shadow-2xl overflow-hidden animate-fade-in"
+          style={{
+            zIndex: 9999,
+            top: dropdownPosition.top,
+            left: dropdownPosition.left,
+          }}
+        >
           {ctaOptions.map((option) => (
             <a
               key={option.label}
@@ -56,9 +105,10 @@ const CTADropdownButton = ({ size = "lg", variant = "hero", className = "" }: CT
               <span className="font-medium text-foreground">{option.label}</span>
             </a>
           ))}
-        </div>
+        </div>,
+        document.body
       )}
-    </div>
+    </>
   );
 };
 
