@@ -552,23 +552,12 @@ const Jobs = () => {
                 Werden Sie Teil eines Teams, das Pflege mit Herz lebt. Wir freuen uns auf Ihre Bewerbung!
               </p>
 
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex justify-center">
                 <JobCTADropdownButton 
                   size="lg"
                   variant="hero"
                   jobTitle="Allgemeine Bewerbung"
                 />
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  asChild
-                  className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
-                >
-                  <a href="tel:+496915391405">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    069 - 153 914 05
-                  </a>
-                </Button>
               </div>
             </div>
           </div>
