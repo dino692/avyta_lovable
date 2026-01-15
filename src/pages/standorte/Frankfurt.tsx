@@ -364,7 +364,7 @@ const Frankfurt = () => {
                       Welche Kompetenzen bringt der Avyta Pflegedienst in Frankfurt mit?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Beim Avyta Pflegedienst in Frankfurt können wir von der Grundpflege bis zur Intensivpflege alle Stufen übernehmen und die Leistungen genau auf Ihre Bedürfnisse zuschneiden. Mit mehr als 10 Jahren Erfahrung im Bereich der Pflege können Sie uns beruhigt Ihr Vertrauen schenken.
+                      Beim Avyta Pflegedienst in Frankfurt können wir von der Grundpflege bis zur Intensivpflege alle Stufen übernehmen und die Leistungen genau auf Ihre Bedürfnisse zuschneiden. Mit mehr als 12 Jahren Erfahrung im Bereich der Pflege können Sie uns beruhigt Ihr Vertrauen schenken.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-2" className="bg-card rounded-xl border border-border/50 px-6">

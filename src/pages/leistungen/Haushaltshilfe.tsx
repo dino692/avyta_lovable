@@ -90,7 +90,7 @@ const Haushaltshilfe = () => {
                       </h3>
                       <p className="text-sm md:text-base text-muted-foreground">
                         Bei einem anerkannten Pflegegrad können hauswirtschaftliche Leistungen 
-                        über den Entlastungsbetrag (125€/Monat) oder als Sachleistung 
+                        über den Entlastungsbetrag (131€/Monat) oder als Sachleistung 
                         finanziert werden.
                       </p>
                     </CardContent>

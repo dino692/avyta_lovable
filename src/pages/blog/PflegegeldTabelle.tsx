@@ -120,7 +120,7 @@ const PflegegeldTabelle = () => {
                 </table>
               </div>
               <p className="text-sm text-muted-foreground mb-8">
-                *Bei Pflegegrad 1 besteht kein Anspruch auf Pflegegeld, jedoch auf den Entlastungsbetrag von 125 € monatlich.
+                *Bei Pflegegrad 1 besteht kein Anspruch auf Pflegegeld, jedoch auf den Entlastungsbetrag von 131 € monatlich.
               </p>
 
               <h2 className="text-2xl font-display font-bold text-foreground mt-12 mb-4">Was ist Pflegegeld?</h2>
