@@ -424,7 +424,7 @@ const Header = () => {
       
       {/* Mobile Navigation - Full screen overlay with animations */}
       <div 
-        className={`lg:hidden fixed inset-0 top-20 z-[60] transition-all duration-500 ease-out ${
+        className={`lg:hidden fixed inset-0 top-20 z-[9999] transition-all duration-500 ease-out ${
           isMenuOpen 
             ? 'opacity-100 pointer-events-auto' 
             : 'opacity-0 pointer-events-none'
@@ -432,7 +432,7 @@ const Header = () => {
       >
         {/* Backdrop blur */}
         <div 
-          className={`absolute inset-0 bg-background/98 backdrop-blur-xl transition-opacity duration-300 ${
+          className={`absolute inset-0 bg-background backdrop-blur-xl transition-opacity duration-300 ${
             isMenuOpen ? 'opacity-100' : 'opacity-0'
           }`} 
           onClick={() => setIsMenuOpen(false)}
