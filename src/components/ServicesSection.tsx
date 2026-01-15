@@ -3,6 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 
+// Import service images
+import behandlungspflegeImg from "@/assets/services/behandlungspflege.jpg";
+import grundpflegeImg from "@/assets/services/grundpflege.jpg";
+import intensivpflegeImg from "@/assets/services/intensivpflege.jpg";
+import haushaltshilfeImg from "@/assets/services/haushaltshilfe.jpg";
+import vierundzwanzigStundenImg from "@/assets/services/24-stunden-pflege.jpg";
+import pflegeberatungImg from "@/assets/services/pflegeberatung.jpg";
+import verhinderungspflegeImg from "@/assets/services/verhinderungspflege.jpg";
+
 const services = [
   { 
     icon: Stethoscope, 
@@ -14,6 +23,7 @@ const services = [
     color: "from-rose-500 to-pink-600",
     bgGradient: "from-rose-500/20 via-rose-500/5 to-transparent",
     accentColor: "rose",
+    image: behandlungspflegeImg,
   },
   { 
     icon: Home, 
@@ -25,6 +35,7 @@ const services = [
     color: "from-blue-500 to-cyan-600",
     bgGradient: "from-blue-500/20 via-blue-500/5 to-transparent",
     accentColor: "blue",
+    image: grundpflegeImg,
   },
   { 
     icon: Activity, 
@@ -36,6 +47,7 @@ const services = [
     color: "from-violet-500 to-purple-600",
     bgGradient: "from-violet-500/20 via-violet-500/5 to-transparent",
     accentColor: "violet",
+    image: intensivpflegeImg,
   },
   { 
     icon: Utensils, 
@@ -47,6 +59,7 @@ const services = [
     color: "from-amber-500 to-orange-600",
     bgGradient: "from-amber-500/20 via-amber-500/5 to-transparent",
     accentColor: "amber",
+    image: haushaltshilfeImg,
   },
   { 
     icon: Clock, 
@@ -58,6 +71,7 @@ const services = [
     color: "from-emerald-500 to-teal-600",
     bgGradient: "from-emerald-500/20 via-emerald-500/5 to-transparent",
     accentColor: "emerald",
+    image: vierundzwanzigStundenImg,
   },
   { 
     icon: FileText, 
@@ -69,6 +83,7 @@ const services = [
     color: "from-primary to-accent",
     bgGradient: "from-primary/20 via-primary/5 to-transparent",
     accentColor: "primary",
+    image: pflegeberatungImg,
   },
   { 
     icon: UserCheck, 
@@ -80,6 +95,7 @@ const services = [
     color: "from-pink-500 to-rose-600",
     bgGradient: "from-pink-500/20 via-pink-500/5 to-transparent",
     accentColor: "pink",
+    image: verhinderungspflegeImg,
   },
 ];
 
@@ -230,21 +246,24 @@ const ServicesSection = () => {
                 <div className={`hidden md:block absolute -inset-2 bg-gradient-to-r ${activeService.color} rounded-[2.5rem] blur-xl opacity-20 group-hover:opacity-40 transition-all duration-700`} />
                 
                 <div className="relative bg-card rounded-2xl md:rounded-[2rem] border border-border/50 overflow-hidden shadow-xl md:shadow-2xl">
-                  {/* Header with gradient */}
-                  <div className={`relative h-36 md:h-64 bg-gradient-to-br ${activeService.color} overflow-hidden`}>
-                    {/* Animated circles - hidden on mobile */}
-                    <div className="hidden md:block absolute inset-0">
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-white/10 rounded-full animate-[spin_20s_linear_infinite]" />
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] border border-white/10 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] border border-white/20 rounded-full animate-[spin_10s_linear_infinite]" />
-                    </div>
+                  {/* Header with image */}
+                  <div className="relative h-48 md:h-72 overflow-hidden">
+                    {/* Background image */}
+                    <img 
+                      src={activeService.image} 
+                      alt={activeService.title}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    {/* Gradient overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-t ${activeService.color} opacity-60`} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     
-                    {/* Large icon */}
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    {/* Icon badge */}
+                    <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6">
                       <div className="relative">
-                        <div className="absolute inset-0 bg-white/20 rounded-2xl md:rounded-3xl blur-xl scale-150" />
-                        <div className="relative w-16 h-16 md:w-32 md:h-32 rounded-2xl md:rounded-3xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
-                          <ActiveIcon className="w-8 h-8 md:w-16 md:h-16 text-white" />
+                        <div className="absolute inset-0 bg-white/20 rounded-xl md:rounded-2xl blur-lg scale-150" />
+                        <div className={`relative w-14 h-14 md:w-20 md:h-20 rounded-xl md:rounded-2xl bg-gradient-to-br ${activeService.color} flex items-center justify-center border border-white/30 shadow-xl`}>
+                          <ActiveIcon className="w-7 h-7 md:w-10 md:h-10 text-white" />
                         </div>
                       </div>
                     </div>
