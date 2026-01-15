@@ -43,7 +43,7 @@ const contactInfo = [
 
 const stats = [
   { icon: Users, value: "700+", label: "Betreute Patienten" },
-  { icon: Star, value: "4.9", label: "Google Bewertung" },
+  { icon: Star, value: "5,0", label: "Google Bewertung" },
   { icon: Shield, value: "15+", label: "Jahre Erfahrung" },
 ];
 

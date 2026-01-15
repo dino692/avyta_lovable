@@ -276,7 +276,7 @@ const TestimonialsSection = () => {
             <div className="grid grid-cols-3 gap-4">
               {[
                 { value: "500+", label: "Zufriedene Familien" },
-                { value: "4.9", label: "Sterne Bewertung" },
+                { value: "5,0", label: "Sterne Bewertung" },
                 { value: "98%", label: "Empfehlungsrate" },
               ].map((stat, index) => (
                 <div
