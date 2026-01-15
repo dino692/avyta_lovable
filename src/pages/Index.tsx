@@ -24,7 +24,7 @@ const Index = () => {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://www.avyta.de/" />
       </Helmet>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background overflow-x-hidden">
         <Header />
         <main>
         <HeroSection />
