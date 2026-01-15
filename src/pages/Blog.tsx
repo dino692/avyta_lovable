@@ -225,36 +225,159 @@ const Blog = () => {
       <Header />
 
       <main className="pt-20">
-        {/* Hero Section */}
-        <section className="relative py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
-          {/* Background Elements */}
+        {/* Hero Section - Modern & Elaborate */}
+        <section className="relative py-20 md:py-32 overflow-hidden">
+          {/* Animated Background Layers */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
+          
+          {/* Floating Orbs */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-[100px] animate-pulse" />
+            <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-to-tl from-accent/20 to-transparent rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "1.5s" }} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-primary/10 to-accent/10 rounded-full blur-[80px] animate-pulse" style={{ animationDelay: "0.75s" }} />
+          </div>
+
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,black,transparent)]" />
+
+          {/* Floating Elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            {[...Array(6)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-2 bg-primary/30 rounded-full animate-bounce"
+                style={{
+                  left: `${15 + i * 15}%`,
+                  top: `${20 + (i % 3) * 25}%`,
+                  animationDelay: `${i * 0.3}s`,
+                  animationDuration: `${2 + i * 0.5}s`,
+                }}
+              />
+            ))}
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
             <div 
-              className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
+              className={`max-w-5xl mx-auto transition-all duration-1000 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
-              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/10 to-accent/10 text-primary text-sm font-semibold mb-6 border border-primary/20">
-                <Sparkles className="w-4 h-4" />
-                Wissen & Ratgeber
-              </span>
+              {/* Modern Logo/Brand Section */}
+              <div className="flex flex-col items-center mb-12">
+                {/* Animated Logo Container */}
+                <div className="relative group mb-8">
+                  {/* Outer Glow Ring */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-accent to-primary opacity-20 blur-xl animate-spin" style={{ animationDuration: "8s" }} />
+                  
+                  {/* Logo Wrapper */}
+                  <div className="relative">
+                    {/* Rotating Border */}
+                    <div className="absolute -inset-3 rounded-full bg-gradient-to-r from-primary via-accent to-primary animate-spin opacity-75" style={{ animationDuration: "4s" }} />
+                    
+                    {/* Inner Background */}
+                    <div className="absolute -inset-2 rounded-full bg-background" />
+                    
+                    {/* Glassmorphism Container */}
+                    <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-background/90 via-background/80 to-background/90 backdrop-blur-xl border border-white/20 shadow-2xl flex items-center justify-center overflow-hidden">
+                      {/* Inner Glow */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
+                      
+                      {/* Logo Icon */}
+                      <div className="relative flex items-center justify-center">
+                        <div className="absolute w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary to-accent opacity-20 blur-md animate-pulse" />
+                        <BookOpen className="w-12 h-12 md:w-16 md:h-16 text-primary relative z-10" strokeWidth={1.5} />
+                      </div>
+                      
+                      {/* Shimmer Effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                    </div>
+                  </div>
+
+                  {/* Orbiting Dots */}
+                  <div className="absolute inset-0 animate-spin" style={{ animationDuration: "10s" }}>
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-gradient-to-r from-primary to-accent shadow-lg shadow-primary/50" />
+                  </div>
+                  <div className="absolute inset-0 animate-spin" style={{ animationDuration: "12s", animationDirection: "reverse" }}>
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-2 h-2 rounded-full bg-gradient-to-r from-accent to-primary shadow-lg shadow-accent/50" />
+                  </div>
+                </div>
+
+                {/* Badge */}
+                <div className="relative mb-8">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-lg" />
+                  <span className="relative inline-flex items-center gap-2 px-6 py-3 rounded-full bg-background/80 backdrop-blur-sm text-primary text-sm font-semibold border border-primary/20 shadow-lg">
+                    <div className="relative">
+                      <Sparkles className="w-4 h-4 animate-pulse" />
+                      <div className="absolute inset-0 animate-ping opacity-50">
+                        <Sparkles className="w-4 h-4" />
+                      </div>
+                    </div>
+                    Wissen & Ratgeber
+                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse" />
+                  </span>
+                </div>
+              </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
-                <span className="text-foreground">Unser </span>
-                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_linear_infinite]">
-                  Pflege-Blog
-                </span>
-              </h1>
-              
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                Entdecken Sie hilfreiche Artikel rund um die Themen Pflege, Gesundheit, 
-                Recht und Finanzen.
-              </p>
+              {/* Title Section */}
+              <div className="text-center">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
+                  <span className="text-foreground">Unser </span>
+                  <span className="relative inline-block">
+                    <span className="relative z-10 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_linear_infinite]">
+                      Pflege-Blog
+                    </span>
+                    {/* Underline Effect */}
+                    <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 200 10" preserveAspectRatio="none">
+                      <path 
+                        d="M0 8 Q50 0 100 8 T200 8" 
+                        fill="none" 
+                        stroke="url(#underlineGradient)" 
+                        strokeWidth="3"
+                        className="animate-[dash_3s_ease-in-out_infinite]"
+                        strokeDasharray="200"
+                        strokeDashoffset="0"
+                      />
+                      <defs>
+                        <linearGradient id="underlineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="hsl(var(--primary))" />
+                          <stop offset="50%" stopColor="hsl(var(--accent))" />
+                          <stop offset="100%" stopColor="hsl(var(--primary))" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </span>
+                </h1>
+                
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8">
+                  Entdecken Sie hilfreiche Artikel rund um die Themen Pflege, Gesundheit, 
+                  Recht und Finanzen.
+                </p>
+
+                {/* Stats Pills */}
+                <div className="flex flex-wrap justify-center gap-4">
+                  {[
+                    { label: "Artikel", value: "6+", icon: FileText },
+                    { label: "Kategorien", value: "5", icon: LayoutGrid },
+                    { label: "Lesezeit", value: "~6 Min", icon: Clock },
+                  ].map((stat, i) => (
+                    <div
+                      key={stat.label}
+                      className={`group flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-background/60 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 ${
+                        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+                      }`}
+                      style={{ transitionDelay: `${400 + i * 100}ms` }}
+                    >
+                      <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <stat.icon className="w-4 h-4 text-primary" />
+                      </div>
+                      <div className="text-left">
+                        <div className="text-lg font-bold text-foreground">{stat.value}</div>
+                        <div className="text-xs text-muted-foreground">{stat.label}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
