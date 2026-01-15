@@ -555,8 +555,7 @@ const Jobs = () => {
               <div className="flex flex-wrap justify-center gap-4">
                 <JobCTADropdownButton 
                   size="lg"
-                  variant="default"
-                  className="bg-white text-primary hover:bg-white/90 shadow-xl"
+                  variant="hero"
                   jobTitle="Allgemeine Bewerbung"
                 />
                 <Button 
