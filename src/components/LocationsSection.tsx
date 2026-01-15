@@ -2,6 +2,10 @@ import { MapPin, Phone, ArrowRight, Navigation, Clock, Users, Star, ChevronRight
 import { Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 
+// Import location images
+import frankfurtSkylineImg from "@/assets/locations/frankfurt-skyline.jpg";
+import badVilbelImg from "@/assets/locations/bad-vilbel.jpg";
+
 const locations = [
   { 
     city: "Frankfurt", 
@@ -13,6 +17,7 @@ const locations = [
     stats: { patients: "700+", years: "12+", rating: "5,0" },
     hours: "Mo-Fr 8-12 Uhr",
     isMain: true,
+    image: frankfurtSkylineImg,
   },
   { 
     city: "Bad Vilbel", 
@@ -24,6 +29,7 @@ const locations = [
     stats: { patients: "200+", years: "12+", rating: "5,0" },
     hours: "Mo-Fr 8-12 Uhr",
     isMain: false,
+    image: badVilbelImg,
   },
 ];
 
@@ -222,17 +228,19 @@ const LocationsSection = () => {
               to={locations[activeLocation].link}
               className="block group"
             >
-              <div className={`relative h-full min-h-[300px] md:min-h-[400px] rounded-2xl md:rounded-3xl overflow-hidden bg-gradient-to-br ${locations[activeLocation].gradient} p-0.5 md:p-1 transition-all duration-500`}>
+              <div className={`relative h-full min-h-[300px] md:min-h-[400px] rounded-2xl md:rounded-3xl overflow-hidden transition-all duration-500`}>
+                {/* Background Image */}
+                <img 
+                  src={locations[activeLocation].image} 
+                  alt={locations[activeLocation].city}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Gradient overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${locations[activeLocation].gradient} opacity-75`} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                
                 {/* Glassmorphism inner card */}
-                <div className="relative h-full rounded-[14px] md:rounded-[22px] bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm p-5 md:p-10 flex flex-col">
-                  {/* Decorative elements - hidden on mobile */}
-                  <div className="hidden md:block absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
-                  <div className="hidden md:block absolute bottom-0 left-0 w-60 h-60 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-2xl" />
-                  
-                  {/* Map Pattern - hidden on mobile */}
-                  <div className="hidden md:block absolute inset-0 opacity-10" style={{ 
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L30 60M0 30L60 30M15 15L45 45M45 15L15 45' stroke='white' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")` 
-                  }} />
+                <div className="relative h-full p-5 md:p-10 flex flex-col">
                   
                   <div className="relative z-10 flex-1 flex flex-col text-white">
                     {/* Header */}
