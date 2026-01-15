@@ -74,8 +74,8 @@ const teamMembers = [
 ];
 
 const stats = [
-  { value: "50+", label: "Teammitglieder", icon: Users },
-  { value: "15+", label: "Jahre Erfahrung", icon: Clock },
+  { value: "20+", label: "Teammitglieder", icon: Users },
+  { value: "12+", label: "Jahre Erfahrung", icon: Clock },
   { value: "100%", label: "Leidenschaft", icon: Heart },
   { value: "5,0", label: "Google Bewertung", icon: Award },
 ];

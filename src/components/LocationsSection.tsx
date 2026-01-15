@@ -201,7 +201,7 @@ const LocationsSection = () => {
               {[
                 { icon: Users, value: "700+", label: "Patienten" },
                 { icon: Clock, value: "24/7", label: "Erreichbar" },
-                { icon: Star, value: "4.9", label: "Bewertung" },
+                { icon: Star, value: "5,0", label: "Bewertung" },
               ].map((stat, index) => (
                 <div 
                   key={stat.label}
