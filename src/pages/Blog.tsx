@@ -75,82 +75,76 @@ const categories = [
 
 const blogPosts = [
   {
-    title: "Pflegegeld 2025: Aktuelle Tabelle nach Pflegegrad",
-    excerpt: "Alle aktuellen Pflegegeld-Beträge für 2025 im Überblick. Erfahren Sie, wie viel Geld Ihnen bei Pflegegrad 2-5 zusteht.",
+    title: "Pflegegeld 2026: Aktuelle Tabelle nach Pflegegrad",
+    excerpt: "Alle aktuellen Pflegegeld-Beträge für 2026 im Überblick. Erfahren Sie, wie viel Geld Ihnen bei Pflegegrad 2-5 zusteht.",
     category: "Recht & Finanzen",
     categoryGradient: "from-violet-500 to-purple-600",
-    date: "1. Januar 2025",
+    date: "10. Januar 2026",
     readTime: "7 Min.",
     author: "AVYTA Team",
     slug: "pflegegeld-tabelle-2025",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
     featured: true,
-    views: "2.4k",
   },
   {
     title: "Pflegegrad beantragen: Schritt für Schritt erklärt",
     excerpt: "Alles was Sie wissen müssen, um erfolgreich einen Pflegegrad zu beantragen. Von der Antragstellung bis zur Begutachtung.",
     category: "Recht & Finanzen",
     categoryGradient: "from-violet-500 to-purple-600",
-    date: "10. Dezember 2024",
+    date: "5. Januar 2026",
     readTime: "8 Min.",
     author: "AVYTA Team",
     slug: "pflegegrad-beantragen",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop",
     featured: true,
-    views: "1.8k",
   },
   {
     title: "Entlastungsbetrag 125 €: So nutzen Sie ihn richtig",
     excerpt: "Der Entlastungsbetrag steht allen ab Pflegegrad 1 zu. Erfahren Sie, wofür Sie die 125 Euro monatlich nutzen können.",
     category: "Recht & Finanzen",
     categoryGradient: "from-violet-500 to-purple-600",
-    date: "28. Dezember 2024",
+    date: "2. Januar 2026",
     readTime: "6 Min.",
     author: "AVYTA Team",
     slug: "entlastungsbetrag-125-euro",
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=400&fit=crop",
     featured: true,
-    views: "1.5k",
   },
   {
     title: "Kombinationsleistung: Pflegegeld und Sachleistungen kombinieren",
     excerpt: "So nutzen Sie professionelle Pflege und erhalten trotzdem Pflegegeld. Berechnung und Beispiele für die Kombipflege.",
     category: "Pflegetipps",
     categoryGradient: "from-blue-500 to-indigo-600",
-    date: "20. Dezember 2024",
+    date: "28. Dezember 2025",
     readTime: "8 Min.",
     author: "AVYTA Team",
     slug: "kombinationsleistung-pflege",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
     featured: false,
-    views: "980",
   },
   {
     title: "Verhinderungspflege richtig nutzen",
     excerpt: "So nutzen Sie die Verhinderungspflege optimal. Bis zu 1.612 Euro jährlich für Entlastung pflegender Angehöriger.",
     category: "Empfehlungen",
     categoryGradient: "from-rose-500 to-pink-600",
-    date: "28. November 2024",
+    date: "20. Dezember 2025",
     readTime: "5 Min.",
     author: "AVYTA Team",
     slug: "verhinderungspflege-nutzen",
     image: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&h=400&fit=crop",
     featured: false,
-    views: "1.2k",
   },
   {
     title: "10 Tipps für die häusliche Pflege von Demenzpatienten",
     excerpt: "Erfahren Sie, wie Sie den Alltag für Demenzpatienten sicherer und angenehmer gestalten können.",
     category: "Pflegetipps",
     categoryGradient: "from-blue-500 to-indigo-600",
-    date: "15. Dezember 2024",
+    date: "15. Dezember 2025",
     readTime: "5 Min.",
     author: "AVYTA Team",
     slug: "demenz-pflege-tipps",
     image: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&h=400&fit=crop",
     featured: false,
-    views: "890",
   },
 ];
 
@@ -164,9 +158,7 @@ const categoryMap: Record<string, string> = {
 
 const stats = [
   { value: "6+", label: "Artikel", icon: BookOpen },
-  { value: "5k+", label: "Leser", icon: Eye },
   { value: "6", label: "Kategorien", icon: LayoutGrid },
-  { value: "100%", label: "Kostenlos", icon: Star },
 ];
 
 const Blog = () => {
@@ -239,47 +231,27 @@ const Blog = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-accent/10 overflow-hidden">
-          {/* Animated Background Elements */}
+        <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
+          {/* Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary/5 to-accent/5 rounded-full blur-3xl" />
-            
-            {/* Floating Elements */}
-            <div className="absolute top-32 right-1/4 animate-bounce" style={{ animationDuration: "3s" }}>
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/10 backdrop-blur-sm flex items-center justify-center">
-                <BookOpen className="w-8 h-8 text-primary" />
-              </div>
-            </div>
-            <div className="absolute bottom-40 left-1/4 animate-bounce" style={{ animationDuration: "4s", animationDelay: "0.5s" }}>
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 backdrop-blur-sm flex items-center justify-center">
-                <Heart className="w-7 h-7 text-accent" />
-              </div>
-            </div>
-            <div className="absolute top-1/3 left-20 animate-bounce" style={{ animationDuration: "3.5s", animationDelay: "1s" }}>
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-500/10 backdrop-blur-sm flex items-center justify-center">
-                <Stethoscope className="w-6 h-6 text-emerald-600" />
-              </div>
-            </div>
+            <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
             <div 
-              className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
+              className={`max-w-3xl mx-auto text-center transition-all duration-1000 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
-              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/10 to-accent/10 text-primary text-sm font-semibold mb-8 border border-primary/20">
-                <Sparkles className="w-4 h-4" />
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                <BookOpen className="w-4 h-4" />
                 Wissen & Ratgeber
-                <Sparkles className="w-4 h-4" />
               </span>
               
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-8">
-                <span className="text-foreground">Unser</span>
-                <br />
-                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_linear_infinite]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
+                Unser{" "}
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Pflege-Blog
                 </span>
               </h1>
@@ -303,13 +275,6 @@ const Blog = () => {
                   </a>
                 </Button>
               </div>
-            </div>
-          </div>
-
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <div className="w-8 h-12 rounded-full border-2 border-primary/30 flex items-start justify-center p-2">
-              <div className="w-1.5 h-3 bg-primary/50 rounded-full animate-[bounce_1s_ease-in-out_infinite]" />
             </div>
           </div>
         </section>
@@ -402,13 +367,6 @@ const Blog = () => {
                         </span>
                       </div>
 
-                      {/* Views */}
-                      <div className="absolute top-4 right-4">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/80 backdrop-blur-sm text-foreground text-xs font-medium">
-                          <Eye className="w-3 h-3" />
-                          {post.views}
-                        </span>
-                      </div>
                     </div>
 
                     {/* Content */}
@@ -624,10 +582,6 @@ const Blog = () => {
                             <span className="flex items-center gap-1">
                               <Clock className="w-4 h-4" />
                               {post.readTime}
-                            </span>
-                            <span className="flex items-center gap-1">
-                              <Eye className="w-4 h-4" />
-                              {post.views}
                             </span>
                           </div>
                           <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
