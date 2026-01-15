@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import NewsletterSection from "@/components/NewsletterSection";
 import { 
   BookOpen, 
   Heart, 
@@ -13,15 +12,14 @@ import {
   ArrowRight, 
   Calendar, 
   Clock, 
-  User, 
   LayoutGrid, 
   Mail, 
   Loader2,
   Sparkles,
   TrendingUp,
-  Eye,
   ChevronRight,
-  Star
+  Star,
+  FileText
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -35,41 +33,47 @@ const categories = [
     icon: LayoutGrid,
     description: "Alle Beiträge anzeigen",
     gradient: "from-primary to-accent",
+    count: 6,
   },
   {
     name: "Empfehlungen",
     slug: "empfehlungen",
     icon: Heart,
-    description: "Tipps und Empfehlungen für den Pflegealltag",
+    description: "Tipps für den Pflegealltag",
     gradient: "from-rose-500 to-pink-600",
+    count: 1,
   },
   {
     name: "Pflegetipps",
     slug: "pflegetipps",
     icon: BookOpen,
-    description: "Praktische Anleitungen und Hilfestellungen",
+    description: "Praktische Anleitungen",
     gradient: "from-blue-500 to-indigo-600",
+    count: 2,
   },
   {
     name: "Gesundheit",
     slug: "gesundheit",
     icon: Stethoscope,
-    description: "Informationen zu Gesundheitsthemen",
+    description: "Gesundheitsthemen",
     gradient: "from-emerald-500 to-teal-600",
+    count: 0,
   },
   {
     name: "Neuigkeiten",
     slug: "neuigkeiten",
     icon: Newspaper,
-    description: "Aktuelles aus unserem Unternehmen",
+    description: "Aktuelles von AVYTA",
     gradient: "from-amber-500 to-orange-600",
+    count: 0,
   },
   {
     name: "Recht & Finanzen",
     slug: "recht-finanzen",
     icon: Scale,
-    description: "Rechtliche und finanzielle Themen",
+    description: "Rechtliche Themen",
     gradient: "from-violet-500 to-purple-600",
+    count: 3,
   },
 ];
 
@@ -156,17 +160,11 @@ const categoryMap: Record<string, string> = {
   "Recht & Finanzen": "recht-finanzen",
 };
 
-const stats = [
-  { value: "6+", label: "Artikel", icon: BookOpen },
-  { value: "6", label: "Kategorien", icon: LayoutGrid },
-];
-
 const Blog = () => {
   const [activeCategory, setActiveCategory] = useState("alle");
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [hoveredPost, setHoveredPost] = useState<number | null>(null);
   const [hoveredCategory, setHoveredCategory] = useState<number | null>(null);
   const { toast } = useToast();
 
@@ -174,12 +172,9 @@ const Blog = () => {
     setIsVisible(true);
   }, []);
 
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const nonFeaturedPosts = blogPosts.filter(post => !post.featured);
-
-  const filteredPosts = activeCategory === "alle" 
-    ? nonFeaturedPosts 
-    : blogPosts.filter(post => categoryMap[post.category] === activeCategory && !post.featured);
+  const allPosts = activeCategory === "alle" 
+    ? blogPosts 
+    : blogPosts.filter(post => categoryMap[post.category] === activeCategory);
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -196,7 +191,7 @@ const Blog = () => {
     setIsLoading(true);
     
     try {
-      const { data, error } = await supabase.functions.invoke("hubspot-newsletter", {
+      const { error } = await supabase.functions.invoke("hubspot-newsletter", {
         body: { email: email, name: "Blog Abonnent" },
       });
 
@@ -231,280 +226,92 @@ const Blog = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
+        <section className="relative py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
+            <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
             <div 
-              className={`max-w-3xl mx-auto text-center transition-all duration-1000 ${
+              className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                <BookOpen className="w-4 h-4" />
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/10 to-accent/10 text-primary text-sm font-semibold mb-6 border border-primary/20">
+                <Sparkles className="w-4 h-4" />
                 Wissen & Ratgeber
               </span>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
-                Unser{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
+                <span className="text-foreground">Unser </span>
+                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_linear_infinite]">
                   Pflege-Blog
                 </span>
               </h1>
               
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                 Entdecken Sie hilfreiche Artikel rund um die Themen Pflege, Gesundheit, 
-                Recht und Finanzen. Wissen für pflegende Angehörige.
+                Recht und Finanzen.
               </p>
-              
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg" asChild className="group">
-                  <a href="#artikel">
-                    Artikel entdecken
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" asChild className="group">
-                  <a href="#newsletter">
-                    Newsletter abonnieren
-                    <Mail className="w-4 h-4 ml-2" />
-                  </a>
-                </Button>
-              </div>
             </div>
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-16 bg-gradient-to-b from-background to-muted/30">
+        {/* Categories Section - FIRST */}
+        <section className="py-12 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className={`relative group transition-all duration-700 ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                  }`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  <div className="relative p-6 md:p-8 rounded-3xl bg-background border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-xl text-center overflow-hidden">
-                    {/* Animated Ring */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-primary/20 rounded-full animate-ping" />
-                    </div>
-                    
-                    <div className="relative z-10">
-                      <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <stat.icon className="w-7 h-7 text-primary" />
-                      </div>
-                      <div className="text-3xl md:text-4xl font-bold text-foreground mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                        {stat.value}
-                      </div>
-                      <div className="text-sm text-muted-foreground font-medium">
-                        {stat.label}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Posts */}
-        <section className="py-20 md:py-28">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                <TrendingUp className="w-4 h-4" />
-                Beliebte Artikel
-              </span>
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6">
-                Top{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Beiträge
-                </span>
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Unsere meistgelesenen Artikel mit wertvollen Informationen für Sie
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {featuredPosts.map((post, index) => (
-                <Link
-                  key={post.slug}
-                  to={`/blog/${post.slug}`}
-                  className={`group relative transition-all duration-700 ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                  }`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                  onMouseEnter={() => setHoveredPost(index)}
-                  onMouseLeave={() => setHoveredPost(null)}
-                >
-                  <div className="relative h-full bg-background rounded-3xl border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl overflow-hidden">
-                    {/* Glow Effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${post.categoryGradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-                    
-                    {/* Image */}
-                    <div className="relative aspect-[16/10] overflow-hidden">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                      
-                      {/* Featured Badge */}
-                      <div className="absolute top-4 left-4">
-                        <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r ${post.categoryGradient} text-white text-xs font-semibold shadow-lg`}>
-                          <Star className="w-3 h-3" />
-                          Featured
-                        </span>
-                      </div>
-
-                    </div>
-
-                    {/* Content */}
-                    <div className="relative z-10 p-6">
-                      <div className="flex items-center gap-3 text-sm text-muted-foreground mb-4">
-                        <span className={`px-3 py-1 rounded-full bg-gradient-to-r ${post.categoryGradient} text-white text-xs font-medium`}>
-                          {post.category}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Calendar className="w-3.5 h-3.5" />
-                          {post.date}
-                        </span>
-                      </div>
-
-                      <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
-                        {post.title}
-                      </h3>
-                      <p className="text-muted-foreground mb-4 line-clamp-2">
-                        {post.excerpt}
-                      </p>
-
-                      <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Clock className="w-4 h-4" />
-                          {post.readTime}
-                        </div>
-                        <div className="w-10 h-10 rounded-full bg-muted/50 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                          <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Hover Particles */}
-                    {hoveredPost === index && (
-                      <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-3xl">
-                        {[...Array(6)].map((_, i) => (
-                          <div
-                            key={i}
-                            className={`absolute w-2 h-2 rounded-full bg-gradient-to-r ${post.categoryGradient} animate-ping`}
-                            style={{
-                              top: `${Math.random() * 100}%`,
-                              left: `${Math.random() * 100}%`,
-                              animationDelay: `${i * 0.2}s`,
-                              animationDuration: "1.5s",
-                            }}
-                          />
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Categories */}
-        <section className="py-20 md:py-28 bg-gradient-to-b from-muted/30 via-background to-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6">
-                <LayoutGrid className="w-4 h-4" />
-                Themen
-              </span>
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6">
-                Kategorien{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  entdecken
-                </span>
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Finden Sie Artikel zu den Themen, die Sie interessieren
-              </p>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
               {categories.map((category, index) => (
                 <button
                   key={category.slug}
                   onClick={() => setActiveCategory(category.slug)}
                   onMouseEnter={() => setHoveredCategory(index)}
                   onMouseLeave={() => setHoveredCategory(null)}
-                  className={`group relative text-left transition-all duration-700 ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                  className={`group relative transition-all duration-300 ${
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                   }`}
-                  style={{ transitionDelay: `${index * 75}ms` }}
+                  style={{ transitionDelay: `${index * 50}ms` }}
                 >
-                  <div className={`relative h-full p-8 bg-background rounded-3xl border transition-all duration-500 overflow-hidden ${
+                  <div className={`relative flex items-center gap-3 px-5 py-3 rounded-2xl border-2 transition-all duration-300 ${
                     activeCategory === category.slug 
-                      ? "border-primary shadow-xl ring-2 ring-primary/20" 
-                      : "border-border/50 hover:border-primary/30 hover:shadow-xl"
+                      ? "border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/25" 
+                      : "border-border/50 bg-background hover:border-primary/50 hover:shadow-lg"
                   }`}>
-                    {/* Glow Effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-                    
-                    {/* Animated Border */}
-                    <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${category.gradient} opacity-20 blur-sm`} />
+                    {/* Icon */}
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
+                      activeCategory === category.slug 
+                        ? "bg-white/20" 
+                        : `bg-gradient-to-br ${category.gradient} group-hover:scale-110`
+                    }`}>
+                      <category.icon className={`w-5 h-5 ${
+                        activeCategory === category.slug ? "text-primary-foreground" : "text-white"
+                      }`} />
                     </div>
 
-                    <div className="relative z-10">
-                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${category.gradient} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}>
-                        <category.icon className="w-8 h-8 text-white" />
-                      </div>
-
-                      <h3 className={`text-xl font-bold mb-3 transition-colors ${
-                        activeCategory === category.slug ? "text-primary" : "text-foreground group-hover:text-primary"
+                    {/* Text */}
+                    <div className="text-left">
+                      <div className={`font-semibold text-sm ${
+                        activeCategory === category.slug ? "text-primary-foreground" : "text-foreground"
                       }`}>
                         {category.name}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {category.description}
-                      </p>
-
-                      {activeCategory === category.slug && (
-                        <div className="mt-4 inline-flex items-center gap-2 text-primary text-sm font-medium">
-                          <span>Aktiv</span>
-                          <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                        </div>
-                      )}
+                      </div>
+                      <div className={`text-xs ${
+                        activeCategory === category.slug ? "text-primary-foreground/80" : "text-muted-foreground"
+                      }`}>
+                        {category.count} Artikel
+                      </div>
                     </div>
 
-                    {/* Hover Particles */}
-                    {hoveredCategory === index && (
-                      <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-3xl">
-                        {[...Array(4)].map((_, i) => (
-                          <div
-                            key={i}
-                            className={`absolute w-2 h-2 rounded-full bg-gradient-to-r ${category.gradient} animate-ping`}
-                            style={{
-                              top: `${Math.random() * 100}%`,
-                              left: `${Math.random() * 100}%`,
-                              animationDelay: `${i * 0.2}s`,
-                              animationDuration: "1.5s",
-                            }}
-                          />
-                        ))}
-                      </div>
+                    {/* Active indicator */}
+                    {activeCategory === category.slug && (
+                      <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-primary-foreground animate-pulse" />
+                    )}
+
+                    {/* Hover glow */}
+                    {hoveredCategory === index && activeCategory !== category.slug && (
+                      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${category.gradient} opacity-10 blur-sm`} />
                     )}
                   </div>
                 </button>
@@ -513,51 +320,52 @@ const Blog = () => {
           </div>
         </section>
 
-        {/* All Posts */}
-        <section id="artikel" className="py-20 md:py-28">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
-                  {activeCategory === "alle" 
-                    ? "Alle Artikel" 
-                    : categories.find(c => c.slug === activeCategory)?.name}
-                </h2>
-                <p className="text-muted-foreground">
-                  {filteredPosts.length} {filteredPosts.length === 1 ? "Artikel" : "Artikel"} verfügbar
-                </p>
+        {/* Featured Posts - When "alle" is selected */}
+        {activeCategory === "alle" && (
+          <section className="py-16 md:py-20">
+            <div className="container mx-auto px-4">
+              <div className="flex items-center gap-3 mb-10">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+                    Beliebte Artikel
+                  </h2>
+                  <p className="text-muted-foreground text-sm">Unsere meistgelesenen Beiträge</p>
+                </div>
               </div>
-              {activeCategory !== "alle" && (
-                <Button 
-                  variant="outline"
-                  onClick={() => setActiveCategory("alle")}
-                  className="group"
-                >
-                  Alle anzeigen
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              )}
-            </div>
 
-            {filteredPosts.length > 0 ? (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredPosts.map((post, index) => (
+              <div className="grid md:grid-cols-3 gap-6">
+                {blogPosts.filter(p => p.featured).map((post, index) => (
                   <Link
                     key={post.slug}
                     to={`/blog/${post.slug}`}
-                    className={`group relative transition-all duration-700 ${
+                    className={`group relative transition-all duration-500 ${
                       isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                     }`}
-                    style={{ transitionDelay: `${index * 75}ms` }}
+                    style={{ transitionDelay: `${index * 100}ms` }}
                   >
-                    <div className="relative h-full bg-background rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-xl overflow-hidden">
+                    <div className="relative h-full bg-background rounded-3xl border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden">
+                      {/* Gradient overlay on hover */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${post.categoryGradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl`} />
+                      
                       {/* Image */}
-                      <div className="aspect-video overflow-hidden">
+                      <div className="relative aspect-[16/10] overflow-hidden rounded-t-3xl">
                         <img
                           src={post.image}
                           alt={post.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+                        
+                        {/* Featured Badge */}
+                        <div className="absolute top-4 left-4">
+                          <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r ${post.categoryGradient} text-white text-xs font-semibold shadow-lg`}>
+                            <Star className="w-3 h-3" />
+                            Featured
+                          </span>
+                        </div>
                       </div>
 
                       {/* Content */}
@@ -571,20 +379,110 @@ const Blog = () => {
                             {post.date}
                           </span>
                         </div>
-                        <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
+
+                        <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
                           {post.title}
                         </h3>
-                        <p className="text-muted-foreground mb-4 line-clamp-2">
+                        <p className="text-muted-foreground mb-4 line-clamp-2 text-sm">
                           {post.excerpt}
                         </p>
+
                         <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                            <span className="flex items-center gap-1">
-                              <Clock className="w-4 h-4" />
-                              {post.readTime}
-                            </span>
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <Clock className="w-4 h-4" />
+                            {post.readTime}
                           </div>
-                          <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                          <div className="w-9 h-9 rounded-full bg-muted/50 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                            <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* All Posts */}
+        <section id="artikel" className="py-16 md:py-20 bg-gradient-to-b from-background to-muted/20">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent to-primary flex items-center justify-center">
+                  <FileText className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+                    {activeCategory === "alle" 
+                      ? "Weitere Artikel" 
+                      : categories.find(c => c.slug === activeCategory)?.name}
+                  </h2>
+                  <p className="text-muted-foreground text-sm">
+                    {allPosts.length} {allPosts.length === 1 ? "Artikel" : "Artikel"} verfügbar
+                  </p>
+                </div>
+              </div>
+              {activeCategory !== "alle" && (
+                <Button 
+                  variant="outline"
+                  onClick={() => setActiveCategory("alle")}
+                  className="group"
+                >
+                  Alle anzeigen
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              )}
+            </div>
+
+            {(activeCategory === "alle" ? blogPosts.filter(p => !p.featured) : allPosts).length > 0 ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {(activeCategory === "alle" ? blogPosts.filter(p => !p.featured) : allPosts).map((post, index) => (
+                  <Link
+                    key={post.slug}
+                    to={`/blog/${post.slug}`}
+                    className={`group relative transition-all duration-500 ${
+                      isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                    }`}
+                    style={{ transitionDelay: `${index * 75}ms` }}
+                  >
+                    <div className="relative h-full bg-background rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                      {/* Image */}
+                      <div className="aspect-video overflow-hidden rounded-t-2xl">
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-5">
+                        <div className="flex items-center gap-3 text-sm text-muted-foreground mb-3">
+                          <span className={`px-3 py-1 rounded-full bg-gradient-to-r ${post.categoryGradient} text-white text-xs font-medium`}>
+                            {post.category}
+                          </span>
+                          <span className="flex items-center gap-1 text-xs">
+                            <Calendar className="w-3 h-3" />
+                            {post.date}
+                          </span>
+                        </div>
+                        <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                          {post.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                          {post.excerpt}
+                        </p>
+                        <div className="flex items-center justify-between pt-3 border-t border-border/50">
+                          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                            <Clock className="w-3.5 h-3.5" />
+                            {post.readTime}
+                          </span>
+                          <span className="text-primary text-sm font-medium group-hover:underline flex items-center gap-1">
+                            Lesen
+                            <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -592,7 +490,7 @@ const Blog = () => {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-16 bg-muted/30 rounded-3xl">
+              <div className="text-center py-16 bg-background rounded-3xl border border-border/50">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-muted flex items-center justify-center">
                   <BookOpen className="w-8 h-8 text-muted-foreground" />
                 </div>
@@ -670,7 +568,6 @@ const Blog = () => {
         </section>
       </main>
 
-      
       <Footer />
     </>
   );
