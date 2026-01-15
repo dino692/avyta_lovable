@@ -205,9 +205,19 @@ const NewsletterSection = () => {
                       <h3 className="font-display font-bold text-2xl text-foreground mb-3">
                         Vielen Dank!
                       </h3>
-                      <p className="text-muted-foreground mb-6">
-                        Der Ratgeber wurde an Ihre E-Mail-Adresse gesendet. 
-                        Bitte überprüfen Sie auch Ihren Spam-Ordner.
+                      <p className="text-muted-foreground mb-4">
+                        Ihr Ratgeber steht zum Download bereit!
+                      </p>
+                      <a 
+                        href="/downloads/Ratgeber_fuer_Angehoerige.pdf" 
+                        download="AVYTA_Ratgeber_fuer_Angehoerige.pdf"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-full shadow-lg shadow-primary/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 mb-4"
+                      >
+                        <Download className="w-5 h-5" />
+                        PDF jetzt herunterladen
+                      </a>
+                      <p className="text-muted-foreground text-sm mb-6">
+                        Der Ratgeber wurde auch an Ihre E-Mail gesendet.
                       </p>
                       <Button 
                         variant="outline" 

@@ -120,7 +120,7 @@ const TestimonialsSection = () => {
         <div className={`grid lg:grid-cols-2 gap-12 items-center transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Video Card - Compact */}
           <div className="order-2 lg:order-1 flex justify-center">
-            <div className="relative group max-w-[320px]">
+            <div className="relative group w-[280px]">
               {/* Glowing border effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-white/30 via-accent/50 to-white/30 rounded-2xl blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
               
