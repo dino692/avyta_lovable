@@ -25,8 +25,8 @@ const JobCTADropdownButton = ({
     if (buttonRef.current) {
       const rect = buttonRef.current.getBoundingClientRect();
       setDropdownPosition({
-        top: rect.bottom + window.scrollY + 8,
-        left: rect.left + window.scrollX,
+        top: rect.bottom + 8,
+        left: rect.left,
         width: Math.max(rect.width, 256),
       });
     }
