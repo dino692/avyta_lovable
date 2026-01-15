@@ -565,9 +565,9 @@ const Jobs = () => {
                   asChild
                   className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
                 >
-                  <a href="tel:+4969247474250">
+                  <a href="tel:+496915391405">
                     <MapPin className="w-4 h-4 mr-2" />
-                    069 - 247 474 250
+                    069 - 153 914 05
                   </a>
                 </Button>
               </div>
