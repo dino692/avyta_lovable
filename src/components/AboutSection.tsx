@@ -2,6 +2,12 @@ import { Heart, Users, Clock, Award, ArrowRight, Shield, Star, CheckCircle2 } fr
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+// Import about images
+import teamFrauenImg from "@/assets/about/team-frauen.jpg";
+import demenzBetreuungImg from "@/assets/about/demenz-betreuung.jpg";
+import diabetesPflegeImg from "@/assets/about/diabetes-pflege.jpg";
+import nachtpflegeImg from "@/assets/about/nachtpflege.jpg";
+
 const features = [
   { 
     icon: Users, 
@@ -9,6 +15,7 @@ const features = [
     description: "Unser Team besteht ausschließlich aus qualifizierten Pflegerinnen – für ein besonders vertrauensvolles Pflegeerlebnis.",
     stat: "100%",
     statLabel: "Weibliches Team",
+    image: teamFrauenImg,
   },
   { 
     icon: Clock, 
@@ -16,6 +23,7 @@ const features = [
     description: "Ob Tag oder Nacht – wir sind immer für Sie da. Unsere Notfall-Hotline ist rund um die Uhr besetzt.",
     stat: "24/7",
     statLabel: "Erreichbar",
+    image: nachtpflegeImg,
   },
   { 
     icon: Heart, 
@@ -23,6 +31,7 @@ const features = [
     description: "Wir sind speziell geschult im Umgang mit Demenzerkrankungen und bieten einfühlsame, kompetente Betreuung.",
     stat: "12+",
     statLabel: "Jahre Erfahrung",
+    image: demenzBetreuungImg,
   },
   { 
     icon: Award, 
@@ -30,6 +39,7 @@ const features = [
     description: "Unsere Pflegekräfte sind Experten für die Betreuung von Diabetes-Patienten mit allen notwendigen Versorgungsleistungen.",
     stat: "1,6",
     statLabel: "MDK Note",
+    image: diabetesPflegeImg,
   },
 ];
 
@@ -136,25 +146,42 @@ const AboutSection = () => {
                     )}
                     
                     <div className="relative flex items-start gap-4 md:gap-6">
-                      {/* Icon with stat */}
-                      <div className="flex-shrink-0">
-                        <div className={`relative w-14 h-14 md:w-20 md:h-20 rounded-xl md:rounded-2xl transition-all duration-500 ${
+                      {/* Image thumbnail */}
+                      <div className="flex-shrink-0 relative">
+                        <div className={`relative w-16 h-16 md:w-24 md:h-24 rounded-xl md:rounded-2xl overflow-hidden transition-all duration-500 ${
                           isActive 
-                            ? 'bg-gradient-to-br from-primary to-accent shadow-lg shadow-primary/30' 
-                            : 'bg-primary/10'
+                            ? 'shadow-lg shadow-primary/30 ring-2 ring-primary' 
+                            : 'ring-1 ring-border/50'
                         }`}>
-                          <IconComponent className={`absolute inset-0 m-auto w-6 h-6 md:w-9 md:h-9 transition-colors duration-500 ${
-                            isActive ? 'text-white' : 'text-primary'
+                          <img 
+                            src={feature.image} 
+                            alt={feature.title}
+                            className={`w-full h-full object-cover transition-all duration-500 ${
+                              isActive ? 'scale-110' : 'scale-100'
+                            }`}
+                          />
+                          {/* Gradient overlay */}
+                          <div className={`absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent transition-opacity duration-300 ${
+                            isActive ? 'opacity-100' : 'opacity-0'
                           }`} />
                           
-                          {/* Stat badge */}
-                          <div className={`absolute -bottom-1.5 -right-1.5 md:-bottom-2 md:-right-2 px-2 md:px-3 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs font-bold transition-all duration-500 ${
-                            isActive 
-                              ? 'bg-white text-primary shadow-md scale-105 md:scale-110' 
-                              : 'bg-primary/10 text-primary scale-100'
+                          {/* Icon overlay */}
+                          <div className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${
+                            isActive ? 'opacity-100' : 'opacity-0'
                           }`}>
-                            {feature.stat}
+                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/90 flex items-center justify-center">
+                              <IconComponent className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                            </div>
                           </div>
+                        </div>
+                        
+                        {/* Stat badge */}
+                        <div className={`absolute -bottom-1.5 -right-1.5 md:-bottom-2 md:-right-2 px-2 md:px-3 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs font-bold transition-all duration-500 ${
+                          isActive 
+                            ? 'bg-gradient-to-r from-primary to-accent text-white shadow-md scale-105 md:scale-110' 
+                            : 'bg-primary/10 text-primary scale-100'
+                        }`}>
+                          {feature.stat}
                         </div>
                       </div>
                       
@@ -175,6 +202,12 @@ const AboutSection = () => {
                         }`}>
                           {feature.description}
                         </p>
+                        {/* Stat label on mobile */}
+                        <div className={`mt-2 text-xs text-muted-foreground transition-opacity duration-300 ${
+                          isActive ? 'opacity-100' : 'opacity-0'
+                        }`}>
+                          <span className="font-semibold text-primary">{feature.stat}</span> {feature.statLabel}
+                        </div>
                       </div>
                     </div>
                   </div>
