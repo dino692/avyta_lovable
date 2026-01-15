@@ -118,50 +118,50 @@ const TestimonialsSection = () => {
 
         {/* Main Content Grid */}
         <div className={`grid lg:grid-cols-2 gap-12 items-center transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {/* Video Card */}
-          <div className="order-2 lg:order-1">
-            <div className="relative group">
+          {/* Video Card - Compact */}
+          <div className="order-2 lg:order-1 flex justify-center">
+            <div className="relative group max-w-[320px]">
               {/* Glowing border effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-white/30 via-accent/50 to-white/30 rounded-[2rem] blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-white/30 via-accent/50 to-white/30 rounded-2xl blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/20">
-                {/* Video Header */}
-                <div className="relative p-5 border-b border-white/10 bg-white/5">
+              <div className="relative bg-white/10 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/20">
+                {/* Video Header - Compact */}
+                <div className="relative px-4 py-3 border-b border-white/10 bg-white/5">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
-                        <Users className="w-6 h-6 text-white" />
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center">
+                        <Users className="w-4 h-4 text-white" />
                       </div>
                       <div>
-                        <span className="text-white font-semibold">Mitarbeiterstimme</span>
-                        <div className="flex items-center gap-1 mt-0.5">
+                        <span className="text-white font-semibold text-sm">Mitarbeiterstimme</span>
+                        <div className="flex items-center gap-0.5 mt-0.5">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-3.5 h-3.5 text-amber-400" fill="currentColor" />
+                            <Star key={i} className="w-2.5 h-2.5 text-amber-400" fill="currentColor" />
                           ))}
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-500/20 border border-red-500/30">
-                      <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                      <span className="text-xs text-red-200 font-medium">LIVE</span>
+                    <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-red-500/20 border border-red-500/30">
+                      <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                      <span className="text-[10px] text-red-200 font-medium">LIVE</span>
                     </div>
                   </div>
                 </div>
 
-                {/* TikTok Video Container */}
+                {/* TikTok Video Container - Optimized for TikTok aspect ratio */}
                 <div className="relative aspect-[9/16] bg-gradient-to-b from-primary/20 to-primary/40">
                   {isVisible ? (
                     <>
                       {!videoLoaded && (
                         <div className="absolute inset-0 flex items-center justify-center">
                           <div className="text-center text-white">
-                            <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                              <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center animate-pulse">
-                                <Play className="w-8 h-8 ml-1" fill="white" />
+                            <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center animate-pulse">
+                                <Play className="w-5 h-5 ml-0.5" fill="white" />
                               </div>
                             </div>
-                            <p className="text-sm opacity-75">Video wird geladen...</p>
-                            <div className="mt-4 w-32 h-1 bg-white/20 rounded-full overflow-hidden mx-auto">
+                            <p className="text-xs opacity-75">Video wird geladen...</p>
+                            <div className="mt-3 w-24 h-1 bg-white/20 rounded-full overflow-hidden mx-auto">
                               <div className="h-full bg-white/60 rounded-full animate-[loading_1.5s_ease-in-out_infinite]" />
                             </div>
                           </div>
@@ -180,34 +180,13 @@ const TestimonialsSection = () => {
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center text-white">
-                        <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <Play className="w-8 h-8 ml-1" fill="white" />
+                        <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <Play className="w-5 h-5 ml-0.5" fill="white" />
                         </div>
-                        <p className="text-sm opacity-75">Video laden</p>
+                        <p className="text-xs opacity-75">Video laden</p>
                       </div>
                     </div>
                   )}
-                </div>
-
-                {/* Video Footer */}
-                <div className="p-6 bg-white/5">
-                  <div className="flex items-start gap-4">
-                    <Quote className="w-8 h-8 text-white/30 flex-shrink-0" />
-                    <div>
-                      <p className="text-white/90 leading-relaxed mb-3">
-                        "Bei AVYTA fühle ich mich wertgeschätzt und unterstützt. Der Zusammenhalt im Team ist einzigartig."
-                      </p>
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center text-white text-sm font-bold">
-                          AT
-                        </div>
-                        <div>
-                          <div className="text-white font-medium text-sm">AVYTA Team</div>
-                          <div className="text-white/50 text-xs">Pflegefachkräfte</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
