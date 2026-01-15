@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, Newspaper, Lightbulb, Scale, Activity, BookOpen, Stethoscope, HandHelping, HeartPulse, Home, Clock, MessageCircle, CalendarCheck, LucideIcon, Building2, MapPin, Mail, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/Logo";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -109,16 +110,7 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2">
-              <img 
-                src="/images/avyta-logo.png" 
-                alt="AVYTA Pflegegesellschaft mbH" 
-                className="h-6"
-                width="201"
-                height="24"
-                fetchPriority="high"
-              />
-            </Link>
+            <Logo size="md" />
 
             {/* Desktop Navigation */}
             <NavigationMenu className="hidden lg:flex">
