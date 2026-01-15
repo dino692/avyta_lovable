@@ -151,13 +151,13 @@ const Header = () => {
                     {/* Shimmer */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
                     
-                    {/* Logo Typography */}
+                    {/* Heart Logo */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="relative">
-                        {/* Shadow Text */}
-                        <span className="absolute inset-0 text-3xl font-display font-black text-black/30 blur-sm translate-y-0.5">A</span>
-                        {/* Main Text */}
-                        <span className="relative text-3xl font-display font-black text-white drop-shadow-[0_2px_10px_rgba(255,255,255,0.3)]">A</span>
+                      <div className="relative group-hover:scale-110 transition-transform duration-500">
+                        {/* Shadow Heart */}
+                        <Heart className="absolute w-8 h-8 text-black/30 blur-sm translate-y-0.5 fill-black/20" />
+                        {/* Main Heart */}
+                        <Heart className="relative w-8 h-8 text-white fill-white drop-shadow-[0_2px_10px_rgba(255,255,255,0.5)] group-hover:animate-pulse" style={{ animationDuration: "1s" }} />
                       </div>
                     </div>
                     
