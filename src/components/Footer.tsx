@@ -1,5 +1,6 @@
 import { Heart, Facebook, Instagram, Linkedin, Youtube, ArrowUp, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import Logo from "@/components/Logo";
 
 const TikTokIcon = () => (
   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -73,16 +74,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 pb-12 border-b border-background/10">
           <div className="lg:col-span-2 space-y-6">
-            <Link to="/" className="flex items-center gap-2">
-              <img 
-                src="/images/avyta-logo.png" 
-                alt="AVYTA Pflegegesellschaft mbH" 
-                className="h-10 brightness-0 invert"
-                width="334"
-                height="40"
-                loading="lazy"
-              />
-            </Link>
+            <Logo size="lg" variant="light" />
             <p className="text-background/70 leading-relaxed max-w-md">
               AVYTA Pflegegesellschaft mbH – Ambulanter Pflegedienst mit Herz in Frankfurt und Umgebung. 
               Unser Ziel ist es, Menschen ein selbstbestimmtes Leben zu ermöglichen.
