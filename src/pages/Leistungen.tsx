@@ -271,12 +271,11 @@ const Leistungen = () => {
               </p>
             </div>
 
-            {/* Services Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16">
+            {/* Services Cards - Compact like Blog Categories */}
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12 md:mb-16">
               {services.map((service, index) => {
                 const Icon = service.icon;
                 const isSelected = selectedService.id === service.id;
-                const isHovered = hoveredCard === service.id;
                 
                 return (
                   <button
@@ -284,56 +283,41 @@ const Leistungen = () => {
                     onClick={() => setSelectedService(service)}
                     onMouseEnter={() => setHoveredCard(service.id)}
                     onMouseLeave={() => setHoveredCard(null)}
-                    className={`group relative p-6 md:p-8 rounded-2xl md:rounded-3xl text-left transition-all duration-500 transform ${
-                      isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                    } ${isSelected 
-                      ? "bg-primary text-primary-foreground shadow-2xl shadow-primary/30 scale-[1.02]" 
-                      : "bg-card hover:bg-card/80 border border-border hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10"
+                    className={`group relative transition-all duration-300 ${
+                      isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                     }`}
-                    style={{ 
-                      transitionDelay: `${index * 50}ms`,
-                    }}
+                    style={{ transitionDelay: `${index * 50}ms` }}
                   >
-                    {/* Glow Effect */}
-                    {(isSelected || isHovered) && (
-                      <div className={`absolute inset-0 rounded-2xl md:rounded-3xl bg-gradient-to-r ${service.color} opacity-10 blur-xl transition-opacity duration-500`} />
-                    )}
-                    
-                    {/* Content */}
-                    <div className="relative z-10">
-                      <div className={`w-14 h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 transition-all duration-300 ${
+                    <div className={`relative flex items-center gap-3 px-5 py-3 rounded-2xl border-2 transition-all duration-300 ${
+                      isSelected 
+                        ? "border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/25" 
+                        : "border-border/50 bg-card hover:border-primary/50 hover:shadow-lg"
+                    }`}>
+                      {/* Icon */}
+                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
                         isSelected 
                           ? "bg-primary-foreground/20" 
-                          : `bg-gradient-to-br ${service.color} bg-opacity-10`
-                      } ${isHovered ? "scale-110" : ""}`}>
-                        <Icon className={`w-7 h-7 md:w-8 md:h-8 ${isSelected ? "text-primary-foreground" : "text-white"}`} />
+                          : `bg-gradient-to-br ${service.color}`
+                      }`}>
+                        <Icon className={`w-5 h-5 ${isSelected ? "text-primary-foreground" : "text-white"}`} />
                       </div>
                       
-                      <h3 className={`text-lg md:text-xl font-display font-bold mb-2 transition-colors duration-300 ${
-                        isSelected ? "text-primary-foreground" : "text-foreground"
-                      }`}>
-                        {service.title}
-                      </h3>
-                      
-                      <p className={`text-sm md:text-base leading-relaxed transition-colors duration-300 ${
-                        isSelected ? "text-primary-foreground/80" : "text-muted-foreground"
-                      }`}>
-                        {service.shortDescription}
-                      </p>
+                      {/* Text */}
+                      <div className="text-left">
+                        <span className={`font-semibold text-sm md:text-base transition-colors duration-300 ${
+                          isSelected ? "text-primary-foreground" : "text-foreground"
+                        }`}>
+                          {service.title}
+                        </span>
+                      </div>
 
-                      {/* Arrow indicator */}
-                      <div className={`mt-4 flex items-center gap-2 text-sm font-medium transition-all duration-300 ${
-                        isSelected ? "text-primary-foreground" : "text-primary"
-                      } ${isHovered || isSelected ? "translate-x-2" : ""}`}>
-                        <span>Details anzeigen</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </div>
+                      {/* Arrow indicator on hover/selected */}
+                      <ArrowRight className={`w-4 h-4 transition-all duration-300 ${
+                        isSelected 
+                          ? "text-primary-foreground opacity-100 translate-x-0" 
+                          : "text-primary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      }`} />
                     </div>
-
-                    {/* Selection Ring */}
-                    {isSelected && (
-                      <div className="absolute -inset-[2px] rounded-2xl md:rounded-3xl border-2 border-primary-foreground/30 pointer-events-none" />
-                    )}
                   </button>
                 );
               })}
