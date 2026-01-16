@@ -9,6 +9,15 @@ import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
 import CTADropdownButton from "@/components/CTADropdownButton";
 
+// Service Images
+import behandlungspflegeImg from "@/assets/services/behandlungspflege.jpg";
+import grundpflegeImg from "@/assets/services/grundpflege.jpg";
+import intensivpflegeImg from "@/assets/services/intensivpflege.jpg";
+import haushaltshilfeImg from "@/assets/services/haushaltshilfe.jpg";
+import vierundzwanzigImg from "@/assets/services/24-stunden-pflege.jpg";
+import pflegeberatungImg from "@/assets/services/pflegeberatung.jpg";
+import verhinderungspflegeImg from "@/assets/services/verhinderungspflege.jpg";
+
 const services = [
   {
     id: "behandlungspflege",
@@ -26,6 +35,7 @@ const services = [
     ],
     color: "from-blue-500 to-cyan-500",
     bgColor: "bg-blue-500/10",
+    image: behandlungspflegeImg,
   },
   {
     id: "grundpflege",
@@ -43,6 +53,7 @@ const services = [
     ],
     color: "from-emerald-500 to-teal-500",
     bgColor: "bg-emerald-500/10",
+    image: grundpflegeImg,
   },
   {
     id: "ausserklinische-intensivpflege-frankfurt-am-main",
@@ -60,6 +71,7 @@ const services = [
     ],
     color: "from-rose-500 to-pink-500",
     bgColor: "bg-rose-500/10",
+    image: intensivpflegeImg,
   },
   {
     id: "haushaltshilfe",
@@ -77,6 +89,7 @@ const services = [
     ],
     color: "from-amber-500 to-orange-500",
     bgColor: "bg-amber-500/10",
+    image: haushaltshilfeImg,
   },
   {
     id: "24-stunden-pflege",
@@ -94,6 +107,7 @@ const services = [
     ],
     color: "from-violet-500 to-purple-500",
     bgColor: "bg-violet-500/10",
+    image: vierundzwanzigImg,
   },
   {
     id: "pflegeberatung-frankfurt",
@@ -111,6 +125,7 @@ const services = [
     ],
     color: "from-indigo-500 to-blue-500",
     bgColor: "bg-indigo-500/10",
+    image: pflegeberatungImg,
   },
   {
     id: "verhinderungspflege-frankfurt",
@@ -128,6 +143,7 @@ const services = [
     ],
     color: "from-cyan-500 to-teal-500",
     bgColor: "bg-cyan-500/10",
+    image: verhinderungspflegeImg,
   },
 ];
 
@@ -335,19 +351,26 @@ const Leistungen = () => {
                 
                 <CardContent className="relative z-10 p-6 md:p-10 lg:p-12">
                   <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-                    {/* Left Side - Info */}
+                    {/* Left Side - Info with Image */}
                     <div>
-                      <div className="flex items-start gap-4 md:gap-6 mb-6 md:mb-8">
-                        <div className={`w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-gradient-to-br ${selectedService.color} flex items-center justify-center flex-shrink-0 shadow-lg`}>
-                          <selectedService.icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
-                        </div>
-                        <div>
-                          <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs md:text-sm font-medium rounded-full mb-2">
-                            Ausgewählte Leistung
-                          </span>
-                          <h2 className="text-2xl md:text-4xl font-display font-bold text-foreground">
-                            {selectedService.title}
-                          </h2>
+                      {/* Service Image */}
+                      <div className="relative mb-6 md:mb-8 rounded-2xl overflow-hidden group">
+                        <img 
+                          src={selectedService.image} 
+                          alt={selectedService.title}
+                          className="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent`} />
+                        <div className="absolute bottom-4 left-4 flex items-center gap-3">
+                          <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br ${selectedService.color} flex items-center justify-center shadow-lg`}>
+                            <selectedService.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                          </div>
+                          <div>
+                            <span className="text-xs text-white/70 font-medium">Ausgewählte Leistung</span>
+                            <h2 className="text-xl md:text-2xl font-display font-bold text-white">
+                              {selectedService.title}
+                            </h2>
+                          </div>
                         </div>
                       </div>
                       
