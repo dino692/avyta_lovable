@@ -51,13 +51,13 @@ const standorte = {
 };
 
 const jobs = [
-  { name: "Karriere Übersicht", href: "/jobs", description: "Übersicht aller Stellenangebote", icon: Briefcase },
-  { name: "Pflege Jobs", href: "/jobs/pflege-jobs", description: "Alle Pflegestellen im Überblick", icon: Heart },
-  { name: "Stellenangebote", href: "/jobs/stellenangebote-pflege-frankfurt", description: "Alle offenen Positionen im Überblick", icon: FileText },
-  { name: "Pflegefachkraft", href: "/jobs/pflegefachkraft-frankfurt", description: "Examinierte Pflegekräfte (m/w/d)", icon: UserCheck },
-  { name: "Pflegehilfskraft", href: "/jobs/pflegehilfskraft-frankfurt", description: "Mit Qualifikation nach §43b", icon: Users },
-  { name: "Pflegehelfer", href: "/jobs/pflegehelfer-frankfurt", description: "Einstieg in die Pflege", icon: HeartHandshake },
-  { name: "Haushaltshilfe", href: "/jobs/haushaltshilfe-frankfurt", description: "Unterstützung im Alltag", icon: Home },
+  { name: "Karriere Übersicht", href: "/karriere", description: "Übersicht aller Stellenangebote", icon: Briefcase },
+  { name: "Pflege Jobs", href: "/karriere/pflege-jobs", description: "Alle Pflegestellen im Überblick", icon: Heart },
+  { name: "Stellenangebote", href: "/karriere/stellenangebote-pflege-frankfurt", description: "Alle offenen Positionen im Überblick", icon: FileText },
+  { name: "Pflegefachkraft", href: "/karriere/pflegefachkraft-frankfurt", description: "Examinierte Pflegekräfte (m/w/d)", icon: UserCheck },
+  { name: "Pflegehilfskraft", href: "/karriere/pflegehilfskraft-frankfurt", description: "Mit Qualifikation nach §43b", icon: Users },
+  { name: "Pflegehelfer", href: "/karriere/pflegehelfer-frankfurt", description: "Einstieg in die Pflege", icon: HeartHandshake },
+  { name: "Haushaltshilfe", href: "/karriere/haushaltshilfe-frankfurt", description: "Unterstützung im Alltag", icon: Home },
 ];
 
 const blogCategories = [
