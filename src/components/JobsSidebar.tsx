@@ -38,10 +38,10 @@ const JobsSidebar = () => {
       </nav>
       <div className="mt-6 pt-6 border-t border-border">
         <Link
-          to="/jobs"
+          to="/karriere"
           className="text-primary text-sm font-medium hover:underline"
         >
-          ← Zur Jobs-Übersicht
+          ← Zur Karriere-Übersicht
         </Link>
       </div>
     </div>
