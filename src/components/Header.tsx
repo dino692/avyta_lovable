@@ -51,8 +51,8 @@ const standorte = {
 };
 
 const jobs = [
-  { name: "Alle Jobs", href: "/jobs", description: "Übersicht aller Stellenangebote", icon: Briefcase },
-  { name: "Pflege Jobs", href: "/jobs/pflege-jobs", description: "Alle Pflegestellen im Überblick", icon: Heart },
+  { name: "Karriere Übersicht", href: "/karriere", description: "Übersicht aller Stellenangebote", icon: Briefcase },
+  { name: "Pflege Jobs", href: "/karriere/pflege-jobs", description: "Alle Pflegestellen im Überblick", icon: Heart },
   { name: "Stellenangebote", href: "/karriere/stellenangebote-pflege-frankfurt", description: "Alle offenen Positionen im Überblick", icon: FileText },
   { name: "Pflegefachkraft", href: "/karriere/pflegefachkraft-frankfurt", description: "Examinierte Pflegekräfte (m/w/d)", icon: UserCheck },
   { name: "Pflegehilfskraft", href: "/karriere/pflegehilfskraft-frankfurt", description: "Mit Qualifikation nach §43b", icon: Users },
@@ -72,7 +72,7 @@ const blogCategories = [
 const navLinks = [
   { name: "Start", href: "/" },
   { name: "Team", href: "/team" },
-  { name: "Jobs", href: "/jobs" },
+  { name: "Karriere", href: "/karriere" },
   { name: "Blog", href: "/blog" },
   { name: "Kontakt", href: "/#contact" },
 ];
@@ -301,10 +301,10 @@ const Header = () => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
-                {/* Jobs Dropdown */}
+                {/* Karriere Dropdown */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm text-muted-foreground hover:text-primary font-medium bg-transparent">
-                    Jobs
+                    Karriere
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="w-[420px] p-4">
@@ -569,7 +569,7 @@ const Header = () => {
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Briefcase className="w-5 h-5 text-primary" />
                   </div>
-                  <span className="font-medium text-foreground group-hover:text-primary transition-colors">Jobs</span>
+                  <span className="font-medium text-foreground group-hover:text-primary transition-colors">Karriere</span>
                 </div>
                 <ChevronDown className={`w-5 h-5 text-muted-foreground transition-all duration-300 ${mobileJobsOpen ? 'rotate-180 text-primary' : ''}`} />
               </button>
