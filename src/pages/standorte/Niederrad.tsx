@@ -15,16 +15,16 @@ import { generateFAQSchema } from "@/lib/faqSchema";
 
 const niederradFaqs = [
   {
-    question: "Welche Besonderheiten bietet der Avyta Pflegedienst in Niederrad?",
-    answer: "Wir legen großen Wert auf eine familiäre Atmosphäre und individuelle Betreuung. Unser Team berücksichtigt Ihre kulturellen, religiösen und sozialen Bedürfnisse."
+    question: "Welche Bereiche der Grundpflege werden vom Pflegedienst in Frankfurt Niederrad übernommen?",
+    answer: "In der Grundpflege übernehmen wir vom Avyta Pflegedienst in Frankfurt Niederrad beispielsweise die Unterstützung in Alltagsaufgaben wie Essen und Trinken, Mobilität, Haushalt, Körperpflege und Ausscheidungen, An- und Auskleiden und noch vieles mehr."
   },
   {
-    question: "Wie kann ich den Avyta Pflegedienst in Niederrad beauftragen?",
-    answer: "Kontaktieren Sie uns für ein unverbindliches Erstgespräch. Wir helfen Ihnen bei allen notwendigen Anträgen und der Kommunikation mit Ihrer Pflegekasse."
+    question: "Welche Leistungen kann der Pflegedienst in Frankfurt Niederrad in der Behandlungs- und Intensivpflege übernehmen?",
+    answer: "Unser Avyta Pflegedienst in Frankfurt Niederrad kann in der Behandlungspflege beispielsweise die Blutdruck- und Blutzuckerkontrolle, die Wund- und Tracheostomaversorgung, die Versorgung von Anus Praeter und Urostoma, die parenterale und enterale Ernährung, die Medikamentengabe, Injektionen und Infusionen übernehmen. In der Intensivpflege helfen wir mit Lagerungsbehandlungen, Mobilisation, Überwachung und Vitalisierung des Patienten, Katheterlegen, endotrochalem Absaugen und der Heimbeatmung."
   },
   {
-    question: "Welche Pflegegrade werden vom Avyta Pflegedienst in Niederrad abgedeckt?",
-    answer: "Wir betreuen Patienten aller Pflegegrade – von der einfachen Alltagsunterstützung über die Grundpflege bis hin zur komplexen Intensivpflege."
+    question: "Wie beauftragt man den Pflegedienst in Frankfurt Niederrad?",
+    answer: "Der Weg zu unserem Avyta Pflegedienst in Frankfurt Niederrad führt zunächst über einen Antrag an die Kranken- oder Pflegekasse, um die Pflegebedürftigkeit und einen Pflegegrad feststellen zu lassen. Dabei können vielerlei Hilfsorganisationen Sie unterstützen. Danach wird über den medizinischen Dienst ein Termin vereinbart, und wir können einen Kostenvoranschlag zur Abrechnung mit den Kassen erstellen."
   },
 ];
 
@@ -72,7 +72,7 @@ const Niederrad = () => {
                   Pflegedienst in Frankfurt Niederrad: Pflege in vertrauter Umgebung
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Ihre Angehörigen oder Sie können den Alltag nicht mehr allein bewältigen und suchen nach einem ambulanten Pflegedienst? Unser Pflegedienst bietet Ihnen eine auf Ihre individuellen Bedürfnisse abgestimmte Betreuung.
+                  Ihre Angehörigen oder Sie können den Alltag nicht mehr allein bewältigen und suchen nach einem <Link to="/" className="text-primary hover:underline font-medium">ambulanten Pflegedienst</Link>? Unser <strong>Pflegedienst in Frankfurt Niederrad</strong> unterstützt Sie gerne und bietet Ihnen eine auf Ihre <strong>individuellen Bedürfnisse</strong> abgestimmte Betreuung im Alltag an.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -87,10 +87,10 @@ const Niederrad = () => {
               <div className="max-w-4xl mx-auto">
                 <div className="prose prose-lg max-w-none text-muted-foreground">
                   <p className="mb-6">
-                    Eine Pflegebedürftigkeit entsteht durch die unterschiedlichsten Gründe. Personen sind unter anderem aufgrund von geistigen Einschränkungen, einem fortgeschrittenen Alter oder aufgrund eines schweren Unfalles auf Hilfe im Alltag angewiesen.
+                    Eine <strong>Pflegebedürftigkeit</strong> entsteht durch die unterschiedlichsten Gründe. Personen sind unter anderem aufgrund von geistigen <strong>Einschränkungen</strong>, einem fortgeschrittenen Alter oder aufgrund eines schweren Unfalles auf Hilfe im Alltag angewiesen. Unser Pflegedienst in <strong>Frankfurt Niederrad</strong> bietet Ihnen oder Ihren Angehörigen eine <strong>individuell</strong> auf Sie angepasste <strong>Hilfe und Betreuung</strong> im Alltag.
                   </p>
                   <p className="mb-6">
-                    Mit dem Avyta Pflegedienst in Frankfurt Niederrad erhalten Sie in Ihrer gewohnten häuslichen Umgebung eine attraktive Lebensqualität, da Sie nicht in ein Pflegeheim umziehen müssen. Sie können Ihre Eigenständigkeit behalten und gleichzeitig die bestmögliche Pflege erhalten, denn wir kommen zu Ihnen.
+                    Mit dem <Link to="/team" className="text-primary hover:underline font-medium">Avyta Pflegedienst</Link> in Frankfurt Niederrad erhalten Sie oder Ihre Angehörigen in Ihrer gewohnten häuslichen Umgebung eine attraktive Lebensqualität, da Sie nicht in ein Pflegeheim umziehen müssen. Sie oder Ihre Angehörigen können Ihre Eigenständigkeit behalten und gleichzeitig die bestmögliche Pflege erhalten, denn wir, der <strong>ambulante Pflegedienst in Frankfurt Niederrad</strong>, kommt zu Ihnen.
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center my-8">
                     <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
@@ -111,10 +111,10 @@ const Niederrad = () => {
           <section className="py-20 bg-card/50">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-display font-bold text-foreground mb-4 text-center">
-                Avyta Pflegedienst in Frankfurt Niederrad bietet individuelle Pflege
+                Avyta Pflegedienst in Frankfurt Niederrad bietet Ihnen eine individuelle Pflege
               </h2>
               <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-                Unser umfangreiches Leistungsspektrum ermöglicht jeder Person eine individuell angepasste Pflege – von der Grundpflege bis zur medizinischen Versorgung.
+                Unser ambulanter Pflegedienst in <strong>Frankfurt Niederrad</strong> hat ein umfangreiches Leistungsspektrum entwickelt, damit jeder Person eine individuell angepasste Pflege ermöglicht wird. Die Pflegebedürfnisse sind je nach Person und Situation sehr verschiedenen. Daher reichen die verschiedenen Facetten des <strong>Leistungsspektrums</strong> von klassischen Elementen der <strong>Grundpflege</strong> bis hin zu medizinischen und alltäglichen <strong>Versorgungen</strong>.
               </p>
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {/* Grundpflege */}
@@ -125,7 +125,7 @@ const Niederrad = () => {
                       Grundpflege
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
-                      Alle Maßnahmen, die der Versorgung des Körpers behilflich sind:
+                      <strong>Die Grundpflege</strong> beinhaltet alle Maßnahmen, die der Versorgung des Körpers behilflich sind. Die folgenden <Link to="/leistungen/grundpflege" className="text-primary hover:underline font-medium">Maßnahmen der Grundpflege</Link> führt der ambulante Pflegedienst in Frankfurt Niederrad für Sie oder Ihre Angehörigen durch:
                     </p>
                     <ul className="space-y-2">
                       {grundpflegeLeistungen.map((leistung, index) => (
@@ -146,7 +146,7 @@ const Niederrad = () => {
                       Behandlungspflege
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
-                      Medizinische Maßnahmen, die von Ihrem Arzt verschrieben wurden:
+                      Unser <strong>hochqualifiziertes Personal</strong> des Pflegedienstes in Frankfurt Niederrad führt bei Bedarf auch <strong>Maßnahmen der Behandlungspflege</strong> aus. <Link to="/leistungen/behandlungspflege" className="text-primary hover:underline font-medium">Die Behandlungspflege</Link> stellt einen weiteren Bereich der ambulanten Pflege dar:
                     </p>
                     <ul className="space-y-2">
                       {behandlungspflegeLeistungen.map((leistung, index) => (
@@ -167,10 +167,13 @@ const Niederrad = () => {
                       Intensivpflege & Serviceleistungen
                     </h3>
                     <p className="text-muted-foreground text-sm mb-3">
-                      Unser geschultes Personal ermöglicht auch Maßnahmen der Intensivpflege in Ihrer gewohnten Umgebung: Lagerungsbehandlungen und Mobilisation, Überwachung & Vitalisierung, Legen eines Blasenkatheters, endotracheales Absaugen oder auch eine Heimbeatmung.
+                      <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="text-primary hover:underline font-medium">Die Intensivpflege</Link> ist ein weiterer Bereich der Behandlungspflege. Unser geschultes Personal ermöglicht Ihnen oder Ihren Angehörigen auch <strong>Maßnahmen der Intensivpflege</strong> in Ihrer gewohnten Umgebung. Die Leistungen der Intensivpflege, die von unserem Pflegedienst in Frankfurt Niederrad durchgeführt werden, sind unter anderem die Lagerungsbehandlungen und Mobilisation, die Überwachung & Vitalisierung des Patienten, das Legen eines Blasenkatheters, das endotracheale Absaugen oder auch eine Heimbeatmung.
                     </p>
                     <p className="text-muted-foreground text-sm">
-                      Wir bieten auch Serviceleistungen: Vermittlung von Friseuren, Hilfe beim Ausfüllen von Anträgen, Hilfe bei der Besorgung von Medikamenten oder Unterstützung und Begleitung von Spaziergängen.
+                      Wir, der <strong>Avyta Pflegedienst in Frankfurt Niederrad</strong>, bieten Ihnen oder Ihren Angehörigen auch weitere Serviceleistungen an. Diese sind zum Beispiel Vermittlung von Friseuren, Hilfe beim Ausfüllen von Anträgen, Hilfe bei der Besorgung von Medikamenten oder Unterstützung und Begleitung von Spaziergängen.
+                    </p>
+                    <p className="text-muted-foreground text-sm mt-3">
+                      Wir stehen Ihnen <strong>gerne zur Verfügung</strong> Rufen Sie uns an vereinbaren einen unverbindlichen Termin - <strong>gerne bei Ihnen zu Hause</strong>.
                     </p>
                   </CardContent>
                 </Card>
@@ -186,10 +189,13 @@ const Niederrad = () => {
                   Pflegedienst in Frankfurt Niederrad – herzliche und familiäre Pflege
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  Wir bieten eine individuelle und auf Sie abgestimmte Pflege ganz nach Ihren persönlichen Bedürfnissen und Ihrem Pflegegrad. Neben Ihrem gesundheitlichen Zustand berücksichtigen wir auch Ihre kulturellen, sozialen und religiösen Anforderungen.
+                  Wir bieten Ihnen eine individuelle und auf Sie abgestimmte <strong>Pflege</strong> ganz nach Ihren persönlichen Bedürfnissen und Ihrem Pflegegrad. Neben Ihrem gesundheitlichen Zustand berücksichtigen wir dabei auch Ihre kulturellen, sozialen und religiösen Anforderungen an eine Pflege. Die Menschlichkeit spielt eine große Rolle bei Avyta.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  Die <strong>langjährige Erfahrung</strong> unseres Pflegedienstes garantiert Ihnen eine sehr hohe <strong>Pflegequalität</strong>. Zudem wird die Beständigkeit der <strong>Qualität</strong> in einem permanenten Prozess der <strong>Qualitätssicherung</strong> überprüft. Dadurch wird Ihnen oder Ihren Angehörigen eine <strong>professionelle und herzliche Pflege</strong> in Ihrer häuslichen Umgebung durch den <strong>Avyta Pflegedienst in Niederrad</strong> sichergestellt. Unser Pflegedienst in Frankfurt und Umgebung ist immer für Sie da, auch an <strong>Wochenenden</strong> und <strong>Feiertagen</strong>. Bei <strong>Notfällen</strong> sind wir selbstverständlich auch in der Nacht für Sie und Ihre Angehörigen erreichbar.
                 </p>
                 <p className="text-muted-foreground mb-8">
-                  Die langjährige Erfahrung garantiert eine sehr hohe Pflegequalität. Unser Pflegedienst ist immer für Sie da, auch an Wochenenden und Feiertagen. Bei Notfällen sind wir selbstverständlich auch in der Nacht erreichbar.
+                  Für eine erste unverbindliche Beratung unseres Angebotes oder bei Fragen zu unseren Pflegeleistungen können Sie gerne mit dem Pflegedienst Niederrad <Link to="/kontakt" className="text-primary hover:underline font-medium">Kontakt</Link> aufnehmen. Wir freuen uns darauf, Sie und Ihre Angehörigen kennenzulernen.
                 </p>
                 <CTADropdownButton />
               </div>
@@ -210,7 +216,7 @@ const Niederrad = () => {
                       Welche Bereiche der Grundpflege werden vom Pflegedienst in Frankfurt Niederrad übernommen?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      In der Grundpflege übernehmen wir beispielsweise die Unterstützung in Alltagsaufgaben wie Essen und Trinken, Mobilität, Haushalt, Körperpflege und Ausscheidungen, An- und Auskleiden und noch vieles mehr.
+                      In der Grundpflege übernehmen wir vom <strong>Avyta Pflegedienst in Frankfurt Niederrad</strong> beispielsweise die Unterstützung in <strong>Alltagsaufgaben</strong> wie Essen und Trinken, Mobilität, Haushalt, Körperpflege und Ausscheidungen, An- und Auskleiden und noch vieles mehr.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-2" className="bg-card rounded-xl border border-border/50 px-6">
@@ -218,7 +224,7 @@ const Niederrad = () => {
                       Welche Leistungen kann der Pflegedienst in Frankfurt Niederrad in der Behandlungs- und Intensivpflege übernehmen?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Wir übernehmen alle vom Arzt verordneten medizinischen Maßnahmen wie Injektionen, Wundversorgung, Blutzuckerkontrolle und vieles mehr. In der Intensivpflege bieten wir auch Heimbeatmung und Vitalisierung an.
+                      Unser Avyta Pflegedienst in Frankfurt Niederrad kann in der <strong>Behandlungspflege</strong> beispielsweise die Blutdruck- und Blutzuckerkontrolle, die Wund- und Tracheostomaversorgung, die Versorgung von Anus Praeter und Urostoma, die parenterale und enterale Ernährung, die Medikamentengabe, Injektionen und Infusionen übernehmen. In der <strong>Intensivpflege</strong> helfen wir mit Lagerungsbehandlungen, Mobilisation, Überwachung und Vitalisierung des Patienten, Katheterlegen, endotrochalem Absaugen und der Heimbeatmung. Sprechen Sie uns gerne auf weitere Leistungen an.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-3" className="bg-card rounded-xl border border-border/50 px-6">
@@ -226,7 +232,7 @@ const Niederrad = () => {
                       Wie beauftragt man den Pflegedienst in Frankfurt Niederrad?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Kontaktieren Sie uns für ein unverbindliches Erstgespräch. Wir erstellen dann einen individuellen Pflegeplan und helfen bei allen Anträgen gegenüber der Pflegekasse.
+                      Der Weg zu unserem Avyta Pflegedienst in Frankfurt Niederrad führt zunächst über einen <strong>Antrag an die Kranken- oder Pflegekasse</strong>, um die Pflegebedürftigkeit und einen Pflegegrad feststellen zu lassen. Dabei können vielerlei Hilfsorganisationen Sie unterstützen. Danach wird über den medizinischen Dienst ein Termin vereinbart, und wir können einen Kostenvoranschlag zur Abrechnung mit den Kassen erstellen.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
