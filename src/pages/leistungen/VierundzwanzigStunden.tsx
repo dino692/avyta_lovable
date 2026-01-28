@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
+
 const alltagshilfe = [
   "Hilfe beim Ausfüllen von Anträgen",
   "Hilfe und Gesellschaft bei Spaziergängen",
@@ -60,11 +61,11 @@ const faqs = [
   },
   {
     question: "Was zeichnet eine gute 24 Stunden Pflege in Frankfurt aus?",
-    answer: "Eine gute 24 Stunden Pflege zeichnet sich durch qualifiziertes, einfühlsames Personal aus, das die individuellen Bedürfnisse des Pflegebedürftigen berücksichtigt. Bei Avyta achten wir besonders auf das kulturelle, religiöse und soziale Umfeld unserer Patienten und bieten eine Rundumversorgung mit Herz und Kompetenz."
+    answer: "Eine gute 24 Stunden Pflege in Frankfurt zeichnet sich immer durch Verlässlichkeit, Vertrauen, Kompetenz und Einfühlsamkeit aus. Mit mehr als 10 Jahren Erfahrung in der Pflege können wir von Avyta Ihnen genau das bieten. Von einfachen Hilfsleistungen bis hin zur Intensivpflege haben wir das nötige Know-how, um Ihnen rund um die Uhr zur Seite zu stehen."
   },
   {
     question: "Was gehört zum Aufgabengebiet der 24 Stunden Pflege in Frankfurt?",
-    answer: "Das Aufgabengebiet umfasst die gesamte Bandbreite von einfachen Hilfstätigkeiten im Alltag über Grundpflege und Behandlungspflege bis hin zu komplexen Leistungen der Intensivpflege. Wir passen unser Leistungspaket individuell an Ihre Bedürfnisse an."
+    answer: "Dank unserer langjährigen Erfahrung stehen wir Ihnen bei allen Aufgaben rund um die Pflege zur Seite. Dazu gehören beispielsweise kleine Hilfen im Alltag, die Grund- und Behandlungspflege sowie die Intensivpflege mit komplexen medizinischen Leistungen oder die Heimbeatmung."
   },
 ];
 
@@ -92,7 +93,7 @@ const VierundzwanzigStunden = () => {
                   24 Stunden Pflege in Frankfurt mit Avyta
                 </h1>
                 <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
-                  Wir sind rund um die Uhr für Sie ansprechbar und können Ihnen mit viel Herz und Kompetenz bei allen Pflegeleistungen unter die Arme greifen.
+                  Eine <strong>Pflegebedürftigkeit</strong> kann jeden treffen. Fortschreitendes Alter, geistige oder körperliche Einschränkungen als auch ein schwerer Unfall können dazu führen, dass die <strong>pflegerische Betreuung</strong> nötig wird. Gerade in schweren Fällen ist es beruhigend, immer Hilfe an Ihrer Seite zu wissen – die <strong>24 Stunden Pflege in Frankfurt</strong> von <Link to="/team" className="text-primary hover:underline font-medium">Avyta</Link> leistet genau das für Sie. Wir sind <strong>rund um die Uhr</strong> für Sie ansprechbar und können Ihnen mit viel Herz und Kompetenz bei <strong>allen Pflegeleistungen</strong> unter die Arme greifen.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -106,15 +107,7 @@ const VierundzwanzigStunden = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
-                  Eine Pflegebedürftigkeit kann jeden treffen. Fortschreitendes Alter, geistige oder körperliche Einschränkungen 
-                  als auch ein schwerer Unfall können dazu führen, dass die pflegerische Betreuung nötig wird. Gerade in schweren 
-                  Fällen ist es beruhigend, immer Hilfe an Ihrer Seite zu wissen – die 24 Stunden Pflege in Frankfurt von Avyta 
-                  leistet genau das für Sie.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Mit mehr als 12 Jahren Erfahrung im Pflegebereich bieten wir sowohl das fachliche Know-how als auch die 
-                  Menschlichkeit, die in einer guten Pflege wichtig sind. Sprechen Sie gern mit uns über Ihre Vorstellungen 
-                  zur 24 Stunden Pflege in Frankfurt.
+                  Mit mehr als <strong>12 Jahren Erfahrung</strong> im Pflegebereich bieten wir sowohl das fachliche Know-how als auch die Menschlichkeit, die in einer guten Pflege wichtig sind. Sprechen Sie gern mit uns über Ihre Vorstellungen zur <strong>24 Stunden Pflege</strong> in Frankfurt.
                 </p>
               </div>
             </div>
@@ -128,12 +121,7 @@ const VierundzwanzigStunden = () => {
                   Leistungen in der 24 Stunden Pflege in Frankfurt
                 </h2>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
-                  Als Anbieter für die 24 Stunden Pflege in Frankfurt ist es uns bei Avyta wichtig, dass wir Ihnen ein individuell 
-                  abgestimmtes Leistungspaket bieten, welches sowohl Ihre Bedürfnisse hinsichtlich der Pflege berücksichtigt, als 
-                  auch Ihren kulturellen, sozialen und religiösen Hintergrund. Wir setzen ganz auf unser Motto der Pflege „von 
-                  Menschen, für Menschen" und setzen Sie oder Ihre Angehörigen in den Mittelpunkt unserer Arbeit. Eine gute 24 
-                  Stunden Pflege in Frankfurt bedeutet auch, dass wir von einfachen Hilfstätigkeiten bis hin zu komplexen 
-                  Leistungen der Intensivpflege alle Bereiche abdecken können.
+                  Als Anbieter für die <strong>24 Stunden Pflege in Frankfurt</strong> ist es uns bei Avyta wichtig, dass wir Ihnen ein <Link to="/leistungen/pflegeberatung-frankfurt" className="text-primary hover:underline font-medium">individuell abgestimmtes Leistungspaket</Link> bieten, welches sowohl Ihre Bedürfnisse hinsichtlich der Pflege berücksichtigt, als auch Ihren <em><strong>kulturellen</strong></em>, <em><strong>sozialen</strong></em> und <em><strong>religiösen</strong></em> Hintergrund. Wir setzen ganz auf unser Motto der Pflege „von Menschen, für Menschen" und setzen Sie oder Ihre Angehörigen in den Mittelpunkt unserer Arbeit. Eine gute <strong>24 Stunden Pflege</strong> in Frankfurt bedeutet auch, dass wir von einfachen Hilfstätigkeiten bis hin zu komplexen <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="text-primary hover:underline font-medium">Leistungen der Intensivpflege</Link> alle Bereiche abdecken können. So übernehmen wir die Alltagshilfe, die <Link to="/leistungen/grundpflege" className="text-primary hover:underline font-medium">Grundpflege</Link>, die <Link to="/leistungen/behandlungspflege" className="text-primary hover:underline font-medium">Behandlungspflege</Link> und die <strong>Intensivpflege</strong> je nach Bedarf.
                 </p>
 
                 {/* Alltagshilfe */}
@@ -208,17 +196,13 @@ const VierundzwanzigStunden = () => {
                     24 Stunden Pflege in Frankfurt: Unsere Mitarbeiter sind für Sie da
                   </h2>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
-                    Über die Pflege wird gerade in letzter Zeit viel gesprochen – der demografische Wandel sorgt für immer 
-                    mehr pflegebedürftige Patienten und immer weniger Arbeitskräfte in dem Bereich. Wir können mit Stolz 
-                    sagen, dass wir mit einem starken Team aufgestellt sind, um Ihre 24 Stunden Pflege in Frankfurt ohne 
-                    Probleme abdecken zu können.
+                    Über die <strong>Pflege</strong> wird gerade in letzter Zeit viel gesprochen – der demografische Wandel sorgt für immer mehr <strong>pflegebedürftige Patienten</strong> und immer weniger Arbeitskräfte in dem Bereich. Wir können mit Stolz sagen, dass wir mit einem <strong>starken Team</strong> aufgestellt sind, um Ihre <strong>24 Stunden Pflege in Frankfurt</strong> ohne Probleme abdecken zu können.
                   </p>
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
-                    Unser Team besteht aus hochmotivierten und einfühlsamen Pflegefachkräften, Pflegehelfern und 
-                    Haushaltshilfskräften, die Sie und Ihre Angehörigen unterstützen. Da viele unsere Mitarbeiter 
-                    mehrsprachig sind, können wir auch Patienten betreuen, die kein oder nur wenig Deutsch sprechen. 
-                    Vertrauen Sie uns in der 24 Stunden Pflege in Frankfurt – gerne besprechen wir mit Ihnen ein 
-                    individualisiertes Leistungspaket und klären Ihre Fragen.
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
+                    <strong>Unser Team</strong> besteht aus <em><strong>hochmotivierten</strong></em> und <em><strong>einfühlsamen</strong></em> <Link to="/karriere" className="text-primary hover:underline font-medium">Pflegefachkräften</Link>, <Link to="/karriere/pflegehelfer-frankfurt" className="text-primary hover:underline font-medium">Pflegehelfern</Link> und Haushaltshilfskräften, die Sie und Ihre Angehörigen unterstützen. Da viele unsere Mitarbeiter <strong>mehrsprachig</strong> sind, können wir auch Patienten betreuen, die kein oder nur wenig Deutsch sprechen. Vertrauen Sie uns in der <strong>24 Stunden Pflege</strong> in Frankfurt – gerne besprechen wir mit Ihnen ein <strong>individualisiertes Leistungspaket</strong> und klären <Link to="/kontakt" className="text-primary hover:underline font-medium">Ihre Fragen</Link>.
+                  </p>
+                  <p className="text-sm md:text-base text-foreground font-medium mb-4 md:mb-6">
+                    Wir stehen Ihnen <strong>gerne zur Verfügung</strong> Rufen Sie uns an vereinbaren einen unverbindlichen Termin - <strong>gerne bei Ihnen zu Hause</strong>.
                   </p>
                   <CTADropdownButton />
                 </div>
@@ -287,20 +271,39 @@ const VierundzwanzigStunden = () => {
                   Häufige Fragen
                 </h2>
                 <Accordion type="single" collapsible className="space-y-2 md:space-y-3">
-                  {faqs.map((faq, index) => (
-                    <AccordionItem 
-                      key={index} 
-                      value={`item-${index}`}
-                      className="bg-background rounded-xl border border-border/50 px-4 md:px-6"
-                    >
-                      <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
-                        {faq.question}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
-                        {faq.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
+                  <AccordionItem 
+                    value="item-0"
+                    className="bg-background rounded-xl border border-border/50 px-4 md:px-6"
+                  >
+                    <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
+                      Was kostet eine 24 Stunden Pflege in Frankfurt?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
+                      Jeder Mensch ist <strong>individuell</strong> und genau so <strong>individuell</strong> sind auch unsere <strong>Pflegeangebote</strong>. Wir stellen Ihnen stets ein eigens auf Sie <strong>zugeschnittenes Pflegepaket</strong> vor und machen Ihnen dazu einen <strong>Kostenvoranschlag</strong>, mit dem Sie bei Ihrer <strong>Kranken- oder Pflegekasse</strong> einen Antrag auf <strong>Kostenübernahme</strong> stellen können – dort erfolgt dann auch direkt die <strong>Abrechnung</strong> mit uns.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem 
+                    value="item-1"
+                    className="bg-background rounded-xl border border-border/50 px-4 md:px-6"
+                  >
+                    <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
+                      Was zeichnet eine gute 24 Stunden Pflege in Frankfurt aus?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
+                      Eine gute 24 Stunden Pflege in Frankfurt zeichnet sich immer durch <strong>Verlässlichkeit</strong>, <strong>Vertrauen</strong>, <strong>Kompetenz</strong> und <strong>Einfühlsamkeit</strong> aus. Mit mehr als <strong>10 Jahren Erfahrung</strong> in der <strong>Pflege</strong> können wir von <strong>Avyta</strong> Ihnen genau das bieten. Von einfachen <strong>Hilfsleistungen bis hin zur Intensivpflege</strong> haben wir das nötige <strong>Know-how</strong>, um Ihnen <strong>rund um die Uhr</strong> zur Seite zu stehen.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem 
+                    value="item-2"
+                    className="bg-background rounded-xl border border-border/50 px-4 md:px-6"
+                  >
+                    <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
+                      Was gehört zum Aufgabengebiet der 24 Stunden Pflege in Frankfurt?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
+                      Dank unserer <strong>langjährigen Erfahrung</strong> stehen wir Ihnen bei allen Aufgaben rund um die Pflege zur Seite. Dazu gehören beispielsweise kleine <em><strong>Hilfen im Alltag</strong></em>, die <strong>Grund- und Behandlungspflege</strong> sowie die <strong>Intensivpflege</strong> mit komplexen medizinischen Leistungen oder die Heimbeatmung.
+                    </AccordionContent>
+                  </AccordionItem>
                 </Accordion>
               </div>
             </div>

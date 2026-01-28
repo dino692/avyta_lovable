@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
+
 const faqs = [
   {
     question: "Wie kann ich bettlägerige Angehörige mit einer Pflegeberatung in Frankfurt zu Hause pflegen?",
@@ -21,11 +22,11 @@ const faqs = [
   },
   {
     question: "Wie kann die Avyta Pflegeberatung in Frankfurt eingeschränkte Menschen unterstützen?",
-    answer: "Wir entwickeln individuelle Pflegepläne, die auf die persönlichen Bedürfnisse und Wünsche von Pflegebedürftigen zugeschnitten sind. Unsere Berater arbeiten eng mit Familien und Betroffenen zusammen, um sicherzustellen, dass die Pflege im Einklang mit den individuellen Vorlieben und Gewohnheiten erfolgt."
+    answer: "Wird ein Familienmitglied krank, gibt es vieles zu regeln: Von kleinen Einkäufen über die pünktliche Medikamenteneinnahme bis hin zur Einstellung und Säuberung medizinischer Hilfsmittel. In der Pflegeberatung stellen wir individuelle Behandlungs- und Versorgungspläne zusammen und passen diese an Ihre Alltagsgewohnheiten und Termine an."
   },
   {
     question: "Wann sollte ich die Pflegeberatung in Frankfurt von Avyta in Anspruch nehmen?",
-    answer: "Sie sollten uns kontaktieren, sobald eine Pflegebedürftigkeit eintritt oder absehbar ist – sei es durch einen Unfall, eine Operation, Krankheit oder das Alter. Je früher wir gemeinsam planen können, desto besser können wir Ihnen und Ihren Angehörigen helfen."
+    answer: "Nach einem Unfall oder einem operativen Eingriff ist die Mobilität oft für Wochen eingeschränkt. Auch altersbedingt fällt Ihnen vielleicht auf, dass Sie Ihre medizinische und alltägliche Versorgung nicht mehr ohne Unterstützung bewältigen können. Kontaktieren Sie unser freundliches Beratungsteam gern schon vor der Beantragung einer Pflegestufe. Wir begleiten Sie auf Ihrem gesamten Krankheits- und Genesungsweg."
   },
 ];
 
@@ -53,30 +54,11 @@ const Pflegeberatung = () => {
                   Avyta Pflegeberatung in Frankfurt: Unterstützung mit Herz
                 </h1>
                 <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
-                  Wir von Avyta stellen Familien und Menschen mit Pflegebedarf die nötigen Ressourcen für individuelle Pflege zur Verfügung.
+                  In hektischen Metropolen wie in <strong>Frankfurt am Main</strong> fällt es vielen Familien schwer, Haushalt, Job und Pflege von Angehörigen im Alltag zu bewältigen. Wird ein Familienmitglied krank, fühlen sich Angehörige oft überfordert und alleingelassen. Wenn Aufgaben wie die <em><strong>Vergabe von Injektionen</strong></em> und <em><strong>Medikamenten</strong></em>, <em><strong>Wundversorgung</strong></em> oder <em><strong>Blutzuckerkontrolle</strong></em> Angehörigen über den Kopf wachsen, ist es beruhigend, einen <strong>erfahrenen Partner</strong> an ihrer Seite zu wissen. <Link to="/team" className="text-primary hover:underline font-medium">Wir von Avyta</Link> stellen Familien und Menschen mit <strong>Pflegebedarf</strong> die nötigen Ressourcen für <strong>individuelle Pflege</strong> zur Verfügung. Unsere <strong>Pflegeberatung in Frankfurt</strong> steht für Angehörige und Menschen mit körperlichen oder geistigen Einschränkungen offen.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
                 </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Intro Content */}
-          <section className="py-12 md:py-24">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
-                  In hektischen Metropolen wie in Frankfurt am Main fällt es vielen Familien schwer, Haushalt, Job und Pflege
-                  von Angehörigen im Alltag zu bewältigen. Wird ein Familienmitglied krank, fühlen sich Angehörige oft überfordert 
-                  und alleingelassen. Wenn Aufgaben wie die Vergabe von Injektionen und Medikamenten, Wundversorgung oder 
-                  Blutzuckerkontrolle Angehörigen über den Kopf wachsen, ist es beruhigend, einen erfahrenen Partner an ihrer 
-                  Seite zu wissen.
-                </p>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Unsere Pflegeberatung in Frankfurt steht für Angehörige und Menschen mit körperlichen oder geistigen 
-                  Einschränkungen offen.
-                </p>
               </div>
             </div>
           </section>
@@ -89,21 +71,7 @@ const Pflegeberatung = () => {
                   Von Fall zu Fall die passende Pflegeberatung in Frankfurt
                 </h2>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
-                  Ein Unfall, eine Operation, Krankheit, oder das Alter: Manchmal können Menschen ihren Alltag schleichend 
-                  oder ganz plötzlich nicht mehr wie gewohnt bewältigen. Für viele Familien kommt die stationäre Unterbringung 
-                  von Angehörigen jedoch nicht in Frage. In unserer Pflegeberatung in Frankfurt entwickeln wir individuelle 
-                  Pflegepläne, die auf die persönlichen Bedürfnisse und Wünsche von Pflegebedürftigen zugeschnitten sind.
-                </p>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
-                  Unsere Berater arbeiten eng mit Familien und Betroffenen zusammen, um sicherzustellen, dass die Pflege im 
-                  Einklang mit den individuellen Vorlieben und Gewohnheiten erfolgt. Viele Angehörige möchten so viel wie möglich 
-                  selbst für ihre Lieben erledigen. Unsere Pflegeberatung ist darauf ausgerichtet, Menschen mit körperlichen und 
-                  geistigen Einschränkungen so viel Selbstbestimmung wie möglich zu lassen.
-                </p>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Mit ambulanten Pflegediensten unterstützen wir Sie auch bei der intensivmedizinischen Pflege zu Hause. 
-                  Unsere Avyta Pflegeberatung in Frankfurt ermöglicht Pflegebedürftigen auch in schweren Zeiten einen normalen 
-                  Alltag zu Hause.
+                  Ein <em><strong>Unfall</strong></em>, eine <em><strong>Operation</strong></em>, <em><strong>Krankheit</strong></em>, oder das <em><strong>Alter</strong></em>: Manchmal können Menschen ihren Alltag schleichend oder ganz plötzlich nicht mehr wie gewohnt bewältigen. Für viele Familien kommt die stationäre Unterbringung von Angehörigen jedoch nicht in Frage. In unserer <strong>Pflegeberatung in Frankfurt</strong> entwickeln <strong>individuelle Pflegepläne</strong>, die auf die persönlichen Bedürfnisse und Wünsche von <strong>Pflegebedürftigen</strong> zugeschnitten sind. <strong>Unsere Berater</strong> arbeiten eng mit Familien und Betroffenen zusammen, um sicherzustellen, dass <Link to="/leistungen/behandlungspflege" className="text-primary hover:underline font-medium">die Pflege</Link> im Einklang mit den individuellen Vorlieben und Gewohnheiten erfolgt. Viele Angehörige möchten so viel wie möglich selbst für ihre Lieben erledigen. <strong>Unsere Pflegeberatung</strong> ist darauf ausgerichtet, Menschen mit körperlichen und geistigen Einschränkungen so viel Selbstbestimmung wie möglich zu lassen. Mit <strong>ambulanten Pflegediensten</strong> unterstützen wir Sie auch bei der <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="text-primary hover:underline font-medium">intensivmedizinischen Pflege</Link> zu Hause. Unsere <strong>Avyta Pflegeberatung</strong> in Frankfurt ermöglicht Pflegebedürftigen auch in schweren Zeiten einen normalen Alltag zu Hause.
                 </p>
               </div>
             </div>
@@ -118,11 +86,7 @@ const Pflegeberatung = () => {
                     Avyta Pflegeberatung in Frankfurt für volle Lebensqualität
                   </h2>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
-                    Unsere Pflegeberater verfügen über jahrelange Erfahrung im Bereich der häuslichen Pflege. Wir stehen Ihnen 
-                    mit umfassendem Fachwissen und Mitgefühl zur Seite und entwickeln Pflegepläne, die Betroffene und Angehörige 
-                    entlasten. Während des gesamten Pflegezeitraums ist unsere Pflegeberatung in Frankfurt Ihr Ansprechpartner 
-                    für alle Fragen rund um die Behandlungs- und Alltagspflege. Gemeinsam arbeiten wir daran, die Lebensqualität 
-                    von Menschen in der Heimpflege zu erhalten und zu verbessern.
+                    <strong>Unsere Pflegeberater</strong> verfügen über <strong>jahrelange Erfahrung</strong> im Bereich der <strong>häuslichen Pflege</strong>. Wir stehen Ihnen mit <strong>umfassendem Fachwissen</strong> und <strong>Mitgefühl</strong> zur Seite und entwickeln <strong>Pflegepläne</strong>, die Betroffene und Angehörige entlasten. Während des <Link to="/leistungen/24-stunden-pflege" className="text-primary hover:underline font-medium">gesamten Pflegezeitraums</Link> ist unsere <strong>Pflegeberatung in Frankfurt</strong> Ihr Ansprechpartner für alle Fragen rund um die <strong>Behandlungs</strong>- und <strong>Alltagspflege</strong>. Gemeinsam arbeiten wir daran, die Lebensqualität von Menschen in der Heimpflege zu erhalten und zu verbessern.
                   </p>
 
                   <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
@@ -130,9 +94,7 @@ const Pflegeberatung = () => {
                       <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="text-sm md:text-base text-muted-foreground">
-                          Wir unterstützen Sie bei allen alltäglichen medizinischen und hygienischen Belangen. Von der Planung 
-                          einer unterstützten Morgenroutine über die pünktliche Medikamentenvergabe bis hin zur psychosozialen 
-                          Pflegeberatung in Frankfurt.
+                          Wir unterstützen Sie bei allen alltäglichen <em><strong>medizinischen</strong></em> und <em><strong>hygienischen</strong></em> Belangen. Von der Planung einer unterstützten Morgenroutine über die pünktliche <em><strong>Medikamentenvergabe</strong></em> bis hin zur psychosozialen <em><strong>Pflegeberatung</strong></em> in Frankfurt.
                         </p>
                       </div>
                     </div>
@@ -140,9 +102,7 @@ const Pflegeberatung = () => {
                       <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="text-sm md:text-base text-muted-foreground">
-                          Die Koordination von Arztbesuchen, Amtsgängen und Pflegedienstleistungen ist für viele Betroffene gar 
-                          nicht möglich. Unsere Avyta Pflegeberatung in Frankfurt übernimmt organisatorische Aufgaben rund um 
-                          die Pflege, damit Sie Ihren Alltag trotz Einschränkungen bewältigen können.
+                          Die <strong>Koordination</strong> von <em><strong>Arztbesuchen</strong></em>, <em><strong>Amtsgängen</strong></em> und <em><strong>Pflegedienstleistungen</strong></em> ist für viele Betroffene gar nicht möglich. Unsere <strong>Avyta Pflegeberatung</strong> in Frankfurt übernimmt <em><strong>organisatorische</strong></em> Aufgaben rund um die <strong>Pflege</strong>, damit Sie Ihren Alltag trotz Einschränkungen bewältigen können.
                         </p>
                       </div>
                     </div>
@@ -150,14 +110,16 @@ const Pflegeberatung = () => {
                       <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="text-sm md:text-base text-muted-foreground">
-                          In Krisenzeiten sind wir Ihr zuverlässiger Ansprechpartner. Unsere Pflegeberatung in Frankfurt 
-                          unterstützt Betroffene und Angehörige bei allen Fragen rund um die Pflege. Verschlechtert sich der 
-                          Gesundheitszustand oder steigt der Pflegebedarf plötzlich an, ist unsere Pflegeberatung in Frankfurt 
-                          für Sie da.
+                          In Krisenzeiten sind wir Ihr <strong>zuverlässiger Ansprechpartner</strong>. Unsere <strong>Pflegeberatung in Frankfurt</strong> unterstützt Betroffene und Angehörige bei allen Fragen rund um die Pflege. Verschlechtert sich der Gesundheitszustand oder steigt der Pflegebedarf plötzlich an, ist unsere Pflegeberatung in Frankfurt <strong>für Sie da</strong>.
                         </p>
                       </div>
                     </div>
                   </div>
+
+                  <p className="text-sm md:text-base text-foreground font-medium mb-4 md:mb-6">
+                    Wir stehen Ihnen <strong>gerne zur Verfügung</strong> Rufen Sie uns an vereinbaren einen unverbindlichen Termin - <strong>gerne bei Ihnen zu Hause</strong>.
+                  </p>
+                  <CTADropdownButton />
                 </div>
 
                 <div className="space-y-4 md:space-y-6 mt-6 lg:mt-0">
@@ -226,17 +188,8 @@ const Pflegeberatung = () => {
                   Pflegeberatung Frankfurt – gemeinsam für mehr Lebensqualität
                 </h2>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
-                  Wir sind davon überzeugt, dass häusliche Pflege nicht nur eine Pflicht, sondern auch eine wertvolle Gelegenheit 
-                  ist, bedürftigen Menschen die Unterstützung zukommen zu lassen, die sie brauchen. In unserer Avyta Pflegeberatung 
-                  in Frankfurt begleiten wir pflegebedürftige Menschen und ihre Angehörigen in jeder Phase der häuslichen Pflege.
+                  Wir sind davon überzeugt, dass <strong>häusliche Pflege</strong> nicht nur eine Pflicht, sondern auch eine wertvolle Gelegenheit ist, bedürftigen Menschen die Unterstützung zukommen zu lassen, die sie brauchen. In unserer <strong>Avyta Pflegeberatung in Frankfurt</strong> begleiten wir pflegebedürftige Menschen und ihre Angehörigen in jeder Phase der häuslichen Pflege. Herausforderungen wie die Alltagsgestaltung, <strong>Intensivpflege</strong> für bettlägerige Menschen oder medizinische Wundversorgung können Angehörige mit engagierten ambulanten Helfern und einem durchdachten Pflegeplan leichter bewältigen. <Link to="/kontakt" className="text-primary hover:underline font-medium">Kontaktieren Sie unser freundliches Beratungsteam</Link> für alle Fragen rund um die Pflege. Mit <strong>individuellen Pflege- und Behandlungsplänen</strong> können Sie Ihren Alltag zu Hause auch mit <strong>Pflegebedarf</strong> selbstbestimmt bestreiten.
                 </p>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
-                  Herausforderungen wie die Alltagsgestaltung, Intensivpflege für bettlägerige Menschen oder medizinische 
-                  Wundversorgung können Angehörige mit engagierten ambulanten Helfern und einem durchdachten Pflegeplan leichter 
-                  bewältigen. Kontaktieren Sie unser freundliches Beratungsteam für alle Fragen rund um die Pflege. Mit individuellen 
-                  Pflege- und Behandlungsplänen können Sie Ihren Alltag zu Hause auch mit Pflegebedarf selbstbestimmt bestreiten.
-                </p>
-                <CTADropdownButton />
               </div>
             </div>
           </section>
@@ -249,20 +202,39 @@ const Pflegeberatung = () => {
                   Häufige Fragen
                 </h2>
                 <Accordion type="single" collapsible className="space-y-2 md:space-y-3">
-                  {faqs.map((faq, index) => (
-                    <AccordionItem 
-                      key={index} 
-                      value={`item-${index}`}
-                      className="bg-secondary/30 rounded-xl border border-border/50 px-4 md:px-6"
-                    >
-                      <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
-                        {faq.question}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
-                        {faq.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
+                  <AccordionItem 
+                    value="item-0"
+                    className="bg-secondary/30 rounded-xl border border-border/50 px-4 md:px-6"
+                  >
+                    <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
+                      Wie kann ich bettlägerige Angehörige mit einer Pflegeberatung in Frankfurt zu Hause pflegen?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
+                      Zur Versorgung und Pflege von <strong>Intensivpatienten</strong> zu Hause entwickeln wir bei Avyta <strong>spezielle Pflegepläne</strong>. Angehörige mit Bedarf leiten wir Schritt für Schritt dazu an, auch <strong>schwere medizinische Aufgaben</strong> selbst zu übernehmen. <strong>Ihre Angehörigen</strong> können Sie so in jeder Lebenslage im gewohnten Umfeld pflegen.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem 
+                    value="item-1"
+                    className="bg-secondary/30 rounded-xl border border-border/50 px-4 md:px-6"
+                  >
+                    <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
+                      Wie kann die Avyta Pflegeberatung in Frankfurt eingeschränkte Menschen unterstützen?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
+                      Wird ein Familienmitglied krank, gibt es vieles zu regeln: Von <em><strong>kleinen Einkäufen</strong></em> über die <em><strong>pünktliche Medikamenteneinnahme</strong></em> bis hin zur <em><strong>Einstellung und Säuberung</strong></em> medizinischer Hilfsmittel. In der <strong>Pflegeberatung</strong> stellen wir <strong>individuelle Behandlungs- und Versorgungspläne</strong> zusammen und <strong>passen diese an</strong> Ihre Alltagsgewohnheiten und Termine an.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem 
+                    value="item-2"
+                    className="bg-secondary/30 rounded-xl border border-border/50 px-4 md:px-6"
+                  >
+                    <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
+                      Wann sollte ich die Pflegeberatung in Frankfurt von Avyta in Anspruch nehmen?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
+                      Nach einem <strong>Unfall</strong> oder einem <strong>operativen Eingriff</strong> ist die Mobilität oft für Wochen eingeschränkt. Auch <strong>altersbedingt</strong> fällt Ihnen vielleicht auf, dass Sie Ihre medizinische und alltägliche Versorgung nicht mehr ohne Unterstützung bewältigen können. Kontaktieren Sie unser freundliches Beratungsteam gern schon vor der Beantragung einer Pflegestufe. Wir begleiten Sie auf Ihrem gesamten Krankheits- und Genesungsweg.
+                    </AccordionContent>
+                  </AccordionItem>
                 </Accordion>
               </div>
             </div>
