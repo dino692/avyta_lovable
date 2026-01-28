@@ -13,7 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
+import { generateFAQSchema } from "@/lib/faqSchema";
 const alltagshilfe = [
   "Hilfe beim Ausfüllen von Anträgen",
   "Hilfe und Gesellschaft bei Spaziergängen",
@@ -76,6 +76,7 @@ const VierundzwanzigStunden = () => {
         <meta name="description" content="24 Stunden Pflege in Frankfurt von Avyta. Rund-um-die-Uhr Betreuung zu Hause durch qualifizierte Pflegekräfte. Über 12 Jahre Erfahrung. Jetzt beraten lassen!" />
         <meta name="keywords" content="24 Stunden Pflege Frankfurt, Rund um die Uhr Pflege, Häusliche Pflege Frankfurt" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/24-stunden-pflege" />
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

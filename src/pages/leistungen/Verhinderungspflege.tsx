@@ -13,7 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
+import { generateFAQSchema } from "@/lib/faqSchema";
 const leistungen = [
   {
     title: "Grundpflege",
@@ -60,6 +60,7 @@ const Verhinderungspflege = () => {
         <meta name="description" content="Verhinderungspflege in Frankfurt von Avyta. Professionelle Vertretung pflegender Angehöriger bei Urlaub, Krankheit oder Erholung. Grundpflege, Behandlungspflege und Intensivpflege. Jetzt beraten lassen!" />
         <meta name="keywords" content="Verhinderungspflege Frankfurt, Kurzzeitpflege, Urlaubsvertretung Pflege" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/verhinderungspflege-frankfurt" />
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
