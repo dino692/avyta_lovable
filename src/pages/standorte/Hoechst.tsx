@@ -15,16 +15,16 @@ import { generateFAQSchema } from "@/lib/faqSchema";
 
 const hoechstFaqs = [
   {
-    question: "Welche Pflegeleistungen bietet Avyta als Pflegedienst in Höchst an?",
-    answer: "Wir bieten das gesamte Spektrum an Pflegeleistungen: Grundpflege, Behandlungspflege und Intensivpflege. Von einfachen Alltagshilfen bis zur komplexen medizinischen Versorgung."
+    question: "Welche Aufgaben übernimmt der Pflegedienst in Frankfurt Höchst?",
+    answer: "Unser ambulanter Pflegedienst in Frankfurt Höchst unterstützt Sie bei den Bereichen Körperpflege, Ankleiden, Mobilität, Verpflegung, Ausscheidungen und Hauswirtschaft. Daneben bieten wir Ihnen Hilfe bei Behördengängen und Anträgen. Auch die Intensivpflege können wir für Sie übernehmen."
   },
   {
-    question: "Wie sind die Kosten beim Avyta Pflegedienst in Höchst?",
-    answer: "Die Kosten richten sich nach dem individuellen Pflegebedarf und Pflegegrad. Wir beraten Sie gerne zu den Kosten und möglichen Finanzierungswegen über die Pflegekasse."
+    question: "Welche Kosten fallen für einen Pflegedienst in Frankfurt Höchst an?",
+    answer: "Die Kosten für einen Pflegedienst in Frankfurt Höchst können variieren, je nachdem welche Pflegeleistungen erbracht werden. Sie werden mit einem Kostenvoranschlag ermittelt und in der Regel direkt mit der Krankenkasse oder Pflegekasse abgerechnet."
   },
   {
-    question: "Wie kann ich den Avyta Pflegedienst in Höchst kontaktieren?",
-    answer: "Sie können uns telefonisch unter 069 153 914 05 erreichen oder über unser Kontaktformular eine Anfrage stellen. Wir sind auch am Wochenende erreichbar."
+    question: "Welche Pflegegrade betreut der Pflegedienst in Frankfurt Höchst?",
+    answer: "Wir können sämtliche Pflegegrade mit unseren Leistungen abdecken, von kleinen Hilfen im Alltag bis hin zur Intensivpflege in schweren Fällen. Unser Pflegedienst in Frankfurt Höchst berät Sie gerne, wenn Sie weitere Fragen zu unserem Angebot haben."
   },
 ];
 
@@ -72,7 +72,7 @@ const Hoechst = () => {
                   Pflegedienst Frankfurt Höchst: ambulante Pflege für Sie
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Sie oder Ihre Angehörigen suchen nach einem ambulanten Pflegedienst, da Sie Unterstützung in Ihrem Alltag benötigen? Wir bieten Ihnen eine individuelle, auf Ihre Bedürfnisse abgestimmte Betreuung.
+                  Sie oder Ihre Angehörigen suchen nach einem ambulanten Pflegedienst, da Sie Unterstützung in Ihrem Alltag benötigen? Wir bieten Ihnen oder Ihren Angehörigen mit unserem <strong>Pflegedienst Frankfurt Höchst</strong> eine individuelle, auf Ihre Bedürfnisse abgestimmte <strong>Betreuung im Alltag</strong>.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -87,10 +87,10 @@ const Hoechst = () => {
               <div className="max-w-4xl mx-auto">
                 <div className="prose prose-lg max-w-none text-muted-foreground">
                   <p className="mb-6">
-                    Die unterschiedlichsten Gründe führen dazu, dass Personen im Alltag auf Hilfe angewiesen sind. Mögliche Gründe für eine Pflegebedürftigkeit sind geistige Einschränkungen, schwere Unfälle oder ein fortgeschrittenes Alter.
+                    Die unterschiedlichsten Gründe führen dazu, dass Personen im Alltag auf Hilfe angewiesen sind. Mögliche Gründe für eine <strong>Pflegebedürftigkeit</strong> sind geistige Einschränkungen, schwere Unfälle oder ein fortgeschrittenes Alter. Unser ambulanter <strong>Pflegedienst Frankfurt Höchst</strong> richtet sich somit an Personen, die Ihre alltäglichen Aufgaben nicht mehr selbstständig erledigen können. Dabei bieten wir Ihnen oder Ihren Angehörigen eine individuell auf Sie angepasste Hilfe.
                   </p>
                   <p className="mb-6">
-                    Mit dem Pflegedienst Frankfurt Höchst erhalten Sie oder Ihre Angehörigen eine attraktive Lebensqualität in Ihrer häuslichen Umgebung. Sie müssen nicht in ein Pflegeheim umziehen – wir kommen zu Ihnen. So können Sie die bestmögliche Pflege erhalten und trotzdem die Eigenständigkeit beibehalten.
+                    Mit dem <strong>Pflegedienst Frankfurt Höchst</strong> erhalten Sie oder Ihre Angehörigen eine attraktive Lebensqualität in Ihrer häuslichen Umgebung in Höchst, daher müssen Sie nicht in ein Pflegeheim umziehen. Wir, der Pflegedienst Frankfurt Höchst, kommen zu Ihnen. Dementsprechend können Sie oder Ihre Angehörigen die <strong>bestmögliche Pflege</strong> erhalten und trotzdem die Eigenständigkeit beibehalten.
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center my-8">
                     <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
@@ -111,10 +111,10 @@ const Hoechst = () => {
           <section className="py-20 bg-card/50">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-display font-bold text-foreground mb-4 text-center">
-                Pflegedienst Frankfurt Höchst bietet Ihnen ganzheitliche Pflege
+                Pflegedienst Frankfurt Höchst bietet Ihnen eine ganzheitliche Pflege
               </h2>
               <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-                Ein umfangreiches Leistungsspektrum wurde entwickelt, damit jeder Person eine individuell angepasste Pflege ermöglicht wird.
+                Ein <strong>umfangreiches Leistungsspektrum</strong> wurde vom ambulanten Pflegedienst Frankfurt Höchst entwickelt, damit jeder Person eine <strong>individuell angepasste Pflege</strong> ermöglicht wird. Denn die Pflegebedürfnisse sind so verschiedenen wie die Personen selbst. Dabei reichen die verschiedenen Facetten des Leistungsspektrums von klassischen Elementen der Grundpflege bis hin zu medizinischen und <strong>alltäglichen Versorgungen</strong>.
               </p>
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {/* Grundpflege */}
@@ -125,7 +125,7 @@ const Hoechst = () => {
                       Grundpflege
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
-                      Alle Maßnahmen, die der Versorgung des Körpers behilflich sind:
+                      Unser <strong>ambulanter Pflegedienst</strong> Frankfurt Höchst bietet Ihnen oder Ihren Angehörigen eine <strong>Grundpflege</strong> an. <Link to="/leistungen/grundpflege" className="text-primary hover:underline font-medium">Die Grundpflege</Link> beinhaltet alle Maßnahmen, die der Versorgung des Körpers behilflich sind:
                     </p>
                     <ul className="space-y-2">
                       {grundpflegeLeistungen.map((leistung, index) => (
@@ -146,7 +146,7 @@ const Hoechst = () => {
                       Behandlungspflege
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
-                      Medizinische Maßnahmen, die von Ihrem Arzt verschrieben wurden:
+                      Ein weiter Bereich der ambulanten Pflege stellt <strong>die Behandlungspflege</strong> dar. <Link to="/leistungen/behandlungspflege" className="text-primary hover:underline font-medium">Die Behandlungspflege</Link> beinhaltet verschiedene medizinische Maßnahmen, die Ihnen oder Ihren Angehörigen von Ihrem Arzt verschrieben wurden:
                     </p>
                     <ul className="space-y-2">
                       {behandlungspflegeLeistungen.map((leistung, index) => (
@@ -167,10 +167,13 @@ const Hoechst = () => {
                       Intensivpflege & Serviceleistungen
                     </h3>
                     <p className="text-muted-foreground text-sm mb-3">
-                      Bei Bedarf ermöglicht unser geschultes Personal auch Maßnahmen der Intensivpflege in Ihrer gewohnten Umgebung: Überwachung & Vitalisierung des Patienten, Legen eines Blasenkatheters, endotracheales Absaugen, Lagerungsbehandlungen und Mobilisation oder auch eine Heimbeatmung.
+                      Ein weiterer Bereich der Behandlungspflege ist <strong>die Intensivpflege</strong>. Bei Bedarf ermöglicht Ihnen <strong>unser geschultes Personal</strong> auch <strong>Maßnahmen der Intensivpflege</strong> in Ihrer gewohnten Umgebung durchzuführen. Die <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="text-primary hover:underline font-medium">Leistungen der Intensivpflege</Link>, die von unserem Pflegedienst Frankfurt Höchst durchgeführt werden, sind unter anderem die Überwachung & Vitalisierung des Patienten, das Legen eines Blasenkatheters, das endotracheale Absaugen, die Lagerungsbehandlungen und Mobilisation oder auch eine Heimbeatmung.
+                    </p>
+                    <p className="text-muted-foreground text-sm mb-3">
+                      Zudem bieten wir, der <strong>Pflegedienst Frankfurt Höchst</strong>, Ihnen oder Ihren Angehörigen <strong>weitere Serviceleistungen</strong> an. Diese sind zum Beispiel Hilfe beim Ausfüllen von Anträgen, Hilfe bei der Besorgung von Medikamenten oder Unterstützung und Begleitung von Spaziergängen.
                     </p>
                     <p className="text-muted-foreground text-sm">
-                      Zudem bieten wir weitere Serviceleistungen: Hilfe beim Ausfüllen von Anträgen, Hilfe bei der Besorgung von Medikamenten oder Unterstützung und Begleitung von Spaziergängen.
+                      Wir stehen Ihnen <strong>gerne zur Verfügung</strong> Rufen Sie uns an vereinbaren einen unverbindlichen Termin - <strong>gerne bei Ihnen zu Hause</strong>.
                     </p>
                   </CardContent>
                 </Card>
@@ -186,10 +189,13 @@ const Hoechst = () => {
                   Pflegedienst Frankfurt Höchst – Pflege mit Herz!
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  Unser Pflegedienst ist immer für Sie da, auch an Wochenenden und Feiertagen. Bei Notfällen sind wir selbstverständlich auch in der Nacht für Sie da.
+                  Unser <strong>Pflegedienst Frankfurt</strong> und Umgebung ist immer für Sie da, auch an Wochenenden und Feiertagen. Bei <strong>Notfällen</strong> sind wir selbstverständlich auch in der <strong>Nacht für Sie da</strong>. Je nach Pflegegrad und Ihren persönlichen Bedürfnissen, wie soziale, kulturelle oder religiöse Ansprüche bieten wir Ihnen oder Ihren Angehörigen eine auf Sie abgestimmte Pflege. Bei uns kommt die <strong>Menschlichkeit</strong> nicht zu kurz.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  Aufgrund <strong>langjähriger Erfahrung</strong> garantiert Ihnen der <strong>Pflegedienst Frankfurt Höchst</strong> eine sehr <strong>hohe Qualität</strong>. Die Beständigkeit der Qualität wird zudem in einem permanenten Prozess der <strong>Qualitätssicherung</strong> überprüft. Dadurch wird Ihnen oder Ihren Angehörigen eine professionelle und herzliche Pflege in Ihrer häuslichen Umgebung durch den <strong>Pflegedienst Höchst</strong> sichergestellt.
                 </p>
                 <p className="text-muted-foreground mb-8">
-                  Je nach Pflegegrad und Ihren persönlichen Bedürfnissen, wie soziale, kulturelle oder religiöse Ansprüche, bieten wir eine auf Sie abgestimmte Pflege. Aufgrund langjähriger Erfahrung garantieren wir eine sehr hohe Qualität.
+                  Bei Fragen zu unseren Pflegeleistungen oder für eine erste unverbindliche Beratung unseres Angebotes können Sie gerne mit dem Pflegedienst Frankfurt Höchst <Link to="/kontakt" className="text-primary hover:underline font-medium">Kontakt</Link> aufnehmen. Wir freuen uns darauf, Sie und Ihre Angehörigen kennenzulernen.
                 </p>
                 <CTADropdownButton />
               </div>
@@ -210,7 +216,7 @@ const Hoechst = () => {
                       Welche Aufgaben übernimmt der Pflegedienst in Frankfurt Höchst?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Unser ambulanter Pflegedienst in Frankfurt Höchst unterstützt Sie bei den Bereichen Körperpflege, Ankleiden, Mobilität, Verpflegung, Ausscheidungen und Hauswirtschaft. Daneben bieten wir Ihnen Hilfe bei Behördengängen und Anträgen. Auch die Intensivpflege können wir für Sie übernehmen.
+                      Unser ambulanter Pflegedienst in Frankfurt Höchst unterstützt Sie bei den Bereichen <strong><em>Körperpflege, Ankleiden, Mobilität, Verpflegung, Ausscheidungen und Hauswirtschaft</em></strong>. Daneben bieten wir Ihnen Hilfe bei <em><strong>Behördengängen und Anträgen</strong></em>. Auch die Intensivpflege können wir für Sie übernehmen.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-2" className="bg-card rounded-xl border border-border/50 px-6">
@@ -218,7 +224,7 @@ const Hoechst = () => {
                       Welche Kosten fallen für einen Pflegedienst in Frankfurt Höchst an?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Die Kosten richten sich nach dem individuellen Pflegebedarf und Pflegegrad. Wir beraten Sie gerne zu den Kosten und möglichen Finanzierungswegen über die Pflegekasse.
+                      Die Kosten für einen Pflegedienst in Frankfurt Höchst können <strong>variieren</strong>, je nachdem welche Pflegeleistungen erbracht werden. Sie werden mit einem <strong>Kostenvoranschlag</strong> ermittelt und in der Regel direkt mit der <strong>Krankenkasse oder Pflegekasse</strong> abgerechnet.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-3" className="bg-card rounded-xl border border-border/50 px-6">
@@ -226,7 +232,7 @@ const Hoechst = () => {
                       Welche Pflegegrade betreut der Pflegedienst in Frankfurt Höchst?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Wir betreuen Patienten aller Pflegegrade – von der einfachen Alltagsunterstützung bis zur komplexen Intensivpflege.
+                      Wir können sämtliche Pflegegrade mit unseren Leistungen abdecken, von kleinen <strong>Hilfen im Alltag bis hin zur Intensivpflege</strong> in schweren Fällen. Unser Pflegedienst in Frankfurt Höchst <Link to="/leistungen/pflegeberatung-frankfurt" className="text-primary hover:underline">berät Sie</Link> gerne, wenn Sie weitere Fragen zu unserem Angebot haben.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

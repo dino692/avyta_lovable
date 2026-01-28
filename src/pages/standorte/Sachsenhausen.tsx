@@ -16,17 +16,18 @@ import { generateFAQSchema } from "@/lib/faqSchema";
 const sachsenhausenFaqs = [
   {
     question: "Nach welchen Kriterien funktioniert der Avyta Pflegedienst in Sachsenhausen?",
-    answer: "Beim Avyta Pflegedienst in Sachsenhausen arbeiten wir nach dem Motto 'von Menschen, für Menschen' und stellen damit Sie und Ihre individuelle Situation in den Mittelpunkt. Wir erstellen Ihnen nicht nur ein individuelles Paket an Pflegeleistungen, sondern beachten auch Ihre religiösen, ethischen, sozialen und kulturellen Bedürfnisse."
+    answer: "Beim Avyta Pflegedienst in Sachsenhausen arbeiten wir nach dem Motto 'von Menschen, für Menschen' und stellen damit Sie und Ihre individuelle Situation in den Mittelpunkt. Wir erstellen Ihnen dazu nicht nur ein individuelles Paket an Pflegeleistungen, sondern beachten auch Ihre religiösen, ethischen, sozialen und kulturellen Bedürfnisse."
   },
   {
     question: "Wie hoch werden die Kosten für einen Pflegedienst in Sachsenhausen ausfallen?",
-    answer: "Die Kosten richten sich nach dem individuellen Pflegebedarf und Pflegegrad. Wir beraten Sie gerne zu den Kosten und möglichen Finanzierungswegen über die Pflegekasse."
+    answer: "Pauschal lässt sich das nicht sagen, gerade weil unsere Pflegeleistungen so individuell auf Ihre Situation abgestimmt werden. Beim Avyta Pflegedienst hören wir uns zunächst an, was genau Sie an Pflegeleistungen benötigen. Dann erstellen wir einen Kostenvoranschlag zur Abrechnung mit Ihrer Kranken- oder Pflegekasse."
   },
   {
     question: "Welche Pflegegrade kann der Avyta Pflegedienst in Sachsenhausen abdecken?",
-    answer: "Wir betreuen Patienten aller Pflegegrade – von der einfachen Alltagsunterstützung über die Grundpflege bis hin zur komplexen Intensivpflege mit Heimbeatmung."
+    answer: "Als Pflegedienst in Sachsenhausen können wir bei Avyta alle Pflegegrade versorgen. Wir übernehmen für Sie ganz einfache Alltagshilfen, unterstützen Sie in der Grundpflege zuhause und übernehmen in der Intensivpflege auch komplexe medizinische Leistungen, um Ihre Gesundheit und Ihren Komfort zu garantieren."
   },
 ];
+
 const grundpflegeLeistungen = [
   "Maßnahmen zur Mobilität",
   "Hauswirtschaftliche Hilfe",
@@ -71,7 +72,7 @@ const Sachsenhausen = () => {
                   Pflegedienst Sachsenhausen: individuelle Pflege
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Sie suchen für Sich oder für Ihre Angehörigen einen professionellen Pflegedienst in Sachsenhausen? Unser Pflegedienst Frankfurt Sachsenhausen bietet Ihnen eine individuelle und hochqualifizierte Betreuung.
+                  Sie suchen für Sich oder für Ihre Angehörigen einen <Link to="/team" className="text-primary hover:underline font-medium">professionellen Pflegedienst</Link> in Sachsenhausen? Unser <strong>Pflegedienst Frankfurt Sachsenhausen</strong> bietet Ihnen eine individuelle und hoch qualifizierte Betreuung.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -86,10 +87,10 @@ const Sachsenhausen = () => {
               <div className="max-w-4xl mx-auto">
                 <div className="prose prose-lg max-w-none text-muted-foreground">
                   <p className="mb-6">
-                    Unser ambulanter Pflegedienst in Frankfurt Sachsenhausen ist geeignet für Personen, die Ihre alltäglichen Aufgaben nicht mehr vollständig allein erledigen können. Die Gründe hierfür können vielfältig sein – aufgrund des Alters, nach schweren Unfällen oder aufgrund geistiger Einschränkungen.
+                    Unser <Link to="/" className="text-primary hover:underline font-medium">ambulanter Pflegedienst</Link> in Frankfurt Sachsenhausen ist geeignet für Personen, die Ihre alltäglichen Aufgaben nicht mehr vollständig allein erledigen können. Die Gründe hierfür können vielfältig sein. So können einige Personen aufgrund Ihres Alters, nach schweren Unfällen oder aufgrund geistigen Einschränkungen Ihren Alltag nicht mehr ohne Hilfe bewältigen. Eine individuelle und auf Ihre Bedürfnisse angepasste Hilfe bietet Ihnen unser <strong>Pflegedienst in Sachsenhausen</strong>.
                   </p>
                   <p className="mb-6">
-                    Unser Pflegedienst bietet Ihnen die Möglichkeit, in Ihrer vertrauten und häuslichen Umgebung zu verbleiben. Für viele Personen ist ein ambulanter Pflegedienst die beste Möglichkeit, Eigenständigkeit und Pflegebedürftigkeit zu kombinieren. Mit dem Avyta Pflegedienst in Sachsenhausen erhalten Sie eine attraktive Lebensqualität in Ihrer Wohlfühlatmosphäre.
+                    Dabei bietet unser <strong>Pflegedienst in Sachsenhausen</strong> Ihnen oder Ihren Angehörigen die Möglichkeit, in Ihrer vertrauten und häuslichen Umgebung zu verbleiben. Für viele Personen ist ein ambulanter Pflegedienst in Frankfurt Sachsenhausen die beste Möglichkeit, Eigenständigkeit und Pflegebedürftigkeit zu kombinieren. Mit dem Avyta Pflegedienst in Sachsenhausen erhalten sie eine attraktive <strong>Lebensqualität</strong> und leben in Ihrer <strong>Wohlfühlatmosphäre</strong>.
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center my-8">
                     <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
@@ -113,7 +114,7 @@ const Sachsenhausen = () => {
                 Pflegedienst in Sachsenhausen: unsere Leistungen im Überblick
               </h2>
               <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-                Jede Person ist individuell und genauso individuell ist auch die jeweilige Pflegebedürftigkeit. Unser umfangreiches Leistungsspektrum ermöglicht jeder Person die benötigte Pflege.
+                Jede Person ist individuell und genauso individuell ist auch die jeweilige <strong>Pflegebedürftigkeit</strong>. Daher hat der Pflegedienst Frankfurt Sachsenhausen ein <strong>umfangreiches Leistungsspektrum</strong> ausgearbeitet, welches jeder Person die für Sie benötigte Pflege ermöglicht. Unser Avyta <strong>Pflegedienst in Sachsenhausen</strong> deckt die Hilfe in der <strong>klassischen Grundpflege</strong> ab, aber es werden auch medizinische und alltägliche Versorgungen angeboten.
               </p>
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {/* Grundpflege */}
@@ -124,7 +125,7 @@ const Sachsenhausen = () => {
                       Grundpflege
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
-                      Alle Maßnahmen, die der Versorgung des Körpers dienen:
+                      <Link to="/leistungen/grundpflege" className="text-primary hover:underline font-medium">Die Grundpflege</Link> beschreibt im Allgemeinen alle Maßnahmen, die der Versorgung des Körpers dienen. In der Grundpflege bieten wir, der <strong>Avyta Pflegedienst</strong> in Sachsenhausen, Ihnen oder Ihren Angehörigen unter anderem diese Hilfsangebote an:
                     </p>
                     <ul className="space-y-2">
                       {grundpflegeLeistungen.map((leistung, index) => (
@@ -145,7 +146,7 @@ const Sachsenhausen = () => {
                       Behandlungspflege
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
-                      Anspruchsvolle medizinische Maßnahmen, die von Ihrem Arzt angeordnet werden:
+                      Neben der Grundpflege bieten wir Ihnen mit dem Pflegedienst in Frankfurt Sachsenhausen auch anspruchsvolle <strong>medizinische Maßnahmen</strong> an. Folgende medizinische Maßnahmen, welche auch <Link to="/leistungen/behandlungspflege" className="text-primary hover:underline font-medium">Behandlungspflege</Link> genannt wird, bieten wir Ihnen an:
                     </p>
                     <ul className="space-y-2">
                       {behandlungspflegeLeistungen.map((leistung, index) => (
@@ -166,10 +167,13 @@ const Sachsenhausen = () => {
                       Intensivpflege & Serviceleistungen
                     </h3>
                     <p className="text-muted-foreground text-sm mb-3">
-                      Im Rahmen der Behandlungspflege übernehmen wir bei Bedarf auch Maßnahmen der Intensivpflege wie die Heimbeatmung, Überwachung und Vitalisierung des Patienten, Legen eines Blasenkatheters, endotracheales Absaugen oder Lagerungsbehandlungen und Mobilisation.
+                      Im Rahmen der Behandlungspflege übernimmt unser <strong>Pflegedienst in Sachsenhausen</strong> bei Bedarf auch <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="text-primary hover:underline font-medium">Maßnahmen der Intensivpflege</Link> wie die Heimbeatmung. Weitere intensivmedizinische Maßnahmen die wir anbieten, sind Überwachung und Vitalisierung des Patienten, Legen eines Blasenkatheters, Endotracheales Absaugen oder Lagerungsbehandlungen und Mobilisation.
+                    </p>
+                    <p className="text-muted-foreground text-sm mb-3">
+                      Des Weiteren bieten wir Ihnen als <strong>ambulanter Pflegedienst in Frankfurt Sachsenhausen</strong> auch Serviceleistungen außerhalb der direkten Pflege an, diese sind zum Beispiel Hilfestellungen beim Ausfüllen von Anträgen, Unterstützungen von Spaziergängen oder Hilfe bei dem Besorgen von Medikamenten.
                     </p>
                     <p className="text-muted-foreground text-sm">
-                      Des Weiteren bieten wir Serviceleistungen außerhalb der direkten Pflege an: Hilfestellungen beim Ausfüllen von Anträgen, Unterstützung von Spaziergängen oder Hilfe bei dem Besorgen von Medikamenten.
+                      Wir stehen Ihnen <strong>gerne zur Verfügung</strong> Rufen Sie uns an vereinbaren einen unverbindlichen Termin - <strong>gerne bei Ihnen zu Hause</strong>.
                     </p>
                   </CardContent>
                 </Card>
@@ -185,10 +189,10 @@ const Sachsenhausen = () => {
                   Mit Herz an Ihrer Seite – Pflegedienst in Sachsenhausen
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  Unser Pflegedienst ist immer mit Herz an Ihrer Seite, denn für jede Ihrer individuellen Bedürfnisse und bei jedem Pflegegrad bieten wir Ihnen eine für Sie abgestimmte Pflege.
+                  Unser Pflegedienst in Frankfurt und Umgebung ist immer <strong>mit Herz</strong> an Ihrer Seite, denn für jede Ihrer <strong>individuellen Bedürfnisse</strong> und bei <strong>jedem Pflegegrad</strong> bieten wir Ihnen eine für Sie abgestimmte Pflege. Wir beachten nicht nur Ihre gesundheitliche Situation, sondern auch Ihre sozialen, religiösen und kulturellen Bedürfnisse. Denn Menschlichkeit und eine familiäre Atmosphäre steht für unseren <strong>Pflegedienst</strong> in Frankfurt Sachsenhausen <strong>im Mittelpunkt</strong>. Dadurch können Sie Ihren Alltag in Ihrer gewohnten Umgebung beibehalten und werden von unseren <strong>hochqualifizierten Mitarbeitern</strong> betreut. Der permanente Prozess zur Qualitätssicherung des ambulanten Pflegedienstes Frankfurt Sachsenhausen und unsere langjährige Erfahrung garantiert Ihnen eine sehr hohe Qualität der ganzheitlichen Pflege.
                 </p>
                 <p className="text-muted-foreground mb-8">
-                  Wir beachten nicht nur Ihre gesundheitliche Situation, sondern auch Ihre sozialen, religiösen und kulturellen Bedürfnisse. Denn Menschlichkeit und eine familiäre Atmosphäre steht für unseren Pflegedienst im Mittelpunkt. Der permanente Prozess zur Qualitätssicherung und unsere langjährige Erfahrung garantieren eine sehr hohe Qualität der ganzheitlichen Pflege.
+                  Für eine erste <Link to="/leistungen/pflegeberatung-frankfurt" className="text-primary hover:underline font-medium">unverbindliche Beratung</Link> unserer Angebote des <strong>Pflegedienstes Frankfurt Sachsenhausen</strong> nehmen Sie gerne mit uns <Link to="/kontakt" className="text-primary hover:underline font-medium">Kontakt</Link> auf. <strong>Wir freuen uns darauf, Sie und Ihre Angehörigen kennenzulernen</strong>.
                 </p>
                 <CTADropdownButton />
               </div>
@@ -209,7 +213,7 @@ const Sachsenhausen = () => {
                       Nach welchen Kriterien funktioniert der Avyta Pflegedienst in Sachsenhausen?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Beim Avyta Pflegedienst in Sachsenhausen arbeiten wir nach dem Motto „von Menschen, für Menschen" und stellen damit Sie und Ihre individuelle Situation in den Mittelpunkt. Wir erstellen Ihnen nicht nur ein individuelles Paket an Pflegeleistungen, sondern beachten auch Ihre religiösen, ethischen, sozialen und kulturellen Bedürfnisse.
+                      Beim Avyta Pflegedienst in Sachsenhausen arbeiten wir nach dem Motto „ <strong>von Menschen, für Menschen</strong>" und stellen damit Sie und Ihre individuelle Situation in den Mittelpunkt. Wir erstellen Ihnen dazu nicht nur ein <strong>individuelles Paket</strong> an Pflegeleistungen, sondern beachten auch Ihre religiösen, ethischen, sozialen und kulturellen Bedürfnisse.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-2" className="bg-card rounded-xl border border-border/50 px-6">
@@ -217,7 +221,7 @@ const Sachsenhausen = () => {
                       Wie hoch werden die Kosten für einen Pflegedienst in Sachsenhausen ausfallen?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Die Kosten richten sich nach dem individuellen Pflegebedarf und Pflegegrad. Wir beraten Sie gerne zu den Kosten und möglichen Finanzierungswegen über die Pflegekasse.
+                      Pauschal lässt sich das nicht sagen, gerade weil unsere <strong>Pflegeleistungen</strong> so individuell auf Ihre Situation abgestimmt werden. Beim Avyta Pflegedienst hören wir uns zunächst an, was genau Sie an Pflegeleistungen benötigen. Dann erstellen wir einen <strong>Kostenvoranschlag</strong> zur Abrechnung mit Ihrer <strong>Kranken- oder Pflegekasse</strong>.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-3" className="bg-card rounded-xl border border-border/50 px-6">
@@ -225,7 +229,7 @@ const Sachsenhausen = () => {
                       Welche Pflegegrade kann der Avyta Pflegedienst in Sachsenhausen abdecken?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Wir betreuen Patienten aller Pflegegrade – von der einfachen Alltagsunterstützung über die Grundpflege bis hin zur komplexen Intensivpflege mit Heimbeatmung.
+                      Als Pflegedienst in Sachsenhausen können wir bei Avyta alle Pflegegrade versorgen. Wir übernehmen für Sie ganz einfache <strong>Alltagshilfen</strong>, unterstützen Sie in der <strong>Grundpflege</strong> zuhause und übernehmen in der <strong>Intensivpflege</strong> auch komplexe medizinische Leistungen, um Ihre Gesundheit und Ihren <strong>Komfort zu garantieren</strong>.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

@@ -15,16 +15,16 @@ import { generateFAQSchema } from "@/lib/faqSchema";
 
 const griesheimFaqs = [
   {
-    question: "Welche Qualifikationen haben die Pflegekräfte vom Avyta Pflegedienst in Griesheim?",
-    answer: "Unsere Pflegekräfte sind ausgebildete Pflegefachkräfte und Pflegehelfer mit entsprechenden Qualifikationen. Sie werden regelmäßig geschult und verfügen über langjährige Erfahrung in der ambulanten Pflege."
+    question: "Welche Leistungen übernimmt der Avyta Pflegedienst in Griesheim?",
+    answer: "Unser Pflegedienst in Griesheim übernimmt alle üblichen Hilfen rund um Mobilität, Körperpflege, An- und Auskleiden, Hauswirtschaft, Verpflegung und Ausscheidungen. Außerdem können wir Sie und Ihre Angehörigen auch in Bereichen der Intensivpflege und bei Behördengängen und Anträgen unterstützen."
   },
   {
-    question: "Wie sieht ein typischer Pflegeplan beim Avyta Pflegedienst in Griesheim aus?",
-    answer: "Wir erstellen individuelle Pflegepläne basierend auf Ihren Bedürfnissen und Ihrer Lebenssituation. Diese Pläne werden regelmäßig überprüft und bei Bedarf angepasst."
+    question: "Wer kann den Pflegedienst in Griesheim in Anspruch nehmen?",
+    answer: "Unser Pflegedienst in Griesheim ist für alle geeignet, die aus unterschiedlichsten Gründen den Alltag nicht mehr eigenständig bewältigen können. Gründe dafür können beispielsweise das Alter sein, geistige Krankheiten oder schwere Unfälle mit kurzfristigen oder langfristigen Einschränkungen."
   },
   {
-    question: "Wie erreiche ich den Avyta Pflegedienst in Griesheim?",
-    answer: "Sie können uns telefonisch unter 069 153 914 05 erreichen oder über unser Kontaktformular eine Anfrage stellen. Wir sind auch am Wochenende und an Feiertagen erreichbar."
+    question: "Wie sehr kann der Pflegedienst in Griesheim individualisiert werden?",
+    answer: "Bei unserem Angebot haben Sie selbstverständlich die Möglichkeit, eine Leistung genau passend zu Ihren individuellen Umständen zu erhalten. So kann unser Pflegedienst in Griesheim auch an Wochenenden, Feiertagen und notfalls in der Nacht an Ihrer Seite sein. Ebenfalls berücksichtigen wir die sozialen, kulturellen und religiösen Bedürfnisse der zu pflegenden Person."
   },
 ];
 
@@ -72,7 +72,7 @@ const Griesheim = () => {
                   Pflegedienst Griesheim: Individuelle Pflege für Ihre Bedürfnisse
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Sie suchen für sich oder Ihre Angehörigen einen professionellen Pflegedienst in Griesheim, da Sie in Ihrem Alltag Unterstützung benötigen? Mit unserem Pflegedienst bieten wir Ihnen eine individuelle und auf Ihre Bedürfnisse abgestimmte Betreuung.
+                  Sie suchen für sich oder Ihre Angehörigen einen professionellen <strong>Pflegedienst in Griesheim</strong>, da Sie in Ihrem Alltag Unterstützung benötigen? Mit unserem Pflegedienst in Griesheim bieten wir Ihnen oder Ihren Angehörigen eine <strong>individuelle</strong> und auf Ihre Bedürfnisse abgestimmte <strong>Betreuung</strong>.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -87,10 +87,10 @@ const Griesheim = () => {
               <div className="max-w-4xl mx-auto">
                 <div className="prose prose-lg max-w-none text-muted-foreground">
                   <p className="mb-6">
-                    Unser Pflegedienst in Frankfurt-Griesheim richtet sich an alle Personen, die Ihre alltäglichen Aufgaben nicht mehr selbstständig erledigen können. Verschiedene Gründe führen dazu, dass man auf Hilfe angewiesen ist – nach schweren Unfällen, aufgrund geistiger Einschränkungen oder aufgrund des Alters.
+                    Unser <strong>Pflegedienst in Frankfurt-Griesheim</strong> richtet sich an alle Personen, die Ihre alltäglichen Aufgaben nicht mehr selbstständig erledigen können. Verschiedene Gründe führen dazu, dass man auf Hilfe angewiesen ist. So können einige Personen nach schweren Unfällen aufgrund geistiger Einschränkungen oder aufgrund Ihres Alters Ihren Alltag nicht ohne Hilfe bewältigen. Unser <strong>Pflegedienst in Griesheim</strong> bietet Ihnen und Ihren Angehörigen eine individuelle und auf Ihre Bedürfnisse angepasst Hilfe.
                   </p>
                   <p className="mb-6">
-                    Mit dem Pflegedienst in Griesheim können Sie die Eigenständigkeit und Pflegebedürftigkeit kombinieren. Sie können in Ihrer vertrauten und häuslichen Umgebung verbleiben, denn der Pflegedienst kommt zu Ihnen.
+                    Mit dem Pflegedienst in Griesheim können Sie oder Ihre Angehörigen die <strong>Eigenständigkeit</strong> und <strong>Pflegebedürftigkeit</strong> kombinieren. Sie oder Ihre Angehörigen können in Ihrer vertrauten und häuslichen Umgebung verbleiben und müssen nicht in ein Pflegeheim umziehen, denn der Pflegedienst in Griesheim kommt zu Ihnen. Eine <strong>attraktive Lebensqualität</strong> in Ihrer persönlichen <strong>Wohlfühlatmosphäre</strong> erhalten Sie durch die <strong>professionelle Pflege</strong> des Pflegedienstes in Frankfurt Griesheim.
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center my-8">
                     <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
@@ -114,7 +114,7 @@ const Griesheim = () => {
                 Pflegedienst in Griesheim - ganzheitliche Pflegeleistungen
               </h2>
               <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-                Jede Person hat unterschiedliche Bedürfnisse und Ansprüche an eine Pflege. Unser umfangreiches Leistungsspektrum ermöglicht jeder Person eine angepasste Pflege.
+                Jede Person hat <strong>unterschiedliche Bedürfnisse</strong> und Ansprüche an eine <strong>Pflege</strong>, je nach Pflegegrad. Die <strong>Pflegebedürfnisse</strong> der Personen haben verschiedene Facetten, daher hat der <strong>Pflegedienst in Griesheim</strong> ein <strong>umfangreiches Leistungsspektrum</strong> ausgearbeitet. Dieses Leistungsspektrum ermöglicht jeder Person eine für Sie <strong>angepasste Pflege</strong>. Wir, der Pflegedienst in Griesheim, bieten Ihnen oder Ihren Angehörigen die klassischen <strong>Elemente der Grundpflege</strong>, aber es auch medizinische und <strong>alltägliche Versorgungen</strong> an.
               </p>
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {/* Grundpflege */}
@@ -125,7 +125,7 @@ const Griesheim = () => {
                       Grundpflege
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
-                      Die Grundpflege beschreibt alle Maßnahmen, die der Versorgung des Körpers dienen:
+                      Im Allgemeinen beschreibt <strong>die Grundpflege</strong> alle Maßnahmen, die der Versorgung des Körpers dienen. In der <Link to="/leistungen/grundpflege" className="text-primary hover:underline font-medium">Grundpflege</Link> bieten wir, der <strong>Pflegedienst aus Frankfurt Griesheim</strong>, Ihnen oder Ihren Angehörigen unter anderem diese Hilfsangebote an:
                     </p>
                     <ul className="space-y-2">
                       {grundpflegeLeistungen.map((leistung, index) => (
@@ -146,7 +146,7 @@ const Griesheim = () => {
                       Behandlungspflege
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
-                      Medizinische Maßnahmen, die von Ihrem Arzt verschrieben wurden:
+                      Neben der Grundpflege bieten wir Ihnen oder Ihren Angehörigen auch <strong>eine Behandlungspflege</strong> an. Der Begriff <Link to="/leistungen/behandlungspflege" className="text-primary hover:underline font-medium">Behandlungspflege</Link> beschreibt verschiedene medizinische Maßnahmen, die Ihnen von Ihrem Arzt verschrieben wurden. Die folgenden medizinische Maßnahmen werden von unserem <strong>hochqualifizierten Personal</strong> des <Link to="/" className="text-primary hover:underline font-medium">ambulanten Pflegedienstes</Link> aus Griesheim durchgeführt:
                     </p>
                     <ul className="space-y-2">
                       {behandlungspflegeLeistungen.map((leistung, index) => (
@@ -167,10 +167,13 @@ const Griesheim = () => {
                       Intensivpflege & Serviceleistungen
                     </h3>
                     <p className="text-muted-foreground text-sm mb-3">
-                      Im Rahmen der Behandlungspflege übernehmen wir bei Bedarf auch Maßnahmen der Intensivpflege: Heimbeatmung, Überwachung & Vitalisierung des Patienten, Legen eines Blasenkatheters, endotracheales Absaugen oder Lagerungsbehandlungen und Mobilisation.
+                      Im Rahmen der Behandlungspflege übernehmen wir bei Bedarf auch Maßnahmen der <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="text-primary hover:underline font-medium">Intensivpflege</Link>. Unsere <strong>Leistungen in der Intensivpflege</strong> beinhalten unter anderem die Heimbeatmung, die Überwachung & Vitalisierung des Patienten, das Legen eines Blasenkatheters, das endotracheales Absaugen oder Lagerungsbehandlungen und Mobilisation.
+                    </p>
+                    <p className="text-muted-foreground text-sm mb-3">
+                      Weitere Serviceleistungen, die der <strong>Pflegedienst in Frankfurt Griesheim</strong> Ihnen oder Ihren Angehörigen anbietet, sind zum Beispiel Hilfe bei Besorgungen von Medikamenten, Hilfestellungen beim Ausfüllen von Anträgen oder Unterstützung und Begleitung von Spaziergängen.
                     </p>
                     <p className="text-muted-foreground text-sm">
-                      Weitere Serviceleistungen: Hilfe bei Besorgungen von Medikamenten, Hilfestellungen beim Ausfüllen von Anträgen oder Unterstützung und Begleitung von Spaziergängen.
+                      Wir stehen Ihnen <strong>gerne zur Verfügung</strong> Rufen Sie uns an vereinbaren einen unverbindlichen Termin - <strong>gerne bei Ihnen zu Hause</strong>.
                     </p>
                   </CardContent>
                 </Card>
@@ -186,10 +189,13 @@ const Griesheim = () => {
                   Pflegedienst in Griesheim – Familiär und mit Herz!
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  Unser Pflegedienst ist immer für Sie da, an Wochenenden und Feiertagen und bei Notfällen auch in der Nacht. Wir bieten Ihnen eine auf Sie abgestimmte Pflege, je nach Ihren individuellen Bedürfnissen und Ihrem Pflegegrad.
+                  Unser <Link to="/team" className="text-primary hover:underline font-medium">Pflegedienst in Frankfurt</Link> und Umgebung ist immer für Sie da, an <strong>Wochenenden</strong> und <strong>Feiertagen</strong> und bei <strong>Notfällen</strong> auch in der Nacht. Wir bieten Ihnen oder Ihren Angehörigen eine auf Sie abgestimmte Pflege, je nach Ihren individuellen Bedürfnissen und Ihrem Pflegegrad. Dabei berücksichtigen wir nicht nur Ihren gesundheitlichen Zustand, sondern auch Ihre <strong>sozialen, kulturellen oder religiösen Bedürfnisse</strong>. Denn <strong>Menschlichkeit</strong> steht für unseren Pflegedienst in Griesheim im Mittelpunkt.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  Sie werden von unseren <strong>hochqualifizierten und herzlichen Mitarbeitern</strong> in Ihrer gewohnten Umgebung betreut. Die langjährige Erfahrung des Pflegedienstes in Frankfurt Griesheim garantiert Ihnen eine sehr hohe Qualität der ganzheitlichen Pflege in einer familiären Atmosphäre. Zudem wird die Qualität durch einen permanenten Prozess der Qualitätssicherung überprüft.
                 </p>
                 <p className="text-muted-foreground mb-8">
-                  Dabei berücksichtigen wir nicht nur Ihren gesundheitlichen Zustand, sondern auch Ihre sozialen, kulturellen oder religiösen Bedürfnisse. Denn Menschlichkeit steht für unseren Pflegedienst im Mittelpunkt.
+                  Gerne können Sie für eine erste <strong>unverbindliche Beratung</strong> unserer Angebote des Pflegedienstes in Griesheim oder bei Fragen <Link to="/kontakt" className="text-primary hover:underline font-medium">Kontakt</Link> mit uns aufnehmen. <strong>Wir freuen uns darauf, Sie und Ihre Angehörigen kennenzulernen.</strong>
                 </p>
                 <CTADropdownButton />
               </div>
@@ -210,7 +216,7 @@ const Griesheim = () => {
                       Welche Leistungen übernimmt der Avyta Pflegedienst in Griesheim?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Unser Pflegedienst in Griesheim übernimmt alle üblichen Hilfen rund um Mobilität, Körperpflege, An- und Auskleiden, Hauswirtschaft, Verpflegung und Ausscheidungen. Außerdem können wir Sie und Ihre Angehörigen auch in Bereichen der Intensivpflege und bei Behördengängen und Anträgen unterstützen.
+                      Unser Pflegedienst in Griesheim übernimmt alle <strong>üblichen Hilfen</strong> rund um Mobilität, Körperpflege, An- und Auskleiden, Hauswirtschaft, Verpflegung und Ausscheidungen. Außerdem können wir Sie und Ihre Angehörigen auch in Bereichen der <strong>Intensivpflege</strong> und bei <strong>Behördengängen</strong> und <strong>Anträgen</strong> unterstützen.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-2" className="bg-card rounded-xl border border-border/50 px-6">
@@ -218,7 +224,7 @@ const Griesheim = () => {
                       Wer kann den Pflegedienst in Griesheim in Anspruch nehmen?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Unser Pflegedienst richtet sich an alle Personen, die Unterstützung im Alltag benötigen – unabhängig vom Pflegegrad oder der Art der Einschränkung.
+                      Unser Pflegedienst in Griesheim ist für alle geeignet, die aus unterschiedlichsten Gründen den Alltag <strong>nicht mehr eigenständig</strong> bewältigen können. Gründe dafür können beispielsweise das Alter sein, geistige Krankheiten oder schwere Unfälle mit kurzfristigen oder langfristigen Einschränkungen.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-3" className="bg-card rounded-xl border border-border/50 px-6">
@@ -226,7 +232,7 @@ const Griesheim = () => {
                       Wie sehr kann der Pflegedienst in Griesheim individualisiert werden?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Wir erstellen für jeden Patienten einen individuellen Pflegeplan, der genau auf seine Bedürfnisse und Wünsche abgestimmt ist. Dabei berücksichtigen wir auch kulturelle, religiöse und soziale Aspekte.
+                      Bei unserem Angebot haben Sie selbstverständlich die Möglichkeit, eine Leistung genau <strong>passend zu Ihren individuellen Umständen</strong> zu erhalten. So kann unser Pflegedienst in Griesheim auch an <strong>Wochenenden, Feiertagen und notfalls in der Nacht</strong> an Ihrer Seite sein. Ebenfalls berücksichtigen wir die sozialen, kulturellen und religiösen Bedürfnisse der zu pflegenden Person.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
