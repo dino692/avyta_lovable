@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# XML Sitemap
+Sitemap: https://www.avyta.de/sitemap.xml

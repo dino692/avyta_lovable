@@ -75,7 +75,7 @@ const Karriere = () => {
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="pt-20">
+        <main className="pt-20 overflow-x-hidden">
           {/* Hero */}
           <section className="py-12 md:py-24 bg-gradient-hero">
             <div className="container mx-auto px-4">
