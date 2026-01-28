@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
+
 const leistungen = [
   "Lagerungsbehandlung",
   "Mobilisation",
@@ -32,11 +33,11 @@ const faqs = [
   },
   {
     question: "Was ist wichtig bei der ausserklinischen Intensivpflege in Frankfurt am Main?",
-    answer: "Wichtig ist vor allem die individuelle Betreuung und das Eingehen auf die persönlichen Bedürfnisse des Patienten. Unser Team berücksichtigt das kulturelle, religiöse und soziale Umfeld und sorgt dafür, dass sich Patienten auch in schweren Situationen wohl und gut versorgt fühlen."
+    answer: "Für uns bei Avyta ist in der ausserklinischen Intensivpflege in Frankfurt am Main neben den medizinischen Leistungen vor allem der Mensch wichtig. Wir möchten, dass sich unsere Patienten wohlfühlen und beachten daher stets auch den sprachlichen, sozialen, kulturellen und religiösen Kontext unserer Patienten."
   },
   {
     question: "Was kostet die ausserklinische Intensivpflege in Frankfurt am Main?",
-    answer: "Die Kosten für die ausserklinische Intensivpflege werden in der Regel von der Krankenkasse übernommen. Wir erstellen Ihnen ein individuelles Pflegeangebot und unterstützen Sie bei der Antragstellung zur Kostenübernahme."
+    answer: "Wir bei Avyta wissen, dass es keinen pauschalen Patienten gibt. Genau so kann es auch keine pauschale Pflegeleistung geben. Wir schauen uns gemeinsam mit Ihnen Ihre individuelle Situation an und erstellen dann einen ebenso individuellen Pflegeplan mit einem Kostenvoranschlag für Sie. Dieser kann dann von der Kranken- oder Pflegekasse genehmigt und dort auch direkt abgerechnet werden."
   },
 ];
 
@@ -64,7 +65,7 @@ const Intensivpflege = () => {
                   Ausserklinische Intensivpflege in Frankfurt am Main
                 </h1>
                 <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
-                  Mit mehr als 12 Jahren Erfahrung in der Pflege und einem hochmotivierten, verlässlichen und einfühlsamen Team stehen wir Ihnen zur Seite.
+                  Pflegebedürftig sein ist das eine – aber es gibt Fälle, in denen eine besonders enge medizinische Betreuung notwendig ist. Dennoch ist es auch für diese Patienten oft wichtig, nicht aus Ihrem gewohnten Umfeld gerissen zu werden. Hier kommt die <strong>ausserklinische Intensivpflege in Frankfurt am Main</strong> ins Spiel. Bei <Link to="/team" className="text-primary hover:underline font-medium">Avyta</Link> können wir für Sie oder Ihre Angehörigen das gesamte Spektrum an <strong>intensivpflegerischen Leistungen</strong> übernehmen. Mit mehr als <strong>12 Jahren Erfahrung in der Pflege</strong> und einem <em><strong>hochmotivierten, verlässlichen</strong></em> und <em><strong>einfühlsamen</strong></em> Team stehen wir Ihnen in der <strong>ausserklinischen Intensivpflege</strong> in Frankfurt am Main zur Seite.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -77,15 +78,8 @@ const Intensivpflege = () => {
           <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
-                  Pflegebedürftig sein ist das eine – aber es gibt Fälle, in denen eine besonders enge medizinische Betreuung 
-                  notwendig ist. Dennoch ist es auch für diese Patienten oft wichtig, nicht aus Ihrem gewohnten Umfeld gerissen 
-                  zu werden. Hier kommt die ausserklinische Intensivpflege in Frankfurt am Main ins Spiel. Bei Avyta können wir 
-                  für Sie oder Ihre Angehörigen das gesamte Spektrum an intensivpflegerischen Leistungen übernehmen.
-                </p>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Sprechen Sie gerne mit uns dazu, welche Pflegeleistungen in Ihrem individuellen Fall benötigt werden – wir 
-                  erstellen gemeinsam mit Ihnen einen Pflegeplan, der genau auf Ihre Situation abgestimmt ist.
+                  Sprechen Sie gerne mit uns dazu, welche <strong>Pflegeleistungen</strong> in Ihrem individuellen Fall benötigt werden – wir erstellen <Link to="/leistungen/pflegeberatung-frankfurt" className="text-primary hover:underline font-medium">gemeinsam mit Ihnen einen Pflegeplan</Link>, der genau auf Ihre Situation abgestimmt ist.
                 </p>
               </div>
             </div>
@@ -99,29 +93,16 @@ const Intensivpflege = () => {
                   Avyta übernimmt Ihre ausserklinische Intensivpflege in Frankfurt am Main
                 </h2>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
-                  Dank unserer langjährigen Erfahrung wissen wir bei Avyta, wie wichtig die ausserklinische Intensivpflege 
-                  in Frankfurt am Main für die Betroffenen ist. Eigentlich spielen die Gründe für die Pflegebedürftigkeit 
-                  nur eine zweitrangige Rolle, in jedem Fall möchten die Pflegebedürftigen es am liebsten vermeiden, im 
-                  Krankenhaus oder einem Heim gepflegt zu werden. Das eigene, vertraute Heim wird bevorzugt, egal ob es 
-                  sich um eine altersbedingte Pflege, eine Pflege nach einem schweren Unfall oder wegen allgemein körperlicher 
-                  und geistiger Einschränkungen handelt. Das eigene Zuhause kann ein Gefühl der Sicherheit und Beruhigung bieten.
+                  Dank unserer <strong>langjährigen Erfahrung</strong> wissen wir bei Avyta, wie wichtig die ausserklinische <strong>Intensivpflege in Frankfurt am Main</strong> für die Betroffenen ist. Eigentlich spielen die <strong>Gründe für die Pflegebedürftigkeit</strong> nur eine zweitrangige Rolle, in jedem Fall möchten die Pflegebedürftigen es am liebsten vermeiden, im Krankenhaus oder einem Heim gepflegt zu werden. Das eigene, vertraute Heim wird bevorzugt, egal ob es sich um eine <strong>altersbedingte Pflege</strong>, eine Pflege nach einem schweren Unfall oder wegen allgemein körperlicher und geistiger Einschränkungen handelt. Das eigene Zuhause kann ein Gefühl der <strong>Sicherheit und Beruhigung</strong> bieten.
                 </p>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
-                  Diesem wichtigen Faktor geben wir mit unserer ausserklinischen Intensivpflege in Frankfurt am Main den nötigen 
-                  Raum. Unsere speziell ausgebildeten Mitarbeiter können Ihnen auch bei komplexen intensivmedizinischen 
-                  Pflegeleistungen helfen.
-                </p>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 md:mb-8">
-                  Darüber hinaus können wir selbstverständlich auch Unterstützung in weiteren Bereichen rund um den Alltag bieten, 
-                  so zum Beispiel beim Ausfüllen von Anträgen, dem Besorgen von Medikamenten oder generell Hilfe im Haushalt 
-                  leisten. So müssen Sie sich um Ihre Angehörigen nicht sorgen: Wir versorgen Sie mit einem individuell 
-                  abgestimmten Leistungspaket rund um die Uhr.
+                  Diesem wichtigen Faktor geben wir mit unserer <strong>ausserklinischen Intensivpflege in Frankfurt am Main</strong> den nötigen Raum. Unsere speziell ausgebildeten Mitarbeiter können Ihnen auch bei komplexen intensivmedizinischen Pflegeleistungen helfen.
                 </p>
 
                 <h3 className="text-lg md:text-xl font-display font-semibold text-foreground mb-4 md:mb-6">
-                  Eine kurze Übersicht unserer Leistungen in der ausserklinischen Intensivpflege:
+                  Eine kurze Übersicht unserer Leistungen in der ausserklinischen Intensivpflege in Frankfurt am Main:
                 </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 mb-6 md:mb-8">
                   {leistungen.map((item, index) => (
                     <div key={index} className="flex items-center gap-2 p-2 md:p-3 bg-background rounded-lg border border-border/50">
                       <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
@@ -129,6 +110,14 @@ const Intensivpflege = () => {
                     </div>
                   ))}
                 </div>
+
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
+                  Darüber hinaus können wir selbstverständlich auch Unterstützung in weiteren Bereichen rund um den Alltag bieten, so zum Beispiel beim <em><strong>Ausfüllen von Anträgen</strong></em>, dem <em><strong>Besorgen von Medikamenten</strong></em> oder <em><strong>generell Hilfe im Haushalt</strong></em> leisten. So müssen Sie sich um Ihre Angehörigen nicht sorgen: <strong>Wir versorgen Sie</strong> mit einem individuell abgestimmten Leistungspaket rund um die Uhr.
+                </p>
+                <p className="text-sm md:text-base text-foreground font-medium mb-4 md:mb-6">
+                  Wir stehen Ihnen <strong>gerne zur Verfügung</strong> Rufen Sie uns an vereinbaren einen unverbindlichen Termin - <strong>gerne bei Ihnen zu Hause</strong>.
+                </p>
+                <CTADropdownButton />
               </div>
             </div>
           </section>
@@ -142,22 +131,13 @@ const Intensivpflege = () => {
                     Ausserklinische Intensivpflege in Frankfurt am Main durch erfahrene Mitarbeiter
                   </h2>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
-                    In der ausserklinischen Intensivpflege in Frankfurt am Main geht es selbstverständlich nicht nur um die 
-                    medizinische Betreuung. Es geht auch darum, den betroffenen Patienten in vertrauter Umgebung die Pflege 
-                    so angenehm wie möglich zu gestalten. Dazu gehört eben auch, dass man den Menschen und nicht nur den 
-                    Patienten sieht.
+                    In der <strong>ausserklinischen Intensivpflege</strong> in Frankfurt am Main geht es selbstverständlich nicht nur um die medizinische Betreuung. Es geht auch darum, den betroffenen Patienten in vertrauter Umgebung die Pflege so angenehm wie möglich zu gestalten. Dazu gehört eben auch, dass man den Menschen und nicht nur den Patienten sieht.
                   </p>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
-                    „Von Menschen, für Menschen" – das ist das Motto bei Avyta und nach diesem Prinzip gehen wir auch die 
-                    ausserklinische Intensivpflege in Frankfurt am Main an. Unsere Mitarbeiter sind zum Großteil mehrsprachig 
-                    und können sich damit auch mit Angehörigen verständigen, die kein oder nur wenig Deutsch können. Ebenso 
-                    ist es uns sehr wichtig, dass wir das kulturelle, religiöse und soziale Umfeld unserer Patienten 
-                    berücksichtigen. Wir möchten, dass sich unsere Patienten auch in diesen Aspekten mit Ihrer Pflege wohlfühlen.
+                    „Von Menschen, für Menschen" – das ist das <strong>Motto bei Avyta</strong> und nach diesem Prinzip gehen wir auch die <strong>ausserklinische Intensivpflege in Frankfurt am Main</strong> an. <Link to="/karriere" className="text-primary hover:underline font-medium">Unsere Mitarbeiter</Link> sind zum Großteil <strong>mehrsprachig</strong> und können sich damit auch mit Angehörigen verständigen, die <strong>kein oder nur wenig Deutsch</strong> können. Ebenso ist es uns sehr wichtig, dass wir das <em><strong>kulturelle</strong></em>, <em><strong>religiöse</strong></em> und <em><strong>soziale Umfeld</strong></em> unserer Patienten berücksichtigen. Wir möchten, dass sich unsere Patienten auch in diesen Aspekten mit Ihrer Pflege wohlfühlen.
                   </p>
                   <p className="text-sm md:text-base text-foreground font-medium mb-4 md:mb-6">
-                    Sie haben darüber hinaus noch Fragen rund um das Thema ausserklinische Intensivpflege in Frankfurt am Main 
-                    mit Avyta? Sprechen Sie uns gerne an! Wir nehmen uns Zeit für Sie und klären mit Ihnen alle offenen Punkte 
-                    zu unseren Leistungen.
+                    Sie haben darüber hinaus noch Fragen rund um das Thema ausserklinische <strong>Intensivpflege in Frankfurt am Main</strong> mit Avyta? <Link to="/kontakt" className="text-primary hover:underline font-medium">Sprechen Sie uns gerne an!</Link> Wir nehmen uns Zeit für Sie und klären mit Ihnen alle offenen Punkte zu unseren Leistungen.
                   </p>
                   <CTADropdownButton />
                 </div>
@@ -229,20 +209,39 @@ const Intensivpflege = () => {
                   Häufige Fragen
                 </h2>
                 <Accordion type="single" collapsible className="space-y-2 md:space-y-3">
-                  {faqs.map((faq, index) => (
-                    <AccordionItem 
-                      key={index} 
-                      value={`item-${index}`}
-                      className="bg-background rounded-xl border border-border/50 px-4 md:px-6"
-                    >
-                      <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
-                        {faq.question}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
-                        {faq.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
+                  <AccordionItem 
+                    value="item-0"
+                    className="bg-background rounded-xl border border-border/50 px-4 md:px-6"
+                  >
+                    <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
+                      Was beinhaltet die ausserklinische Intensivpflege in Frankfurt am Main?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
+                      Unsere ausserklinische Intensivpflege in Frankfurt am Main beinhaltet alle wichtigen <strong>medizinischen Leistungen</strong> der häuslichen Intensivpflege bis in hin zur Beatmung. Darüber hinaus können wir auch <strong>Unterstützung bei Aufgaben</strong> wie der Antragsstellung oder im Haushalt bieten. Gerne erstellen wir Ihnen ein <strong>individuelles Pflegeangebot</strong>.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem 
+                    value="item-1"
+                    className="bg-background rounded-xl border border-border/50 px-4 md:px-6"
+                  >
+                    <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
+                      Was ist wichtig bei der ausserklinischen Intensivpflege in Frankfurt am Main?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
+                      Für uns bei Avyta ist in der ausserklinischen Intensivpflege in Frankfurt am Main neben den <strong>medizinischen Leistungen</strong> vor allem <strong>der Mensch wichtig</strong>. Wir möchten, dass sich unsere Patienten <strong>wohlfühlen</strong> und beachten daher stets auch den <em><strong>sprachlichen</strong></em>, <em><strong>sozialen</strong></em>, <em><strong>kulturellen</strong></em> und <em><strong>religiösen</strong></em> Kontext <strong>unserer Patienten</strong>.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem 
+                    value="item-2"
+                    className="bg-background rounded-xl border border-border/50 px-4 md:px-6"
+                  >
+                    <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
+                      Was kostet die ausserklinische Intensivpflege in Frankfurt am Main?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
+                      Wir bei Avyta wissen, dass es keinen pauschalen Patienten gibt. Genau so kann es auch keine pauschale Pflegeleistung geben. Wir schauen uns gemeinsam mit Ihnen Ihre <strong>individuelle Situation</strong> an und erstellen dann einen ebenso <strong>individuellen Pflegeplan</strong> mit einem <strong>Kostenvoranschlag</strong> für Sie. Dieser kann dann von der <strong>Kranken- oder Pflegekasse</strong> genehmigt und dort auch direkt abgerechnet werden.
+                    </AccordionContent>
+                  </AccordionItem>
                 </Accordion>
               </div>
             </div>
