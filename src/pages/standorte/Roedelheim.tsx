@@ -11,7 +11,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/faqSchema";
 
+const roedelheimFaqs = [
+  {
+    question: "Wie werden die Leistungen des Pflegedienstes Rödelheim abgerechnet?",
+    answer: "Unsere Leistungen werden nach Beantragung eines Pflegegrades von Ihrer Krankenkasse oder Pflegekasse abgerechnet. Der erste Schritt zur häuslichen Pflege ist deshalb ein Anruf bei der zuständigen Krankenkasse. Nach Bewilligung der Pflege können wir mit der Erarbeitung eines Pflegeplans beginnen."
+  },
+  {
+    question: "Wie wird der persönliche Bezug zum Klienten beim Pflegedienst Rödelheim hergestellt?",
+    answer: "Wir legen großen Wert auf persönliche Beziehungen. Unsere Pflegekräfte nehmen sich Zeit, Sie kennenzulernen und verstehen Ihre individuellen Bedürfnisse und Wünsche."
+  },
+  {
+    question: "Wie werden Pflegepläne beim Pflegedienst Rödelheim erstellt?",
+    answer: "Wir erstellen individuelle Pflegepläne basierend auf Ihren Bedürfnissen und Ihrer Lebenssituation. Diese Pläne werden regelmäßig überprüft und bei Bedarf angepasst."
+  },
+];
 const behandlungspflegeLeistungen = [
   "Sicheres Verabreichen von Injektionen und Infusionen",
   "Kontrolle von wichtigen Vitalwerten",
@@ -28,6 +43,7 @@ const Roedelheim = () => {
       <Helmet>
         <title>Pflegedienst Rödelheim Frankfurt | AVYTA Häusliche Krankenpflege</title>
         <meta name="description" content="Pflegedienst Rödelheim - häusliche Krankenpflege in vertrauter Umgebung. Grundpflege, Behandlungspflege, Intensivpflege. Qualitativ hochwertig. Tel: 069 153 914 05" />
+        <script type="application/ld+json">{generateFAQSchema(roedelheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

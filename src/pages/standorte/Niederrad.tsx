@@ -11,6 +11,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/faqSchema";
+
+const niederradFaqs = [
+  {
+    question: "Welche Besonderheiten bietet der Avyta Pflegedienst in Niederrad?",
+    answer: "Wir legen großen Wert auf eine familiäre Atmosphäre und individuelle Betreuung. Unser Team berücksichtigt Ihre kulturellen, religiösen und sozialen Bedürfnisse."
+  },
+  {
+    question: "Wie kann ich den Avyta Pflegedienst in Niederrad beauftragen?",
+    answer: "Kontaktieren Sie uns für ein unverbindliches Erstgespräch. Wir helfen Ihnen bei allen notwendigen Anträgen und der Kommunikation mit Ihrer Pflegekasse."
+  },
+  {
+    question: "Welche Pflegegrade werden vom Avyta Pflegedienst in Niederrad abgedeckt?",
+    answer: "Wir betreuen Patienten aller Pflegegrade – von der einfachen Alltagsunterstützung über die Grundpflege bis hin zur komplexen Intensivpflege."
+  },
+];
 
 const grundpflegeLeistungen = [
   "Hilfe beim Essen und Trinken",
@@ -40,6 +56,7 @@ const Niederrad = () => {
       <Helmet>
         <title>Pflegedienst Frankfurt Niederrad | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst in Frankfurt Niederrad - Pflege in vertrauter Umgebung. Grundpflege, Behandlungspflege, Intensivpflege. Herzlich und familiär. Tel: 069 153 914 05" />
+        <script type="application/ld+json">{generateFAQSchema(niederradFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

@@ -13,7 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
+import { generateFAQSchema } from "@/lib/faqSchema";
 const leistungen = [
   "Lagerungsbehandlung",
   "Mobilisation",
@@ -48,6 +48,7 @@ const Intensivpflege = () => {
         <meta name="description" content="Spezialisierte ausserklinische Intensivpflege in Frankfurt am Main. Professionelle Betreuung für beatmungspflichtige Patienten zu Hause. Über 12 Jahre Erfahrung. Jetzt beraten lassen!" />
         <meta name="keywords" content="Intensivpflege Frankfurt, Ausserklinische Intensivpflege, Beatmungspflege Frankfurt, Heimbeatmung" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" />
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

@@ -13,7 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
+import { generateFAQSchema } from "@/lib/faqSchema";
 const leistungen = [
   {
     title: "Hilfe bei der Körperpflege",
@@ -60,6 +60,7 @@ const Grundpflege = () => {
         <meta name="description" content="Professionelle Grundpflege in Frankfurt am Main. Körperpflege, Mobilisation, Haushaltshilfe. Würdevolle Pflege zu Hause mit erfahrenen Pflegekräften. Finanzierung über Pflegekasse!" />
         <meta name="keywords" content="Grundpflege Frankfurt, Körperpflege Frankfurt, Ambulante Pflege Frankfurt" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/grundpflege" />
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

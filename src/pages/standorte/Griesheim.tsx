@@ -11,6 +11,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/faqSchema";
+
+const griesheimFaqs = [
+  {
+    question: "Welche Qualifikationen haben die Pflegekräfte vom Avyta Pflegedienst in Griesheim?",
+    answer: "Unsere Pflegekräfte sind ausgebildete Pflegefachkräfte und Pflegehelfer mit entsprechenden Qualifikationen. Sie werden regelmäßig geschult und verfügen über langjährige Erfahrung in der ambulanten Pflege."
+  },
+  {
+    question: "Wie sieht ein typischer Pflegeplan beim Avyta Pflegedienst in Griesheim aus?",
+    answer: "Wir erstellen individuelle Pflegepläne basierend auf Ihren Bedürfnissen und Ihrer Lebenssituation. Diese Pläne werden regelmäßig überprüft und bei Bedarf angepasst."
+  },
+  {
+    question: "Wie erreiche ich den Avyta Pflegedienst in Griesheim?",
+    answer: "Sie können uns telefonisch unter 069 153 914 05 erreichen oder über unser Kontaktformular eine Anfrage stellen. Wir sind auch am Wochenende und an Feiertagen erreichbar."
+  },
+];
 
 const grundpflegeLeistungen = [
   "Maßnahmen zur Mobilität",
@@ -40,6 +56,7 @@ const Griesheim = () => {
       <Helmet>
         <title>Pflegedienst Griesheim Frankfurt | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Griesheim - Individuelle Pflege für Ihre Bedürfnisse. Grundpflege, Behandlungspflege, Intensivpflege. Familiär und mit Herz. Tel: 069 153 914 05" />
+        <script type="application/ld+json">{generateFAQSchema(griesheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

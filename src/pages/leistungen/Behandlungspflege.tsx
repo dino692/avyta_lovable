@@ -13,7 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
+import { generateFAQSchema } from "@/lib/faqSchema";
 const leistungen = [
   {
     title: "Medikamentenmanagement",
@@ -60,6 +60,7 @@ const Behandlungspflege = () => {
         <meta name="description" content="Professionelle Behandlungspflege in Frankfurt am Main. Wundversorgung, Injektionen, Verbandswechsel, Medikamentengabe. Examinierte Pflegefachkräfte. Kostenübernahme durch Krankenkasse!" />
         <meta name="keywords" content="Behandlungspflege Frankfurt, Medizinische Pflege Frankfurt, Wundversorgung, Injektionen" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/behandlungspflege" />
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

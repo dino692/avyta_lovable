@@ -11,7 +11,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/faqSchema";
 
+const sachsenhausenFaqs = [
+  {
+    question: "Nach welchen Kriterien funktioniert der Avyta Pflegedienst in Sachsenhausen?",
+    answer: "Beim Avyta Pflegedienst in Sachsenhausen arbeiten wir nach dem Motto 'von Menschen, für Menschen' und stellen damit Sie und Ihre individuelle Situation in den Mittelpunkt. Wir erstellen Ihnen nicht nur ein individuelles Paket an Pflegeleistungen, sondern beachten auch Ihre religiösen, ethischen, sozialen und kulturellen Bedürfnisse."
+  },
+  {
+    question: "Wie hoch werden die Kosten für einen Pflegedienst in Sachsenhausen ausfallen?",
+    answer: "Die Kosten richten sich nach dem individuellen Pflegebedarf und Pflegegrad. Wir beraten Sie gerne zu den Kosten und möglichen Finanzierungswegen über die Pflegekasse."
+  },
+  {
+    question: "Welche Pflegegrade kann der Avyta Pflegedienst in Sachsenhausen abdecken?",
+    answer: "Wir betreuen Patienten aller Pflegegrade – von der einfachen Alltagsunterstützung über die Grundpflege bis hin zur komplexen Intensivpflege mit Heimbeatmung."
+  },
+];
 const grundpflegeLeistungen = [
   "Maßnahmen zur Mobilität",
   "Hauswirtschaftliche Hilfe",
@@ -40,6 +55,7 @@ const Sachsenhausen = () => {
       <Helmet>
         <title>Pflegedienst Sachsenhausen Frankfurt | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Sachsenhausen - individuelle Pflege in familiärer Atmosphäre. Grundpflege, Behandlungspflege, Intensivpflege. Mit Herz an Ihrer Seite. Tel: 069 153 914 05" />
+        <script type="application/ld+json">{generateFAQSchema(sachsenhausenFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

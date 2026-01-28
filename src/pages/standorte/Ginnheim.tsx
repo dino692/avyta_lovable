@@ -11,7 +11,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/faqSchema";
 
+const ginnheimFaqs = [
+  {
+    question: "Welche medizinischen Leistungen kann Avyta, der Pflegedienst in Ginnheim, zu Hause übernehmen?",
+    answer: "Ihre Gesundheit steht für uns an oberster Stelle. Blutzuckermessungen oder Blutdruckmessungen führen unsere Mitarbeiter routiniert durch. Zur Versorgung von medizinischen Geräten wie Anus Praeter, Tracheostoma oder Urostoma setzen wir ausgebildete Fachkräfte ein. Auch die Vergabe von Injektionen und Infusionen ist mit unserer Unterstützung bequem zu Hause möglich."
+  },
+  {
+    question: "Wie können Palliativpatienten mit einem Pflegedienst in Ginnheim zu Hause versorgt werden?",
+    answer: "Wir begleiten Palliativpatienten und ihre Angehörigen mit Einfühlungsvermögen und Fachkompetenz. Unser Ziel ist es, Schmerzen zu lindern und eine würdevolle Betreuung zu gewährleisten."
+  },
+  {
+    question: "Welche Maßnahmen zur Vorsorge von Krankheiten betreibt der Pflegedienst in Ginnheim?",
+    answer: "Wir achten auf Prophylaxe-Maßnahmen wie Dekubitusprophylaxe, Sturzprävention und regelmäßige Vitalzeichen-Kontrollen, um Komplikationen frühzeitig zu erkennen und zu vermeiden."
+  },
+];
 const leistungen = [
   {
     icon: Heart,
@@ -41,6 +56,7 @@ const Ginnheim = () => {
       <Helmet>
         <title>Pflegedienst Ginnheim Frankfurt | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Ginnheim - häusliche Pflege mit ganzheitlichem Blick. Grundpflege, Behandlungspflege, Intensivpflege. In der Region für Sie unterwegs. Tel: 069 153 914 05" />
+        <script type="application/ld+json">{generateFAQSchema(ginnheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

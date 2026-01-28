@@ -11,6 +11,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/faqSchema";
+
+const bornheimFaqs = [
+  {
+    question: "Welche Arten der Pflege kann Avyta als Pflegedienst in Bornheim bieten?",
+    answer: "Unser Avyta Pflegedienst in Bornheim kann das gesamte Spektrum an Pflegestufen und Pflegeleistungen abdecken: von einfachen Alltagshilfen über die Grundpflege bis hin zur Intensivpflege mit komplexen medizinischen Leistungen stehen wir Ihnen zur Seite. Wir kümmern uns auch in schwierigen Fällen mit viel Erfahrung und Einfühlsamkeit um Ihre pflegebedürftigen Angehörigen."
+  },
+  {
+    question: "Welche Kosten fallen mit dem Avyta Pflegedienst in Bornheim an?",
+    answer: "Die Kosten richten sich nach dem individuellen Pflegebedarf und Pflegegrad. Wir beraten Sie gerne zu den Kosten und möglichen Finanzierungswegen über die Pflegekasse."
+  },
+  {
+    question: "Welche weiteren Leistungen bietet der Avyta Pflegedienst in Bornheim?",
+    answer: "Neben der direkten Pflege bieten wir Serviceleistungen wie Hilfe bei Antragstellungen, Begleitung bei Spaziergängen, Vermittlung von Dienstleistern und Unterstützung bei der Medikamentenbeschaffung."
+  },
+];
 
 const grundpflegeLeistungen = [
   "Hilfe bei der Körperpflege",
@@ -40,6 +56,7 @@ const Bornheim = () => {
       <Helmet>
         <title>Pflegedienst Bornheim Frankfurt | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Bornheim - Pflege für Ihre individuellen Bedürfnisse. Grundpflege, Behandlungspflege, Intensivpflege in familiärer Atmosphäre. Tel: 069 153 914 05" />
+        <script type="application/ld+json">{generateFAQSchema(bornheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

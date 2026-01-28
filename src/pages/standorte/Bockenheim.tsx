@@ -11,7 +11,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/faqSchema";
 
+const bockenheimFaqs = [
+  {
+    question: "Wie ist der Ablauf bei der Beauftragung des Pflegedienstes in Frankfurt Bockenheim?",
+    answer: "Wir führen zunächst ein Gespräch, um Ihre individuellen Pflegebedürfnisse zu erfahren. Welche Leistungen werden gebraucht, welche Besonderheiten müssen berücksichtigt werden? Wir erstellen dann einen individuellen Pflegeplan und einen Kostenvoranschlag zur Abrechnung mit der Kranken- oder Pflegekasse. Dann können wir nach der Zustimmung der Kasse mit der Pflege beginnen."
+  },
+  {
+    question: "Wie sieht das Leistungsspektrum beim Pflegedienst in Frankfurt Bockenheim aus?",
+    answer: "Unser Leistungsspektrum reicht von klassischen Elementen der Grundpflege über medizinische Behandlungspflege bis hin zur Intensivpflege mit Heimbeatmung. Zusätzlich bieten wir verschiedene Serviceleistungen an."
+  },
+  {
+    question: "Worauf sollte man bei einem Pflegedienst in Frankfurt Bockenheim achten?",
+    answer: "Achten Sie auf qualifiziertes Personal, einen permanenten Qualitätssicherungsprozess, Erreichbarkeit auch an Wochenenden und Feiertagen sowie eine familiäre und herzliche Atmosphäre."
+  },
+];
 const grundpflegeLeistungen = [
   "Hauswirtschaftliche Hilfe",
   "Hilfe bei der Körperpflege",
@@ -40,6 +55,7 @@ const Bockenheim = () => {
       <Helmet>
         <title>Pflegedienst Frankfurt Bockenheim | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst in Frankfurt Bockenheim - individuelle Pflege in Ihrer gewohnten Umgebung. Grundpflege, Behandlungspflege, Intensivpflege. Tel: 069 153 914 05" />
+        <script type="application/ld+json">{generateFAQSchema(bockenheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

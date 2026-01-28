@@ -11,7 +11,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/faqSchema";
 
+const praunheimFaqs = [
+  {
+    question: "Wie kann ich den Avyta Pflegedienst in Frankfurt Praunheim in Anspruch nehmen?",
+    answer: "Unser freundliches Team können Sie noch vor der Beantragung eines Pflegegrads für ein persönliches Erstgespräch kontaktieren. Wir beraten Sie gern zu nötigen Anträgen bei Ihrer Krankenkasse und Finanzierungsmöglichkeiten. Der Antrag für die Pflege wird über die zuständige Krankenkasse erteilt."
+  },
+  {
+    question: "Welche Pflegegrade können vom Avyta Pflegedienst in Frankfurt Praunheim versorgt werden?",
+    answer: "Wir betreuen Patienten aller Pflegegrade – von der einfachen Alltagsunterstützung bis zur komplexen Intensivpflege mit Beatmung."
+  },
+  {
+    question: "Wie sieht der Alltag mit einem Pflegedienst in Frankfurt Praunheim als Hilfe aus?",
+    answer: "Wir passen uns Ihrem Tagesablauf an und kommen zu den vereinbarten Zeiten. Sie behalten Ihre Selbstständigkeit und erhalten genau die Unterstützung, die Sie benötigen."
+  },
+];
 const leistungen = [
   {
     icon: Heart,
@@ -51,6 +66,7 @@ const Praunheim = () => {
       <Helmet>
         <title>Pflegedienst Frankfurt Praunheim | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Frankfurt Praunheim - herzliche Pflege für Selbstbestimmung und Lebensqualität. Grundpflege, Behandlungspflege, Intensivpflege. Tel: 069 153 914 05" />
+        <script type="application/ld+json">{generateFAQSchema(praunheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

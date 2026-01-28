@@ -11,6 +11,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { generateFAQSchema } from "@/lib/faqSchema";
+
+const hoechstFaqs = [
+  {
+    question: "Welche Pflegeleistungen bietet Avyta als Pflegedienst in Höchst an?",
+    answer: "Wir bieten das gesamte Spektrum an Pflegeleistungen: Grundpflege, Behandlungspflege und Intensivpflege. Von einfachen Alltagshilfen bis zur komplexen medizinischen Versorgung."
+  },
+  {
+    question: "Wie sind die Kosten beim Avyta Pflegedienst in Höchst?",
+    answer: "Die Kosten richten sich nach dem individuellen Pflegebedarf und Pflegegrad. Wir beraten Sie gerne zu den Kosten und möglichen Finanzierungswegen über die Pflegekasse."
+  },
+  {
+    question: "Wie kann ich den Avyta Pflegedienst in Höchst kontaktieren?",
+    answer: "Sie können uns telefonisch unter 069 153 914 05 erreichen oder über unser Kontaktformular eine Anfrage stellen. Wir sind auch am Wochenende erreichbar."
+  },
+];
 
 const grundpflegeLeistungen = [
   "Hilfe beim Essen und Trinken",
@@ -40,6 +56,7 @@ const Hoechst = () => {
       <Helmet>
         <title>Pflegedienst Frankfurt Höchst | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Frankfurt Höchst - ambulante Pflege für Sie. Grundpflege, Behandlungspflege, Intensivpflege. Pflege mit Herz. Tel: 069 153 914 05" />
+        <script type="application/ld+json">{generateFAQSchema(hoechstFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

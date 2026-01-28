@@ -13,7 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
+import { generateFAQSchema } from "@/lib/faqSchema";
 const faqs = [
   {
     question: "Wie kann ich bettlägerige Angehörige mit einer Pflegeberatung in Frankfurt zu Hause pflegen?",
@@ -37,6 +37,7 @@ const Pflegeberatung = () => {
         <meta name="description" content="Pflegeberatung in Frankfurt von Avyta. Individuelle Pflegepläne, Unterstützung bei Anträgen und Koordination von Pflegedienstleistungen. Kostenlose Beratung!" />
         <meta name="keywords" content="Pflegeberatung Frankfurt, Pflegeplanung, Häusliche Pflege Beratung" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/pflegeberatung-frankfurt" />
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

@@ -12,7 +12,22 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { generateFAQSchema } from "@/lib/faqSchema";
 
+const frankfurtFaqs = [
+  {
+    question: "Welche Kompetenzen bringt der Avyta Pflegedienst in Frankfurt mit?",
+    answer: "Beim Avyta Pflegedienst in Frankfurt können wir von der Grundpflege bis zur Intensivpflege alle Stufen übernehmen und die Leistungen genau auf Ihre Bedürfnisse zuschneiden. Mit mehr als 12 Jahren Erfahrung im Bereich der Pflege können Sie uns beruhigt Ihr Vertrauen schenken."
+  },
+  {
+    question: "Welche Kosten erwarten mich beim Avyta Pflegedienst in Frankfurt am Main?",
+    answer: "Die Kosten für unseren Pflegedienst richten sich nach dem individuellen Pflegebedarf und dem Pflegegrad. Wir beraten Sie gerne ausführlich zu den Kosten und möglichen Finanzierungswegen über die Pflegekasse."
+  },
+  {
+    question: "Wie kann ein Pflegedienst in Frankfurt beantragt werden?",
+    answer: "Kontaktieren Sie uns für ein unverbindliches Erstgespräch. Wir helfen Ihnen bei allen notwendigen Anträgen und der Kommunikation mit Ihrer Pflegekasse."
+  },
+];
 const stadtteile = [
   { name: "Bockenheim", href: "/standorte/frankfurt/pflegedienst-bockenheim" },
   { name: "Bornheim", href: "/standorte/frankfurt/bornheim" },
@@ -109,6 +124,7 @@ const Frankfurt = () => {
       <Helmet>
         <title>Ambulante Pflege Frankfurt | AVYTA Pflegedienst</title>
         <meta name="description" content="Ambulante Pflege in Frankfurt am Main. Professioneller Pflegedienst in allen Frankfurter Stadtteilen. Behandlungspflege, Grundpflege, 24h-Pflege. Tel: 069 153 914 05" />
+        <script type="application/ld+json">{generateFAQSchema(frankfurtFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
