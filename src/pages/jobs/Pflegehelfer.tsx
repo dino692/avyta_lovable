@@ -101,12 +101,15 @@ const faqs = [
   },
 ];
 
+import { generateFAQSchema } from "@/lib/faqSchema";
+
 const Pflegehelfer = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegehelfer Frankfurt | Jobs bei AVYTA Pflegedienst</title>
-        <meta name="description" content="Werden Sie Pflegehelfer/in bei AVYTA in Frankfurt. Übertarifliche Bezahlung, 30 Tage Urlaub, Firmenwagen. Jetzt bewerben!" />
+        <title>Pflegehelfer Frankfurt | Karriere bei AVYTA Pflegedienst</title>
+        <meta name="description" content="Pflegehelfer in Frankfurt gesucht! Ambulante Pflege nimmt einen immer größeren Stellenwert ein. Übertarifliches Gehalt, 30 Urlaubstage, Firmenwagen. Jetzt bei AVYTA bewerben!" />
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
 
       <Header />

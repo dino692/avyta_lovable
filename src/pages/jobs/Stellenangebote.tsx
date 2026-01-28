@@ -85,12 +85,15 @@ const faqs = [
   },
 ];
 
+import { generateFAQSchema } from "@/lib/faqSchema";
+
 const Stellenangebote = () => {
   return (
     <>
       <Helmet>
         <title>Stellenangebote Pflege Frankfurt | Jobs bei AVYTA Pflegedienst</title>
         <meta name="description" content="Stellenangebote für die Pflege in Frankfurt bei AVYTA. Pflegefachkräfte, Pflegehelfer und Haushaltshilfen gesucht. Übertarifliche Bezahlung, 30 Tage Urlaub, Firmenwagen. Jetzt bewerben!" />
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
 
       <Header />
@@ -244,13 +247,13 @@ const Stellenangebote = () => {
                   {/* Arbeiten mit Wertschätzung */}
                   <div>
                     <h2 className="text-2xl font-display font-bold text-foreground mb-4">
-                      Arbeiten mit Wertschätzung
+                      Unsere Stellenangebote für die Pflege in Frankfurt – arbeiten mit Wertschätzung
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
                       Sie sprechen Deutsch auf B1-Niveau oder höher und haben eine Fahrerlaubnis für Klasse B Fahrzeuge? 
                       Damit sind die ersten Hürden für eine Bewerbung auf unsere Stellenangebote in der Pflege in Frankfurt 
                       bereits überwunden. Menschen mit Freude an sozialer Arbeit und neuen Kontakten sind bei uns stets 
-                      willkommen, unabhängig von ihrem Qualifikationsgrad.
+                      willkommen, unabhängig von ihrem Qualifikationsgrad. Für <Link to="/karriere/pflegehelfer-frankfurt" className="text-primary hover:underline font-semibold">Pflegehelfer</Link>, <Link to="/karriere/pflegefachkraft-frankfurt" className="text-primary hover:underline font-semibold">Pflegefachkräfte</Link>, <Link to="/karriere/pflegehilfskraft-frankfurt" className="text-primary hover:underline font-semibold">Pflegehilfskräfte</Link> und <Link to="/karriere/haushaltshilfe-frankfurt" className="text-primary hover:underline font-semibold">Haushaltshilfen</Link> mit Berufserfahrung ist in unserem Team stets Platz. <Link to="/kontakt" className="text-primary hover:underline font-semibold">Bewerben Sie sich jetzt</Link> und lernen Sie unser freundliches Arbeitsumfeld kennen.
                     </p>
                   </div>
 

@@ -52,6 +52,7 @@ import Kontakt from "./pages/Kontakt";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import Sitemap from "./pages/Sitemap";
+import Karriere from "./pages/Karriere";
 import Stellenangebote from "./pages/jobs/Stellenangebote";
 import Pflegehelfer from "./pages/jobs/Pflegehelfer";
 import Pflegehilfskraft from "./pages/jobs/Pflegehilfskraft";
@@ -113,11 +114,13 @@ const App = () => (
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
             <Route path="/sitemap" element={<Sitemap />} />
+            <Route path="/karriere" element={<Karriere />} />
             <Route path="/karriere/stellenangebote-pflege-frankfurt" element={<Stellenangebote />} />
             <Route path="/karriere/pflegehelfer-frankfurt" element={<Pflegehelfer />} />
             <Route path="/karriere/pflegehilfskraft-frankfurt" element={<Pflegehilfskraft />} />
             <Route path="/karriere/pflegefachkraft-frankfurt" element={<Pflegefachkraft />} />
             <Route path="/karriere/haushaltshilfe-frankfurt" element={<HaushaltshilfeJob />} />
+            <Route path="/karriere/haushaltshilfen-frankfurt" element={<HaushaltshilfeJob />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <CookieBanner />

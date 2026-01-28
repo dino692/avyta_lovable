@@ -76,12 +76,15 @@ const faqs = [
   },
 ];
 
+import { generateFAQSchema } from "@/lib/faqSchema";
+
 const Pflegefachkraft = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegefachkraft Frankfurt | Jobs bei AVYTA Pflegedienst</title>
-        <meta name="description" content="Werden Sie Pflegefachkraft bei AVYTA in Frankfurt. Überdurchschnittliches Gehalt, 30 Tage Urlaub, Firmenwagen, Weiterbildungen. Jetzt bewerben!" />
+        <title>Pflegefachkraft Frankfurt | Chancen, Aufgaben & Perspektiven bei AVYTA</title>
+        <meta name="description" content="Pflegefachkraft in Frankfurt gesucht! Zentrale Verantwortung für Betreuung und Versorgung pflegebedürftiger Menschen. Überdurchschnittliches Gehalt, 30 Urlaubstage, Firmenwagen. Jetzt bewerben!" />
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
 
       <Header />

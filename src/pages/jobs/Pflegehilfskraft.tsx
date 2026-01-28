@@ -101,12 +101,15 @@ const faqs = [
   },
 ];
 
+import { generateFAQSchema } from "@/lib/faqSchema";
+
 const Pflegehilfskraft = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegehilfskraft in Frankfurt | Jobs bei AVYTA</title>
-        <meta name="description" content="Pflegehilfskraft in Frankfurt gesucht! Überdurchschnittliches Gehalt, 30 Tage Urlaub, Firmenwagen & Wellpass. Jetzt bei AVYTA bewerben!" />
+        <title>Pflegehilfskraft Frankfurt | Ihre Chance in der ambulanten Pflege bei AVYTA</title>
+        <meta name="description" content="Pflegehilfskraft in Frankfurt gesucht! Wertvoller Beitrag zur Betreuung pflegebedürftiger Menschen im häuslichen Umfeld. Überdurchschnittliches Gehalt, 30 Urlaubstage, Firmenwagen. Jetzt bewerben!" />
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
 
       <Header />
