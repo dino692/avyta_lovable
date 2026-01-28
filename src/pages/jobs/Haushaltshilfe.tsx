@@ -78,7 +78,7 @@ const HaushaltshilfeJob = () => {
 
       <Header />
 
-      <main className="pt-20">
+      <main className="pt-20 overflow-x-hidden">
         {/* Hero */}
         <section className="py-16 bg-gradient-to-br from-primary/5 via-background to-accent/5">
           <div className="container mx-auto px-4">
