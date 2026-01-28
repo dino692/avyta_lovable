@@ -108,6 +108,7 @@ const App = () => (
             <Route path="/blog/pflegegeld-tabelle-2025" element={<PflegegeldTabelle />} />
             <Route path="/blog/entlastungsbetrag-nutzen" element={<EntlastungsbetragNutzen />} />
             <Route path="/blog/kombinationsleistung-pflege" element={<KombinationsleistungPflege />} />
+            <Route path="/karriere" element={<Karriere />} />
             <Route path="/karriere/uebersicht" element={<Jobs />} />
             <Route path="/karriere/pflege-jobs" element={<PflegeJobs />} />
             <Route path="/kontakt" element={<Kontakt />} />
