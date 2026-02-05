@@ -11,8 +11,54 @@ interface NewsletterRequest {
   website?: string; // Honeypot field - should always be empty for legitimate submissions
 }
 
+// Add contact to Brevo list
+async function addToBrevo(email: string, firstName: string, lastName: string): Promise<void> {
+  const brevoApiKey = Deno.env.get("BREVO_API_KEY");
+  const brevoListId = Deno.env.get("BREVO_LIST_ID");
+
+  if (!brevoApiKey) {
+    console.error("BREVO_API_KEY not configured");
+    return;
+  }
+
+  if (!brevoListId) {
+    console.error("BREVO_LIST_ID not configured");
+    return;
+  }
+
+  const listId = parseInt(brevoListId.replace("#", ""), 10);
+
+  try {
+    const response = await fetch("https://api.brevo.com/v3/contacts", {
+      method: "POST",
+      headers: {
+        "api-key": brevoApiKey,
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        attributes: {
+          FIRSTNAME: firstName,
+          LASTNAME: lastName,
+        },
+        listIds: [listId],
+        updateEnabled: true,
+      }),
+    });
+
+    if (response.ok) {
+      console.log("Brevo contact created/updated successfully for:", email);
+    } else {
+      const errorText = await response.text();
+      console.error("Brevo API error:", response.status, errorText);
+    }
+  } catch (error) {
+    console.error("Error adding contact to Brevo:", error);
+  }
+}
+
 const handler = async (req: Request): Promise<Response> => {
-  // Handle CORS preflight
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -20,10 +66,8 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { email, name, website }: NewsletterRequest = await req.json();
 
-    // Honeypot check - if filled, it's likely a bot
     if (website && website.trim() !== "") {
       console.log("Honeypot field filled - likely bot submission, silently rejecting");
-      // Return success to not reveal detection to bots
       return new Response(
         JSON.stringify({ success: true }),
         { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -47,14 +91,15 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Split name into first and last name
     const nameParts = name.trim().split(" ");
     const firstName = nameParts[0] || "";
     const lastName = nameParts.slice(1).join(" ") || "";
 
+    // Add to Brevo in parallel with HubSpot
+    const brevoPromise = addToBrevo(email, firstName, lastName);
+
     console.log("Creating HubSpot contact:", { email, firstName, lastName });
 
-    // Create or update contact in HubSpot
     const response = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
       method: "POST",
       headers: {
@@ -75,17 +120,16 @@ const handler = async (req: Request): Promise<Response> => {
     if (response.ok) {
       const data = await response.json();
       console.log("HubSpot contact created successfully:", data.id);
+      await brevoPromise;
       return new Response(
         JSON.stringify({ success: true, contactId: data.id }),
         { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Check if contact already exists (409 Conflict)
     if (response.status === 409) {
       console.log("Contact already exists, updating...");
       
-      // Search for existing contact
       const searchResponse = await fetch("https://api.hubapi.com/crm/v3/objects/contacts/search", {
         method: "POST",
         headers: {
@@ -108,7 +152,6 @@ const handler = async (req: Request): Promise<Response> => {
         if (searchData.results && searchData.results.length > 0) {
           const contactId = searchData.results[0].id;
           
-          // Update existing contact
           const updateResponse = await fetch(`https://api.hubapi.com/crm/v3/objects/contacts/${contactId}`, {
             method: "PATCH",
             headers: {
@@ -126,6 +169,7 @@ const handler = async (req: Request): Promise<Response> => {
 
           if (updateResponse.ok) {
             console.log("HubSpot contact updated successfully:", contactId);
+            await brevoPromise;
             return new Response(
               JSON.stringify({ success: true, contactId, updated: true }),
               { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -134,7 +178,7 @@ const handler = async (req: Request): Promise<Response> => {
         }
       }
 
-      // Even if update fails, the contact exists
+      await brevoPromise;
       return new Response(
         JSON.stringify({ success: true, message: "Kontakt bereits vorhanden" }),
         { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -143,6 +187,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const errorText = await response.text();
     console.error("HubSpot API error:", response.status, errorText);
+    await brevoPromise;
     return new Response(
       JSON.stringify({ error: "Fehler bei der Registrierung" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
