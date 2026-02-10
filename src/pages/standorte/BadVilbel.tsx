@@ -53,8 +53,8 @@ const BadVilbel = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Bad Vilbel | AVYTA Ambulante Pflege</title>
-        <meta name="description" content="Pflegedienst Bad Vilbel - ganzheitliche und hochqualifizierte Betreuung. Grundpflege, Behandlungspflege, Intensivpflege. 24h erreichbar. Tel: 069 153 914 05" />
+        <title>Pflegedienst Bad Vilbel - der richtige Ansprechpartner</title>
+        <meta name="description" content="Ihr ambulanter Pflegedienst in Bad Vilbel. Wir sind täglich für Sie da und helfen Ihnen im Alltag, ohne dass Sie Ihren Wohnort verlassen müssen. | avyta.de" />
         <script type="application/ld+json">{generateFAQSchema(badVilbelFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
