@@ -56,8 +56,8 @@ const Verhinderungspflege = () => {
   return (
     <>
       <Helmet>
-        <title>Avyta Verhinderungspflege in Frankfurt | Ihre Zeit liegt uns am Herzen | AVYTA</title>
-        <meta name="description" content="Verhinderungspflege in Frankfurt von Avyta. Professionelle Vertretung pflegender Angehöriger bei Urlaub, Krankheit oder Erholung. Grundpflege, Behandlungspflege und Intensivpflege. Jetzt beraten lassen!" />
+        <title>Verhinderungspflege in Frankfurt unkompliziert beantragen.</title>
+        <meta name="description" content="Verhinderungspflege in Frankfurt für mehr Flexibilität. ✓ Der Avyta Pflegedienst übernimmt die Versorgung von Angehörigen, wenn Sie mal verhindert sind." />
         <meta name="keywords" content="Verhinderungspflege Frankfurt, Kurzzeitpflege, Urlaubsvertretung Pflege" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/verhinderungspflege-frankfurt" />
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
