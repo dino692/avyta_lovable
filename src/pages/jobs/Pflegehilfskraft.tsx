@@ -107,8 +107,8 @@ const Pflegehilfskraft = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegehilfskraft Frankfurt | Ihre Chance in der ambulanten Pflege bei AVYTA</title>
-        <meta name="description" content="Pflegehilfskraft in Frankfurt gesucht! Wertvoller Beitrag zur Betreuung pflegebedürftiger Menschen im häuslichen Umfeld. Überdurchschnittliches Gehalt, 30 Urlaubstage, Firmenwagen. Jetzt bewerben!" />
+        <title>Pflegehilfskraft in Frankfurt – Karriere bei Avyta</title>
+        <meta name="description" content="Pflegehilfskraft in Frankfurt ✔ 30 Tage Urlaub & Rentenversicherung ✔ Firmenwagen zur privaten Nutzung ✔ Weiterbildungsmöglichkeiten bei Avyta" />
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
 
