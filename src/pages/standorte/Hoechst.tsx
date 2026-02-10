@@ -54,8 +54,8 @@ const Hoechst = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt Höchst | AVYTA Ambulante Pflege</title>
-        <meta name="description" content="Pflegedienst Frankfurt Höchst - ambulante Pflege für Sie. Grundpflege, Behandlungspflege, Intensivpflege. Pflege mit Herz. Tel: 069 153 914 05" />
+        <title>Pflegedienst Frankfurt Höchst - langjährige Erfahrung</title>
+        <meta name="description" content="Alle Pflegebedürftigen rund um Frankfurt Höchst sind bei uns in guten Händen. Tägliche Versorgung möglich ✓ Rund um die Uhr erreichbar ✓ | avyta.de" />
         <script type="application/ld+json">{generateFAQSchema(hoechstFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
