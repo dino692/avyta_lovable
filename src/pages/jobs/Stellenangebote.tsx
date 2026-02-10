@@ -91,8 +91,8 @@ const Stellenangebote = () => {
   return (
     <>
       <Helmet>
-        <title>Stellenangebote Pflege Frankfurt | Jobs bei AVYTA Pflegedienst</title>
-        <meta name="description" content="Stellenangebote für die Pflege in Frankfurt bei AVYTA. Pflegefachkräfte, Pflegehelfer und Haushaltshilfen gesucht. Übertarifliche Bezahlung, 30 Tage Urlaub, Firmenwagen. Jetzt bewerben!" />
+        <title>Stellenangebote in der Pflege Frankfurt – Willkommen im Team</title>
+        <meta name="description" content="Wir suchen Helfer mit Herz! Werden Sie Teil des familiären Avyta Pflegeteams und arbeiten Sie ambulant an verschiedenen Einsatzorten in Frankfurt." />
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
 
