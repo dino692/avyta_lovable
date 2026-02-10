@@ -16,8 +16,8 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>AVYTA - Ihr Ambulanter Pflegedienst in Frankfurt am Main</title>
-        <meta name="description" content="Hochqualifizierter ambulanter Pflegedienst in Frankfurt am Main. Ganzheitliche Betreuung für Pflegebedürftige: Grundpflege, Behandlungspflege, Intensivpflege, 24-Stunden-Pflege. Auch am Wochenende für Sie da!" />
+        <title>Pflegedienst Frankfurt - ganzheitliche Pflegeleistung</title>
+        <meta name="description" content="Wenn Sie auf der Suche nach einem hochqualifizierten ✅ Pflegedienst in Frankfurt sind, sind Sie hier genau richtig. Mehr Informationen auf | avyta.de" />
         <meta name="keywords" content="Ambulanter Pflegedienst Frankfurt, Pflegedienst Frankfurt am Main, Grundpflege, Behandlungspflege, Intensivpflege, 24 Stunden Pflege, Pflegeberatung Frankfurt" />
         <meta property="og:title" content="AVYTA - Ihr Ambulanter Pflegedienst in Frankfurt am Main" />
         <meta property="og:description" content="Hochqualifizierter ambulanter Pflegedienst in Frankfurt am Main. Ganzheitliche Betreuung für Pflegebedürftige. Wir sind mit Herz an Ihrer Seite." />
