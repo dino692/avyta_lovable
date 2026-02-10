@@ -64,8 +64,8 @@ const Praunheim = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt Praunheim | AVYTA Ambulante Pflege</title>
-        <meta name="description" content="Pflegedienst Frankfurt Praunheim - herzliche Pflege für Selbstbestimmung und Lebensqualität. Grundpflege, Behandlungspflege, Intensivpflege. Tel: 069 153 914 05" />
+        <title>Pflegedienst in Frankfurt Praunheim mit Herz: Avyta</title>
+        <meta name="description" content="Ihr Pflegedienst in Frankfurt Praunheim für medizinische Versorgung und Pflege zu Hause. ✓ Individuelle Pflege für Menschen, die helfende Hände brauchen." />
         <script type="application/ld+json">{generateFAQSchema(praunheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
