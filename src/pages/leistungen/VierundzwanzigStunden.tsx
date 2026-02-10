@@ -73,8 +73,8 @@ const VierundzwanzigStunden = () => {
   return (
     <>
       <Helmet>
-        <title>24 Stunden Pflege in Frankfurt mit Avyta | AVYTA Pflegedienst</title>
-        <meta name="description" content="24 Stunden Pflege in Frankfurt von Avyta. Rund-um-die-Uhr Betreuung zu Hause durch qualifizierte Pflegekräfte. Über 12 Jahre Erfahrung. Jetzt beraten lassen!" />
+        <title>24 Stunden Pflege in Frankfurt – Avyta ist für Sie da</title>
+        <meta name="description" content="Mit einer 24 Stunden Pflege in Frankfurt sind Sie rund um die Uhr versorgt. ✅ Avyta hilft Ihnen auch in schweren Fällen mit Herz und Erfahrung" />
         <meta name="keywords" content="24 Stunden Pflege Frankfurt, Rund um die Uhr Pflege, Häusliche Pflege Frankfurt" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/24-stunden-pflege" />
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
