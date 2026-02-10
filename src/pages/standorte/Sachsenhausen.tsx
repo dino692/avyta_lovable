@@ -54,8 +54,8 @@ const Sachsenhausen = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Sachsenhausen Frankfurt | AVYTA Ambulante Pflege</title>
-        <meta name="description" content="Pflegedienst Sachsenhausen - individuelle Pflege in familiärer Atmosphäre. Grundpflege, Behandlungspflege, Intensivpflege. Mit Herz an Ihrer Seite. Tel: 069 153 914 05" />
+        <title>Pflegedienst Frankfurt Sachsenhausen für Bedürftige</title>
+        <meta name="description" content="Im Bezirk Frankfurt Sachsenhausen sind wir Ihr Pflegedienst des Vertrauens . Grundpflege ✓ Behandlungspflege ✓ Intensivpflege ✓ Mehr auf | avyta.de" />
         <script type="application/ld+json">{generateFAQSchema(sachsenhausenFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
