@@ -53,8 +53,8 @@ const Bockenheim = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt Bockenheim | AVYTA Ambulante Pflege</title>
-        <meta name="description" content="Pflegedienst in Frankfurt Bockenheim - individuelle Pflege in Ihrer gewohnten Umgebung. Grundpflege, Behandlungspflege, Intensivpflege. Tel: 069 153 914 05" />
+        <title>Pflegedienst Bockenheim - gesundheitliche Unterstützung</title>
+        <meta name="description" content="Wenn Sie in der Region Frankfurt Bockenheim zuhause sind und Pflegeleistungen benötigen, dann sind wir zur Stelle. Mehr Informationen auf | avyta.de" />
         <script type="application/ld+json">{generateFAQSchema(bockenheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
