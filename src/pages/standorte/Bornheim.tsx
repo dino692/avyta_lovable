@@ -54,8 +54,8 @@ const Bornheim = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Bornheim Frankfurt | AVYTA Ambulante Pflege</title>
-        <meta name="description" content="Pflegedienst Bornheim - Pflege für Ihre individuellen Bedürfnisse. Grundpflege, Behandlungspflege, Intensivpflege in familiärer Atmosphäre. Tel: 069 153 914 05" />
+        <title>Pflegedienst Bornheim - Deine regionale Betreuung</title>
+        <meta name="description" content="Ihr regionaler Pflegedienstleister in Bornheim. Wir sind von Haus zu Haus unterwegs und betreuen Sie in Ihrem gewohnten Umfeld. Mehr dazu auf | avyta.de" />
         <script type="application/ld+json">{generateFAQSchema(bornheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
