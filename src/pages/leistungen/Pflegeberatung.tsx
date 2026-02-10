@@ -34,8 +34,8 @@ const Pflegeberatung = () => {
   return (
     <>
       <Helmet>
-        <title>Avyta Pflegeberatung in Frankfurt | Unterstützung mit Herz | AVYTA</title>
-        <meta name="description" content="Pflegeberatung in Frankfurt von Avyta. Individuelle Pflegepläne, Unterstützung bei Anträgen und Koordination von Pflegedienstleistungen. Kostenlose Beratung!" />
+        <title>Pflegeberatung in Frankfurt – Avyta mit Herz an Ihrer Seite</title>
+        <meta name="description" content="Jeder Mensch braucht manchmal eine helfende Hand mit Herz. ✓ In unserer Avyta Pflegeberatung in Frankfurt planen wir Pflege nach Ihren Bedürfnissen." />
         <meta name="keywords" content="Pflegeberatung Frankfurt, Pflegeplanung, Häusliche Pflege Beratung" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/pflegeberatung-frankfurt" />
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
