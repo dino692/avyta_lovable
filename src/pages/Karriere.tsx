@@ -67,8 +67,8 @@ const Karriere = () => {
   return (
     <>
       <Helmet>
-        <title>Pflege Jobs Frankfurt | Karriere bei AVYTA Pflegedienst</title>
-        <meta name="description" content="Pflege Jobs in Frankfurt bei AVYTA: Pflegefachkraft, Pflegehelfer, Pflegehilfskraft & Haushaltshilfen gesucht. Übertarifliches Gehalt, 30 Urlaubstage, Firmenwagen. Jetzt bewerben!" />
+        <title>Karriere - Anforderungen und Tätigkeitsfelder bei uns</title>
+        <meta name="description" content="Sie möchten Teil eines tollen Teams werden. ✅ Bei uns herrscht ein angenehmes Betriebsklima mit flachen Hierarchien. Ihren Job entdecken auf | avyta.de" />
         <meta name="keywords" content="Pflege Jobs Frankfurt, Pflegefachkraft Frankfurt, Pflegehelfer Frankfurt, Stellenangebote Pflege Frankfurt" />
         <link rel="canonical" href="https://www.avyta.de/karriere" />
         <script type="application/ld+json">{generateFAQSchema(karriereFaqs)}</script>
