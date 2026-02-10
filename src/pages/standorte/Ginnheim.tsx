@@ -54,8 +54,8 @@ const Ginnheim = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Ginnheim Frankfurt | AVYTA Ambulante Pflege</title>
-        <meta name="description" content="Pflegedienst Ginnheim - häusliche Pflege mit ganzheitlichem Blick. Grundpflege, Behandlungspflege, Intensivpflege. In der Region für Sie unterwegs. Tel: 069 153 914 05" />
+        <title>Pflegedienst in Ginnheim für die häusliche Versorgung</title>
+        <meta name="description" content="Der Avyta Pflegedienst in Ginnheim ist an 365 Tagen im Jahr für Sie im Einsatz. Häusliche Pflege ist mit unserem Einsatz in jeder Situation möglich." />
         <script type="application/ld+json">{generateFAQSchema(ginnheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
