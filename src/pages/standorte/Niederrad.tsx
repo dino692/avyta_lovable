@@ -54,8 +54,8 @@ const Niederrad = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt Niederrad | AVYTA Ambulante Pflege</title>
-        <meta name="description" content="Pflegedienst in Frankfurt Niederrad - Pflege in vertrauter Umgebung. Grundpflege, Behandlungspflege, Intensivpflege. Herzlich und familiär. Tel: 069 153 914 05" />
+        <title>Pflegedienst Niederrad - Hilfe im alltäglichen Leben</title>
+        <meta name="description" content="In Frankfurt Niederrad sind wir für Sie präsent und rund um die Uhr erreichbar. Überzeugen Sie sich von unserem ambulanten Pflegedienst. | avyta.de" />
         <script type="application/ld+json">{generateFAQSchema(niederradFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
