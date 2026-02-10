@@ -107,8 +107,8 @@ const Pflegehelfer = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegehelfer Frankfurt | Karriere bei AVYTA Pflegedienst</title>
-        <meta name="description" content="Pflegehelfer in Frankfurt gesucht! Ambulante Pflege nimmt einen immer größeren Stellenwert ein. Übertarifliches Gehalt, 30 Urlaubstage, Firmenwagen. Jetzt bei AVYTA bewerben!" />
+        <title>Pflegehelfer in Frankfurt gesucht für unser Team von Avyta</title>
+        <meta name="description" content="Ihr Job als ambulanter Pflegehelfer in Frankfurt – sicher, herzlich und vielfältig. Unterstützen Sie unser freundliches Team in Frankfurt und Umgebung." />
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
 
