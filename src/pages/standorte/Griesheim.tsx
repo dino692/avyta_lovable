@@ -54,8 +54,8 @@ const Griesheim = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Griesheim Frankfurt | AVYTA Ambulante Pflege</title>
-        <meta name="description" content="Pflegedienst Griesheim - Individuelle Pflege für Ihre Bedürfnisse. Grundpflege, Behandlungspflege, Intensivpflege. Familiär und mit Herz. Tel: 069 153 914 05" />
+        <title>Pflegedienst Griesheim - flexibel und individuell</title>
+        <meta name="description" content="In Frankfurts Stadtteil Griesheim sind wir für Sie unterwegs. Als ambulanter Pflegedienst können wir Sie in Ihrem täglichen Leben unterstützen. | avyta.de" />
         <script type="application/ld+json">{generateFAQSchema(griesheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
