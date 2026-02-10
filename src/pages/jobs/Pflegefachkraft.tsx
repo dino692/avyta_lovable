@@ -82,8 +82,8 @@ const Pflegefachkraft = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegefachkraft Frankfurt | Chancen, Aufgaben & Perspektiven bei AVYTA</title>
-        <meta name="description" content="Pflegefachkraft in Frankfurt gesucht! Zentrale Verantwortung für Betreuung und Versorgung pflegebedürftiger Menschen. Überdurchschnittliches Gehalt, 30 Urlaubstage, Firmenwagen. Jetzt bewerben!" />
+        <title>Pflegefachkraft in Frankfurt – Karrierechancen bei Avyta</title>
+        <meta name="description" content="Pflegefachkraft in Frankfurt bei Avyta ✔ 30 Tage Urlaub & Rentenversicherung ✔ Toyota Aygo zur privaten Nutzung ✔ Angenehmes Arbeitsumfeld" />
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
 
