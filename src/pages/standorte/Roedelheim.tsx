@@ -41,8 +41,8 @@ const Roedelheim = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Rödelheim Frankfurt | AVYTA Häusliche Krankenpflege</title>
-        <meta name="description" content="Pflegedienst Rödelheim - häusliche Krankenpflege in vertrauter Umgebung. Grundpflege, Behandlungspflege, Intensivpflege. Qualitativ hochwertig. Tel: 069 153 914 05" />
+        <title>Pflegedienst in Rödelheim für die häusliche Pflege</title>
+        <meta name="description" content="Der Avyta Pflegedienst in Rödelheim ermöglicht ein würdevolles Leben in jeder Lebenslage. ✓ Von der Grundpflege bis zur Intensivpflege sind wir für Sie da." />
         <script type="application/ld+json">{generateFAQSchema(roedelheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
