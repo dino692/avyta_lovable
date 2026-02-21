@@ -421,13 +421,39 @@ const Broschuere = () => {
             </div>
           </div>
 
-          {/* Hoffnung / Testimonial */}
-          <div className="bg-primary/5 border border-primary/10 rounded-xl p-3 mb-3">
-            <p className="text-[10px] text-foreground italic leading-relaxed">
-              „Seit AVYTA sich um meine Mutter kümmert, kann ich endlich wieder ruhig schlafen. 
-              Ich weiß, sie ist in den besten Händen."
-            </p>
-            <p className="text-[9px] text-primary font-semibold mt-1.5">— Familie M. aus Frankfurt</p>
+          {/* Testimonials */}
+          <div className="space-y-2 mb-3">
+            <p className="text-[8px] font-semibold text-primary uppercase tracking-wider">Das sagen unsere Patienten & Angehörige</p>
+            {[
+              {
+                quote: "Seit AVYTA sich um meine Mutter kümmert, kann ich endlich wieder ruhig schlafen. Ich weiß, sie ist in den besten Händen.",
+                name: "Familie M.",
+                location: "Frankfurt-Bornheim",
+                img: teamFrauenImg,
+              },
+              {
+                quote: "Die Pflegekräfte sind wie Familie geworden. So viel Herzlichkeit hätten wir nie erwartet.",
+                name: "Herr K.",
+                location: "Bad Vilbel",
+                img: demenzImg,
+              },
+              {
+                quote: "AVYTA hat uns bei der Antragstellung so geholfen – wir hätten sonst tausende Euro an Leistungen verpasst!",
+                name: "Familie S.",
+                location: "Frankfurt-Sachsenhausen",
+                img: teamGroupImg,
+              },
+            ].map((t, i) => (
+              <div key={i} className="flex items-start gap-2 bg-primary/5 border border-primary/10 rounded-lg p-2">
+                <div className="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/20">
+                  <img src={t.img} alt={t.name} className="w-full h-full object-cover object-top" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-[9px] text-foreground italic leading-snug">„{t.quote}"</p>
+                  <p className="text-[8px] text-primary font-semibold mt-0.5">— {t.name}, {t.location}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Karriere */}
