@@ -9,6 +9,9 @@ import grundpflegeImg from "@/assets/services/grundpflege.jpg";
 import behandlungspflegeImg from "@/assets/services/behandlungspflege.jpg";
 import haushaltshilfeImg from "@/assets/services/haushaltshilfe.jpg";
 import pflegeberatungImg from "@/assets/services/pflegeberatung.jpg";
+import vierundzwanzigImg from "@/assets/services/24-stunden-pflege.jpg";
+import verhinderungspflegeImg from "@/assets/services/verhinderungspflege.jpg";
+import intensivpflegeImg from "@/assets/services/intensivpflege.jpg";
 import teamGroupImg from "@/assets/team/team-group.jpg";
 import demenzImg from "@/assets/about/demenz-betreuung.jpg";
 import teamFrauenImg from "@/assets/about/team-frauen.jpg";
@@ -288,17 +291,22 @@ const Broschuere = () => {
             ))}
           </div>
 
-          {/* Additional Services */}
-          <div className="grid grid-cols-2 gap-x-3 gap-y-1 mb-3">
+          {/* Additional Services with images */}
+          <div className="grid grid-cols-2 gap-2 mb-2">
             {[
-              { icon: Clock, t: "24-Stunden-Pflege" },
-              { icon: Heart, t: "Verhinderungspflege" },
-              { icon: Pill, t: "Intensivpflege" },
-              { icon: Users, t: "Pflegeberatung §37.3" },
+              { img: vierundzwanzigImg, title: "24-Stunden-Pflege", desc: "Rund-um-die-Uhr-Betreuung zu Hause" },
+              { img: verhinderungspflegeImg, title: "Verhinderungspflege", desc: "Entlastung für pflegende Angehörige" },
+              { img: intensivpflegeImg, title: "Intensivpflege", desc: "Spezialisierte medizinische Versorgung" },
+              { img: pflegeberatungImg, title: "Pflegeberatung §37.3", desc: "Kostenlose Beratung & Antragshilfe" },
             ].map((s, i) => (
-              <div key={i} className="flex items-center gap-1.5">
-                <s.icon className="w-3 h-3 text-primary flex-shrink-0" />
-                <span className="text-[10px] font-medium text-foreground">{s.t}</span>
+              <div key={i} className="rounded-xl overflow-hidden border border-border/40 bg-white">
+                <div className="h-14 overflow-hidden">
+                  <img src={s.img} alt={s.title} className="w-full h-full object-cover object-top" />
+                </div>
+                <div className="p-1.5">
+                  <p className="text-[9px] font-bold text-foreground">{s.title}</p>
+                  <p className="text-[8px] text-muted-foreground leading-snug">{s.desc}</p>
+                </div>
               </div>
             ))}
           </div>
