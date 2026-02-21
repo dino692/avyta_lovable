@@ -108,8 +108,8 @@ const Broschuere = () => {
           
           <div className="relative z-10 p-6 flex flex-col h-full">
             {/* Teambild */}
-            <div className="rounded-xl overflow-hidden mb-3 h-28">
-              <img src={teamGroupImg} alt="Das AVYTA Team" className="w-full h-full object-cover object-top" />
+            <div className="rounded-xl overflow-hidden mb-3 h-32">
+              <img src={teamGroupImg} alt="Das AVYTA Team" className="w-full h-full object-cover" style={{ objectPosition: 'center 20%' }} />
             </div>
 
             {/* Emotional Hook - Angst → Hoffnung */}
@@ -308,7 +308,7 @@ const Broschuere = () => {
             ].map((s, i) => (
               <div key={i} className="rounded-xl overflow-hidden border border-border/40 bg-white">
                 <div className="h-20 overflow-hidden">
-                  <img src={s.img} alt={s.title} className="w-full h-full object-cover object-top" />
+                  <img src={s.img} alt={s.title} className="w-full h-full object-cover" style={{ objectPosition: 'center 25%' }} />
                 </div>
                 <div className="p-2">
                   <p className="text-[10px] font-bold text-foreground">{s.title}</p>
@@ -327,8 +327,8 @@ const Broschuere = () => {
               { img: pflegeberatungImg, title: "Pflegeberatung §37.3", desc: "Kostenlose Beratung & Antragshilfe" },
             ].map((s, i) => (
               <div key={i} className="rounded-xl overflow-hidden border border-border/40 bg-white">
-                <div className="h-14 overflow-hidden">
-                  <img src={s.img} alt={s.title} className="w-full h-full object-cover object-top" />
+                <div className="h-16 overflow-hidden">
+                  <img src={s.img} alt={s.title} className="w-full h-full object-cover" style={{ objectPosition: 'center 25%' }} />
                 </div>
                 <div className="p-1.5">
                   <p className="text-[9px] font-bold text-foreground">{s.title}</p>
