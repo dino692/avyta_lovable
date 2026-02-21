@@ -106,27 +106,32 @@ const Broschuere = () => {
         <div className="w-1/2 flex flex-col relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-white to-muted/20" />
           
-          <div className="relative z-10 p-7 flex flex-col h-full">
+          <div className="relative z-10 p-6 flex flex-col h-full">
+            {/* Teambild */}
+            <div className="rounded-xl overflow-hidden mb-3 h-28">
+              <img src={teamGroupImg} alt="Das AVYTA Team" className="w-full h-full object-cover object-top" />
+            </div>
+
             {/* Emotional Hook - Angst → Hoffnung */}
-            <div className="bg-primary/5 border border-primary/15 rounded-xl p-3.5 mb-4">
-              <div className="flex items-start gap-2 mb-2">
+            <div className="bg-primary/5 border border-primary/15 rounded-xl p-3 mb-3">
+              <div className="flex items-start gap-2 mb-1.5">
                 <AlertTriangle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-[11px] text-foreground leading-relaxed">
+                <p className="text-[10px] text-foreground leading-relaxed">
                   <strong>Wussten Sie?</strong> Über 80% der pflegenden Angehörigen sind chronisch überlastet. 
                   Viele wissen nicht, dass ihnen <strong>kostenlose Unterstützung</strong> zusteht.
                 </p>
               </div>
-              <p className="text-[10px] text-primary font-semibold ml-6">
+              <p className="text-[9px] text-primary font-semibold ml-6">
                 → Wir helfen Ihnen, alle Ansprüche geltend zu machen.
               </p>
             </div>
 
             {/* Kontaktdaten */}
-            <h3 className="text-base font-bold text-foreground mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h3 className="text-sm font-bold text-foreground mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
               So erreichen Sie uns
             </h3>
             
-            <div className="space-y-2.5 mb-4">
+            <div className="space-y-1.5 mb-3">
               {[
                 { icon: MapPin, label: "Frankfurt", detail: "Allerheiligentor 2-4, 60311 Frankfurt" },
                 { icon: MapPin, label: "Bad Vilbel", detail: "Standort Bad Vilbel" },
@@ -135,27 +140,48 @@ const Broschuere = () => {
                 { icon: Clock, label: "Büro Mo–Fr 8–12 Uhr", detail: "Pflege: 24/7 an 365 Tagen", highlight: true },
               ].map((c, i) => (
                 <div key={i} className="flex items-start gap-2">
-                  <div className="w-6 h-6 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <c.icon className="w-3 h-3 text-primary" />
+                  <div className="w-5 h-5 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <c.icon className="w-2.5 h-2.5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-[10px] font-semibold text-foreground">{c.label}</p>
-                    <p className={`text-[10px] leading-tight ${c.highlight ? 'text-primary font-semibold' : 'text-muted-foreground'}`}>{c.detail}</p>
+                    <p className="text-[9px] font-semibold text-foreground leading-tight">{c.label}</p>
+                    <p className={`text-[9px] leading-tight ${c.highlight ? 'text-primary font-semibold' : 'text-muted-foreground'}`}>{c.detail}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Sprachen */}
-            <div className="bg-muted/30 rounded-lg p-2.5 mb-4">
-              <p className="text-[9px] font-semibold text-primary uppercase tracking-wider mb-0.5">Wir sprechen Ihre Sprache</p>
-              <p className="text-[10px] text-muted-foreground">Deutsch · English · Bosnisch · Kroatisch · Serbisch · Polnisch</p>
+            <div className="bg-muted/30 rounded-lg p-2 mb-3">
+              <p className="text-[8px] font-semibold text-primary uppercase tracking-wider mb-0.5">Wir sprechen Ihre Sprache</p>
+              <p className="text-[9px] text-muted-foreground">Deutsch · English · Bosnisch · Kroatisch · Serbisch · Polnisch</p>
+            </div>
+
+            {/* Google Rating prominent */}
+            <div className="flex items-center gap-3 bg-white border border-border/40 rounded-xl p-2.5 mb-3 shadow-sm">
+              <img src={googleLogo} alt="Google" className="h-7 flex-shrink-0" />
+              <div className="flex items-center gap-1.5">
+                <span className="text-xl font-bold text-foreground">5,0</span>
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+              </div>
+              <p className="text-[8px] text-muted-foreground leading-tight flex-1">Höchstbewertung<br />von unseren Patienten</p>
+            </div>
+
+            {/* Jetzt Beratung sichern CTA */}
+            <div className="bg-primary text-white rounded-xl p-3 mb-3 text-center">
+              <p className="text-[11px] font-bold mb-0.5">Jetzt kostenlose Beratung sichern!</p>
+              <p className="text-[9px] text-white/80">Rufen Sie uns an oder besuchen Sie uns online</p>
+              <p className="text-sm font-bold mt-1">069 153 914 05</p>
             </div>
 
             {/* Partner Logos */}
             <div className="mt-auto">
-              <p className="text-[8px] font-semibold text-muted-foreground uppercase tracking-wider mb-2">Unsere Partner & Krankenkassen</p>
-              <div className="grid grid-cols-4 gap-2 items-center">
+              <p className="text-[7px] font-semibold text-muted-foreground uppercase tracking-wider mb-1.5">Partner & Krankenkassen</p>
+              <div className="grid grid-cols-4 gap-1.5 items-center">
                 {[
                   { src: aokLogo, alt: "AOK" },
                   { src: barmerLogo, alt: "Barmer" },
@@ -166,14 +192,14 @@ const Broschuere = () => {
                   { src: pkvLogo, alt: "PKV" },
                   { src: mdkLogo, alt: "MDK" },
                 ].map((logo, i) => (
-                  <div key={i} className="bg-white rounded-md p-1.5 flex items-center justify-center h-8 border border-border/30">
-                    <img src={logo.src} alt={logo.alt} className="max-h-5 max-w-full object-contain" />
+                  <div key={i} className="bg-white rounded p-1 flex items-center justify-center h-7 border border-border/30">
+                    <img src={logo.src} alt={logo.alt} className="max-h-4 max-w-full object-contain" />
                   </div>
                 ))}
               </div>
-              <div className="mt-2 pt-2 border-t border-border/30 flex items-center justify-between">
-                <p className="text-[8px] text-muted-foreground">IK Nr.: 462645797 · © {new Date().getFullYear()} AVYTA GmbH</p>
-                <p className="text-[9px] font-semibold text-primary">www.avyta.de</p>
+              <div className="mt-1.5 pt-1.5 border-t border-border/30 flex items-center justify-between">
+                <p className="text-[7px] text-muted-foreground">IK Nr.: 462645797 · © {new Date().getFullYear()} AVYTA GmbH</p>
+                <p className="text-[8px] font-semibold text-primary">www.avyta.de</p>
               </div>
             </div>
           </div>
