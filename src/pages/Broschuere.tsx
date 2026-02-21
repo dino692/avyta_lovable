@@ -277,8 +277,8 @@ const Broschuere = () => {
               { img: demenzImg, title: "Betreuung & Begleitung", desc: "Spaziergänge, Arztbesuche, Demenzbetreuung" },
             ].map((s, i) => (
               <div key={i} className="rounded-xl overflow-hidden border border-border/40 bg-white">
-                <div className="h-14 overflow-hidden flex items-center justify-center">
-                  <img src={s.img} alt={s.title} className="w-full h-full object-cover object-center" />
+                <div className="h-20 overflow-hidden">
+                  <img src={s.img} alt={s.title} className="w-full h-full object-cover object-top" />
                 </div>
                 <div className="p-2">
                   <p className="text-[10px] font-bold text-foreground">{s.title}</p>
@@ -355,8 +355,8 @@ const Broschuere = () => {
         <div className="w-1/2 p-6 flex flex-col overflow-hidden">
           {/* Team Image + Trust */}
           <div className="flex gap-2.5 mb-3">
-            <div className="w-[90px] h-[70px] rounded-xl overflow-hidden flex-shrink-0">
-              <img src={teamFrauenImg} alt="AVYTA Team" className="w-full h-full object-cover object-center" />
+            <div className="w-[90px] h-[80px] rounded-xl overflow-hidden flex-shrink-0">
+              <img src={teamFrauenImg} alt="AVYTA Team" className="w-full h-full object-cover object-top" />
             </div>
             <div className="flex-1">
               <h2 className="text-base font-bold text-foreground mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
