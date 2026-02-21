@@ -25,6 +25,7 @@ import vdekLogo from "@/assets/partners/vdek-logo.jpg";
 import gkvLogo from "@/assets/partners/gkv-logo.svg";
 import pkvLogo from "@/assets/partners/pkv-logo.png";
 import mdkLogo from "@/assets/partners/mdk-logo.webp";
+import googleLogo from "@/assets/partners/google-logo.png";
 
 const Broschuere = () => {
   return (
@@ -376,12 +377,25 @@ const Broschuere = () => {
             </div>
           </div>
 
+          {/* Google Bewertung Highlight */}
+          <div className="bg-white border-2 border-primary/20 rounded-xl p-3 mb-2.5 flex items-center gap-3 shadow-sm">
+            <img src={googleLogo} alt="Google" className="w-8 h-8 flex-shrink-0" />
+            <div className="flex-1">
+              <div className="flex items-center gap-1 mb-0.5">
+                {[1,2,3,4,5].map(i => (
+                  <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                ))}
+                <span className="text-base font-bold text-foreground ml-1">5,0</span>
+              </div>
+              <p className="text-[9px] text-muted-foreground">Höchstbewertung auf Google – von zufriedenen Patienten & Angehörigen</p>
+            </div>
+          </div>
+
           {/* Trust Points */}
-          <div className="space-y-1.5 mb-3">
+          <div className="space-y-1.5 mb-2.5">
             {[
               { t: "Inhabergeführt & familiär", d: "Persönlicher Kontakt, keine anonyme Großorganisation" },
               { t: "MDK-Bestnote 1,6", d: "Geprüfte Qualität durch den Medizinischen Dienst" },
-              { t: "5,0 ★ Google-Bewertung", d: "Zufriedene Patienten und Angehörige" },
               { t: "Feste Bezugspersonen", d: "Kein ständiger Wechsel – immer vertraute Gesichter" },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-1.5">
