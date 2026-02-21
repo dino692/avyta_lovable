@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Phone, Mail, Heart, Shield, Clock, Users, MapPin, Star, CheckCircle, ArrowRight, Briefcase, Car, GraduationCap, Smile, Home, Utensils, Stethoscope, Pill, HandHelping } from "lucide-react";
+import { Phone, Mail, Heart, Shield, Clock, Users, MapPin, Star, CheckCircle, Briefcase, Car, GraduationCap, Smile, Home, Utensils, Stethoscope, Pill, HandHelping, Download, Printer, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import avytaLogo from "@/assets/avyta-logo.png";
 
@@ -15,8 +15,14 @@ const Broschuere = () => {
       <style>{`
         @media print {
           @page {
-            size: A4;
-            margin: 12mm;
+            size: A4 landscape;
+            margin: 0;
+          }
+          html, body {
+            margin: 0;
+            padding: 0;
+            width: 297mm;
+            height: 210mm;
           }
           body {
             -webkit-print-color-adjust: exact !important;
@@ -25,454 +31,353 @@ const Broschuere = () => {
           .no-print {
             display: none !important;
           }
-          .print-break {
-            page-break-before: always;
+          .print-page {
+            width: 297mm;
+            height: 210mm;
+            page-break-after: always;
+            page-break-inside: avoid;
+            overflow: hidden;
+          }
+          .print-page:last-child {
+            page-break-after: auto;
+          }
+        }
+        @media screen {
+          .print-page {
+            width: 297mm;
+            height: 210mm;
+            margin: 20px auto;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+            overflow: hidden;
           }
         }
       `}</style>
 
-      {/* Print Button */}
-      <div className="no-print fixed top-4 right-4 z-50 flex gap-2">
-        <Button 
-          onClick={() => window.print()} 
-          className="bg-primary hover:bg-primary/90 shadow-lg"
-        >
-          Als PDF speichern / Drucken
-        </Button>
-        <Button 
-          variant="outline" 
-          onClick={() => window.history.back()}
-        >
-          Zurück
-        </Button>
+      {/* Toolbar */}
+      <div className="no-print sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border/50 px-4 py-3">
+        <div className="max-w-[297mm] mx-auto flex items-center justify-between">
+          <Button variant="ghost" size="sm" onClick={() => window.history.back()} className="gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Zurück
+          </Button>
+          <div className="flex gap-2">
+            <Button onClick={() => window.print()} className="gap-2 bg-primary hover:bg-primary/90">
+              <Printer className="w-4 h-4" />
+              Drucken / Als PDF speichern
+            </Button>
+          </div>
+        </div>
       </div>
 
-      <div className="min-h-screen bg-white font-sans">
+      <div className="no-print text-center py-4 text-sm text-muted-foreground">
+        <p>Vorschau der Broschüre (DIN A4 Querformat, 2 Seiten = 4 Felder beim Falten)</p>
+        <p className="text-xs mt-1">Drücken Sie <strong>Strg+P</strong> oder klicken Sie auf „Drucken", um die Broschüre als PDF zu speichern.</p>
+      </div>
 
-        {/* ==================== PAGE 1: COVER ==================== */}
-        <section className="min-h-[297mm] p-8 md:p-12 flex flex-col relative overflow-hidden">
-          {/* Decorative background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-accent/3" />
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary/8 blur-[100px]" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-accent/6 blur-[80px]" />
+      {/* ===== SEITE 1 (Außenseite): Deckblatt links + Rückseite rechts ===== */}
+      <div className="print-page bg-white relative flex" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+        {/* Falzlinie */}
+        <div className="absolute top-0 bottom-0 left-1/2 -translate-x-px w-px border-l border-dashed border-gray-200 z-10 no-print" />
+
+        {/* LINKE HÄLFTE = Rückseite (wird beim Falten zur Rückseite) */}
+        <div className="w-1/2 p-8 flex flex-col relative overflow-hidden">
+          {/* Decorative bg */}
+          <div className="absolute inset-0 bg-gradient-to-br from-muted/40 to-white" />
+          <div className="absolute top-0 left-0 w-40 h-40 bg-primary/5 rounded-full blur-[60px]" />
           
-          {/* Decorative shape */}
-          <div className="absolute top-20 right-8 w-32 h-32 border-[3px] border-primary/10 rounded-3xl rotate-12" />
-          <div className="absolute bottom-40 right-20 w-20 h-20 border-[3px] border-accent/10 rounded-full" />
-
-          {/* Header */}
-          <div className="flex justify-between items-center mb-16 relative z-10">
-            <img src={avytaLogo} alt="AVYTA Logo" className="h-14 md:h-20" />
-            <div className="text-right">
-              <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">Ambulanter Pflegedienst</p>
-              <p className="text-sm text-muted-foreground">Frankfurt am Main & Bad Vilbel</p>
-            </div>
-          </div>
-
-          {/* Hero Content */}
-          <div className="flex-1 flex flex-col justify-center max-w-3xl relative z-10">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 rounded-full w-fit mb-8">
-              <Heart className="w-4 h-4 text-primary" />
-              <span className="text-sm font-semibold text-primary">Persönlich. Zuverlässig. Vor Ort.</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground leading-[1.1] mb-6">
-              Ihre Pflege{" "}
-              <span className="text-primary">in</span>
-              <br />
-              <span className="text-primary">vertrauten Händen</span>
-            </h1>
-            
-            <p className="text-xl text-muted-foreground mb-10 max-w-xl leading-relaxed">
-              Wir begleiten Sie und Ihre Angehörigen mit Herz und Kompetenz – 
-              für ein selbstbestimmtes Leben in Ihrem Zuhause.
-            </p>
-
-            {/* Stats Row */}
-            <div className="grid grid-cols-4 gap-4">
-              {[
-                { value: "12+", label: "Jahre Erfahrung" },
-                { value: "20+", label: "Mitarbeiter" },
-                { value: "5,0", label: "Google Bewertung", icon: Star },
-                { value: "24/7", label: "Erreichbar" },
-              ].map((stat, i) => (
-                <div key={i} className="text-center p-4 bg-white/70 backdrop-blur rounded-2xl border border-primary/10 shadow-sm">
-                  <div className="text-2xl md:text-3xl font-bold text-primary flex items-center justify-center gap-1">
-                    {stat.value}
-                    {stat.icon && <stat.icon className="w-4 h-4 fill-primary text-primary" />}
+          <div className="relative z-10 flex flex-col h-full">
+            {/* Kontakt */}
+            <div className="mb-auto">
+              <h3 className="text-lg font-bold text-foreground mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Kontakt & Standorte
+              </h3>
+              
+              <div className="space-y-3 mb-6">
+                <div className="flex items-start gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <MapPin className="w-4 h-4 text-primary" />
                   </div>
-                  <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
+                  <div>
+                    <p className="text-xs font-bold text-foreground">Standort Frankfurt</p>
+                    <p className="text-[11px] text-muted-foreground">Bürgeler Str. 3, 60386 Frankfurt</p>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Bottom CTA Bar */}
-          <div className="bg-primary text-primary-foreground rounded-2xl p-6 md:p-8 relative z-10 shadow-xl mt-10">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div>
-                <h2 className="text-2xl font-display font-bold mb-1">Jetzt kostenlos beraten lassen!</h2>
-                <p className="text-primary-foreground/70 text-sm">Wir sind 365 Tage im Jahr für Sie da</p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a href="tel:+496915391405" className="flex items-center gap-3 bg-white text-primary px-6 py-3.5 rounded-xl font-bold hover:bg-white/90 transition-colors">
-                  <Phone className="w-5 h-5" />
-                  <div className="text-left">
-                    <div className="text-[10px] text-primary/60 uppercase tracking-wider">Telefon</div>
-                    <div className="text-lg leading-tight">069 153 914 05</div>
+                <div className="flex items-start gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <MapPin className="w-4 h-4 text-primary" />
                   </div>
-                </a>
-                <a href="mailto:info@avyta.de" className="flex items-center gap-3 bg-white/15 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-white/25 transition-colors border border-white/20">
-                  <Mail className="w-5 h-5" />
-                  <div className="text-left">
-                    <div className="text-[10px] text-white/60 uppercase tracking-wider">E-Mail</div>
-                    <div className="text-lg leading-tight">info@avyta.de</div>
+                  <div>
+                    <p className="text-xs font-bold text-foreground">Standort Bad Vilbel</p>
+                    <p className="text-[11px] text-muted-foreground">Frankfurter Str. 59, 61118 Bad Vilbel</p>
                   </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ==================== PAGE 2: LEISTUNGEN ==================== */}
-        <section className="min-h-[297mm] p-8 md:p-12 print-break">
-          {/* Section Header */}
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
-              <Stethoscope className="w-4 h-4 text-primary" />
-              <span className="text-xs font-semibold text-primary uppercase tracking-wider">Unser Leistungsspektrum</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-3">
-              Unsere <span className="text-primary">Leistungen</span> im Überblick
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Von der Grundpflege bis zur Intensivpflege – wir bieten Ihnen umfassende 
-              Versorgung für jede Pflegesituation.
-            </p>
-          </div>
-
-          {/* Main Services Grid */}
-          <div className="grid md:grid-cols-2 gap-5 mb-8">
-            {[
-              {
-                icon: Heart,
-                title: "Individuelle Körperpflege",
-                description: "Unterstützung bei der täglichen Hygieneroutine: Bad, Dusche, Haarpflege, Rasieren, Zähneputzen und Mundspülung.",
-                tag: "Grundpflege"
-              },
-              {
-                icon: Pill,
-                title: "Medikamentengabe",
-                description: "Sichere und zuverlässige Medikamentengabe nach ärztlicher Anordnung. Verblistert und kontrolliert durch Fachpersonal.",
-                tag: "Behandlungspflege"
-              },
-              {
-                icon: Utensils,
-                title: "Hilfe bei der Nahrungsaufnahme",
-                description: "Unterstützung beim Essen und Trinken, Vorbereitung von Mahlzeiten und das Anrichten von Speisen.",
-                tag: "Hauswirtschaft"
-              },
-              {
-                icon: Home,
-                title: "Haushaltsservice",
-                description: "Staubsaugen, Wischen, Bügeln, Fensterputzen, Reinigung von Bad und Küche. Ein- oder zweimal pro Woche.",
-                tag: "Haushaltshilfe"
-              },
-              {
-                icon: Users,
-                title: "Spaziergänge & Begleitung",
-                description: "Regelmäßige körperliche Aktivität sowie Begleitung bei Spaziergängen im Freien und zu Arztterminen.",
-                tag: "Betreuung"
-              },
-              {
-                icon: Clock,
-                title: "24-Stunden-Betreuung",
-                description: "Rund-um-die-Uhr-Betreuung in vertrauter häuslicher Umgebung. Individuell auf Ihre Bedürfnisse zugeschnitten.",
-                tag: "Intensivpflege"
-              },
-            ].map((service, i) => (
-              <div key={i} className="group relative p-5 rounded-2xl border border-border/60 bg-gradient-to-br from-white to-muted/30 hover:shadow-md transition-all">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/15 transition-colors">
-                    <service.icon className="w-6 h-6 text-primary" />
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Phone className="w-4 h-4 text-primary" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <h3 className="font-bold text-foreground text-lg">{service.title}</h3>
-                    </div>
-                    <span className="inline-block text-[10px] font-semibold text-primary bg-primary/10 px-2.5 py-0.5 rounded-full uppercase tracking-wider mb-2">
-                      {service.tag}
-                    </span>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+                  <div>
+                    <p className="text-xs font-bold text-foreground">Telefon</p>
+                    <p className="text-[11px] text-primary font-semibold">069 153 914 05</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Mail className="w-4 h-4 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-foreground">E-Mail</p>
+                    <p className="text-[11px] text-primary font-semibold">info@avyta.de</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Clock className="w-4 h-4 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-foreground">Erreichbarkeit</p>
+                    <p className="text-[11px] text-muted-foreground">Büro: Mo–Fr 8–12 Uhr</p>
+                    <p className="text-[11px] text-primary font-semibold">Pflege: 24/7 an 365 Tagen</p>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
 
-          {/* Additional Services */}
-          <div className="bg-muted/40 rounded-2xl p-6 mb-8">
-            <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-primary" />
-              Weitere Leistungen
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              {[
-                "Verhinderungspflege",
-                "Pflegeberatung nach §37.3",
-                "Demenzbetreuung",
-                "Palliativpflege",
-                "Betreuungsleistungen",
-                "Einkaufsservice"
-              ].map((s, i) => (
-                <div key={i} className="flex items-center gap-2 text-sm">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-                  <span className="text-foreground">{s}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Pflegeberatung Highlight */}
-          <div className="bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-2xl p-6 md:p-8">
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
-                <HandHelping className="w-8 h-8 text-white" />
-              </div>
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-xl font-display font-bold mb-2">Beratungseinsatz nach §37.3</h3>
-                <p className="text-primary-foreground/80 text-sm leading-relaxed">
-                  Pflegebedürftige mit Pflegegrad, die ausschließlich von Angehörigen oder ehrenamtlichen 
-                  Helfern betreut werden, müssen regelmäßig einen ambulanten Pflegedienst in Anspruch nehmen. 
-                  Wir übernehmen das Beratungsgespräch und den Nachweis gegenüber der Pflegekasse.
+              {/* Sprachen */}
+              <div className="bg-primary/5 rounded-xl p-3 mb-4">
+                <p className="text-[10px] font-semibold text-primary uppercase tracking-wider mb-1">Wir sprechen</p>
+                <p className="text-[11px] text-muted-foreground leading-relaxed">
+                  Deutsch · Rumänisch · Bulgarisch · Griechisch · Serbisch · Kroatisch
                 </p>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* ==================== PAGE 3: KOSTENÜBERNAHME & ÜBER UNS ==================== */}
-        <section className="min-h-[297mm] p-8 md:p-12 print-break">
-          {/* Kostenübernahme */}
-          <div className="mb-10">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">
-                Kostenübernahme durch <span className="text-primary">Pflegekasse</span>
-              </h2>
-              <p className="text-muted-foreground max-w-xl mx-auto text-sm">
-                Viele unserer Leistungen werden von der Pflegekasse übernommen. Wir beraten Sie gerne 
-                zu Ihren individuellen Ansprüchen.
+            {/* Footer */}
+            <div className="pt-3 border-t border-border/50 flex items-center justify-between">
+              <div>
+                <p className="text-[10px] text-muted-foreground">IK Nr.: 462647061</p>
+                <p className="text-[10px] text-muted-foreground">© {new Date().getFullYear()} AVYTA GmbH</p>
+              </div>
+              <p className="text-[11px] font-semibold text-primary">www.avyta.de</p>
+            </div>
+          </div>
+        </div>
+
+        {/* RECHTE HÄLFTE = Deckblatt (Titelseite) */}
+        <div className="w-1/2 relative overflow-hidden">
+          {/* Full background gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-accent" />
+          <div className="absolute top-0 right-0 w-60 h-60 bg-white/10 rounded-full blur-[80px]" />
+          <div className="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full blur-[60px]" />
+          
+          {/* Decorative shapes */}
+          <div className="absolute top-16 right-8 w-24 h-24 border-2 border-white/10 rounded-2xl rotate-12" />
+          <div className="absolute bottom-32 right-16 w-16 h-16 border-2 border-white/10 rounded-full" />
+
+          <div className="relative z-10 p-8 flex flex-col h-full text-white">
+            {/* Logo */}
+            <div className="mb-auto">
+              <img src={avytaLogo} alt="AVYTA" className="h-12 brightness-0 invert" />
+            </div>
+            
+            {/* Main content */}
+            <div className="mb-auto">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/15 rounded-full mb-5">
+                <Heart className="w-3 h-3" />
+                <span className="text-[10px] font-semibold uppercase tracking-wider">Ambulanter Pflegedienst</span>
+              </div>
+              
+              <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Ihre Pflege
+                <br />
+                in vertrauten
+                <br />
+                Händen
+              </h1>
+              
+              <p className="text-sm text-white/80 leading-relaxed max-w-[220px] mb-8">
+                Professionelle häusliche Pflege in Frankfurt am Main und Bad Vilbel – 
+                persönlich, zuverlässig, vor Ort.
               </p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              {[
-                { grade: "Pflegegrad 1", amount: "131€", label: "Entlastungsbetrag" },
-                { grade: "Pflegegrad 2", amount: "761€", label: "Sachleistung" },
-                { grade: "Pflegegrad 3", amount: "1.432€", label: "Sachleistung" },
-                { grade: "Pflegegrad 4", amount: "1.778€", label: "Sachleistung" },
-                { grade: "Pflegegrad 5", amount: "2.200€", label: "Sachleistung" },
-              ].map((item, i) => (
-                <div key={i} className="text-center p-4 bg-white rounded-2xl shadow-sm border border-primary/10">
-                  <div className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full inline-block mb-2">{item.grade}</div>
-                  <div className="text-2xl font-bold text-foreground">{item.amount}</div>
-                  <div className="text-xs text-muted-foreground">{item.label}/Monat</div>
-                </div>
-              ))}
-            </div>
-            <p className="text-center text-xs text-muted-foreground mt-3">
-              * Wir übernehmen die Antragstellung bei Ihrer Pflegekasse und beraten Sie unverbindlich.
-            </p>
-          </div>
 
-          {/* Warum AVYTA */}
-          <div className="grid md:grid-cols-2 gap-10 mb-10">
-            <div>
-              <h2 className="text-3xl font-display font-bold text-foreground mb-6">
-                Warum <span className="text-primary">AVYTA</span>?
-              </h2>
-              <div className="space-y-4">
+              {/* Stats */}
+              <div className="grid grid-cols-2 gap-2.5">
                 {[
-                  { title: "Familiärer Pflegedienst", desc: "Inhabergeführt mit persönlichem Kontakt und kurzen Entscheidungswegen." },
-                  { title: "Qualifiziertes Team", desc: "Über 20 Mitarbeiter mit langjähriger Erfahrung und regelmäßigen Fortbildungen." },
-                  { title: "Flexibel & Individuell", desc: "Wir passen uns Ihren Bedürfnissen an – zeitlich und inhaltlich." },
-                  { title: "Mehrsprachig", desc: "Wir sprechen Deutsch, Rumänisch, Bulgarisch, Griechisch, Serbisch, Kroatisch und weitere Sprachen." },
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <CheckCircle className="w-4 h-4 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-foreground text-sm">{item.title}</h4>
-                      <p className="text-xs text-muted-foreground">{item.desc}</p>
-                    </div>
+                  { val: "12+", label: "Jahre Erfahrung" },
+                  { val: "20+", label: "Mitarbeiter" },
+                  { val: "5,0 ★", label: "Google Rating" },
+                  { val: "24/7", label: "Erreichbar" },
+                ].map((s, i) => (
+                  <div key={i} className="bg-white/10 backdrop-blur rounded-xl p-2.5 text-center">
+                    <div className="text-lg font-bold">{s.val}</div>
+                    <div className="text-[9px] text-white/70 uppercase tracking-wider">{s.label}</div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Einzugsgebiet */}
-            <div>
-              <h2 className="text-3xl font-display font-bold text-foreground mb-6">
-                Unser <span className="text-primary">Einzugsgebiet</span>
-              </h2>
-              <div className="bg-muted/30 rounded-2xl p-5 border border-border/50">
-                <div className="flex items-center gap-2 mb-4">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <span className="font-bold text-foreground">Frankfurt am Main & Bad Vilbel</span>
-                </div>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-sm">
-                  {[
-                    "Bockenheim", "Bornheim", "Sachsenhausen", "Nordend",
-                    "Westend", "Ostend", "Griesheim", "Höchst",
-                    "Niederrad", "Rödelheim", "Ginnheim", "Praunheim",
-                    "Eschersheim", "Dornbusch", "Heddernheim", "Bad Vilbel"
-                  ].map((d, i) => (
-                    <div key={i} className="flex items-center gap-1.5">
-                      <div className="w-1 h-1 rounded-full bg-primary" />
-                      <span className="text-foreground text-xs">{d}</span>
-                    </div>
-                  ))}
-                </div>
+            {/* CTA */}
+            <div className="bg-white/15 backdrop-blur rounded-xl p-3 flex items-center gap-3">
+              <Phone className="w-5 h-5 flex-shrink-0" />
+              <div>
+                <p className="text-[10px] text-white/60 uppercase tracking-wider">Kostenlose Beratung</p>
+                <p className="text-base font-bold">069 153 914 05</p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Trust Badges */}
-          <div className="flex flex-wrap justify-center gap-8 mb-10">
+      {/* ===== SEITE 2 (Innenseite): Leistungen + Karriere ===== */}
+      <div className="print-page bg-white relative flex" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+        {/* Falzlinie */}
+        <div className="absolute top-0 bottom-0 left-1/2 -translate-x-px w-px border-l border-dashed border-gray-200 z-10 no-print" />
+
+        {/* LINKE HÄLFTE = Leistungen */}
+        <div className="w-1/2 p-7 flex flex-col overflow-hidden">
+          <div className="mb-4">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary/10 rounded-full mb-3">
+              <Stethoscope className="w-3 h-3 text-primary" />
+              <span className="text-[9px] font-semibold text-primary uppercase tracking-wider">Leistungsüberblick</span>
+            </div>
+            <h2 className="text-xl font-bold text-foreground leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Unsere <span className="text-primary">Leistungen</span>
+            </h2>
+          </div>
+
+          {/* Service List */}
+          <div className="space-y-2.5 mb-5">
             {[
-              { icon: Shield, label: "MDK Note 1,6" },
-              { icon: Star, label: "5,0 Google Rating" },
-              { icon: Clock, label: "Pflege 24/7" },
-              { icon: Heart, label: "12+ Jahre Erfahrung" },
-            ].map((badge, i) => (
-              <div key={i} className="text-center">
-                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-2">
-                  <badge.icon className="w-7 h-7 text-primary" />
+              { icon: Heart, title: "Individuelle Körperpflege", desc: "Bad, Dusche, Haarpflege, Rasieren, Zähneputzen, Mundpflege" },
+              { icon: Pill, title: "Medikamentengabe", desc: "Sichere Medikation nach ärztlicher Anordnung, verblistert" },
+              { icon: Utensils, title: "Hilfe bei der Nahrungsaufnahme", desc: "Essen & Trinken, Zubereitung, Anrichten von Mahlzeiten" },
+              { icon: Home, title: "Haushaltsservice", desc: "Reinigung, Wäsche, Einkauf – 1-2x pro Woche" },
+              { icon: Users, title: "Spaziergänge & Begleitung", desc: "Arztbesuche, Freizeitaktivitäten, Bewegung an der frischen Luft" },
+              { icon: Clock, title: "24-Stunden-Betreuung", desc: "Rund-um-die-Uhr-Versorgung in Ihrem Zuhause" },
+            ].map((s, i) => (
+              <div key={i} className="flex items-start gap-2.5">
+                <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <s.icon className="w-3.5 h-3.5 text-primary" />
                 </div>
-                <div className="text-xs font-semibold text-foreground">{badge.label}</div>
+                <div>
+                  <p className="text-[11px] font-bold text-foreground leading-tight">{s.title}</p>
+                  <p className="text-[10px] text-muted-foreground leading-snug">{s.desc}</p>
+                </div>
               </div>
             ))}
           </div>
 
-          {/* Karriere / Mitarbeitersuche Section */}
-          <div className="bg-foreground text-background rounded-2xl p-6 md:p-8 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 rounded-full blur-[60px]" />
+          {/* Weitere Leistungen */}
+          <div className="bg-muted/40 rounded-xl p-3 mb-4">
+            <p className="text-[10px] font-bold text-foreground mb-1.5">Weitere Leistungen:</p>
+            <div className="grid grid-cols-2 gap-x-3 gap-y-1">
+              {["Verhinderungspflege", "Pflegeberatung §37.3", "Demenzbetreuung", "Palliativpflege", "Intensivpflege", "Betreuungsleistungen"].map((s, i) => (
+                <div key={i} className="flex items-center gap-1.5">
+                  <div className="w-1 h-1 rounded-full bg-primary flex-shrink-0" />
+                  <span className="text-[10px] text-foreground">{s}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Kostenübernahme */}
+          <div className="mt-auto">
+            <p className="text-[10px] font-bold text-foreground mb-2">Kostenübernahme durch Pflegekasse:</p>
+            <div className="grid grid-cols-5 gap-1.5">
+              {[
+                { g: "PG 1", a: "131€" },
+                { g: "PG 2", a: "761€" },
+                { g: "PG 3", a: "1.432€" },
+                { g: "PG 4", a: "1.778€" },
+                { g: "PG 5", a: "2.200€" },
+              ].map((p, i) => (
+                <div key={i} className="text-center bg-primary/5 rounded-lg p-1.5">
+                  <div className="text-[8px] font-semibold text-primary">{p.g}</div>
+                  <div className="text-[11px] font-bold text-foreground">{p.a}</div>
+                  <div className="text-[7px] text-muted-foreground">/Monat</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* RECHTE HÄLFTE = Warum AVYTA + Karriere */}
+        <div className="w-1/2 p-7 flex flex-col overflow-hidden">
+          {/* Warum AVYTA */}
+          <div className="mb-5">
+            <h2 className="text-xl font-bold text-foreground mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Warum <span className="text-primary">AVYTA</span>?
+            </h2>
+            <div className="space-y-2">
+              {[
+                { t: "Familiärer Pflegedienst", d: "Inhabergeführt, persönlicher Kontakt, kurze Wege" },
+                { t: "Qualifiziertes Team", d: "20+ Mitarbeiter mit Erfahrung und Fortbildungen" },
+                { t: "Flexibel & Individuell", d: "Angepasst an Ihre Bedürfnisse – zeitlich und inhaltlich" },
+                { t: "MDK Note 1,6", d: "Geprüfte Qualität durch den Medizinischen Dienst" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  <CheckCircle className="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="text-[11px] font-bold text-foreground">{item.t}</span>
+                    <span className="text-[10px] text-muted-foreground"> – {item.d}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Einzugsgebiet */}
+          <div className="bg-muted/30 rounded-xl p-3 mb-5">
+            <div className="flex items-center gap-1.5 mb-2">
+              <MapPin className="w-3.5 h-3.5 text-primary" />
+              <span className="text-[10px] font-bold text-foreground">Einzugsgebiet: Frankfurt & Bad Vilbel</span>
+            </div>
+            <div className="grid grid-cols-3 gap-x-2 gap-y-0.5">
+              {["Bockenheim", "Bornheim", "Sachsenhausen", "Nordend", "Westend", "Ostend", "Griesheim", "Höchst", "Niederrad", "Rödelheim", "Ginnheim", "Eschersheim", "Dornbusch", "Heddernheim", "Bad Vilbel"].map((d, i) => (
+                <span key={i} className="text-[9px] text-muted-foreground">{d}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* Karriere */}
+          <div className="mt-auto bg-foreground text-white rounded-2xl p-5 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-primary/30 rounded-full blur-[40px]" />
             <div className="relative z-10">
-              <div className="flex items-center gap-2 mb-4">
-                <Briefcase className="w-5 h-5 text-primary" />
-                <span className="text-xs font-semibold text-primary uppercase tracking-wider">Karriere bei AVYTA</span>
+              <div className="flex items-center gap-1.5 mb-2">
+                <Briefcase className="w-3.5 h-3.5 text-primary" />
+                <span className="text-[9px] font-semibold text-primary uppercase tracking-wider">Karriere bei AVYTA</span>
               </div>
-              <h3 className="text-2xl md:text-3xl font-display font-bold mb-3">
-                Werden Sie Teil unseres <span className="text-primary">Teams!</span>
+              <h3 className="text-base font-bold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Werden Sie Teil unseres Teams!
               </h3>
-              <p className="text-background/70 text-sm mb-6 max-w-2xl leading-relaxed">
-                Wir suchen engagierte Pflegefachkräfte, Pflegehilfskräfte und Haushaltshilfen 
-                für unser wachsendes Team in Frankfurt und Bad Vilbel.
+              <p className="text-[10px] text-white/70 mb-3 leading-relaxed">
+                Wir suchen Pflegefachkräfte, Pflegehilfskräfte und Haushaltshilfen.
               </p>
-              <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+              <div className="grid grid-cols-2 gap-1.5 mb-3">
                 {[
-                  { icon: Car, text: "Firmenwagen zur privaten Nutzung" },
-                  { icon: GraduationCap, text: "Fort- und Weiterbildungen" },
-                  { icon: Smile, text: "30 Tage Urlaub" },
-                  { icon: Heart, text: "Betriebliche Altersvorsorge" },
-                ].map((benefit, i) => (
-                  <div key={i} className="flex items-center gap-2 bg-white/10 rounded-xl p-3">
-                    <benefit.icon className="w-4 h-4 text-primary flex-shrink-0" />
-                    <span className="text-xs text-background/90">{benefit.text}</span>
+                  { icon: Car, t: "Firmenwagen privat" },
+                  { icon: GraduationCap, t: "Weiterbildungen" },
+                  { icon: Smile, t: "30 Tage Urlaub" },
+                  { icon: Heart, t: "Betriebliche AV" },
+                ].map((b, i) => (
+                  <div key={i} className="flex items-center gap-1.5 bg-white/10 rounded-lg px-2 py-1.5">
+                    <b.icon className="w-3 h-3 text-primary flex-shrink-0" />
+                    <span className="text-[9px] text-white/90">{b.t}</span>
                   </div>
                 ))}
               </div>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a href="tel:+496915391405" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-xl font-bold text-sm hover:bg-primary/90 transition-colors">
-                  <Phone className="w-4 h-4" />
-                  Jetzt bewerben: 069 153 914 05
-                </a>
-                <a href="mailto:bewerbung@avyta.de" className="inline-flex items-center justify-center gap-2 bg-white/15 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-white/25 transition-colors border border-white/20">
-                  <Mail className="w-4 h-4" />
-                  bewerbung@avyta.de
-                </a>
+              <div className="flex items-center gap-2 text-[10px]">
+                <Mail className="w-3 h-3 text-primary" />
+                <span className="font-semibold">bewerbung@avyta.de</span>
+                <span className="text-white/40">|</span>
+                <Phone className="w-3 h-3 text-primary" />
+                <span className="font-semibold">069 153 914 05</span>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
 
-        {/* ==================== PAGE 4: KONTAKT ==================== */}
-        <section className="min-h-[297mm] p-8 md:p-12 print-break flex flex-col">
-          <div className="flex-1 flex flex-col justify-center">
-            {/* Final CTA */}
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
-                Wir sind <span className="text-primary">für Sie da</span>
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-                Kontaktieren Sie uns für eine kostenlose und unverbindliche Erstberatung. 
-                Wir helfen Ihnen gerne weiter.
-              </p>
-            </div>
-
-            <div className="flex flex-col md:flex-row justify-center gap-6 mb-12">
-              <a 
-                href="tel:+496915391405" 
-                className="flex items-center justify-center gap-4 bg-primary text-primary-foreground px-10 py-6 rounded-2xl font-bold text-xl hover:bg-primary/90 transition-colors shadow-lg"
-              >
-                <Phone className="w-8 h-8" />
-                <div className="text-left">
-                  <div className="text-xs text-primary-foreground/60 uppercase tracking-wider">Telefon</div>
-                  <div className="text-2xl">069 153 914 05</div>
-                </div>
-              </a>
-              <a 
-                href="mailto:info@avyta.de" 
-                className="flex items-center justify-center gap-4 bg-foreground text-background px-10 py-6 rounded-2xl font-bold text-xl hover:bg-foreground/90 transition-colors shadow-lg"
-              >
-                <Mail className="w-8 h-8" />
-                <div className="text-left">
-                  <div className="text-xs text-background/60 uppercase tracking-wider">E-Mail</div>
-                  <div className="text-2xl">info@avyta.de</div>
-                </div>
-              </a>
-            </div>
-
-            {/* Office Info */}
-            <div className="grid sm:grid-cols-3 gap-4 mb-12">
-              <div className="text-center p-5 bg-muted/30 rounded-2xl">
-                <Clock className="w-6 h-6 text-primary mx-auto mb-2" />
-                <h4 className="font-bold text-foreground text-sm mb-1">Bürozeiten</h4>
-                <p className="text-xs text-muted-foreground">Mo–Fr: 08:00–12:00 Uhr</p>
-                <p className="text-xs text-primary font-semibold">Pflege: 24/7 erreichbar</p>
-              </div>
-              <div className="text-center p-5 bg-muted/30 rounded-2xl">
-                <MapPin className="w-6 h-6 text-primary mx-auto mb-2" />
-                <h4 className="font-bold text-foreground text-sm mb-1">Standort Frankfurt</h4>
-                <p className="text-xs text-muted-foreground">Bürgeler Str. 3</p>
-                <p className="text-xs text-muted-foreground">60386 Frankfurt am Main</p>
-              </div>
-              <div className="text-center p-5 bg-muted/30 rounded-2xl">
-                <MapPin className="w-6 h-6 text-primary mx-auto mb-2" />
-                <h4 className="font-bold text-foreground text-sm mb-1">Standort Bad Vilbel</h4>
-                <p className="text-xs text-muted-foreground">Frankfurter Str. 59</p>
-                <p className="text-xs text-muted-foreground">61118 Bad Vilbel</p>
-              </div>
-            </div>
-
-            {/* IK Number */}
-            <div className="text-center mb-8">
-              <p className="text-xs text-muted-foreground">IK Nr.: 462647061</p>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="mt-auto pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <div className="flex items-center gap-3">
-              <img src={avytaLogo} alt="AVYTA" className="h-8" />
-              <span>© {new Date().getFullYear()} AVYTA GmbH</span>
-            </div>
-            <div className="text-sm font-semibold text-primary">
-              www.avyta.de
-            </div>
-          </div>
-        </section>
-
+      <div className="no-print py-8 text-center text-xs text-muted-foreground">
+        <p>Tipp: Wählen Sie beim Drucken <strong>„Querformat"</strong> und <strong>„Hintergrundgrafiken"</strong> für das beste Ergebnis.</p>
       </div>
     </>
   );
