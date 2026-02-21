@@ -124,8 +124,8 @@ const Broschuere = () => {
             
             <div className="space-y-2.5 mb-4">
               {[
-                { icon: MapPin, label: "Frankfurt", detail: "Bürgeler Str. 3, 60386 Frankfurt" },
-                { icon: MapPin, label: "Bad Vilbel", detail: "Frankfurter Str. 59, 61118 Bad Vilbel" },
+                { icon: MapPin, label: "Frankfurt", detail: "Allerheiligentor 2-4, 60311 Frankfurt" },
+                { icon: MapPin, label: "Bad Vilbel", detail: "Standort Bad Vilbel" },
                 { icon: Phone, label: "Telefon", detail: "069 153 914 05", highlight: true },
                 { icon: Mail, label: "E-Mail", detail: "info@avyta.de", highlight: true },
                 { icon: Clock, label: "Büro Mo–Fr 8–12 Uhr", detail: "Pflege: 24/7 an 365 Tagen", highlight: true },
@@ -145,7 +145,7 @@ const Broschuere = () => {
             {/* Sprachen */}
             <div className="bg-muted/30 rounded-lg p-2.5 mb-4">
               <p className="text-[9px] font-semibold text-primary uppercase tracking-wider mb-0.5">Wir sprechen Ihre Sprache</p>
-              <p className="text-[10px] text-muted-foreground">Deutsch · Rumänisch · Bulgarisch · Griechisch · Serbisch · Kroatisch</p>
+              <p className="text-[10px] text-muted-foreground">Deutsch · English · Bosnisch · Kroatisch · Serbisch · Polnisch</p>
             </div>
 
             {/* Partner Logos */}
@@ -168,7 +168,7 @@ const Broschuere = () => {
                 ))}
               </div>
               <div className="mt-2 pt-2 border-t border-border/30 flex items-center justify-between">
-                <p className="text-[8px] text-muted-foreground">IK Nr.: 462647061 · © {new Date().getFullYear()} AVYTA GmbH</p>
+                <p className="text-[8px] text-muted-foreground">IK Nr.: 462645797 · © {new Date().getFullYear()} AVYTA GmbH</p>
                 <p className="text-[9px] font-semibold text-primary">www.avyta.de</p>
               </div>
             </div>
@@ -277,8 +277,8 @@ const Broschuere = () => {
               { img: demenzImg, title: "Betreuung & Begleitung", desc: "Spaziergänge, Arztbesuche, Demenzbetreuung" },
             ].map((s, i) => (
               <div key={i} className="rounded-xl overflow-hidden border border-border/40 bg-white">
-                <div className="h-14 overflow-hidden">
-                  <img src={s.img} alt={s.title} className="w-full h-full object-cover" />
+                <div className="h-14 overflow-hidden flex items-center justify-center">
+                  <img src={s.img} alt={s.title} className="w-full h-full object-cover object-center" />
                 </div>
                 <div className="p-2">
                   <p className="text-[10px] font-bold text-foreground">{s.title}</p>
@@ -303,14 +303,26 @@ const Broschuere = () => {
             ))}
           </div>
 
-          {/* Emotional urgency box */}
-          <div className="bg-gradient-to-r from-primary to-accent text-white rounded-xl p-3 mb-3">
-            <p className="text-[10px] font-bold mb-1 flex items-center gap-1.5">
-              <AlertTriangle className="w-3 h-3" />
-              Viele Leistungen verfallen, wenn sie nicht genutzt werden!
+          {/* Empfehlungsprämie */}
+          <div className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white rounded-xl p-3 mb-2 shadow-md">
+            <p className="text-[11px] font-bold mb-0.5 flex items-center gap-1.5">
+              <Star className="w-4 h-4" />
+              Bis zu 1.000 € Empfehlungsprämie!
             </p>
-            <p className="text-[9px] text-white/80 leading-relaxed">
-              Jedes Jahr verfallen Milliarden Euro an Pflegeleistungen, weil Angehörige ihre Ansprüche nicht kennen. 
+            <p className="text-[9px] text-white/90 leading-relaxed">
+              Empfehlen Sie uns weiter – für jede erfolgreiche Vermittlung eines neuen Patienten 
+              oder Mitarbeiters erhalten Sie eine <strong className="text-white">Prämie bis zu 1.000 €</strong>.
+            </p>
+          </div>
+
+          {/* Emotional urgency box */}
+          <div className="bg-gradient-to-r from-primary to-accent text-white rounded-xl p-2.5 mb-2">
+            <p className="text-[10px] font-bold mb-0.5 flex items-center gap-1.5">
+              <AlertTriangle className="w-3 h-3" />
+              Viele Leistungen verfallen ungenutzt!
+            </p>
+            <p className="text-[8px] text-white/80 leading-relaxed">
+              Jährlich verfallen Milliarden Euro an Pflegeleistungen. 
               <strong className="text-white"> Wir sorgen dafür, dass Ihnen nichts entgeht.</strong>
             </p>
           </div>
@@ -344,7 +356,7 @@ const Broschuere = () => {
           {/* Team Image + Trust */}
           <div className="flex gap-2.5 mb-3">
             <div className="w-[90px] h-[70px] rounded-xl overflow-hidden flex-shrink-0">
-              <img src={teamFrauenImg} alt="AVYTA Team" className="w-full h-full object-cover" />
+              <img src={teamFrauenImg} alt="AVYTA Team" className="w-full h-full object-cover object-center" />
             </div>
             <div className="flex-1">
               <h2 className="text-base font-bold text-foreground mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -422,7 +434,7 @@ const Broschuere = () => {
               </div>
               <div className="flex items-center gap-3 text-[9px]">
                 <span className="flex items-center gap-1"><Phone className="w-2.5 h-2.5 text-primary" /> <strong>069 153 914 05</strong></span>
-                <span className="flex items-center gap-1"><Mail className="w-2.5 h-2.5 text-primary" /> <strong>bewerbung@avyta.de</strong></span>
+                <span className="flex items-center gap-1"><Mail className="w-2.5 h-2.5 text-primary" /> <strong>info@avyta.de</strong></span>
               </div>
             </div>
           </div>
