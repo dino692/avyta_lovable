@@ -108,8 +108,8 @@ const Broschuere = () => {
           
           <div className="relative z-10 p-6 flex flex-col h-full">
             {/* Teambild */}
-            <div className="rounded-xl overflow-hidden mb-3 h-36">
-              <img src={teamGroupImg} alt="Das AVYTA Team" className="w-full h-full object-cover" style={{ objectPosition: 'center 15%', transform: 'scale(0.75)' }} />
+            <div className="rounded-xl overflow-hidden mb-3 h-40 bg-muted/10">
+              <img src={teamGroupImg} alt="Das AVYTA Team" className="w-full h-full object-contain" />
             </div>
 
             {/* Emotional Hook - Angst → Hoffnung */}
