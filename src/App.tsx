@@ -82,26 +82,26 @@ const App = () => (
             <Route path="/leistungen/pflegeberatung-frankfurt" element={<Pflegeberatung />} />
             <Route path="/leistungen/verhinderungspflege-frankfurt" element={<Verhinderungspflege />} />
             <Route path="/standorte/frankfurt" element={<Frankfurt />} />
-            <Route path="/standorte/bad-vilbel" element={<BadVilbel />} />
-            <Route path="/standorte/frankfurt/bornheim" element={<Bornheim />} />
-            <Route path="/standorte/frankfurt/pflegedienst-bockenheim" element={<Bockenheim />} />
-            <Route path="/standorte/frankfurt/griesheim" element={<Griesheim />} />
-            <Route path="/standorte/frankfurt/pflegedienst-frankfurt-sachsenhausen" element={<Sachsenhausen />} />
-            <Route path="/standorte/frankfurt/niederrad" element={<Niederrad />} />
-            <Route path="/standorte/frankfurt/hoechst" element={<Hoechst />} />
-            <Route path="/standorte/frankfurt/pflegedienst-roedelheim" element={<Roedelheim />} />
-            <Route path="/standorte/frankfurt/pflegedienst-praunheim" element={<Praunheim />} />
-            <Route path="/standorte/frankfurt/pflegedienst-ginnheim" element={<Ginnheim />} />
-            <Route path="/standorte/frankfurt/nordend" element={<Nordend />} />
-            <Route path="/standorte/frankfurt/ostend" element={<Ostend />} />
-            <Route path="/standorte/frankfurt/westend" element={<Westend />} />
-            <Route path="/standorte/frankfurt/dornbusch" element={<Dornbusch />} />
-            <Route path="/standorte/frankfurt/heddernheim" element={<Heddernheim />} />
-            <Route path="/standorte/frankfurt/preungesheim" element={<Preungesheim />} />
-            <Route path="/standorte/frankfurt/eschersheim" element={<Eschersheim />} />
-            <Route path="/standorte/frankfurt/eckenheim" element={<Eckenheim />} />
-            <Route path="/standorte/frankfurt/nieder-eschbach" element={<NiederEschbach />} />
-            <Route path="/standorte/frankfurt/seckbach" element={<Seckbach />} />
+            <Route path="/pflegedienst-bad-vilbel" element={<BadVilbel />} />
+            <Route path="/pflegedienst-bornheim" element={<Bornheim />} />
+            <Route path="/pflegedienst-bockenheim" element={<Bockenheim />} />
+            <Route path="/pflegedienst-griesheim" element={<Griesheim />} />
+            <Route path="/pflegedienst-frankfurt-sachsenhausen" element={<Sachsenhausen />} />
+            <Route path="/pflegedienst-niederrad" element={<Niederrad />} />
+            <Route path="/pflegedienst-frankfurt-hoechst" element={<Hoechst />} />
+            <Route path="/pflegedienst-roedelheim" element={<Roedelheim />} />
+            <Route path="/pflegedienst-praunheim" element={<Praunheim />} />
+            <Route path="/pflegedienst-ginnheim" element={<Ginnheim />} />
+            <Route path="/pflegedienst-nordend" element={<Nordend />} />
+            <Route path="/pflegedienst-ostend" element={<Ostend />} />
+            <Route path="/pflegedienst-westend" element={<Westend />} />
+            <Route path="/pflegedienst-dornbusch" element={<Dornbusch />} />
+            <Route path="/pflegedienst-heddernheim" element={<Heddernheim />} />
+            <Route path="/pflegedienst-preungesheim" element={<Preungesheim />} />
+            <Route path="/pflegedienst-eschersheim" element={<Eschersheim />} />
+            <Route path="/pflegedienst-eckenheim" element={<Eckenheim />} />
+            <Route path="/pflegedienst-nieder-eschbach" element={<NiederEschbach />} />
+            <Route path="/pflegedienst-seckbach" element={<Seckbach />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/demenz-pflege-tipps" element={<DemenzPflege />} />
             <Route path="/blog/pflegegrad-beantragen" element={<PflegegradBeantragen />} />
