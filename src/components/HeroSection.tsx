@@ -101,7 +101,7 @@ const HeroSection = () => {
           <div className="space-y-5 md:space-y-8">
             {/* Eyebrow */}
             <div 
-              className="animate-slide-up inline-flex items-center gap-2 md:gap-3 px-3 md:px-5 py-2 md:py-2.5 glass rounded-full shadow-lg"
+              className="animate-slide-up inline-flex items-center gap-2 md:gap-3 px-3 md:px-5 py-2 md:py-2.5 glass rounded-full shadow-lg mt-4 md:mt-6"
               style={{ animationDelay: '0.1s' }}
             >
               <span className="relative flex h-2 w-2 md:h-3 md:w-3">
