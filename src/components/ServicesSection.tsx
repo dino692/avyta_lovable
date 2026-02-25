@@ -1,7 +1,7 @@
 import { ArrowRight, Stethoscope, Home, Activity, Utensils, Clock, FileText, UserCheck, Sparkles, Play, ChevronRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, forwardRef } from "react";
 
 // Import service images
 import behandlungspflegeImg from "@/assets/services/behandlungspflege.jpg";
@@ -99,8 +99,8 @@ const services = [
   },
 ];
 
-const ServicesSection = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
+const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
+  const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -394,6 +394,6 @@ const ServicesSection = () => {
       `}</style>
     </section>
   );
-};
+});
 
 export default ServicesSection;
