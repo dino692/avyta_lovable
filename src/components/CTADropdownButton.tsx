@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, forwardRef } from "react";
 import { Phone, Mail, FileText, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { createPortal } from "react-dom";
@@ -9,7 +9,7 @@ interface CTADropdownButtonProps {
   className?: string;
 }
 
-const CTADropdownButton = ({ size = "lg", variant = "hero", className = "" }: CTADropdownButtonProps) => {
+const CTADropdownButton = forwardRef<HTMLDivElement, CTADropdownButtonProps>(({ size = "lg", variant = "hero", className = "" }, ref) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
   const buttonRef = useRef<HTMLDivElement>(null);
@@ -110,6 +110,6 @@ const CTADropdownButton = ({ size = "lg", variant = "hero", className = "" }: CT
       )}
     </>
   );
-};
+});
 
 export default CTADropdownButton;
