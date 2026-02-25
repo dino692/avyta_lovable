@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, forwardRef } from "react";
 import { createPortal } from "react-dom";
 import { Phone, Mail, FileText, ChevronDown, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,12 +10,12 @@ interface JobCTADropdownButtonProps {
   jobTitle?: string;
 }
 
-const JobCTADropdownButton = ({ 
+const JobCTADropdownButton = forwardRef<HTMLDivElement, JobCTADropdownButtonProps>(({ 
   size = "lg", 
   variant = "hero", 
   className = "",
   jobTitle = ""
-}: JobCTADropdownButtonProps) => {
+}, ref) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0, width: 0 });
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -128,6 +128,6 @@ const JobCTADropdownButton = ({
       {dropdownContent}
     </div>
   );
-};
+});
 
 export default JobCTADropdownButton;
