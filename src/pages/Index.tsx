@@ -1,16 +1,25 @@
+import { lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
-import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
-import LocationsSection from "@/components/LocationsSection";
-import CertificatesSection from "@/components/CertificatesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import ReviewsSection from "@/components/ReviewsSection";
-import NewsletterSection from "@/components/NewsletterSection";
-import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+
+// Lazy load below-the-fold sections
+const HowItWorksSection = lazy(() => import("@/components/HowItWorksSection"));
+const AboutSection = lazy(() => import("@/components/AboutSection"));
+const ServicesSection = lazy(() => import("@/components/ServicesSection"));
+const LocationsSection = lazy(() => import("@/components/LocationsSection"));
+const CertificatesSection = lazy(() => import("@/components/CertificatesSection"));
+const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
+const ReviewsSection = lazy(() => import("@/components/ReviewsSection"));
+const NewsletterSection = lazy(() => import("@/components/NewsletterSection"));
+const ContactSection = lazy(() => import("@/components/ContactSection"));
+
+const SectionFallback = () => (
+  <div className="py-24 flex items-center justify-center">
+    <div className="w-8 h-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin" />
+  </div>
+);
 
 const Index = () => {
   return (
@@ -27,16 +36,34 @@ const Index = () => {
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Header />
         <main>
-        <HeroSection />
-        <HowItWorksSection />
-        <AboutSection />
-        <ServicesSection />
-        <LocationsSection />
-        <TestimonialsSection />
-        <ReviewsSection />
-        <CertificatesSection />
-        <NewsletterSection />
-        <ContactSection />
+          <HeroSection />
+          <Suspense fallback={<SectionFallback />}>
+            <HowItWorksSection />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <AboutSection />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <ServicesSection />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <LocationsSection />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <TestimonialsSection />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <ReviewsSection />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <CertificatesSection />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <NewsletterSection />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <ContactSection />
+          </Suspense>
         </main>
         <Footer />
       </div>

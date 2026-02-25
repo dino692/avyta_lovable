@@ -156,6 +156,7 @@ const AboutSection = () => {
                           <img 
                             src={feature.image} 
                             alt={feature.title}
+                            loading="lazy"
                             className={`w-full h-full object-cover transition-all duration-500 ${
                               isActive ? 'scale-110' : 'scale-100'
                             }`}

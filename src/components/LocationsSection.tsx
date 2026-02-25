@@ -233,6 +233,7 @@ const LocationsSection = () => {
                 <img 
                   src={locations[activeLocation].image} 
                   alt={locations[activeLocation].city}
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* Gradient overlay */}
