@@ -96,9 +96,12 @@ const App = () => (
               <Route path="/standorte/frankfurt/pflegedienst-bockenheim" element={<Bockenheim />} />
               <Route path="/pflegedienst-bockenheim" element={<Navigate to="/standorte/frankfurt/pflegedienst-bockenheim" replace />} />
               <Route path="/pflegedienst-griesheim" element={<Griesheim />} />
-              <Route path="/pflegedienst-frankfurt-sachsenhausen" element={<Sachsenhausen />} />
-              <Route path="/pflegedienst-niederrad" element={<Niederrad />} />
-              <Route path="/pflegedienst-frankfurt-hoechst" element={<Hoechst />} />
+              <Route path="/standorte/frankfurt/pflegedienst-frankfurt-sachsenhausen" element={<Sachsenhausen />} />
+              <Route path="/pflegedienst-frankfurt-sachsenhausen" element={<Navigate to="/standorte/frankfurt/pflegedienst-frankfurt-sachsenhausen" replace />} />
+              <Route path="/standorte/frankfurt/niederrad" element={<Niederrad />} />
+              <Route path="/pflegedienst-niederrad" element={<Navigate to="/standorte/frankfurt/niederrad" replace />} />
+              <Route path="/standorte/frankfurt/hoechst" element={<Hoechst />} />
+              <Route path="/pflegedienst-frankfurt-hoechst" element={<Navigate to="/standorte/frankfurt/hoechst" replace />} />
               <Route path="/pflegedienst-roedelheim" element={<Roedelheim />} />
               <Route path="/pflegedienst-praunheim" element={<Praunheim />} />
               <Route path="/pflegedienst-ginnheim" element={<Ginnheim />} />

@@ -57,7 +57,7 @@ const Niederrad = () => {
       <Helmet>
         <title>Pflegedienst Niederrad - Hilfe im alltäglichen Leben</title>
         <meta name="description" content="In Frankfurt Niederrad sind wir für Sie präsent und rund um die Uhr erreichbar. Überzeugen Sie sich von unserem ambulanten Pflegedienst. | avyta.de" />
-        <link rel="canonical" href="https://www.avyta.de/pflegedienst-niederrad" />
+        <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/niederrad" />
         <meta property="og:title" content="Pflegedienst Niederrad - Hilfe im alltäglichen Leben" />
         <meta property="og:description" content="In Frankfurt Niederrad sind wir für Sie präsent und rund um die Uhr erreichbar." />
         <meta property="og:type" content="website" />
@@ -65,7 +65,7 @@ const Niederrad = () => {
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
-          { name: "Niederrad", url: "https://www.avyta.de/pflegedienst-niederrad" },
+          { name: "Niederrad", url: "https://www.avyta.de/standorte/frankfurt/niederrad" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(niederradFaqs)}</script>
       </Helmet>
