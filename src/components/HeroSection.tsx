@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { FileText, Play, ArrowRight, Phone, Sparkles, Heart, Shield, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CTADropdownButton from "@/components/CTADropdownButton";
@@ -59,18 +59,6 @@ const AnimatedCounter = ({ value, suffix, delay }: { value: number; suffix: stri
 
 const HeroSection = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth - 0.5) * 20,
-        y: (e.clientY / window.innerHeight - 0.5) * 20,
-      });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 md:pt-24 pb-8 md:pb-12 overflow-hidden">
@@ -78,14 +66,8 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-accent/5" />
       
       {/* Morphing blob backgrounds - hidden on mobile for performance */}
-      <div 
-        className="absolute top-20 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl animate-morph opacity-40 md:opacity-60"
-        style={{ transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px)` }}
-      />
-      <div 
-        className="hidden md:block absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-tr from-accent/15 to-primary/10 rounded-full blur-3xl animate-morph opacity-50"
-        style={{ animationDelay: '-4s', transform: `translate(${mousePosition.x * -0.3}px, ${mousePosition.y * -0.3}px)` }}
-      />
+      <div className="absolute top-20 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl animate-morph opacity-40 md:opacity-60" />
+      <div className="hidden md:block absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-tr from-accent/15 to-primary/10 rounded-full blur-3xl animate-morph opacity-50" style={{ animationDelay: '-4s' }} />
       
       {/* Floating decorative elements - hidden on mobile */}
       <div className="hidden md:block absolute top-1/4 left-[10%] w-3 h-3 bg-primary/40 rounded-full animate-float" />
@@ -208,6 +190,10 @@ const HeroSection = () => {
                       alt="AVYTA Pflegedienst Video Vorschau"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
+                      width={1280}
+                      height={720}
                     />
                     {/* Overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
