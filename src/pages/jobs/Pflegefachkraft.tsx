@@ -68,11 +68,11 @@ const faqs = [
   },
   {
     question: "Was ist der Unterschied zwischen einer Pflegehilfskraft und einer Pflegefachkraft in Frankfurt?",
-    answer: "Der wesentliche Unterschied liegt in der Ausbildung und den Aufgabenbereichen. Eine Pflegefachkraft hat eine dreijährige Ausbildung absolviert und ist für die medizinische Versorgung und Koordination der Pflege verantwortlich. Pflegehilfskräfte unterstützen die Fachkräfte bei der Grundpflege und benötigen eine kürzere Qualifikation."
+    answer: "Pflegehilfskräfte haben eine einjährige Ausbildung und unterstützen bei grundlegenden Pflegeaufgaben. Pflegefachkräfte absolvieren eine dreijährige Ausbildung und übernehmen eigenständig medizinische Pflege, Pflegeplanung und -dokumentation. Pflegefachkräfte koordinieren zudem Pflegehelfer und tragen mehr Verantwortung. Möchten auch Sie Pflegefachkraft in Frankfurt werden? Dann bewerben Sie sich noch heute!"
   },
   {
     question: "Welche Qualifikationen benötigt eine Pflegefachkraft in Frankfurt?",
-    answer: "Um als Pflegefachkraft in Frankfurt zu arbeiten, benötigen Sie eine abgeschlossene dreijährige Ausbildung an einer staatlich anerkannten Pflegeschule. Berufserfahrung ist von Vorteil, ebenso wie Kenntnisse in der digitalen Pflegedokumentation. Ein Führerschein der Klasse B ist für die ambulante Pflege Voraussetzung."
+    answer: "Eine Pflegefachkraft in Frankfurt benötigt eine abgeschlossene Ausbildung in der Gesundheits- und Krankenpflege, Altenpflege oder Kinderkrankenpflege. Neben der fachlichen Kompetenz sind auch Soft Skills wie Einfühlungsvermögen, Belastbarkeit und Organisationstalent wichtig. Bei Avyta wird zudem Wert auf Teamfähigkeit und die Bereitschaft zur Fortbildung gelegt, um den hohen Ansprüchen der ambulanten Pflege gerecht zu werden."
   },
 ];
 
