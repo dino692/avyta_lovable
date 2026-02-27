@@ -6,6 +6,7 @@ import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import demenzPflegeImage from "@/assets/blog/demenz-pflege.jpg";
 
 const DemenzPflege = () => {
   return (
@@ -73,8 +74,8 @@ const DemenzPflege = () => {
             {/* Featured Image */}
             <div className="max-w-4xl mx-auto mb-12">
               <img
-                src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1200&h=600&fit=crop"
-                alt="Liebevolle Pflege einer Seniorin"
+                src={demenzPflegeImage}
+                alt="Seniorin sitzt lächelnd in einem hellen Wohnzimmer – häusliche Demenzpflege"
                 className="w-full rounded-2xl shadow-lg"
               />
             </div>
