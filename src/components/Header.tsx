@@ -71,7 +71,7 @@ const blogCategories = [
 
 const navLinks = [
   { name: "Start", href: "/" },
-  { name: "Team", href: "/team" },
+  { name: "Über uns", href: "/ueber-uns" },
   { name: "Karriere", href: "/karriere" },
   { name: "Blog", href: "/blog" },
   { name: "Kontakt", href: "/#contact" },
@@ -223,8 +223,8 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link to="/team" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
-                    Team
+                  <Link to="/ueber-uns" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
+                    Über uns
                   </Link>
                 </NavigationMenuItem>
 
@@ -462,7 +462,7 @@ const Header = () => {
               </Link>
               
               <Link
-                to="/team"
+                to="/ueber-uns"
                 className="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
                 style={{ animationDelay: '100ms' }}
@@ -470,7 +470,7 @@ const Header = () => {
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-5 h-5 text-primary" />
                 </div>
-                <span className="font-medium text-foreground group-hover:text-primary transition-colors">Team</span>
+                <span className="font-medium text-foreground group-hover:text-primary transition-colors">Über uns</span>
               </Link>
             </div>
 

@@ -298,7 +298,7 @@ const AboutSection = () => {
             
             {/* CTA */}
             <Link 
-              to="/team"
+              to="/ueber-uns"
               className="group flex items-center justify-between p-4 md:p-6 glass rounded-xl md:rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <div>

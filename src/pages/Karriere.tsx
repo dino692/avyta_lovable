@@ -105,7 +105,7 @@ const Karriere = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Dafür erhalten Sie in <Link to="/team" className="text-primary hover:underline font-semibold">unserem Team</Link> ein familiäres Arbeitsumfeld, in dem Sie sich im Rahmen einer flachen Hierarchie mit einem angenehmen Betriebsklima optimal entwickeln können.
+                  Dafür erhalten Sie in <Link to="/ueber-uns" className="text-primary hover:underline font-semibold">unserem Team</Link> ein familiäres Arbeitsumfeld, in dem Sie sich im Rahmen einer flachen Hierarchie mit einem angenehmen Betriebsklima optimal entwickeln können.
                 </p>
                 
                 <div className="bg-primary/5 rounded-2xl p-6 md:p-8 border border-primary/20">

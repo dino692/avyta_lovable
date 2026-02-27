@@ -8,7 +8,7 @@ const corsHeaders = {
 // All URLs from sitemap.xml
 const SITEMAP_URLS = [
   "https://www.avyta.de/",
-  "https://www.avyta.de/team",
+  "https://www.avyta.de/ueber-uns",
   "https://www.avyta.de/kontakt",
   "https://www.avyta.de/impressum",
   "https://www.avyta.de/datenschutz",

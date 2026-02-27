@@ -103,7 +103,7 @@ const VierundzwanzigStunden = () => {
                   24 Stunden Pflege in Frankfurt mit Avyta
                 </h1>
                 <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
-                  Eine <strong>Pflegebedürftigkeit</strong> kann jeden treffen. Fortschreitendes Alter, geistige oder körperliche Einschränkungen als auch ein schwerer Unfall können dazu führen, dass die <strong>pflegerische Betreuung</strong> nötig wird. Gerade in schweren Fällen ist es beruhigend, immer Hilfe an Ihrer Seite zu wissen – die <strong>24 Stunden Pflege in Frankfurt</strong> von <Link to="/team" className="text-primary hover:underline font-medium">Avyta</Link> leistet genau das für Sie. Wir sind <strong>rund um die Uhr</strong> für Sie ansprechbar und können Ihnen mit viel Herz und Kompetenz bei <strong>allen Pflegeleistungen</strong> unter die Arme greifen.
+                  Eine <strong>Pflegebedürftigkeit</strong> kann jeden treffen. Fortschreitendes Alter, geistige oder körperliche Einschränkungen als auch ein schwerer Unfall können dazu führen, dass die <strong>pflegerische Betreuung</strong> nötig wird. Gerade in schweren Fällen ist es beruhigend, immer Hilfe an Ihrer Seite zu wissen – die <strong>24 Stunden Pflege in Frankfurt</strong> von <Link to="/ueber-uns" className="text-primary hover:underline font-medium">Avyta</Link> leistet genau das für Sie. Wir sind <strong>rund um die Uhr</strong> für Sie ansprechbar und können Ihnen mit viel Herz und Kompetenz bei <strong>allen Pflegeleistungen</strong> unter die Arme greifen.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
