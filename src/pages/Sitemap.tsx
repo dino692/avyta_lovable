@@ -35,7 +35,7 @@ const sitemapData = [
       { name: "Frankfurt", href: "/standorte/frankfurt" },
       { name: "Bad Vilbel", href: "/pflegedienst-bad-vilbel" },
       { name: "Bornheim", href: "/pflegedienst-bornheim" },
-      { name: "Bockenheim", href: "/pflegedienst-bockenheim" },
+      { name: "Bockenheim", href: "/standorte/frankfurt/pflegedienst-bockenheim" },
       { name: "Griesheim", href: "/pflegedienst-griesheim" },
       { name: "Ginnheim", href: "/pflegedienst-ginnheim" },
       { name: "Sachsenhausen", href: "/pflegedienst-frankfurt-sachsenhausen" },

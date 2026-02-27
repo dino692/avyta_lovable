@@ -34,7 +34,7 @@ const locations = [
 ];
 
 const stadtteile = [
-  { name: "Bockenheim", link: "/pflegedienst-bockenheim" },
+  { name: "Bockenheim", link: "/standorte/frankfurt/pflegedienst-bockenheim" },
   { name: "Bornheim", link: "/pflegedienst-bornheim" },
   { name: "Dornbusch", link: "/pflegedienst-dornbusch" },
   { name: "Eckenheim", link: "/pflegedienst-eckenheim" },

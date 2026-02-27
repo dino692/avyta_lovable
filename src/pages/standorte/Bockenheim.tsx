@@ -56,7 +56,7 @@ const Bockenheim = () => {
       <Helmet>
         <title>Pflegedienst Bockenheim - gesundheitliche Unterstützung</title>
         <meta name="description" content="Wenn Sie in der Region Frankfurt Bockenheim zuhause sind und Pflegeleistungen benötigen, dann sind wir zur Stelle. Mehr Informationen auf | avyta.de" />
-        <link rel="canonical" href="https://www.avyta.de/pflegedienst-bockenheim" />
+        <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/pflegedienst-bockenheim" />
         <meta property="og:title" content="Pflegedienst Bockenheim - gesundheitliche Unterstützung" />
         <meta property="og:description" content="Pflegedienst in Frankfurt Bockenheim. Wir sind zur Stelle wenn Sie Pflegeleistungen benötigen." />
         <meta property="og:type" content="website" />
@@ -64,7 +64,7 @@ const Bockenheim = () => {
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
-          { name: "Bockenheim", url: "https://www.avyta.de/pflegedienst-bockenheim" },
+          { name: "Bockenheim", url: "https://www.avyta.de/standorte/frankfurt/pflegedienst-bockenheim" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(bockenheimFaqs)}</script>
       </Helmet>
