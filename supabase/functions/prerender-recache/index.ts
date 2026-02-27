@@ -25,7 +25,7 @@ const SITEMAP_URLS = [
   "https://www.avyta.de/standorte/frankfurt",
   "https://www.avyta.de/pflegedienst-bad-vilbel",
   "https://www.avyta.de/pflegedienst-bornheim",
-  "https://www.avyta.de/pflegedienst-bockenheim",
+  "https://www.avyta.de/standorte/frankfurt/pflegedienst-bockenheim",
   "https://www.avyta.de/pflegedienst-griesheim",
   "https://www.avyta.de/pflegedienst-frankfurt-sachsenhausen",
   "https://www.avyta.de/pflegedienst-niederrad",

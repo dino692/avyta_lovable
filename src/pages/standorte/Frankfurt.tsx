@@ -30,7 +30,7 @@ const frankfurtFaqs = [
   },
 ];
 const stadtteile = [
-  { name: "Bockenheim", href: "/pflegedienst-bockenheim" },
+  { name: "Bockenheim", href: "/standorte/frankfurt/pflegedienst-bockenheim" },
   { name: "Bornheim", href: "/pflegedienst-bornheim" },
   { name: "Dornbusch", href: "/pflegedienst-dornbusch" },
   { name: "Eckenheim", href: "/pflegedienst-eckenheim" },

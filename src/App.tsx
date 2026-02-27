@@ -93,7 +93,8 @@ const App = () => (
               <Route path="/standorte/frankfurt" element={<Frankfurt />} />
               <Route path="/pflegedienst-bad-vilbel" element={<BadVilbel />} />
               <Route path="/pflegedienst-bornheim" element={<Bornheim />} />
-              <Route path="/pflegedienst-bockenheim" element={<Bockenheim />} />
+              <Route path="/standorte/frankfurt/pflegedienst-bockenheim" element={<Bockenheim />} />
+              <Route path="/pflegedienst-bockenheim" element={<Navigate to="/standorte/frankfurt/pflegedienst-bockenheim" replace />} />
               <Route path="/pflegedienst-griesheim" element={<Griesheim />} />
               <Route path="/pflegedienst-frankfurt-sachsenhausen" element={<Sachsenhausen />} />
               <Route path="/pflegedienst-niederrad" element={<Niederrad />} />
