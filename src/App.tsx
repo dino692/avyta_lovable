@@ -153,6 +153,15 @@ const App = () => (
               <Route path="/karriere/haushaltshilfe-frankfurt" element={<Navigate to="/karriere/haushhaltshilfe-frankfurt" replace />} />
               <Route path="/karriere/haushaltshilfen-frankfurt" element={<Navigate to="/karriere/haushhaltshilfe-frankfurt" replace />} />
               <Route path="/broschuere" element={<Broschuere />} />
+              {/* Legacy redirects */}
+              <Route path="/ambulanter-pflegedienst" element={<Navigate to="/leistungen" replace />} />
+              <Route path="/ueber-uns/galerie/weihnachtsfeier-2023" element={<Navigate to="/team" replace />} />
+              <Route path="/blog/gesundheit/ganzheitliche-gesundheitsstrategien-fuer-pflegebeduerftige-zu-hause" element={<Navigate to="/blog" replace />} />
+              <Route path="/blog/pflegetipps/ihr-ambulanter-pflegedienst-in-frankfurt-am-main" element={<Navigate to="/blog" replace />} />
+              <Route path="/blog/neuigkeiten/die-revolution-der-pflegetechnologie-wie-digitale-innovationen-die-ambulante-pflege-veraendern" element={<Navigate to="/blog" replace />} />
+              <Route path="/blog/recht-und-finanzen/navigieren-durch-das-pflegeversicherungssystem-ein-leitfaden-fuer-angehoerige" element={<Navigate to="/blog" replace />} />
+              <Route path="/blog/pflegetipps/effektive-hautpflege-routinen-fuer-bettlaegerige-patienten" element={<Navigate to="/blog" replace />} />
+              <Route path="/blog/empfehlungen/top-hilfsmittel-fuer-die-haeusliche-pflege-verbesserung-der-lebensqualitaet" element={<Navigate to="/blog" replace />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
