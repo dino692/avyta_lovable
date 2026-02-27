@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 const leistungen = [
   {
     title: "Medikamentenmanagement",
@@ -60,6 +61,15 @@ const Behandlungspflege = () => {
         <meta name="description" content="Professionelle Behandlungspflege in Frankfurt am Main. Wundversorgung, Injektionen, Verbandswechsel, Medikamentengabe. Examinierte Pflegefachkräfte. Kostenübernahme durch Krankenkasse!" />
         <meta name="keywords" content="Behandlungspflege Frankfurt, Medizinische Pflege Frankfurt, Wundversorgung, Injektionen" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/behandlungspflege" />
+        <meta property="og:title" content="Behandlungspflege in Frankfurt am Main | AVYTA Pflegedienst" />
+        <meta property="og:description" content="Professionelle Behandlungspflege in Frankfurt am Main. Wundversorgung, Injektionen, Verbandswechsel. Examinierte Pflegefachkräfte." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Leistungen", url: "https://www.avyta.de/leistungen" },
+          { name: "Behandlungspflege", url: "https://www.avyta.de/leistungen/behandlungspflege" },
+        ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">

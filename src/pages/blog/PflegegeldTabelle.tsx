@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, Euro, Info, CheckCircle } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const PflegegeldTabelle = () => {
   return (
@@ -14,6 +15,25 @@ const PflegegeldTabelle = () => {
         <meta name="description" content="Pflegegeld 2025: Aktuelle Beträge nach Pflegegrad 1-5. Erfahren Sie, wie viel Pflegegeld Ihnen zusteht und wie Sie es beantragen. Übersichtliche Tabelle + Tipps." />
         <meta name="keywords" content="Pflegegeld 2025, Pflegegeld Tabelle, Pflegegeld Höhe, Pflegegrad Geld, Pflegegeld beantragen" />
         <link rel="canonical" href="https://www.avyta.de/blog/pflegegeld-tabelle-2025" />
+        <meta property="og:title" content="Pflegegeld 2025: Aktuelle Tabelle & Höhe nach Pflegegrad | AVYTA" />
+        <meta property="og:description" content="Pflegegeld 2025: Aktuelle Beträge nach Pflegegrad 1-5. Erfahren Sie, wie viel Pflegegeld Ihnen zusteht und wie Sie es beantragen." />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Pflegegeld 2025: Aktuelle Tabelle nach Pflegegrad",
+          "description": "Pflegegeld 2025: Aktuelle Beträge nach Pflegegrad 1-5. Erfahren Sie, wie viel Pflegegeld Ihnen zusteht und wie Sie es beantragen.",
+          "author": { "@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH" },
+          "publisher": { "@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": { "@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png" } },
+          "datePublished": "2025-01-01",
+          "mainEntityOfPage": "https://www.avyta.de/blog/pflegegeld-tabelle-2025"
+        })}</script>
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Blog", url: "https://www.avyta.de/blog" },
+          { name: "Pflegegeld Tabelle 2025", url: "https://www.avyta.de/blog/pflegegeld-tabelle-2025" },
+        ])}</script>
       </Helmet>
 
       <Header />

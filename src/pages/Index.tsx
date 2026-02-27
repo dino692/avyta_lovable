@@ -31,6 +31,7 @@ const Index = () => {
         <meta property="og:title" content="AVYTA - Ihr Ambulanter Pflegedienst in Frankfurt am Main" />
         <meta property="og:description" content="Hochqualifizierter ambulanter Pflegedienst in Frankfurt am Main. Ganzheitliche Betreuung für Pflegebedürftige. Wir sind mit Herz an Ihrer Seite." />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <link rel="canonical" href="https://www.avyta.de/" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",

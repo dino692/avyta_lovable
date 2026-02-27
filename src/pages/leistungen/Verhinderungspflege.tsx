@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 const leistungen = [
   {
     title: "Grundpflege",
@@ -60,6 +61,15 @@ const Verhinderungspflege = () => {
         <meta name="description" content="Verhinderungspflege in Frankfurt für mehr Flexibilität. ✓ Der Avyta Pflegedienst übernimmt die Versorgung von Angehörigen, wenn Sie mal verhindert sind." />
         <meta name="keywords" content="Verhinderungspflege Frankfurt, Kurzzeitpflege, Urlaubsvertretung Pflege" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/verhinderungspflege-frankfurt" />
+        <meta property="og:title" content="Verhinderungspflege in Frankfurt unkompliziert beantragen" />
+        <meta property="og:description" content="Verhinderungspflege in Frankfurt für mehr Flexibilität. Der Avyta Pflegedienst übernimmt die Versorgung von Angehörigen, wenn Sie mal verhindert sind." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Leistungen", url: "https://www.avyta.de/leistungen" },
+          { name: "Verhinderungspflege", url: "https://www.avyta.de/leistungen/verhinderungspflege-frankfurt" },
+        ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">

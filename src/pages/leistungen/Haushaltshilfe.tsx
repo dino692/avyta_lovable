@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Utensils } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const leistungen = [
   "Reinigung der Wohnung",
@@ -25,6 +26,16 @@ const Haushaltshilfe = () => {
       <Helmet>
         <title>Haushaltshilfe Frankfurt | Hauswirtschaft & Alltagsbegleitung | AVYTA</title>
         <meta name="description" content="Professionelle Haushaltshilfe in Frankfurt. Unterstützung im Haushalt, beim Einkaufen und Kochen. Entlastung für Senioren und pflegende Angehörige. Jetzt beraten lassen!" />
+        <link rel="canonical" href="https://www.avyta.de/leistungen/haushaltshilfe" />
+        <meta property="og:title" content="Haushaltshilfe Frankfurt | Hauswirtschaft & Alltagsbegleitung | AVYTA" />
+        <meta property="og:description" content="Professionelle Haushaltshilfe in Frankfurt. Unterstützung im Haushalt, beim Einkaufen und Kochen. Entlastung für Senioren und pflegende Angehörige." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Leistungen", url: "https://www.avyta.de/leistungen" },
+          { name: "Haushaltshilfe", url: "https://www.avyta.de/leistungen/haushaltshilfe" },
+        ])}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
