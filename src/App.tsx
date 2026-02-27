@@ -92,19 +92,24 @@ const App = () => (
               <Route path="/leistungen/verhinderungspflege-frankfurt" element={<Verhinderungspflege />} />
               <Route path="/standorte/frankfurt" element={<Frankfurt />} />
               <Route path="/pflegedienst-bad-vilbel" element={<BadVilbel />} />
-              <Route path="/pflegedienst-bornheim" element={<Bornheim />} />
+              <Route path="/standorte/frankfurt/bornheim" element={<Bornheim />} />
+              <Route path="/pflegedienst-bornheim" element={<Navigate to="/standorte/frankfurt/bornheim" replace />} />
               <Route path="/standorte/frankfurt/pflegedienst-bockenheim" element={<Bockenheim />} />
               <Route path="/pflegedienst-bockenheim" element={<Navigate to="/standorte/frankfurt/pflegedienst-bockenheim" replace />} />
-              <Route path="/pflegedienst-griesheim" element={<Griesheim />} />
+              <Route path="/standorte/frankfurt/griesheim" element={<Griesheim />} />
+              <Route path="/pflegedienst-griesheim" element={<Navigate to="/standorte/frankfurt/griesheim" replace />} />
               <Route path="/standorte/frankfurt/pflegedienst-frankfurt-sachsenhausen" element={<Sachsenhausen />} />
               <Route path="/pflegedienst-frankfurt-sachsenhausen" element={<Navigate to="/standorte/frankfurt/pflegedienst-frankfurt-sachsenhausen" replace />} />
               <Route path="/standorte/frankfurt/niederrad" element={<Niederrad />} />
               <Route path="/pflegedienst-niederrad" element={<Navigate to="/standorte/frankfurt/niederrad" replace />} />
               <Route path="/standorte/frankfurt/hoechst" element={<Hoechst />} />
               <Route path="/pflegedienst-frankfurt-hoechst" element={<Navigate to="/standorte/frankfurt/hoechst" replace />} />
-              <Route path="/pflegedienst-roedelheim" element={<Roedelheim />} />
-              <Route path="/pflegedienst-praunheim" element={<Praunheim />} />
-              <Route path="/pflegedienst-ginnheim" element={<Ginnheim />} />
+              <Route path="/standorte/frankfurt/pflegedienst-roedelheim" element={<Roedelheim />} />
+              <Route path="/pflegedienst-roedelheim" element={<Navigate to="/standorte/frankfurt/pflegedienst-roedelheim" replace />} />
+              <Route path="/standorte/frankfurt/pflegedienst-praunheim" element={<Praunheim />} />
+              <Route path="/pflegedienst-praunheim" element={<Navigate to="/standorte/frankfurt/pflegedienst-praunheim" replace />} />
+              <Route path="/standorte/frankfurt/pflegedienst-ginnheim" element={<Ginnheim />} />
+              <Route path="/pflegedienst-ginnheim" element={<Navigate to="/standorte/frankfurt/pflegedienst-ginnheim" replace />} />
               <Route path="/pflegedienst-nordend" element={<Nordend />} />
               <Route path="/pflegedienst-ostend" element={<Ostend />} />
               <Route path="/pflegedienst-westend" element={<Westend />} />

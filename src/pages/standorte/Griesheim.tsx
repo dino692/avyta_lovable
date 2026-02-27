@@ -57,7 +57,7 @@ const Griesheim = () => {
       <Helmet>
         <title>Pflegedienst Griesheim - flexibel und individuell</title>
         <meta name="description" content="In Frankfurts Stadtteil Griesheim sind wir für Sie unterwegs. Als ambulanter Pflegedienst können wir Sie in Ihrem täglichen Leben unterstützen. | avyta.de" />
-        <link rel="canonical" href="https://www.avyta.de/pflegedienst-griesheim" />
+        <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/griesheim" />
         <meta property="og:title" content="Pflegedienst Griesheim - flexibel und individuell" />
         <meta property="og:description" content="In Frankfurts Stadtteil Griesheim sind wir für Sie unterwegs." />
         <meta property="og:type" content="website" />
@@ -65,7 +65,7 @@ const Griesheim = () => {
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
-          { name: "Griesheim", url: "https://www.avyta.de/pflegedienst-griesheim" },
+          { name: "Griesheim", url: "https://www.avyta.de/standorte/frankfurt/griesheim" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(griesheimFaqs)}</script>
       </Helmet>

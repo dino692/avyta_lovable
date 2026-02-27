@@ -57,7 +57,7 @@ const Bornheim = () => {
       <Helmet>
         <title>Pflegedienst Bornheim - Deine regionale Betreuung</title>
         <meta name="description" content="Ihr regionaler Pflegedienstleister in Bornheim. Wir sind von Haus zu Haus unterwegs und betreuen Sie in Ihrem gewohnten Umfeld. Mehr dazu auf | avyta.de" />
-        <link rel="canonical" href="https://www.avyta.de/pflegedienst-bornheim" />
+        <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/bornheim" />
         <meta property="og:title" content="Pflegedienst Bornheim - Deine regionale Betreuung" />
         <meta property="og:description" content="Ihr regionaler Pflegedienstleister in Bornheim. Betreuung in Ihrem gewohnten Umfeld." />
         <meta property="og:type" content="website" />
@@ -65,7 +65,7 @@ const Bornheim = () => {
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
-          { name: "Bornheim", url: "https://www.avyta.de/pflegedienst-bornheim" },
+          { name: "Bornheim", url: "https://www.avyta.de/standorte/frankfurt/bornheim" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(bornheimFaqs)}</script>
       </Helmet>
