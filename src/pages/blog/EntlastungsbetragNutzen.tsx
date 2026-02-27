@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, Euro, CheckCircle, Lightbulb } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const EntlastungsbetragNutzen = () => {
   return (
@@ -14,6 +15,25 @@ const EntlastungsbetragNutzen = () => {
         <meta name="description" content="Der Entlastungsbetrag von 131 Euro monatlich steht allen Pflegebedürftigen ab Pflegegrad 1 zu. Erfahren Sie, wofür Sie ihn nutzen können und wie Sie ihn beantragen." />
         <meta name="keywords" content="Entlastungsbetrag, 131 Euro Pflegegeld, Entlastungsleistungen Pflege, Pflegegrad 1 Geld, Betreuungsleistungen" />
         <link rel="canonical" href="https://www.avyta.de/blog/entlastungsbetrag-nutzen" />
+        <meta property="og:title" content="Entlastungsbetrag 131 Euro: Wofür nutzen & beantragen | AVYTA" />
+        <meta property="og:description" content="Der Entlastungsbetrag von 131 Euro monatlich steht allen Pflegebedürftigen ab Pflegegrad 1 zu. Erfahren Sie, wofür Sie ihn nutzen können." />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Entlastungsbetrag 131 €: So nutzen Sie ihn richtig",
+          "description": "Der Entlastungsbetrag von 131 Euro monatlich steht allen Pflegebedürftigen ab Pflegegrad 1 zu.",
+          "author": { "@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH" },
+          "publisher": { "@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": { "@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png" } },
+          "datePublished": "2026-01-10",
+          "mainEntityOfPage": "https://www.avyta.de/blog/entlastungsbetrag-nutzen"
+        })}</script>
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Blog", url: "https://www.avyta.de/blog" },
+          { name: "Entlastungsbetrag nutzen", url: "https://www.avyta.de/blog/entlastungsbetrag-nutzen" },
+        ])}</script>
       </Helmet>
 
       <Header />

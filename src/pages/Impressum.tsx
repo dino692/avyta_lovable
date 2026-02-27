@@ -8,6 +8,10 @@ const Impressum = () => {
       <Helmet>
         <title>Impressum | AVYTA Pflegegesellschaft mbH</title>
         <meta name="description" content="Impressum der AVYTA Pflegegesellschaft mbH - Rechtliche Informationen und Kontaktdaten." />
+        <meta property="og:title" content="Impressum | AVYTA Pflegegesellschaft mbH" />
+        <meta property="og:description" content="Impressum der AVYTA Pflegegesellschaft mbH - Rechtliche Informationen und Kontaktdaten." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <link rel="canonical" href="https://www.avyta.de/impressum" />
       </Helmet>
       <Header />

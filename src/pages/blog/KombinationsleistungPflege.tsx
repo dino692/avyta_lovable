@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, Euro, Calculator, CheckCircle, ArrowRight } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const KombinationsleistungPflege = () => {
   return (
@@ -14,6 +15,25 @@ const KombinationsleistungPflege = () => {
         <meta name="description" content="Kombinationsleistung Pflege erklärt: So kombinieren Sie Pflegegeld und Pflegesachleistungen optimal. Berechnung, Beispiele und Tipps für mehr Flexibilität." />
         <meta name="keywords" content="Kombinationsleistung Pflege, Pflegegeld kombinieren, Pflegesachleistungen, Kombipflege, Pflegegeld und Pflegedienst" />
         <link rel="canonical" href="https://www.avyta.de/blog/kombinationsleistung-pflege" />
+        <meta property="og:title" content="Kombinationsleistung Pflege: Pflegegeld + Sachleistungen kombinieren | AVYTA" />
+        <meta property="og:description" content="Kombinationsleistung Pflege erklärt: So kombinieren Sie Pflegegeld und Pflegesachleistungen optimal." />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Kombinationsleistung: Pflegegeld und Sachleistungen clever kombinieren",
+          "description": "Kombinationsleistung Pflege erklärt: So kombinieren Sie Pflegegeld und Pflegesachleistungen optimal.",
+          "author": { "@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH" },
+          "publisher": { "@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": { "@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png" } },
+          "datePublished": "2024-12-20",
+          "mainEntityOfPage": "https://www.avyta.de/blog/kombinationsleistung-pflege"
+        })}</script>
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Blog", url: "https://www.avyta.de/blog" },
+          { name: "Kombinationsleistung Pflege", url: "https://www.avyta.de/blog/kombinationsleistung-pflege" },
+        ])}</script>
       </Helmet>
 
       <Header />

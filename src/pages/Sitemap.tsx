@@ -64,7 +64,7 @@ const sitemapData = [
       { name: "Pflegefachkraft", href: "/karriere/pflegefachkraft-frankfurt" },
       { name: "Pflegehelfer", href: "/karriere/pflegehelfer-frankfurt" },
       { name: "Pflegehilfskraft", href: "/karriere/pflegehilfskraft-frankfurt" },
-      { name: "Haushaltshilfe", href: "/karriere/haushaltshilfe-frankfurt" },
+      { name: "Haushaltshilfe", href: "/karriere/haushhaltshilfe-frankfurt" },
     ],
   },
   {
@@ -96,6 +96,10 @@ const Sitemap = () => {
       <Helmet>
         <title>Sitemap | AVYTA Pflegegesellschaft mbH</title>
         <meta name="description" content="Sitemap der AVYTA Pflegegesellschaft mbH - Übersicht aller Seiten unserer Website." />
+        <meta property="og:title" content="Sitemap | AVYTA Pflegegesellschaft mbH" />
+        <meta property="og:description" content="Sitemap der AVYTA Pflegegesellschaft mbH - Übersicht aller Seiten unserer Website." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <link rel="canonical" href="https://www.avyta.de/sitemap" />
       </Helmet>
       <Header />

@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const faqs = [
   {
@@ -38,6 +39,15 @@ const Pflegeberatung = () => {
         <meta name="description" content="Jeder Mensch braucht manchmal eine helfende Hand mit Herz. ✓ In unserer Avyta Pflegeberatung in Frankfurt planen wir Pflege nach Ihren Bedürfnissen." />
         <meta name="keywords" content="Pflegeberatung Frankfurt, Pflegeplanung, Häusliche Pflege Beratung" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/pflegeberatung-frankfurt" />
+        <meta property="og:title" content="Pflegeberatung in Frankfurt – Avyta mit Herz an Ihrer Seite" />
+        <meta property="og:description" content="Jeder Mensch braucht manchmal eine helfende Hand mit Herz. In unserer Avyta Pflegeberatung in Frankfurt planen wir Pflege nach Ihren Bedürfnissen." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Leistungen", url: "https://www.avyta.de/leistungen" },
+          { name: "Pflegeberatung", url: "https://www.avyta.de/leistungen/pflegeberatung-frankfurt" },
+        ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
