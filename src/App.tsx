@@ -120,8 +120,9 @@ const App = () => (
             <Route path="/karriere/pflegehelfer-frankfurt" element={<Pflegehelfer />} />
             <Route path="/karriere/pflegehilfskraft-frankfurt" element={<Pflegehilfskraft />} />
             <Route path="/karriere/pflegefachkraft-frankfurt" element={<Pflegefachkraft />} />
-            <Route path="/karriere/haushaltshilfe-frankfurt" element={<HaushaltshilfeJob />} />
-            <Route path="/karriere/haushaltshilfen-frankfurt" element={<Navigate to="/karriere/haushaltshilfe-frankfurt" replace />} />
+            <Route path="/karriere/haushhaltshilfe-frankfurt" element={<HaushaltshilfeJob />} />
+            <Route path="/karriere/haushaltshilfe-frankfurt" element={<Navigate to="/karriere/haushhaltshilfe-frankfurt" replace />} />
+            <Route path="/karriere/haushaltshilfen-frankfurt" element={<Navigate to="/karriere/haushhaltshilfe-frankfurt" replace />} />
             <Route path="/broschuere" element={<Broschuere />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
