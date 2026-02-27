@@ -3,18 +3,17 @@ import { Phone, Mail, Heart, Shield, Clock, Users, MapPin, Star, CheckCircle, Br
 import { Button } from "@/components/ui/button";
 import avytaLogo from "@/assets/avyta-logo.png";
 
-// Images
-import heroImg from "@/assets/hero-image.jpg";
-import grundpflegeImg from "@/assets/services/grundpflege.jpg";
-import behandlungspflegeImg from "@/assets/services/behandlungspflege.jpg";
-import haushaltshilfeImg from "@/assets/services/haushaltshilfe.jpg";
-import pflegeberatungImg from "@/assets/services/pflegeberatung.jpg";
-import vierundzwanzigImg from "@/assets/services/24-stunden-pflege.jpg";
-import verhinderungspflegeImg from "@/assets/services/verhinderungspflege.jpg";
-import intensivpflegeImg from "@/assets/services/intensivpflege.jpg";
-import teamGroupImg from "@/assets/team/team-group.jpg";
-import demenzImg from "@/assets/about/demenz-betreuung.jpg";
-import teamFrauenImg from "@/assets/about/team-frauen.jpg";
+// Brochure-specific images (white polo shirts with logo)
+import broschuereHeroImg from "@/assets/broschuere/hero.jpg";
+import broschuereGrundpflegeImg from "@/assets/broschuere/grundpflege.jpg";
+import broschuereBehandlungspflegeImg from "@/assets/broschuere/behandlungspflege.jpg";
+import broschuereHaushaltshilfeImg from "@/assets/broschuere/haushaltshilfe.jpg";
+import broschuerePflegeberatungImg from "@/assets/broschuere/pflegeberatung.jpg";
+import broschuereVierundzwanzigImg from "@/assets/broschuere/24-stunden-pflege.jpg";
+import broschuereVerhinderungspflegeImg from "@/assets/broschuere/verhinderungspflege.jpg";
+import broschuereIntensivpflegeImg from "@/assets/broschuere/intensivpflege.jpg";
+import broschuereTeamGroupImg from "@/assets/broschuere/team-group.jpg";
+import broschuereDemenzImg from "@/assets/broschuere/demenz-betreuung.jpg";
 
 // Partner & Krankenkassen Logos
 import aokLogo from "@/assets/partners/aok-logo.jpg";
@@ -110,7 +109,7 @@ const Broschuere = () => {
           <div className="relative z-10 p-6 flex flex-col h-full">
             {/* Teambild */}
             <div className="rounded-xl overflow-hidden mb-3 h-36">
-              <img src={teamFrauenImg} alt="Das AVYTA Team" className="w-full h-full object-cover" style={{ objectPosition: 'center 20%' }} />
+              <img src={broschuereTeamGroupImg} alt="Das AVYTA Team" className="w-full h-full object-cover" style={{ objectPosition: 'center 20%' }} />
             </div>
 
             {/* Emotional Hook - Angst → Hoffnung */}
@@ -210,7 +209,7 @@ const Broschuere = () => {
         <div className="w-1/2 relative overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0">
-            <img src={heroImg} alt="" className="w-full h-full object-cover" />
+            <img src={broschuereHeroImg} alt="" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/85 to-primary/60" />
           </div>
           
@@ -302,10 +301,10 @@ const Broschuere = () => {
           {/* Services with images */}
           <div className="grid grid-cols-2 gap-2 mb-3">
             {[
-              { img: grundpflegeImg, title: "Körperpflege", desc: "Bad, Dusche, Ankleiden, Haarpflege, Mundpflege" },
-              { img: behandlungspflegeImg, title: "Behandlungspflege", desc: "Medikamente, Wundversorgung, Injektionen" },
-              { img: haushaltshilfeImg, title: "Haushaltshilfe", desc: "Reinigung, Wäsche, Kochen, Einkaufsservice" },
-              { img: demenzImg, title: "Betreuung & Begleitung", desc: "Spaziergänge, Arztbesuche, Demenzbetreuung" },
+              { img: broschuereGrundpflegeImg, title: "Körperpflege", desc: "Bad, Dusche, Ankleiden, Haarpflege, Mundpflege" },
+              { img: broschuereBehandlungspflegeImg, title: "Behandlungspflege", desc: "Medikamente, Wundversorgung, Injektionen" },
+              { img: broschuereHaushaltshilfeImg, title: "Haushaltshilfe", desc: "Reinigung, Wäsche, Kochen, Einkaufsservice" },
+              { img: broschuereDemenzImg, title: "Betreuung & Begleitung", desc: "Spaziergänge, Arztbesuche, Demenzbetreuung" },
             ].map((s, i) => (
               <div key={i} className="rounded-xl overflow-hidden border border-border/40 bg-white">
                 <div className="h-20 overflow-hidden">
@@ -322,10 +321,10 @@ const Broschuere = () => {
           {/* Additional Services with images */}
           <div className="grid grid-cols-2 gap-2 mb-2">
             {[
-              { img: vierundzwanzigImg, title: "24-Stunden-Pflege", desc: "Rund-um-die-Uhr-Betreuung zu Hause" },
-              { img: verhinderungspflegeImg, title: "Verhinderungspflege", desc: "Entlastung für pflegende Angehörige" },
-              { img: intensivpflegeImg, title: "Intensivpflege", desc: "Spezialisierte medizinische Versorgung" },
-              { img: pflegeberatungImg, title: "Pflegeberatung §37.3", desc: "Kostenlose Beratung & Antragshilfe" },
+              { img: broschuereVierundzwanzigImg, title: "24-Stunden-Pflege", desc: "Rund-um-die-Uhr-Betreuung zu Hause" },
+              { img: broschuereVerhinderungspflegeImg, title: "Verhinderungspflege", desc: "Entlastung für pflegende Angehörige" },
+              { img: broschuereIntensivpflegeImg, title: "Intensivpflege", desc: "Spezialisierte medizinische Versorgung" },
+              { img: broschuerePflegeberatungImg, title: "Pflegeberatung §37.3", desc: "Kostenlose Beratung & Antragshilfe" },
             ].map((s, i) => (
               <div key={i} className="rounded-xl overflow-hidden border border-border/40 bg-white">
                 <div className="h-16 overflow-hidden">
@@ -392,7 +391,7 @@ const Broschuere = () => {
           {/* Team Image + Trust */}
           <div className="flex gap-2.5 mb-3">
             <div className="w-[90px] h-[80px] rounded-xl overflow-hidden flex-shrink-0">
-              <img src={teamFrauenImg} alt="AVYTA Team" className="w-full h-full object-cover object-top" />
+              <img src={broschuereTeamGroupImg} alt="AVYTA Team" className="w-full h-full object-cover object-top" />
             </div>
             <div className="flex-1">
               <h2 className="text-base font-bold text-foreground mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -456,19 +455,19 @@ const Broschuere = () => {
                 quote: "Seit AVYTA sich um meine Mutter kümmert, kann ich endlich wieder ruhig schlafen. Ich weiß, sie ist in den besten Händen.",
                 name: "Familie M.",
                 location: "Frankfurt-Bornheim",
-                img: teamFrauenImg,
+                img: broschuereTeamGroupImg,
               },
               {
                 quote: "Die Pflegekräfte sind wie Familie geworden. So viel Herzlichkeit hätten wir nie erwartet.",
                 name: "Herr K.",
                 location: "Bad Vilbel",
-                img: demenzImg,
+                img: broschuereDemenzImg,
               },
               {
                 quote: "AVYTA hat uns bei der Antragstellung so geholfen – wir hätten sonst tausende Euro an Leistungen verpasst!",
                 name: "Familie S.",
                 location: "Frankfurt-Sachsenhausen",
-                img: teamGroupImg,
+                img: broschuereTeamGroupImg,
               },
             ].map((t, i) => (
               <div key={i} className="flex items-start gap-2 bg-primary/5 border border-primary/10 rounded-lg p-2">
