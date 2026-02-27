@@ -39,7 +39,7 @@ const Westend = () => {
       <Helmet>
         <title>Pflegedienst Frankfurt Westend | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Frankfurt Westend - Ihr ambulanter Pflegedienst im eleganten Frankfurter Westend. Grundpflege, Behandlungspflege, Intensivpflege. Diskret & professionell. Tel: 069 153 914 05" />
-        <link rel="canonical" href="https://www.avyta.de/pflegedienst-westend" />
+        <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/westend" />
         <meta property="og:title" content="Pflegedienst Frankfurt Westend | AVYTA Ambulante Pflege" />
         <meta property="og:description" content="Pflegedienst Frankfurt Westend - Grundpflege, Behandlungspflege, Intensivpflege. Diskret & professionell." />
         <meta property="og:type" content="website" />
@@ -47,7 +47,7 @@ const Westend = () => {
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
-          { name: "Westend", url: "https://www.avyta.de/pflegedienst-westend" },
+          { name: "Westend", url: "https://www.avyta.de/standorte/frankfurt/westend" },
         ])}</script>
       </Helmet>
       <div className="min-h-screen bg-background">

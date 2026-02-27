@@ -39,7 +39,7 @@ const Nordend = () => {
       <Helmet>
         <title>Pflegedienst Frankfurt Nordend | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Frankfurt Nordend - Ihr ambulanter Pflegedienst im beliebten Frankfurter Nordend. Grundpflege, Behandlungspflege, Intensivpflege. Herzlich & kompetent. Tel: 069 153 914 05" />
-        <link rel="canonical" href="https://www.avyta.de/pflegedienst-nordend" />
+        <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/nordend" />
         <meta property="og:title" content="Pflegedienst Frankfurt Nordend | AVYTA Ambulante Pflege" />
         <meta property="og:description" content="Pflegedienst Frankfurt Nordend - Grundpflege, Behandlungspflege, Intensivpflege. Herzlich & kompetent." />
         <meta property="og:type" content="website" />
@@ -47,7 +47,7 @@ const Nordend = () => {
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
-          { name: "Nordend", url: "https://www.avyta.de/pflegedienst-nordend" },
+          { name: "Nordend", url: "https://www.avyta.de/standorte/frankfurt/nordend" },
         ])}</script>
       </Helmet>
       <div className="min-h-screen bg-background">

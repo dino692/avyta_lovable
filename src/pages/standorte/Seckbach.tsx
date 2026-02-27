@@ -39,7 +39,7 @@ const Seckbach = () => {
       <Helmet>
         <title>Pflegedienst Frankfurt Seckbach | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Frankfurt Seckbach - professionelle Pflege mit Blick auf den Lohrberg. Grundpflege, Behandlungspflege, Intensivpflege. Herzlich willkommen. Tel: 069 153 914 05" />
-        <link rel="canonical" href="https://www.avyta.de/pflegedienst-seckbach" />
+        <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/seckbach" />
         <meta property="og:title" content="Pflegedienst Frankfurt Seckbach | AVYTA Ambulante Pflege" />
         <meta property="og:description" content="Pflegedienst Frankfurt Seckbach - professionelle Pflege mit Blick auf den Lohrberg." />
         <meta property="og:type" content="website" />
@@ -47,7 +47,7 @@ const Seckbach = () => {
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
-          { name: "Seckbach", url: "https://www.avyta.de/pflegedienst-seckbach" },
+          { name: "Seckbach", url: "https://www.avyta.de/standorte/frankfurt/seckbach" },
         ])}</script>
       </Helmet>
       <div className="min-h-screen bg-background">

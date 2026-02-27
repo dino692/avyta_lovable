@@ -111,16 +111,26 @@ const App = () => (
               <Route path="/pflegedienst-praunheim" element={<Navigate to="/standorte/frankfurt/pflegedienst-praunheim" replace />} />
               <Route path="/standorte/frankfurt/pflegedienst-ginnheim" element={<Ginnheim />} />
               <Route path="/pflegedienst-ginnheim" element={<Navigate to="/standorte/frankfurt/pflegedienst-ginnheim" replace />} />
-              <Route path="/pflegedienst-nordend" element={<Nordend />} />
-              <Route path="/pflegedienst-ostend" element={<Ostend />} />
-              <Route path="/pflegedienst-westend" element={<Westend />} />
-              <Route path="/pflegedienst-dornbusch" element={<Dornbusch />} />
-              <Route path="/pflegedienst-heddernheim" element={<Heddernheim />} />
-              <Route path="/pflegedienst-preungesheim" element={<Preungesheim />} />
-              <Route path="/pflegedienst-eschersheim" element={<Eschersheim />} />
-              <Route path="/pflegedienst-eckenheim" element={<Eckenheim />} />
-              <Route path="/pflegedienst-nieder-eschbach" element={<NiederEschbach />} />
-              <Route path="/pflegedienst-seckbach" element={<Seckbach />} />
+              <Route path="/standorte/frankfurt/nordend" element={<Nordend />} />
+              <Route path="/pflegedienst-nordend" element={<Navigate to="/standorte/frankfurt/nordend" replace />} />
+              <Route path="/standorte/frankfurt/ostend" element={<Ostend />} />
+              <Route path="/pflegedienst-ostend" element={<Navigate to="/standorte/frankfurt/ostend" replace />} />
+              <Route path="/standorte/frankfurt/westend" element={<Westend />} />
+              <Route path="/pflegedienst-westend" element={<Navigate to="/standorte/frankfurt/westend" replace />} />
+              <Route path="/standorte/frankfurt/dornbusch" element={<Dornbusch />} />
+              <Route path="/pflegedienst-dornbusch" element={<Navigate to="/standorte/frankfurt/dornbusch" replace />} />
+              <Route path="/standorte/frankfurt/heddernheim" element={<Heddernheim />} />
+              <Route path="/pflegedienst-heddernheim" element={<Navigate to="/standorte/frankfurt/heddernheim" replace />} />
+              <Route path="/standorte/frankfurt/preungesheim" element={<Preungesheim />} />
+              <Route path="/pflegedienst-preungesheim" element={<Navigate to="/standorte/frankfurt/preungesheim" replace />} />
+              <Route path="/standorte/frankfurt/eschersheim" element={<Eschersheim />} />
+              <Route path="/pflegedienst-eschersheim" element={<Navigate to="/standorte/frankfurt/eschersheim" replace />} />
+              <Route path="/standorte/frankfurt/eckenheim" element={<Eckenheim />} />
+              <Route path="/pflegedienst-eckenheim" element={<Navigate to="/standorte/frankfurt/eckenheim" replace />} />
+              <Route path="/standorte/frankfurt/nieder-eschbach" element={<NiederEschbach />} />
+              <Route path="/pflegedienst-nieder-eschbach" element={<Navigate to="/standorte/frankfurt/nieder-eschbach" replace />} />
+              <Route path="/standorte/frankfurt/seckbach" element={<Seckbach />} />
+              <Route path="/pflegedienst-seckbach" element={<Navigate to="/standorte/frankfurt/seckbach" replace />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/demenz-pflege-tipps" element={<DemenzPflege />} />
               <Route path="/blog/pflegegrad-beantragen" element={<PflegegradBeantragen />} />

@@ -39,7 +39,7 @@ const Preungesheim = () => {
       <Helmet>
         <title>Pflegedienst Frankfurt Preungesheim | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Frankfurt Preungesheim - liebevolle Pflege in Ihrem Stadtteil. Grundpflege, Behandlungspflege, Intensivpflege. Qualifiziert und herzlich. Tel: 069 153 914 05" />
-        <link rel="canonical" href="https://www.avyta.de/pflegedienst-preungesheim" />
+        <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/preungesheim" />
         <meta property="og:title" content="Pflegedienst Frankfurt Preungesheim | AVYTA Ambulante Pflege" />
         <meta property="og:description" content="Pflegedienst Frankfurt Preungesheim - liebevolle Pflege in Ihrem Stadtteil." />
         <meta property="og:type" content="website" />
@@ -47,7 +47,7 @@ const Preungesheim = () => {
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
-          { name: "Preungesheim", url: "https://www.avyta.de/pflegedienst-preungesheim" },
+          { name: "Preungesheim", url: "https://www.avyta.de/standorte/frankfurt/preungesheim" },
         ])}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
