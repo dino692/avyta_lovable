@@ -33,7 +33,7 @@ const sitemapData = [
     icon: MapPin,
     links: [
       { name: "Frankfurt", href: "/standorte/frankfurt" },
-      { name: "Bad Vilbel", href: "/pflegedienst-bad-vilbel" },
+      { name: "Bad Vilbel", href: "/standorte/bad-vilbel" },
       { name: "Bornheim", href: "/standorte/frankfurt/bornheim" },
       { name: "Bockenheim", href: "/standorte/frankfurt/pflegedienst-bockenheim" },
       { name: "Griesheim", href: "/standorte/frankfurt/griesheim" },

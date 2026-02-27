@@ -91,7 +91,8 @@ const App = () => (
               <Route path="/leistungen/pflegeberatung-frankfurt" element={<Pflegeberatung />} />
               <Route path="/leistungen/verhinderungspflege-frankfurt" element={<Verhinderungspflege />} />
               <Route path="/standorte/frankfurt" element={<Frankfurt />} />
-              <Route path="/pflegedienst-bad-vilbel" element={<BadVilbel />} />
+              <Route path="/standorte/bad-vilbel" element={<BadVilbel />} />
+              <Route path="/pflegedienst-bad-vilbel" element={<Navigate to="/standorte/bad-vilbel" replace />} />
               <Route path="/standorte/frankfurt/bornheim" element={<Bornheim />} />
               <Route path="/pflegedienst-bornheim" element={<Navigate to="/standorte/frankfurt/bornheim" replace />} />
               <Route path="/standorte/frankfurt/pflegedienst-bockenheim" element={<Bockenheim />} />
