@@ -12,6 +12,16 @@ const DemenzPflege = () => {
       <Helmet>
         <title>10 Tipps für die häusliche Pflege von Demenzpatienten | AVYTA Blog</title>
         <meta name="description" content="Erfahren Sie, wie Sie den Alltag für Demenzpatienten sicherer und angenehmer gestalten können. Praktische Tipps von unseren Pflegeexperten." />
+        <link rel="canonical" href="https://www.avyta.de/blog/demenz-pflege-tipps" />
+        <meta property="og:type" content="article" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "10 Tipps für die häusliche Pflege von Demenzpatienten",
+          "datePublished": "2025-12-15",
+          "author": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH"},
+          "publisher": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": {"@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png"}}
+        })}</script>
       </Helmet>
 
       <Header />

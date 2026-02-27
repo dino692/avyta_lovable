@@ -12,6 +12,16 @@ const VerhinderungspflegeNutzen = () => {
       <Helmet>
         <title>Verhinderungspflege richtig nutzen | AVYTA Blog</title>
         <meta name="description" content="So nutzen Sie die Verhinderungspflege optimal. Bis zu 1.612 Euro jährlich für Entlastung pflegender Angehöriger." />
+        <link rel="canonical" href="https://www.avyta.de/blog/verhinderungspflege-nutzen" />
+        <meta property="og:type" content="article" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Verhinderungspflege richtig nutzen",
+          "datePublished": "2025-12-20",
+          "author": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH"},
+          "publisher": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": {"@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png"}}
+        })}</script>
       </Helmet>
 
       <Header />

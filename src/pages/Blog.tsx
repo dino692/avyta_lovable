@@ -220,6 +220,10 @@ const Blog = () => {
       <Helmet>
         <title>Blog | AVYTA Pflegegesellschaft mbH</title>
         <meta name="description" content="Aktuelle Artikel zu Pflege, Gesundheit, Recht und Finanzen. Tipps und Empfehlungen für pflegende Angehörige." />
+        <link rel="canonical" href="https://www.avyta.de/blog" />
+        <meta property="og:title" content="Blog | AVYTA Pflegegesellschaft mbH" />
+        <meta property="og:description" content="Aktuelle Artikel zu Pflege, Gesundheit, Recht und Finanzen. Tipps und Empfehlungen für pflegende Angehörige." />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <Header />

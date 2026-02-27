@@ -8,6 +8,7 @@ const Datenschutz = () => {
       <Helmet>
         <title>Datenschutz | AVYTA Pflegegesellschaft mbH</title>
         <meta name="description" content="Datenschutzerklärung der AVYTA Pflegegesellschaft mbH - Informationen zum Umgang mit Ihren personenbezogenen Daten." />
+        <link rel="canonical" href="https://www.avyta.de/datenschutz" />
       </Helmet>
       <Header />
       <main className="pt-28 pb-20 min-h-screen bg-gradient-to-b from-secondary/30 to-background">
