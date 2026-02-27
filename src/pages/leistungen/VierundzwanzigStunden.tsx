@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     question: "Was zeichnet eine gute 24 Stunden Pflege in Frankfurt aus?",
-    answer: "Eine gute 24 Stunden Pflege in Frankfurt zeichnet sich immer durch Verlässlichkeit, Vertrauen, Kompetenz und Einfühlsamkeit aus. Mit mehr als 10 Jahren Erfahrung in der Pflege können wir von Avyta Ihnen genau das bieten. Von einfachen Hilfsleistungen bis hin zur Intensivpflege haben wir das nötige Know-how, um Ihnen rund um die Uhr zur Seite zu stehen."
+    answer: "Eine gute 24 Stunden Pflege in Frankfurt zeichnet sich immer durch Verlässlichkeit, Vertrauen, Kompetenz und Einfühlsamkeit aus. Mit mehr als 12 Jahren Erfahrung in der Pflege können wir von Avyta Ihnen genau das bieten. Von einfachen Hilfsleistungen bis hin zur Intensivpflege haben wir das nötige Know-how, um Ihnen rund um die Uhr zur Seite zu stehen."
   },
   {
     question: "Was gehört zum Aufgabengebiet der 24 Stunden Pflege in Frankfurt?",
@@ -117,7 +117,7 @@ const VierundzwanzigStunden = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
-                  Mit mehr als <strong>10 Jahren Erfahrung</strong> im Pflegebereich bieten wir sowohl das fachliche Know-how als auch die Menschlichkeit, die in einer guten Pflege wichtig sind. Sprechen Sie gern mit uns über Ihre Vorstellungen zur <strong>24 Stunden Pflege</strong> in Frankfurt.
+                  Mit mehr als <strong>12 Jahren Erfahrung</strong> im Pflegebereich bieten wir sowohl das fachliche Know-how als auch die Menschlichkeit, die in einer guten Pflege wichtig sind. Sprechen Sie gern mit uns über Ihre Vorstellungen zur <strong>24 Stunden Pflege</strong> in Frankfurt.
                 </p>
               </div>
             </div>
@@ -242,11 +242,11 @@ const VierundzwanzigStunden = () => {
                           <FileCheck className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
                         <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
-                          Über 10 Jahre Erfahrung
+                          Über 12 Jahre Erfahrung
                         </h3>
                       </div>
                       <p className="text-sm md:text-base text-muted-foreground">
-                        Mit mehr als 10 Jahren Erfahrung im Pflegebereich bieten wir 
+                        Mit mehr als 12 Jahren Erfahrung im Pflegebereich bieten wir 
                         sowohl das fachliche Know-how als auch die Menschlichkeit.
                       </p>
                     </CardContent>
