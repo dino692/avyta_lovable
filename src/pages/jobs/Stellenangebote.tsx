@@ -86,6 +86,7 @@ const faqs = [
 ];
 
 import { generateFAQSchema } from "@/lib/faqSchema";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const Stellenangebote = () => {
   return (
@@ -98,6 +99,11 @@ const Stellenangebote = () => {
         <meta property="og:description" content="Wir suchen Helfer mit Herz! Werden Sie Teil des familiären Avyta Pflegeteams." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Karriere", url: "https://www.avyta.de/karriere" },
+          { name: "Stellenangebote", url: "https://www.avyta.de/karriere/stellenangebote-pflege-frankfurt" },
+        ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
 

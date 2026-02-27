@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, Heart, Euro } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const VerhinderungspflegeNutzen = () => {
   return (
@@ -13,15 +14,24 @@ const VerhinderungspflegeNutzen = () => {
         <title>Verhinderungspflege richtig nutzen | AVYTA Blog</title>
         <meta name="description" content="So nutzen Sie die Verhinderungspflege optimal. Bis zu 1.612 Euro jährlich für Entlastung pflegender Angehöriger." />
         <link rel="canonical" href="https://www.avyta.de/blog/verhinderungspflege-nutzen" />
+        <meta property="og:title" content="Verhinderungspflege richtig nutzen | AVYTA Blog" />
+        <meta property="og:description" content="So nutzen Sie die Verhinderungspflege optimal. Bis zu 1.612 Euro jährlich für Entlastung pflegender Angehöriger." />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
           "headline": "Verhinderungspflege richtig nutzen",
           "datePublished": "2025-12-20",
           "author": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH"},
-          "publisher": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": {"@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png"}}
+          "publisher": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": {"@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png"}},
+          "mainEntityOfPage": "https://www.avyta.de/blog/verhinderungspflege-nutzen"
         })}</script>
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Blog", url: "https://www.avyta.de/blog" },
+          { name: "Verhinderungspflege nutzen", url: "https://www.avyta.de/blog/verhinderungspflege-nutzen" },
+        ])}</script>
       </Helmet>
 
       <Header />

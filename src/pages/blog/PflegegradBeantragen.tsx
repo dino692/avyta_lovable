@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, Scale, CheckCircle2 } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const PflegegradBeantragen = () => {
   return (
@@ -13,15 +14,24 @@ const PflegegradBeantragen = () => {
         <title>Pflegegrad beantragen: Schritt für Schritt erklärt | AVYTA Blog</title>
         <meta name="description" content="Alles was Sie wissen müssen, um erfolgreich einen Pflegegrad zu beantragen. Von der Antragstellung bis zur Begutachtung." />
         <link rel="canonical" href="https://www.avyta.de/blog/pflegegrad-beantragen" />
+        <meta property="og:title" content="Pflegegrad beantragen: Schritt für Schritt erklärt | AVYTA" />
+        <meta property="og:description" content="Alles was Sie wissen müssen, um erfolgreich einen Pflegegrad zu beantragen. Von der Antragstellung bis zur Begutachtung." />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
           "headline": "Pflegegrad beantragen: Schritt für Schritt erklärt",
           "datePublished": "2026-01-05",
           "author": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH"},
-          "publisher": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": {"@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png"}}
+          "publisher": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": {"@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png"}},
+          "mainEntityOfPage": "https://www.avyta.de/blog/pflegegrad-beantragen"
         })}</script>
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Blog", url: "https://www.avyta.de/blog" },
+          { name: "Pflegegrad beantragen", url: "https://www.avyta.de/blog/pflegegrad-beantragen" },
+        ])}</script>
       </Helmet>
 
       <Header />

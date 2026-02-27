@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import {
   Accordion,
   AccordionContent,
@@ -43,6 +44,11 @@ const Nordend = () => {
         <meta property="og:description" content="Pflegedienst Frankfurt Nordend - Grundpflege, Behandlungspflege, Intensivpflege. Herzlich & kompetent." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
+          { name: "Nordend", url: "https://www.avyta.de/pflegedienst-nordend" },
+        ])}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

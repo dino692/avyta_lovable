@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/faqSchema";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const bockenheimFaqs = [
   {
@@ -60,6 +61,11 @@ const Bockenheim = () => {
         <meta property="og:description" content="Pflegedienst in Frankfurt Bockenheim. Wir sind zur Stelle wenn Sie Pflegeleistungen benötigen." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
+          { name: "Bockenheim", url: "https://www.avyta.de/pflegedienst-bockenheim" },
+        ])}</script>
         <script type="application/ld+json">{generateFAQSchema(bockenheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">

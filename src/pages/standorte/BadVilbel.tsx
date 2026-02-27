@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/faqSchema";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const badVilbelFaqs = [
   {
@@ -60,6 +61,11 @@ const BadVilbel = () => {
         <meta property="og:description" content="Ihr ambulanter Pflegedienst in Bad Vilbel. Wir sind täglich für Sie da." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
+          { name: "Bad Vilbel", url: "https://www.avyta.de/pflegedienst-bad-vilbel" },
+        ])}</script>
         <script type="application/ld+json">{generateFAQSchema(badVilbelFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">

@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/faqSchema";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const griesheimFaqs = [
   {
@@ -61,6 +62,11 @@ const Griesheim = () => {
         <meta property="og:description" content="In Frankfurts Stadtteil Griesheim sind wir für Sie unterwegs." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
+          { name: "Griesheim", url: "https://www.avyta.de/pflegedienst-griesheim" },
+        ])}</script>
         <script type="application/ld+json">{generateFAQSchema(griesheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">

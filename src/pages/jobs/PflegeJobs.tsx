@@ -13,6 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const stellenangebote = [
   { title: "Pflegefachkraft in Frankfurt", href: "/karriere/pflegefachkraft-frankfurt", icon: Sparkles },
@@ -103,6 +104,11 @@ const PflegeJobs = () => {
         <meta property="og:description" content="Pflege Jobs Frankfurt bei AVYTA: Karriere als Pflegefachkraft, Pflegehelfer oder Haushaltshilfe." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Karriere", url: "https://www.avyta.de/karriere" },
+          { name: "Pflege Jobs", url: "https://www.avyta.de/karriere/pflege-jobs" },
+        ])}</script>
       </Helmet>
 
       <Header />
