@@ -39,7 +39,7 @@ const Eckenheim = () => {
       <Helmet>
         <title>Pflegedienst Frankfurt Eckenheim | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Frankfurt Eckenheim - persönliche ambulante Pflege für Ihr Wohlbefinden. Grundpflege, Behandlungspflege, Intensivpflege. Tel: 069 153 914 05" />
-        <link rel="canonical" href="https://www.avyta.de/pflegedienst-eckenheim" />
+        <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/eckenheim" />
         <meta property="og:title" content="Pflegedienst Frankfurt Eckenheim | AVYTA Ambulante Pflege" />
         <meta property="og:description" content="Pflegedienst Frankfurt Eckenheim - persönliche ambulante Pflege für Ihr Wohlbefinden." />
         <meta property="og:type" content="website" />
@@ -47,7 +47,7 @@ const Eckenheim = () => {
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
-          { name: "Eckenheim", url: "https://www.avyta.de/pflegedienst-eckenheim" },
+          { name: "Eckenheim", url: "https://www.avyta.de/standorte/frankfurt/eckenheim" },
         ])}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
