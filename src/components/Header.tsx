@@ -25,7 +25,7 @@ const leistungen: { name: string; href: string; description: string; icon: Lucid
 const standorte = {
   hauptstandorte: [
     { name: "Frankfurt", href: "/standorte/frankfurt" },
-    { name: "Bad Vilbel", href: "/pflegedienst-bad-vilbel" },
+    { name: "Bad Vilbel", href: "/standorte/bad-vilbel" },
   ],
   frankfurtStadtteile: [
     { name: "Bockenheim", href: "/standorte/frankfurt/pflegedienst-bockenheim" },

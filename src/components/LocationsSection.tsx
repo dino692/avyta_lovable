@@ -23,7 +23,7 @@ const locations = [
     city: "Bad Vilbel", 
     address: "Wetteraukreis", 
     phone: "069 153 914 05", 
-    link: "/pflegedienst-bad-vilbel",
+    link: "/standorte/bad-vilbel",
     description: "Für die Region Wetterau – persönliche Betreuung in Ihrer Nähe",
     gradient: "from-accent via-accent/80 to-primary",
     stats: { patients: "200+", years: "12+", rating: "5,0" },

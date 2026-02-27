@@ -56,7 +56,7 @@ const BadVilbel = () => {
       <Helmet>
         <title>Pflegedienst Bad Vilbel - der richtige Ansprechpartner</title>
         <meta name="description" content="Ihr ambulanter Pflegedienst in Bad Vilbel. Wir sind täglich für Sie da und helfen Ihnen im Alltag, ohne dass Sie Ihren Wohnort verlassen müssen. | avyta.de" />
-        <link rel="canonical" href="https://www.avyta.de/pflegedienst-bad-vilbel" />
+        <link rel="canonical" href="https://www.avyta.de/standorte/bad-vilbel" />
         <meta property="og:title" content="Pflegedienst Bad Vilbel - der richtige Ansprechpartner" />
         <meta property="og:description" content="Ihr ambulanter Pflegedienst in Bad Vilbel. Wir sind täglich für Sie da." />
         <meta property="og:type" content="website" />
@@ -64,7 +64,7 @@ const BadVilbel = () => {
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
-          { name: "Bad Vilbel", url: "https://www.avyta.de/pflegedienst-bad-vilbel" },
+          { name: "Bad Vilbel", url: "https://www.avyta.de/standorte/bad-vilbel" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(badVilbelFaqs)}</script>
       </Helmet>
