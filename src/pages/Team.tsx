@@ -130,7 +130,7 @@ const Team = () => {
         <meta name="keywords" content="Pflegeteam Frankfurt, Ambulante Pflege Team, Pflegekräfte Frankfurt am Main" />
         <meta property="og:title" content="AVYTA - Wir stellen uns vor" />
         <meta property="og:description" content="Lernen Sie unser engagiertes Team kennen – Menschen mit Herz, Kompetenz und Leidenschaft für die Pflege." />
-        <link rel="canonical" href="https://www.avyta.de/ueber-uns" />
+        <link rel="canonical" href="https://www.avyta.de/team" />
       </Helmet>
       <div className="min-h-screen bg-background overflow-hidden">
         <Header />

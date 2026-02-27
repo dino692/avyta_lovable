@@ -43,18 +43,28 @@ const sitemapData = [
       { name: "Niederrad", href: "/pflegedienst-niederrad" },
       { name: "Höchst", href: "/pflegedienst-frankfurt-hoechst" },
       { name: "Rödelheim", href: "/pflegedienst-roedelheim" },
+      { name: "Nordend", href: "/pflegedienst-nordend" },
+      { name: "Ostend", href: "/pflegedienst-ostend" },
+      { name: "Westend", href: "/pflegedienst-westend" },
+      { name: "Dornbusch", href: "/pflegedienst-dornbusch" },
+      { name: "Heddernheim", href: "/pflegedienst-heddernheim" },
+      { name: "Preungesheim", href: "/pflegedienst-preungesheim" },
+      { name: "Eschersheim", href: "/pflegedienst-eschersheim" },
+      { name: "Eckenheim", href: "/pflegedienst-eckenheim" },
+      { name: "Nieder-Eschbach", href: "/pflegedienst-nieder-eschbach" },
+      { name: "Seckbach", href: "/pflegedienst-seckbach" },
     ],
   },
   {
     title: "Jobs & Karriere",
     icon: Briefcase,
     links: [
-      { name: "Alle Jobs", href: "/jobs" },
-      { name: "Pflege Jobs", href: "/jobs/pflege-jobs" },
+      { name: "Karriere", href: "/karriere" },
       { name: "Stellenangebote", href: "/karriere/stellenangebote-pflege-frankfurt" },
       { name: "Pflegefachkraft", href: "/karriere/pflegefachkraft-frankfurt" },
-      { name: "Pflegehilfskraft", href: "/karriere/pflegehilfskraft-frankfurt" },
       { name: "Pflegehelfer", href: "/karriere/pflegehelfer-frankfurt" },
+      { name: "Pflegehilfskraft", href: "/karriere/pflegehilfskraft-frankfurt" },
+      { name: "Haushaltshilfe", href: "/karriere/haushaltshilfe-frankfurt" },
     ],
   },
   {
@@ -86,6 +96,7 @@ const Sitemap = () => {
       <Helmet>
         <title>Sitemap | AVYTA Pflegegesellschaft mbH</title>
         <meta name="description" content="Sitemap der AVYTA Pflegegesellschaft mbH - Übersicht aller Seiten unserer Website." />
+        <link rel="canonical" href="https://www.avyta.de/sitemap" />
       </Helmet>
       <Header />
       <main className="pt-28 pb-20 min-h-screen bg-gradient-to-b from-secondary/30 to-background">

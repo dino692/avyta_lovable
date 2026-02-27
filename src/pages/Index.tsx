@@ -32,6 +32,44 @@ const Index = () => {
         <meta property="og:description" content="Hochqualifizierter ambulanter Pflegedienst in Frankfurt am Main. Ganzheitliche Betreuung für Pflegebedürftige. Wir sind mit Herz an Ihrer Seite." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://www.avyta.de/" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.avyta.de",
+          "name": "AVYTA Pflegegesellschaft mbH",
+          "image": "https://www.avyta.de/images/avyta-logo.png",
+          "url": "https://www.avyta.de",
+          "telephone": "+496915391405",
+          "email": "info@avyta.de",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Allerheiligentor 2-4",
+            "addressLocality": "Frankfurt am Main",
+            "postalCode": "60311",
+            "addressCountry": "DE"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 50.1109,
+            "longitude": 8.6821
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "08:00",
+            "closes": "12:00"
+          },
+          "priceRange": "€€",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "50",
+            "bestRating": "5"
+          },
+          "sameAs": [
+            "https://www.instagram.com/avyta_pflegedienst/"
+          ]
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Header />

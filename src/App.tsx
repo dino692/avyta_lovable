@@ -116,7 +116,6 @@ const App = () => (
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
             <Route path="/sitemap" element={<Sitemap />} />
-            <Route path="/karriere" element={<Karriere />} />
             <Route path="/karriere/stellenangebote-pflege-frankfurt" element={<Stellenangebote />} />
             <Route path="/karriere/pflegehelfer-frankfurt" element={<Pflegehelfer />} />
             <Route path="/karriere/pflegehilfskraft-frankfurt" element={<Pflegehilfskraft />} />
