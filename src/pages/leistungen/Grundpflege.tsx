@@ -45,11 +45,11 @@ const faqs = [
   },
   {
     question: "Wie lange kann ich die Grundpflege in Frankfurt in Anspruch nehmen?",
-    answer: "Die Grundpflege kann so lange in Anspruch genommen werden, wie sie benötigt wird. Die Dauer richtet sich nach Ihrem individuellen Pflegebedarf. Wir erstellen individuelle Pflegepläne für wenige Stunden, mehrere Tage oder sogar Wochen."
+    answer: "Die Dauer der Grundpflege in Frankfurt kann je nach Pflegebedarf variieren. Wir passen unsere Pflegepläne flexibel an Ihre individuellen Bedürfnisse an und bieten Ihnen die notwendige Unterstützung so lange wie nötig."
   },
   {
     question: "Welche Qualifikationen haben die Pflegekräfte im Bereich der Grundpflege?",
-    answer: "Unsere Pflegekräfte im Bereich Grundpflege sind ausgebildete Pflegefachkräfte und Pflegehelfer mit entsprechender Qualifikation und regelmäßigen Weiterbildungen. Sie verfügen über fundierte Kenntnisse und langjährige Erfahrung in der ambulanten Pflege."
+    answer: "Unser Team bei Avyta besteht aus hochqualifizierten Pflegefachkräften und Pflegehelfern, die über die erforderlichen Qualifikationen für die Grundpflege in Frankfurt verfügen. Wir stellen sicher, dass Ihre Angehörigen die bestmögliche Betreuung erhalten."
   },
 ];
 

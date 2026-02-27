@@ -75,7 +75,7 @@ const Intensivpflege = () => {
                   Ausserklinische Intensivpflege in Frankfurt am Main
                 </h1>
                 <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
-                  Pflegebedürftig sein ist das eine – aber es gibt Fälle, in denen eine besonders enge medizinische Betreuung notwendig ist. Dennoch ist es auch für diese Patienten oft wichtig, nicht aus Ihrem gewohnten Umfeld gerissen zu werden. Hier kommt die <strong>ausserklinische Intensivpflege in Frankfurt am Main</strong> ins Spiel. Bei <Link to="/team" className="text-primary hover:underline font-medium">Avyta</Link> können wir für Sie oder Ihre Angehörigen das gesamte Spektrum an <strong>intensivpflegerischen Leistungen</strong> übernehmen. Mit mehr als <strong>12 Jahren Erfahrung in der Pflege</strong> und einem <em><strong>hochmotivierten, verlässlichen</strong></em> und <em><strong>einfühlsamen</strong></em> Team stehen wir Ihnen in der <strong>ausserklinischen Intensivpflege</strong> in Frankfurt am Main zur Seite.
+                  Pflegebedürftig sein ist das eine – aber es gibt Fälle, in denen eine besonders enge medizinische Betreuung notwendig ist. Dennoch ist es auch für diese Patienten oft wichtig, nicht aus Ihrem gewohnten Umfeld gerissen zu werden. Hier kommt die <strong>ausserklinische Intensivpflege in Frankfurt am Main</strong> ins Spiel. Bei <Link to="/team" className="text-primary hover:underline font-medium">Avyta</Link> können wir für Sie oder Ihre Angehörigen das gesamte Spektrum an <strong>intensivpflegerischen Leistungen</strong> übernehmen. Mit mehr als <strong>10 Jahren Erfahrung in der Pflege</strong> und einem <em><strong>hochmotivierten, verlässlichen</strong></em> und <em><strong>einfühlsamen</strong></em> Team stehen wir Ihnen in der <strong>ausserklinischen Intensivpflege</strong> in Frankfurt am Main zur Seite.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -178,11 +178,11 @@ const Intensivpflege = () => {
                           <FileCheck className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
                         <h3 className="text-lg md:text-xl font-display font-semibold text-foreground">
-                          Über 12 Jahre Erfahrung
+                          Über 10 Jahre Erfahrung
                         </h3>
                       </div>
                       <p className="text-sm md:text-base text-muted-foreground">
-                        Mit mehr als 12 Jahren Erfahrung in der Pflege bieten wir 
+                        Mit mehr als 10 Jahren Erfahrung in der Pflege bieten wir 
                         sowohl das fachliche Know-how als auch die Menschlichkeit, 
                         die in einer guten Intensivpflege wichtig sind.
                       </p>

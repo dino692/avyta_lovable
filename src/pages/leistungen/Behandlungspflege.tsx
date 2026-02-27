@@ -45,11 +45,11 @@ const faqs = [
   },
   {
     question: "Wie lange kann ich die Behandlungspflege in Frankfurt in Anspruch nehmen?",
-    answer: "Die Behandlungspflege kann so lange in Anspruch genommen werden, wie sie medizinisch notwendig ist. Die Dauer richtet sich nach der ärztlichen Verordnung und kann bei Bedarf verlängert werden. Wir passen unsere Leistungen flexibel an Ihre Situation an."
+    answer: "Die Dauer der Behandlungspflege in Frankfurt kann je nach Gesundheitszustand variieren. Wir passen unsere Pflegepläne flexibel an Ihre individuellen Bedürfnisse an und bieten Ihnen die notwendige Unterstützung so lange wie nötig."
   },
   {
     question: "Welche Qualifikationen haben die Pflegekräfte im Bereich der Behandlungspflege?",
-    answer: "Unsere Pflegekräfte im Bereich Behandlungspflege sind examinierte Pflegefachkräfte mit entsprechender Ausbildung und regelmäßigen Weiterbildungen. Sie verfügen über fundierte medizinische Kenntnisse und langjährige Erfahrung in der ambulanten Pflege."
+    answer: "Unser Team bei Avyta besteht aus hochqualifizierten Pflegefachkräften und Pflegehelfern, die über die erforderlichen Qualifikationen für die Behandlungspflege in Frankfurt verfügen. Wir stellen sicher, dass Ihre Angehörigen die bestmögliche medizinische Betreuung erhalten."
   },
 ];
 

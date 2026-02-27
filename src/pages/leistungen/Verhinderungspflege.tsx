@@ -45,11 +45,11 @@ const faqs = [
   },
   {
     question: "Wie kann ich die Verhinderungspflege in Frankfurt verlängern?",
-    answer: "Die Dauer der Verhinderungspflege kann je nach Bedarf angepasst werden. Wir erstellen temporäre Pflegepläne individuell über die Dauer von wenigen Stunden, mehreren Tagen oder sogar einigen Wochen. Sprechen Sie uns an, wenn Sie eine Verlängerung benötigen."
+    answer: "Wenn Sie aufgrund von Krankheit oder einer Verletzung in der Pflege verhindert sind, ist die Dauer der Verhinderungspflege nur schwer abzuschätzen. Wir passen unsere Pflegepläne an Ihre persönliche Situation an und können unsere Leistungen bei Bedarf unbegrenzt verlängern."
   },
   {
     question: "Welche Qualifikation haben Pflegekräfte im ambulanten Einsatz?",
-    answer: "Unsere Pflegekräfte sind ausgebildete Pflegefachkräfte und Pflegehelfer mit entsprechenden Qualifikationen. Sie werden regelmäßig geschult und verfügen über langjährige Erfahrung in der ambulanten Pflege."
+    answer: "Zu unserem Avyta Team gehören Pflegehelfer und Pflegekräfte mit unterschiedlichen Qualifikationen zur Behandlung von Demenzpatienten, bettlägerigen Menschen oder für die Intensivpflege. Vor Beginn der Verhinderungspflege in Frankfurt klären wir genau ab, wie hoch der medizinische Bedarf von Pflegebedürftigen ist und welche Qualifikationen für die umfängliche Pflege nötig sind."
   },
 ];
 
