@@ -93,11 +93,11 @@ const faqs = [
   },
   {
     question: "Welche Voraussetzungen braucht man als Pflegehelfer in Frankfurt?",
-    answer: "Als Pflegehelfer in Frankfurt benötigen Sie eine einjährige Ausbildung an einer staatlich anerkannten Krankenfachschule. Wichtig sind außerdem Flexibilität, Belastbarkeit, Zuverlässigkeit und Einfühlungsvermögen. Ein Führerschein Klasse B und gute Deutschkenntnisse sind zwingend erforderlich."
+    answer: "Die Anforderungen für Pflege Jobs in Frankfurt hängen ganz davon ab, auf welches Stellenprofil sich beworben wird. So brauchen alle Jobs ein hohes Maß an Zuverlässigkeit und Einfühlungsvermögen. Pflegefachkräfte haben aber natürlich höhere fachliche Anforderungen zu erfüllen als Hilfskräfte oder Haushaltshilfen."
   },
   {
     question: "Wie ist die Bezahlung als Pflegehelfer in Frankfurt?",
-    answer: "Bei Avyta erwartet Sie ein übertarifliches Gehalt, das sich nach Ihrer Qualifikation und Erfahrung richtet. Zusätzlich profitieren Sie von Sonntags-, Feiertags- und Nachtzuschlägen sowie weiteren attraktiven Benefits wie 30 Urlaubstage und einem Firmenwagen zur privaten Nutzung."
+    answer: "Bei Avyta legen wir viel Wert auf eine überdurchschnittliche Entlohnung, die Ihrem Einsatz angemessen ist. Wir bezahlen über dem üblichen Tarif und geben Ihnen zusätzlich weitere attraktive Konditionen für Ihre Pflege Jobs in Frankfurt. So macht das Arbeiten Spaß."
   },
 ];
 

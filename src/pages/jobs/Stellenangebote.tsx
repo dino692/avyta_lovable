@@ -73,11 +73,11 @@ const wellpassFeatures = [
 const faqs = [
   {
     question: "Wann kann ich mich als Pflegehilfskraft oder Haushaltshilfe bewerben?",
-    answer: "Pflegehilfskräfte und Haushaltshilfen benötigen keine besondere Vorausbildung und können sich sofort auf Stellenangebote in der Pflege Frankfurt bewerben und in den Beruf einsteigen. Sie sollten ein Händchen für den freundlichen Umgang mit Menschen haben und auch engen Kontakt nicht scheuen."
+    answer: "Pflegehilfskräfte und Haushaltshilfen benötigen keine besondere Vorausbildung und können sich sofort auf Stellenangebote in der Pflege Frankfurt bewerben und in den Beruf einsteigen. Sie sollten ein Händchen für den freundlichen Umgang mit Menschen haben und auch engen Kontakt nicht scheuen. Im privaten Umfeld von Pflegebedürftigen ist Vertrauen das A und O. Auch mit geringer Berufserfahrung lernen wir Sie im Bewerbungsgespräch gern kennen."
   },
   {
     question: "Welche Aufgaben erwarten mich in der ambulanten Pflege?",
-    answer: "Die Aufgabenfelder für unsere Mitarbeiter variieren von Einsatzort zu Einsatzort. Manchmal stehen Sie Pflegefachkräften als Beobachter und Dokumentator zur Seite, zu anderen Gelegenheiten helfen Sie Pflegebedürftigen beim An- und Ausziehen oder legen Katheter. Abhängig von Ihrem beruflichen Qualifikationsgrad erledigen Sie sämtliche Aufgaben, die zur Verbesserung der Lebensqualität von Pflegebedürftigen beitragen."
+    answer: "Die Aufgabenfelder für unsere Mitarbeiter variieren von Einsatzort zu Einsatzort. Manchmal stehen Sie Pflegefachkräften als Beobachter und Dokumentator zur Seite, zu anderen Gelegenheiten helfen Sie Pflegebedürftigen beim An- und Ausziehen oder legen Katheter. Abhängig von Ihrem beruflichen Qualifikationsgrad erledigen Sie sämtliche Aufgaben, die zur Verbesserung der Lebensqualität von Pflegebedürftigen beitragen. Schauen Sie sich unsere Stellenangebote in der Pflege Frankfurt einmal genauer an, auch für Sie ist sicherlich etwas dabei."
   },
   {
     question: "Welche Eigenschaften müssen Bewerber auf Stellenangebote in der Pflege Frankfurt mitbringen?",
