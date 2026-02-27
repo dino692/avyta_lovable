@@ -93,6 +93,11 @@ const Stellenangebote = () => {
       <Helmet>
         <title>Stellenangebote in der Pflege Frankfurt – Willkommen im Team</title>
         <meta name="description" content="Wir suchen Helfer mit Herz! Werden Sie Teil des familiären Avyta Pflegeteams und arbeiten Sie ambulant an verschiedenen Einsatzorten in Frankfurt." />
+        <link rel="canonical" href="https://www.avyta.de/karriere/stellenangebote-pflege-frankfurt" />
+        <meta property="og:title" content="Stellenangebote in der Pflege Frankfurt – Willkommen im Team" />
+        <meta property="og:description" content="Wir suchen Helfer mit Herz! Werden Sie Teil des familiären Avyta Pflegeteams." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
 

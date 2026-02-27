@@ -38,6 +38,11 @@ const NiederEschbach = () => {
       <Helmet>
         <title>Pflegedienst Frankfurt Nieder-Eschbach | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Frankfurt Nieder-Eschbach - Ihr ambulanter Pflegedienst im Frankfurter Norden. Grundpflege, Behandlungspflege, Intensivpflege. Zuverlässig & herzlich. Tel: 069 153 914 05" />
+        <link rel="canonical" href="https://www.avyta.de/pflegedienst-nieder-eschbach" />
+        <meta property="og:title" content="Pflegedienst Frankfurt Nieder-Eschbach | AVYTA Ambulante Pflege" />
+        <meta property="og:description" content="Pflegedienst Frankfurt Nieder-Eschbach - Ihr ambulanter Pflegedienst im Frankfurter Norden." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

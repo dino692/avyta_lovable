@@ -38,6 +38,11 @@ const Heddernheim = () => {
       <Helmet>
         <title>Pflegedienst Frankfurt Heddernheim | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Frankfurt Heddernheim - zuverlässige ambulante Pflege in Ihrer Nähe. Grundpflege, Behandlungspflege, Intensivpflege. Tel: 069 153 914 05" />
+        <link rel="canonical" href="https://www.avyta.de/pflegedienst-heddernheim" />
+        <meta property="og:title" content="Pflegedienst Frankfurt Heddernheim | AVYTA Ambulante Pflege" />
+        <meta property="og:description" content="Pflegedienst Frankfurt Heddernheim - zuverlässige ambulante Pflege in Ihrer Nähe." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

@@ -33,6 +33,7 @@ const Broschuere = () => {
       <Helmet>
         <title>AVYTA Infobroschüre - Ambulanter Pflegedienst Frankfurt</title>
         <meta name="description" content="Informationsbroschüre von AVYTA - Ihrem ambulanten Pflegedienst in Frankfurt am Main. Alle Leistungen im Überblick." />
+        <link rel="canonical" href="https://www.avyta.de/broschuere" />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       

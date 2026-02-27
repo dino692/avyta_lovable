@@ -66,6 +66,11 @@ const Praunheim = () => {
       <Helmet>
         <title>Pflegedienst in Frankfurt Praunheim mit Herz: Avyta</title>
         <meta name="description" content="Ihr Pflegedienst in Frankfurt Praunheim für medizinische Versorgung und Pflege zu Hause. ✓ Individuelle Pflege für Menschen, die helfende Hände brauchen." />
+        <link rel="canonical" href="https://www.avyta.de/pflegedienst-praunheim" />
+        <meta property="og:title" content="Pflegedienst in Frankfurt Praunheim mit Herz: Avyta" />
+        <meta property="og:description" content="Ihr Pflegedienst in Frankfurt Praunheim für medizinische Versorgung und Pflege zu Hause." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{generateFAQSchema(praunheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">

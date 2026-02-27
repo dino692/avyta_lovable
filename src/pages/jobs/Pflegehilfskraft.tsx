@@ -109,6 +109,11 @@ const Pflegehilfskraft = () => {
       <Helmet>
         <title>Pflegehilfskraft in Frankfurt – Karriere bei Avyta</title>
         <meta name="description" content="Pflegehilfskraft in Frankfurt ✔ 30 Tage Urlaub & Rentenversicherung ✔ Firmenwagen zur privaten Nutzung ✔ Weiterbildungsmöglichkeiten bei Avyta" />
+        <link rel="canonical" href="https://www.avyta.de/karriere/pflegehilfskraft-frankfurt" />
+        <meta property="og:title" content="Pflegehilfskraft in Frankfurt – Karriere bei Avyta" />
+        <meta property="og:description" content="Pflegehilfskraft in Frankfurt ✔ 30 Tage Urlaub ✔ Firmenwagen ✔ Weiterbildungsmöglichkeiten" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
 
