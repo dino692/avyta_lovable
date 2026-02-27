@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
 import { HelmetProvider } from "react-helmet-async";
@@ -121,7 +121,7 @@ const App = () => (
             <Route path="/karriere/pflegehilfskraft-frankfurt" element={<Pflegehilfskraft />} />
             <Route path="/karriere/pflegefachkraft-frankfurt" element={<Pflegefachkraft />} />
             <Route path="/karriere/haushaltshilfe-frankfurt" element={<HaushaltshilfeJob />} />
-            <Route path="/karriere/haushaltshilfen-frankfurt" element={<HaushaltshilfeJob />} />
+            <Route path="/karriere/haushaltshilfen-frankfurt" element={<Navigate to="/karriere/haushaltshilfe-frankfurt" replace />} />
             <Route path="/broschuere" element={<Broschuere />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

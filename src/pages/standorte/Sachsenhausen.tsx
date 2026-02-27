@@ -56,6 +56,11 @@ const Sachsenhausen = () => {
       <Helmet>
         <title>Pflegedienst Frankfurt Sachsenhausen für Bedürftige</title>
         <meta name="description" content="Im Bezirk Frankfurt Sachsenhausen sind wir Ihr Pflegedienst des Vertrauens . Grundpflege ✓ Behandlungspflege ✓ Intensivpflege ✓ Mehr auf | avyta.de" />
+        <link rel="canonical" href="https://www.avyta.de/pflegedienst-frankfurt-sachsenhausen" />
+        <meta property="og:title" content="Pflegedienst Frankfurt Sachsenhausen für Bedürftige" />
+        <meta property="og:description" content="Im Bezirk Frankfurt Sachsenhausen sind wir Ihr Pflegedienst des Vertrauens." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{generateFAQSchema(sachsenhausenFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">

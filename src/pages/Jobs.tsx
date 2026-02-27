@@ -173,7 +173,9 @@ const Jobs = () => {
         <meta name="keywords" content="Pflege Jobs Frankfurt, Pflegefachkraft Stellenangebote Frankfurt, Pflegehelfer Jobs, Karriere Pflegedienst Frankfurt" />
         <meta property="og:title" content="Pflege Jobs Frankfurt: Ihre Karriere bei AVYTA" />
         <meta property="og:description" content="Die Wichtigkeit der Ambulanten Pflege steigt! Bewerben Sie sich jetzt bei AVYTA für ein familiäres Arbeitsumfeld mit flacher Hierarchie." />
-        <link rel="canonical" href="https://www.avyta.de/karriere" />
+        <link rel="canonical" href="https://www.avyta.de/karriere/uebersicht" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
       </Helmet>
 
       <Header />

@@ -53,12 +53,27 @@ const Index = () => {
             "latitude": 50.1109,
             "longitude": 8.6821
           },
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-            "opens": "08:00",
-            "closes": "12:00"
-          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              "opens": "08:00",
+              "closes": "12:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+              "opens": "00:00",
+              "closes": "23:59",
+              "description": "Pflegedienst 24/7 erreichbar"
+            }
+          ],
+          "areaServed": [
+            {"@type": "City", "name": "Frankfurt am Main"},
+            {"@type": "City", "name": "Bad Vilbel"}
+          ],
+          "serviceType": ["Grundpflege","Behandlungspflege","Intensivpflege","24-Stunden-Pflege","Verhinderungspflege","Haushaltshilfe","Pflegeberatung"],
+          "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 20},
           "priceRange": "€€",
           "aggregateRating": {
             "@type": "AggregateRating",

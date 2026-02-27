@@ -56,6 +56,11 @@ const Ginnheim = () => {
       <Helmet>
         <title>Pflegedienst in Ginnheim für die häusliche Versorgung</title>
         <meta name="description" content="Der Avyta Pflegedienst in Ginnheim ist an 365 Tagen im Jahr für Sie im Einsatz. Häusliche Pflege ist mit unserem Einsatz in jeder Situation möglich." />
+        <link rel="canonical" href="https://www.avyta.de/pflegedienst-ginnheim" />
+        <meta property="og:title" content="Pflegedienst in Ginnheim für die häusliche Versorgung" />
+        <meta property="og:description" content="Der Avyta Pflegedienst in Ginnheim ist an 365 Tagen im Jahr für Sie im Einsatz." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{generateFAQSchema(ginnheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">

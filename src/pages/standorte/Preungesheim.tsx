@@ -38,6 +38,11 @@ const Preungesheim = () => {
       <Helmet>
         <title>Pflegedienst Frankfurt Preungesheim | AVYTA Ambulante Pflege</title>
         <meta name="description" content="Pflegedienst Frankfurt Preungesheim - liebevolle Pflege in Ihrem Stadtteil. Grundpflege, Behandlungspflege, Intensivpflege. Qualifiziert und herzlich. Tel: 069 153 914 05" />
+        <link rel="canonical" href="https://www.avyta.de/pflegedienst-preungesheim" />
+        <meta property="og:title" content="Pflegedienst Frankfurt Preungesheim | AVYTA Ambulante Pflege" />
+        <meta property="og:description" content="Pflegedienst Frankfurt Preungesheim - liebevolle Pflege in Ihrem Stadtteil." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
