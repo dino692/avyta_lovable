@@ -81,7 +81,8 @@ const App = () => (
           <Suspense fallback={<PageFallback />}>
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/team" element={<Team />} />
+              <Route path="/ueber-uns" element={<Team />} />
+              <Route path="/team" element={<Navigate to="/ueber-uns" replace />} />
               <Route path="/leistungen" element={<Leistungen />} />
               <Route path="/leistungen/behandlungspflege" element={<Behandlungspflege />} />
               <Route path="/leistungen/grundpflege" element={<Grundpflege />} />
@@ -155,7 +156,7 @@ const App = () => (
               <Route path="/broschuere" element={<Broschuere />} />
               {/* Legacy redirects */}
               <Route path="/ambulanter-pflegedienst" element={<Navigate to="/leistungen" replace />} />
-              <Route path="/ueber-uns/galerie/weihnachtsfeier-2023" element={<Navigate to="/team" replace />} />
+              <Route path="/ueber-uns/galerie/weihnachtsfeier-2023" element={<Navigate to="/ueber-uns" replace />} />
               <Route path="/blog/gesundheit/ganzheitliche-gesundheitsstrategien-fuer-pflegebeduerftige-zu-hause" element={<Navigate to="/blog" replace />} />
               <Route path="/blog/pflegetipps/ihr-ambulanter-pflegedienst-in-frankfurt-am-main" element={<Navigate to="/blog" replace />} />
               <Route path="/blog/neuigkeiten/die-revolution-der-pflegetechnologie-wie-digitale-innovationen-die-ambulante-pflege-veraendern" element={<Navigate to="/blog" replace />} />

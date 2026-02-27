@@ -83,7 +83,7 @@ const Sachsenhausen = () => {
                   Pflegedienst Sachsenhausen: individuelle Pflege
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Sie suchen für Sich oder für Ihre Angehörigen einen <Link to="/team" className="text-primary hover:underline font-medium">professionellen Pflegedienst</Link> in Sachsenhausen? Unser <strong>Pflegedienst Frankfurt Sachsenhausen</strong> bietet Ihnen eine individuelle und hoch qualifizierte Betreuung.
+                  Sie suchen für Sich oder für Ihre Angehörigen einen <Link to="/ueber-uns" className="text-primary hover:underline font-medium">professionellen Pflegedienst</Link> in Sachsenhausen? Unser <strong>Pflegedienst Frankfurt Sachsenhausen</strong> bietet Ihnen eine individuelle und hoch qualifizierte Betreuung.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />

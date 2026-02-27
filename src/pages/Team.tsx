@@ -132,7 +132,7 @@ const Team = () => {
         <meta property="og:description" content="Lernen Sie unser engagiertes Team kennen – Menschen mit Herz, Kompetenz und Leidenschaft für die Pflege." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
-        <link rel="canonical" href="https://www.avyta.de/team" />
+        <link rel="canonical" href="https://www.avyta.de/ueber-uns" />
       </Helmet>
       <div className="min-h-screen bg-background overflow-hidden">
         <Header />
