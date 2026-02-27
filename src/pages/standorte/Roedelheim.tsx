@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Stethoscope } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import {
   Accordion,
   AccordionContent,
@@ -44,6 +45,11 @@ const Roedelheim = () => {
         <title>Pflegedienst in Rödelheim für die häusliche Pflege</title>
         <meta name="description" content="Der Avyta Pflegedienst in Rödelheim ermöglicht ein würdevolles Leben in jeder Lebenslage. ✓ Von der Grundpflege bis zur Intensivpflege sind wir für Sie da." />
         <link rel="canonical" href="https://www.avyta.de/pflegedienst-roedelheim" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
+          { name: "Rödelheim", url: "https://www.avyta.de/pflegedienst-roedelheim" },
+        ])}</script>
         <meta property="og:title" content="Pflegedienst in Rödelheim für die häusliche Pflege" />
         <meta property="og:description" content="Der Avyta Pflegedienst in Rödelheim ermöglicht ein würdevolles Leben in jeder Lebenslage." />
         <meta property="og:type" content="website" />

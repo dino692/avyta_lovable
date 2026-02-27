@@ -13,6 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const aufgaben = [
   "Unterstützung bei der Reinigung und Ordnung des Haushalts",
@@ -79,6 +80,11 @@ const HaushaltshilfeJob = () => {
         <meta property="og:description" content="Werden Sie Haushaltshilfe bei AVYTA in Frankfurt. Überdurchschnittliches Gehalt, 30 Tage Urlaub, Firmenwagen." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Karriere", url: "https://www.avyta.de/karriere" },
+          { name: "Haushaltshilfe", url: "https://www.avyta.de/karriere/haushhaltshilfe-frankfurt" },
+        ])}</script>
       </Helmet>
 
       <Header />

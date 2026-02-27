@@ -102,6 +102,7 @@ const faqs = [
 ];
 
 import { generateFAQSchema } from "@/lib/faqSchema";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const Pflegehelfer = () => {
   return (
@@ -114,6 +115,11 @@ const Pflegehelfer = () => {
         <meta property="og:description" content="Ihr Job als ambulanter Pflegehelfer in Frankfurt – sicher, herzlich und vielfältig." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Karriere", url: "https://www.avyta.de/karriere" },
+          { name: "Pflegehelfer", url: "https://www.avyta.de/karriere/pflegehelfer-frankfurt" },
+        ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
 

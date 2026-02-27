@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const DemenzPflege = () => {
   return (
@@ -13,15 +14,24 @@ const DemenzPflege = () => {
         <title>10 Tipps für die häusliche Pflege von Demenzpatienten | AVYTA Blog</title>
         <meta name="description" content="Erfahren Sie, wie Sie den Alltag für Demenzpatienten sicherer und angenehmer gestalten können. Praktische Tipps von unseren Pflegeexperten." />
         <link rel="canonical" href="https://www.avyta.de/blog/demenz-pflege-tipps" />
+        <meta property="og:title" content="10 Tipps für die häusliche Pflege von Demenzpatienten | AVYTA" />
+        <meta property="og:description" content="Erfahren Sie, wie Sie den Alltag für Demenzpatienten sicherer und angenehmer gestalten können. Praktische Tipps von unseren Pflegeexperten." />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
           "headline": "10 Tipps für die häusliche Pflege von Demenzpatienten",
           "datePublished": "2025-12-15",
           "author": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH"},
-          "publisher": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": {"@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png"}}
+          "publisher": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": {"@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png"}},
+          "mainEntityOfPage": "https://www.avyta.de/blog/demenz-pflege-tipps"
         })}</script>
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Blog", url: "https://www.avyta.de/blog" },
+          { name: "Demenz Pflege Tipps", url: "https://www.avyta.de/blog/demenz-pflege-tipps" },
+        ])}</script>
       </Helmet>
 
       <Header />

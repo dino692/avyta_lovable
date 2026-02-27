@@ -102,6 +102,7 @@ const faqs = [
 ];
 
 import { generateFAQSchema } from "@/lib/faqSchema";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const Pflegehilfskraft = () => {
   return (
@@ -114,6 +115,11 @@ const Pflegehilfskraft = () => {
         <meta property="og:description" content="Pflegehilfskraft in Frankfurt ✔ 30 Tage Urlaub ✔ Firmenwagen ✔ Weiterbildungsmöglichkeiten" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <script type="application/ld+json">{generateBreadcrumbSchema([
+          { name: "Startseite", url: "https://www.avyta.de/" },
+          { name: "Karriere", url: "https://www.avyta.de/karriere" },
+          { name: "Pflegehilfskraft", url: "https://www.avyta.de/karriere/pflegehilfskraft-frankfurt" },
+        ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
       </Helmet>
 
