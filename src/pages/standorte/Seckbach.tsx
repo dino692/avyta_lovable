@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle } from "lucide-react";
+import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import {
@@ -14,12 +14,12 @@ import {
 import { Link } from "react-router-dom";
 
 const grundpflegeLeistungen = [
-  "Hilfe bei der Körperpflege",
+  "Hilfe bei der Körperpflege (Waschen, Duschen, Baden)",
   "Unterstützung beim An- und Auskleiden",
   "Hilfe beim Essen und Trinken",
   "Hilfe bei der Ausscheidung",
-  "Maßnahmen zur Mobilität",
-  "Hauswirtschaftliche Hilfe"
+  "Maßnahmen zur Mobilität und Lagerung",
+  "Hauswirtschaftliche Versorgung"
 ];
 
 const behandlungspflegeLeistungen = [
@@ -27,7 +27,7 @@ const behandlungspflegeLeistungen = [
   "Kompressionsstrümpfe an- und ausziehen",
   "Injektionen und Infusionen",
   "Blutdruck- und Blutzuckerkontrolle",
-  "Wundversorgung",
+  "Wundversorgung und Verbandswechsel",
   "Tracheostomaversorgung",
   "Versorgung von Anus Praeter und Urostoma",
   "Parenterale und enterale Ernährung"
@@ -37,11 +37,11 @@ const Seckbach = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt Seckbach | AVYTA Ambulante Pflege</title>
-        <meta name="description" content="Pflegedienst Frankfurt Seckbach - professionelle Pflege mit Blick auf den Lohrberg. Grundpflege, Behandlungspflege, Intensivpflege. Herzlich willkommen. Tel: 069 153 914 05" />
+        <title>Pflegedienst Frankfurt Seckbach ✓ Ambulante Pflege | avyta.de</title>
+        <meta name="description" content="Pflegedienst Frankfurt Seckbach ✓ Professionelle Pflege am Lohrberg ✓ Grundpflege, Behandlungspflege & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ Tel: 069 153 914 05" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/seckbach" />
-        <meta property="og:title" content="Pflegedienst Frankfurt Seckbach | AVYTA Ambulante Pflege" />
-        <meta property="og:description" content="Pflegedienst Frankfurt Seckbach - professionelle Pflege mit Blick auf den Lohrberg." />
+        <meta property="og:title" content="Pflegedienst Frankfurt Seckbach ✓ Ambulante Pflege | avyta.de" />
+        <meta property="og:description" content="Pflegedienst Frankfurt Seckbach – professionelle ambulante Pflege am Lohrberg." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
@@ -53,7 +53,6 @@ const Seckbach = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="pt-20">
-          {/* Hero Section */}
           <section className="py-24 bg-gradient-hero">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
@@ -64,7 +63,7 @@ const Seckbach = () => {
                   Pflegedienst Frankfurt Seckbach – Professionell und Herzlich
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Im grünen Seckbach am Fuße des Lohrbergs bieten wir Ihnen ambulante Pflege mit Herz. Genießen Sie die Vorzüge Ihres Stadtteils – mit unserer professionellen Unterstützung.
+                  Sie suchen einen herzlichen <strong>Pflegedienst in Frankfurt Seckbach</strong>? AVYTA bietet Ihnen ambulante Pflege mit Herz – direkt in Ihrem Zuhause am Fuße des Lohrbergs in Frankfurt Seckbach.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -73,16 +72,21 @@ const Seckbach = () => {
             </div>
           </section>
 
-          {/* Intro Section */}
           <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-display font-bold text-foreground mb-6">
+                  Ihr ambulanter Pflegedienst in Frankfurt Seckbach
+                </h2>
                 <div className="prose prose-lg max-w-none text-muted-foreground">
                   <p className="mb-6">
-                    Seckbach bietet mit seiner Nähe zum Lohrberg und den Streuobstwiesen eine besondere Lebensqualität. Diese möchten wir für Sie erhalten. Unser ambulanter Pflegedienst ermöglicht es Ihnen, in Ihrer vertrauten Umgebung zu bleiben und gleichzeitig die Pflege zu erhalten, die Sie benötigen.
+                    Der <strong>Pflegedienst Frankfurt Seckbach</strong> von AVYTA ist seit über 12 Jahren Ihr verlässlicher Partner für häusliche Pflege. Seckbach in Frankfurt bietet mit seiner Nähe zum Lohrberg und den Streuobstwiesen eine besondere Lebensqualität – und genau diese möchten wir mit unserem ambulanten Pflegedienst für Sie erhalten.
                   </p>
                   <p className="mb-6">
-                    Unser erfahrenes Team kennt die Besonderheiten des Stadtteils und ist schnell bei Ihnen. Wir bieten Ihnen individuelle Pflege, die sich an Ihren Wünschen und Bedürfnissen orientiert.
+                    Unser erfahrenes Team des <strong>Pflegedienstes in Frankfurt Seckbach</strong> kennt die Besonderheiten des Stadtteils und ist schnell bei Ihnen. Wir bieten Ihnen individuelle Pflege, die sich an Ihren persönlichen Wünschen und Bedürfnissen orientiert – von der täglichen Grundpflege bis zur komplexen medizinischen Versorgung in Ihrem Zuhause in Frankfurt.
+                  </p>
+                  <p className="mb-6">
+                    Als zugelassener <strong>Pflegedienst in Frankfurt</strong> rechnen wir alle Leistungen direkt mit Ihrer Pflege- und Krankenkasse ab. Wir beraten Sie umfassend zu Ihren Ansprüchen und helfen bei der Beantragung von Pflegeleistungen.
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center my-8">
                     <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
@@ -93,28 +97,34 @@ const Seckbach = () => {
                       <Heart className="w-5 h-5 text-primary" />
                       <span className="text-foreground font-medium">Mit Herz dabei</span>
                     </div>
+                    <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+                      <Star className="w-5 h-5 text-primary" />
+                      <span className="text-foreground font-medium">12+ Jahre Erfahrung</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Leistungen */}
           <section className="py-20 bg-card/50">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-display font-bold text-foreground mb-4 text-center">
-                Pflegeleistungen in Seckbach
+                Leistungen unseres Pflegedienstes in Frankfurt Seckbach
               </h2>
               <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-                Wir bieten Ihnen alle Leistungen für eine umfassende häusliche Pflege.
+                Der <strong>Pflegedienst Frankfurt Seckbach</strong> bietet alle Leistungen für eine umfassende häusliche Pflege – von der <Link to="/leistungen/grundpflege" className="text-primary hover:underline">Grundpflege</Link> über die <Link to="/leistungen/behandlungspflege" className="text-primary hover:underline">Behandlungspflege</Link> bis zur <Link to="/leistungen/intensivpflege" className="text-primary hover:underline">Intensivpflege</Link>.
               </p>
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <Card variant="elevated">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-display font-semibold text-foreground mb-4 flex items-center gap-2">
                       <Heart className="w-5 h-5 text-primary" />
-                      Grundpflege
+                      Grundpflege in Frankfurt Seckbach
                     </h3>
+                    <p className="text-muted-foreground mb-4 text-sm">
+                      Unser Pflegedienst in Frankfurt Seckbach unterstützt Sie bei allen Verrichtungen des täglichen Lebens:
+                    </p>
                     <ul className="space-y-2">
                       {grundpflegeLeistungen.map((leistung, index) => (
                         <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -130,8 +140,11 @@ const Seckbach = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-display font-semibold text-foreground mb-4 flex items-center gap-2">
                       <Shield className="w-5 h-5 text-primary" />
-                      Behandlungspflege
+                      Behandlungspflege in Frankfurt Seckbach
                     </h3>
+                    <p className="text-muted-foreground mb-4 text-sm">
+                      Medizinische Maßnahmen durch examinierte Pflegefachkräfte unseres Pflegedienstes in Frankfurt:
+                    </p>
                     <ul className="space-y-2">
                       {behandlungspflegeLeistungen.map((leistung, index) => (
                         <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -143,55 +156,114 @@ const Seckbach = () => {
                   </CardContent>
                 </Card>
               </div>
+
+              <div className="mt-8 max-w-3xl mx-auto">
+                <Card variant="elevated" className="bg-primary/5 border-primary/20">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-display font-semibold text-foreground mb-3">
+                      Intensivpflege vom Pflegedienst Frankfurt Seckbach
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      Unser <strong>Pflegedienst in Frankfurt Seckbach</strong> bietet auch Intensivpflege mit Heimbeatmung an. Unsere examinierten Pflegefachkräfte übernehmen die Überwachung und Vitalisierung, das Legen von Blasenkathetern, endotracheales Absaugen sowie Lagerungsbehandlungen und Mobilisation. Mehr zur <Link to="/leistungen/intensivpflege" className="text-primary hover:underline">Intensivpflege in Frankfurt</Link>.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </section>
 
-          {/* CTA Section */}
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-display font-bold text-foreground mb-6 text-center">
+                  Weitere Angebote unseres Pflegedienstes in Frankfurt Seckbach
+                </h2>
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="flex items-start gap-3">
+                    <Users className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-display font-semibold text-foreground mb-1">Verhinderungspflege in Frankfurt</h3>
+                      <p className="text-sm text-muted-foreground">Entlastung für pflegende Angehörige. Mehr zur <Link to="/leistungen/verhinderungspflege" className="text-primary hover:underline">Verhinderungspflege</Link>.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Heart className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-display font-semibold text-foreground mb-1">Pflegeberatung in Frankfurt Seckbach</h3>
+                      <p className="text-sm text-muted-foreground">Beratung zu Pflegegraden und Ansprüchen. Mehr zur <Link to="/leistungen/pflegeberatung" className="text-primary hover:underline">Pflegeberatung</Link>.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-display font-semibold text-foreground mb-1">24-Stunden-Pflege in Frankfurt</h3>
+                      <p className="text-sm text-muted-foreground">Rund-um-die-Uhr-Betreuung in Seckbach. Mehr zur <Link to="/leistungen/24-stunden-pflege" className="text-primary hover:underline">24h-Pflege</Link>.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Shield className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-display font-semibold text-foreground mb-1">Haushaltshilfe in Frankfurt Seckbach</h3>
+                      <p className="text-sm text-muted-foreground">Einkauf, Reinigung und Alltagshilfe. Mehr zur <Link to="/leistungen/haushaltshilfe" className="text-primary hover:underline">Haushaltshilfe</Link>.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section className="py-20 bg-gradient-hero">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-3xl font-display font-bold text-foreground mb-6">
-                  Ihr Pflegeteam in Seckbach
+                  AVYTA – Ihr Pflegedienst in Frankfurt Seckbach
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Wir freuen uns darauf, Sie kennenzulernen. Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch – gerne bei Ihnen zu Hause.
+                  Wir freuen uns darauf, Sie kennenzulernen. Rufen Sie unseren <strong>Pflegedienst in Frankfurt Seckbach</strong> an unter <strong>069 153 914 05</strong> oder nutzen Sie unser <Link to="/kontakt" className="text-primary hover:underline">Kontaktformular</Link> – gerne kommen wir für ein Beratungsgespräch zu Ihnen nach Hause.
                 </p>
                 <CTADropdownButton />
               </div>
             </div>
           </section>
 
-          {/* FAQ Section */}
           <section className="py-20">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center flex items-center justify-center gap-3">
                   <HelpCircle className="w-8 h-8 text-primary" />
-                  Häufige Fragen
+                  Häufige Fragen zum Pflegedienst Frankfurt Seckbach
                 </h2>
                 <Accordion type="single" collapsible className="space-y-4">
                   <AccordionItem value="item-1" className="bg-card rounded-xl border border-border/50 px-6">
                     <AccordionTrigger className="text-left font-display font-semibold">
-                      Wie erreiche ich Sie am besten?
+                      Wie erreiche ich den Pflegedienst Frankfurt Seckbach am besten?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Sie erreichen uns telefonisch, per E-Mail oder über unser Kontaktformular. Wir melden uns schnellstmöglich bei Ihnen zurück.
+                      Sie erreichen unseren Pflegedienst in Frankfurt Seckbach telefonisch unter 069 153 914 05, per E-Mail oder über unser <Link to="/kontakt" className="text-primary hover:underline">Kontaktformular</Link>. Wir melden uns schnellstmöglich bei Ihnen zurück.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-2" className="bg-card rounded-xl border border-border/50 px-6">
                     <AccordionTrigger className="text-left font-display font-semibold">
-                      Können Sie auch am Wochenende kommen?
+                      Kann der Pflegedienst Frankfurt Seckbach auch am Wochenende kommen?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Ja, wir sind auch an Wochenenden und Feiertagen für Sie da. Bei Notfällen erreichen Sie uns rund um die Uhr.
+                      Ja, unser Pflegedienst in Frankfurt Seckbach ist auch an Wochenenden und Feiertagen für Sie da. Bei Notfällen erreichen Sie uns rund um die Uhr – auch nachts und an Feiertagen.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-3" className="bg-card rounded-xl border border-border/50 px-6">
                     <AccordionTrigger className="text-left font-display font-semibold">
-                      Was brauche ich für den ersten Termin?
+                      Was brauche ich für den ersten Termin mit dem Pflegedienst in Frankfurt Seckbach?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Halten Sie am besten Ihre Versichertenkarte und eventuelle ärztliche Verordnungen bereit. Wir besprechen dann gemeinsam Ihre Situation.
+                      Halten Sie am besten Ihre Versichertenkarte und eventuelle ärztliche Verordnungen bereit. Unser Pflegedienst in Frankfurt Seckbach bespricht dann gemeinsam mit Ihnen Ihre individuelle Pflegesituation und erstellt einen maßgeschneiderten Pflegeplan.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Übernimmt die Pflegekasse die Kosten für den Pflegedienst in Frankfurt Seckbach?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten für unseren Pflegedienst in Frankfurt Seckbach. Lesen Sie auch unseren Ratgeber zum <Link to="/blog/pflegegrad-beantragen" className="text-primary hover:underline">Pflegegrad beantragen</Link>.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
