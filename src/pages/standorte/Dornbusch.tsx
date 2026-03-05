@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle } from "lucide-react";
+import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import {
@@ -14,12 +14,12 @@ import {
 import { Link } from "react-router-dom";
 
 const grundpflegeLeistungen = [
-  "Hilfe bei der Körperpflege",
+  "Hilfe bei der Körperpflege (Waschen, Duschen, Baden)",
   "Unterstützung beim An- und Auskleiden",
   "Hilfe beim Essen und Trinken",
   "Hilfe bei der Ausscheidung",
-  "Maßnahmen zur Mobilität",
-  "Hauswirtschaftliche Hilfe"
+  "Maßnahmen zur Mobilität und Lagerung",
+  "Hauswirtschaftliche Versorgung"
 ];
 
 const behandlungspflegeLeistungen = [
@@ -27,7 +27,7 @@ const behandlungspflegeLeistungen = [
   "Kompressionsstrümpfe an- und ausziehen",
   "Injektionen und Infusionen",
   "Blutdruck- und Blutzuckerkontrolle",
-  "Wundversorgung",
+  "Wundversorgung und Verbandswechsel",
   "Tracheostomaversorgung",
   "Versorgung von Anus Praeter und Urostoma",
   "Parenterale und enterale Ernährung"
@@ -37,11 +37,11 @@ const Dornbusch = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt Dornbusch | AVYTA Ambulante Pflege</title>
-        <meta name="description" content="Pflegedienst Frankfurt Dornbusch - Ihr ambulanter Pflegedienst im grünen Frankfurter Dornbusch. Grundpflege, Behandlungspflege, Intensivpflege. Familiär & herzlich. Tel: 069 153 914 05" />
+        <title>Pflegedienst Frankfurt Dornbusch ✓ Ambulante Pflege | avyta.de</title>
+        <meta name="description" content="Pflegedienst Frankfurt Dornbusch ✓ Ambulante Pflege mit Herz ✓ Grundpflege, Behandlungspflege & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ Jetzt beraten lassen: 069 153 914 05" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/dornbusch" />
-        <meta property="og:title" content="Pflegedienst Frankfurt Dornbusch | AVYTA Ambulante Pflege" />
-        <meta property="og:description" content="Pflegedienst Frankfurt Dornbusch - Grundpflege, Behandlungspflege, Intensivpflege. Familiär & herzlich." />
+        <meta property="og:title" content="Pflegedienst Frankfurt Dornbusch ✓ Ambulante Pflege | avyta.de" />
+        <meta property="og:description" content="Pflegedienst Frankfurt Dornbusch – professionelle ambulante Pflege mit Herz. Grundpflege, Behandlungspflege & Intensivpflege." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
@@ -61,10 +61,10 @@ const Dornbusch = () => {
                   <MapPin className="w-10 h-10 text-primary" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-                  Pflegedienst Frankfurt Dornbusch – Familiäre Pflege für Sie
+                  Pflegedienst Frankfurt Dornbusch – Familiäre Pflege in Ihrer Nähe
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Suchen Sie einen herzlichen Pflegedienst in Frankfurt Dornbusch? Unser ambulanter Pflegedienst bietet Ihnen professionelle Pflege mit persönlicher Note im grünen Frankfurter Dornbusch.
+                  Sie suchen einen zuverlässigen <strong>Pflegedienst in Frankfurt Dornbusch</strong>? AVYTA bietet Ihnen professionelle ambulante Pflege mit persönlicher Note – direkt in Ihrem Zuhause im grünen Dornbusch.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -82,19 +82,26 @@ const Dornbusch = () => {
                 </h2>
                 <div className="prose prose-lg max-w-none text-muted-foreground">
                   <p className="mb-6">
-                    Der Pflegedienst Frankfurt Dornbusch von AVYTA möchte die familiäre Atmosphäre des Stadtteils erhalten und unterstützen. Der Dornbusch ist bekannt für seine ruhige, grüne Wohnlage – und genau diese Lebensqualität möchten wir mit unserem Pflegedienst bewahren.
+                    Der <strong>Pflegedienst Frankfurt Dornbusch</strong> von AVYTA ist seit über 12 Jahren Ihr verlässlicher Partner für häusliche Pflege. Der Dornbusch in Frankfurt ist bekannt für seine ruhige, grüne Wohnlage zwischen Eschersheimer Landstraße und Marbachweg – und genau diese Lebensqualität möchten wir mit unserem ambulanten Pflegedienst für Sie bewahren.
                   </p>
                   <p className="mb-6">
-                    Unser Pflegedienst in Frankfurt Dornbusch nimmt sich Zeit für Sie und Ihre Anliegen. Gemeinsam mit dem Team unseres Pflegedienstes finden wir die beste Lösung, um Ihren Alltag trotz gesundheitlicher Einschränkungen so angenehm wie möglich zu gestalten. Dabei arbeiten wir eng mit Ihren Angehörigen und Ärzten zusammen.
+                    Unser <strong>Pflegedienst in Frankfurt Dornbusch</strong> nimmt sich Zeit für Sie und Ihre individuellen Anliegen. Gemeinsam mit unserem qualifizierten Pflegeteam finden wir die beste Lösung, um Ihren Alltag trotz gesundheitlicher Einschränkungen so angenehm wie möglich zu gestalten. Dabei arbeiten wir eng mit Ihren Angehörigen und behandelnden Ärzten in Frankfurt zusammen, um eine ganzheitliche Versorgung sicherzustellen.
+                  </p>
+                  <p className="mb-6">
+                    Als zugelassener ambulanter <strong>Pflegedienst in Frankfurt</strong> rechnen wir unsere Leistungen direkt mit allen Pflege- und Krankenkassen ab. So können Sie sich voll und ganz auf Ihre Genesung und Ihr Wohlbefinden konzentrieren – wir kümmern uns um den Rest.
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center my-8">
                     <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
                       <Clock className="w-5 h-5 text-primary" />
-                      <span className="text-foreground font-medium">Zeit für Sie</span>
+                      <span className="text-foreground font-medium">Auch am Wochenende</span>
                     </div>
                     <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
                       <Heart className="w-5 h-5 text-primary" />
                       <span className="text-foreground font-medium">Familiäre Atmosphäre</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+                      <Star className="w-5 h-5 text-primary" />
+                      <span className="text-foreground font-medium">12+ Jahre Erfahrung</span>
                     </div>
                   </div>
                 </div>
@@ -109,17 +116,17 @@ const Dornbusch = () => {
                 Leistungen unseres Pflegedienstes in Frankfurt Dornbusch
               </h2>
               <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-                Der Pflegedienst Frankfurt Dornbusch unterstützt Sie von der Alltagsunterstützung bis zur medizinischen Versorgung.
+                Der <strong>Pflegedienst Frankfurt Dornbusch</strong> bietet Ihnen ein umfassendes Leistungsspektrum – von der <Link to="/leistungen/grundpflege" className="text-primary hover:underline">Grundpflege</Link> über die <Link to="/leistungen/behandlungspflege" className="text-primary hover:underline">Behandlungspflege</Link> bis hin zur <Link to="/leistungen/intensivpflege" className="text-primary hover:underline">Intensivpflege</Link>.
               </p>
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <Card variant="elevated">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-display font-semibold text-foreground mb-4 flex items-center gap-2">
                       <Heart className="w-5 h-5 text-primary" />
-                      Grundpflege im Dornbusch
+                      Grundpflege in Frankfurt Dornbusch
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
-                      Unser Pflegedienst unterstützt Sie bei allen Verrichtungen des täglichen Lebens:
+                      Unser Pflegedienst unterstützt Sie bei allen Verrichtungen des täglichen Lebens in Ihrem Zuhause im Dornbusch:
                     </p>
                     <ul className="space-y-2">
                       {grundpflegeLeistungen.map((leistung, index) => (
@@ -136,10 +143,10 @@ const Dornbusch = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-display font-semibold text-foreground mb-4 flex items-center gap-2">
                       <Shield className="w-5 h-5 text-primary" />
-                      Behandlungspflege im Dornbusch
+                      Behandlungspflege in Frankfurt Dornbusch
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
-                      Medizinische Maßnahmen durch qualifizierte Pflegefachkräfte unseres Pflegedienstes:
+                      Medizinische Maßnahmen durch examinierte Pflegefachkräfte unseres Pflegedienstes in Frankfurt:
                     </p>
                     <ul className="space-y-2">
                       {behandlungspflegeLeistungen.map((leistung, index) => (
@@ -160,10 +167,51 @@ const Dornbusch = () => {
                       Intensivpflege vom Pflegedienst Frankfurt Dornbusch
                     </h3>
                     <p className="text-muted-foreground text-sm">
-                      Auch Intensivpflege mit Heimbeatmung bietet unser Pflegedienst in Frankfurt Dornbusch an. Unsere examinierten Pflegefachkräfte übernehmen die Überwachung und Vitalisierung, das Legen von Blasenkathetern, endotracheales Absaugen sowie Lagerungsbehandlungen und Mobilisation.
+                      Unser <strong>Pflegedienst in Frankfurt Dornbusch</strong> bietet auch Intensivpflege mit Heimbeatmung an. Unsere examinierten Pflegefachkräfte übernehmen die Überwachung und Vitalisierung, das Legen von Blasenkathetern, endotracheales Absaugen sowie Lagerungsbehandlungen und Mobilisation. Erfahren Sie mehr über unsere <Link to="/leistungen/intensivpflege" className="text-primary hover:underline">Intensivpflege in Frankfurt</Link>.
                     </p>
                   </CardContent>
                 </Card>
+              </div>
+            </div>
+          </section>
+
+          {/* Weitere Leistungen */}
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-display font-bold text-foreground mb-6 text-center">
+                  Weitere Angebote unseres Pflegedienstes in Frankfurt Dornbusch
+                </h2>
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="flex items-start gap-3">
+                    <Users className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-display font-semibold text-foreground mb-1">Verhinderungspflege in Frankfurt</h3>
+                      <p className="text-sm text-muted-foreground">Wenn pflegende Angehörige Entlastung benötigen, übernimmt unser Pflegedienst in Frankfurt Dornbusch die <Link to="/leistungen/verhinderungspflege" className="text-primary hover:underline">Verhinderungspflege</Link>.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Heart className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-display font-semibold text-foreground mb-1">Pflegeberatung in Frankfurt Dornbusch</h3>
+                      <p className="text-sm text-muted-foreground">Wir beraten Sie umfassend zu Pflegegraden, Leistungsansprüchen und der Organisation der häuslichen Pflege. Mehr zur <Link to="/leistungen/pflegeberatung" className="text-primary hover:underline">Pflegeberatung</Link>.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-display font-semibold text-foreground mb-1">24-Stunden-Pflege in Frankfurt</h3>
+                      <p className="text-sm text-muted-foreground">Für eine Rund-um-die-Uhr-Betreuung bieten wir auch <Link to="/leistungen/24-stunden-pflege" className="text-primary hover:underline">24-Stunden-Pflege</Link> in Frankfurt Dornbusch an.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Shield className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-display font-semibold text-foreground mb-1">Haushaltshilfe in Frankfurt Dornbusch</h3>
+                      <p className="text-sm text-muted-foreground">Unser Pflegedienst unterstützt Sie auch bei der <Link to="/leistungen/haushaltshilfe" className="text-primary hover:underline">Haushaltshilfe</Link> – vom Einkauf bis zur Wohnungsreinigung.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -176,7 +224,7 @@ const Dornbusch = () => {
                   AVYTA – Ihr Pflegedienst in Frankfurt Dornbusch
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Der Pflegedienst Frankfurt Dornbusch von AVYTA ist Teil Ihrer Nachbarschaft und versteht die Bedürfnisse unserer Patienten. Rufen Sie uns an – wir freuen uns darauf, Sie kennenzulernen.
+                  Der <strong>Pflegedienst Frankfurt Dornbusch</strong> von AVYTA ist Teil Ihrer Nachbarschaft. Wir kennen die Besonderheiten des Stadtteils und verstehen die Bedürfnisse unserer Patienten in Frankfurt. Rufen Sie uns an unter <strong>069 153 914 05</strong> oder nutzen Sie unser <Link to="/kontakt" className="text-primary hover:underline">Kontaktformular</Link> – wir freuen uns auf Sie.
                 </p>
                 <CTADropdownButton />
               </div>
@@ -189,31 +237,39 @@ const Dornbusch = () => {
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center flex items-center justify-center gap-3">
                   <HelpCircle className="w-8 h-8 text-primary" />
-                  Häufige Fragen zum Pflegedienst Dornbusch
+                  Häufige Fragen zum Pflegedienst Frankfurt Dornbusch
                 </h2>
                 <Accordion type="single" collapsible className="space-y-4">
                   <AccordionItem value="item-1" className="bg-card rounded-xl border border-border/50 px-6">
                     <AccordionTrigger className="text-left font-display font-semibold">
-                      Wie oft kommen die Pflegekräfte des Pflegedienstes Frankfurt Dornbusch?
+                      Wie oft kommt der Pflegedienst Frankfurt Dornbusch zu mir nach Hause?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Die Besuchsfrequenz unseres Pflegedienstes in Dornbusch richtet sich ganz nach Ihrem Bedarf – von einmal täglich bis zu mehreren Besuchen am Tag. Wir passen den Pflegeplan individuell an.
+                      Die Besuchsfrequenz unseres Pflegedienstes in Frankfurt Dornbusch richtet sich ganz nach Ihrem individuellen Bedarf. Von einem täglichen Besuch bis zu mehrfachen Einsätzen am Tag passen wir den Pflegeplan flexibel an Ihre Situation an. Auch an Wochenenden und Feiertagen sind unsere Pflegekräfte für Sie in Frankfurt Dornbusch im Einsatz.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-2" className="bg-card rounded-xl border border-border/50 px-6">
                     <AccordionTrigger className="text-left font-display font-semibold">
-                      Unterstützt der Pflegedienst Dornbusch auch bei Demenz?
+                      Unterstützt der Pflegedienst Frankfurt Dornbusch auch bei Demenz?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Ja, unser Pflegedienst in Frankfurt Dornbusch hat erfahrene Mitarbeiter, die speziell für die Betreuung von Menschen mit Demenz geschult sind. Wir bieten liebevolle und geduldige Begleitung.
+                      Ja, unser Pflegedienst in Frankfurt Dornbusch hat erfahrene Mitarbeiter, die speziell für die Betreuung von Menschen mit Demenz geschult sind. Wir bieten liebevolle und geduldige Begleitung im Alltag sowie Entlastungsangebote für pflegende Angehörige in Frankfurt.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-3" className="bg-card rounded-xl border border-border/50 px-6">
                     <AccordionTrigger className="text-left font-display font-semibold">
+                      Übernimmt die Pflegekasse die Kosten für den Pflegedienst in Frankfurt Dornbusch?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten für unseren ambulanten Pflegedienst in Frankfurt Dornbusch. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Wir beraten Sie gerne zu Ihren Ansprüchen und unterstützen bei der <Link to="/blog/pflegegrad-beantragen" className="text-primary hover:underline">Beantragung eines Pflegegrades</Link>.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
                       Kann der Pflegedienst Frankfurt Dornbusch auch kurzfristig einspringen?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      In vielen Fällen ja. Rufen Sie unseren Pflegedienst in Dornbusch an und wir schauen, wie wir Ihnen schnellstmöglich helfen können.
+                      In vielen Fällen ja. Rufen Sie unseren Pflegedienst in Frankfurt Dornbusch unter 069 153 914 05 an und wir schauen gemeinsam, wie wir Ihnen schnellstmöglich helfen können. Bei Notfällen sind wir rund um die Uhr erreichbar.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
