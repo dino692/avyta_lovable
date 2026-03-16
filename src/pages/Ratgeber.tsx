@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Printer, ArrowLeft, Phone, Mail, MapPin, Clock, Heart, Shield, Star, Users, CheckCircle2, FileText, ClipboardList, Euro, Lightbulb, HandHeart, Download, ChevronRight, AlertCircle, Home, Moon, Stethoscope } from "lucide-react";
+import { Printer, ArrowLeft, Phone, Mail, MapPin, Clock, Heart, Shield, Star, Users, CheckCircle2, FileText, ClipboardList, Euro, Lightbulb, HandHeart, Download, ChevronRight, AlertCircle, Home, Moon, Stethoscope, Scale, Briefcase, FileCheck, Calculator, ArrowRightLeft, CalendarDays, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import avytaLogo from "@/assets/avyta-logo.png";
 import heroImg from "@/assets/ratgeber/hero-caring-hands.jpg";
