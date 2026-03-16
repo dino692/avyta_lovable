@@ -81,11 +81,22 @@ const Ratgeber = () => {
             Zurück
           </Button>
           <div className="flex gap-2">
-            <Button variant="outline" size="sm" asChild className="gap-2">
-              <a href="/downloads/Ratgeber_fuer_Angehoerige.pdf" download>
-                <Download className="w-4 h-4" />
-                PDF herunterladen
-              </a>
+            <Button
+              variant="outline"
+              size="sm"
+              className="gap-2"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/downloads/Ratgeber_fuer_Angehoerige.pdf";
+                link.download = "AVYTA_Ratgeber_fuer_Angehoerige.pdf";
+                link.target = "_blank";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
+              <Download className="w-4 h-4" />
+              PDF herunterladen
             </Button>
             <Button onClick={() => window.print()} size="sm" className="gap-2 bg-primary hover:bg-primary/90">
               <Printer className="w-4 h-4" />
