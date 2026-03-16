@@ -83,7 +83,6 @@ const Ratgeber = () => {
       const link = document.createElement("a");
       link.href = "/downloads/Ratgeber_fuer_Angehoerige.pdf";
       link.download = "AVYTA_Ratgeber_fuer_Angehoerige.pdf";
-      link.target = "_blank";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
