@@ -62,6 +62,7 @@ const Pflegefachkraft = lazy(() => import("./pages/jobs/Pflegefachkraft"));
 const HaushaltshilfeJob = lazy(() => import("./pages/jobs/Haushaltshilfe"));
 const Broschuere = lazy(() => import("./pages/Broschuere"));
 const Leistungskatalog = lazy(() => import("./pages/Leistungskatalog"));
+const Ratgeber = lazy(() => import("./pages/Ratgeber"));
 
 const queryClient = new QueryClient();
 
@@ -156,6 +157,7 @@ const App = () => (
               <Route path="/karriere/haushaltshilfen-frankfurt" element={<Navigate to="/karriere/haushhaltshilfe-frankfurt" replace />} />
               <Route path="/broschuere" element={<Broschuere />} />
               <Route path="/leistungskatalog" element={<Leistungskatalog />} />
+              <Route path="/ratgeber" element={<Ratgeber />} />
               {/* Legacy redirects */}
               <Route path="/ambulanter-pflegedienst" element={<Navigate to="/leistungen" replace />} />
               <Route path="/ueber-uns/galerie/weihnachtsfeier-2023" element={<Navigate to="/ueber-uns" replace />} />
