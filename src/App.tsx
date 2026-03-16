@@ -62,6 +62,7 @@ const Pflegefachkraft = lazy(() => import("./pages/jobs/Pflegefachkraft"));
 const HaushaltshilfeJob = lazy(() => import("./pages/jobs/Haushaltshilfe"));
 const Broschuere = lazy(() => import("./pages/Broschuere"));
 const Leistungskatalog = lazy(() => import("./pages/Leistungskatalog"));
+const Ratgeber = lazy(() => import("./pages/Ratgeber"));
 
 const queryClient = new QueryClient();
 
