@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Printer, ArrowLeft, Phone, Mail, MapPin, Clock, Heart, Shield, Star, Users, CheckCircle2, FileText, ClipboardList, Euro, Lightbulb, HandHeart, Download, ChevronRight, AlertCircle, Home, Moon, Stethoscope } from "lucide-react";
+import { Printer, ArrowLeft, Phone, Mail, MapPin, Clock, Heart, Shield, Star, Users, CheckCircle2, FileText, ClipboardList, Euro, Lightbulb, HandHeart, Download, ChevronRight, AlertCircle, Home, Moon, Stethoscope, Scale, Briefcase, FileCheck, Calculator, ArrowRightLeft, CalendarDays, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import avytaLogo from "@/assets/avyta-logo.png";
 import heroImg from "@/assets/ratgeber/hero-caring-hands.jpg";
@@ -319,10 +319,204 @@ const Ratgeber = () => {
           </div>
         </section>
 
-        {/* ═══ SECTION 4: Entlastung ═══ */}
+        {/* ═══ SECTION 4: Kombinationsleistung ═══ */}
         <section className="mb-12 no-break">
           <div className="flex items-center gap-3 mb-6">
             <SectionNumber num={4} />
+            <div>
+              <h2 className="text-xl font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Kombinationsleistung – So funktioniert's
+              </h2>
+              <p className="text-xs text-muted-foreground mt-0.5">Pflegegeld und Sachleistung clever kombinieren</p>
+            </div>
+          </div>
+
+          <div className="bg-muted/30 rounded-xl p-5 mb-4">
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              Sie müssen sich nicht zwischen Pflegegeld und Pflegesachleistung entscheiden. 
+              Wenn Sie einen Teil der Pflege selbst übernehmen und für den Rest einen Pflegedienst beauftragen, 
+              können Sie <strong className="text-foreground">beide Leistungen anteilig kombinieren</strong>.
+            </p>
+            <div className="flex items-center gap-2 mb-3">
+              <ArrowRightLeft className="w-4 h-4 text-primary shrink-0" />
+              <h4 className="font-bold text-foreground text-sm">Rechenbeispiel – Pflegegrad 3</h4>
+            </div>
+            <div className="grid sm:grid-cols-3 gap-3">
+              <div className="bg-card border border-border/50 rounded-lg p-4 text-center">
+                <p className="text-[10px] text-muted-foreground uppercase tracking-wider mb-1">Sachleistung genutzt</p>
+                <p className="text-lg font-bold text-primary">60 %</p>
+                <p className="text-xs text-muted-foreground">898,20 € von 1.497 €</p>
+              </div>
+              <div className="bg-card border border-border/50 rounded-lg p-4 text-center">
+                <p className="text-[10px] text-muted-foreground uppercase tracking-wider mb-1">Pflegegeld-Anteil</p>
+                <p className="text-lg font-bold text-accent">40 %</p>
+                <p className="text-xs text-muted-foreground">239,60 € von 599 €</p>
+              </div>
+              <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 text-center">
+                <p className="text-[10px] text-primary uppercase tracking-wider font-semibold mb-1">Gesamtleistung</p>
+                <p className="text-lg font-bold text-primary">1.137,80 €</p>
+                <p className="text-xs text-muted-foreground">pro Monat</p>
+              </div>
+            </div>
+          </div>
+          <TipBox>
+            Die Kombinationsleistung wird automatisch berechnet. Je weniger Sachleistung Sie nutzen, desto höher fällt Ihr anteiliges Pflegegeld aus.
+          </TipBox>
+        </section>
+
+        {/* ═══ SECTION 5: Pflegezeit & Familienpflegezeit ═══ */}
+        <section className="mb-12 no-break page-break">
+          <div className="flex items-center gap-3 mb-6">
+            <SectionNumber num={5} />
+            <div>
+              <h2 className="text-xl font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Pflegezeit & Familienpflegezeit
+              </h2>
+              <p className="text-xs text-muted-foreground mt-0.5">Ihre Rechte als berufstätige Angehörige</p>
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4 mb-4">
+            <div className="border border-border/50 rounded-xl p-5">
+              <div className="flex items-center gap-2 mb-3">
+                <Briefcase className="w-5 h-5 text-primary" />
+                <h4 className="font-bold text-foreground text-sm">Kurzzeitige Arbeitsverhinderung</h4>
+              </div>
+              <ul className="space-y-2 text-xs text-muted-foreground">
+                <li className="flex items-start gap-2"><ChevronRight className="w-3 h-3 text-primary shrink-0 mt-0.5" /><span>Bis zu <strong className="text-foreground">10 Arbeitstage</strong> Freistellung bei akutem Pflegefall</span></li>
+                <li className="flex items-start gap-2"><ChevronRight className="w-3 h-3 text-primary shrink-0 mt-0.5" /><span><strong className="text-foreground">Pflegeunterstützungsgeld</strong> als Lohnersatz bei der Pflegekasse beantragbar</span></li>
+                <li className="flex items-start gap-2"><ChevronRight className="w-3 h-3 text-primary shrink-0 mt-0.5" /><span>Gilt für alle Arbeitnehmer, unabhängig von Betriebsgröße</span></li>
+              </ul>
+            </div>
+            <div className="border border-border/50 rounded-xl p-5">
+              <div className="flex items-center gap-2 mb-3">
+                <CalendarDays className="w-5 h-5 text-accent" />
+                <h4 className="font-bold text-foreground text-sm">Pflegezeit (bis 6 Monate)</h4>
+              </div>
+              <ul className="space-y-2 text-xs text-muted-foreground">
+                <li className="flex items-start gap-2"><ChevronRight className="w-3 h-3 text-primary shrink-0 mt-0.5" /><span>Vollständige oder teilweise Freistellung für bis zu <strong className="text-foreground">6 Monate</strong></span></li>
+                <li className="flex items-start gap-2"><ChevronRight className="w-3 h-3 text-primary shrink-0 mt-0.5" /><span>Rechtsanspruch ab 15 Beschäftigten im Betrieb</span></li>
+                <li className="flex items-start gap-2"><ChevronRight className="w-3 h-3 text-primary shrink-0 mt-0.5" /><span><strong className="text-foreground">Kündigungsschutz</strong> während der gesamten Pflegezeit</span></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border border-border/50 rounded-xl p-5">
+            <div className="flex items-center gap-2 mb-3">
+              <CalendarDays className="w-5 h-5 text-primary" />
+              <h4 className="font-bold text-foreground text-sm">Familienpflegezeit (bis 24 Monate)</h4>
+            </div>
+            <ul className="space-y-2 text-xs text-muted-foreground">
+              <li className="flex items-start gap-2"><ChevronRight className="w-3 h-3 text-primary shrink-0 mt-0.5" /><span>Reduzierung der Arbeitszeit auf mind. <strong className="text-foreground">15 Stunden/Woche</strong> für bis zu 24 Monate</span></li>
+              <li className="flex items-start gap-2"><ChevronRight className="w-3 h-3 text-primary shrink-0 mt-0.5" /><span>Rechtsanspruch ab 25 Beschäftigten im Betrieb</span></li>
+              <li className="flex items-start gap-2"><ChevronRight className="w-3 h-3 text-primary shrink-0 mt-0.5" /><span>Zinsloses Darlehen vom Bundesamt für Familie möglich, um Einkommenseinbußen abzufedern</span></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* ═══ SECTION 6: Vollmachten ═══ */}
+        <section className="mb-12 no-break">
+          <div className="flex items-center gap-3 mb-6">
+            <SectionNumber num={6} />
+            <div>
+              <h2 className="text-xl font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Vollmachten & Patientenverfügung
+              </h2>
+              <p className="text-xs text-muted-foreground mt-0.5">Rechtzeitig vorsorgen – bevor es dringend wird</p>
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              {
+                icon: FileCheck,
+                title: "Vorsorgevollmacht",
+                desc: "Benennen Sie eine Vertrauensperson, die in Ihrem Namen handeln darf – bei Finanzen, Behörden und Gesundheitsfragen.",
+                tip: "Notarielle Beglaubigung wird empfohlen."
+              },
+              {
+                icon: Lock,
+                title: "Betreuungsverfügung",
+                desc: "Falls keine Vollmacht vorliegt, bestimmt das Gericht einen Betreuer. Mit einer Betreuungsverfügung können Sie Wünsche äußern.",
+                tip: "Ergänzt die Vorsorgevollmacht."
+              },
+              {
+                icon: Heart,
+                title: "Patientenverfügung",
+                desc: "Legen Sie fest, welche medizinischen Maßnahmen Sie wünschen oder ablehnen – für den Fall, dass Sie sich nicht mehr äußern können.",
+                tip: "Sollte regelmäßig aktualisiert werden."
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-gradient-to-br from-muted/40 to-muted/20 border border-border/50 rounded-xl p-5">
+                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
+                  <item.icon className="w-5 h-5 text-primary" />
+                </div>
+                <h4 className="font-bold text-foreground text-sm mb-2">{item.title}</h4>
+                <p className="text-xs text-muted-foreground leading-relaxed mb-2">{item.desc}</p>
+                <p className="text-[10px] text-primary font-semibold flex items-center gap-1">
+                  <AlertCircle className="w-3 h-3" /> {item.tip}
+                </p>
+              </div>
+            ))}
+          </div>
+          <TipBox>
+            Alle drei Dokumente sind <strong>ohne Notar gültig</strong>, sollten aber schriftlich vorliegen und für Angehörige zugänglich aufbewahrt werden. Formulare erhalten Sie bei Betreuungsvereinen oder im Internet.
+          </TipBox>
+        </section>
+
+        {/* ═══ SECTION 7: Steuerliche Vorteile ═══ */}
+        <section className="mb-12 no-break">
+          <div className="flex items-center gap-3 mb-6">
+            <SectionNumber num={7} />
+            <div>
+              <h2 className="text-xl font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Steuerliche Vorteile für pflegende Angehörige
+              </h2>
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4 mb-4">
+            <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 rounded-xl p-5">
+              <div className="flex items-center gap-2 mb-3">
+                <Calculator className="w-5 h-5 text-primary" />
+                <h4 className="font-bold text-foreground text-sm">Pflege-Pauschbetrag</h4>
+              </div>
+              <div className="space-y-2 text-xs text-muted-foreground">
+                <div className="flex justify-between items-center bg-card rounded-lg px-3 py-2">
+                  <span>Pflegegrad 2</span>
+                  <span className="font-bold text-foreground">600 €</span>
+                </div>
+                <div className="flex justify-between items-center bg-card rounded-lg px-3 py-2">
+                  <span>Pflegegrad 3</span>
+                  <span className="font-bold text-foreground">1.100 €</span>
+                </div>
+                <div className="flex justify-between items-center bg-primary/5 rounded-lg px-3 py-2 border border-primary/10">
+                  <span>Pflegegrad 4 & 5</span>
+                  <span className="font-bold text-primary">1.800 €</span>
+                </div>
+              </div>
+              <p className="text-[10px] text-muted-foreground mt-2">Jährlich, ohne Nachweispflicht für einzelne Kosten.</p>
+            </div>
+            <div className="border border-border/50 rounded-xl p-5">
+              <div className="flex items-center gap-2 mb-3">
+                <Scale className="w-5 h-5 text-accent" />
+                <h4 className="font-bold text-foreground text-sm">Weitere Absetzbarkeiten</h4>
+              </div>
+              <ul className="space-y-2 text-xs text-muted-foreground">
+                <li className="flex items-start gap-2"><ChevronRight className="w-3 h-3 text-primary shrink-0 mt-0.5" /><span><strong className="text-foreground">Pflegekosten</strong> als außergewöhnliche Belastung absetzbar (z.B. Pflegedienst, Medikamente, Umbaukosten)</span></li>
+                <li className="flex items-start gap-2"><ChevronRight className="w-3 h-3 text-primary shrink-0 mt-0.5" /><span><strong className="text-foreground">Haushaltsnahe Dienstleistungen:</strong> 20 % der Kosten, max. 4.000 €/Jahr Steuerermäßigung</span></li>
+                <li className="flex items-start gap-2"><ChevronRight className="w-3 h-3 text-primary shrink-0 mt-0.5" /><span><strong className="text-foreground">Fahrtkosten</strong> zu Arztbesuchen und Pflegeeinrichtungen</span></li>
+              </ul>
+            </div>
+          </div>
+          <TipBox>
+            Der Pflege-Pauschbetrag kann auch aufgeteilt werden, wenn mehrere Angehörige pflegen. Sprechen Sie mit Ihrem Steuerberater für eine optimale Gestaltung.
+          </TipBox>
+        </section>
+
+        {/* ═══ SECTION 8: Entlastung ═══ */}
+        <section className="mb-12 no-break">
+          <div className="flex items-center gap-3 mb-6">
+            <SectionNumber num={8} />
             <div>
               <h2 className="text-xl font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
                 Tipps zur Entlastung pflegender Angehöriger
@@ -356,10 +550,10 @@ const Ratgeber = () => {
           </div>
         </section>
 
-        {/* ═══ SECTION 5: Kontakte ═══ */}
+        {/* ═══ SECTION 9: Kontakte ═══ */}
         <section className="mb-10 no-break">
           <div className="flex items-center gap-3 mb-6">
-            <SectionNumber num={5} />
+            <SectionNumber num={9} />
             <div>
               <h2 className="text-xl font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
                 Wichtige Kontakte & Anlaufstellen
