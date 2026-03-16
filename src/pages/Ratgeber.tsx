@@ -178,8 +178,6 @@ const Ratgeber = () => {
             </div>
           </div>
         )}
-        </div>
-      </div>
 
       <div className="print-container max-w-4xl mx-auto px-4 py-8" style={{ fontFamily: "'DM Sans', sans-serif" }}>
 
