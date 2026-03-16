@@ -119,29 +119,65 @@ const Ratgeber = () => {
             <ArrowLeft className="w-4 h-4" />
             Zurück
           </Button>
-          <div className="flex gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              className="gap-2"
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/downloads/Ratgeber_fuer_Angehoerige.pdf";
-                link.download = "AVYTA_Ratgeber_fuer_Angehoerige.pdf";
-                link.target = "_blank";
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
-            >
-              <Download className="w-4 h-4" />
-              PDF herunterladen
-            </Button>
-            <Button onClick={() => window.print()} size="sm" className="gap-2 bg-primary hover:bg-primary/90">
-              <Printer className="w-4 h-4" />
-              Drucken
-            </Button>
+           <div className="flex gap-2">
+              <Button variant="outline" size="sm" className="gap-2" onClick={handleDownloadClick}>
+                <Download className="w-4 h-4" />
+                PDF herunterladen
+              </Button>
+              <Button onClick={() => window.print()} size="sm" className="gap-2 bg-primary hover:bg-primary/90">
+                <Printer className="w-4 h-4" />
+                Drucken
+              </Button>
+            </div>
           </div>
+        </div>
+
+        {/* Email Modal */}
+        {showEmailModal && (
+          <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+            <div className="bg-card rounded-2xl shadow-2xl max-w-md w-full p-6 relative animate-in fade-in zoom-in-95 duration-200">
+              <button onClick={() => setShowEmailModal(false)} className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors">
+                <X className="w-5 h-5" />
+              </button>
+              <div className="text-center mb-5">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <Download className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  Ratgeber kostenlos herunterladen
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Geben Sie Ihre E-Mail-Adresse ein und erhalten Sie den Ratgeber sofort als PDF.
+                </p>
+              </div>
+              <form onSubmit={handleEmailSubmit} className="space-y-3">
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                  <Input
+                    type="email"
+                    placeholder="Ihre E-Mail-Adresse"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="pl-10"
+                    autoFocus
+                  />
+                </div>
+                <Button type="submit" className="w-full gap-2" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <div className="w-4 h-4 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
+                  ) : (
+                    <Send className="w-4 h-4" />
+                  )}
+                  {isSubmitting ? "Wird vorbereitet..." : "Jetzt herunterladen"}
+                </Button>
+                <p className="text-[10px] text-muted-foreground text-center">
+                  Kein Spam. Ihre Daten werden vertraulich behandelt.
+                </p>
+              </form>
+            </div>
+          </div>
+        )}
         </div>
       </div>
 
