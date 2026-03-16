@@ -55,6 +55,43 @@ const StepCard = ({ num, title, items }: { num: number; title: string; items: st
 /* ─── Main Component ─── */
 
 const Ratgeber = () => {
+  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [downloadUnlocked, setDownloadUnlocked] = useState(false);
+
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !email.includes("@")) return;
+    setIsSubmitting(true);
+    // Small delay for UX
+    await new Promise((r) => setTimeout(r, 600));
+    setIsSubmitting(false);
+    setDownloadUnlocked(true);
+    setShowEmailModal(false);
+    // Trigger download
+    const link = document.createElement("a");
+    link.href = "/downloads/Ratgeber_fuer_Angehoerige.pdf";
+    link.download = "AVYTA_Ratgeber_fuer_Angehoerige.pdf";
+    link.target = "_blank";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleDownloadClick = () => {
+    if (downloadUnlocked) {
+      const link = document.createElement("a");
+      link.href = "/downloads/Ratgeber_fuer_Angehoerige.pdf";
+      link.download = "AVYTA_Ratgeber_fuer_Angehoerige.pdf";
+      link.target = "_blank";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      setShowEmailModal(true);
+    }
+  };
   return (
     <>
       <Helmet>
