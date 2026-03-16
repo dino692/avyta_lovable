@@ -551,28 +551,102 @@ const Ratgeber = () => {
         </section>
 
         {/* ═══ SECTION 9: Kontakte ═══ */}
-        <section className="mb-10 no-break">
+        <section className="mb-10">
           <div className="flex items-center gap-3 mb-6">
             <SectionNumber num={9} />
             <div>
               <h2 className="text-xl font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Wichtige Kontakte & Anlaufstellen
+                Wichtige Kontakte & Anlaufstellen in Frankfurt
               </h2>
+              <p className="text-xs text-muted-foreground mt-0.5">Kostenlose Beratung und Unterstützung in Ihrer Nähe</p>
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-4">
-            {[
-              { icon: ClipboardList, title: "Pflegekasse", desc: "Zuständig für Pflegegrad, Leistungen und Begutachtung." },
-              { icon: Stethoscope, title: "Hausarzt & Fachärzte", desc: "Dokumentation der gesundheitlichen Situation." },
-              { icon: Users, title: "Pflegestützpunkte", desc: "Unabhängige, kostenlose Beratung vor Ort." },
-            ].map((item, i) => (
-              <div key={i} className="bg-muted/30 rounded-xl p-5 text-center">
-                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <item.icon className="w-5 h-5 text-primary" />
+          {/* AVYTA highlight */}
+          <div className="no-break bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20 rounded-xl p-5 mb-4">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shrink-0">
+                <Heart className="w-5 h-5 text-primary-foreground" />
+              </div>
+              <div className="flex-1">
+                <p className="font-bold text-foreground text-sm">AVYTA GmbH – Ambulanter Pflegedienst</p>
+                <p className="text-xs text-muted-foreground mt-1">Allerheiligentor 2-4 · 60311 Frankfurt am Main</p>
+                <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-muted-foreground">
+                  <span className="flex items-center gap-1"><Phone className="w-3 h-3 text-primary" /> 069 153 914 05</span>
+                  <span className="flex items-center gap-1"><Mail className="w-3 h-3 text-primary" /> info@avyta.de</span>
+                  <span className="flex items-center gap-1"><Clock className="w-3 h-3 text-primary" /> Mo–Fr 8–12 Uhr · Pflege 24/7</span>
                 </div>
-                <p className="font-bold text-foreground text-sm mb-1">{item.title}</p>
-                <p className="text-xs text-muted-foreground">{item.desc}</p>
+                <p className="text-[10px] text-primary font-semibold mt-2">Kostenlose Erstberatung · Hilfe bei Antragstellung · Ambulante Pflege & Betreuung</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact cards */}
+          <div className="space-y-3">
+            {[
+              {
+                icon: MapPin,
+                title: "Pflegestützpunkt Frankfurt am Main",
+                address: "Hansaallee 150 (Rathaus für Senioren, EG)",
+                plz: "60320 Frankfurt am Main",
+                tel: "0800 58936 59 (kostenfrei)",
+                email: "pflegestuetzpunkt@frankfurt.de",
+                hours: "Mi 10–12 Uhr · Do 16–18 Uhr",
+                note: "Unabhängige, kostenlose Beratung zu allen Pflegefragen"
+              },
+              {
+                icon: Heart,
+                title: "DRK Beratungshotline für pflegende Angehörige",
+                address: "\"Du pflegst – wir hören Dir zu\"",
+                plz: "Deutsches Rotes Kreuz, Bezirksverband Frankfurt",
+                tel: "069 589 975 181",
+                email: "ichpflege@drkfrankfurt.de",
+                hours: "Mo–Fr 10–16 Uhr",
+                note: "Kostenlos, anonym und unverbindlich"
+              },
+              {
+                icon: Scale,
+                title: "Sozialverband VdK – Kreisverband Frankfurt",
+                address: "Beratung zu Pflegerecht, Schwerbehinderung, Rente",
+                plz: "Frankfurt am Main",
+                tel: "Termin über vdk.de vereinbaren",
+                email: "kv-frankfurt@vdk-ht.de",
+                hours: "Nach Terminvereinbarung",
+                note: "Beratung zu Pflegeversicherungsrecht und Widersprüchen"
+              },
+            ].map((item, i) => (
+              <div key={i} className="no-break border border-border/50 rounded-xl p-4 flex items-start gap-4">
+                <div className="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                  <item.icon className="w-4 h-4 text-primary" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-bold text-foreground text-sm">{item.title}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{item.address}</p>
+                  <p className="text-[10px] text-muted-foreground">{item.plz}</p>
+                  <div className="flex flex-wrap gap-x-4 gap-y-0.5 mt-1.5 text-[11px] text-muted-foreground">
+                    <span className="flex items-center gap-1"><Phone className="w-3 h-3 text-primary" /> {item.tel}</span>
+                    <span className="flex items-center gap-1"><Mail className="w-3 h-3 text-primary" /> {item.email}</span>
+                    <span className="flex items-center gap-1"><Clock className="w-3 h-3 text-primary" /> {item.hours}</span>
+                  </div>
+                  <p className="text-[10px] text-accent font-medium mt-1.5">{item.note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* General contacts */}
+          <div className="no-break grid sm:grid-cols-3 gap-3 mt-4">
+            {[
+              { icon: ClipboardList, title: "Ihre Pflegekasse", desc: "Erreichbar über Ihre Krankenkasse – zuständig für Pflegegrad, Leistungen und MD-Begutachtung." },
+              { icon: Stethoscope, title: "Hausarzt & Fachärzte", desc: "Dokumentation der gesundheitlichen Situation, Verordnungen für häusliche Krankenpflege." },
+              { icon: Users, title: "Nachbarschaftshilfen", desc: "Ehrenamtliche Unterstützung in vielen Frankfurter Stadtteilen verfügbar." },
+            ].map((item, i) => (
+              <div key={i} className="bg-muted/30 rounded-xl p-4 text-center">
+                <div className="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-2">
+                  <item.icon className="w-4 h-4 text-primary" />
+                </div>
+                <p className="font-bold text-foreground text-xs mb-0.5">{item.title}</p>
+                <p className="text-[10px] text-muted-foreground leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
