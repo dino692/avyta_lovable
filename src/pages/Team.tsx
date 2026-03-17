@@ -13,6 +13,7 @@ import teamGroupImage from "@/assets/team/team-group.jpg";
 import jasminaMuellerImage from "@/assets/team/jasmina-mueller.webp";
 import prokuristImage from "@/assets/team/prokurist.webp";
 import assistenzImage from "@/assets/team/assistenz.webp";
+import stellvPdlImage from "@/assets/team/stellv-pdl.webp";
 import weihnachtsfeier01 from "@/assets/team/weihnachtsfeier-2023-01.webp";
 import weihnachtsfeier02 from "@/assets/team/weihnachtsfeier-2023-02.webp";
 import weihnachtsfeier2024_01 from "@/assets/team/weihnachtsfeier-2024-01.jpg";
