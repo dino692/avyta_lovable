@@ -30,6 +30,8 @@ const footerLinks = {
       { name: "24-Stunden-Pflege", href: "/leistungen/24-stunden-pflege" },
       { name: "Pflegeberatung", href: "/leistungen/pflegeberatung-frankfurt" },
       { name: "Verhinderungspflege", href: "/leistungen/verhinderungspflege-frankfurt" },
+      { name: "Demenz WG", href: "/leistungen/demenz-wg-frankfurt" },
+      { name: "Betreutes Wohnen", href: "/leistungen/betreutes-wohnen-frankfurt" },
     ],
   },
   company: {
