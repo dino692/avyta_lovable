@@ -72,6 +72,14 @@ const teamMembers = [
     description: "Unterstützt die Geschäftsleitung in allen organisatorischen Belangen.",
     icon: Heart,
   },
+  {
+    name: "Aida Begatovic",
+    role: "Stellvertr. PDL",
+    subtitle: "Stellvertretende Pflegedienstleitung",
+    image: stellvPdlImage,
+    description: "Unterstützt die Pflegedienstleitung und sorgt für reibungslose Abläufe in der Pflege.",
+    icon: Heart,
+  },
 ];
 
 const stats = [
