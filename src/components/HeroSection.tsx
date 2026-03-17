@@ -188,52 +188,95 @@ const HeroSection = () => {
             <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-60 animate-glow" />
             
             <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-card border border-border/50">
-              {/* Video aspect ratio container */}
               <div className="aspect-video relative bg-muted">
-                {videoLoaded ? (
-                  <iframe
-                    src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&si=tPuFV7w-FSBCewNE`}
-                    title="AVYTA Pflegedienst"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
-                ) : (
-                  <button
-                    onClick={() => setVideoLoaded(true)}
-                    aria-label="Video abspielen"
-                    className="absolute inset-0 w-full h-full cursor-pointer group"
-                  >
-                    <img
-                      src={`https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`}
-                      alt="AVYTA Pflegedienst Video Vorschau"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="eager"
-                      fetchPriority="high"
-                      decoding="async"
-                      width={1280}
-                      height={720}
+                {/* Slide 0: Video */}
+                <div
+                  className={`absolute inset-0 transition-opacity duration-700 ${
+                    activeSlide === 0 ? "opacity-100 z-10" : "opacity-0 z-0"
+                  }`}
+                >
+                  {videoLoaded ? (
+                    <iframe
+                      src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&si=tPuFV7w-FSBCewNE`}
+                      title="AVYTA Pflegedienst"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
                     />
-                    {/* Overlay gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                    
-                    {/* Play button */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-30" />
-                        <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary flex items-center justify-center shadow-2xl transition-transform duration-300 group-hover:scale-110">
-                          <Play className="w-8 h-8 md:w-10 md:h-10 text-primary-foreground ml-1" fill="currentColor" />
+                  ) : (
+                    <button
+                      onClick={() => {
+                        setVideoLoaded(true);
+                        if (slideTimerRef.current) clearInterval(slideTimerRef.current);
+                      }}
+                      aria-label="Video abspielen"
+                      className="absolute inset-0 w-full h-full cursor-pointer group"
+                    >
+                      <img
+                        src={`https://img.youtube.com/vi/${YOUTUBE_VIDEO_ID}/maxresdefault.jpg`}
+                        alt="AVYTA Pflegedienst Video Vorschau"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        loading="eager"
+                        fetchPriority="high"
+                        decoding="async"
+                        width={1280}
+                        height={720}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="relative">
+                          <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-30" />
+                          <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary flex items-center justify-center shadow-2xl transition-transform duration-300 group-hover:scale-110">
+                            <Play className="w-8 h-8 md:w-10 md:h-10 text-primary-foreground ml-1" fill="currentColor" />
+                          </div>
                         </div>
                       </div>
-                    </div>
+                      <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                        <span className="text-white font-medium text-sm md:text-base">Lernen Sie uns kennen</span>
+                        <span className="text-white/70 text-sm">1:23</span>
+                      </div>
+                    </button>
+                  )}
+                </div>
 
-                    {/* Video label */}
-                    <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                      <span className="text-white font-medium text-sm md:text-base">Lernen Sie uns kennen</span>
-                      <span className="text-white/70 text-sm">1:23</span>
-                    </div>
-                  </button>
+                {/* Slide 1: Image */}
+                <div
+                  className={`absolute inset-0 transition-opacity duration-700 ${
+                    activeSlide === 1 ? "opacity-100 z-10" : "opacity-0 z-0"
+                  }`}
+                >
+                  <img
+                    src="/images/hero-slide-2.jpg"
+                    alt="AVYTA Pflege - Persönliche Betreuung"
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                    width={1280}
+                    height={720}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <span className="text-white font-medium text-sm md:text-base">Persönliche Pflege mit Herz</span>
+                  </div>
+                </div>
+
+                {/* Slide indicators */}
+                {!videoLoaded && (
+                  <div className="absolute bottom-4 right-4 z-20 flex gap-2">
+                    {[0, 1].map((i) => (
+                      <button
+                        key={i}
+                        onClick={() => {
+                          setActiveSlide(i);
+                          startSlideTimer();
+                        }}
+                        className={`h-2 rounded-full transition-all duration-300 ${
+                          activeSlide === i ? "w-6 bg-white" : "w-2 bg-white/50 hover:bg-white/70"
+                        }`}
+                        aria-label={`Slide ${i + 1}`}
+                      />
+                    ))}
+                  </div>
                 )}
               </div>
             </div>
