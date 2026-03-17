@@ -254,9 +254,17 @@ const HeroSection = () => {
                     width={1280}
                     height={720}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
                     <span className="text-white font-medium text-sm md:text-base">AVYTA × LISA – Smarte Pflege für Zuhause</span>
+                  </div>
+                  <div className="absolute top-4 left-4 md:top-6 md:left-6">
+                    <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 border border-white/20">
+                      <p className="text-[10px] md:text-xs text-white/90 font-medium leading-snug">
+                        Der erste Pflegedienst in Frankfurt<br />
+                        mit Home Care System <strong className="text-white">"LISA"</strong>
+                      </p>
+                    </div>
                   </div>
                 </div>
 
