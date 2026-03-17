@@ -348,7 +348,7 @@ const Blog = () => {
         <section className="py-12 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-              {categories.map((category, index) => (
+              {categoriesWithCounts.map((category, index) => (
                 <button
                   key={category.slug}
                   onClick={() => setActiveCategory(category.slug)}
