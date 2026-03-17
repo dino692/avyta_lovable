@@ -496,7 +496,7 @@ const Team = () => {
                   className="px-10 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1"
                   asChild
                 >
-                  <Link to="/jobs">
+                  <Link to="/karriere">
                     Alle Pflegejobs entdecken
                     <ChevronRight className="w-5 h-5 ml-2" />
                   </Link>
