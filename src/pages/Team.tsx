@@ -17,6 +17,7 @@ import stellvPdlImage from "@/assets/team/stellv-pdl.webp";
 import weihnachtsfeier01 from "@/assets/team/weihnachtsfeier-2023-01.webp";
 import weihnachtsfeier02 from "@/assets/team/weihnachtsfeier-2023-02.webp";
 import weihnachtsfeier2024_01 from "@/assets/team/weihnachtsfeier-2024-01.jpg";
+import meeting2026_01 from "@/assets/team/meeting-2026-01.jpg";
 
 interface GalleryImage {
   src: string;
