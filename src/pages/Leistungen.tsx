@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Stethoscope, Home, Activity, Utensils, Clock, FileText, UserCheck, Check, HeartPulse, Sparkles, Shield, Phone } from "lucide-react";
+import { ArrowRight, Stethoscope, Home, Activity, Utensils, Clock, FileText, UserCheck, Check, HeartPulse, Sparkles, Shield, Phone, Brain, Building2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -145,10 +145,46 @@ const services = [
     bgColor: "bg-cyan-500/10",
     image: verhinderungspflegeImg,
   },
+  {
+    id: "demenz-wg-frankfurt",
+    icon: Brain,
+    title: "Demenz WG",
+    shortDescription: "Betreute Wohngemeinschaft für Demenz",
+    description: "Betreute Wohngemeinschaft für Menschen mit Demenz – 24/7 Betreuung in familiärer Atmosphäre in Frankfurt und Bad Vilbel.",
+    details: [
+      "24/7 professionelle Betreuung",
+      "Familiäre Atmosphäre",
+      "Geschultes Pflegepersonal",
+      "Strukturierter Tagesablauf",
+      "Aktivierende Beschäftigung",
+      "Individuelle Pflegekonzepte",
+    ],
+    color: "from-teal-500 to-cyan-500",
+    bgColor: "bg-teal-500/10",
+    image: grundpflegeImg,
+  },
+  {
+    id: "betreutes-wohnen-frankfurt",
+    icon: Building2,
+    title: "Betreutes Wohnen",
+    shortDescription: "Selbstbestimmt leben mit Unterstützung",
+    description: "Selbstbestimmt leben mit professioneller Pflege und Betreuung – die Alternative zum Pflegeheim in Frankfurt und Bad Vilbel.",
+    details: [
+      "Eigenständiges Wohnen",
+      "Barrierefreie Wohnungen",
+      "24/7 Notrufsystem",
+      "Hauswirtschaftliche Hilfe",
+      "Pflegerische Versorgung",
+      "Flexible Betreuungspakete",
+    ],
+    color: "from-indigo-500 to-violet-500",
+    bgColor: "bg-indigo-500/10",
+    image: pflegeberatungImg,
+  },
 ];
 
 const stats = [
-  { value: "7+", label: "Leistungsbereiche", icon: Sparkles },
+  { value: "9+", label: "Leistungsbereiche", icon: Sparkles },
   { value: "24/7", label: "Erreichbarkeit", icon: Phone },
   { value: "100%", label: "Individuell", icon: HeartPulse },
   { value: "Top", label: "Qualität", icon: Shield },
