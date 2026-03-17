@@ -200,7 +200,7 @@ const Team = () => {
               {/* CTA Buttons */}
               <div className={`flex flex-col sm:flex-row gap-4 justify-center mt-10 transition-all duration-1000 delay-600 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <Button size="lg" className="px-8 py-6 text-lg rounded-full shadow-xl shadow-primary/25 hover:shadow-2xl hover:shadow-primary/30 transition-all hover:-translate-y-1" asChild>
-                  <Link to="/jobs">
+                  <Link to="/karriere">
                     <Users className="w-5 h-5 mr-2" />
                     Teil des Teams werden
                   </Link>
