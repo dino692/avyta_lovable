@@ -57,7 +57,7 @@ const AnimatedCounter = ({ value, suffix, delay }: { value: number; suffix: stri
   );
 };
 
-const SLIDE_INTERVAL = 5000;
+const SLIDE_INTERVAL = 3000;
 
 const HeroSection = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
