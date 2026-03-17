@@ -16,15 +16,27 @@ import {
   Mail, 
   Loader2,
   Sparkles,
-  TrendingUp,
   ChevronRight,
-  Star,
   FileText
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  category_gradient: string;
+  date: string;
+  published_at: string;
+  read_time: string;
+  author: string;
+  slug: string;
+  image: string;
+}
 
 const categories = [
   {
@@ -33,7 +45,6 @@ const categories = [
     icon: LayoutGrid,
     description: "Alle Beiträge anzeigen",
     gradient: "from-primary to-accent",
-    count: 6,
   },
   {
     name: "Empfehlungen",
@@ -41,7 +52,6 @@ const categories = [
     icon: Heart,
     description: "Tipps für den Pflegealltag",
     gradient: "from-rose-500 to-pink-600",
-    count: 1,
   },
   {
     name: "Pflegetipps",
@@ -49,7 +59,6 @@ const categories = [
     icon: BookOpen,
     description: "Praktische Anleitungen",
     gradient: "from-blue-500 to-indigo-600",
-    count: 2,
   },
   {
     name: "Gesundheit",
@@ -57,7 +66,6 @@ const categories = [
     icon: Stethoscope,
     description: "Gesundheitsthemen",
     gradient: "from-emerald-500 to-teal-600",
-    count: 0,
   },
   {
     name: "Neuigkeiten",
@@ -65,7 +73,6 @@ const categories = [
     icon: Newspaper,
     description: "Aktuelles von AVYTA",
     gradient: "from-amber-500 to-orange-600",
-    count: 0,
   },
   {
     name: "Recht & Finanzen",
@@ -73,82 +80,6 @@ const categories = [
     icon: Scale,
     description: "Rechtliche Themen",
     gradient: "from-violet-500 to-purple-600",
-    count: 3,
-  },
-];
-
-const blogPosts = [
-  {
-    title: "Pflegegeld 2026: Aktuelle Tabelle nach Pflegegrad",
-    excerpt: "Alle aktuellen Pflegegeld-Beträge für 2026 im Überblick. Erfahren Sie, wie viel Geld Ihnen bei Pflegegrad 2-5 zusteht.",
-    category: "Recht & Finanzen",
-    categoryGradient: "from-violet-500 to-purple-600",
-    date: "10. Januar 2026",
-    readTime: "7 Min.",
-    author: "AVYTA Team",
-    slug: "pflegegeld-tabelle-2025",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
-    featured: true,
-  },
-  {
-    title: "Pflegegrad beantragen: Schritt für Schritt erklärt",
-    excerpt: "Alles was Sie wissen müssen, um erfolgreich einen Pflegegrad zu beantragen. Von der Antragstellung bis zur Begutachtung.",
-    category: "Recht & Finanzen",
-    categoryGradient: "from-violet-500 to-purple-600",
-    date: "5. Januar 2026",
-    readTime: "8 Min.",
-    author: "AVYTA Team",
-    slug: "pflegegrad-beantragen",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop",
-    featured: true,
-  },
-  {
-    title: "Entlastungsbetrag 131 €: So nutzen Sie ihn richtig",
-    excerpt: "Der Entlastungsbetrag steht allen ab Pflegegrad 1 zu. Erfahren Sie, wofür Sie die 131 Euro monatlich nutzen können.",
-    category: "Recht & Finanzen",
-    categoryGradient: "from-violet-500 to-purple-600",
-    date: "2. Januar 2026",
-    readTime: "6 Min.",
-    author: "AVYTA Team",
-    slug: "entlastungsbetrag-nutzen",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=400&fit=crop",
-    featured: true,
-  },
-  {
-    title: "Kombinationsleistung: Pflegegeld und Sachleistungen kombinieren",
-    excerpt: "So nutzen Sie professionelle Pflege und erhalten trotzdem Pflegegeld. Berechnung und Beispiele für die Kombipflege.",
-    category: "Pflegetipps",
-    categoryGradient: "from-blue-500 to-indigo-600",
-    date: "28. Dezember 2025",
-    readTime: "8 Min.",
-    author: "AVYTA Team",
-    slug: "kombinationsleistung-pflege",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
-    featured: false,
-  },
-  {
-    title: "Verhinderungspflege richtig nutzen",
-    excerpt: "So nutzen Sie die Verhinderungspflege optimal. Bis zu 1.612 Euro jährlich für Entlastung pflegender Angehöriger.",
-    category: "Empfehlungen",
-    categoryGradient: "from-rose-500 to-pink-600",
-    date: "20. Dezember 2025",
-    readTime: "5 Min.",
-    author: "AVYTA Team",
-    slug: "verhinderungspflege-nutzen",
-    image: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&h=400&fit=crop",
-    featured: false,
-  },
-  {
-    title: "10 Tipps für die häusliche Pflege von Demenzpatienten",
-    excerpt: "Erfahren Sie, wie Sie den Alltag für Demenzpatienten sicherer und angenehmer gestalten können.",
-    category: "Pflegetipps",
-    categoryGradient: "from-blue-500 to-indigo-600",
-    date: "15. Dezember 2025",
-    readTime: "5 Min.",
-    author: "AVYTA Team",
-    slug: "demenz-pflege-tipps",
-    image: "https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?w=600&h=400&fit=crop",
-    featured: false,
   },
 ];
 
@@ -166,15 +97,41 @@ const Blog = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredCategory, setHoveredCategory] = useState<number | null>(null);
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [postsLoading, setPostsLoading] = useState(true);
   const { toast } = useToast();
 
   useEffect(() => {
     setIsVisible(true);
+    fetchPosts();
   }, []);
+
+  const fetchPosts = async () => {
+    try {
+      const { data, error } = await supabase
+        .from("blog_posts")
+        .select("*")
+        .order("published_at", { ascending: false });
+
+      if (error) throw error;
+      setBlogPosts(data || []);
+    } catch (error) {
+      console.error("Error fetching blog posts:", error);
+    } finally {
+      setPostsLoading(false);
+    }
+  };
 
   const allPosts = activeCategory === "alle" 
     ? blogPosts 
     : blogPosts.filter(post => categoryMap[post.category] === activeCategory);
+
+  const categoriesWithCounts = categories.map(cat => ({
+    ...cat,
+    count: cat.slug === "alle" 
+      ? blogPosts.length 
+      : blogPosts.filter(p => categoryMap[p.category] === cat.slug).length,
+  }));
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
