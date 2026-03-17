@@ -14,6 +14,7 @@ const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"
 const ReviewsSection = lazy(() => import("@/components/ReviewsSection"));
 const NewsletterSection = lazy(() => import("@/components/NewsletterSection"));
 const ContactSection = lazy(() => import("@/components/ContactSection"));
+const MediaPartnersSection = lazy(() => import("@/components/MediaPartnersSection"));
 
 const SectionFallback = () => (
   <div className="py-24 flex items-center justify-center">
