@@ -359,36 +359,11 @@ const Header = () => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
-                {/* Blog Dropdown */}
+                {/* Blog Link */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm text-muted-foreground hover:text-primary font-medium bg-transparent">
+                  <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2">
                     Blog
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-[480px] p-4">
-                      <div className="grid grid-cols-2 gap-3">
-                        {blogCategories.map((item) => (
-                          <Link
-                            key={item.name}
-                            to={item.href}
-                            className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
-                          >
-                            <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                              <item.icon className="w-4 h-4" />
-                            </div>
-                            <div>
-                              <div className="font-medium text-foreground group-hover:text-primary text-sm">
-                                {item.name}
-                              </div>
-                              <div className="text-xs text-muted-foreground mt-0.5">
-                                {item.description}
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </NavigationMenuContent>
+                  </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
