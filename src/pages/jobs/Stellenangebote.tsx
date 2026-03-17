@@ -114,7 +114,7 @@ const Stellenangebote = () => {
         <section className="py-16 bg-gradient-to-br from-primary/5 via-background to-accent/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl">
-              <Link to="/jobs" className="text-primary hover:underline text-sm mb-4 inline-block">
+              <Link to="/karriere" className="text-primary hover:underline text-sm mb-4 inline-block">
                 ← Zurück zu Karriere
               </Link>
               <div className="flex items-start gap-6">
@@ -264,7 +264,7 @@ const Stellenangebote = () => {
                       Sie sprechen Deutsch auf B1-Niveau oder höher und haben eine Fahrerlaubnis für Klasse B Fahrzeuge? 
                       Damit sind die ersten Hürden für eine Bewerbung auf unsere Stellenangebote in der Pflege in Frankfurt 
                       bereits überwunden. Menschen mit Freude an sozialer Arbeit und neuen Kontakten sind bei uns stets 
-                      willkommen, unabhängig von ihrem Qualifikationsgrad. Für <Link to="/karriere/pflegehelfer-frankfurt" className="text-primary hover:underline font-semibold">Pflegehelfer</Link>, <Link to="/karriere/pflegefachkraft-frankfurt" className="text-primary hover:underline font-semibold">Pflegefachkräfte</Link>, <Link to="/karriere/pflegehilfskraft-frankfurt" className="text-primary hover:underline font-semibold">Pflegehilfskräfte</Link> und <Link to="/karriere/haushaltshilfe-frankfurt" className="text-primary hover:underline font-semibold">Haushaltshilfen</Link> mit Berufserfahrung ist in unserem Team stets Platz. <Link to="/kontakt" className="text-primary hover:underline font-semibold">Bewerben Sie sich jetzt</Link> und lernen Sie unser freundliches Arbeitsumfeld kennen.
+                      willkommen, unabhängig von ihrem Qualifikationsgrad. Für <Link to="/karriere/pflegehelfer-frankfurt" className="text-primary hover:underline font-semibold">Pflegehelfer</Link>, <Link to="/karriere/pflegefachkraft-frankfurt" className="text-primary hover:underline font-semibold">Pflegefachkräfte</Link>, <Link to="/karriere/pflegehilfskraft-frankfurt" className="text-primary hover:underline font-semibold">Pflegehilfskräfte</Link> und <Link to="/karriere/haushhaltshilfe-frankfurt" className="text-primary hover:underline font-semibold">Haushaltshilfen</Link> mit Berufserfahrung ist in unserem Team stets Platz. <Link to="/kontakt" className="text-primary hover:underline font-semibold">Bewerben Sie sich jetzt</Link> und lernen Sie unser freundliches Arbeitsumfeld kennen.
                     </p>
                   </div>
 
