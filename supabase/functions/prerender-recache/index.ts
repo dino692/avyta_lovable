@@ -22,6 +22,8 @@ const SITEMAP_URLS = [
   "https://www.avyta.de/leistungen/haushaltshilfe",
   "https://www.avyta.de/leistungen/pflegeberatung-frankfurt",
   "https://www.avyta.de/leistungen/verhinderungspflege-frankfurt",
+  "https://www.avyta.de/leistungen/demenz-wg-frankfurt",
+  "https://www.avyta.de/leistungen/betreutes-wohnen-frankfurt",
   "https://www.avyta.de/standorte/frankfurt",
   "https://www.avyta.de/standorte/bad-vilbel",
   "https://www.avyta.de/standorte/frankfurt/bornheim",
