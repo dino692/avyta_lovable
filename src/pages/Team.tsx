@@ -57,6 +57,14 @@ const teamMembers = [
     icon: Award,
   },
   {
+    name: "Aida Begatovic",
+    role: "Stellvertr. PDL",
+    subtitle: "Stellvertretende Pflegedienstleitung",
+    image: stellvPdlImage,
+    description: "Unterstützt die Pflegedienstleitung und sorgt für reibungslose Abläufe in der Pflege.",
+    icon: Heart,
+  },
+  {
     name: "Dino Lalic",
     role: "Prokurist",
     subtitle: "Finanzen & Marketing",
@@ -70,14 +78,6 @@ const teamMembers = [
     subtitle: "Organisation & Verwaltung",
     image: assistenzImage,
     description: "Unterstützt die Geschäftsleitung in allen organisatorischen Belangen.",
-    icon: Heart,
-  },
-  {
-    name: "Aida Begatovic",
-    role: "Stellvertr. PDL",
-    subtitle: "Stellvertretende Pflegedienstleitung",
-    image: stellvPdlImage,
-    description: "Unterstützt die Pflegedienstleitung und sorgt für reibungslose Abläufe in der Pflege.",
     icon: Heart,
   },
 ];
