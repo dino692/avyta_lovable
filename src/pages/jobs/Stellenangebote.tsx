@@ -114,7 +114,7 @@ const Stellenangebote = () => {
         <section className="py-16 bg-gradient-to-br from-primary/5 via-background to-accent/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl">
-              <Link to="/jobs" className="text-primary hover:underline text-sm mb-4 inline-block">
+              <Link to="/karriere" className="text-primary hover:underline text-sm mb-4 inline-block">
                 ← Zurück zu Karriere
               </Link>
               <div className="flex items-start gap-6">
