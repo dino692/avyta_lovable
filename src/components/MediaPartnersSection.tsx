@@ -1,6 +1,6 @@
 import lisaLogo from "@/assets/partners/lisa-logo.webp";
 import careboxxLogo from "@/assets/partners/careboxx-logo.png";
-import pflegewertLogo from "@/assets/partners/pflegewert-logo.png";
+import pflegewertLogo from "@/assets/partners/pflegewert-logo.jpg";
 
 const partners = [
   { name: "LISA - Assisted Home Solutions", logo: lisaLogo, url: "https://lisa.assistedhome.de/" },
