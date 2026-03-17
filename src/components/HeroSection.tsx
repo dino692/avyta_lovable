@@ -254,17 +254,23 @@ const HeroSection = () => {
                     width={1280}
                     height={720}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
-                    <span className="text-white font-medium text-sm md:text-base">AVYTA × LISA – Smarte Pflege für Zuhause</span>
-                  </div>
-                  <div className="absolute top-4 left-4 md:top-6 md:left-6">
-                    <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 border border-white/20">
-                      <p className="text-[10px] md:text-xs text-white/90 font-medium leading-snug">
-                        Der erste Pflegedienst in Frankfurt<br />
-                        mit Home Care System <strong className="text-white">"LISA"</strong>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/30" />
+                  
+                  {/* LISA Badge - top left */}
+                  <div className="absolute top-3 left-3 md:top-5 md:left-5 z-10">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-xl px-3 py-2 md:px-4 md:py-2.5 shadow-lg border border-white/50">
+                      <p className="text-[9px] md:text-[11px] font-bold text-primary uppercase tracking-wider leading-none mb-0.5">
+                        Erster Pflegedienst in Frankfurt
+                      </p>
+                      <p className="text-[11px] md:text-sm font-bold text-foreground leading-tight">
+                        mit Home Care System <span className="text-primary">"LISA"</span>
                       </p>
                     </div>
+                  </div>
+
+                  {/* Bottom label */}
+                  <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                    <span className="text-white/90 font-medium text-xs md:text-sm">AVYTA × LISA – Smarte Pflege für Zuhause</span>
                   </div>
                 </div>
 
@@ -289,19 +295,19 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Floating cards */}
-            <div className="absolute -bottom-6 -left-6 glass p-4 rounded-xl shadow-xl border border-white/30 hidden md:flex items-center gap-3 animate-float">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <Heart className="w-6 h-6 text-primary" />
+            {/* Floating cards - positioned inside container bounds */}
+            <div className="absolute bottom-3 left-3 glass p-3 rounded-xl shadow-xl border border-white/30 hidden md:flex items-center gap-3 animate-float z-20">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Heart className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <div className="font-semibold text-foreground">Persönliche Betreuung</div>
-                <div className="text-sm text-muted-foreground">24/7 für Sie da</div>
+                <div className="font-semibold text-foreground text-sm">Persönliche Betreuung</div>
+                <div className="text-xs text-muted-foreground">24/7 für Sie da</div>
               </div>
             </div>
 
-            <div className="absolute -top-4 -right-4 glass p-3 rounded-xl shadow-xl border border-white/30 hidden lg:flex items-center gap-2 animate-float-delayed">
-              <Shield className="w-5 h-5 text-primary" />
+            <div className="absolute top-3 right-3 glass p-2.5 rounded-xl shadow-xl border border-white/30 hidden lg:flex items-center gap-2 animate-float-delayed z-20">
+              <Shield className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-foreground">MDK Note 1,6</span>
             </div>
           </div>
