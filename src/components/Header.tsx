@@ -617,40 +617,16 @@ const Header = () => {
             </div>
 
             {/* Mobile Blog */}
-            <div className="mb-1">
-              <button
-                onClick={() => setMobileBlogOpen(!mobileBlogOpen)}
-                className="group flex items-center justify-between w-full px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Newspaper className="w-5 h-5 text-accent" />
-                  </div>
-                  <span className="font-medium text-foreground group-hover:text-primary transition-colors">Blog</span>
-                </div>
-                <ChevronDown className={`w-5 h-5 text-muted-foreground transition-all duration-300 ${mobileBlogOpen ? 'rotate-180 text-primary' : ''}`} />
-              </button>
-              <div className={`overflow-hidden transition-all duration-400 ease-out ${mobileBlogOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                <div className="pl-6 pr-2 py-2 space-y-1">
-                  {blogCategories.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      className="group flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/5 transition-all duration-200"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-200">
-                        <item.icon className="w-4 h-4 text-primary group-hover:text-white" />
-                      </div>
-                      <div>
-                        <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors block">{item.name}</span>
-                        <span className="text-xs text-muted-foreground line-clamp-1">{item.description}</span>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+            <Link
+              to="/blog"
+              className="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300 mb-1"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Newspaper className="w-5 h-5 text-accent" />
               </div>
-            </div>
+              <span className="font-medium text-foreground group-hover:text-primary transition-colors">Blog</span>
+            </Link>
 
             {/* Kontakt Link */}
             <Link
