@@ -25,14 +25,12 @@ const MediaPartnersSection = () => {
                 rel="noopener noreferrer"
                 className="grayscale-[30%] hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
               >
-                <div className="w-[120px] h-[48px] md:w-[150px] md:h-[56px] flex items-center justify-center">
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="max-h-full max-w-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="w-[120px] h-[48px] md:w-[150px] md:h-[56px] object-contain"
+                  loading="lazy"
+                />
               </a>
             ))}
           </div>
