@@ -295,19 +295,19 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Floating cards */}
-            <div className="absolute -bottom-6 -left-6 glass p-4 rounded-xl shadow-xl border border-white/30 hidden md:flex items-center gap-3 animate-float">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <Heart className="w-6 h-6 text-primary" />
+            {/* Floating cards - positioned inside container bounds */}
+            <div className="absolute bottom-3 left-3 glass p-3 rounded-xl shadow-xl border border-white/30 hidden md:flex items-center gap-3 animate-float z-20">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Heart className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <div className="font-semibold text-foreground">Persönliche Betreuung</div>
-                <div className="text-sm text-muted-foreground">24/7 für Sie da</div>
+                <div className="font-semibold text-foreground text-sm">Persönliche Betreuung</div>
+                <div className="text-xs text-muted-foreground">24/7 für Sie da</div>
               </div>
             </div>
 
-            <div className="absolute -top-4 -right-4 glass p-3 rounded-xl shadow-xl border border-white/30 hidden lg:flex items-center gap-2 animate-float-delayed">
-              <Shield className="w-5 h-5 text-primary" />
+            <div className="absolute top-3 right-3 glass p-2.5 rounded-xl shadow-xl border border-white/30 hidden lg:flex items-center gap-2 animate-float-delayed z-20">
+              <Shield className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-foreground">MDK Note 1,6</span>
             </div>
           </div>
