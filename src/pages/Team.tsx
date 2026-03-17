@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet-async";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import teamGroupImage from "@/assets/team/team-group.jpg";
-import jasminaMuellerImage from "@/assets/team/jasmina-mueller.webp";
+import jasminaMuellerImage from "@/assets/team/jasmina-mueller-final.png";
 import prokuristImage from "@/assets/team/prokurist.webp";
 import assistenzImage from "@/assets/team/assistenz.webp";
 import stellvPdlImage from "@/assets/team/stellv-pdl.webp";
