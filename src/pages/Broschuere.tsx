@@ -39,7 +39,7 @@ const Broschuere = () => {
       <style>{`
         @media print {
           @page { size: A4 landscape; margin: 0; }
-          html, body { margin: 0; padding: 0; width: 297mm; height: 210mm; }
+          html, body { margin: 0; padding: 0; }
           body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
           .no-print { display: none !important; }
           .print-page { width: 297mm; height: 210mm; page-break-after: always; page-break-inside: avoid; overflow: hidden; }
