@@ -21,6 +21,7 @@ const VierundzwanzigStunden = lazy(() => import("./pages/leistungen/Vierundzwanz
 const Pflegeberatung = lazy(() => import("./pages/leistungen/Pflegeberatung"));
 const Verhinderungspflege = lazy(() => import("./pages/leistungen/Verhinderungspflege"));
 const DemenzWG = lazy(() => import("./pages/leistungen/DemenzWG"));
+const BetreutesWohnen = lazy(() => import("./pages/leistungen/BetreutesWohnen"));
 const Frankfurt = lazy(() => import("./pages/standorte/Frankfurt"));
 const BadVilbel = lazy(() => import("./pages/standorte/BadVilbel"));
 const Bockenheim = lazy(() => import("./pages/standorte/Bockenheim"));
