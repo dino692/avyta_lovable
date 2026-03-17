@@ -322,52 +322,6 @@ const Team = () => {
           </div>
         </section>
 
-        {/* Team Video Section - Immersive */}
-        <section className="py-24 bg-gradient-to-b from-muted/50 to-background relative overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute inset-0" style={{
-              backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
-              backgroundSize: '32px 32px',
-            }} />
-          </div>
-          
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-                <Heart className="w-4 h-4" />
-                Team-Stimmen
-              </span>
-              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                Was unser Team sagt
-              </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Hören Sie direkt von unseren Mitarbeitern, was sie an ihrer Arbeit bei AVYTA schätzen.
-              </p>
-            </div>
-
-            <div className="max-w-sm mx-auto">
-              <div className="relative group">
-                {/* Decorative Elements */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
-                
-                <Card className="relative overflow-hidden rounded-2xl border-0 shadow-2xl">
-                  <CardContent className="p-0">
-                    <div className="relative aspect-[9/16] overflow-hidden bg-muted">
-                      <iframe
-                        src="https://www.tiktok.com/embed/v2/7544857921394429206"
-                        className="w-full h-full"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      />
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Photo Gallery Section - Masonry Style */}
         <section ref={galleryRef} className="py-24 relative">
           <div className="container mx-auto px-4">
@@ -437,6 +391,52 @@ const Team = () => {
                   </TabsContent>
                 ))}
               </Tabs>
+            </div>
+          </div>
+        </section>
+
+        {/* Team Video Section - Immersive */}
+        <section className="py-24 bg-gradient-to-b from-muted/50 to-background relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute inset-0" style={{
+              backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)',
+              backgroundSize: '32px 32px',
+            }} />
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center mb-16">
+              <span className="inline-flex items-center gap-2 px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+                <Heart className="w-4 h-4" />
+                Team-Stimmen
+              </span>
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+                Was unser Team sagt
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Hören Sie direkt von unseren Mitarbeitern, was sie an ihrer Arbeit bei AVYTA schätzen.
+              </p>
+            </div>
+
+            <div className="max-w-sm mx-auto">
+              <div className="relative group">
+                {/* Decorative Elements */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
+                
+                <Card className="relative overflow-hidden rounded-2xl border-0 shadow-2xl">
+                  <CardContent className="p-0">
+                    <div className="relative aspect-[9/16] overflow-hidden bg-muted">
+                      <iframe
+                        src="https://www.tiktok.com/embed/v2/7544857921394429206"
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>
