@@ -57,8 +57,28 @@ const AnimatedCounter = ({ value, suffix, delay }: { value: number; suffix: stri
   );
 };
 
+const SLIDE_INTERVAL = 5000;
+
 const HeroSection = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const slideTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const startSlideTimer = useCallback(() => {
+    if (slideTimerRef.current) clearInterval(slideTimerRef.current);
+    slideTimerRef.current = setInterval(() => {
+      setActiveSlide((prev) => (prev === 0 ? 1 : 0));
+    }, SLIDE_INTERVAL);
+  }, []);
+
+  useEffect(() => {
+    if (!videoLoaded) {
+      startSlideTimer();
+    }
+    return () => {
+      if (slideTimerRef.current) clearInterval(slideTimerRef.current);
+    };
+  }, [videoLoaded, startSlideTimer]);
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 md:pt-24 pb-8 md:pb-12 overflow-hidden">
