@@ -479,9 +479,9 @@ const Blog = () => {
               )}
             </div>
 
-            {(activeCategory === "alle" ? blogPosts.filter(p => !p.featured) : allPosts).length > 0 ? (
+            {allPosts.length > 0 ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {(activeCategory === "alle" ? blogPosts.filter(p => !p.featured) : allPosts).map((post, index) => (
+                {allPosts.map((post, index) => (
                   <Link
                     key={post.slug}
                     to={`/blog/${post.slug}`}
