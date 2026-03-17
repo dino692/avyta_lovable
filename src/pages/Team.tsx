@@ -61,7 +61,7 @@ const teamMembers = [
     role: "Stellvertr. PDL",
     subtitle: "Stellvertretende Pflegedienstleitung",
     image: stellvPdlImage,
-    description: "Unterstützt die Pflegedienstleitung und sorgt für reibungslose Abläufe in der Pflege.",
+    description: "Hilft der PDL und kümmert sich um das Qualitätsmanagement.",
     icon: Heart,
   },
   {
