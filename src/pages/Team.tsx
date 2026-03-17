@@ -178,7 +178,7 @@ const Team = () => {
               <div className={`transition-all duration-1000 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <span className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 backdrop-blur-sm text-primary rounded-full text-sm font-medium border border-primary/20 shadow-lg shadow-primary/5">
                   <Users className="w-4 h-4" />
-                  Mehr als 50 Pflegekräfte mit Herz
+                  Mehr als 20 Pflegekräfte mit Herz
                 </span>
               </div>
               
