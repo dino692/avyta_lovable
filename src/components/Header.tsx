@@ -11,7 +11,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-const leistungen: { name: string; href: string; description: string; icon: LucideIcon }[] = [
+const leistungen: { name: string; href: string; description: string; icon: LucideIcon; external?: boolean }[] = [
   { name: "Alle Leistungen", href: "/leistungen", description: "Übersicht aller Pflegeleistungen", icon: FileText },
   { name: "Behandlungspflege", href: "/leistungen/behandlungspflege", description: "Medizinische Versorgung nach ärztlicher Verordnung", icon: Stethoscope },
   { name: "Grundpflege", href: "/leistungen/grundpflege", description: "Unterstützung bei alltäglichen Verrichtungen", icon: HandHelping },
@@ -20,6 +20,7 @@ const leistungen: { name: string; href: string; description: string; icon: Lucid
   { name: "24-Stunden-Pflege", href: "/leistungen/24-stunden-pflege", description: "Rund-um-die-Uhr Betreuung zu Hause", icon: Clock },
   { name: "Pflegeberatung", href: "/leistungen/pflegeberatung-frankfurt", description: "Beratung zu Pflegeleistungen und Ansprüchen", icon: MessageCircle },
   { name: "Verhinderungspflege", href: "/leistungen/verhinderungspflege-frankfurt", description: "Vertretung pflegender Angehöriger", icon: CalendarCheck },
+  { name: "Krankenfahrt bestellen", href: "https://www.katew.de", description: "Krankenfahrten einfach online bestellen", icon: Ambulance, external: true },
 ];
 
 const standorte = {
