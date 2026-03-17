@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, HeartHandshake, Newspaper, Lightbulb, Scale, Activity, BookOpen, Stethoscope, HandHelping, HeartPulse, Home, Clock, MessageCircle, CalendarCheck, LucideIcon, Building2, MapPin, Mail, Calendar } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, HeartHandshake, Newspaper, Lightbulb, Scale, Activity, BookOpen, Stethoscope, HandHelping, HeartPulse, Home, Clock, MessageCircle, CalendarCheck, LucideIcon, Building2, MapPin, Mail, Calendar, Ambulance, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
