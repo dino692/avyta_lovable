@@ -248,7 +248,7 @@ const HeroSection = () => {
                 >
                   <img
                     src="/images/hero-slide-2.jpg"
-                    alt="AVYTA Pflege - Persönliche Betreuung"
+                    alt="AVYTA x LISA – Smart Home Pflege-Assistent"
                     className="w-full h-full object-cover"
                     loading="eager"
                     width={1280}
@@ -256,7 +256,7 @@ const HeroSection = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
-                    <span className="text-white font-medium text-sm md:text-base">Persönliche Pflege mit Herz</span>
+                    <span className="text-white font-medium text-sm md:text-base">AVYTA × LISA – Smarte Pflege für Zuhause</span>
                   </div>
                 </div>
 
