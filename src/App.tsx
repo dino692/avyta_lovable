@@ -94,6 +94,7 @@ const App = () => (
               <Route path="/leistungen/24-stunden-pflege" element={<VierundzwanzigStunden />} />
               <Route path="/leistungen/pflegeberatung-frankfurt" element={<Pflegeberatung />} />
               <Route path="/leistungen/verhinderungspflege-frankfurt" element={<Verhinderungspflege />} />
+              <Route path="/leistungen/demenz-wg-frankfurt" element={<DemenzWG />} />
               <Route path="/standorte/frankfurt" element={<Frankfurt />} />
               <Route path="/standorte/bad-vilbel" element={<BadVilbel />} />
               <Route path="/pflegedienst-bad-vilbel" element={<Navigate to="/standorte/bad-vilbel" replace />} />
