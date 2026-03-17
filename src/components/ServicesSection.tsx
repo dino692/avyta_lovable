@@ -97,6 +97,30 @@ const services = [
     accentColor: "pink",
     image: verhinderungspflegeImg,
   },
+  { 
+    icon: Brain, 
+    title: "Demenz WG", 
+    shortTitle: "Demenz WG",
+    description: "Betreute Wohngemeinschaft für Menschen mit Demenz – 24/7 Betreuung in familiärer Atmosphäre.", 
+    link: "/leistungen/demenz-wg-frankfurt",
+    features: ["24/7 Betreuung", "Familiäre Atmosphäre", "Geschultes Personal", "Aktivierung"],
+    color: "from-teal-500 to-cyan-600",
+    bgGradient: "from-teal-500/20 via-teal-500/5 to-transparent",
+    accentColor: "teal",
+    image: grundpflegeImg,
+  },
+  { 
+    icon: Building2, 
+    title: "Betreutes Wohnen", 
+    shortTitle: "Betreut",
+    description: "Selbstbestimmt leben mit professioneller Pflege und Betreuung in Frankfurt und Bad Vilbel.", 
+    link: "/leistungen/betreutes-wohnen-frankfurt",
+    features: ["Eigenständig", "Barrierefrei", "Notrufsystem", "Flexibel"],
+    color: "from-indigo-500 to-violet-600",
+    bgGradient: "from-indigo-500/20 via-indigo-500/5 to-transparent",
+    accentColor: "indigo",
+    image: pflegeberatungImg,
+  },
 ];
 
 const ServicesSection = forwardRef<HTMLElement>((_, ref) => {

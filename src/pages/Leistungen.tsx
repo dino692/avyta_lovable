@@ -184,7 +184,7 @@ const services = [
 ];
 
 const stats = [
-  { value: "7+", label: "Leistungsbereiche", icon: Sparkles },
+  { value: "9+", label: "Leistungsbereiche", icon: Sparkles },
   { value: "24/7", label: "Erreichbarkeit", icon: Phone },
   { value: "100%", label: "Individuell", icon: HeartPulse },
   { value: "Top", label: "Qualität", icon: Shield },
