@@ -184,6 +184,24 @@ const HeroSection = () => {
             className="animate-slide-in-right relative"
             style={{ animationDelay: '0.3s' }}
           >
+            {/* Floating cards - above the slider */}
+            <div className="hidden md:flex items-center justify-between mb-4">
+              <div className="glass p-3 rounded-xl shadow-xl border border-white/30 flex items-center gap-3 animate-float">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Heart className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <div className="font-semibold text-foreground text-sm">Persönliche Betreuung</div>
+                  <div className="text-xs text-muted-foreground">24/7 für Sie da</div>
+                </div>
+              </div>
+
+              <div className="glass p-2.5 rounded-xl shadow-xl border border-white/30 hidden lg:flex items-center gap-2 animate-float-delayed">
+                <Shield className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-foreground">MDK Note 1,6</span>
+              </div>
+            </div>
+
             {/* Glow effect behind video */}
             <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-60 animate-glow" />
             
@@ -276,22 +294,6 @@ const HeroSection = () => {
                   </div>
                 )}
               </div>
-            </div>
-
-            {/* Floating cards - positioned inside container bounds */}
-            <div className="absolute bottom-3 left-3 glass p-3 rounded-xl shadow-xl border border-white/30 hidden md:flex items-center gap-3 animate-float z-20">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <Heart className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <div className="font-semibold text-foreground text-sm">Persönliche Betreuung</div>
-                <div className="text-xs text-muted-foreground">24/7 für Sie da</div>
-              </div>
-            </div>
-
-            <div className="absolute top-3 right-3 glass p-2.5 rounded-xl shadow-xl border border-white/30 hidden lg:flex items-center gap-2 animate-float-delayed z-20">
-              <Shield className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-foreground">MDK Note 1,6</span>
             </div>
           </div>
         </div>
