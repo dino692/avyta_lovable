@@ -273,7 +273,7 @@ const TestimonialsSection = () => {
             <div className="text-center lg:text-left">
               <p className="text-white/70 mb-4">Möchten Sie Teil unseres Teams werden?</p>
               <Link 
-                to="/jobs" 
+                to="/karriere" 
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-primary font-semibold rounded-full shadow-xl shadow-black/10 hover:shadow-2xl hover:shadow-black/20 transition-all duration-300 hover:-translate-y-1"
               >
                 <span>Jetzt bewerben</span>

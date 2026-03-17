@@ -130,7 +130,7 @@ const Pflegehelfer = () => {
         <section className="py-16 bg-gradient-to-br from-primary/5 via-background to-accent/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl">
-              <Link to="/jobs/stellenangebote" className="text-primary hover:underline text-sm mb-4 inline-block">
+              <Link to="/karriere/stellenangebote-pflege-frankfurt" className="text-primary hover:underline text-sm mb-4 inline-block">
                 ← Zurück zu Stellenangebote
               </Link>
               <div className="flex items-start gap-6">
