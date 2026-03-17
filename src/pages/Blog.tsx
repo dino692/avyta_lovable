@@ -477,7 +477,7 @@ const Blog = () => {
                         <div className="flex items-center justify-between pt-3 border-t border-border/50">
                           <span className="flex items-center gap-1 text-xs text-muted-foreground">
                             <Clock className="w-3.5 h-3.5" />
-                            {post.readTime}
+                            {post.read_time}
                           </span>
                           <span className="text-primary text-sm font-medium group-hover:underline flex items-center gap-1">
                             Lesen
