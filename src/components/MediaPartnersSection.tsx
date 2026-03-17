@@ -1,11 +1,11 @@
-import praktischArztLogo from "@/assets/partners/praktischarzt-logo.png";
-import mediKarriereLogo from "@/assets/partners/medikarriere-logo.png";
-import pflegemarktLogo from "@/assets/partners/pflegemarkt-logo.png";
+import lisaLogo from "@/assets/partners/lisa-logo.webp";
+import careboxxLogo from "@/assets/partners/careboxx-logo.png";
+import pflegewertLogo from "@/assets/partners/pflegewert-logo.png";
 
 const partners = [
-  { name: "praktischArzt", logo: praktischArztLogo, url: "https://www.praktischarzt.de" },
-  { name: "Medi-Karriere", logo: mediKarriereLogo, url: "https://www.medi-karriere.de" },
-  { name: "Pflegemarkt.com", logo: pflegemarktLogo, url: "https://www.pflegemarkt.com" },
+  { name: "LISA - Assisted Home Solutions", logo: lisaLogo, url: "https://lisa.assistedhome.de/" },
+  { name: "Careboxx", logo: careboxxLogo, url: "https://www.careboxx.de/" },
+  { name: "PflegeWert Beratung", logo: pflegewertLogo, url: "https://www.pflegewert.de/" },
 ];
 
 const MediaPartnersSection = () => {
@@ -14,21 +14,21 @@ const MediaPartnersSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-10">
           <span className="text-xs font-semibold text-muted-foreground uppercase tracking-[0.2em]">
-            Medienpartner
+            Partner
           </span>
-          <div className="flex items-center gap-6 md:gap-10">
+          <div className="flex items-center gap-8 md:gap-12">
             {partners.map((partner) => (
               <a
                 key={partner.name}
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+                className="grayscale-[30%] hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
               >
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-8 md:h-10 max-w-[120px] md:max-w-[150px] object-contain"
+                  className="h-8 md:h-10 max-w-[130px] md:max-w-[160px] object-contain"
                   loading="lazy"
                 />
               </a>
