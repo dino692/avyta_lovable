@@ -459,7 +459,7 @@ const Blog = () => {
                 <div>
                   <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
                     {activeCategory === "alle" 
-                      ? "Weitere Artikel" 
+                      ? "Alle Artikel" 
                       : categories.find(c => c.slug === activeCategory)?.name}
                   </h2>
                   <p className="text-muted-foreground text-sm">
