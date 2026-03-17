@@ -220,32 +220,6 @@ const Team = () => {
           </div>
         </section>
 
-        {/* Team Group Image - Cinematic */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto relative">
-              {/* Decorative Frame */}
-              <div className="absolute -inset-4 md:-inset-8 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 rounded-3xl blur-xl opacity-50" />
-              
-              <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl shadow-black/20">
-                <img
-                  src={teamGroupImage}
-                  alt="Das AVYTA Team - Ambulanter Pflegedienst Frankfurt"
-                  className="w-full h-auto"
-                />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                
-                {/* Caption */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-                  <p className="text-white/90 text-lg md:text-xl font-medium">
-                    Unser Team – Gemeinsam stark für Ihre Pflege
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Stats Section - Animated Counters */}
         <section ref={statsRef} className="py-20 bg-gradient-to-b from-muted/30 to-background">
