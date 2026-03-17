@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Stethoscope, Home, Activity, Utensils, Clock, FileText, UserCheck, Check, HeartPulse, Sparkles, Shield, Phone } from "lucide-react";
+import { ArrowRight, Stethoscope, Home, Activity, Utensils, Clock, FileText, UserCheck, Check, HeartPulse, Sparkles, Shield, Phone, Brain, Building2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
