@@ -20,6 +20,7 @@ const Haushaltshilfe = lazy(() => import("./pages/leistungen/Haushaltshilfe"));
 const VierundzwanzigStunden = lazy(() => import("./pages/leistungen/VierundzwanzigStunden"));
 const Pflegeberatung = lazy(() => import("./pages/leistungen/Pflegeberatung"));
 const Verhinderungspflege = lazy(() => import("./pages/leistungen/Verhinderungspflege"));
+const DemenzWG = lazy(() => import("./pages/leistungen/DemenzWG"));
 const Frankfurt = lazy(() => import("./pages/standorte/Frankfurt"));
 const BadVilbel = lazy(() => import("./pages/standorte/BadVilbel"));
 const Bockenheim = lazy(() => import("./pages/standorte/Bockenheim"));
@@ -93,6 +94,7 @@ const App = () => (
               <Route path="/leistungen/24-stunden-pflege" element={<VierundzwanzigStunden />} />
               <Route path="/leistungen/pflegeberatung-frankfurt" element={<Pflegeberatung />} />
               <Route path="/leistungen/verhinderungspflege-frankfurt" element={<Verhinderungspflege />} />
+              <Route path="/leistungen/demenz-wg-frankfurt" element={<DemenzWG />} />
               <Route path="/standorte/frankfurt" element={<Frankfurt />} />
               <Route path="/standorte/bad-vilbel" element={<BadVilbel />} />
               <Route path="/pflegedienst-bad-vilbel" element={<Navigate to="/standorte/bad-vilbel" replace />} />
