@@ -254,24 +254,7 @@ const HeroSection = () => {
                     width={1280}
                     height={720}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/30" />
-                  
-                  {/* LISA Badge - top left */}
-                  <div className="absolute top-3 left-3 md:top-5 md:left-5 z-10">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-xl px-3 py-2 md:px-4 md:py-2.5 shadow-lg border border-white/50">
-                      <p className="text-[9px] md:text-[11px] font-bold text-primary uppercase tracking-wider leading-none mb-0.5">
-                        Erster Pflegedienst in Frankfurt
-                      </p>
-                      <p className="text-[11px] md:text-sm font-bold text-foreground leading-tight">
-                        mit Home Care System <span className="text-primary">"LISA"</span>
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Bottom label */}
-                  <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
-                    <span className="text-white/90 font-medium text-xs md:text-sm">AVYTA × LISA – Smarte Pflege für Zuhause</span>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                 </div>
 
                 {/* Slide indicators */}
