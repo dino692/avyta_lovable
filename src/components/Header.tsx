@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, HeartHandshake, Newspaper, Lightbulb, Scale, Activity, BookOpen, Stethoscope, HandHelping, HeartPulse, Home, Clock, MessageCircle, CalendarCheck, LucideIcon, Building2, MapPin, Mail, Calendar } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, HeartHandshake, Newspaper, Lightbulb, Scale, Activity, BookOpen, Stethoscope, HandHelping, HeartPulse, Home, Clock, MessageCircle, CalendarCheck, LucideIcon, Building2, MapPin, Mail, Calendar, Ambulance, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -11,7 +11,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-const leistungen: { name: string; href: string; description: string; icon: LucideIcon }[] = [
+const leistungen: { name: string; href: string; description: string; icon: LucideIcon; external?: boolean }[] = [
   { name: "Alle Leistungen", href: "/leistungen", description: "Übersicht aller Pflegeleistungen", icon: FileText },
   { name: "Behandlungspflege", href: "/leistungen/behandlungspflege", description: "Medizinische Versorgung nach ärztlicher Verordnung", icon: Stethoscope },
   { name: "Grundpflege", href: "/leistungen/grundpflege", description: "Unterstützung bei alltäglichen Verrichtungen", icon: HandHelping },
@@ -20,6 +20,7 @@ const leistungen: { name: string; href: string; description: string; icon: Lucid
   { name: "24-Stunden-Pflege", href: "/leistungen/24-stunden-pflege", description: "Rund-um-die-Uhr Betreuung zu Hause", icon: Clock },
   { name: "Pflegeberatung", href: "/leistungen/pflegeberatung-frankfurt", description: "Beratung zu Pflegeleistungen und Ansprüchen", icon: MessageCircle },
   { name: "Verhinderungspflege", href: "/leistungen/verhinderungspflege-frankfurt", description: "Vertretung pflegender Angehöriger", icon: CalendarCheck },
+  { name: "Krankenfahrt bestellen", href: "https://www.katew.de", description: "Krankenfahrten einfach online bestellen", icon: Ambulance, external: true },
 ];
 
 const standorte = {
@@ -236,25 +237,48 @@ const Header = () => {
                   <NavigationMenuContent>
                     <div className="w-[520px] p-4">
                       <div className="grid grid-cols-2 gap-3">
-                        {leistungen.map((item) => (
-                          <Link
-                            key={item.name}
-                            to={item.href}
-                            className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
-                          >
-                            <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                              <item.icon className="w-4 h-4" />
-                            </div>
-                            <div>
-                              <div className="font-medium text-foreground group-hover:text-primary">
-                                {item.name}
+                        {leistungen.map((item) => 
+                          item.external ? (
+                            <a
+                              key={item.name}
+                              href={item.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
+                            >
+                              <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                                <item.icon className="w-4 h-4" />
                               </div>
-                              <div className="text-xs text-muted-foreground mt-0.5">
-                                {item.description}
+                              <div>
+                                <div className="font-medium text-foreground group-hover:text-primary flex items-center gap-1">
+                                  {item.name}
+                                  <ExternalLink className="w-3 h-3" />
+                                </div>
+                                <div className="text-xs text-muted-foreground mt-0.5">
+                                  {item.description}
+                                </div>
                               </div>
-                            </div>
-                          </Link>
-                        ))}
+                            </a>
+                          ) : (
+                            <Link
+                              key={item.name}
+                              to={item.href}
+                              className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
+                            >
+                              <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                                <item.icon className="w-4 h-4" />
+                              </div>
+                              <div>
+                                <div className="font-medium text-foreground group-hover:text-primary">
+                                  {item.name}
+                                </div>
+                                <div className="text-xs text-muted-foreground mt-0.5">
+                                  {item.description}
+                                </div>
+                              </div>
+                            </Link>
+                          )
+                        )}
                       </div>
                     </div>
                   </NavigationMenuContent>
@@ -490,23 +514,43 @@ const Header = () => {
               </button>
               <div className={`overflow-hidden transition-all duration-400 ease-out ${mobileLeistungenOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="pl-6 pr-2 py-2 space-y-1">
-                  {leistungen.map((item, index) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      className="group flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/5 transition-all duration-200"
-                      onClick={() => setIsMenuOpen(false)}
-                      style={{ animationDelay: `${index * 50}ms` }}
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-200">
-                        <item.icon className="w-4 h-4 text-primary group-hover:text-white" />
-                      </div>
-                      <div>
-                        <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors block">{item.name}</span>
-                        <span className="text-xs text-muted-foreground line-clamp-1">{item.description}</span>
-                      </div>
-                    </Link>
-                  ))}
+                  {leistungen.map((item, index) => 
+                    item.external ? (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/5 transition-all duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                        style={{ animationDelay: `${index * 50}ms` }}
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-200">
+                          <item.icon className="w-4 h-4 text-primary group-hover:text-white" />
+                        </div>
+                        <div>
+                          <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors flex items-center gap-1">{item.name} <ExternalLink className="w-3 h-3" /></span>
+                          <span className="text-xs text-muted-foreground line-clamp-1">{item.description}</span>
+                        </div>
+                      </a>
+                    ) : (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className="group flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/5 transition-all duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                        style={{ animationDelay: `${index * 50}ms` }}
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-200">
+                          <item.icon className="w-4 h-4 text-primary group-hover:text-white" />
+                        </div>
+                        <div>
+                          <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors block">{item.name}</span>
+                          <span className="text-xs text-muted-foreground line-clamp-1">{item.description}</span>
+                        </div>
+                      </Link>
+                    )
+                  )}
                 </div>
               </div>
             </div>
