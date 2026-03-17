@@ -460,7 +460,7 @@ const Blog = () => {
                       {/* Content */}
                       <div className="p-5">
                         <div className="flex items-center gap-3 text-sm text-muted-foreground mb-3">
-                          <span className={`px-3 py-1 rounded-full bg-gradient-to-r ${post.categoryGradient} text-white text-xs font-medium`}>
+                          <span className={`px-3 py-1 rounded-full bg-gradient-to-r ${post.category_gradient} text-white text-xs font-medium`}>
                             {post.category}
                           </span>
                           <span className="flex items-center gap-1 text-xs">
