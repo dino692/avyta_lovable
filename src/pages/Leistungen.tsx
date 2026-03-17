@@ -145,6 +145,42 @@ const services = [
     bgColor: "bg-cyan-500/10",
     image: verhinderungspflegeImg,
   },
+  {
+    id: "demenz-wg-frankfurt",
+    icon: Brain,
+    title: "Demenz WG",
+    shortDescription: "Betreute Wohngemeinschaft für Demenz",
+    description: "Betreute Wohngemeinschaft für Menschen mit Demenz – 24/7 Betreuung in familiärer Atmosphäre in Frankfurt und Bad Vilbel.",
+    details: [
+      "24/7 professionelle Betreuung",
+      "Familiäre Atmosphäre",
+      "Geschultes Pflegepersonal",
+      "Strukturierter Tagesablauf",
+      "Aktivierende Beschäftigung",
+      "Individuelle Pflegekonzepte",
+    ],
+    color: "from-teal-500 to-cyan-500",
+    bgColor: "bg-teal-500/10",
+    image: grundpflegeImg,
+  },
+  {
+    id: "betreutes-wohnen-frankfurt",
+    icon: Building2,
+    title: "Betreutes Wohnen",
+    shortDescription: "Selbstbestimmt leben mit Unterstützung",
+    description: "Selbstbestimmt leben mit professioneller Pflege und Betreuung – die Alternative zum Pflegeheim in Frankfurt und Bad Vilbel.",
+    details: [
+      "Eigenständiges Wohnen",
+      "Barrierefreie Wohnungen",
+      "24/7 Notrufsystem",
+      "Hauswirtschaftliche Hilfe",
+      "Pflegerische Versorgung",
+      "Flexible Betreuungspakete",
+    ],
+    color: "from-indigo-500 to-violet-500",
+    bgColor: "bg-indigo-500/10",
+    image: pflegeberatungImg,
+  },
 ];
 
 const stats = [
