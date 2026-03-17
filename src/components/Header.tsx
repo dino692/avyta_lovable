@@ -514,23 +514,43 @@ const Header = () => {
               </button>
               <div className={`overflow-hidden transition-all duration-400 ease-out ${mobileLeistungenOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="pl-6 pr-2 py-2 space-y-1">
-                  {leistungen.map((item, index) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      className="group flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/5 transition-all duration-200"
-                      onClick={() => setIsMenuOpen(false)}
-                      style={{ animationDelay: `${index * 50}ms` }}
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-200">
-                        <item.icon className="w-4 h-4 text-primary group-hover:text-white" />
-                      </div>
-                      <div>
-                        <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors block">{item.name}</span>
-                        <span className="text-xs text-muted-foreground line-clamp-1">{item.description}</span>
-                      </div>
-                    </Link>
-                  ))}
+                  {leistungen.map((item, index) => 
+                    item.external ? (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/5 transition-all duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                        style={{ animationDelay: `${index * 50}ms` }}
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-200">
+                          <item.icon className="w-4 h-4 text-primary group-hover:text-white" />
+                        </div>
+                        <div>
+                          <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors flex items-center gap-1">{item.name} <ExternalLink className="w-3 h-3" /></span>
+                          <span className="text-xs text-muted-foreground line-clamp-1">{item.description}</span>
+                        </div>
+                      </a>
+                    ) : (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className="group flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/5 transition-all duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                        style={{ animationDelay: `${index * 50}ms` }}
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-200">
+                          <item.icon className="w-4 h-4 text-primary group-hover:text-white" />
+                        </div>
+                        <div>
+                          <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors block">{item.name}</span>
+                          <span className="text-xs text-muted-foreground line-clamp-1">{item.description}</span>
+                        </div>
+                      </Link>
+                    )
+                  )}
                 </div>
               </div>
             </div>
