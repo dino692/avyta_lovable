@@ -28,7 +28,7 @@ const MediaPartnersSection = () => {
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-8 md:h-10 max-w-[130px] md:max-w-[160px] object-contain"
+                  className="h-10 md:h-12 w-[140px] md:w-[160px] object-contain"
                   loading="lazy"
                 />
               </a>

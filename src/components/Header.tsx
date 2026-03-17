@@ -21,6 +21,7 @@ const leistungen: { name: string; href: string; description: string; icon: Lucid
   { name: "Pflegeberatung", href: "/leistungen/pflegeberatung-frankfurt", description: "Beratung zu Pflegeleistungen und Ansprüchen", icon: MessageCircle },
   { name: "Verhinderungspflege", href: "/leistungen/verhinderungspflege-frankfurt", description: "Vertretung pflegender Angehöriger", icon: CalendarCheck },
   { name: "Demenz WG", href: "/leistungen/demenz-wg-frankfurt", description: "Betreute Wohngemeinschaft für Demenz", icon: Home },
+  { name: "Betreutes Wohnen", href: "/leistungen/betreutes-wohnen-frankfurt", description: "Betreutes Wohnen in Frankfurt & Bad Vilbel", icon: Building2 },
   { name: "Krankenfahrt bestellen", href: "https://www.katew.de", description: "Krankenfahrten einfach online bestellen", icon: Ambulance, external: true },
 ];
 
