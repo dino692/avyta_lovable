@@ -32,6 +32,13 @@ interface GalleryCategory {
 
 const galleryCategories: GalleryCategory[] = [
   {
+    id: "meetings-2026",
+    label: "Meetings 2026",
+    images: [
+      { src: meeting2026_01, alt: "AVYTA Team Meeting 2026" },
+    ],
+  },
+  {
     id: "weihnachtsfeier-2024",
     label: "Weihnachtsfeier 2024",
     images: [
