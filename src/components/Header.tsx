@@ -237,25 +237,48 @@ const Header = () => {
                   <NavigationMenuContent>
                     <div className="w-[520px] p-4">
                       <div className="grid grid-cols-2 gap-3">
-                        {leistungen.map((item) => (
-                          <Link
-                            key={item.name}
-                            to={item.href}
-                            className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
-                          >
-                            <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                              <item.icon className="w-4 h-4" />
-                            </div>
-                            <div>
-                              <div className="font-medium text-foreground group-hover:text-primary">
-                                {item.name}
+                        {leistungen.map((item) => 
+                          item.external ? (
+                            <a
+                              key={item.name}
+                              href={item.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
+                            >
+                              <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                                <item.icon className="w-4 h-4" />
                               </div>
-                              <div className="text-xs text-muted-foreground mt-0.5">
-                                {item.description}
+                              <div>
+                                <div className="font-medium text-foreground group-hover:text-primary flex items-center gap-1">
+                                  {item.name}
+                                  <ExternalLink className="w-3 h-3" />
+                                </div>
+                                <div className="text-xs text-muted-foreground mt-0.5">
+                                  {item.description}
+                                </div>
                               </div>
-                            </div>
-                          </Link>
-                        ))}
+                            </a>
+                          ) : (
+                            <Link
+                              key={item.name}
+                              to={item.href}
+                              className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
+                            >
+                              <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                                <item.icon className="w-4 h-4" />
+                              </div>
+                              <div>
+                                <div className="font-medium text-foreground group-hover:text-primary">
+                                  {item.name}
+                                </div>
+                                <div className="text-xs text-muted-foreground mt-0.5">
+                                  {item.description}
+                                </div>
+                              </div>
+                            </Link>
+                          )
+                        )}
                       </div>
                     </div>
                   </NavigationMenuContent>
