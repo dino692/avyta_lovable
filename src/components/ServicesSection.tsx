@@ -1,4 +1,4 @@
-import { ArrowRight, Stethoscope, Home, Activity, Utensils, Clock, FileText, UserCheck, Sparkles, Play, ChevronRight, Star } from "lucide-react";
+import { ArrowRight, Stethoscope, Home, Activity, Utensils, Clock, FileText, UserCheck, Sparkles, Play, ChevronRight, Star, Brain, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useRef, useState, useEffect, forwardRef } from "react";
