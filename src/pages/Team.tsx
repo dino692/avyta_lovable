@@ -13,6 +13,7 @@ import teamGroupImage from "@/assets/team/team-group.jpg";
 import jasminaMuellerImage from "@/assets/team/jasmina-mueller.webp";
 import prokuristImage from "@/assets/team/prokurist.webp";
 import assistenzImage from "@/assets/team/assistenz.webp";
+import stellvPdlImage from "@/assets/team/stellv-pdl.webp";
 import weihnachtsfeier01 from "@/assets/team/weihnachtsfeier-2023-01.webp";
 import weihnachtsfeier02 from "@/assets/team/weihnachtsfeier-2023-02.webp";
 import weihnachtsfeier2024_01 from "@/assets/team/weihnachtsfeier-2024-01.jpg";
@@ -69,6 +70,14 @@ const teamMembers = [
     subtitle: "Organisation & Verwaltung",
     image: assistenzImage,
     description: "Unterstützt die Geschäftsleitung in allen organisatorischen Belangen.",
+    icon: Heart,
+  },
+  {
+    name: "Aida Begatovic",
+    role: "Stellvertr. PDL",
+    subtitle: "Stellvertretende Pflegedienstleitung",
+    image: stellvPdlImage,
+    description: "Unterstützt die Pflegedienstleitung und sorgt für reibungslose Abläufe in der Pflege.",
     icon: Heart,
   },
 ];
