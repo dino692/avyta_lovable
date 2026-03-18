@@ -26,7 +26,7 @@ const locations = [
     link: "/standorte/bad-vilbel",
     description: "Für die Region Wetterau – persönliche Betreuung in Ihrer Nähe",
     gradient: "from-accent via-accent/80 to-primary",
-    stats: { patients: "200+", years: "12+", rating: "5,0" },
+    stats: { patients: "50+", years: "12+", rating: "5,0" },
     hours: "Mo-Fr 8-12 Uhr",
     isMain: false,
     image: badVilbelImg,
