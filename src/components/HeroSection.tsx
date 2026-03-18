@@ -111,7 +111,7 @@ const HeroSection = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 md:h-3 md:w-3 bg-primary" />
               </span>
               <span className="text-xs md:text-sm font-semibold text-foreground">
-                Status: Verfügbare Pflegeplätze "2"
+                Verfügbare Pflegeplätze: 2
               </span>
               <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-primary" />
             </div>
