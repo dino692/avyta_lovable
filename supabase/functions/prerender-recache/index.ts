@@ -60,6 +60,7 @@ const SITEMAP_URLS = [
   "https://www.avyta.de/blog/pflegegeld-tabelle-2025",
   "https://www.avyta.de/blog/entlastungsbetrag-nutzen",
   "https://www.avyta.de/blog/kombinationsleistung-pflege",
+  "https://www.avyta.de/blog/kangen-wasser",
 ];
 
 serve(async (req) => {
