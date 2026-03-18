@@ -31,9 +31,10 @@ function escapeHtml(input: string) {
 }
 
 serve(async (req) => {
+  _corsHeaders = getCorsHeaders(req);
   // CORS preflight
   if (req.method === "OPTIONS") {
-    return new Response("ok", { headers: corsHeaders });
+    return new Response("ok", { headers: _corsHeaders });
   }
 
   if (req.method !== "POST") {
