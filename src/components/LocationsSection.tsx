@@ -14,7 +14,7 @@ const locations = [
     link: "/standorte/frankfurt",
     description: "Unser Hauptsitz im Herzen Frankfurts – zentral gelegen für optimale Erreichbarkeit",
     gradient: "from-primary via-primary/80 to-accent",
-    stats: { patients: "700+", years: "12+", rating: "5,0" },
+    stats: { patients: "50+", years: "12+", rating: "5,0" },
     hours: "Mo-Fr 8-12 Uhr",
     isMain: true,
     image: frankfurtSkylineImg,
