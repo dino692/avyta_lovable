@@ -14,7 +14,7 @@ const locations = [
     link: "/standorte/frankfurt",
     description: "Unser Hauptsitz im Herzen Frankfurts – zentral gelegen für optimale Erreichbarkeit",
     gradient: "from-primary via-primary/80 to-accent",
-    stats: { patients: "50+", years: "12+", rating: "5,0" },
+    stats: { patients: "150+", years: "12+", rating: "5,0" },
     hours: "Mo-Fr 8-12 Uhr",
     isMain: true,
     image: frankfurtSkylineImg,
@@ -205,7 +205,7 @@ const LocationsSection = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-2 md:gap-3 mt-4 md:mt-6">
               {[
-                { icon: Users, value: "50+", label: "Patienten" },
+                { icon: Users, value: "150+", label: "Patienten" },
                 { icon: Clock, value: "24/7", label: "Erreichbar" },
                 { icon: Star, value: "5,0", label: "Bewertung" },
               ].map((stat, index) => (
