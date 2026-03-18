@@ -64,6 +64,9 @@ async function addToBrevo(email: string, firstName: string, lastName: string): P
 }
 
 const handler = async (req: Request): Promise<Response> => {
+  const origin = req.headers.get("Origin") || "";
+  const corsHeaders = getCorsHeaders(origin);
+
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -116,12 +119,12 @@ const handler = async (req: Request): Promise<Response> => {
     if (!hubspotToken) {
       console.error("HUBSPOT_ACCESS_TOKEN not configured");
       return new Response(
-        JSON.stringify({ error: "HubSpot nicht konfiguriert" }),
+        JSON.stringify({ error: "Service temporarily unavailable" }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    const nameParts = name.trim().split(" ");
+    const nameParts = trimmedName.split(" ");
     const firstName = nameParts[0] || "";
     const lastName = nameParts.slice(1).join(" ") || "";
 
