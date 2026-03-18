@@ -11,10 +11,12 @@ function getCorsHeaders(req: Request) {
   };
 }
 
+let _corsHeaders: Record<string, string> = { "Access-Control-Allow-Origin": allowedOrigins[0], "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type" };
+
 function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body), {
     status,
-    headers: { ...corsHeaders, "Content-Type": "application/json" },
+    headers: { ..._corsHeaders, "Content-Type": "application/json" },
   });
 }
 
