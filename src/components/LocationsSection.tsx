@@ -205,7 +205,7 @@ const LocationsSection = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-2 md:gap-3 mt-4 md:mt-6">
               {[
-                { icon: Users, value: "150+", label: "Patienten" },
+                { icon: Users, value: locations[activeLocation].stats.patients, label: "Patienten" },
                 { icon: Clock, value: "24/7", label: "Erreichbar" },
                 { icon: Star, value: "5,0", label: "Bewertung" },
               ].map((stat, index) => (
