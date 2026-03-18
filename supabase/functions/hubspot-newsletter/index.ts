@@ -1,9 +1,14 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "https://www.avyta.de",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
+const allowedOrigins = ["https://www.avyta.de", "https://avyta.de", "https://avyta.lovable.app"];
+
+function getCorsHeaders(origin: string) {
+  const allowOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+  return {
+    "Access-Control-Allow-Origin": allowOrigin,
+    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  };
+}
 
 interface NewsletterRequest {
   email: string;
