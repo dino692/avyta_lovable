@@ -75,9 +75,34 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     if (!email || !name) {
-      console.error("Missing required fields:", { email: !!email, name: !!name });
       return new Response(
         JSON.stringify({ error: "Name und E-Mail sind erforderlich" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (!emailRegex.test(email.trim())) {
+      return new Response(
+        JSON.stringify({ error: "Ungültige E-Mail-Adresse" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Validate name length and characters
+    const trimmedName = name.trim();
+    if (trimmedName.length < 2 || trimmedName.length > 100) {
+      return new Response(
+        JSON.stringify({ error: "Name muss zwischen 2 und 100 Zeichen lang sein" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    const nameRegex = /^[\p{L}\s.'\-]+$/u;
+    if (!nameRegex.test(trimmedName)) {
+      return new Response(
+        JSON.stringify({ error: "Name enthält ungültige Zeichen" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }

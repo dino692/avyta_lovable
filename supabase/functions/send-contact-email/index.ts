@@ -61,11 +61,29 @@ serve(async (req) => {
       return json({ error: "Missing fields: name, email, message" }, 400);
     }
 
-    // Basic validation
-    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    // Validate name length and characters
+    if (name.length < 2 || name.length > 100) {
+      return json({ error: "Name must be between 2 and 100 characters" }, 400);
+    }
+    const nameRegex = /^[\p{L}\s.'\-]+$/u;
+    if (!nameRegex.test(name)) {
+      return json({ error: "Name contains invalid characters" }, 400);
+    }
+
+    // Email validation
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
     if (!emailOk) {
       return json({ error: "Invalid email" }, 400);
     }
+    if (email.length > 255) {
+      return json({ error: "Email too long" }, 400);
+    }
+
+    // Phone validation (if provided)
+    if (phone && !/^[+\d\s()\-]{7,20}$/.test(phone)) {
+      return json({ error: "Invalid phone number" }, 400);
+    }
+
     if (message.length > 5000) {
       return json({ error: "Message too long" }, 400);
     }
