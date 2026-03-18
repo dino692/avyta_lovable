@@ -1,9 +1,14 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
+const allowedOrigins = ["https://www.avyta.de", "https://avyta.de", "https://avyta.lovable.app"];
+
+function getCorsHeaders(origin: string) {
+  const allowOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+  return {
+    "Access-Control-Allow-Origin": allowOrigin,
+    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  };
+}
 
 interface NewsletterRequest {
   email: string;
@@ -59,6 +64,9 @@ async function addToBrevo(email: string, firstName: string, lastName: string): P
 }
 
 const handler = async (req: Request): Promise<Response> => {
+  const origin = req.headers.get("Origin") || "";
+  const corsHeaders = getCorsHeaders(origin);
+
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -75,9 +83,34 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     if (!email || !name) {
-      console.error("Missing required fields:", { email: !!email, name: !!name });
       return new Response(
         JSON.stringify({ error: "Name und E-Mail sind erforderlich" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (!emailRegex.test(email.trim())) {
+      return new Response(
+        JSON.stringify({ error: "Ungültige E-Mail-Adresse" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Validate name length and characters
+    const trimmedName = name.trim();
+    if (trimmedName.length < 2 || trimmedName.length > 100) {
+      return new Response(
+        JSON.stringify({ error: "Name muss zwischen 2 und 100 Zeichen lang sein" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    const nameRegex = /^[\p{L}\s.'\-]+$/u;
+    if (!nameRegex.test(trimmedName)) {
+      return new Response(
+        JSON.stringify({ error: "Name enthält ungültige Zeichen" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
@@ -86,12 +119,12 @@ const handler = async (req: Request): Promise<Response> => {
     if (!hubspotToken) {
       console.error("HUBSPOT_ACCESS_TOKEN not configured");
       return new Response(
-        JSON.stringify({ error: "HubSpot nicht konfiguriert" }),
+        JSON.stringify({ error: "Service temporarily unavailable" }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    const nameParts = name.trim().split(" ");
+    const nameParts = trimmedName.split(" ");
     const firstName = nameParts[0] || "";
     const lastName = nameParts.slice(1).join(" ") || "";
 

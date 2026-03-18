@@ -12,6 +12,17 @@ serve(async (req) => {
   }
 
   try {
+    // Verify this was called by the DB trigger with the service role key
+    const authHeader = req.headers.get("Authorization");
+    const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+    if (!authHeader || authHeader !== `Bearer ${serviceRoleKey}`) {
+      console.error("Unauthorized call to send-blog-newsletter");
+      return new Response(
+        JSON.stringify({ error: "Unauthorized" }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     const brevoApiKey = Deno.env.get("BREVO_API_KEY");
     if (!brevoApiKey) {
       throw new Error("BREVO_API_KEY not configured");

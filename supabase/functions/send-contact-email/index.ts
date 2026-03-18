@@ -1,14 +1,22 @@
 import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
+const allowedOrigins = ["https://www.avyta.de", "https://avyta.de", "https://avyta.lovable.app"];
+
+function getCorsHeaders(req: Request) {
+  const origin = req.headers.get("Origin") || "";
+  const allowOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+  return {
+    "Access-Control-Allow-Origin": allowOrigin,
+    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  };
+}
+
+let _corsHeaders: Record<string, string> = { "Access-Control-Allow-Origin": allowedOrigins[0], "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type" };
 
 function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body), {
     status,
-    headers: { ...corsHeaders, "Content-Type": "application/json" },
+    headers: { ..._corsHeaders, "Content-Type": "application/json" },
   });
 }
 
@@ -23,9 +31,10 @@ function escapeHtml(input: string) {
 }
 
 serve(async (req) => {
+  _corsHeaders = getCorsHeaders(req);
   // CORS preflight
   if (req.method === "OPTIONS") {
-    return new Response("ok", { headers: corsHeaders });
+    return new Response("ok", { headers: _corsHeaders });
   }
 
   if (req.method !== "POST") {
@@ -61,11 +70,29 @@ serve(async (req) => {
       return json({ error: "Missing fields: name, email, message" }, 400);
     }
 
-    // Basic validation
-    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    // Validate name length and characters
+    if (name.length < 2 || name.length > 100) {
+      return json({ error: "Name must be between 2 and 100 characters" }, 400);
+    }
+    const nameRegex = /^[\p{L}\s.'\-]+$/u;
+    if (!nameRegex.test(name)) {
+      return json({ error: "Name contains invalid characters" }, 400);
+    }
+
+    // Email validation
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
     if (!emailOk) {
       return json({ error: "Invalid email" }, 400);
     }
+    if (email.length > 255) {
+      return json({ error: "Email too long" }, 400);
+    }
+
+    // Phone validation (if provided)
+    if (phone && !/^[+\d\s()\-]{7,20}$/.test(phone)) {
+      return json({ error: "Invalid phone number" }, 400);
+    }
+
     if (message.length > 5000) {
       return json({ error: "Message too long" }, 400);
     }

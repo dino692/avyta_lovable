@@ -67,9 +67,20 @@ serve(async (req) => {
     return new Response("ok", { headers: corsHeaders });
   }
 
+  // Verify caller is authorized with service role key
+  const authHeader = req.headers.get("Authorization");
+  const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+  if (!authHeader || authHeader !== `Bearer ${serviceRoleKey}`) {
+    console.error("Unauthorized call to prerender-recache");
+    return new Response(JSON.stringify({ error: "Unauthorized" }), {
+      status: 401,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  }
+
   const token = Deno.env.get("PRERENDER_TOKEN");
   if (!token) {
-    return new Response(JSON.stringify({ error: "Missing PRERENDER_TOKEN" }), {
+    return new Response(JSON.stringify({ error: "Service configuration error" }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
