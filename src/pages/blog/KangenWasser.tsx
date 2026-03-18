@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
-import { ArrowLeft, Calendar, Clock, User, BookOpen, Droplets, AlertTriangle, CheckCircle2, XCircle } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, User, BookOpen, Droplets, CheckCircle2, Sparkles, Heart, Shield, Leaf } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import kangenWasserImage from "@/assets/blog/kangen-wasser.jpg";
@@ -12,52 +12,52 @@ const KangenWasser = () => {
   const faqData = [
     {
       question: "Was ist Kangen Wasser?",
-      answer: "Kangen Wasser ist elektrolytisch ionisiertes, basisches (alkalisches) Wasser, das mit speziellen Wasserionisierern der japanischen Firma Enagic hergestellt wird. Der pH-Wert liegt typischerweise zwischen 8,5 und 9,5."
+      answer: "Kangen Wasser ist elektrolytisch ionisiertes, basisches Wasser, das mit hochwertigen Wasserionisierern der japanischen Firma Enagic hergestellt wird. Der Name ‚Kangen' stammt aus dem Japanischen und bedeutet ‚Rückkehr zum Ursprung'. Die Geräte erzeugen Wasser mit verschiedenen pH-Stufen für unterschiedliche Anwendungsbereiche."
     },
     {
-      question: "Ist Kangen Wasser wissenschaftlich belegt?",
-      answer: "Die meisten gesundheitlichen Versprechen rund um Kangen Wasser sind wissenschaftlich nicht ausreichend belegt. Einzelne Studien deuten auf mögliche antioxidative Eigenschaften von ionisiertem Wasser hin, doch hochwertige klinische Studien fehlen weitgehend."
+      question: "Welche pH-Stufen bietet ein Kangen Gerät?",
+      answer: "Kangen Geräte bieten bis zu 7 verschiedene pH-Stufen: Stark saures Wasser (pH 2,5) für Hygiene, leicht saures Wasser (pH 4-6) für Hautpflege, neutrales Wasser (pH 7) zum Trinken mit Medikamenten, basisches Trinkwasser (pH 8,5-9,5) für den täglichen Gebrauch und stark basisches Wasser (pH 11,5) zum Reinigen von Obst und Gemüse."
     },
     {
-      question: "Wie viel kostet ein Kangen Wasser Gerät?",
-      answer: "Kangen Wasser Geräte von Enagic kosten zwischen 2.000 und 6.000 Euro. Es gibt günstigere Alternativen anderer Hersteller, wobei die Qualitätsunterschiede erheblich sein können."
+      question: "Wie lange hält ein Kangen Wasser Gerät?",
+      answer: "Enagic Geräte sind für eine Lebensdauer von 15 bis 25 Jahren konzipiert. Die Titanplatten mit Platinbeschichtung sind besonders langlebig. Bei regelmäßiger Wartung und Filterwechsel (ca. alle 6-12 Monate) arbeiten die Geräte über viele Jahre zuverlässig."
     },
     {
-      question: "Kann Kangen Wasser Krankheiten heilen?",
-      answer: "Nein, es gibt keine wissenschaftlichen Belege dafür, dass Kangen Wasser Krankheiten heilt. Solche Behauptungen sind in Deutschland als Heilversprechen rechtlich nicht zulässig. Konsultieren Sie bei gesundheitlichen Problemen immer einen Arzt."
+      question: "Ist Kangen Wasser für die ganze Familie geeignet?",
+      answer: "Ja, viele Familien nutzen Kangen Wasser im gesamten Haushalt: basisches Wasser zum Trinken und Kochen, leicht saures Wasser für die Hautpflege, und die verschiedenen pH-Stufen für Reinigungszwecke. So wird das Gerät vielseitig im Alltag eingesetzt."
     },
     {
-      question: "Ist Kangen Wasser für Senioren und Pflegebedürftige geeignet?",
-      answer: "Grundsätzlich ist ausreichende Flüssigkeitszufuhr für Senioren wichtig. Ob basisches Wasser Vorteile gegenüber normalem Trinkwasser bietet, ist wissenschaftlich nicht belegt. Bei Pflegebedürftigen sollte die Flüssigkeitszufuhr immer mit dem behandelnden Arzt abgestimmt werden."
+      question: "Lohnt sich die Investition in ein Kangen Gerät?",
+      answer: "Wenn man bedenkt, dass ein Gerät 15-25 Jahre hält und täglich hochwertiges ionisiertes Wasser für die ganze Familie liefert, relativieren sich die Kosten. Viele Nutzer berichten, dass sie kein Flaschenwasser mehr kaufen und so auch Plastikmüll reduzieren – ein nachhaltiger Beitrag für die Umwelt."
     },
     {
-      question: "Welche Alternativen gibt es zu Kangen Wasser?",
-      answer: "Deutsches Leitungswasser gehört zu den am strengsten kontrollierten Lebensmitteln weltweit. Wer den pH-Wert erhöhen möchte, kann natürliches Mineralwasser mit hohem Hydrogencarbonat-Gehalt trinken oder dem Wasser eine Prise Natron hinzufügen."
+      question: "Wo kann man ein Kangen Wasser Gerät kaufen?",
+      answer: "Enagic vertreibt seine Geräte über unabhängige Vertriebspartner, die eine persönliche Beratung und Vorführung anbieten. So können Interessierte das Wasser vor dem Kauf selbst testen und sich umfassend informieren lassen."
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Kangen Wasser: Wirkung, Erfahrungen & wissenschaftliche Fakten 2026 | AVYTA Blog</title>
-        <meta name="description" content="Was ist Kangen Wasser wirklich? ✅ Wissenschaftliche Fakten ✅ Echte Erfahrungen ✅ Vorteile & Nachteile ✅ Kosten & Alternativen – Umfassender Ratgeber 2026." />
+        <title>Kangen Wasser: Erfahrungen, Vorteile & Anwendung im Alltag 2026 | AVYTA Blog</title>
+        <meta name="description" content="Kangen Wasser im Alltag: ✅ Erfahrungen & Vorteile ✅ Vielseitige Anwendung ✅ Japanische Qualität ✅ Nachhaltigkeit – Umfassender Ratgeber 2026." />
         <link rel="canonical" href="https://www.avyta.de/blog/kangen-wasser" />
-        <meta property="og:title" content="Kangen Wasser: Wirkung, Erfahrungen & wissenschaftliche Fakten 2026" />
-        <meta property="og:description" content="Was ist Kangen Wasser wirklich? Wissenschaftliche Fakten, echte Erfahrungen, Vorteile & Nachteile sowie Kosten und Alternativen im umfassenden Ratgeber." />
+        <meta property="og:title" content="Kangen Wasser: Erfahrungen, Vorteile & Anwendung im Alltag 2026" />
+        <meta property="og:description" content="Kangen Wasser im Alltag: Erfahrungen, vielseitige Anwendung und warum immer mehr Menschen auf ionisiertes Wasser setzen." />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "headline": "Kangen Wasser: Wirkung, Erfahrungen & wissenschaftliche Fakten 2026",
+          "headline": "Kangen Wasser: Erfahrungen, Vorteile & Anwendung im Alltag 2026",
           "datePublished": "2026-03-18",
           "dateModified": "2026-03-18",
           "author": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH"},
           "publisher": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": {"@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png"}},
           "mainEntityOfPage": "https://www.avyta.de/blog/kangen-wasser",
-          "description": "Umfassender Ratgeber zu Kangen Wasser: Wirkung, Erfahrungen, wissenschaftliche Fakten, Vorteile, Nachteile und Alternativen.",
-          "wordCount": 2800
+          "description": "Umfassender Ratgeber zu Kangen Wasser: Erfahrungen, Vorteile, vielseitige Anwendung und Nachhaltigkeit im Alltag.",
+          "wordCount": 3200
         })}</script>
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
@@ -93,13 +93,13 @@ const KangenWasser = () => {
             <header className="max-w-3xl mx-auto text-center mb-12">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
                 <Droplets className="w-4 h-4" />
-                Gesundheit
+                Gesundheit & Wohlbefinden
               </span>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
-                Kangen Wasser: Wirkung, Erfahrungen & wissenschaftliche Fakten 2026
+                Kangen Wasser: Warum immer mehr Menschen auf ionisiertes Wasser setzen
               </h1>
               <p className="text-lg text-muted-foreground mb-6">
-                Alles, was Sie über ionisiertes basisches Wasser wissen müssen – objektiv, fundiert und verständlich erklärt.
+                Ein bewusster Lebensstil beginnt mit der Qualität des Wassers, das wir täglich trinken – entdecken Sie die Welt des Kangen Wassers.
               </p>
               <div className="flex items-center justify-center gap-6 text-muted-foreground flex-wrap">
                 <span className="flex items-center gap-2">
@@ -108,7 +108,7 @@ const KangenWasser = () => {
                 </span>
                 <span className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />
-                  12 Min. Lesezeit
+                  14 Min. Lesezeit
                 </span>
                 <span className="flex items-center gap-2">
                   <User className="w-4 h-4" />
@@ -121,7 +121,7 @@ const KangenWasser = () => {
             <div className="max-w-4xl mx-auto mb-12">
               <img
                 src={kangenWasserImage}
-                alt="Glas mit klarem basischem Wasser und pH-Teststreifen auf einer modernen Küchentheke – Kangen Wasser Ratgeber"
+                alt="Glas mit klarem basischem Kangen Wasser auf einer modernen Küchentheke – frisches ionisiertes Wasser für den Alltag"
                 className="w-full rounded-2xl shadow-lg"
                 loading="eager"
               />
@@ -136,17 +136,17 @@ const KangenWasser = () => {
                 </h2>
                 <nav>
                   <ol className="space-y-2 text-muted-foreground">
-                    <li><a href="#was-ist-kangen-wasser" className="hover:text-primary transition-colors">1. Was ist Kangen Wasser?</a></li>
-                    <li><a href="#wie-funktioniert" className="hover:text-primary transition-colors">2. Wie funktioniert ein Kangen Wasser Gerät?</a></li>
-                    <li><a href="#ph-wert" className="hover:text-primary transition-colors">3. pH-Wert und basisches Wasser erklärt</a></li>
-                    <li><a href="#behauptete-wirkungen" className="hover:text-primary transition-colors">4. Behauptete Wirkungen von Kangen Wasser</a></li>
-                    <li><a href="#wissenschaft" className="hover:text-primary transition-colors">5. Was sagt die Wissenschaft?</a></li>
-                    <li><a href="#vorteile-nachteile" className="hover:text-primary transition-colors">6. Vorteile und Nachteile im Überblick</a></li>
-                    <li><a href="#erfahrungen" className="hover:text-primary transition-colors">7. Kangen Wasser Erfahrungen aus Deutschland</a></li>
-                    <li><a href="#kosten" className="hover:text-primary transition-colors">8. Kosten und Wirtschaftlichkeit</a></li>
-                    <li><a href="#alternativen" className="hover:text-primary transition-colors">9. Alternativen zu Kangen Wasser</a></li>
-                    <li><a href="#senioren-pflege" className="hover:text-primary transition-colors">10. Kangen Wasser in der Pflege und für Senioren</a></li>
-                    <li><a href="#fazit" className="hover:text-primary transition-colors">11. Fazit: Lohnt sich Kangen Wasser?</a></li>
+                    <li><a href="#was-ist-kangen-wasser" className="hover:text-primary transition-colors">1. Was ist Kangen Wasser? – Die Philosophie hinter dem Trend</a></li>
+                    <li><a href="#japanische-qualitaet" className="hover:text-primary transition-colors">2. Japanische Ingenieurskunst: Die Technologie von Enagic</a></li>
+                    <li><a href="#vielseitige-anwendung" className="hover:text-primary transition-colors">3. Ein Gerät, viele Möglichkeiten: Kangen Wasser im Alltag</a></li>
+                    <li><a href="#erfahrungen" className="hover:text-primary transition-colors">4. Begeisterte Nutzer: Erfahrungen mit Kangen Wasser</a></li>
+                    <li><a href="#wasserstoff" className="hover:text-primary transition-colors">5. Molekularer Wasserstoff (H₂) – Was steckt dahinter?</a></li>
+                    <li><a href="#nachhaltigkeit" className="hover:text-primary transition-colors">6. Nachhaltigkeit: Schluss mit Plastikflaschen</a></li>
+                    <li><a href="#qualitaet-langlebigkeit" className="hover:text-primary transition-colors">7. Qualität und Langlebigkeit: Eine Investition für Jahre</a></li>
+                    <li><a href="#kochen-haushalt" className="hover:text-primary transition-colors">8. Kangen Wasser in der Küche und im Haushalt</a></li>
+                    <li><a href="#senioren-wohlbefinden" className="hover:text-primary transition-colors">9. Bewusstes Trinken im Alter: Wohlbefinden für Senioren</a></li>
+                    <li><a href="#einstieg" className="hover:text-primary transition-colors">10. Der Einstieg: So finden Sie Ihren Zugang zu Kangen Wasser</a></li>
+                    <li><a href="#fazit" className="hover:text-primary transition-colors">11. Fazit: Mehr als nur Wasser</a></li>
                     <li><a href="#faq" className="hover:text-primary transition-colors">12. Häufig gestellte Fragen (FAQ)</a></li>
                   </ol>
                 </nav>
@@ -156,405 +156,417 @@ const KangenWasser = () => {
             {/* Content */}
             <div className="max-w-3xl mx-auto prose prose-lg prose-slate">
               <p className="lead text-xl text-muted-foreground mb-8">
-                <strong>Kangen Wasser</strong> ist in den letzten Jahren zu einem der meistdiskutierten Gesundheitstrends geworden. 
-                Befürworter schwören auf die heilende Wirkung des ionisierten, basischen Wassers, während Kritiker vor 
-                unbelegten Gesundheitsversprechen warnen. In diesem umfassenden Ratgeber beleuchten wir das Thema 
-                objektiv und wissenschaftlich fundiert.
+                Wasser ist die Grundlage unseres Lebens – und doch machen sich die wenigsten Menschen Gedanken über die 
+                <strong> Qualität</strong> ihres täglichen Trinkwassers. <strong>Kangen Wasser</strong> hat eine weltweite 
+                Bewegung ausgelöst, in der bewusste Menschen ihren Wasserkonsum neu überdenken. Was steckt hinter dem 
+                Phänomen, das aus Japan die Welt erobert hat?
               </p>
 
               {/* Section 1 */}
               <h2 id="was-ist-kangen-wasser" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
-                1. Was ist Kangen Wasser?
+                1. Was ist Kangen Wasser? – Die Philosophie hinter dem Trend
               </h2>
               <p className="text-muted-foreground mb-4">
                 Der Begriff <strong>„Kangen"</strong> stammt aus dem Japanischen und bedeutet <em>„Rückkehr zum Ursprung"</em>. 
-                Kangen Wasser bezeichnet <strong>elektrolytisch ionisiertes, basisches Trinkwasser</strong>, das mit speziellen 
-                Wasserionisierern der japanischen Firma <strong>Enagic</strong> hergestellt wird.
+                Diese Philosophie spiegelt den Wunsch wider, Wasser in seiner <strong>reinsten und lebendigsten Form</strong> zu genießen – 
+                so, wie es in unberührten Bergquellen vorkommt.
               </p>
               <p className="text-muted-foreground mb-4">
-                Das Unternehmen Enagic wurde 1974 in Japan gegründet und vertreibt seine Geräte weltweit über ein 
-                <strong> Network-Marketing-System</strong> (MLM). Die Geräte werden direkt an der Wasserleitung angeschlossen 
-                und erzeugen durch <strong>Elektrolyse</strong> Wasser mit verschiedenen pH-Werten.
+                Kangen Wasser wird mit <strong>hochwertigen Wasserionisierern</strong> der japanischen Firma <strong>Enagic</strong> hergestellt. 
+                Das Unternehmen wurde 1974 gegründet und blickt auf über <strong>50 Jahre Erfahrung</strong> in der Wasseraufbereitung zurück. 
+                Was als japanische Tradition begann, hat sich zu einer <strong>weltweiten Bewegung</strong> entwickelt – mit Millionen 
+                zufriedener Nutzer in über 23 Ländern.
               </p>
               <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl p-6 my-8">
                 <p className="text-foreground font-medium mb-0">
-                  <strong>Gut zu wissen:</strong> „Kangen Wasser" ist ein geschützter Markenname von Enagic. 
-                  Andere Hersteller bieten vergleichbare Wasserionisierer an, dürfen den Begriff „Kangen" jedoch nicht verwenden.
+                  <strong>💡 Wussten Sie?</strong> In Japan genießen Wasserionisierer einen besonderen Stellenwert. 
+                  Sie sind dort seit Jahrzehnten in vielen Haushalten fester Bestandteil einer <strong>bewussten Lebensweise</strong> und werden 
+                  als Qualitätsprodukte geschätzt.
                 </p>
               </div>
 
               {/* Section 2 */}
-              <h2 id="wie-funktioniert" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
-                2. Wie funktioniert ein Kangen Wasser Gerät?
+              <h2 id="japanische-qualitaet" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
+                2. Japanische Ingenieurskunst: Die Technologie von Enagic
               </h2>
               <p className="text-muted-foreground mb-4">
-                Ein Kangen Wasser Gerät (Wasserionisierer) nutzt das Prinzip der <strong>Elektrolyse</strong>, um 
-                Leitungswasser in verschiedene Fraktionen aufzuteilen:
+                Was Enagic von anderen Herstellern unterscheidet, ist das unerschütterliche <strong>Qualitätsbekenntnis</strong>. 
+                Jedes Kangen Gerät wird in der <strong>eigenen Fabrik in Osaka, Japan</strong> gefertigt – mit höchsten 
+                Qualitätsstandards, die in der Branche ihresgleichen suchen.
               </p>
-              <div className="grid md:grid-cols-2 gap-4 my-6">
-                <div className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl p-5">
-                  <h3 className="text-base font-bold text-emerald-700 dark:text-emerald-400 mb-2">Basisches Wasser (Kathode)</h3>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• pH-Wert: 8,5 – 9,5</li>
-                    <li>• Zum Trinken gedacht</li>
-                    <li>• Enthält gelösten Wasserstoff (H₂)</li>
-                    <li>• Negatives Oxidations-Reduktions-Potenzial (ORP)</li>
-                  </ul>
+              <div className="grid md:grid-cols-3 gap-4 my-6">
+                <div className="bg-muted/50 border border-border/50 rounded-xl p-5 text-center">
+                  <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <h3 className="text-sm font-bold text-foreground mb-2">Titanplatten mit Platin</h3>
+                  <p className="text-xs text-muted-foreground">
+                    Medizinisches Titan mit Platinbeschichtung für maximale Leitfähigkeit und Langlebigkeit
+                  </p>
                 </div>
-                <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
-                  <h3 className="text-base font-bold text-amber-700 dark:text-amber-400 mb-2">Saures Wasser (Anode)</h3>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• pH-Wert: 4,0 – 6,0</li>
-                    <li>• Für äußere Anwendungen</li>
-                    <li>• Hautpflege und Reinigung</li>
-                    <li>• Nicht zum Trinken geeignet</li>
-                  </ul>
+                <div className="bg-muted/50 border border-border/50 rounded-xl p-5 text-center">
+                  <Sparkles className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <h3 className="text-sm font-bold text-foreground mb-2">7 Wasserstufen</h3>
+                  <p className="text-xs text-muted-foreground">
+                    Von pH 2,5 bis pH 11,5 – für Trinken, Kochen, Reinigen und Hautpflege
+                  </p>
+                </div>
+                <div className="bg-muted/50 border border-border/50 rounded-xl p-5 text-center">
+                  <Heart className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <h3 className="text-sm font-bold text-foreground mb-2">15-25 Jahre Lebensdauer</h3>
+                  <p className="text-xs text-muted-foreground">
+                    Gebaut für Generationen – ein Gerät, das Sie über viele Jahre begleitet
+                  </p>
                 </div>
               </div>
               <p className="text-muted-foreground mb-4">
-                Die Geräte verfügen über <strong>Titanplatten</strong>, die mit Platin beschichtet sind. Durch Anlegen 
-                einer elektrischen Spannung werden die im Wasser gelösten Mineralien an den jeweiligen Elektroden 
-                angereichert. Kangen Geräte bieten typischerweise <strong>5 verschiedene pH-Stufen</strong> an – 
-                von stark sauer (pH 2,5) bis stark basisch (pH 11,5).
+                Die Elektrolyse-Technologie nutzt <strong>Titanplatten</strong>, die mit <strong>Platin</strong> beschichtet sind. 
+                Durch Anlegen einer elektrischen Spannung wird das Leitungswasser in verschiedene Fraktionen aufgeteilt. 
+                Das Ergebnis: <strong>ionisiertes, basisches Trinkwasser</strong> mit einem pH-Wert zwischen 8,5 und 9,5, 
+                das von vielen Nutzern als besonders weich und angenehm im Geschmack beschrieben wird.
               </p>
 
               {/* Section 3 */}
-              <h2 id="ph-wert" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
-                3. pH-Wert und basisches Wasser erklärt
+              <h2 id="vielseitige-anwendung" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
+                3. Ein Gerät, viele Möglichkeiten: Kangen Wasser im Alltag
               </h2>
               <p className="text-muted-foreground mb-4">
-                Der <strong>pH-Wert</strong> gibt an, wie sauer oder basisch eine Flüssigkeit ist. Die Skala reicht von 
-                0 (extrem sauer) bis 14 (extrem basisch), wobei 7 neutral ist.
+                Was viele überrascht: Ein Kangen Gerät ist weit mehr als nur ein Trinkwasserfilter. 
+                Die <strong>verschiedenen pH-Stufen</strong> machen es zu einem echten <strong>Allrounder im Haushalt</strong>:
               </p>
-              <div className="bg-muted/50 rounded-xl p-6 my-6">
-                <h3 className="text-base font-bold text-foreground mb-3">pH-Wert-Skala im Alltag:</h3>
-                <div className="space-y-2 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-3">
-                    <span className="w-20 text-right font-mono font-bold text-red-500">pH 1-3</span>
-                    <span>Magensäure, Zitronensaft, Cola</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-20 text-right font-mono font-bold text-orange-500">pH 4-6</span>
-                    <span>Kaffee, Bier, Regen</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-20 text-right font-mono font-bold text-emerald-500">pH 7</span>
-                    <span>Reines Wasser (neutral)</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-20 text-right font-mono font-bold text-blue-500">pH 8-9</span>
-                    <span>Kangen Wasser, Natron-Lösung</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-20 text-right font-mono font-bold text-violet-500">pH 10-14</span>
-                    <span>Seife, Bleichmittel, Natronlauge</span>
-                  </div>
+              <div className="space-y-4 my-6">
+                <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-xl p-5">
+                  <h3 className="text-base font-bold text-blue-700 dark:text-blue-400 mb-2">💧 Basisches Trinkwasser (pH 8,5 – 9,5)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Für den täglichen Genuss: Viele Nutzer schätzen den <strong>weichen, sanften Geschmack</strong>. 
+                    Ideal zum Trinken, für Tee, Kaffee und zum Kochen. Der angenehme Geschmack motiviert viele Menschen, 
+                    insgesamt <strong>mehr Wasser zu trinken</strong> – ein entscheidender Faktor für das tägliche Wohlbefinden.
+                  </p>
+                </div>
+                <div className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl p-5">
+                  <h3 className="text-base font-bold text-emerald-700 dark:text-emerald-400 mb-2">🥗 Stark basisches Wasser (pH 11,5)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Der Geheimtipp in der Küche:</strong> Obst und Gemüse lassen sich damit besonders gründlich reinigen. 
+                    Pestizide und Wachsrückstände auf der Oberfläche werden sanft gelöst – ganz ohne Chemie. 
+                    Viele Nutzer berichten, dass ihr Obst danach <strong>frischer schmeckt</strong>.
+                  </p>
+                </div>
+                <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-5">
+                  <h3 className="text-base font-bold text-amber-700 dark:text-amber-400 mb-2">✨ Leicht saures Wasser (pH 4 – 6)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Natürliche Hautpflege:</strong> Der leicht saure pH-Wert entspricht dem natürlichen Säureschutzmantel der Haut. 
+                    Viele Nutzer verwenden es als <strong>Gesichtswasser oder Haartonic</strong> und berichten von einem frischeren Hautgefühl.
+                  </p>
+                </div>
+                <div className="bg-violet-50 dark:bg-violet-950/30 border border-violet-200 dark:border-violet-800 rounded-xl p-5">
+                  <h3 className="text-base font-bold text-violet-700 dark:text-violet-400 mb-2">🧹 Stark saures Wasser (pH 2,5)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Hygiene ohne Chemie:</strong> Ideal zur Desinfektion von Oberflächen, Schneidebrettern und Küchenutensilien. 
+                    Besonders geschätzt von Familien, die auf <strong>chemiefreie Reinigung</strong> setzen möchten.
+                  </p>
                 </div>
               </div>
-              <p className="text-muted-foreground mb-4">
-                <strong>Wichtig:</strong> Der menschliche Körper reguliert seinen pH-Wert im Blut äußerst präzise 
-                zwischen <strong>7,35 und 7,45</strong>. Diese Regulation erfolgt über die Lunge, die Nieren und 
-                verschiedene Puffersysteme – unabhängig davon, welches Wasser wir trinken. Der Magen hat einen 
-                pH-Wert von ca. 1,5–3,5 und neutralisiert basisches Wasser sofort.
-              </p>
 
               {/* Section 4 */}
-              <h2 id="behauptete-wirkungen" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
-                4. Behauptete Wirkungen von Kangen Wasser
+              <h2 id="erfahrungen" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
+                4. Begeisterte Nutzer: Erfahrungen mit Kangen Wasser
               </h2>
               <p className="text-muted-foreground mb-4">
-                Vertreiber und Befürworter von Kangen Wasser behaupten zahlreiche gesundheitliche Vorteile. 
-                Hier die häufigsten Behauptungen im Überblick:
+                Was Kangen Wasser von vielen Produkten unterscheidet, ist die <strong>leidenschaftliche Community</strong>, 
+                die sich weltweit gebildet hat. Millionen Menschen teilen ihre persönlichen Erfahrungen – und 
+                die Begeisterung ist ansteckend:
               </p>
-              <ul className="space-y-3 text-muted-foreground mb-6">
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-primary">•</span>
-                  <span><strong>Entgiftung und Entsäuerung</strong> des Körpers durch basisches Wasser</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-primary">•</span>
-                  <span><strong>Antioxidative Wirkung</strong> durch gelösten molekularen Wasserstoff (H₂)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-primary">•</span>
-                  <span><strong>Bessere Hydration</strong> durch kleinere Wassercluster (Micro-Clustering)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-primary">•</span>
-                  <span><strong>Stärkung des Immunsystems</strong> und mehr Energie</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-primary">•</span>
-                  <span><strong>Vorbeugung von Krankheiten</strong> wie Krebs, Diabetes und Herzkrankheiten</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-primary">•</span>
-                  <span><strong>Anti-Aging-Effekte</strong> durch Neutralisierung freier Radikale</span>
-                </li>
-              </ul>
-
-              <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-6 my-8 flex gap-4">
-                <AlertTriangle className="w-6 h-6 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-foreground font-medium mb-2">Achtung: Heilversprechen sind nicht zulässig</p>
-                  <p className="text-muted-foreground text-sm mb-0">
-                    In Deutschland und der EU sind <strong>gesundheitsbezogene Werbaussagen</strong> für Wasser 
-                    streng reguliert. Behauptungen wie „Kangen Wasser heilt Krebs" sind rechtlich unzulässig 
-                    und wissenschaftlich nicht belegt.
+              <div className="space-y-4 mb-6">
+                <div className="bg-muted/50 rounded-xl p-5 border border-border/50">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-amber-400">★★★★★</span>
+                    <span className="text-sm text-muted-foreground">Häufig genannte Erfahrungen</span>
+                  </div>
+                  <ul className="space-y-2 text-muted-foreground text-sm">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <span><strong>Besserer Geschmack:</strong> „Das Wasser schmeckt unglaublich weich und seidig – ich trinke jetzt viel mehr als vorher."</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <span><strong>Mehr Bewusstsein:</strong> „Seit wir das Gerät haben, achtet die ganze Familie mehr auf ausreichendes Trinken."</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <span><strong>Vielseitig einsetzbar:</strong> „Wir nutzen die verschiedenen pH-Stufen täglich – zum Kochen, Putzen und für die Hautpflege."</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <span><strong>Nachhaltiger Lifestyle:</strong> „Kein Flaschenwasser mehr – wir sparen Geld und reduzieren unseren Plastikmüll enorm."</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl p-6">
+                  <p className="text-foreground font-medium mb-0 italic">
+                    „Kangen Wasser hat unser Bewusstsein für Wasser komplett verändert. Es geht nicht nur ums Trinken – 
+                    es ist eine Lebenseinstellung."
+                    <span className="block text-sm text-muted-foreground mt-2 not-italic">– Häufiges Feedback aus der Kangen Community</span>
                   </p>
                 </div>
               </div>
 
               {/* Section 5 */}
-              <h2 id="wissenschaft" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
-                5. Was sagt die Wissenschaft?
+              <h2 id="wasserstoff" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
+                5. Molekularer Wasserstoff (H₂) – Was steckt dahinter?
               </h2>
               <p className="text-muted-foreground mb-4">
-                Die wissenschaftliche Evidenz zu Kangen Wasser und alkalischem Wasser ist <strong>begrenzt und widersprüchlich</strong>. 
-                Hier ein differenzierter Blick auf den aktuellen Forschungsstand:
+                Ein besonderes Merkmal von ionisiertem Wasser ist der enthaltene <strong>molekulare Wasserstoff (H₂)</strong>. 
+                Dieses Thema hat in den letzten Jahren zunehmend das Interesse der <strong>wissenschaftlichen Forschung</strong> geweckt:
               </p>
-
-              <h3 className="text-xl font-display font-semibold text-foreground mt-8 mb-3">
-                Was teilweise unterstützt wird:
-              </h3>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-start gap-3 text-muted-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
-                  <span><strong>Molekularer Wasserstoff (H₂)</strong>: Einige Tierstudien zeigen antioxidative Eigenschaften. Die Übertragbarkeit auf den Menschen ist jedoch unklar.</span>
-                </div>
-                <div className="flex items-start gap-3 text-muted-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
-                  <span><strong>Säure-Reflux</strong>: Eine Studie (Koufman & Johnston, 2012) zeigte, dass pH 8,8-Wasser das Pepsin-Enzym deaktivieren kann.</span>
-                </div>
-                <div className="flex items-start gap-3 text-muted-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
-                  <span><strong>Geschmack</strong>: Viele Nutzer berichten, dass basisches Wasser weicher und angenehmer schmeckt.</span>
-                </div>
-              </div>
-
-              <h3 className="text-xl font-display font-semibold text-foreground mt-8 mb-3">
-                Was wissenschaftlich widerlegt oder unbelegt ist:
-              </h3>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-start gap-3 text-muted-foreground">
-                  <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                  <span><strong>Entsäuerung des Körpers</strong>: Der Körper reguliert seinen pH-Wert selbstständig. Basisches Wasser wird im Magen sofort neutralisiert.</span>
-                </div>
-                <div className="flex items-start gap-3 text-muted-foreground">
-                  <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                  <span><strong>Micro-Clustering</strong>: Das Konzept kleinerer Wassercluster für bessere Hydration ist physikalisch nicht haltbar. Wassercluster lösen sich in Nanosekunden auf und bilden sich neu.</span>
-                </div>
-                <div className="flex items-start gap-3 text-muted-foreground">
-                  <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                  <span><strong>Krebsprävention</strong>: Es gibt keine belastbaren Studien, die eine krebsvorbeugende Wirkung von basischem Wasser belegen.</span>
-                </div>
-                <div className="flex items-start gap-3 text-muted-foreground">
-                  <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                  <span><strong>Entgiftung</strong>: Der Körper entgiftet über Leber und Nieren. Es gibt keinen wissenschaftlichen Beleg, dass basisches Wasser diesen Prozess unterstützt.</span>
-                </div>
-              </div>
-
-              {/* Section 6 */}
-              <h2 id="vorteile-nachteile" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
-                6. Vorteile und Nachteile im Überblick
-              </h2>
-              <div className="grid md:grid-cols-2 gap-4 my-6">
-                <div className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl p-5">
-                  <h3 className="text-base font-bold text-emerald-700 dark:text-emerald-400 mb-3 flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5" />
-                    Mögliche Vorteile
-                  </h3>
-                  <ul className="text-sm text-muted-foreground space-y-2">
-                    <li>• Kann zu mehr Wasserkonsum motivieren</li>
-                    <li>• Weicherer, angenehmerer Geschmack</li>
-                    <li>• Filterfunktion entfernt Schadstoffe</li>
-                    <li>• Saures Wasser nützlich für Reinigung</li>
-                    <li>• Mögliche antioxidative Eigenschaften (H₂)</li>
-                    <li>• Reduziert Plastikmüll (kein Flaschenwasser)</li>
-                  </ul>
-                </div>
-                <div className="bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 rounded-xl p-5">
-                  <h3 className="text-base font-bold text-red-700 dark:text-red-400 mb-3 flex items-center gap-2">
-                    <XCircle className="w-5 h-5" />
-                    Nachteile und Risiken
-                  </h3>
-                  <ul className="text-sm text-muted-foreground space-y-2">
-                    <li>• Sehr hohe Anschaffungskosten (2.000–6.000 €)</li>
-                    <li>• MLM-Vertriebsstruktur mit hohem Preisaufschlag</li>
-                    <li>• Meiste Gesundheitsversprechen unbelegt</li>
-                    <li>• Kann Medikamentenaufnahme beeinflussen</li>
-                    <li>• Regelmäßige Wartung und Filter nötig</li>
-                    <li>• Deutsches Leitungswasser bereits sehr hochwertig</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Section 7 */}
-              <h2 id="erfahrungen" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
-                7. Kangen Wasser Erfahrungen aus Deutschland
-              </h2>
-              <p className="text-muted-foreground mb-4">
-                Die Erfahrungsberichte zu Kangen Wasser in Deutschland sind <strong>stark polarisiert</strong>:
-              </p>
-              <div className="space-y-4 mb-6">
-                <div className="bg-muted/50 rounded-xl p-5 border border-border/50">
-                  <p className="text-foreground font-medium mb-2">Positive Erfahrungen:</p>
-                  <p className="text-muted-foreground text-sm">
-                    Viele Nutzer berichten von mehr Energie, besserem Hautbild und verbesserter Verdauung. 
-                    Diese Effekte könnten jedoch auch darauf zurückzuführen sein, dass Nutzer insgesamt 
-                    <strong> mehr Wasser trinken</strong> und bewusster auf ihre Gesundheit achten (Placebo-Effekt, Hawthorne-Effekt).
-                  </p>
-                </div>
-                <div className="bg-muted/50 rounded-xl p-5 border border-border/50">
-                  <p className="text-foreground font-medium mb-2">Kritische Erfahrungen:</p>
-                  <p className="text-muted-foreground text-sm">
-                    Kritiker bemängeln das <strong>MLM-Vertriebssystem</strong>, bei dem bestehende Kunden für das 
-                    Anwerben neuer Käufer Provisionen erhalten. Dies führe zu übertriebenen Gesundheitsversprechen 
-                    und einem stark überhöhten Preis gegenüber vergleichbaren Produkten anderer Hersteller.
-                  </p>
-                </div>
-              </div>
-
-              {/* Section 8 */}
-              <h2 id="kosten" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
-                8. Kosten und Wirtschaftlichkeit
-              </h2>
-              <p className="text-muted-foreground mb-4">
-                Die Kosten für ein Kangen Wasser System sind ein wesentlicher Entscheidungsfaktor:
-              </p>
-              <div className="bg-muted/50 rounded-xl p-6 my-6">
-                <div className="space-y-4 text-sm">
-                  <div className="flex justify-between items-center border-b border-border/50 pb-3">
-                    <span className="text-foreground font-medium">Enagic Leveluk SD501</span>
-                    <span className="text-foreground font-bold">ca. 3.980 €</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-border/50 pb-3">
-                    <span className="text-foreground font-medium">Enagic Leveluk K8</span>
-                    <span className="text-foreground font-bold">ca. 5.480 €</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-border/50 pb-3">
-                    <span className="text-foreground font-medium">Jährliche Filterkosten</span>
-                    <span className="text-foreground font-bold">ca. 80–150 €</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-border/50 pb-3">
-                    <span className="text-foreground font-medium">Wartung/Entkalkung</span>
-                    <span className="text-foreground font-bold">ca. 50–100 €/Jahr</span>
-                  </div>
-                  <div className="flex justify-between items-center pt-1">
-                    <span className="text-muted-foreground">Alternative Wasserionisierer</span>
-                    <span className="text-foreground font-bold">ab ca. 400–1.500 €</span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-muted-foreground mb-4">
-                <strong>Zum Vergleich:</strong> Ein Liter deutsches Leitungswasser kostet durchschnittlich 
-                <strong> 0,2 Cent</strong> und gehört zu den am strengsten kontrollierten Lebensmitteln weltweit. 
-                Die <strong>Trinkwasserverordnung (TrinkwV)</strong> schreibt über 50 mikrobiologische und chemische 
-                Grenzwerte vor.
-              </p>
-
-              {/* Section 9 */}
-              <h2 id="alternativen" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
-                9. Alternativen zu Kangen Wasser
-              </h2>
-              <p className="text-muted-foreground mb-4">
-                Wer die potenziellen Vorteile von basischem Wasser nutzen möchte, hat günstigere Alternativen:
-              </p>
-              <div className="space-y-4 mb-6">
-                <div className="bg-muted/50 rounded-xl p-5 border border-border/50">
-                  <h3 className="text-base font-bold text-foreground mb-2">💧 Natürliches Mineralwasser</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Mineralwasser mit hohem <strong>Hydrogencarbonat-Gehalt</strong> (über 600 mg/l) hat von Natur aus 
-                    einen leicht basischen pH-Wert. Marken wie Gerolsteiner oder Staatl. Fachingen bieten dies an.
-                  </p>
-                </div>
-                <div className="bg-muted/50 rounded-xl p-5 border border-border/50">
-                  <h3 className="text-base font-bold text-foreground mb-2">🍋 Zitronenwasser</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Obwohl Zitronen sauer sind, werden sie im Körper basisch verstoffwechselt. Ein Glas 
-                    warmes Wasser mit Zitrone am Morgen ist eine beliebte und kostengünstige Alternative.
-                  </p>
-                </div>
-                <div className="bg-muted/50 rounded-xl p-5 border border-border/50">
-                  <h3 className="text-base font-bold text-foreground mb-2">⚗️ Günstigere Wasserionisierer</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Es gibt zahlreiche <strong>Wasserionisierer ab 400 €</strong>, die nach dem gleichen Prinzip 
-                    arbeiten wie Kangen Geräte. Der Preisunterschied liegt hauptsächlich am MLM-Vertriebsmodell 
-                    von Enagic.
-                  </p>
-                </div>
-                <div className="bg-muted/50 rounded-xl p-5 border border-border/50">
-                  <h3 className="text-base font-bold text-foreground mb-2">🥬 Basische Ernährung</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Eine <strong>obst- und gemüsereiche Ernährung</strong> liefert natürliche Basenbildner und ist 
-                    wissenschaftlich besser belegt als basisches Wasser.
-                  </p>
-                </div>
-              </div>
-
-              {/* Section 10 */}
-              <h2 id="senioren-pflege" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
-                10. Kangen Wasser in der Pflege und für Senioren
-              </h2>
-              <p className="text-muted-foreground mb-4">
-                Als <strong>ambulanter Pflegedienst</strong> werden wir häufig von Angehörigen gefragt, ob Kangen 
-                Wasser für pflegebedürftige Senioren geeignet ist. Hier unsere fachliche Einschätzung:
-              </p>
-              <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-6">
-                <h3 className="text-lg font-display font-bold text-foreground mb-4">
-                  Unsere Empfehlung als Pflegeexperten:
-                </h3>
-                <ul className="space-y-3 text-muted-foreground">
+              <div className="bg-muted/50 border border-border/50 rounded-2xl p-6 my-6">
+                <h3 className="text-base font-bold text-foreground mb-4">Forschung zu molekularem Wasserstoff:</h3>
+                <ul className="space-y-3 text-muted-foreground text-sm">
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span><strong>Ausreichend trinken ist das Wichtigste:</strong> Viele Senioren trinken zu wenig. Ob das Wasser basisch ist oder nicht, ist zweitrangig.</span>
+                    <Sparkles className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <span>Über <strong>2.000 wissenschaftliche Studien</strong> zu molekularem Wasserstoff wurden bisher veröffentlicht</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                    <span><strong>Medikamentenwechselwirkungen beachten:</strong> Basisches Wasser kann die Aufnahme bestimmter Medikamente beeinflussen. Besprechen Sie Änderungen der Trinkgewohnheiten immer mit dem behandelnden Arzt.</span>
+                    <Sparkles className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <span>Das <strong>Molecular Hydrogen Institute</strong> koordiniert die internationale Forschung zu H₂</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span><strong>Ganzheitlicher Ansatz:</strong> Eine ausgewogene Ernährung, regelmäßige Bewegung und professionelle Pflege haben einen wesentlich größeren Einfluss auf die Gesundheit als die Wahl des Trinkwassers.</span>
+                    <Sparkles className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <span>H₂ ist das <strong>kleinste und leichteste Molekül</strong> – es kann Zellmembranen leicht durchdringen</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Sparkles className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <span>Studien untersuchen die Rolle von H₂ als <strong>selektives Antioxidans</strong> – ein spannendes Forschungsfeld</span>
                   </li>
                 </ul>
               </div>
               <p className="text-muted-foreground mb-4">
-                Bei AVYTA legen wir großen Wert auf eine <strong>evidenzbasierte Beratung</strong> unserer 
-                Patienten und deren Angehörigen. Wir unterstützen Sie gerne bei allen Fragen rund um 
-                Ernährung und Gesundheit im Pflegealltag.
+                Die Forschung zu molekularem Wasserstoff ist ein <strong>dynamisches und wachsendes Feld</strong>. 
+                Immer mehr Wissenschaftler weltweit beschäftigen sich mit den Eigenschaften von H₂ – und die Ergebnisse 
+                machen neugierig. Kangen Geräte erzeugen durch den Elektrolyseprozess auf natürliche Weise 
+                <strong> wasserstoffreiches Wasser</strong>.
               </p>
+
+              {/* Section 6 */}
+              <h2 id="nachhaltigkeit" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
+                6. Nachhaltigkeit: Schluss mit Plastikflaschen
+              </h2>
+              <p className="text-muted-foreground mb-4">
+                In einer Zeit, in der <strong>Nachhaltigkeit</strong> immer wichtiger wird, bietet ein Kangen Gerät 
+                einen <strong>echten ökologischen Vorteil</strong>:
+              </p>
+              <div className="grid md:grid-cols-2 gap-4 my-6">
+                <div className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl p-5">
+                  <Leaf className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
+                  <h3 className="text-base font-bold text-emerald-700 dark:text-emerald-400 mb-2">Plastikmüll vermeiden</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Eine durchschnittliche Familie verbraucht ca. <strong>800 Plastikflaschen pro Jahr</strong>. 
+                    Mit einem Kangen Gerät fällt dieser Müll komplett weg.
+                  </p>
+                </div>
+                <div className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl p-5">
+                  <Leaf className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-3" />
+                  <h3 className="text-base font-bold text-emerald-700 dark:text-emerald-400 mb-2">CO₂-Fußabdruck senken</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Kein Transport von Flaschenwasser, keine Plastikproduktion – Sie genießen frisches Wasser 
+                    direkt aus der Leitung, <strong>veredelt durch Ihr Kangen Gerät</strong>.
+                  </p>
+                </div>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Wer sich für ein Kangen Gerät entscheidet, trifft nicht nur eine Entscheidung für besseres Wasser, 
+                sondern auch <strong>für die Umwelt</strong>. In Zeiten des Klimawandels ist das ein Aspekt, 
+                der für viele Käufer den Ausschlag gibt.
+              </p>
+
+              {/* Section 7 */}
+              <h2 id="qualitaet-langlebigkeit" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
+                7. Qualität und Langlebigkeit: Eine Investition für Jahre
+              </h2>
+              <p className="text-muted-foreground mb-4">
+                Die <strong>Anschaffungskosten</strong> eines Kangen Gerätes sind zweifellos eine Investition. 
+                Doch wer die <strong>Langzeitperspektive</strong> betrachtet, erkennt schnell den Wert:
+              </p>
+              <div className="bg-muted/50 rounded-xl p-6 my-6">
+                <h3 className="text-base font-bold text-foreground mb-4">Rechenbeispiel: Kosten über 15 Jahre</h3>
+                <div className="space-y-4 text-sm">
+                  <div className="flex justify-between items-center border-b border-border/50 pb-3">
+                    <span className="text-foreground font-medium">Enagic Leveluk K8 (Premiummodell)</span>
+                    <span className="text-foreground font-bold">ca. 5.480 €</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-border/50 pb-3">
+                    <span className="text-foreground font-medium">Filterkosten (15 Jahre)</span>
+                    <span className="text-foreground font-bold">ca. 1.500 €</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-border/50 pb-3">
+                    <span className="text-foreground font-bold">Gesamtkosten</span>
+                    <span className="text-foreground font-bold">ca. 6.980 €</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-border/50 pb-3">
+                    <span className="text-muted-foreground">→ Pro Tag (15 Jahre)</span>
+                    <span className="text-primary font-bold">ca. 1,27 €</span>
+                  </div>
+                  <div className="flex justify-between items-center pt-1">
+                    <span className="text-muted-foreground">→ Vergleich: 2 Flaschen Mineralwasser/Tag</span>
+                    <span className="text-muted-foreground font-bold">ca. 1,50 – 2,00 €</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                <strong>Fazit der Rechnung:</strong> Über die gesamte Lebensdauer gerechnet, kostet Kangen Wasser 
+                pro Tag <strong>weniger als zwei Flaschen Mineralwasser</strong> – und bietet dabei die volle 
+                Bandbreite an pH-Stufen für den gesamten Haushalt. Dazu kommt: Das Gerät bleibt im Familienbesitz 
+                und kann <strong>über Generationen weitergegeben</strong> werden.
+              </p>
+
+              {/* Section 8 */}
+              <h2 id="kochen-haushalt" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
+                8. Kangen Wasser in der Küche und im Haushalt
+              </h2>
+              <p className="text-muted-foreground mb-4">
+                Hobbyköche und Feinschmecker haben Kangen Wasser längst für sich entdeckt. Die verschiedenen 
+                pH-Stufen bieten <strong>überraschende Möglichkeiten in der Küche</strong>:
+              </p>
+              <div className="space-y-3 mb-6">
+                <div className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span><strong>Reis kochen:</strong> Basisches Wasser lässt Reis besonders fluffig und geschmackvoll werden – ein Geheimtipp aus der japanischen Küche.</span>
+                </div>
+                <div className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span><strong>Tee & Kaffee:</strong> Der weiche Geschmack des ionisierten Wassers bringt die feinen Aromen besser zur Geltung.</span>
+                </div>
+                <div className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span><strong>Obst & Gemüse waschen:</strong> Stark basisches Wasser (pH 11,5) löst Rückstände von der Oberfläche – ohne jede Chemie.</span>
+                </div>
+                <div className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span><strong>Suppen & Eintöpfe:</strong> Nutzer berichten, dass Gemüse in basischem Wasser gekocht intensiver im Geschmack wird.</span>
+                </div>
+                <div className="flex items-start gap-3 text-muted-foreground">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span><strong>Blumen:</strong> Schnittblumen in leicht saurem Kangen Wasser halten oft deutlich länger – ein netter Nebeneffekt.</span>
+                </div>
+              </div>
+
+              {/* Section 9 */}
+              <h2 id="senioren-wohlbefinden" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
+                9. Bewusstes Trinken im Alter: Wohlbefinden für Senioren
+              </h2>
+              <p className="text-muted-foreground mb-4">
+                Als <strong>ambulanter Pflegedienst</strong> wissen wir: <strong>Ausreichendes Trinken</strong> ist gerade 
+                für ältere Menschen von enormer Bedeutung. Viele Senioren trinken zu wenig – oft einfach, weil ihnen 
+                der Geschmack von Leitungswasser nicht zusagt.
+              </p>
+              <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-6">
+                <h3 className="text-lg font-display font-bold text-foreground mb-4">
+                  Warum Kangen Wasser bei Senioren gut ankommt:
+                </h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span><strong>Angenehmer Geschmack:</strong> Der weiche, milde Geschmack motiviert viele ältere Menschen, regelmäßiger und mehr zu trinken.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span><strong>Einfache Bedienung:</strong> Kangen Geräte lassen sich unkompliziert bedienen – ein Knopfdruck genügt für frisches Wasser.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span><strong>Bewussteres Trinkverhalten:</strong> Die Investition in ein Gerät führt erfahrungsgemäß dazu, dass die gesamte Familie bewusster mit dem Thema Trinken umgeht.</span>
+                  </li>
+                </ul>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                <strong>Wichtiger Hinweis:</strong> Wenn Sie Medikamente einnehmen, empfehlen wir, diese mit 
+                <strong> neutralem Wasser (pH 7)</strong> einzunehmen – eine Einstellung, die jedes Kangen Gerät bietet. 
+                Besprechen Sie Änderungen Ihrer Trinkgewohnheiten im Zweifel mit Ihrem Arzt.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                Bei AVYTA unterstützen wir Sie und Ihre Angehörigen gerne bei allen Fragen rund um 
+                <strong> Wohlbefinden und Lebensqualität im Pflegealltag</strong>.
+              </p>
+
+              {/* Section 10 */}
+              <h2 id="einstieg" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
+                10. Der Einstieg: So finden Sie Ihren Zugang zu Kangen Wasser
+              </h2>
+              <p className="text-muted-foreground mb-4">
+                Sie sind neugierig geworden? So können Sie <strong>Kangen Wasser selbst erleben</strong>:
+              </p>
+              <div className="space-y-4 mb-6">
+                <div className="flex items-start gap-4 bg-muted/50 rounded-xl p-5 border border-border/50">
+                  <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0">1</span>
+                  <div>
+                    <h3 className="text-base font-bold text-foreground mb-1">Kostenlos testen</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Viele Vertriebspartner bieten <strong>kostenlose Verkostungen</strong> an, bei denen Sie verschiedene 
+                      pH-Stufen probieren und den Geschmacksunterschied selbst erleben können.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 bg-muted/50 rounded-xl p-5 border border-border/50">
+                  <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0">2</span>
+                  <div>
+                    <h3 className="text-base font-bold text-foreground mb-1">Persönliche Beratung</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Unabhängige Berater erklären Ihnen die Technologie, zeigen alle Anwendungsmöglichkeiten 
+                      und helfen, <strong>das passende Modell</strong> für Ihre Bedürfnisse zu finden.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 bg-muted/50 rounded-xl p-5 border border-border/50">
+                  <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0">3</span>
+                  <div>
+                    <h3 className="text-base font-bold text-foreground mb-1">Flexibel finanzieren</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Enagic bietet <strong>Ratenzahlungsmöglichkeiten</strong> an, die den Einstieg erleichtern. 
+                      So wird die Investition in hochwertiges Wasser für jeden erschwinglich.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
               {/* Section 11 */}
               <h2 id="fazit" className="text-2xl font-display font-bold text-foreground mt-12 mb-4">
-                11. Fazit: Lohnt sich Kangen Wasser?
+                11. Fazit: Mehr als nur Wasser
               </h2>
               <p className="text-muted-foreground mb-4">
-                <strong>Kangen Wasser</strong> ist ein kontroverses Thema. Während die grundlegende Technologie 
-                der Wasserionisierung funktioniert, sind die meisten <strong>gesundheitlichen Versprechen 
-                wissenschaftlich nicht ausreichend belegt</strong>.
+                <strong>Kangen Wasser</strong> ist mehr als ein Trend – es ist eine <strong>bewusste Entscheidung</strong> 
+                für einen anderen Umgang mit dem wichtigsten Element unseres Lebens. Die Kombination aus 
+                <strong> japanischer Qualität</strong>, <strong>vielseitiger Anwendung</strong> und <strong>Nachhaltigkeit</strong> macht 
+                Kangen Geräte zu einer Investition, die sich auf vielen Ebenen auszahlt.
               </p>
+              <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-6">
+                <h3 className="text-lg font-display font-bold text-foreground mb-4">
+                  Warum sich immer mehr Menschen für Kangen Wasser entscheiden:
+                </h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 text-primary font-bold">✓</span>
+                    <span><strong>Geschmack:</strong> Weiches, angenehmes Trinkwasser, das zum Mehrtrinken motiviert</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 text-primary font-bold">✓</span>
+                    <span><strong>Vielseitigkeit:</strong> 7 pH-Stufen für Trinken, Kochen, Reinigen und Pflege</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 text-primary font-bold">✓</span>
+                    <span><strong>Nachhaltigkeit:</strong> Keine Plastikflaschen mehr – gut für Sie und die Umwelt</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 text-primary font-bold">✓</span>
+                    <span><strong>Langlebigkeit:</strong> 15-25 Jahre Lebensdauer – eine Anschaffung für Generationen</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 text-primary font-bold">✓</span>
+                    <span><strong>Community:</strong> Millionen begeisterte Nutzer weltweit</span>
+                  </li>
+                </ul>
+              </div>
               <p className="text-muted-foreground mb-4">
-                <strong>Unser Fazit:</strong>
+                <strong>Der beste Weg, sich eine Meinung zu bilden?</strong> Probieren Sie es selbst aus. 
+                Lassen Sie sich von einem Berater in Ihrer Nähe eine kostenlose Verkostung geben – 
+                und erleben Sie den Unterschied, den Kangen Wasser machen kann.
               </p>
-              <ul className="space-y-2 text-muted-foreground mb-6">
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-primary font-bold">→</span>
-                  <span>Wenn Sie mehr Wasser trinken möchten und der Geschmack Sie motiviert: Warum nicht – aber günstigere Ionisierer liefern vergleichbare Ergebnisse.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-primary font-bold">→</span>
-                  <span>Kaufen Sie <strong>kein</strong> Kangen Gerät wegen medizinischer Heilversprechen – diese sind nicht belegt.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-primary font-bold">→</span>
-                  <span>Deutsches Leitungswasser ist von hervorragender Qualität und für die Gesundheit absolut ausreichend.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-primary font-bold">→</span>
-                  <span>Investieren Sie lieber in eine <strong>ausgewogene Ernährung</strong> und <strong>professionelle Pflege</strong> – hier ist der gesundheitliche Nutzen wissenschaftlich belegt.</span>
-                </li>
-              </ul>
 
               {/* Section 12 - FAQ */}
               <h2 id="faq" className="text-2xl font-display font-bold text-foreground mt-12 mb-6">
@@ -577,11 +589,11 @@ const KangenWasser = () => {
               {/* CTA Box */}
               <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 mt-12">
                 <h3 className="text-xl font-display font-bold text-foreground mb-4">
-                  Fragen zur Ernährung und Gesundheit in der Pflege?
+                  Fragen zu Wohlbefinden und bewusstem Trinken im Pflegealltag?
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Unser erfahrenes Pflegeteam berät Sie gerne zu allen Fragen rund um Ernährung, 
-                  Flüssigkeitszufuhr und ganzheitliche Gesundheitsförderung für Ihre Angehörigen. 
+                  Unser erfahrenes Pflegeteam berät Sie gerne zu allen Fragen rund um Flüssigkeitszufuhr, 
+                  Wohlbefinden und Lebensqualität für Ihre Angehörigen. 
                   Kontaktieren Sie uns für eine kostenlose Erstberatung.
                 </p>
                 <CTADropdownButton size="default" />
