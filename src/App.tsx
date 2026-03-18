@@ -50,6 +50,7 @@ const VerhinderungspflegeNutzen = lazy(() => import("./pages/blog/Verhinderungsp
 const PflegegeldTabelle = lazy(() => import("./pages/blog/PflegegeldTabelle"));
 const EntlastungsbetragNutzen = lazy(() => import("./pages/blog/EntlastungsbetragNutzen"));
 const KombinationsleistungPflege = lazy(() => import("./pages/blog/KombinationsleistungPflege"));
+const KangenWasser = lazy(() => import("./pages/blog/KangenWasser"));
 const Jobs = lazy(() => import("./pages/Jobs"));
 const PflegeJobs = lazy(() => import("./pages/jobs/PflegeJobs"));
 const Kontakt = lazy(() => import("./pages/Kontakt"));
