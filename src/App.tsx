@@ -50,6 +50,7 @@ const VerhinderungspflegeNutzen = lazy(() => import("./pages/blog/Verhinderungsp
 const PflegegeldTabelle = lazy(() => import("./pages/blog/PflegegeldTabelle"));
 const EntlastungsbetragNutzen = lazy(() => import("./pages/blog/EntlastungsbetragNutzen"));
 const KombinationsleistungPflege = lazy(() => import("./pages/blog/KombinationsleistungPflege"));
+const KangenWasser = lazy(() => import("./pages/blog/KangenWasser"));
 const Jobs = lazy(() => import("./pages/Jobs"));
 const PflegeJobs = lazy(() => import("./pages/jobs/PflegeJobs"));
 const Kontakt = lazy(() => import("./pages/Kontakt"));
@@ -145,6 +146,7 @@ const App = () => (
               <Route path="/blog/pflegegeld-tabelle-2025" element={<PflegegeldTabelle />} />
               <Route path="/blog/entlastungsbetrag-nutzen" element={<EntlastungsbetragNutzen />} />
               <Route path="/blog/kombinationsleistung-pflege" element={<KombinationsleistungPflege />} />
+              <Route path="/blog/kangen-wasser" element={<KangenWasser />} />
               <Route path="/karriere" element={<Karriere />} />
               <Route path="/karriere/uebersicht" element={<Jobs />} />
               <Route path="/karriere/pflege-jobs" element={<PflegeJobs />} />
