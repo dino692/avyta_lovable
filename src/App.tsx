@@ -165,11 +165,6 @@ const App = () => (
               <Route path="/leistungskatalog" element={<Leistungskatalog />} />
               <Route path="/ratgeber" element={<Ratgeber />} />
               {/* Legacy redirects */}
-              <Route path="/leistungen/intensivpflege" element={<Navigate to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" replace />} />
-              <Route path="/leistungen/pflegeberatung" element={<Navigate to="/leistungen/pflegeberatung-frankfurt" replace />} />
-              <Route path="/leistungen/verhinderungspflege" element={<Navigate to="/leistungen/verhinderungspflege-frankfurt" replace />} />
-              <Route path="/blog/pflegegeld-tabelle" element={<Navigate to="/blog/pflegegeld-tabelle-2025" replace />} />
-              {/* Legacy redirects */}
               <Route path="/ambulanter-pflegedienst" element={<Navigate to="/leistungen" replace />} />
               <Route path="/ueber-uns/galerie/weihnachtsfeier-2023" element={<Navigate to="/ueber-uns" replace />} />
               <Route path="/blog/gesundheit/ganzheitliche-gesundheitsstrategien-fuer-pflegebeduerftige-zu-hause" element={<Navigate to="/blog" replace />} />
