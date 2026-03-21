@@ -62,7 +62,6 @@ const socialLinks = [
   { name: "LinkedIn", Icon: Linkedin, href: "https://www.linkedin.com/company/avyta-pflegegesellschaft-mbh" },
   { name: "YouTube", Icon: Youtube, href: "https://www.youtube.com/channel/UCXLJTV59W08VKwsPwh9x1VQ" },
   { name: "Google Maps", Icon: GoogleMapsIcon, href: "https://google.com/maps/place//data=!4m3!3m2!1s0x47bd0ea26295cf3d:0x419b1bced25993f1!12e1?source=g.page.m._&laa=merchant-review-solicitation" },
-  { name: "WhatsApp", Icon: WhatsAppIcon, href: "https://wa.me/496915391405" },
 ];
 
 const Footer = () => {
@@ -79,7 +78,7 @@ const Footer = () => {
               <img 
                 src="/images/avyta-logo.png" 
                 alt="AVYTA Pflegegesellschaft mbH" 
-                className="h-8 sm:h-10 w-auto max-w-[200px] sm:max-w-none brightness-0 invert object-contain"
+                className="h-8 sm:h-10 w-auto max-w-[200px] sm:max-w-none object-contain"
                 width="334"
                 height="40"
                 loading="lazy"
