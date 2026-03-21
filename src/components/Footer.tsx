@@ -76,9 +76,9 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-6">
             <Link to="/" className="flex items-center gap-2">
               <img 
-                src="/images/avyta-logo.png" 
+                src="/images/avyta-logo-transparent.png" 
                 alt="AVYTA Pflegegesellschaft mbH" 
-                className="h-8 sm:h-10 w-auto max-w-[200px] sm:max-w-none object-contain brightness-0 invert"
+                className="h-8 sm:h-10 w-auto max-w-[200px] sm:max-w-none object-contain"
                 width="334"
                 height="40"
                 loading="lazy"
