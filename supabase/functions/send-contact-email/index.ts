@@ -1,6 +1,6 @@
 import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 
-const allowedOrigins = ["https://www.avyta.de", "https://avyta.de", "https://avyta.lovable.app"];
+const allowedOrigins = ["https://www.avyta.de", "https://avyta.de", "https://avyta.lovable.app", "https://id-preview--bc7ab53a-d66a-4836-b0fe-667da1cf5a73.lovable.app"];
 
 function getCorsHeaders(req: Request) {
   const origin = req.headers.get("Origin") || "";
