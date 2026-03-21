@@ -79,7 +79,7 @@ const Footer = () => {
               <img 
                 src="/images/avyta-logo.png" 
                 alt="AVYTA Pflegegesellschaft mbH" 
-                className="h-10 brightness-0 invert"
+                className="h-8 sm:h-10 w-auto max-w-[200px] sm:max-w-none brightness-0 invert object-contain"
                 width="334"
                 height="40"
                 loading="lazy"
