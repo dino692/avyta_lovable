@@ -403,24 +403,24 @@ const BetreutesWohnen = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <CTADropdownButton size="lg" />
                 <Button variant="outline" size="lg" className="border-primary/30" asChild>
-                  <a href="tel:+4969907099840">
+                  <a href="tel:+496915391405">
                     <Phone className="mr-2 h-5 w-5" />
-                    069 907 099 840
+                    069 / 15 39 14 05
                   </a>
                 </Button>
               </div>
               <div className="flex flex-wrap justify-center gap-6 mt-8">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Star className="h-4 w-4 text-primary" />
-                  <span>4,8 Sterne bei Google</span>
+                  <span>5,0 Sterne bei Google</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Users className="h-4 w-4 text-primary" />
-                  <span>Über 500 betreute Kunden</span>
+                  <span>Über 2.500 betreute Kunden</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Heart className="h-4 w-4 text-primary" />
-                  <span>Seit 2018 in Frankfurt</span>
+                  <span>Seit 2013 in Frankfurt</span>
                 </div>
               </div>
             </div>
