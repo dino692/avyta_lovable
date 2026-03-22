@@ -407,14 +407,8 @@ const DemenzWG = () => {
                   Wir beraten Sie kostenlos und unverbindlich zu allen Möglichkeiten der ambulant betreuten 
                   Demenz-Wohngemeinschaft. Rufen Sie uns an oder nutzen Sie unser Kontaktformular.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex justify-center">
                   <CTADropdownButton />
-                  <Button variant="outline" size="lg" asChild>
-                    <a href="tel:+496915391405">
-                      <Phone className="w-5 h-5 mr-2" />
-                      069 / 15 39 14 05
-                    </a>
-                  </Button>
                 </div>
               </div>
             </div>
