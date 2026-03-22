@@ -37,7 +37,7 @@ const footerLinks = {
   company: {
     title: "Unternehmen",
     links: [
-      { name: "Über uns", href: "/ueber-uns" },
+      { name: "Team", href: "/ueber-uns" },
       { name: "Leistungen", href: "/leistungen" },
       { name: "Standorte", href: "/standorte/frankfurt" },
       { name: "Karriere", href: "/karriere" },
