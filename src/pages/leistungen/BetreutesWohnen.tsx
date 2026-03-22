@@ -130,8 +130,11 @@ const BetreutesWohnen = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 bg-gradient-to-br from-primary/10 via-secondary/30 to-background overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/hero-slide-2.jpg')] bg-cover bg-center opacity-10" />
+        <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+          <div className="absolute inset-0">
+            <img src={betreutesWohnenHeroImg} alt="Seniorin liest entspannt in ihrem Zuhause – Betreutes Wohnen Frankfurt" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+          </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl">
               <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
@@ -163,7 +166,7 @@ const BetreutesWohnen = () => {
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>24/7 Notrufsystem</span>
+                  <span>LISA Überwachungssystem</span>
                 </div>
               </div>
             </div>
