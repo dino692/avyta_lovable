@@ -306,7 +306,7 @@ const BetreutesWohnen = () => {
                   {[
                     { title: "Pflegegeld", desc: "Ab Pflegegrad 2 erhalten Sie monatliches Pflegegeld für die häusliche Pflege" },
                     { title: "Pflegesachleistungen", desc: "Professionelle Pflegeleistungen werden direkt mit der Kasse abgerechnet" },
-                    { title: "Entlastungsbetrag", desc: "125 € monatlich für Betreuungs- und Entlastungsangebote ab Pflegegrad 1" },
+                    { title: "Entlastungsbetrag", desc: "131 € monatlich für Betreuungs- und Entlastungsangebote ab Pflegegrad 1" },
                     { title: "Verhinderungspflege", desc: "Bis zu 1.612 € jährlich für Ersatzpflege bei Verhinderung der Hauptpflegeperson" },
                   ].map((f, i) => (
                     <Card key={i} className="border-border/50">

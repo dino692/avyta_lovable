@@ -247,7 +247,7 @@ const DemenzWG = () => {
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
                     Bewohner einer ambulant betreuten Demenz-Wohngemeinschaft in Frankfurt haben Anspruch auf den 
                     <strong> Wohngruppenzuschlag von 214 € monatlich</strong> (Stand 2026). Zusätzlich stehen je nach Pflegegrad 
-                    Sachleistungen, Pflegegeld und der Entlastungsbetrag von 125 € monatlich zur Verfügung. 
+                    Sachleistungen, Pflegegeld und der Entlastungsbetrag von 131 € monatlich zur Verfügung. 
                     Wir übernehmen die komplette Antragstellung für Sie.
                   </p>
                   <CTADropdownButton />
@@ -260,7 +260,7 @@ const DemenzWG = () => {
                   {[
                     { label: "Pflegesachleistungen", desc: "Bis zu 2.200 €/Monat (PG 5)", icon: FileCheck },
                     { label: "Wohngruppenzuschlag", desc: "214 €/Monat zusätzlich", icon: Home },
-                    { label: "Entlastungsbetrag", desc: "125 €/Monat für Betreuung", icon: Heart },
+                    { label: "Entlastungsbetrag", desc: "131 €/Monat für Betreuung", icon: Heart },
                     { label: "Kostenlose Pflegeberatung", desc: "Wir helfen bei der Antragstellung", icon: Users },
                   ].map((item, i) => (
                     <Card key={i} variant="elevated">
