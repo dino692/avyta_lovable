@@ -142,18 +142,6 @@ const HeroSection = () => {
               style={{ animationDelay: '0.4s' }}
             >
               <CTADropdownButton className="w-full sm:w-auto" />
-
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="w-full sm:w-auto group border-2 hover:bg-primary/5 text-sm md:text-base"
-                asChild
-              >
-                <a href="https://www.avyta.de/images/avyta_infobroschuere.pdf" target="_blank" rel="noopener noreferrer">
-                  <FileText className="w-4 h-4 md:w-5 md:h-5 mr-2 transition-transform group-hover:-translate-y-0.5" />
-                  Infobroschüre herunterladen
-                </a>
-              </Button>
             </div>
 
             {/* Stats */}
