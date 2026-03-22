@@ -286,6 +286,60 @@ const BetreutesWohnen = () => {
           </div>
         </section>
 
+        {/* LISA Überwachungssystem */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-10 items-center">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
+                    <Eye className="h-4 w-4 text-primary" />
+                    <span className="text-sm font-semibold text-primary uppercase tracking-wider">Innovative Technologie</span>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
+                    LISA Überwachungssystem – Sicherheit rund um die Uhr
+                  </h2>
+                  <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+                    <p>
+                      Als einer der wenigen Pflegedienste in Frankfurt bieten wir das <strong>LISA Assistenzsystem</strong> an – ein intelligentes Überwachungssystem für das betreute Wohnen, das Notfälle automatisch erkennt und Hilfe ruft.
+                    </p>
+                    <p>
+                      LISA erkennt ungewöhnliches Verhalten wie ausbleibende Bewegung, Stürze oder ungewöhnliche Aktivitätsmuster und alarmiert automatisch die Pflegekraft oder den Rettungsdienst – <strong>ganz ohne Kameras</strong> und bei voller Wahrung der Privatsphäre.
+                    </p>
+                  </div>
+                  <ul className="mt-6 space-y-3">
+                    {[
+                      "Automatische Sturzerkennung & Notruf",
+                      "Aktivitätsüberwachung ohne Kameras",
+                      "Kosten werden von der Pflegekasse übernommen (ab Pflegegrad 1)",
+                      "Einfache Installation ohne Umbaumaßnahmen",
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src="/images/hero-slide-2.jpg" 
+                    alt="Betreutes Wohnen mit LISA Überwachungssystem in Frankfurt" 
+                    className="w-full h-80 lg:h-[28rem] object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+                    <div className="flex items-center gap-2 text-white">
+                      <Shield className="h-5 w-5" />
+                      <span className="font-display font-semibold">24/7 Sicherheit mit LISA</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Kosten & Finanzierung */}
         <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
