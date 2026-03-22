@@ -87,7 +87,7 @@ const kategorien = [
   {
     title: "Entlastungsleistungen §45b SGB XI",
     img: demenzImg,
-    desc: "Zusätzliche Betreuungs- und Entlastungsleistungen für Pflegebedürftige aller Pflegegrade – finanziert über den monatlichen Entlastungsbetrag von 125 € pro Monat.",
+    desc: "Zusätzliche Betreuungs- und Entlastungsleistungen für Pflegebedürftige aller Pflegegrade – finanziert über den monatlichen Entlastungsbetrag von 131 € pro Monat.",
     leistungen: [
       { nr: "X1", name: "Haushaltsführung – 5 Min. Takt", punkte: 50, preis: 2.86 },
       { nr: "X2", name: "Haushaltsführung – 15 Min. Takt", punkte: 150, preis: 8.57 },

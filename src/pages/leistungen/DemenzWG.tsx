@@ -260,7 +260,7 @@ const DemenzWG = () => {
                   {[
                     { label: "Pflegesachleistungen", desc: "Bis zu 2.200 €/Monat (PG 5)", icon: FileCheck },
                     { label: "Wohngruppenzuschlag", desc: "214 €/Monat zusätzlich", icon: Home },
-                    { label: "Entlastungsbetrag", desc: "125 €/Monat für Betreuung", icon: Heart },
+                    { label: "Entlastungsbetrag", desc: "131 €/Monat für Betreuung", icon: Heart },
                     { label: "Kostenlose Pflegeberatung", desc: "Wir helfen bei der Antragstellung", icon: Users },
                   ].map((item, i) => (
                     <Card key={i} variant="elevated">
