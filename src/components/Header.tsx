@@ -74,7 +74,7 @@ const blogCategories = [
 
 const navLinks = [
   { name: "Start", href: "/" },
-  { name: "Über uns", href: "/ueber-uns" },
+  { name: "Team", href: "/ueber-uns" },
   { name: "Karriere", href: "/karriere" },
   { name: "Blog", href: "/blog" },
   { name: "Kontakt", href: "/#contact" },
