@@ -132,7 +132,7 @@ const KombinationsleistungPflege = () => {
                     </tr>
                     <tr className="hover:bg-muted/50 transition-colors">
                       <td className="px-3 md:px-6 py-4 font-medium">Pflegegrad 5</td>
-                      <td className="px-3 md:px-6 py-4 text-right">2.200 €</td>
+                      <td className="px-3 md:px-6 py-4 text-right">2.299 €</td>
                       <td className="px-3 md:px-6 py-4 text-right">947 €</td>
                     </tr>
                   </tbody>

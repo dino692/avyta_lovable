@@ -363,7 +363,7 @@ const Broschuere = () => {
                 { g: "PG 2", a: "761€" },
                 { g: "PG 3", a: "1.432€" },
                 { g: "PG 4", a: "1.778€" },
-                { g: "PG 5", a: "2.200€" },
+                { g: "PG 5", a: "2.299€" },
               ].map((p, i) => (
                 <div key={i} className="text-center bg-gradient-to-b from-primary/[0.06] to-primary/[0.02] rounded-lg p-1.5 border border-primary/10">
                   <div className="text-[7px] font-bold text-primary uppercase tracking-wider">{p.g}</div>

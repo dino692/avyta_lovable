@@ -115,9 +115,9 @@ const VerhinderungspflegeNutzen = () => {
 
               <h2 className="text-2xl font-display font-bold text-foreground mt-12 mb-4">Wie hoch ist die Leistung?</h2>
               <p className="text-muted-foreground mb-6">
-                Die Pflegekasse zahlt bis zu 1.612 Euro pro Kalenderjahr für Verhinderungspflege. 
-                Zusätzlich können bis zu 806 Euro aus dem Budget der Kurzzeitpflege umgewandelt werden – 
-                das ergibt insgesamt bis zu 2.418 Euro.
+                Seit Juli 2025 gilt das neue flexible Pflegebudget: Verhinderungspflege und Kurzzeitpflege 
+                werden zu einem gemeinsamen Budget von bis zu 3.539 Euro pro Kalenderjahr zusammengelegt. 
+                So können Sie die Mittel flexibel nach Ihrem Bedarf einsetzen.
               </p>
 
               <h2 className="text-2xl font-display font-bold text-foreground mt-12 mb-4">Stundenweise Verhinderungspflege</h2>

@@ -258,8 +258,8 @@ const DemenzWG = () => {
                     Finanzielle Unterstützung im Überblick
                   </h3>
                   {[
-                    { label: "Pflegesachleistungen", desc: "Bis zu 2.200 €/Monat (PG 5)", icon: FileCheck },
-                    { label: "Wohngruppenzuschlag", desc: "214 €/Monat zusätzlich", icon: Home },
+                    { label: "Pflegesachleistungen", desc: "Bis zu 2.299 €/Monat (PG 5)", icon: FileCheck },
+                    { label: "Wohngruppenzuschlag", desc: "224 €/Monat zusätzlich", icon: Home },
                     { label: "Entlastungsbetrag", desc: "131 €/Monat für Betreuung", icon: Heart },
                     { label: "Kostenlose Pflegeberatung", desc: "Wir helfen bei der Antragstellung", icon: Users },
                   ].map((item, i) => (
