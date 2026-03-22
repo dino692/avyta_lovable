@@ -147,14 +147,8 @@ const BetreutesWohnen = () => {
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl leading-relaxed">
                 Selbstbestimmt leben – mit der Sicherheit professioneller Pflege. AVYTA bietet betreutes Wohnen in Frankfurt am Main und Bad Vilbel: individuelle Betreuung, flexible Pflegeleistungen und ein Zuhause, das Ihnen gehört.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex">
                 <CTADropdownButton size="lg" />
-                <Button variant="outline" size="lg" className="border-primary/30 hover:bg-primary/5" asChild>
-                  <Link to="/leistungen">
-                    Alle Leistungen
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
               </div>
 
               <div className="flex flex-wrap gap-6 mt-10">
