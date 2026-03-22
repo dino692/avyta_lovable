@@ -4,7 +4,8 @@ import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, Home, Users, FileCheck, Clock, Heart, Shield, Phone, MapPin, Star, Building2, Utensils, Accessibility, Flower2, HandHelping } from "lucide-react";
+import { CheckCircle, ArrowRight, Home, Users, FileCheck, Clock, Heart, Shield, Phone, MapPin, Star, Building2, Utensils, Accessibility, Flower2, HandHelping, Eye } from "lucide-react";
+import betreutesWohnenHeroImg from "@/assets/leistungen/betreutes-wohnen-hero.jpg";
 import { Link } from "react-router-dom";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import {
@@ -129,8 +130,11 @@ const BetreutesWohnen = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 bg-gradient-to-br from-primary/10 via-secondary/30 to-background overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/hero-slide-2.jpg')] bg-cover bg-center opacity-10" />
+        <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+          <div className="absolute inset-0">
+            <img src={betreutesWohnenHeroImg} alt="Seniorin liest entspannt in ihrem Zuhause – Betreutes Wohnen Frankfurt" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+          </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl">
               <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
@@ -162,7 +166,7 @@ const BetreutesWohnen = () => {
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>24/7 Notrufsystem</span>
+                  <span>LISA Überwachungssystem</span>
                 </div>
               </div>
             </div>
@@ -277,6 +281,60 @@ const BetreutesWohnen = () => {
                 <p>
                   Auch bei höheren Pflegegraden (4 und 5) kann betreutes Wohnen in Kombination mit unserer <Link to="/leistungen/24-stunden-pflege" className="text-primary hover:underline">24-Stunden-Pflege</Link> eine Alternative zum Pflegeheim sein. Unsere <Link to="/leistungen/pflegeberatung-frankfurt" className="text-primary hover:underline">Pflegeberatung in Frankfurt</Link> hilft Ihnen, die beste Lösung zu finden.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* LISA Überwachungssystem */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-10 items-center">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
+                    <Eye className="h-4 w-4 text-primary" />
+                    <span className="text-sm font-semibold text-primary uppercase tracking-wider">Innovative Technologie</span>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
+                    LISA Überwachungssystem – Sicherheit rund um die Uhr
+                  </h2>
+                  <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+                    <p>
+                      Als einer der wenigen Pflegedienste in Frankfurt bieten wir das <strong>LISA Assistenzsystem</strong> an – ein intelligentes Überwachungssystem für das betreute Wohnen, das Notfälle automatisch erkennt und Hilfe ruft.
+                    </p>
+                    <p>
+                      LISA erkennt ungewöhnliches Verhalten wie ausbleibende Bewegung, Stürze oder ungewöhnliche Aktivitätsmuster und alarmiert automatisch die Pflegekraft oder den Rettungsdienst – <strong>ganz ohne Kameras</strong> und bei voller Wahrung der Privatsphäre.
+                    </p>
+                  </div>
+                  <ul className="mt-6 space-y-3">
+                    {[
+                      "Automatische Sturzerkennung & Notruf",
+                      "Aktivitätsüberwachung ohne Kameras",
+                      "Kosten werden von der Pflegekasse übernommen (ab Pflegegrad 1)",
+                      "Einfache Installation ohne Umbaumaßnahmen",
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src="/images/hero-slide-2.jpg" 
+                    alt="Betreutes Wohnen mit LISA Überwachungssystem in Frankfurt" 
+                    className="w-full h-80 lg:h-[28rem] object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+                    <div className="flex items-center gap-2 text-white">
+                      <Shield className="h-5 w-5" />
+                      <span className="font-display font-semibold">24/7 Sicherheit mit LISA</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
