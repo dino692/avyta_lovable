@@ -91,8 +91,8 @@ const VerhinderungspflegeNutzen = () => {
                   <Euro className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <div className="text-2xl font-display font-bold text-primary">Bis zu 1.612 €</div>
-                  <div className="text-muted-foreground">jährlich für Verhinderungspflege</div>
+                  <div className="text-2xl font-display font-bold text-primary">Bis zu 3.539 €</div>
+                  <div className="text-muted-foreground">jährlich für Verhinderungspflege (flexibles Budget)</div>
                 </div>
               </div>
 
