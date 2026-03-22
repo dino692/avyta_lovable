@@ -55,7 +55,7 @@ const angebote = [
 const faqs = [
   {
     question: "Was kostet ein Platz in einer Demenz WG in Frankfurt?",
-    answer: "Die Kosten für eine Demenz WG in Frankfurt setzen sich aus Miete, Betreuungspauschale und individuellen Pflegeleistungen zusammen. Bei vorliegendem Pflegegrad übernimmt die Pflegekasse einen Großteil der Kosten. Zusätzlich gibt es den Wohngruppenzuschlag von 214 € monatlich. Wir beraten Sie kostenlos und unverbindlich zu allen Finanzierungsmöglichkeiten Ihrer Demenz-Wohngemeinschaft."
+    answer: "Die Kosten für eine Demenz WG in Frankfurt setzen sich aus Miete, Betreuungspauschale und individuellen Pflegeleistungen zusammen. Bei vorliegendem Pflegegrad übernimmt die Pflegekasse einen Großteil der Kosten. Zusätzlich gibt es den Wohngruppenzuschlag von 224 € monatlich. Wir beraten Sie kostenlos und unverbindlich zu allen Finanzierungsmöglichkeiten Ihrer Demenz-Wohngemeinschaft."
   },
   {
     question: "Welcher Pflegegrad ist für eine Demenz WG erforderlich?",
