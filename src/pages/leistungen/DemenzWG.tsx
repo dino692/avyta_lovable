@@ -55,7 +55,7 @@ const angebote = [
 const faqs = [
   {
     question: "Was kostet ein Platz in einer Demenz WG in Frankfurt?",
-    answer: "Die Kosten für eine Demenz WG in Frankfurt setzen sich aus Miete, Betreuungspauschale und individuellen Pflegeleistungen zusammen. Bei vorliegendem Pflegegrad übernimmt die Pflegekasse einen Großteil der Kosten. Zusätzlich gibt es den Wohngruppenzuschlag von 214 € monatlich. Wir beraten Sie kostenlos und unverbindlich zu allen Finanzierungsmöglichkeiten Ihrer Demenz-Wohngemeinschaft."
+    answer: "Die Kosten für eine Demenz WG in Frankfurt setzen sich aus Miete, Betreuungspauschale und individuellen Pflegeleistungen zusammen. Bei vorliegendem Pflegegrad übernimmt die Pflegekasse einen Großteil der Kosten. Zusätzlich gibt es den Wohngruppenzuschlag von 224 € monatlich. Wir beraten Sie kostenlos und unverbindlich zu allen Finanzierungsmöglichkeiten Ihrer Demenz-Wohngemeinschaft."
   },
   {
     question: "Welcher Pflegegrad ist für eine Demenz WG erforderlich?",
@@ -246,7 +246,7 @@ const DemenzWG = () => {
                   </p>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
                     Bewohner einer ambulant betreuten Demenz-Wohngemeinschaft in Frankfurt haben Anspruch auf den 
-                    <strong> Wohngruppenzuschlag von 214 € monatlich</strong> (Stand 2026). Zusätzlich stehen je nach Pflegegrad 
+                    <strong> Wohngruppenzuschlag von 224 € monatlich</strong> (Stand 2026). Zusätzlich stehen je nach Pflegegrad 
                     Sachleistungen, Pflegegeld und der Entlastungsbetrag von 131 € monatlich zur Verfügung. 
                     Wir übernehmen die komplette Antragstellung für Sie.
                   </p>
@@ -258,8 +258,8 @@ const DemenzWG = () => {
                     Finanzielle Unterstützung im Überblick
                   </h3>
                   {[
-                    { label: "Pflegesachleistungen", desc: "Bis zu 2.200 €/Monat (PG 5)", icon: FileCheck },
-                    { label: "Wohngruppenzuschlag", desc: "214 €/Monat zusätzlich", icon: Home },
+                    { label: "Pflegesachleistungen", desc: "Bis zu 2.299 €/Monat (PG 5)", icon: FileCheck },
+                    { label: "Wohngruppenzuschlag", desc: "224 €/Monat zusätzlich", icon: Home },
                     { label: "Entlastungsbetrag", desc: "131 €/Monat für Betreuung", icon: Heart },
                     { label: "Kostenlose Pflegeberatung", desc: "Wir helfen bei der Antragstellung", icon: Users },
                   ].map((item, i) => (

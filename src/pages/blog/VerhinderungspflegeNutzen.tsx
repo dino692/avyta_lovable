@@ -12,10 +12,10 @@ const VerhinderungspflegeNutzen = () => {
     <>
       <Helmet>
         <title>Verhinderungspflege richtig nutzen | AVYTA Blog</title>
-        <meta name="description" content="So nutzen Sie die Verhinderungspflege optimal. Bis zu 1.612 Euro jährlich für Entlastung pflegender Angehöriger." />
+        <meta name="description" content="So nutzen Sie die Verhinderungspflege optimal. Bis zu 3.539 Euro jährlich (flexibles Budget ab 07/2025) für Entlastung pflegender Angehöriger." />
         <link rel="canonical" href="https://www.avyta.de/blog/verhinderungspflege-nutzen" />
         <meta property="og:title" content="Verhinderungspflege richtig nutzen | AVYTA Blog" />
-        <meta property="og:description" content="So nutzen Sie die Verhinderungspflege optimal. Bis zu 1.612 Euro jährlich für Entlastung pflegender Angehöriger." />
+        <meta property="og:description" content="So nutzen Sie die Verhinderungspflege optimal. Bis zu 3.539 Euro jährlich (flexibles Budget ab 07/2025) für Entlastung pflegender Angehöriger." />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{JSON.stringify({
@@ -91,8 +91,8 @@ const VerhinderungspflegeNutzen = () => {
                   <Euro className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <div className="text-2xl font-display font-bold text-primary">Bis zu 1.612 €</div>
-                  <div className="text-muted-foreground">jährlich für Verhinderungspflege</div>
+                  <div className="text-2xl font-display font-bold text-primary">Bis zu 3.539 €</div>
+                  <div className="text-muted-foreground">jährlich für Verhinderungspflege (flexibles Budget)</div>
                 </div>
               </div>
 
@@ -115,9 +115,9 @@ const VerhinderungspflegeNutzen = () => {
 
               <h2 className="text-2xl font-display font-bold text-foreground mt-12 mb-4">Wie hoch ist die Leistung?</h2>
               <p className="text-muted-foreground mb-6">
-                Die Pflegekasse zahlt bis zu 1.612 Euro pro Kalenderjahr für Verhinderungspflege. 
-                Zusätzlich können bis zu 806 Euro aus dem Budget der Kurzzeitpflege umgewandelt werden – 
-                das ergibt insgesamt bis zu 2.418 Euro.
+                Seit Juli 2025 gilt das neue flexible Pflegebudget: Verhinderungspflege und Kurzzeitpflege 
+                werden zu einem gemeinsamen Budget von bis zu 3.539 Euro pro Kalenderjahr zusammengelegt. 
+                So können Sie die Mittel flexibel nach Ihrem Bedarf einsetzen.
               </p>
 
               <h2 className="text-2xl font-display font-bold text-foreground mt-12 mb-4">Stundenweise Verhinderungspflege</h2>
