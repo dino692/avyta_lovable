@@ -144,7 +144,7 @@ const DemenzWG = () => {
                   <Button variant="outline" size="lg" asChild>
                     <a href="tel:+496915391405">
                       <Phone className="w-5 h-5 mr-2" />
-                      069 153 914 05
+                      069 / 15 39 14 05
                     </a>
                   </Button>
                 </div>
