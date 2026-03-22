@@ -471,7 +471,7 @@ const Header = () => {
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-5 h-5 text-primary" />
                 </div>
-                <span className="font-medium text-foreground group-hover:text-primary transition-colors">Über uns</span>
+                <span className="font-medium text-foreground group-hover:text-primary transition-colors">Team</span>
               </Link>
             </div>
 

@@ -10,7 +10,7 @@ const sitemapData = [
     icon: Home,
     links: [
       { name: "Startseite", href: "/" },
-      { name: "Über uns", href: "/ueber-uns" },
+      { name: "Team", href: "/ueber-uns" },
       { name: "Kontakt", href: "/kontakt" },
     ],
   },
