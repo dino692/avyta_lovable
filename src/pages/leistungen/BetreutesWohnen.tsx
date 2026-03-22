@@ -400,14 +400,8 @@ const BetreutesWohnen = () => {
               <p className="text-lg text-muted-foreground mb-8">
                 Erfahren Sie in einem kostenlosen Beratungsgespräch, wie betreutes Wohnen von AVYTA Ihr Leben oder das Ihrer Angehörigen bereichern kann. Wir beraten Sie zu allen Fragen rund um Pflegegrade, Finanzierung und verfügbare Leistungen.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <CTADropdownButton size="lg" />
-                <Button variant="outline" size="lg" className="border-primary/30" asChild>
-                  <a href="tel:+496915391405">
-                    <Phone className="mr-2 h-5 w-5" />
-                    069 / 15 39 14 05
-                  </a>
-                </Button>
               </div>
               <div className="flex flex-wrap justify-center gap-6 mt-8">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
