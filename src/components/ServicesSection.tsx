@@ -203,9 +203,10 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
 
         {/* Main Interactive Section */}
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-          {/* Left: Service Selector */}
+          {/* Left: Service Selector - horizontal scroll on mobile, vertical list on desktop */}
           <div className="lg:col-span-5 xl:col-span-4">
-            <div className={`space-y-2 md:space-y-3 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            {/* Mobile: horizontal scrollable pills */}
+            <div className={`flex lg:hidden overflow-x-auto gap-2 pb-3 -mx-4 px-4 scrollbar-hide transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               {services.map((service, index) => {
                 const IconComponent = service.icon;
                 const isActive = activeIndex === index;
@@ -217,41 +218,73 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
                       setActiveIndex(index);
                       setIsAutoPlaying(false);
                     }}
-                    className={`w-full text-left p-3 md:p-5 rounded-xl md:rounded-2xl border-2 transition-all duration-500 group relative overflow-hidden ${
+                    className={`flex-shrink-0 flex items-center gap-2 px-3 py-2.5 rounded-xl border-2 transition-all duration-300 relative overflow-hidden ${
                       isActive 
-                        ? 'bg-card border-primary shadow-xl shadow-primary/10 scale-[1.01] md:scale-[1.02]' 
+                        ? 'bg-card border-primary shadow-lg shadow-primary/10' 
+                        : 'bg-card/50 border-border/50'
+                    }`}
+                  >
+                    {isActive && isAutoPlaying && (
+                      <div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-primary to-accent animate-[progress_5s_linear]" style={{ width: '100%' }} />
+                    )}
+                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 ${
+                      isActive 
+                        ? `bg-gradient-to-br ${service.color}` 
+                        : 'bg-primary/10'
+                    }`}>
+                      <IconComponent className={`w-4 h-4 transition-colors ${isActive ? 'text-white' : 'text-primary'}`} />
+                    </div>
+                    <span className={`font-display font-bold text-xs whitespace-nowrap transition-colors ${isActive ? 'text-primary' : 'text-foreground'}`}>
+                      {service.shortTitle}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Desktop: vertical list */}
+            <div className={`hidden lg:flex flex-col space-y-3 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+              {services.map((service, index) => {
+                const IconComponent = service.icon;
+                const isActive = activeIndex === index;
+                
+                return (
+                  <button
+                    key={service.title}
+                    onClick={() => {
+                      setActiveIndex(index);
+                      setIsAutoPlaying(false);
+                    }}
+                    className={`w-full text-left p-5 rounded-2xl border-2 transition-all duration-500 group relative overflow-hidden ${
+                      isActive 
+                        ? 'bg-card border-primary shadow-xl shadow-primary/10 scale-[1.02]' 
                         : 'bg-card/50 border-border/50 hover:border-primary/30 hover:bg-card hover:shadow-lg'
                     }`}
                     style={{ transitionDelay: `${index * 0.05}s` }}
                   >
-                    {/* Progress bar for auto-play */}
                     {isActive && isAutoPlaying && (
-                      <div className="absolute bottom-0 left-0 h-0.5 md:h-1 bg-gradient-to-r from-primary to-accent animate-[progress_5s_linear]" style={{ width: '100%' }} />
+                      <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-primary to-accent animate-[progress_5s_linear]" style={{ width: '100%' }} />
                     )}
                     
-                    <div className="flex items-center gap-3 md:gap-4">
-                      {/* Icon */}
-                      <div className={`w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl flex items-center justify-center transition-all duration-500 ${
+                    <div className="flex items-center gap-4">
+                      <div className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-500 ${
                         isActive 
                           ? `bg-gradient-to-br ${service.color} shadow-lg` 
                           : 'bg-primary/10 group-hover:bg-primary/20'
                       }`}>
-                        <IconComponent className={`w-5 h-5 md:w-7 md:h-7 transition-colors ${isActive ? 'text-white' : 'text-primary'}`} />
+                        <IconComponent className={`w-7 h-7 transition-colors ${isActive ? 'text-white' : 'text-primary'}`} />
                       </div>
                       
-                      {/* Title */}
                       <div className="flex-1 min-w-0">
-                        <h3 className={`font-display font-bold text-sm md:text-lg transition-colors ${isActive ? 'text-primary' : 'text-foreground'}`}>
-                          <span className="hidden sm:inline">{service.title}</span>
-                          <span className="sm:hidden">{service.shortTitle}</span>
+                        <h3 className={`font-display font-bold text-lg transition-colors ${isActive ? 'text-primary' : 'text-foreground'}`}>
+                          {service.title}
                         </h3>
-                        <p className={`text-xs md:text-sm truncate transition-colors hidden sm:block ${isActive ? 'text-muted-foreground' : 'text-muted-foreground/70'}`}>
+                        <p className={`text-sm truncate transition-colors ${isActive ? 'text-muted-foreground' : 'text-muted-foreground/70'}`}>
                           {service.features.slice(0, 2).join(" • ")}
                         </p>
                       </div>
                       
-                      {/* Arrow */}
-                      <ChevronRight className={`w-4 h-4 md:w-5 md:h-5 transition-all duration-300 flex-shrink-0 ${
+                      <ChevronRight className={`w-5 h-5 transition-all duration-300 flex-shrink-0 ${
                         isActive ? 'text-primary translate-x-1' : 'text-muted-foreground opacity-0 group-hover:opacity-100'
                       }`} />
                     </div>
