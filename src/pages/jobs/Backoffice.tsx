@@ -80,17 +80,18 @@ const Backoffice = () => {
   return (
     <>
       <Helmet>
-        <title>Backoffice / Verwaltungskraft (m/w/d) in Frankfurt | AVYTA Pflegedienst</title>
-        <meta name="description" content="Verstärkung im Backoffice gesucht! Verwaltungskraft (m/w/d) bei AVYTA Pflegedienst Frankfurt – Büroorganisation, Abrechnung & Tourenplanung. Jetzt bewerben!" />
+        <title>Bürokraft Pflegedienst Frankfurt ✅ Verwaltung & Sachbearbeitung | avyta.de</title>
+        <meta name="description" content="Bürokraft im Pflegedienst Frankfurt gesucht ✓ Verwaltung, Abrechnung SGB V & XI, Tourenplanung ✓ 30 Urlaubstage ✓ Familiäres Team ✓ Jetzt als Bürofachkraft bewerben | avyta.de" />
+        <meta name="keywords" content="Bürokraft Pflegedienst Frankfurt, Verwaltung Pflegedienst Frankfurt, Kauffrau Gesundheitswesen Frankfurt, Bürofachkraft Pflegedienst, Sachbearbeitung Pflege Frankfurt, Backoffice Pflege Frankfurt, Pflegeabrechnung Job Frankfurt" />
         <link rel="canonical" href="https://www.avyta.de/karriere/backoffice-frankfurt" />
-        <meta property="og:title" content="Backoffice / Verwaltungskraft (m/w/d) bei AVYTA Pflegedienst Frankfurt" />
-        <meta property="og:description" content="Verstärkung im Backoffice gesucht! Verwaltungskraft (m/w/d) bei AVYTA Pflegedienst Frankfurt. Jetzt bewerben!" />
+        <meta property="og:title" content="Bürokraft Pflegedienst Frankfurt ✅ Verwaltung & Sachbearbeitung | avyta.de" />
+        <meta property="og:description" content="Bürokraft im Pflegedienst Frankfurt gesucht ✓ Verwaltung, Abrechnung, Tourenplanung ✓ 30 Urlaubstage ✓ Jetzt bewerben!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.avyta.de/karriere/backoffice-frankfurt" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Karriere", url: "https://www.avyta.de/karriere" },
-          { name: "Backoffice", url: "https://www.avyta.de/karriere/backoffice-frankfurt" },
+          { name: "Bürokraft Pflegedienst Frankfurt", url: "https://www.avyta.de/karriere/backoffice-frankfurt" },
         ])}</script>
       </Helmet>
 
