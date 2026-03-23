@@ -169,12 +169,14 @@ const Backoffice = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
-                Ihre Aufgaben im Backoffice
+                Ihre Aufgaben als Bürokraft im Pflegedienst
               </h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Als Verwaltungskraft in unserem Pflegedienst sind Sie das organisatorische Rückgrat des Teams.
-                Sie sorgen dafür, dass im Hintergrund alles reibungslos läuft – von der Einsatzplanung
-                bis zur Kommunikation mit Kostenträgern.
+                Als <strong>Bürofachkraft in unserem ambulanten Pflegedienst in Frankfurt</strong> sind Sie das 
+                organisatorische Rückgrat des Teams. Sie übernehmen die <strong>Sachbearbeitung und Verwaltung</strong> – 
+                von der Einsatzplanung über die <strong>Pflegeabrechnung nach SGB V und XI</strong> bis zur 
+                Kommunikation mit Krankenkassen und Kostenträgern. Ob als <strong>Kauffrau im Gesundheitswesen</strong>, 
+                erfahrene Bürokraft oder Quereinsteigerin mit Verwaltungserfahrung – wir freuen uns auf Ihre Bewerbung.
               </p>
               <div className="grid sm:grid-cols-2 gap-3">
                 {aufgaben.map((aufgabe, index) => (
