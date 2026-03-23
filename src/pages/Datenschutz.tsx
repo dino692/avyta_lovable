@@ -165,6 +165,37 @@ const Datenschutz = () => {
                   Wenn Sie Cookies deaktivieren bzw. nicht zulassen, kann die Funktionalität der Webseite eingeschränkt sein.
                 </p>
 
+                <h3 className="text-lg font-semibold text-foreground mb-2">Einwilligung in die Nutzung von Cookies</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Damit unsere Webseite ordnungsgemäß funktioniert, verwenden wir Cookies. Um Ihre gültige Zustimmung zur Verwendung und Speicherung von Cookies in dem Browser, den Sie für den Zugriff auf unsere Webseite verwenden, zu erhalten und dies ordnungsgemäß zu dokumentieren, verwenden wir eine Zustimmungsmanagement-Plattform: CookieFirst. Diese Technologie wird von Digital Data Solutions BV, Plantage Middenlaan 42a, 1018 DH, Amsterdam, Niederlande, bereitgestellt. Webseite: <a href="https://cookiefirst.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://cookiefirst.com</a> bezeichnet als CookieFirst.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Wenn Sie auf unsere Webseite zugreifen, wird eine Verbindung mit dem Server von CookieFirst hergestellt, um uns die Möglichkeit zu geben, von Ihnen eine gültige Zustimmung zur Nutzung bestimmter Cookies zu erhalten. CookieFirst speichert dann einen Cookie in Ihrem Browser, um nur die Cookies aktivieren zu können, in die Sie eingewilligt haben, und um dies ordnungsgemäß zu dokumentieren. Die verarbeiteten Daten werden so lange gespeichert, bis die vorgegebene Speicherfrist abläuft oder Sie die Löschung der Daten verlangen. Abweichend hiervon können bestimmte gesetzliche Aufbewahrungsfristen gelten.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  CookieFirst dient der Einholung der gesetzlich vorgeschriebenen Einwilligung zur Nutzung von Cookies. Rechtsgrundlage hierfür ist Artikel 6 Absatz 1 Buchstabe c der Datenschutzgrundverordnung (DSGVO).
+                </p>
+
+                <h3 className="text-lg font-semibold text-foreground mb-2">Datenverarbeitungsvertrag</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Wir haben mit CookieFirst einen Vertrag zur Datenverarbeitung abgeschlossen. Dabei handelt es sich um einen datenschutzrechtlich erforderlichen Vertrag, der sicherstellt, dass die Daten unserer Webseiten-Besucher nur nach unseren Weisungen und in Übereinstimmung mit der DSGVO verarbeitet werden.
+                </p>
+
+                <h3 className="text-lg font-semibold text-foreground mb-2">Server-Protokolldateien</h3>
+                <p className="text-muted-foreground leading-relaxed mb-2">
+                  Unsere Webseite und CookieFirst erheben und speichern automatisch Informationen in so genannten Server Log Files, die Ihr Browser automatisch an uns übermittelt. Folgende Daten werden erhoben:
+                </p>
+                <ul className="text-muted-foreground list-disc list-inside space-y-1 mb-4">
+                  <li>Ihr Einwilligungsstatus bzw. der Widerruf Ihrer Einwilligung</li>
+                  <li>Ihre anonymisierte IP-Adresse</li>
+                  <li>Informationen über Ihren Browser</li>
+                  <li>Informationen über Ihr Gerät</li>
+                  <li>Das Datum und die Uhrzeit Ihres Besuchs auf unserer Webseite</li>
+                  <li>Die URL der Webseite, auf der Sie Ihre Einwilligungseinstellungen gespeichert oder aktualisiert haben</li>
+                  <li>Der ungefähre Standort des Nutzers, der seine Einwilligungspräferenzen gespeichert hat</li>
+                  <li>Ein universell eindeutiger Bezeichner (UUID) des Webseiten-Besuchers, der das Banner Cookie angeklickt hat</li>
+                </ul>
+
                 <h3 className="text-lg font-semibold text-foreground mb-2">Server-Log-Dateien</h3>
                 <p className="text-muted-foreground leading-relaxed mb-2">
                   Server-Log-Dateien protokollieren alle Anfragen und Zugriffe auf unsere Webseite und halten Fehlermeldungen fest. Sie umfassen auch personenbezogene Daten, insbesondere Ihre IP-Adresse. Die Dateien enthalten die folgenden Daten:
