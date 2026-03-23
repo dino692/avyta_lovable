@@ -17,5 +17,14 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-vendor': ['@radix-ui/react-dialog', '@radix-ui/react-navigation-menu', '@radix-ui/react-tooltip', '@radix-ui/react-accordion', '@radix-ui/react-tabs'],
+          'icons': ['lucide-react'],
+        },
+      },
+    },
   },
 }));

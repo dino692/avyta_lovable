@@ -256,7 +256,7 @@ const HeroSection = () => {
                     src="/images/hero-slide-2.jpg"
                     alt="AVYTA x LISA – Smart Home Pflege-Assistent"
                     className="w-full h-full object-cover"
-                    loading="eager"
+                    loading="lazy"
                     width={1280}
                     height={720}
                   />
