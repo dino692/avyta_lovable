@@ -111,10 +111,10 @@ const Backoffice = () => {
                 </div>
                 <div>
                   <h1 className="text-2xl sm:text-4xl font-display font-bold text-foreground mb-2 sm:mb-4">
-                    Verwaltungskraft / Backoffice (m/w/d)
+                    Bürokraft / Verwaltung im Pflegedienst Frankfurt (m/w/d)
                   </h1>
                   <p className="text-base sm:text-lg text-muted-foreground">
-                    Verstärkung im Büro gesucht – werden Sie Teil unseres Teams in Frankfurt
+                    Sachbearbeitung, Abrechnung & Büroorganisation – werden Sie Teil unseres Teams
                   </p>
                 </div>
               </div>
