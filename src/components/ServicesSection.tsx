@@ -298,11 +298,11 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
           <div className="lg:col-span-7 xl:col-span-8 min-w-0 overflow-hidden">
             <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               {/* Detail Card */}
-              <div className="relative group">
+              <div className="relative group max-w-full overflow-hidden">
                 {/* Glow effect - hidden on mobile */}
                 <div className={`hidden md:block absolute -inset-2 bg-gradient-to-r ${activeService.color} rounded-[2.5rem] blur-xl opacity-20 group-hover:opacity-40 transition-all duration-700`} />
                 
-                <div className="relative bg-card rounded-2xl md:rounded-[2rem] border border-border/50 overflow-hidden shadow-xl md:shadow-2xl">
+                <div className="relative bg-card rounded-2xl md:rounded-[2rem] border border-border/50 overflow-hidden shadow-xl md:shadow-2xl max-w-full">
                   {/* Header with image */}
                   <div className="relative h-48 md:h-72 overflow-hidden">
                     {/* Background image */}
