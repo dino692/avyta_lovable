@@ -112,7 +112,7 @@ const services = [
   { 
     icon: Building2, 
     title: "Betreutes Wohnen", 
-    shortTitle: "Betreut",
+    shortTitle: "Bet. Wohnen",
     description: "Selbstbestimmt leben mit professioneller Pflege und Betreuung in Frankfurt und Bad Vilbel.", 
     link: "/leistungen/betreutes-wohnen-frankfurt",
     features: ["Eigenständig", "Barrierefrei", "Notrufsystem", "Flexibel"],
