@@ -27,6 +27,19 @@ const roedelheimFaqs = [
     question: "Wie werden Pflegepläne beim Pflegedienst Rödelheim erstellt?",
     answer: "Wir erstellen individuelle Pflegepläne basierend auf Ihren Bedürfnissen und Ihrer Lebenssituation. Diese Pläne werden regelmäßig überprüft und bei Bedarf angepasst."
   },
+,
+  {
+    question: "Welche Pflegegrade betreut der Pflegedienst Rödelheim?",
+    answer: "Unser Pflegedienst in Rödelheim betreut Patienten aller Pflegegrade von 1 bis 5. Ob einfache Alltagsunterstützung oder komplexe Intensivpflege mit Heimbeatmung – wir passen unsere Leistungen individuell an Ihre Bedürfnisse an."
+  },
+  {
+    question: "Ist der Pflegedienst Rödelheim auch an Wochenenden verfügbar?",
+    answer: "Ja, unser Pflegedienst in Rödelheim ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05."
+  },
+  {
+    question: "Bietet der Pflegedienst Rödelheim auch Verhinderungspflege an?",
+    answer: "Ja, unser Pflegedienst in Rödelheim bietet Verhinderungspflege an, wenn pflegende Angehörige eine Auszeit brauchen. Ab 2025 steht ein flexibles Budget von bis zu 3.539 Euro jährlich für Verhinderungs- und Kurzzeitpflege zur Verfügung."
+  }
 ];
 const behandlungspflegeLeistungen = [
   "Sicheres Verabreichen von Injektionen und Infusionen",
@@ -208,6 +221,30 @@ const Roedelheim = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Wir erstellen individuelle Pflegepläne basierend auf Ihren Bedürfnissen und Ihrer Lebenssituation. Diese Pläne werden regelmäßig überprüft und bei Bedarf angepasst.
+                    </AccordionContent>
+                  </AccordionItem>
+                                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Welche Pflegegrade betreut der Pflegedienst Rödelheim?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Unser Pflegedienst in Rödelheim betreut Patienten aller Pflegegrade von 1 bis 5. Ob einfache Alltagsunterstützung oder komplexe Intensivpflege mit Heimbeatmung – wir passen unsere Leistungen individuell an Ihre Bedürfnisse an.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Ist der Pflegedienst Rödelheim auch an Wochenenden verfügbar?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Rödelheim ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Rödelheim auch Verhinderungspflege an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Rödelheim bietet Verhinderungspflege an, wenn pflegende Angehörige eine Auszeit brauchen. Ab 2025 steht ein flexibles Budget von bis zu 3.539 Euro jährlich für Verhinderungs- und Kurzzeitpflege zur Verfügung.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

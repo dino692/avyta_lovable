@@ -27,6 +27,19 @@ const hoechstFaqs = [
     question: "Welche Pflegegrade betreut der Pflegedienst in Frankfurt Höchst?",
     answer: "Wir können sämtliche Pflegegrade mit unseren Leistungen abdecken, von kleinen Hilfen im Alltag bis hin zur Intensivpflege in schweren Fällen. Unser Pflegedienst in Frankfurt Höchst berät Sie gerne, wenn Sie weitere Fragen zu unserem Angebot haben."
   },
+,
+  {
+    question: "Bietet der Pflegedienst Frankfurt Höchst auch Verhinderungspflege an?",
+    answer: "Ja, unser Pflegedienst in Frankfurt Höchst bietet Verhinderungspflege an, wenn pflegende Angehörige eine Auszeit brauchen. Ab 2025 steht ein flexibles Budget von bis zu 3.539 Euro jährlich für Verhinderungs- und Kurzzeitpflege zur Verfügung."
+  },
+  {
+    question: "Ist der Pflegedienst Frankfurt Höchst auch am Wochenende im Einsatz?",
+    answer: "Ja, unser Pflegedienst in Frankfurt Höchst ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05."
+  },
+  {
+    question: "Wie beantrage ich einen Pflegegrad für den Pflegedienst Frankfurt Höchst?",
+    answer: "Unser Pflegedienst in Frankfurt Höchst unterstützt Sie bei der Beantragung eines Pflegegrades. Wir bereiten Sie auf die Begutachtung durch den Medizinischen Dienst vor und helfen bei der Antragstellung bei Ihrer Pflegekasse."
+  }
 ];
 
 const grundpflegeLeistungen = [
@@ -244,6 +257,30 @@ const Hoechst = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Wir können sämtliche Pflegegrade mit unseren Leistungen abdecken, von kleinen <strong>Hilfen im Alltag bis hin zur Intensivpflege</strong> in schweren Fällen. Unser Pflegedienst in Frankfurt Höchst <Link to="/leistungen/pflegeberatung-frankfurt" className="text-primary hover:underline">berät Sie</Link> gerne, wenn Sie weitere Fragen zu unserem Angebot haben.
+                    </AccordionContent>
+                  </AccordionItem>
+                                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Frankfurt Höchst auch Verhinderungspflege an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Höchst bietet Verhinderungspflege an, wenn pflegende Angehörige eine Auszeit brauchen. Ab 2025 steht ein flexibles Budget von bis zu 3.539 Euro jährlich für Verhinderungs- und Kurzzeitpflege zur Verfügung.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Ist der Pflegedienst Frankfurt Höchst auch am Wochenende im Einsatz?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Höchst ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Wie beantrage ich einen Pflegegrad für den Pflegedienst Frankfurt Höchst?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Unser Pflegedienst in Frankfurt Höchst unterstützt Sie bei der Beantragung eines Pflegegrades. Wir bereiten Sie auf die Begutachtung durch den Medizinischen Dienst vor und helfen bei der Antragstellung bei Ihrer Pflegekasse.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

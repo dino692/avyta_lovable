@@ -28,6 +28,19 @@ const badVilbelFaqs = [
     question: "Welche Leistungen bietet der Pflegedienst in Bad Vilbel?",
     answer: "Bei unserem Avyta Pflegedienst in Bad Vilbel übernehmen wir Leistungen sämtlicher Pflegestufen. Ob einfache Alltagshilfe, Grundpflege, oder Intensivpflege inklusive Beatmung, wir können uns um alle Bedürfnisse der pflegebedürftigen Patienten kümmern – mit viel Fachwissen und genauso viel Herz."
   },
+,
+  {
+    question: "Bietet der Pflegedienst Bad Vilbel auch Intensivpflege an?",
+    answer: "Ja, unser Pflegedienst in Bad Vilbel bietet auch Intensivpflege mit Heimbeatmung an. Unsere examinierten Pflegefachkräfte betreuen auch schwere Pflegefälle professionell und einfühlsam in Ihrem Zuhause."
+  },
+  {
+    question: "Ist der Pflegedienst Bad Vilbel auch am Wochenende im Einsatz?",
+    answer: "Ja, unser Pflegedienst in Bad Vilbel ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05."
+  },
+  {
+    question: "Wie beantrage ich einen Pflegegrad für den Pflegedienst in Bad Vilbel?",
+    answer: "Unser Pflegedienst in Bad Vilbel unterstützt Sie bei der Beantragung eines Pflegegrades. Wir helfen bei der Antragstellung bei der Pflegekasse und bereiten Sie auf die Begutachtung durch den Medizinischen Dienst vor."
+  }
 ];
 
 const grundpflegeLeistungen = [
@@ -288,6 +301,30 @@ const BadVilbel = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Bei unserem Avyta Pflegedienst in Bad Vilbel übernehmen wir Leistungen sämtlicher Pflegestufen. Ob einfache <strong>Alltagshilfe</strong>, <strong>Grundpflege</strong>, oder <strong>Intensivpflege</strong> inklusive Beatmung, wir können uns um <strong>alle Bedürfnisse</strong> der pflegebedürftigen Patienten kümmern – mit viel Fachwissen und genauso viel Herz.
+                    </AccordionContent>
+                  </AccordionItem>
+                                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Bad Vilbel auch Intensivpflege an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Bad Vilbel bietet auch Intensivpflege mit Heimbeatmung an. Unsere examinierten Pflegefachkräfte betreuen auch schwere Pflegefälle professionell und einfühlsam in Ihrem Zuhause.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Ist der Pflegedienst Bad Vilbel auch am Wochenende im Einsatz?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Bad Vilbel ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Wie beantrage ich einen Pflegegrad für den Pflegedienst in Bad Vilbel?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Unser Pflegedienst in Bad Vilbel unterstützt Sie bei der Beantragung eines Pflegegrades. Wir helfen bei der Antragstellung bei der Pflegekasse und bereiten Sie auf die Begutachtung durch den Medizinischen Dienst vor.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +13,33 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+
+const dornbuschFaqs = [
+  {
+    "question": "Wie oft kommt der Pflegedienst Frankfurt Dornbusch zu mir nach Hause?",
+    "answer": "Die Besuchsfrequenz unseres Pflegedienstes in Frankfurt Dornbusch richtet sich ganz nach Ihrem individuellen Bedarf. Von einem täglichen Besuch bis zu mehrfachen Einsätzen am Tag passen wir den Pflegeplan flexibel an Ihre Situation an. Auch an Wochenenden und Feiertagen sind unsere Pflegekräfte für Sie in Frankfurt Dornbusch im Einsatz."
+  },
+  {
+    "question": "Unterstützt der Pflegedienst Frankfurt Dornbusch auch bei Demenz?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Dornbusch hat erfahrene Mitarbeiter, die speziell für die Betreuung von Menschen mit Demenz geschult sind. Wir bieten liebevolle und geduldige Begleitung im Alltag sowie Entlastungsangebote für pflegende Angehörige in Frankfurt."
+  },
+  {
+    "question": "Übernimmt die Pflegekasse die Kosten für den Pflegedienst in Frankfurt Dornbusch?",
+    "answer": "Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten für unseren ambulanten Pflegedienst in Frankfurt Dornbusch. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Wir beraten Sie gerne zu Ihren Ansprüchen und unterstützen bei der Beantragung eines Pflegegrades."
+  },
+  {
+    "question": "Kann der Pflegedienst Frankfurt Dornbusch auch kurzfristig einspringen?",
+    "answer": "In vielen Fällen ja. Rufen Sie unseren Pflegedienst in Frankfurt Dornbusch unter 069 153 914 05 an und wir schauen gemeinsam, wie wir Ihnen schnellstmöglich helfen können. Bei Notfällen sind wir rund um die Uhr erreichbar."
+  },
+  {
+    "question": "Welche Leistungen bietet der Pflegedienst Frankfurt Dornbusch an?",
+    "answer": "Unser Pflegedienst in Frankfurt Dornbusch bietet Grundpflege, Behandlungspflege, Intensivpflege mit Heimbeatmung, Verhinderungspflege, hauswirtschaftliche Hilfe und Pflegeberatung. Wir decken alle Pflegegrade ab und erstellen einen individuellen Pflegeplan für Sie."
+  },
+  {
+    "question": "Brauche ich einen Pflegegrad für den Pflegedienst Frankfurt Dornbusch?",
+    "answer": "Für Leistungen der Pflegekasse benötigen Sie einen Pflegegrad. Behandlungspflege kann auch ohne Pflegegrad über eine ärztliche Verordnung veranlasst werden. Unser Pflegedienst in Frankfurt Dornbusch unterstützt Sie gerne bei der Beantragung eines Pflegegrades beim Medizinischen Dienst."
+  }
+];
 
 const grundpflegeLeistungen = [
   "Hilfe bei der Körperpflege (Waschen, Duschen, Baden)",
@@ -49,6 +77,7 @@ const Dornbusch = () => {
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
           { name: "Dornbusch", url: "https://www.avyta.de/standorte/frankfurt/dornbusch" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(dornbuschFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -270,6 +299,22 @@ const Dornbusch = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       In vielen Fällen ja. Rufen Sie unseren Pflegedienst in Frankfurt Dornbusch unter 069 153 914 05 an und wir schauen gemeinsam, wie wir Ihnen schnellstmöglich helfen können. Bei Notfällen sind wir rund um die Uhr erreichbar.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Welche Leistungen bietet der Pflegedienst Frankfurt Dornbusch an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Unser Pflegedienst in Frankfurt Dornbusch bietet Grundpflege, Behandlungspflege, Intensivpflege mit Heimbeatmung, Verhinderungspflege, hauswirtschaftliche Hilfe und Pflegeberatung. Wir decken alle Pflegegrade ab und erstellen einen individuellen Pflegeplan für Sie.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Brauche ich einen Pflegegrad für den Pflegedienst Frankfurt Dornbusch?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Für Leistungen der Pflegekasse benötigen Sie einen Pflegegrad. Behandlungspflege kann auch ohne Pflegegrad über eine ärztliche Verordnung veranlasst werden. Unser Pflegedienst in Frankfurt Dornbusch unterstützt Sie gerne bei der Beantragung eines Pflegegrades beim Medizinischen Dienst.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

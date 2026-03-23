@@ -27,6 +27,19 @@ const griesheimFaqs = [
     question: "Wie sehr kann der Pflegedienst in Griesheim individualisiert werden?",
     answer: "Bei unserem Angebot haben Sie selbstverständlich die Möglichkeit, eine Leistung genau passend zu Ihren individuellen Umständen zu erhalten. So kann unser Pflegedienst in Griesheim auch an Wochenenden, Feiertagen und notfalls in der Nacht an Ihrer Seite sein. Ebenfalls berücksichtigen wir die sozialen, kulturellen und religiösen Bedürfnisse der zu pflegenden Person."
   },
+,
+  {
+    question: "Was kostet der Pflegedienst in Frankfurt Griesheim pro Monat?",
+    answer: "Die monatlichen Kosten für unseren Pflegedienst in Frankfurt Griesheim hängen vom individuellen Pflegebedarf ab. Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse Sachleistungen zwischen 761 und 2.200 Euro monatlich. Wir erstellen Ihnen gerne einen Kostenvoranschlag."
+  },
+  {
+    question: "Bietet der Pflegedienst Griesheim auch Verhinderungspflege an?",
+    answer: "Ja, unser Pflegedienst in Frankfurt Griesheim bietet Verhinderungspflege an. Ab 2025 steht ein flexibles Budget von bis zu 3.539 Euro jährlich zur Verfügung, wenn pflegende Angehörige eine Auszeit brauchen."
+  },
+  {
+    question: "Wie schnell ist der Pflegedienst Griesheim einsatzbereit?",
+    answer: "Nach einem kostenlosen Erstgespräch kann unser Pflegedienst in Frankfurt Griesheim meist innerhalb weniger Tage starten. Bei dringenden Fällen finden wir kurzfristig eine Lösung. Rufen Sie uns an unter 069 153 914 05."
+  }
 ];
 
 const grundpflegeLeistungen = [
@@ -244,6 +257,30 @@ const Griesheim = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Bei unserem Angebot haben Sie selbstverständlich die Möglichkeit, eine Leistung genau <strong>passend zu Ihren individuellen Umständen</strong> zu erhalten. So kann unser Pflegedienst in Griesheim auch an <strong>Wochenenden, Feiertagen und notfalls in der Nacht</strong> an Ihrer Seite sein. Ebenfalls berücksichtigen wir die sozialen, kulturellen und religiösen Bedürfnisse der zu pflegenden Person.
+                    </AccordionContent>
+                  </AccordionItem>
+                                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Was kostet der Pflegedienst in Frankfurt Griesheim pro Monat?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Die monatlichen Kosten für unseren Pflegedienst in Frankfurt Griesheim hängen vom individuellen Pflegebedarf ab. Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse Sachleistungen zwischen 761 und 2.200 Euro monatlich. Wir erstellen Ihnen gerne einen Kostenvoranschlag.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Griesheim auch Verhinderungspflege an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Griesheim bietet Verhinderungspflege an. Ab 2025 steht ein flexibles Budget von bis zu 3.539 Euro jährlich zur Verfügung, wenn pflegende Angehörige eine Auszeit brauchen.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Wie schnell ist der Pflegedienst Griesheim einsatzbereit?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Nach einem kostenlosen Erstgespräch kann unser Pflegedienst in Frankfurt Griesheim meist innerhalb weniger Tage starten. Bei dringenden Fällen finden wir kurzfristig eine Lösung. Rufen Sie uns an unter 069 153 914 05.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

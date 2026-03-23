@@ -28,6 +28,19 @@ const frankfurtFaqs = [
     question: "Wie kann ein Pflegedienst in Frankfurt beantragt werden?",
     answer: "Kontaktieren Sie uns für ein unverbindliches Erstgespräch. Wir helfen Ihnen bei allen notwendigen Anträgen und der Kommunikation mit Ihrer Pflegekasse."
   },
+,
+  {
+    question: "In welchen Stadtteilen ist der Pflegedienst Frankfurt tätig?",
+    answer: "Unser Pflegedienst ist in allen Frankfurter Stadtteilen tätig – von Bockenheim und Sachsenhausen über Nordend und Bornheim bis nach Höchst, Niederrad und Bad Vilbel. Mit über 12 Jahren Erfahrung in Frankfurt sind wir flächendeckend für Sie da."
+  },
+  {
+    question: "Bietet der Pflegedienst Frankfurt auch Intensivpflege zu Hause an?",
+    answer: "Ja, unser Pflegedienst in Frankfurt bietet außerklinische Intensivpflege mit Heimbeatmung an. Unsere spezialisierten Pflegefachkräfte betreuen Beatmungspatienten professionell und individuell in ihrem Zuhause in Frankfurt."
+  },
+  {
+    question: "Ist der Pflegedienst Frankfurt auch am Wochenende und nachts erreichbar?",
+    answer: "Ja, unser Pflegedienst in Frankfurt ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05."
+  }
 ];
 const stadtteile = [
   { name: "Bockenheim", href: "/standorte/frankfurt/pflegedienst-bockenheim" },
@@ -408,6 +421,30 @@ const Frankfurt = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Kontaktieren Sie uns für ein unverbindliches Erstgespräch. Wir helfen Ihnen bei allen notwendigen Anträgen und der Kommunikation mit Ihrer Pflegekasse.
+                    </AccordionContent>
+                  </AccordionItem>
+                                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      In welchen Stadtteilen ist der Pflegedienst Frankfurt tätig?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Unser Pflegedienst ist in allen Frankfurter Stadtteilen tätig – von Bockenheim und Sachsenhausen über Nordend und Bornheim bis nach Höchst, Niederrad und Bad Vilbel. Mit über 12 Jahren Erfahrung in Frankfurt sind wir flächendeckend für Sie da.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Frankfurt auch Intensivpflege zu Hause an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt bietet außerklinische Intensivpflege mit Heimbeatmung an. Unsere spezialisierten Pflegefachkräfte betreuen Beatmungspatienten professionell und individuell in ihrem Zuhause in Frankfurt.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Ist der Pflegedienst Frankfurt auch am Wochenende und nachts erreichbar?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

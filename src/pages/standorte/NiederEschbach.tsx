@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +13,33 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+
+const niederEschbachFaqs = [
+  {
+    "question": "Welche Stadtteile betreut der Pflegedienst Frankfurt Nieder-Eschbach?",
+    "answer": "Unser Pflegedienst ist in ganz Frankfurt und Umgebung tätig. Neben Nieder-Eschbach betreuen wir auch die angrenzenden Frankfurter Stadtteile wie Harheim, Nieder-Erlenbach und Bonames sowie alle weiteren Stadtteile in Frankfurt."
+  },
+  {
+    "question": "Wie oft kommt der Pflegedienst Frankfurt Nieder-Eschbach zu mir?",
+    "answer": "Die Besuchsfrequenz unseres Pflegedienstes in Frankfurt Nieder-Eschbach richten wir individuell nach Ihrem Bedarf – von einmal täglich bis mehrmals am Tag. Auch Wochenend- und Feiertagsbesuche sind bei unserem Pflegedienst in Frankfurt selbstverständlich."
+  },
+  {
+    "question": "Bietet der Pflegedienst Frankfurt Nieder-Eschbach auch Intensivpflege an?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Nieder-Eschbach bietet auch Intensivpflege mit Heimbeatmung und spezieller medizinischer Versorgung an. Unsere examinierten Pflegefachkräfte in Frankfurt sind für diese anspruchsvollen Aufgaben qualifiziert."
+  },
+  {
+    "question": "Wie beantrage ich Leistungen für den Pflegedienst in Frankfurt Nieder-Eschbach?",
+    "answer": "Unser Pflegedienst in Frankfurt Nieder-Eschbach unterstützt Sie bei der Antragstellung für Pflegeleistungen. Wir helfen Ihnen beim Pflegegrad beantragen und beraten Sie zu allen verfügbaren Leistungen der Pflegekasse."
+  },
+  {
+    "question": "Was kostet der Pflegedienst Frankfurt Nieder-Eschbach pro Monat?",
+    "answer": "Die monatlichen Kosten für unseren Pflegedienst in Frankfurt Nieder-Eschbach hängen vom individuellen Pflegebedarf und dem Pflegegrad ab. Bei Pflegegrad 2 bis 5 übernimmt die Pflegekasse Sachleistungen von 761 bis 2.200 Euro monatlich. Behandlungspflege wird zusätzlich von der Krankenkasse finanziert."
+  },
+  {
+    "question": "Betreut der Pflegedienst Frankfurt Nieder-Eschbach auch Demenzpatienten?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Nieder-Eschbach hat erfahrene Mitarbeiter für die Betreuung von Menschen mit Demenz. Wir bieten geduldige Begleitung im Alltag und entlasten pflegende Angehörige in Frankfurt durch Verhinderungspflege und stundenweise Betreuung."
+  }
+];
 
 const grundpflegeLeistungen = [
   "Hilfe bei der Körperpflege (Waschen, Duschen, Baden)",
@@ -49,6 +77,7 @@ const NiederEschbach = () => {
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
           { name: "Nieder-Eschbach", url: "https://www.avyta.de/standorte/frankfurt/nieder-eschbach" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(niederEschbachFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -264,6 +293,22 @@ const NiederEschbach = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Unser Pflegedienst in Frankfurt Nieder-Eschbach unterstützt Sie bei der Antragstellung für Pflegeleistungen. Wir helfen Ihnen beim <Link to="/blog/pflegegrad-beantragen" className="text-primary hover:underline">Pflegegrad beantragen</Link> und beraten Sie zu allen verfügbaren Leistungen der Pflegekasse.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Was kostet der Pflegedienst Frankfurt Nieder-Eschbach pro Monat?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Die monatlichen Kosten für unseren Pflegedienst in Frankfurt Nieder-Eschbach hängen vom individuellen Pflegebedarf und dem Pflegegrad ab. Bei Pflegegrad 2 bis 5 übernimmt die Pflegekasse Sachleistungen von 761 bis 2.200 Euro monatlich. Behandlungspflege wird zusätzlich von der Krankenkasse finanziert.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Betreut der Pflegedienst Frankfurt Nieder-Eschbach auch Demenzpatienten?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Nieder-Eschbach hat erfahrene Mitarbeiter für die Betreuung von Menschen mit Demenz. Wir bieten geduldige Begleitung im Alltag und entlasten pflegende Angehörige in Frankfurt durch Verhinderungspflege und stundenweise Betreuung.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

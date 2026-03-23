@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +13,33 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+
+const ostendFaqs = [
+  {
+    "question": "Welche Qualifikationen haben die Mitarbeiter des Pflegedienstes Frankfurt Ostend?",
+    "answer": "Das Team unseres Pflegedienstes in Frankfurt Ostend besteht aus examinierten Pflegefachkräften, Pflegehelfern und Betreuungskräften. Alle Mitarbeiter werden regelmäßig fortgebildet und arbeiten nach höchsten Qualitätsstandards in der ambulanten Pflege in Frankfurt."
+  },
+  {
+    "question": "Bekomme ich beim Pflegedienst Frankfurt Ostend feste Pflegekräfte?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Ostend achtet auf Kontinuität in der Pflege. Nach Möglichkeit betreuen Sie dieselben Pflegekräfte, damit ein Vertrauensverhältnis entstehen kann."
+  },
+  {
+    "question": "Wie kontaktiere ich den Pflegedienst Frankfurt Ostend?",
+    "answer": "Rufen Sie unseren Pflegedienst in Frankfurt Ostend an unter 069 153 914 05 oder nutzen Sie unser Kontaktformular. Wir vereinbaren dann einen Termin für ein persönliches Beratungsgespräch, gerne bei Ihnen zu Hause im Ostend."
+  },
+  {
+    "question": "Übernimmt die Krankenkasse die Kosten für den Pflegedienst in Frankfurt Ostend?",
+    "answer": "Die Grundpflege wird bei Vorliegen eines Pflegegrades von der Pflegekasse übernommen. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Unser Pflegedienst in Frankfurt Ostend berät Sie zu allen Finanzierungsmöglichkeiten."
+  },
+  {
+    "question": "Welche Pflegegrade betreut der Pflegedienst Frankfurt Ostend?",
+    "answer": "Unser Pflegedienst in Frankfurt Ostend betreut Patienten aller Pflegegrade von 1 bis 5. Ob einfache Alltagsunterstützung bei Pflegegrad 1 oder komplexe Intensivpflege bei Pflegegrad 5 – wir passen unsere Leistungen in Frankfurt individuell an."
+  },
+  {
+    "question": "Bietet der Pflegedienst Frankfurt Ostend auch Beratung zur Pflegefinanzierung?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Ostend berät Sie umfassend zu Pflegegeld, Sachleistungen, Kombinationsleistungen, Verhinderungspflege und dem Entlastungsbetrag von 131 Euro monatlich. Wir helfen Ihnen, alle Ihnen zustehenden Leistungen optimal zu nutzen."
+  }
+];
 
 const grundpflegeLeistungen = [
   "Hilfe bei der Körperpflege (Waschen, Duschen, Baden)",
@@ -49,6 +77,7 @@ const Ostend = () => {
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
           { name: "Ostend", url: "https://www.avyta.de/standorte/frankfurt/ostend" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(ostendFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -264,6 +293,22 @@ const Ostend = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Die Grundpflege wird bei Vorliegen eines Pflegegrades von der Pflegekasse übernommen. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Unser Pflegedienst in Frankfurt Ostend berät Sie zu allen Finanzierungsmöglichkeiten.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Welche Pflegegrade betreut der Pflegedienst Frankfurt Ostend?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Unser Pflegedienst in Frankfurt Ostend betreut Patienten aller Pflegegrade von 1 bis 5. Ob einfache Alltagsunterstützung bei Pflegegrad 1 oder komplexe Intensivpflege bei Pflegegrad 5 – wir passen unsere Leistungen in Frankfurt individuell an.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Frankfurt Ostend auch Beratung zur Pflegefinanzierung?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Ostend berät Sie umfassend zu Pflegegeld, Sachleistungen, Kombinationsleistungen, Verhinderungspflege und dem Entlastungsbetrag von 131 Euro monatlich. Wir helfen Ihnen, alle Ihnen zustehenden Leistungen optimal zu nutzen.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

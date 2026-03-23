@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +13,33 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+
+const eschersheimFaqs = [
+  {
+    "question": "Wie schnell kann der Pflegedienst Frankfurt Eschersheim starten?",
+    "answer": "In der Regel kann unser Pflegedienst in Frankfurt Eschersheim innerhalb weniger Tage mit der Pflege beginnen. Bei dringenden Fällen finden wir auch kurzfristig eine Lösung – rufen Sie uns einfach an."
+  },
+  {
+    "question": "Bietet der Pflegedienst Frankfurt Eschersheim auch Pflegeberatung an?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Eschersheim bietet umfassende Pflegeberatung an. Wir helfen Ihnen bei Fragen zu Pflegegraden, Leistungsansprüchen und der Organisation der häuslichen Pflege in Frankfurt."
+  },
+  {
+    "question": "Hilft der Pflegedienst Eschersheim auch bei der Haushaltsführung?",
+    "answer": "Ja, hauswirtschaftliche Hilfe gehört zum Leistungsspektrum unseres Pflegedienstes in Frankfurt Eschersheim. Wir unterstützen bei Einkäufen, Reinigung und anderen alltäglichen Aufgaben in Ihrem Zuhause."
+  },
+  {
+    "question": "Übernimmt die Pflegekasse die Kosten für den Pflegedienst in Frankfurt Eschersheim?",
+    "answer": "Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Unser Pflegedienst in Frankfurt Eschersheim berät Sie gerne zu Ihren individuellen Ansprüchen."
+  },
+  {
+    "question": "Welche medizinischen Leistungen bietet der Pflegedienst Frankfurt Eschersheim?",
+    "answer": "Unser Pflegedienst in Frankfurt Eschersheim bietet umfassende Behandlungspflege: Medikamentengabe, Wundversorgung, Injektionen, Blutzucker- und Blutdruckkontrolle, Kompressionsstrümpfe sowie Tracheostoma- und Stomaversorgung – alles bei Ihnen zu Hause in Eschersheim."
+  },
+  {
+    "question": "Ist der Pflegedienst Frankfurt Eschersheim auch an Feiertagen im Einsatz?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Eschersheim ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05."
+  }
+];
 
 const grundpflegeLeistungen = [
   "Hilfe bei der Körperpflege (Waschen, Duschen, Baden)",
@@ -49,6 +77,7 @@ const Eschersheim = () => {
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
           { name: "Eschersheim", url: "https://www.avyta.de/standorte/frankfurt/eschersheim" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(eschersheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -264,6 +293,22 @@ const Eschersheim = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Unser Pflegedienst in Frankfurt Eschersheim berät Sie gerne zu Ihren individuellen Ansprüchen.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Welche medizinischen Leistungen bietet der Pflegedienst Frankfurt Eschersheim?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Unser Pflegedienst in Frankfurt Eschersheim bietet umfassende Behandlungspflege: Medikamentengabe, Wundversorgung, Injektionen, Blutzucker- und Blutdruckkontrolle, Kompressionsstrümpfe sowie Tracheostoma- und Stomaversorgung – alles bei Ihnen zu Hause in Eschersheim.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Ist der Pflegedienst Frankfurt Eschersheim auch an Feiertagen im Einsatz?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Eschersheim ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

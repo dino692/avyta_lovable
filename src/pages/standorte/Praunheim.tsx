@@ -27,6 +27,19 @@ const praunheimFaqs = [
     question: "Wie sieht der Alltag mit einem Pflegedienst in Frankfurt Praunheim als Hilfe aus?",
     answer: "Wir passen uns Ihrem Tagesablauf an und kommen zu den vereinbarten Zeiten. Sie behalten Ihre Selbstständigkeit und erhalten genau die Unterstützung, die Sie benötigen."
   },
+,
+  {
+    question: "Was kostet der Pflegedienst in Frankfurt Praunheim?",
+    answer: "Die Kosten für unseren Pflegedienst in Frankfurt Praunheim werden größtenteils von der Pflegekasse übernommen. Ab Pflegegrad 2 stehen Sachleistungen von 761 bis 2.200 Euro monatlich zur Verfügung. Wir erstellen gerne einen individuellen Kostenvoranschlag."
+  },
+  {
+    question: "Ist der Pflegedienst Frankfurt Praunheim auch am Wochenende verfügbar?",
+    answer: "Ja, unser Pflegedienst in Frankfurt Praunheim ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05."
+  },
+  {
+    question: "Bietet der Pflegedienst Frankfurt Praunheim auch Behandlungspflege an?",
+    answer: "Ja, unser Pflegedienst in Frankfurt Praunheim bietet umfassende Behandlungspflege an: Medikamentengabe, Wundversorgung, Injektionen, Blutzucker- und Blutdruckkontrolle, Kompressionsstrümpfe sowie Tracheostoma- und Stomaversorgung."
+  }
 ];
 const leistungen = [
   {
@@ -224,6 +237,30 @@ const Praunheim = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Wir passen uns Ihrem Tagesablauf an und kommen zu den vereinbarten Zeiten. Sie behalten Ihre Selbstständigkeit und erhalten genau die Unterstützung, die Sie benötigen.
+                    </AccordionContent>
+                  </AccordionItem>
+                                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Was kostet der Pflegedienst in Frankfurt Praunheim?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Die Kosten für unseren Pflegedienst in Frankfurt Praunheim werden größtenteils von der Pflegekasse übernommen. Ab Pflegegrad 2 stehen Sachleistungen von 761 bis 2.200 Euro monatlich zur Verfügung. Wir erstellen gerne einen individuellen Kostenvoranschlag.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Ist der Pflegedienst Frankfurt Praunheim auch am Wochenende verfügbar?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Praunheim ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Frankfurt Praunheim auch Behandlungspflege an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Praunheim bietet umfassende Behandlungspflege an: Medikamentengabe, Wundversorgung, Injektionen, Blutzucker- und Blutdruckkontrolle, Kompressionsstrümpfe sowie Tracheostoma- und Stomaversorgung.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

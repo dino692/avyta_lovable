@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +13,33 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+
+const seckbachFaqs = [
+  {
+    "question": "Wie erreiche ich den Pflegedienst Frankfurt Seckbach am besten?",
+    "answer": "Sie erreichen unseren Pflegedienst in Frankfurt Seckbach telefonisch unter 069 153 914 05, per E-Mail oder über unser Kontaktformular. Wir melden uns schnellstmöglich bei Ihnen zurück."
+  },
+  {
+    "question": "Kann der Pflegedienst Frankfurt Seckbach auch am Wochenende kommen?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Seckbach ist auch an Wochenenden und Feiertagen für Sie da. Bei Notfällen erreichen Sie uns rund um die Uhr – auch nachts und an Feiertagen."
+  },
+  {
+    "question": "Was brauche ich für den ersten Termin mit dem Pflegedienst in Frankfurt Seckbach?",
+    "answer": "Halten Sie am besten Ihre Versichertenkarte und eventuelle ärztliche Verordnungen bereit. Unser Pflegedienst in Frankfurt Seckbach bespricht dann gemeinsam mit Ihnen Ihre individuelle Pflegesituation und erstellt einen maßgeschneiderten Pflegeplan."
+  },
+  {
+    "question": "Übernimmt die Pflegekasse die Kosten für den Pflegedienst in Frankfurt Seckbach?",
+    "answer": "Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten für unseren Pflegedienst in Frankfurt Seckbach."
+  },
+  {
+    "question": "Welche Pflegeleistungen bietet der Pflegedienst Frankfurt Seckbach an?",
+    "answer": "Unser Pflegedienst in Frankfurt Seckbach bietet Grundpflege, Behandlungspflege, Intensivpflege mit Heimbeatmung, Verhinderungspflege, Pflegeberatung und hauswirtschaftliche Hilfe an. Wir betreuen alle Pflegegrade individuell in Ihrem Zuhause in Seckbach."
+  },
+  {
+    "question": "Unterstützt der Pflegedienst Frankfurt Seckbach bei der Pflegegrad-Beantragung?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Seckbach hilft Ihnen bei der Beantragung eines Pflegegrades. Wir bereiten Sie auf die Begutachtung durch den Medizinischen Dienst vor und unterstützen bei allen erforderlichen Anträgen bei der Pflegekasse."
+  }
+];
 
 const grundpflegeLeistungen = [
   "Hilfe bei der Körperpflege (Waschen, Duschen, Baden)",
@@ -49,6 +77,7 @@ const Seckbach = () => {
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
           { name: "Seckbach", url: "https://www.avyta.de/standorte/frankfurt/seckbach" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(seckbachFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -264,6 +293,22 @@ const Seckbach = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten für unseren Pflegedienst in Frankfurt Seckbach. Lesen Sie auch unseren Ratgeber zum <Link to="/blog/pflegegrad-beantragen" className="text-primary hover:underline">Pflegegrad beantragen</Link>.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Welche Pflegeleistungen bietet der Pflegedienst Frankfurt Seckbach an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Unser Pflegedienst in Frankfurt Seckbach bietet Grundpflege, Behandlungspflege, Intensivpflege mit Heimbeatmung, Verhinderungspflege, Pflegeberatung und hauswirtschaftliche Hilfe an. Wir betreuen alle Pflegegrade individuell in Ihrem Zuhause in Seckbach.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Unterstützt der Pflegedienst Frankfurt Seckbach bei der Pflegegrad-Beantragung?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Seckbach hilft Ihnen bei der Beantragung eines Pflegegrades. Wir bereiten Sie auf die Begutachtung durch den Medizinischen Dienst vor und unterstützen bei allen erforderlichen Anträgen bei der Pflegekasse.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

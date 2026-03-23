@@ -27,6 +27,19 @@ const ginnheimFaqs = [
     question: "Welche Maßnahmen zur Vorsorge von Krankheiten betreibt der Pflegedienst in Ginnheim?",
     answer: "Wir achten auf Prophylaxe-Maßnahmen wie Dekubitusprophylaxe, Sturzprävention und regelmäßige Vitalzeichen-Kontrollen, um Komplikationen frühzeitig zu erkennen und zu vermeiden."
   },
+,
+  {
+    question: "Was kostet der Pflegedienst in Frankfurt Ginnheim?",
+    answer: "Die Kosten für unseren Pflegedienst in Frankfurt Ginnheim werden größtenteils von der Pflegekasse übernommen. Ab Pflegegrad 2 stehen Ihnen Sachleistungen von 761 bis 2.200 Euro monatlich zu. Wir beraten Sie gerne zu allen Finanzierungsmöglichkeiten."
+  },
+  {
+    question: "Ist der Pflegedienst Frankfurt Ginnheim auch an Wochenenden verfügbar?",
+    answer: "Ja, unser Pflegedienst in Frankfurt Ginnheim ist an 365 Tagen im Jahr für Sie im Einsatz – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05."
+  },
+  {
+    question: "Wie beantrage ich einen Pflegegrad für den Pflegedienst in Frankfurt Ginnheim?",
+    answer: "Unser Pflegedienst in Frankfurt Ginnheim unterstützt Sie bei der Beantragung eines Pflegegrades. Wir helfen bei der Antragstellung bei Ihrer Pflegekasse und bereiten Sie auf die Begutachtung durch den Medizinischen Dienst vor."
+  }
 ];
 const leistungen = [
   {
@@ -214,6 +227,30 @@ const Ginnheim = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Wir achten auf Prophylaxe-Maßnahmen wie Dekubitusprophylaxe, Sturzprävention und regelmäßige Vitalzeichen-Kontrollen, um Komplikationen frühzeitig zu erkennen und zu vermeiden.
+                    </AccordionContent>
+                  </AccordionItem>
+                                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Was kostet der Pflegedienst in Frankfurt Ginnheim?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Die Kosten für unseren Pflegedienst in Frankfurt Ginnheim werden größtenteils von der Pflegekasse übernommen. Ab Pflegegrad 2 stehen Ihnen Sachleistungen von 761 bis 2.200 Euro monatlich zu. Wir beraten Sie gerne zu allen Finanzierungsmöglichkeiten.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Ist der Pflegedienst Frankfurt Ginnheim auch an Wochenenden verfügbar?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Ginnheim ist an 365 Tagen im Jahr für Sie im Einsatz – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Wie beantrage ich einen Pflegegrad für den Pflegedienst in Frankfurt Ginnheim?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Unser Pflegedienst in Frankfurt Ginnheim unterstützt Sie bei der Beantragung eines Pflegegrades. Wir helfen bei der Antragstellung bei Ihrer Pflegekasse und bereiten Sie auf die Begutachtung durch den Medizinischen Dienst vor.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
