@@ -295,7 +295,7 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
           </div>
           
           {/* Right: Active Service Detail */}
-          <div className="lg:col-span-7 xl:col-span-8">
+          <div className="lg:col-span-7 xl:col-span-8 min-w-0 overflow-hidden">
             <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               {/* Detail Card */}
               <div className="relative group">
