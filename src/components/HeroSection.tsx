@@ -253,7 +253,7 @@ const HeroSection = () => {
                   }`}
                 >
                   <img
-                    src="/images/hero-slide-2.jpg"
+                    src="/images/hero-slide-2.webp"
                     alt="AVYTA x LISA – Smart Home Pflege-Assistent"
                     className="w-full h-full object-cover"
                     loading="lazy"
