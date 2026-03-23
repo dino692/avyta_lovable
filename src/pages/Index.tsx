@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
+import BackofficePopup from "@/components/BackofficePopup";
 
 // Lazy load below-the-fold sections
 const HowItWorksSection = lazy(() => import("@/components/HowItWorksSection"));
