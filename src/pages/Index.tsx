@@ -26,6 +26,7 @@ const SectionFallback = () => (
 const Index = () => {
   return (
     <>
+      <BackofficePopup />
       <Helmet>
         <title>Pflegedienst Frankfurt ✅ MDK Note 1,6 | 5.0 ★ Google | avyta.de</title>
         <meta name="description" content="AVYTA Pflegedienst Frankfurt ✓ MDK Bestnote 1,6 ✓ 5.0 Sterne bei Google (36 Bewertungen) ✓ 2500+ zufriedene Patienten ✓ 24/7 erreichbar ✓ Seit 2013 | avyta.de" />
