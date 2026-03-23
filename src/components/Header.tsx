@@ -61,6 +61,7 @@ const jobs = [
   { name: "Pflegehilfskraft", href: "/karriere/pflegehilfskraft-frankfurt", description: "Mit Qualifikation nach §43b", icon: Users },
   { name: "Pflegehelfer", href: "/karriere/pflegehelfer-frankfurt", description: "Einstieg in die Pflege", icon: HeartHandshake },
   { name: "Haushaltshilfe", href: "/karriere/haushaltshilfe-frankfurt", description: "Unterstützung im Alltag", icon: Home },
+  { name: "Bürokraft / Verwaltung", href: "/karriere/backoffice-frankfurt", description: "Backoffice im Pflegedienst", icon: Building2 },
 ];
 
 const blogCategories = [
