@@ -15,7 +15,7 @@ const TASKS = [
   "Unterstützung bei MDK-Prüfungen & Audits",
 ];
 
-const SHARE_URL = "https://avyta.de/karriere";
+const SHARE_URL = "https://www.avyta.de/karriere/backoffice-frankfurt";
 const SHARE_TEXT = "AVYTA Pflegedienst sucht Verstärkung im Backoffice! Verwaltungskraft (m/w/d) gesucht – Jetzt bewerben:";
 
 const BackofficePopup = () => {
@@ -97,7 +97,7 @@ const BackofficePopup = () => {
 
           <div className="flex flex-col sm:flex-row gap-2 pt-2">
             <Button asChild className="flex-1">
-              <a href="/karriere">Jetzt bewerben</a>
+              <a href="/karriere/backoffice-frankfurt">Jetzt bewerben</a>
             </Button>
 
             <Popover>

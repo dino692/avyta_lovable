@@ -63,6 +63,7 @@ const Pflegehelfer = lazy(() => import("./pages/jobs/Pflegehelfer"));
 const Pflegehilfskraft = lazy(() => import("./pages/jobs/Pflegehilfskraft"));
 const Pflegefachkraft = lazy(() => import("./pages/jobs/Pflegefachkraft"));
 const HaushaltshilfeJob = lazy(() => import("./pages/jobs/Haushaltshilfe"));
+const Backoffice = lazy(() => import("./pages/jobs/Backoffice"));
 const Broschuere = lazy(() => import("./pages/Broschuere"));
 const Leistungskatalog = lazy(() => import("./pages/Leistungskatalog"));
 const Ratgeber = lazy(() => import("./pages/Ratgeber"));
@@ -162,6 +163,7 @@ const App = () => (
               <Route path="/karriere/haushhaltshilfe-frankfurt" element={<HaushaltshilfeJob />} />
               <Route path="/karriere/haushaltshilfe-frankfurt" element={<Navigate to="/karriere/haushhaltshilfe-frankfurt" replace />} />
               <Route path="/karriere/haushaltshilfen-frankfurt" element={<Navigate to="/karriere/haushhaltshilfe-frankfurt" replace />} />
+              <Route path="/karriere/backoffice-frankfurt" element={<Backoffice />} />
               <Route path="/broschuere" element={<Broschuere />} />
               <Route path="/leistungskatalog" element={<Leistungskatalog />} />
               <Route path="/ratgeber" element={<Ratgeber />} />
