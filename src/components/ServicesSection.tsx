@@ -339,7 +339,7 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
                   </div>
                   
                   {/* Content */}
-                  <div className="p-5 md:p-10">
+                  <div className="p-4 md:p-10">
                     <h3 className="font-display font-bold text-xl md:text-4xl text-foreground mb-3 md:mb-4">
                       {activeService.title}
                     </h3>
