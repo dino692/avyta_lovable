@@ -80,17 +80,18 @@ const Backoffice = () => {
   return (
     <>
       <Helmet>
-        <title>Backoffice / Verwaltungskraft (m/w/d) in Frankfurt | AVYTA Pflegedienst</title>
-        <meta name="description" content="Verstärkung im Backoffice gesucht! Verwaltungskraft (m/w/d) bei AVYTA Pflegedienst Frankfurt – Büroorganisation, Abrechnung & Tourenplanung. Jetzt bewerben!" />
+        <title>Bürokraft Pflegedienst Frankfurt ✅ Verwaltung & Sachbearbeitung | avyta.de</title>
+        <meta name="description" content="Bürokraft im Pflegedienst Frankfurt gesucht ✓ Verwaltung, Abrechnung SGB V & XI, Tourenplanung ✓ 30 Urlaubstage ✓ Familiäres Team ✓ Jetzt als Bürofachkraft bewerben | avyta.de" />
+        <meta name="keywords" content="Bürokraft Pflegedienst Frankfurt, Verwaltung Pflegedienst Frankfurt, Kauffrau Gesundheitswesen Frankfurt, Bürofachkraft Pflegedienst, Sachbearbeitung Pflege Frankfurt, Backoffice Pflege Frankfurt, Pflegeabrechnung Job Frankfurt" />
         <link rel="canonical" href="https://www.avyta.de/karriere/backoffice-frankfurt" />
-        <meta property="og:title" content="Backoffice / Verwaltungskraft (m/w/d) bei AVYTA Pflegedienst Frankfurt" />
-        <meta property="og:description" content="Verstärkung im Backoffice gesucht! Verwaltungskraft (m/w/d) bei AVYTA Pflegedienst Frankfurt. Jetzt bewerben!" />
+        <meta property="og:title" content="Bürokraft Pflegedienst Frankfurt ✅ Verwaltung & Sachbearbeitung | avyta.de" />
+        <meta property="og:description" content="Bürokraft im Pflegedienst Frankfurt gesucht ✓ Verwaltung, Abrechnung, Tourenplanung ✓ 30 Urlaubstage ✓ Jetzt bewerben!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.avyta.de/karriere/backoffice-frankfurt" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Karriere", url: "https://www.avyta.de/karriere" },
-          { name: "Backoffice", url: "https://www.avyta.de/karriere/backoffice-frankfurt" },
+          { name: "Bürokraft Pflegedienst Frankfurt", url: "https://www.avyta.de/karriere/backoffice-frankfurt" },
         ])}</script>
       </Helmet>
 
@@ -110,10 +111,10 @@ const Backoffice = () => {
                 </div>
                 <div>
                   <h1 className="text-2xl sm:text-4xl font-display font-bold text-foreground mb-2 sm:mb-4">
-                    Verwaltungskraft / Backoffice (m/w/d)
+                    Bürokraft / Verwaltung im Pflegedienst Frankfurt (m/w/d)
                   </h1>
                   <p className="text-base sm:text-lg text-muted-foreground">
-                    Verstärkung im Büro gesucht – werden Sie Teil unseres Teams in Frankfurt
+                    Sachbearbeitung, Abrechnung & Büroorganisation – werden Sie Teil unseres Teams
                   </p>
                 </div>
               </div>
@@ -168,12 +169,14 @@ const Backoffice = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
-                Ihre Aufgaben im Backoffice
+                Ihre Aufgaben als Bürokraft im Pflegedienst
               </h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Als Verwaltungskraft in unserem Pflegedienst sind Sie das organisatorische Rückgrat des Teams.
-                Sie sorgen dafür, dass im Hintergrund alles reibungslos läuft – von der Einsatzplanung
-                bis zur Kommunikation mit Kostenträgern.
+                Als <strong>Bürofachkraft in unserem ambulanten Pflegedienst in Frankfurt</strong> sind Sie das 
+                organisatorische Rückgrat des Teams. Sie übernehmen die <strong>Sachbearbeitung und Verwaltung</strong> – 
+                von der Einsatzplanung über die <strong>Pflegeabrechnung nach SGB V und XI</strong> bis zur 
+                Kommunikation mit Krankenkassen und Kostenträgern. Ob als <strong>Kauffrau im Gesundheitswesen</strong>, 
+                erfahrene Bürokraft oder Quereinsteigerin mit Verwaltungserfahrung – wir freuen uns auf Ihre Bewerbung.
               </p>
               <div className="grid sm:grid-cols-2 gap-3">
                 {aufgaben.map((aufgabe, index) => (
@@ -192,8 +195,14 @@ const Backoffice = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
-                Was wir von Ihnen erwarten
+                Anforderungen an unsere Bürokraft im Pflegedienst Frankfurt
               </h2>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Für die <strong>Verwaltung in unserem Pflegedienst in Frankfurt</strong> suchen wir eine strukturierte 
+                Persönlichkeit mit Organisationstalent. Idealerweise bringen Sie Erfahrung aus dem 
+                Gesundheitswesen mit – aber auch als Bürokauffrau oder Kauffrau für Büromanagement 
+                mit Interesse an der Pflegebranche sind Sie bei uns willkommen.
+              </p>
               <ul className="space-y-3">
                 {anforderungen.map((anf, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -211,7 +220,7 @@ const Backoffice = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-8 text-center">
-                Ihre Vorteile bei uns
+                Ihre Vorteile als Bürofachkraft bei AVYTA
               </h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 {benefits.map((benefit, index) => (
