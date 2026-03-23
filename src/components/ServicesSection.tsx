@@ -202,9 +202,9 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
 
         {/* Main Interactive Section */}
-        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-start min-w-0">
           {/* Left: Service Selector - horizontal scroll on mobile, vertical list on desktop */}
-          <div className="lg:col-span-5 xl:col-span-4">
+          <div className="lg:col-span-5 xl:col-span-4 min-w-0 overflow-hidden">
             {/* Mobile: horizontal scrollable pills */}
             <div className={`flex lg:hidden overflow-x-auto gap-2 pb-3 -mx-4 px-4 scrollbar-hide transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               {services.map((service, index) => {
@@ -295,14 +295,14 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
           </div>
           
           {/* Right: Active Service Detail */}
-          <div className="lg:col-span-7 xl:col-span-8">
+          <div className="lg:col-span-7 xl:col-span-8 min-w-0 overflow-hidden">
             <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               {/* Detail Card */}
-              <div className="relative group">
+              <div className="relative group max-w-full overflow-hidden">
                 {/* Glow effect - hidden on mobile */}
                 <div className={`hidden md:block absolute -inset-2 bg-gradient-to-r ${activeService.color} rounded-[2.5rem] blur-xl opacity-20 group-hover:opacity-40 transition-all duration-700`} />
                 
-                <div className="relative bg-card rounded-2xl md:rounded-[2rem] border border-border/50 overflow-hidden shadow-xl md:shadow-2xl">
+                <div className="relative bg-card rounded-2xl md:rounded-[2rem] border border-border/50 overflow-hidden shadow-xl md:shadow-2xl max-w-full">
                   {/* Header with image */}
                   <div className="relative h-48 md:h-72 overflow-hidden">
                     {/* Background image */}
@@ -339,7 +339,7 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
                   </div>
                   
                   {/* Content */}
-                  <div className="p-5 md:p-10">
+                  <div className="p-4 md:p-10">
                     <h3 className="font-display font-bold text-xl md:text-4xl text-foreground mb-3 md:mb-4">
                       {activeService.title}
                     </h3>
@@ -365,10 +365,10 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
                     </div>
                     
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+                    <div className="flex flex-col gap-3 md:gap-4">
                       <Button 
                         size="lg" 
-                        className={`flex-1 bg-gradient-to-r ${activeService.color} hover:opacity-90 text-white shadow-lg group text-sm md:text-base`}
+                        className={`w-full bg-gradient-to-r ${activeService.color} hover:opacity-90 text-white shadow-lg group text-sm md:text-base`}
                         asChild
                       >
                         <Link to={activeService.link}>
@@ -380,7 +380,7 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
                       <Button 
                         size="lg" 
                         variant="outline"
-                        className="flex-1 border-2 group text-sm md:text-base"
+                        className="w-full border-2 group text-sm md:text-base"
                         asChild
                       >
                         <a href="tel:+496915391405">
