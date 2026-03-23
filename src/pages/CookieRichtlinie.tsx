@@ -31,6 +31,24 @@ const CookieRichtlinie = () => {
                 </a>.
               </div>
             </div>
+
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mt-16 mb-8">
+              Cookie-Übersicht
+            </h2>
+            <div className="prose prose-lg max-w-none">
+              <div id="cookiefirst-cookies-table"></div>
+              <div className="mt-8 text-sm text-muted-foreground">
+                Diese Cookie-Tabelle wurde erstellt und aktualisiert von der{" "}
+                <a
+                  href="https://cookiefirst.com/de/consent-manager/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  Consent Manager - CookieFirst
+                </a>.
+              </div>
+            </div>
           </div>
         </main>
         <Footer />
