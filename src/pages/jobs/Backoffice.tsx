@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
 import { Button } from "@/components/ui/button";
+import JobCTADropdownButton from "@/components/JobCTADropdownButton";
 import { CheckCircle2, ArrowRight, Building2, Share2, ClipboardCopy, CheckCircle, Euro, Calendar, Car, Dumbbell, Gift, Users, Shirt, Laptop } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { useState } from "react";
@@ -121,12 +122,7 @@ const Backoffice = () => {
 
               {/* CTA + Share */}
               <div className="flex flex-col sm:flex-row gap-3 mt-8">
-                <Button size="lg" asChild>
-                  <a href="mailto:info@avyta.de?subject=Bewerbung%20Backoffice%20/%20Verwaltungskraft">
-                    Jetzt bewerben
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
-                </Button>
+                <JobCTADropdownButton jobTitle="Bürokraft / Verwaltung" />
 
                 <Popover>
                   <PopoverTrigger asChild>
@@ -249,18 +245,8 @@ const Backoffice = () => {
               <p className="text-muted-foreground mb-8">
                 Senden Sie uns Ihre Bewerbung per E-Mail. Wir freuen uns darauf, Sie kennenzulernen!
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Button size="lg" asChild>
-                  <a href="mailto:info@avyta.de?subject=Bewerbung%20Backoffice%20/%20Verwaltungskraft">
-                    Jetzt bewerben
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <a href="tel:06996758550">
-                    Anrufen: 069 96 75 85 50
-                  </a>
-                </Button>
+              <div className="flex justify-center">
+                <JobCTADropdownButton jobTitle="Bürokraft / Verwaltung" />
               </div>
             </div>
           </div>
