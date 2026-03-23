@@ -122,12 +122,7 @@ const Backoffice = () => {
 
               {/* CTA + Share */}
               <div className="flex flex-col sm:flex-row gap-3 mt-8">
-                <Button size="lg" asChild>
-                  <a href="mailto:info@avyta.de?subject=Bewerbung%20Backoffice%20/%20Verwaltungskraft">
-                    Jetzt bewerben
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
-                </Button>
+                <JobCTADropdownButton jobTitle="Bürokraft / Verwaltung" />
 
                 <Popover>
                   <PopoverTrigger asChild>
