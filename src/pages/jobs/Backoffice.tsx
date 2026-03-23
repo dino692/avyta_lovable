@@ -195,8 +195,14 @@ const Backoffice = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
-                Was wir von Ihnen erwarten
+                Anforderungen an unsere Bürokraft im Pflegedienst Frankfurt
               </h2>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Für die <strong>Verwaltung in unserem Pflegedienst in Frankfurt</strong> suchen wir eine strukturierte 
+                Persönlichkeit mit Organisationstalent. Idealerweise bringen Sie Erfahrung aus dem 
+                Gesundheitswesen mit – aber auch als Bürokauffrau oder Kauffrau für Büromanagement 
+                mit Interesse an der Pflegebranche sind Sie bei uns willkommen.
+              </p>
               <ul className="space-y-3">
                 {anforderungen.map((anf, index) => (
                   <li key={index} className="flex items-start gap-3">
