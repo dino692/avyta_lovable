@@ -191,7 +191,7 @@ const HeroSection = () => {
             </div>
 
             {/* Glow effect behind video */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-60 animate-glow" />
+            <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-60 animate-glow will-change-transform" />
             
             <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-card border border-border/50">
               <div className="aspect-video relative bg-muted">
