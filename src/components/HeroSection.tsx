@@ -85,14 +85,14 @@ const HeroSection = () => {
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-accent/5" />
       
-      {/* Morphing blob backgrounds - hidden on mobile for performance */}
-      <div className="absolute top-20 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl animate-morph opacity-40 md:opacity-60" />
-      <div className="hidden md:block absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-tr from-accent/15 to-primary/10 rounded-full blur-3xl animate-morph opacity-50" style={{ animationDelay: '-4s' }} />
+      {/* Morphing blob backgrounds - hidden on mobile for performance, use will-change to prevent CLS */}
+      <div className="absolute top-20 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl animate-morph opacity-40 md:opacity-60 will-change-transform" />
+      <div className="hidden md:block absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-tr from-accent/15 to-primary/10 rounded-full blur-3xl animate-morph opacity-50 will-change-transform" style={{ animationDelay: '-4s' }} />
       
       {/* Floating decorative elements - hidden on mobile */}
-      <div className="hidden md:block absolute top-1/4 left-[10%] w-3 h-3 bg-primary/40 rounded-full animate-float" />
-      <div className="hidden md:block absolute top-1/3 right-[15%] w-4 h-4 bg-accent/30 rounded-full animate-float-delayed" />
-      <div className="hidden md:block absolute bottom-1/4 left-[20%] w-2 h-2 bg-primary/50 rounded-full animate-float" style={{ animationDelay: '-3s' }} />
+      <div className="hidden md:block absolute top-1/4 left-[10%] w-3 h-3 bg-primary/40 rounded-full animate-float will-change-transform" />
+      <div className="hidden md:block absolute top-1/3 right-[15%] w-4 h-4 bg-accent/30 rounded-full animate-float-delayed will-change-transform" />
+      <div className="hidden md:block absolute bottom-1/4 left-[20%] w-2 h-2 bg-primary/50 rounded-full animate-float will-change-transform" style={{ animationDelay: '-3s' }} />
 
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }} />
