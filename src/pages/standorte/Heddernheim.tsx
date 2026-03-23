@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +13,33 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+
+const heddernheimFaqs = [
+  {
+    "question": "Was kostet der Pflegedienst Frankfurt Heddernheim?",
+    "answer": "Die Kosten für unseren Pflegedienst in Frankfurt Heddernheim werden größtenteils von der Pflegekasse übernommen. Wir erstellen Ihnen gerne einen individuellen Kostenvoranschlag und beraten Sie umfassend zu Ihren Ansprüchen auf Pflegegeld und Sachleistungen."
+  },
+  {
+    "question": "Wie kann ich einen Pflegegrad für den Pflegedienst in Frankfurt beantragen?",
+    "answer": "Unser Pflegedienst in Frankfurt Heddernheim unterstützt Sie gerne bei der Antragstellung und bereitet Sie auf die Begutachtung durch den Medizinischen Dienst vor."
+  },
+  {
+    "question": "Bietet der Pflegedienst Frankfurt Heddernheim auch Verhinderungspflege an?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Heddernheim bietet Verhinderungspflege an, wenn pflegende Angehörige Urlaub machen oder krank sind. So ist die Versorgung Ihres Angehörigen in Frankfurt immer gesichert."
+  },
+  {
+    "question": "Ist der Pflegedienst Frankfurt Heddernheim auch am Wochenende verfügbar?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Heddernheim ist auch an Wochenenden und Feiertagen für Sie da. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05."
+  },
+  {
+    "question": "Welche Qualifikationen haben die Pflegekräfte des Pflegedienstes Frankfurt Heddernheim?",
+    "answer": "Unser Pflegedienst in Frankfurt Heddernheim beschäftigt examinierte Pflegefachkräfte, Pflegehelfer und Betreuungskräfte. Alle Mitarbeiter werden regelmäßig fortgebildet und sind für die ambulante Pflege in Frankfurt qualifiziert – auch für Intensivpflege und Demenzbetreuung."
+  },
+  {
+    "question": "Kann der Pflegedienst Frankfurt Heddernheim auch Intensivpflege übernehmen?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Heddernheim bietet auch außerklinische Intensivpflege mit Heimbeatmung an. Unsere spezialisierten Pflegefachkräfte betreuen Beatmungspatienten professionell und individuell in ihrem Zuhause in Frankfurt."
+  }
+];
 
 const grundpflegeLeistungen = [
   "Hilfe bei der Körperpflege (Waschen, Duschen, Baden)",
@@ -49,6 +77,7 @@ const Heddernheim = () => {
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
           { name: "Heddernheim", url: "https://www.avyta.de/standorte/frankfurt/heddernheim" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(heddernheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -264,6 +293,22 @@ const Heddernheim = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Ja, unser Pflegedienst in Frankfurt Heddernheim ist auch an Wochenenden und Feiertagen für Sie da. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Welche Qualifikationen haben die Pflegekräfte des Pflegedienstes Frankfurt Heddernheim?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Unser Pflegedienst in Frankfurt Heddernheim beschäftigt examinierte Pflegefachkräfte, Pflegehelfer und Betreuungskräfte. Alle Mitarbeiter werden regelmäßig fortgebildet und sind für die ambulante Pflege in Frankfurt qualifiziert – auch für Intensivpflege und Demenzbetreuung.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Kann der Pflegedienst Frankfurt Heddernheim auch Intensivpflege übernehmen?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Heddernheim bietet auch außerklinische Intensivpflege mit Heimbeatmung an. Unsere spezialisierten Pflegefachkräfte betreuen Beatmungspatienten professionell und individuell in ihrem Zuhause in Frankfurt.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

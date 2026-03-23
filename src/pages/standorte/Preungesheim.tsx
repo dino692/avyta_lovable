@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +13,33 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+
+const preungesheimFaqs = [
+  {
+    "question": "Wie läuft das Erstgespräch beim Pflegedienst Frankfurt Preungesheim ab?",
+    "answer": "Im Erstgespräch lernt unser Pflegedienst in Frankfurt Preungesheim Sie und Ihre Situation kennen. Wir besprechen Ihre Wünsche und erstellen gemeinsam einen ersten Pflegeplan. Das Gespräch findet gerne bei Ihnen zu Hause in Frankfurt Preungesheim statt – kostenfrei und unverbindlich."
+  },
+  {
+    "question": "Kann der Pflegedienst Frankfurt Preungesheim auch nachts kommen?",
+    "answer": "Bei Bedarf bietet unser Pflegedienst in Frankfurt Preungesheim auch nächtliche Pflege und Betreuung an. Bei Notfällen sind wir rund um die Uhr erreichbar unter 069 153 914 05."
+  },
+  {
+    "question": "Arbeitet der Pflegedienst Frankfurt Preungesheim mit meinem Hausarzt zusammen?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Preungesheim arbeitet eng mit Ihren behandelnden Ärzten in Frankfurt zusammen, um eine optimale Versorgung sicherzustellen. Eine gute Kommunikation zwischen Pflegedienst und Ärzten ist uns wichtig."
+  },
+  {
+    "question": "Welche Kosten übernimmt die Pflegekasse für den Pflegedienst in Frankfurt Preungesheim?",
+    "answer": "Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse Sachleistungen für die Grundpflege. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert."
+  },
+  {
+    "question": "Bietet der Pflegedienst Frankfurt Preungesheim auch Grundpflege und Behandlungspflege?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Preungesheim bietet sowohl Grundpflege (Körperpflege, An- und Auskleiden, Mobilität) als auch Behandlungspflege (Medikamentengabe, Wundversorgung, Injektionen, Blutzuckerkontrolle) an. Alle Leistungen erbringen wir bei Ihnen zu Hause."
+  },
+  {
+    "question": "Wie beantrage ich einen Pflegegrad für den Pflegedienst Frankfurt Preungesheim?",
+    "answer": "Unser Pflegedienst in Frankfurt Preungesheim unterstützt Sie bei der Beantragung eines Pflegegrades. Wir helfen bei der Antragstellung bei Ihrer Pflegekasse und bereiten Sie auf die Begutachtung durch den Medizinischen Dienst vor."
+  }
+];
 
 const grundpflegeLeistungen = [
   "Hilfe bei der Körperpflege (Waschen, Duschen, Baden)",
@@ -49,6 +77,7 @@ const Preungesheim = () => {
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
           { name: "Preungesheim", url: "https://www.avyta.de/standorte/frankfurt/preungesheim" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(preungesheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -264,6 +293,22 @@ const Preungesheim = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse Sachleistungen für die Grundpflege. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Mehr Informationen finden Sie in unserem Ratgeber zur <Link to="/blog/pflegegeld-tabelle" className="text-primary hover:underline">Pflegegeld-Tabelle</Link>.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Frankfurt Preungesheim auch Grundpflege und Behandlungspflege?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Preungesheim bietet sowohl Grundpflege (Körperpflege, An- und Auskleiden, Mobilität) als auch Behandlungspflege (Medikamentengabe, Wundversorgung, Injektionen, Blutzuckerkontrolle) an. Alle Leistungen erbringen wir bei Ihnen zu Hause.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Wie beantrage ich einen Pflegegrad für den Pflegedienst Frankfurt Preungesheim?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Unser Pflegedienst in Frankfurt Preungesheim unterstützt Sie bei der Beantragung eines Pflegegrades. Wir helfen bei der Antragstellung bei Ihrer Pflegekasse und bereiten Sie auf die Begutachtung durch den Medizinischen Dienst vor.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

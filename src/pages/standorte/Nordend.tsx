@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +13,33 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+
+const nordendFaqs = [
+  {
+    "question": "Wie schnell kann der Pflegedienst Frankfurt Nordend starten?",
+    "answer": "Nach einem ersten Beratungsgespräch kann unser Pflegedienst in Frankfurt Nordend in der Regel innerhalb weniger Tage mit der Pflege beginnen. Bei dringenden Fällen finden wir auch kurzfristig eine Lösung für Sie in Frankfurt."
+  },
+  {
+    "question": "Übernimmt die Pflegekasse die Kosten für den Pflegedienst in Frankfurt Nordend?",
+    "answer": "Ja, bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten für unseren Pflegedienst in Frankfurt Nordend. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert."
+  },
+  {
+    "question": "Kann ich den Pflegedienst Frankfurt Nordend auch ohne Pflegegrad nutzen?",
+    "answer": "Ja, unsere Serviceleistungen können Sie auch ohne Pflegegrad als Selbstzahler in Anspruch nehmen. Unser Pflegedienst in Frankfurt Nordend hilft Ihnen auch gerne bei der Beantragung eines Pflegegrades."
+  },
+  {
+    "question": "Bekomme ich beim Pflegedienst Frankfurt Nordend feste Pflegekräfte?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Nordend achtet auf Kontinuität in der Pflege. Nach Möglichkeit betreuen Sie dieselben Pflegekräfte, damit ein Vertrauensverhältnis entstehen kann – das ist uns bei der ambulanten Pflege in Frankfurt besonders wichtig."
+  },
+  {
+    "question": "Welche Leistungen umfasst der Pflegedienst Frankfurt Nordend?",
+    "answer": "Unser Pflegedienst in Frankfurt Nordend bietet Grundpflege, Behandlungspflege, Intensivpflege, Verhinderungspflege, Pflegeberatung und hauswirtschaftliche Hilfe. Wir betreuen alle Pflegegrade und erstellen individuelle Pflegepläne für Patienten im Nordend."
+  },
+  {
+    "question": "Bietet der Pflegedienst Frankfurt Nordend auch Wundversorgung an?",
+    "answer": "Ja, die professionelle Wundversorgung gehört zu den Kernleistungen unseres Pflegedienstes in Frankfurt Nordend. Unsere examinierten Pflegefachkräfte versorgen chronische und akute Wunden fachgerecht bei Ihnen zu Hause."
+  }
+];
 
 const grundpflegeLeistungen = [
   "Hilfe bei der Körperpflege (Waschen, Duschen, Baden)",
@@ -49,6 +77,7 @@ const Nordend = () => {
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
           { name: "Nordend", url: "https://www.avyta.de/standorte/frankfurt/nordend" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(nordendFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -264,6 +293,22 @@ const Nordend = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Ja, unser Pflegedienst in Frankfurt Nordend achtet auf Kontinuität in der Pflege. Nach Möglichkeit betreuen Sie dieselben Pflegekräfte, damit ein Vertrauensverhältnis entstehen kann – das ist uns bei der ambulanten Pflege in Frankfurt besonders wichtig.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Welche Leistungen umfasst der Pflegedienst Frankfurt Nordend?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Unser Pflegedienst in Frankfurt Nordend bietet Grundpflege, Behandlungspflege, Intensivpflege, Verhinderungspflege, Pflegeberatung und hauswirtschaftliche Hilfe. Wir betreuen alle Pflegegrade und erstellen individuelle Pflegepläne für Patienten im Nordend.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Frankfurt Nordend auch Wundversorgung an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, die professionelle Wundversorgung gehört zu den Kernleistungen unseres Pflegedienstes in Frankfurt Nordend. Unsere examinierten Pflegefachkräfte versorgen chronische und akute Wunden fachgerecht bei Ihnen zu Hause.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

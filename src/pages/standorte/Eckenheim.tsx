@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +13,33 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+
+const eckenheimFaqs = [
+  {
+    "question": "Wie werden die Leistungen des Pflegedienstes Frankfurt Eckenheim abgerechnet?",
+    "answer": "Die meisten Leistungen unseres Pflegedienstes in Frankfurt Eckenheim werden direkt mit der Pflegekasse abgerechnet. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse übernommen. Wir beraten Sie gerne zu Ihren Ansprüchen und unterstützen bei der Antragstellung."
+  },
+  {
+    "question": "Können Angehörige in die Pflege des Pflegedienstes Eckenheim einbezogen werden?",
+    "answer": "Selbstverständlich! Unser Pflegedienst in Frankfurt Eckenheim bezieht Angehörige gerne ein und bietet auch Pflegeanleitungen an, damit sie bestimmte Aufgaben selbst übernehmen können. So stärken wir die häusliche Pflegesituation gemeinsam."
+  },
+  {
+    "question": "Was ist, wenn sich mein Pflegebedarf in Frankfurt Eckenheim ändert?",
+    "answer": "Kein Problem – unser Pflegedienst in Frankfurt Eckenheim passt den Pflegeplan jederzeit an Ihre veränderten Bedürfnisse an. Flexibilität ist uns wichtig, denn Ihre Pflegesituation kann sich im Laufe der Zeit verändern."
+  },
+  {
+    "question": "Wie schnell kann der Pflegedienst Frankfurt Eckenheim starten?",
+    "answer": "Nach einem ersten Beratungsgespräch kann unser Pflegedienst in Frankfurt Eckenheim in der Regel innerhalb weniger Tage mit der Pflege beginnen. Bei dringenden Fällen finden wir auch kurzfristig eine Lösung. Rufen Sie uns an unter 069 153 914 05."
+  },
+  {
+    "question": "Welche Pflegegrade versorgt der Pflegedienst Frankfurt Eckenheim?",
+    "answer": "Unser Pflegedienst in Frankfurt Eckenheim betreut Patienten aller Pflegegrade – von Pflegegrad 1 bis Pflegegrad 5. Wir bieten Grundpflege, Behandlungspflege und Intensivpflege mit Heimbeatmung an und passen unsere Leistungen individuell an Ihre Bedürfnisse an."
+  },
+  {
+    "question": "Bietet der Pflegedienst Frankfurt Eckenheim auch Verhinderungspflege an?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Eckenheim übernimmt die Verhinderungspflege, wenn pflegende Angehörige eine Auszeit brauchen. Ab 2025 steht ein flexibles Budget von bis zu 3.539 Euro pro Jahr zur Verfügung. Wir beraten Sie gerne zu Ihren Ansprüchen."
+  }
+];
 
 const grundpflegeLeistungen = [
   "Hilfe bei der Körperpflege (Waschen, Duschen, Baden)",
@@ -49,6 +77,7 @@ const Eckenheim = () => {
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
           { name: "Eckenheim", url: "https://www.avyta.de/standorte/frankfurt/eckenheim" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(eckenheimFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -264,6 +293,22 @@ const Eckenheim = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Nach einem ersten Beratungsgespräch kann unser Pflegedienst in Frankfurt Eckenheim in der Regel innerhalb weniger Tage mit der Pflege beginnen. Bei dringenden Fällen finden wir auch kurzfristig eine Lösung. Rufen Sie uns an unter 069 153 914 05.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Welche Pflegegrade versorgt der Pflegedienst Frankfurt Eckenheim?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Unser Pflegedienst in Frankfurt Eckenheim betreut Patienten aller Pflegegrade – von Pflegegrad 1 bis Pflegegrad 5. Wir bieten Grundpflege, Behandlungspflege und Intensivpflege mit Heimbeatmung an und passen unsere Leistungen individuell an Ihre Bedürfnisse an.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Frankfurt Eckenheim auch Verhinderungspflege an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Eckenheim übernimmt die Verhinderungspflege, wenn pflegende Angehörige eine Auszeit brauchen. Ab 2025 steht ein flexibles Budget von bis zu 3.539 Euro pro Jahr zur Verfügung. Wir beraten Sie gerne zu Ihren Ansprüchen.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

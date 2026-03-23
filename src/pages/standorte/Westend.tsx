@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import {
   Accordion,
   AccordionContent,
@@ -12,6 +13,33 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+
+const westendFaqs = [
+  {
+    "question": "Bietet der Pflegedienst Frankfurt Westend auch Begleitung zu Arztterminen?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Westend begleitet Sie gerne zu Arztterminen, Therapien oder anderen wichtigen Terminen in Frankfurt. Sprechen Sie uns einfach an – wir organisieren die Begleitung für Sie."
+  },
+  {
+    "question": "Wie flexibel sind die Pflegezeiten des Pflegedienstes Frankfurt Westend?",
+    "answer": "Unser Pflegedienst in Frankfurt Westend richtet sich nach Ihren Wünschen. Ob früh morgens oder spät abends – wir passen unsere Zeiten an Ihren Tagesablauf an. Auch Wochenend- und Feiertagspflege ist in Frankfurt Westend selbstverständlich."
+  },
+  {
+    "question": "Betreut der Pflegedienst Frankfurt Westend auch Privatpatienten?",
+    "answer": "Selbstverständlich betreut unser Pflegedienst in Frankfurt Westend sowohl gesetzlich als auch privat versicherte Patienten. Wir beraten Sie gerne zu den Abrechnungsmodalitäten und Ihren individuellen Ansprüchen."
+  },
+  {
+    "question": "Wie beantrage ich Pflegeleistungen für den Pflegedienst in Frankfurt Westend?",
+    "answer": "Unser Pflegedienst in Frankfurt Westend unterstützt Sie bei der Antragstellung. Wir helfen beim Pflegegrad beantragen und beraten zu Pflegegeld, Sachleistungen und Kombinationsleistungen."
+  },
+  {
+    "question": "Welche Kosten übernimmt die Pflegekasse für den Pflegedienst Frankfurt Westend?",
+    "answer": "Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse Sachleistungen für die Grundpflege durch unseren Pflegedienst in Frankfurt Westend. Ab Pflegegrad 2 stehen Ihnen zwischen 761 und 2.200 Euro monatlich zu. Behandlungspflege wird zusätzlich über ärztliche Verordnung von der Krankenkasse finanziert."
+  },
+  {
+    "question": "Bietet der Pflegedienst Frankfurt Westend auch Intensivpflege zu Hause an?",
+    "answer": "Ja, unser Pflegedienst in Frankfurt Westend bietet außerklinische Intensivpflege mit Heimbeatmung an. Unsere spezialisierten Pflegefachkräfte betreuen Beatmungspatienten professionell und rund um die Uhr in ihrem Zuhause im Westend."
+  }
+];
 
 const grundpflegeLeistungen = [
   "Hilfe bei der Körperpflege (Waschen, Duschen, Baden)",
@@ -49,6 +77,7 @@ const Westend = () => {
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
           { name: "Westend", url: "https://www.avyta.de/standorte/frankfurt/westend" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(westendFaqs)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -264,6 +293,22 @@ const Westend = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Unser Pflegedienst in Frankfurt Westend unterstützt Sie bei der Antragstellung. Wir helfen beim <Link to="/blog/pflegegrad-beantragen" className="text-primary hover:underline">Pflegegrad beantragen</Link> und beraten zu <Link to="/blog/pflegegeld-tabelle" className="text-primary hover:underline">Pflegegeld</Link>, Sachleistungen und <Link to="/blog/kombinationsleistung-pflege" className="text-primary hover:underline">Kombinationsleistungen</Link>.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Welche Kosten übernimmt die Pflegekasse für den Pflegedienst Frankfurt Westend?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse Sachleistungen für die Grundpflege durch unseren Pflegedienst in Frankfurt Westend. Ab Pflegegrad 2 stehen Ihnen zwischen 761 und 2.200 Euro monatlich zu. Behandlungspflege wird zusätzlich über ärztliche Verordnung von der Krankenkasse finanziert.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Frankfurt Westend auch Intensivpflege zu Hause an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Westend bietet außerklinische Intensivpflege mit Heimbeatmung an. Unsere spezialisierten Pflegefachkräfte betreuen Beatmungspatienten professionell und rund um die Uhr in ihrem Zuhause im Westend.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
