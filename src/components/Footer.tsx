@@ -50,6 +50,7 @@ const footerLinks = {
     links: [
       { name: "Impressum", href: "/impressum" },
       { name: "Datenschutz", href: "/datenschutz" },
+      { name: "Cookie-Richtlinie", href: "/cookie-richtlinie" },
       { name: "Sitemap", href: "/sitemap" },
     ],
   },
