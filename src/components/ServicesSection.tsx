@@ -365,10 +365,10 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
                     </div>
                     
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+                    <div className="flex flex-col gap-3 md:gap-4">
                       <Button 
                         size="lg" 
-                        className={`flex-1 bg-gradient-to-r ${activeService.color} hover:opacity-90 text-white shadow-lg group text-sm md:text-base`}
+                        className={`w-full bg-gradient-to-r ${activeService.color} hover:opacity-90 text-white shadow-lg group text-sm md:text-base`}
                         asChild
                       >
                         <Link to={activeService.link}>
@@ -380,7 +380,7 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
                       <Button 
                         size="lg" 
                         variant="outline"
-                        className="flex-1 border-2 group text-sm md:text-base"
+                        className="w-full border-2 group text-sm md:text-base"
                         asChild
                       >
                         <a href="tel:+496915391405">
