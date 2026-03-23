@@ -22,7 +22,7 @@ const locations = [
   { 
     city: "Bad Vilbel", 
     address: "Wetteraukreis", 
-    phone: "069 153 914 05", 
+    phone: "06101 95 40 080", 
     link: "/standorte/bad-vilbel",
     description: "Für die Region Wetterau – persönliche Betreuung in Ihrer Nähe",
     gradient: "from-accent via-accent/80 to-primary",
