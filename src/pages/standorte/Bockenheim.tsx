@@ -27,6 +27,19 @@ const bockenheimFaqs = [
     question: "Worauf sollte man bei einem Pflegedienst in Frankfurt Bockenheim achten?",
     answer: "Achten Sie auf qualifiziertes Personal, einen permanenten Qualitätssicherungsprozess, Erreichbarkeit auch an Wochenenden und Feiertagen sowie eine familiäre und herzliche Atmosphäre."
   },
+,
+  {
+    question: "Übernimmt die Pflegekasse die Kosten für den Pflegedienst in Frankfurt Bockenheim?",
+    answer: "Ja, bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten für unseren Pflegedienst in Frankfurt Bockenheim. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Wir beraten Sie gerne zu Ihren individuellen Ansprüchen."
+  },
+  {
+    question: "Bietet der Pflegedienst Frankfurt Bockenheim auch Verhinderungspflege an?",
+    answer: "Ja, unser Pflegedienst in Frankfurt Bockenheim übernimmt die Verhinderungspflege, wenn pflegende Angehörige eine Auszeit brauchen. Ab 2025 steht ein flexibles Budget von bis zu 3.539 Euro jährlich für Verhinderungs- und Kurzzeitpflege zur Verfügung."
+  },
+  {
+    question: "Ist der Pflegedienst Frankfurt Bockenheim auch am Wochenende erreichbar?",
+    answer: "Ja, unser Pflegedienst in Frankfurt Bockenheim ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05."
+  }
 ];
 const grundpflegeLeistungen = [
   "Hauswirtschaftliche Hilfe",
@@ -237,6 +250,30 @@ const Bockenheim = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Achten Sie auf qualifiziertes Personal, einen permanenten Qualitätssicherungsprozess, Erreichbarkeit auch an Wochenenden und Feiertagen sowie eine familiäre und herzliche Atmosphäre.
+                    </AccordionContent>
+                  </AccordionItem>
+                                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Übernimmt die Pflegekasse die Kosten für den Pflegedienst in Frankfurt Bockenheim?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten für unseren Pflegedienst in Frankfurt Bockenheim. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Wir beraten Sie gerne zu Ihren individuellen Ansprüchen.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Frankfurt Bockenheim auch Verhinderungspflege an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Bockenheim übernimmt die Verhinderungspflege, wenn pflegende Angehörige eine Auszeit brauchen. Ab 2025 steht ein flexibles Budget von bis zu 3.539 Euro jährlich für Verhinderungs- und Kurzzeitpflege zur Verfügung.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Ist der Pflegedienst Frankfurt Bockenheim auch am Wochenende erreichbar?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Bockenheim ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

@@ -27,6 +27,19 @@ const sachsenhausenFaqs = [
     question: "Welche Pflegegrade kann der Avyta Pflegedienst in Sachsenhausen abdecken?",
     answer: "Als Pflegedienst in Sachsenhausen können wir bei Avyta alle Pflegegrade versorgen. Wir übernehmen für Sie ganz einfache Alltagshilfen, unterstützen Sie in der Grundpflege zuhause und übernehmen in der Intensivpflege auch komplexe medizinische Leistungen, um Ihre Gesundheit und Ihren Komfort zu garantieren."
   },
+,
+  {
+    question: "Bietet der Pflegedienst Sachsenhausen auch Intensivpflege an?",
+    answer: "Ja, unser Pflegedienst in Sachsenhausen bietet auch außerklinische Intensivpflege mit Heimbeatmung an. Unsere spezialisierten Pflegefachkräfte betreuen Beatmungspatienten professionell und rund um die Uhr in ihrem Zuhause."
+  },
+  {
+    question: "Wie schnell kann der Pflegedienst Sachsenhausen starten?",
+    answer: "Nach einem kostenlosen Erstgespräch kann unser Pflegedienst in Sachsenhausen in der Regel innerhalb weniger Tage mit der Pflege beginnen. Bei dringenden Fällen finden wir auch kurzfristig eine Lösung."
+  },
+  {
+    question: "Ist der Pflegedienst Sachsenhausen auch am Wochenende erreichbar?",
+    answer: "Ja, unser Pflegedienst in Sachsenhausen ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05."
+  }
 ];
 
 const grundpflegeLeistungen = [
@@ -241,6 +254,30 @@ const Sachsenhausen = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Als Pflegedienst in Sachsenhausen können wir bei Avyta alle Pflegegrade versorgen. Wir übernehmen für Sie ganz einfache <strong>Alltagshilfen</strong>, unterstützen Sie in der <strong>Grundpflege</strong> zuhause und übernehmen in der <strong>Intensivpflege</strong> auch komplexe medizinische Leistungen, um Ihre Gesundheit und Ihren <strong>Komfort zu garantieren</strong>.
+                    </AccordionContent>
+                  </AccordionItem>
+                                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Sachsenhausen auch Intensivpflege an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Sachsenhausen bietet auch außerklinische Intensivpflege mit Heimbeatmung an. Unsere spezialisierten Pflegefachkräfte betreuen Beatmungspatienten professionell und rund um die Uhr in ihrem Zuhause.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Wie schnell kann der Pflegedienst Sachsenhausen starten?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Nach einem kostenlosen Erstgespräch kann unser Pflegedienst in Sachsenhausen in der Regel innerhalb weniger Tage mit der Pflege beginnen. Bei dringenden Fällen finden wir auch kurzfristig eine Lösung.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Ist der Pflegedienst Sachsenhausen auch am Wochenende erreichbar?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Sachsenhausen ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

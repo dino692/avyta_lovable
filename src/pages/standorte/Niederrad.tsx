@@ -27,6 +27,19 @@ const niederradFaqs = [
     question: "Wie beauftragt man den Pflegedienst in Frankfurt Niederrad?",
     answer: "Der Weg zu unserem Avyta Pflegedienst in Frankfurt Niederrad führt zunächst über einen Antrag an die Kranken- oder Pflegekasse, um die Pflegebedürftigkeit und einen Pflegegrad feststellen zu lassen. Dabei können vielerlei Hilfsorganisationen Sie unterstützen. Danach wird über den medizinischen Dienst ein Termin vereinbart, und wir können einen Kostenvoranschlag zur Abrechnung mit den Kassen erstellen."
   },
+,
+  {
+    question: "Ist der Pflegedienst Frankfurt Niederrad auch an Feiertagen verfügbar?",
+    answer: "Ja, unser Pflegedienst in Frankfurt Niederrad ist an 365 Tagen im Jahr für Sie im Einsatz – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05."
+  },
+  {
+    question: "Betreut der Pflegedienst Frankfurt Niederrad auch Demenzpatienten?",
+    answer: "Ja, unser Pflegedienst in Frankfurt Niederrad hat erfahrene Mitarbeiter, die speziell für die Betreuung von Menschen mit Demenz geschult sind. Wir bieten einfühlsame Begleitung im Alltag und entlasten pflegende Angehörige."
+  },
+  {
+    question: "Bietet der Pflegedienst Frankfurt Niederrad auch Pflegeberatung an?",
+    answer: "Ja, unser Pflegedienst in Frankfurt Niederrad bietet umfassende Pflegeberatung zu Pflegegraden, Leistungsansprüchen, Verhinderungspflege und dem Entlastungsbetrag an. Wir helfen Ihnen, alle Ihnen zustehenden Leistungen optimal zu nutzen."
+  }
 ];
 
 const grundpflegeLeistungen = [
@@ -244,6 +257,30 @@ const Niederrad = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Der Weg zu unserem Avyta Pflegedienst in Frankfurt Niederrad führt zunächst über einen <strong>Antrag an die Kranken- oder Pflegekasse</strong>, um die Pflegebedürftigkeit und einen Pflegegrad feststellen zu lassen. Dabei können vielerlei Hilfsorganisationen Sie unterstützen. Danach wird über den medizinischen Dienst ein Termin vereinbart, und wir können einen Kostenvoranschlag zur Abrechnung mit den Kassen erstellen.
+                    </AccordionContent>
+                  </AccordionItem>
+                                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Ist der Pflegedienst Frankfurt Niederrad auch an Feiertagen verfügbar?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Niederrad ist an 365 Tagen im Jahr für Sie im Einsatz – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Betreut der Pflegedienst Frankfurt Niederrad auch Demenzpatienten?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Niederrad hat erfahrene Mitarbeiter, die speziell für die Betreuung von Menschen mit Demenz geschult sind. Wir bieten einfühlsame Begleitung im Alltag und entlasten pflegende Angehörige.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Bietet der Pflegedienst Frankfurt Niederrad auch Pflegeberatung an?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Frankfurt Niederrad bietet umfassende Pflegeberatung zu Pflegegraden, Leistungsansprüchen, Verhinderungspflege und dem Entlastungsbetrag an. Wir helfen Ihnen, alle Ihnen zustehenden Leistungen optimal zu nutzen.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

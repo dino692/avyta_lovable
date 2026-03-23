@@ -27,6 +27,19 @@ const bornheimFaqs = [
     question: "Welche weiteren Leistungen bietet der Avyta Pflegedienst in Bornheim?",
     answer: "Neben der direkten Pflege bieten wir Serviceleistungen wie Hilfe bei Antragstellungen, Begleitung bei Spaziergängen, Vermittlung von Dienstleistern und Unterstützung bei der Medikamentenbeschaffung."
   },
+,
+  {
+    question: "Übernimmt die Pflegekasse die Kosten für den Pflegedienst in Bornheim?",
+    answer: "Ja, bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse Sachleistungen für die Grundpflege durch unseren Pflegedienst in Bornheim. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert."
+  },
+  {
+    question: "Wie schnell kann der Pflegedienst Bornheim mit der Pflege starten?",
+    answer: "Nach einem kostenlosen Erstgespräch kann unser Pflegedienst in Bornheim in der Regel innerhalb weniger Tage mit der Pflege beginnen. Bei dringenden Fällen finden wir auch kurzfristig eine Lösung."
+  },
+  {
+    question: "Betreut der Pflegedienst Bornheim auch Demenz- und Intensivpatienten?",
+    answer: "Ja, unser Pflegedienst in Bornheim betreut auch Menschen mit Demenz und bietet Intensivpflege mit Heimbeatmung an. Unsere Mitarbeiter sind speziell für diese anspruchsvollen Pflegesituationen geschult."
+  }
 ];
 
 const grundpflegeLeistungen = [
@@ -238,6 +251,30 @@ const Bornheim = () => {
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
                       Neben der direkten Pflege bieten wir Serviceleistungen wie Hilfe bei Antragstellungen, Begleitung bei Spaziergängen, Vermittlung von Dienstleistern und Unterstützung bei der Medikamentenbeschaffung.
+                    </AccordionContent>
+                  </AccordionItem>
+                                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Übernimmt die Pflegekasse die Kosten für den Pflegedienst in Bornheim?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse Sachleistungen für die Grundpflege durch unseren Pflegedienst in Bornheim. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Wie schnell kann der Pflegedienst Bornheim mit der Pflege starten?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Nach einem kostenlosen Erstgespräch kann unser Pflegedienst in Bornheim in der Regel innerhalb weniger Tage mit der Pflege beginnen. Bei dringenden Fällen finden wir auch kurzfristig eine Lösung.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-display font-semibold">
+                      Betreut der Pflegedienst Bornheim auch Demenz- und Intensivpatienten?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      Ja, unser Pflegedienst in Bornheim betreut auch Menschen mit Demenz und bietet Intensivpflege mit Heimbeatmung an. Unsere Mitarbeiter sind speziell für diese anspruchsvollen Pflegesituationen geschult.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
