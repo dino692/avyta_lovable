@@ -136,11 +136,11 @@ const Frankfurt = () => {
   return (
     <>
       <Helmet>
-        <title>Ambulante Pflege Frankfurt | AVYTA Pflegedienst</title>
-        <meta name="description" content="Ambulante Pflege in Frankfurt am Main. Professioneller Pflegedienst in allen Frankfurter Stadtteilen. Behandlungspflege, Grundpflege, 24h-Pflege. Tel: 069 153 914 05" />
+        <title>Pflegedienst Frankfurt ✅ 24/7 erreichbar | MDK 1,6 | avyta.de</title>
+        <meta name="description" content="Pflegedienst Frankfurt ✓ MDK Bestnote 1,6 ✓ 5.0 Sterne Google ✓ 20+ Stadtteile ✓ Grund- & Behandlungspflege, Intensivpflege, 24h-Pflege ✓ Tel: 069 153 914 05 | avyta.de" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt" />
-        <meta property="og:title" content="Ambulante Pflege Frankfurt | AVYTA Pflegedienst" />
-        <meta property="og:description" content="Ambulante Pflege in Frankfurt am Main. Professioneller Pflegedienst in allen Frankfurter Stadtteilen." />
+        <meta property="og:title" content="Pflegedienst Frankfurt ✅ 24/7 erreichbar | MDK Note 1,6" />
+        <meta property="og:description" content="Pflegedienst Frankfurt in 20+ Stadtteilen ✓ MDK Bestnote 1,6 ✓ 5.0 Sterne Google ✓ Grund- & Behandlungspflege, Intensivpflege, 24h-Pflege" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
