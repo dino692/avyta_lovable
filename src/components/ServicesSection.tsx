@@ -204,7 +204,7 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
         {/* Main Interactive Section */}
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-start min-w-0">
           {/* Left: Service Selector - horizontal scroll on mobile, vertical list on desktop */}
-          <div className="lg:col-span-5 xl:col-span-4">
+          <div className="lg:col-span-5 xl:col-span-4 min-w-0 overflow-hidden">
             {/* Mobile: horizontal scrollable pills */}
             <div className={`flex lg:hidden overflow-x-auto gap-2 pb-3 -mx-4 px-4 scrollbar-hide transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               {services.map((service, index) => {
