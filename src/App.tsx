@@ -165,6 +165,7 @@ const App = () => (
               <Route path="/broschuere" element={<Broschuere />} />
               <Route path="/leistungskatalog" element={<Leistungskatalog />} />
               <Route path="/ratgeber" element={<Ratgeber />} />
+              <Route path="/cookie-richtlinie" element={<CookieRichtlinie />} />
               {/* Legacy redirects */}
               <Route path="/ambulanter-pflegedienst" element={<Navigate to="/leistungen" replace />} />
               <Route path="/ueber-uns/galerie/weihnachtsfeier-2023" element={<Navigate to="/ueber-uns" replace />} />
