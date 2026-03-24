@@ -15,6 +15,8 @@ import {
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateServiceSchema } from "@/lib/serviceSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const faqs = [
   {
@@ -28,6 +30,18 @@ const faqs = [
   {
     question: "Wann sollte ich die Pflegeberatung in Frankfurt von Avyta in Anspruch nehmen?",
     answer: "Nach einem Unfall oder einem operativen Eingriff ist die Mobilität oft für Wochen eingeschränkt. Auch altersbedingt fällt Ihnen vielleicht auf, dass Sie Ihre medizinische und alltägliche Versorgung nicht mehr ohne Unterstützung bewältigen können. Kontaktieren Sie unser freundliches Beratungsteam gern schon vor der Beantragung einer Pflegestufe. Wir begleiten Sie auf Ihrem gesamten Krankheits- und Genesungsweg."
+  },
+  {
+    question: "Ist die Pflegeberatung in Frankfurt kostenlos?",
+    answer: "Ja, die Pflegeberatung bei AVYTA in Frankfurt ist vollständig kostenlos und unverbindlich. Jeder Versicherte mit Pflegegrad hat zudem einen gesetzlichen Anspruch auf regelmäßige Pflegeberatung (§ 7a SGB XI). Wir kommen gerne zu Ihnen nach Hause und beraten Sie vor Ort."
+  },
+  {
+    question: "Hilft AVYTA beim Pflegegrad-Antrag in Frankfurt?",
+    answer: "Ja, unsere Pflegeberatung in Frankfurt unterstützt Sie umfassend bei der Beantragung eines Pflegegrads. Wir helfen beim Ausfüllen der Anträge, bereiten Sie auf die MDK-Begutachtung vor und begleiten Sie durch den gesamten Prozess. Mit über 2.500 bereits betreuten Patienten seit 2013 kennen wir die Abläufe genau."
+  },
+  {
+    question: "Wie läuft eine Pflegeberatung bei AVYTA in Frankfurt ab?",
+    answer: "In einem persönlichen Gespräch – bei Ihnen zu Hause oder in unserem Büro in Frankfurt – analysieren wir Ihre Pflegesituation, besprechen alle verfügbaren Leistungen und erstellen einen individuellen Pflegeplan. Wir erklären Ihnen Ihre Ansprüche und kümmern uns um die Koordination aller notwendigen Maßnahmen."
   },
 ];
 
@@ -49,6 +63,12 @@ const Pflegeberatung = () => {
           { name: "Pflegeberatung", url: "https://www.avyta.de/leistungen/pflegeberatung-frankfurt" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Pflegeberatung Frankfurt am Main",
+          serviceDescription: "Kostenlose Pflegeberatung in Frankfurt: Individuelle Pflegepläne, Hilfe bei Pflegegrad-Anträgen und umfassende Beratung für Angehörige und Pflegebedürftige.",
+          serviceType: "Pflegeberatung",
+          canonicalUrl: "https://www.avyta.de/leistungen/pflegeberatung-frankfurt",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -72,6 +92,9 @@ const Pflegeberatung = () => {
               </div>
             </div>
           </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Von Fall zu Fall */}
           <section className="py-12 md:py-24 bg-secondary/30">

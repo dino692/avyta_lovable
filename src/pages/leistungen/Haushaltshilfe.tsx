@@ -7,7 +7,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Utensils } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import TrustBadges from "@/components/TrustBadges";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateServiceSchema } from "@/lib/serviceSchema";
 
 const leistungen = [
   "Reinigung der Wohnung",
@@ -18,6 +27,29 @@ const leistungen = [
   "Müll entsorgen",
   "Blumen gießen und Pflanzenpflege",
   "Begleitung bei Arztbesuchen",
+];
+
+const faqs = [
+  {
+    question: "Was kostet eine Haushaltshilfe in Frankfurt?",
+    answer: "Die Kosten für eine Haushaltshilfe in Frankfurt können über verschiedene Wege finanziert werden: Bei anerkanntem Pflegegrad über den Entlastungsbetrag (131 €/Monat), als Pflegesachleistung oder über die Verhinderungspflege. Bei ärztlicher Verordnung kann die Krankenkasse die Kosten übernehmen. AVYTA berät Sie kostenlos zu allen Finanzierungsmöglichkeiten."
+  },
+  {
+    question: "Wer hat Anspruch auf eine Haushaltshilfe in Frankfurt?",
+    answer: "Anspruch auf eine Haushaltshilfe in Frankfurt haben Personen mit anerkanntem Pflegegrad (1–5), nach Krankenhausaufenthalten oder Operationen (auf ärztliche Verordnung), Schwangere mit Risikoschwangerschaft sowie chronisch kranke Menschen. Auch ohne Pflegegrad können Sie unsere Haushaltshilfe privat in Anspruch nehmen."
+  },
+  {
+    question: "Wie oft kommt die Haushaltshilfe in Frankfurt?",
+    answer: "Die Häufigkeit der Haushaltshilfe richtet sich ganz nach Ihrem Bedarf. Von einmal wöchentlich bis täglich – wir passen uns Ihrem Alltag flexibel an. Ob morgens, mittags oder nachmittags: AVYTA kommt, wann es Ihnen am besten passt. Den Umfang legen wir gemeinsam im Erstgespräch fest."
+  },
+  {
+    question: "Kann ich die Haushaltshilfe mit anderen Pflegeleistungen kombinieren?",
+    answer: "Ja, bei AVYTA erhalten Sie Haushaltshilfe, Grundpflege und Behandlungspflege aus einer Hand. So können Sie z. B. hauswirtschaftliche Versorgung mit Körperpflege und Medikamentengabe kombinieren. Wir erstellen einen individuellen Pflegeplan, der alle Ihre Bedürfnisse abdeckt."
+  },
+  {
+    question: "Wie kann ich eine Haushaltshilfe in Frankfurt beauftragen?",
+    answer: "Rufen Sie uns einfach unter 069 153 914 05 an oder nutzen Sie unser Kontaktformular. In einem kostenlosen Erstgespräch besprechen wir Ihren Bedarf und erstellen ein individuelles Angebot. Die Haushaltshilfe kann oft innerhalb weniger Tage bei Ihnen starten."
+  },
 ];
 
 const Haushaltshilfe = () => {
@@ -36,6 +68,13 @@ const Haushaltshilfe = () => {
           { name: "Leistungen", url: "https://www.avyta.de/leistungen" },
           { name: "Haushaltshilfe", url: "https://www.avyta.de/leistungen/haushaltshilfe" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Haushaltshilfe Frankfurt am Main",
+          serviceDescription: "Professionelle Haushaltshilfe in Frankfurt: Reinigung, Einkaufen, Kochen und Alltagsbegleitung für Senioren und pflegebedürftige Menschen.",
+          serviceType: "Hauswirtschaftliche Versorgung",
+          canonicalUrl: "https://www.avyta.de/leistungen/haushaltshilfe",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -48,7 +87,7 @@ const Haushaltshilfe = () => {
                   <Utensils className="w-7 h-7 md:w-10 md:h-10 text-primary" />
                 </div>
                 <h1 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4 md:mb-6">
-                  Haushaltshilfe
+                  Haushaltshilfe in Frankfurt am Main
                 </h1>
                 <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                   Professionelle Unterstützung im Haushalt – damit Sie sich auf das 
@@ -60,6 +99,9 @@ const Haushaltshilfe = () => {
               </div>
             </div>
           </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Content */}
           <section className="py-12 md:py-24">
@@ -141,8 +183,35 @@ const Haushaltshilfe = () => {
             </div>
           </section>
 
-          {/* Other Services */}
+          {/* FAQ */}
           <section className="py-12 md:py-24 bg-secondary/30">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
+                  Häufige Fragen zur Haushaltshilfe in Frankfurt
+                </h2>
+                <Accordion type="single" collapsible className="space-y-2 md:space-y-3">
+                  {faqs.map((faq, index) => (
+                    <AccordionItem 
+                      key={index} 
+                      value={`item-${index}`}
+                      className="bg-background rounded-xl border border-border/50 px-4 md:px-6"
+                    >
+                      <AccordionTrigger className="text-left text-sm md:text-base font-medium text-foreground hover:text-primary py-3 md:py-4">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-sm md:text-base text-muted-foreground pb-3 md:pb-4">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            </div>
+          </section>
+
+          {/* Other Services */}
+          <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
               <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
                 Weitere Leistungen

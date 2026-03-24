@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Stethoscope, Users, FileCheck, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import TrustBadges from "@/components/TrustBadges";
 import {
   Accordion,
   AccordionContent,
@@ -15,6 +16,8 @@ import {
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateServiceSchema } from "@/lib/serviceSchema";
+
 const leistungen = [
   {
     title: "Medikamentenmanagement",
@@ -41,15 +44,27 @@ const leistungen = [
 const faqs = [
   {
     question: "Wie wird die Behandlungspflege in Frankfurt finanziert?",
-    answer: "Die Leistungen der Behandlungspflege werden in der Regel über die Kranken- oder Pflegekasse abgerechnet. Die finanzielle Unterstützung hängt vom jeweiligen Pflegegrad ab. Wir helfen Ihnen gerne bei der Beantragung und der finanziellen Planung der Behandlungspflege in Frankfurt."
+    answer: "Die Behandlungspflege in Frankfurt wird bei ärztlicher Verordnung vollständig von der Krankenkasse übernommen. Sie benötigen eine Verordnung häuslicher Krankenpflege (Muster 12) von Ihrem Arzt. Wir bei AVYTA kümmern uns um alle Formalitäten und rechnen direkt mit Ihrer Kasse ab – für Sie entstehen in der Regel keine Kosten."
+  },
+  {
+    question: "Welche Qualifikationen haben die Pflegekräfte für die Behandlungspflege?",
+    answer: "Unsere Behandlungspflegekräfte bei AVYTA sind examinierte Pflegefachkräfte mit staatlicher Anerkennung. Sie werden regelmäßig in Wundversorgung, Injektionstechniken und Medikamentenmanagement fortgebildet. Mit einer MDK-Note von 1,6 garantieren wir höchste medizinische Qualität in der Behandlungspflege Frankfurt."
+  },
+  {
+    question: "Wie schnell kann die Behandlungspflege in Frankfurt beginnen?",
+    answer: "Bei AVYTA kann die Behandlungspflege in Frankfurt oft innerhalb von 24–48 Stunden nach Eingang der ärztlichen Verordnung starten. In dringenden Fällen, z. B. nach einer Krankenhausentlassung, organisieren wir auch kurzfristigere Einsätze. Rufen Sie uns an unter 069 153 914 05."
+  },
+  {
+    question: "Was ist der Unterschied zwischen Behandlungspflege und Grundpflege?",
+    answer: "Die Behandlungspflege in Frankfurt umfasst medizinische Maßnahmen wie Wundversorgung, Injektionen und Medikamentengabe – diese werden von der Krankenkasse finanziert. Die Grundpflege hingegen umfasst pflegerische Hilfen wie Körperpflege und Mobilisation und wird über die Pflegekasse abgerechnet. AVYTA bietet beides aus einer Hand."
+  },
+  {
+    question: "Kann ich Behandlungspflege auch ohne Pflegegrad erhalten?",
+    answer: "Ja, die Behandlungspflege in Frankfurt ist unabhängig vom Pflegegrad. Sie benötigen lediglich eine ärztliche Verordnung. Die Kosten werden von der Krankenkasse (nicht Pflegekasse) übernommen. Auch Menschen ohne Pflegegrad können so professionelle medizinische Pflege zu Hause erhalten."
   },
   {
     question: "Wie lange kann ich die Behandlungspflege in Frankfurt in Anspruch nehmen?",
-    answer: "Die Dauer der Behandlungspflege in Frankfurt kann je nach Gesundheitszustand variieren. Wir passen unsere Pflegepläne flexibel an Ihre individuellen Bedürfnisse an und bieten Ihnen die notwendige Unterstützung so lange wie nötig."
-  },
-  {
-    question: "Welche Qualifikationen haben die Pflegekräfte im Bereich der Behandlungspflege?",
-    answer: "Unser Team bei Avyta besteht aus hochqualifizierten Pflegefachkräften und Pflegehelfern, die über die erforderlichen Qualifikationen für die Behandlungspflege in Frankfurt verfügen. Wir stellen sicher, dass Ihre Angehörigen die bestmögliche medizinische Betreuung erhalten."
+    answer: "Die Dauer der Behandlungspflege richtet sich nach Ihrer ärztlichen Verordnung und kann bei Bedarf verlängert werden. Bei chronischen Erkrankungen ist auch eine dauerhafte Behandlungspflege möglich. Wir passen unsere Pflegepläne flexibel an Ihren Gesundheitszustand an."
   },
 ];
 
@@ -71,6 +86,12 @@ const Behandlungspflege = () => {
           { name: "Behandlungspflege", url: "https://www.avyta.de/leistungen/behandlungspflege" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Behandlungspflege Frankfurt am Main",
+          serviceDescription: "Professionelle Behandlungspflege in Frankfurt: Wundversorgung, Injektionen, Infusionen, Medikamentenmanagement und Vitalzeichenkontrolle durch examinierte Pflegefachkräfte.",
+          serviceType: "Behandlungspflege",
+          canonicalUrl: "https://www.avyta.de/leistungen/behandlungspflege",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -94,6 +115,9 @@ const Behandlungspflege = () => {
               </div>
             </div>
           </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Intro Content */}
           <section className="py-12 md:py-24">
@@ -236,7 +260,7 @@ const Behandlungspflege = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
-                  Häufige Fragen
+                  Häufige Fragen zur Behandlungspflege in Frankfurt
                 </h2>
                 <Accordion type="single" collapsible className="space-y-2 md:space-y-3">
                   {faqs.map((faq, index) => (

@@ -15,6 +15,8 @@ import {
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateServiceSchema } from "@/lib/serviceSchema";
+import TrustBadges from "@/components/TrustBadges";
 const leistungen = [
   {
     title: "Grundpflege",
@@ -41,15 +43,27 @@ const leistungen = [
 const faqs = [
   {
     question: "Wie wird die Verhinderungspflege in Frankfurt finanziert?",
-    answer: "Leistungen zur Verhinderungspflege werden wie die reguläre ambulante Pflege über die Kranken- oder Pflegekasse abgerechnet. Die Höhe des finanziellen Spielraums hängt vom bewilligten Pflegegrad ab. Wir unterstützen Sie gern bei der Antragstellung und bei der finanziellen Planung der Verhinderungspflege."
+    answer: "Leistungen zur Verhinderungspflege werden über die Pflegekasse finanziert. Ab Pflegegrad 2 stehen Ihnen bis zu 1.612 € pro Jahr für Verhinderungspflege zu. Zusätzlich können bis zu 806 € aus nicht genutzter Kurzzeitpflege umgewidmet werden – insgesamt bis zu 2.418 € jährlich. AVYTA hilft Ihnen bei der Antragstellung."
   },
   {
     question: "Wie kann ich die Verhinderungspflege in Frankfurt verlängern?",
-    answer: "Wenn Sie aufgrund von Krankheit oder einer Verletzung in der Pflege verhindert sind, ist die Dauer der Verhinderungspflege nur schwer abzuschätzen. Wir passen unsere Pflegepläne an Ihre persönliche Situation an und können unsere Leistungen bei Bedarf unbegrenzt verlängern."
+    answer: "Wenn Sie aufgrund von Krankheit oder einer Verletzung in der Pflege verhindert sind, ist die Dauer der Verhinderungspflege nur schwer abzuschätzen. Wir passen unsere Pflegepläne an Ihre persönliche Situation an und können unsere Leistungen bei Bedarf verlängern."
   },
   {
     question: "Welche Qualifikation haben Pflegekräfte im ambulanten Einsatz?",
-    answer: "Zu unserem Avyta Team gehören Pflegehelfer und Pflegekräfte mit unterschiedlichen Qualifikationen zur Behandlung von Demenzpatienten, bettlägerigen Menschen oder für die Intensivpflege. Vor Beginn der Verhinderungspflege in Frankfurt klären wir genau ab, wie hoch der medizinische Bedarf von Pflegebedürftigen ist und welche Qualifikationen für die umfängliche Pflege nötig sind."
+    answer: "Zu unserem Avyta Team gehören Pflegehelfer und Pflegekräfte mit unterschiedlichen Qualifikationen zur Behandlung von Demenzpatienten, bettlägerigen Menschen oder für die Intensivpflege. Vor Beginn der Verhinderungspflege in Frankfurt klären wir genau ab, wie hoch der medizinische Bedarf ist."
+  },
+  {
+    question: "Ab welchem Pflegegrad habe ich Anspruch auf Verhinderungspflege?",
+    answer: "Anspruch auf Verhinderungspflege in Frankfurt haben Sie ab Pflegegrad 2. Voraussetzung ist, dass die Pflegeperson den Pflegebedürftigen zuvor mindestens 6 Monate in der häuslichen Umgebung gepflegt hat. AVYTA berät Sie kostenlos zu Ihren individuellen Ansprüchen."
+  },
+  {
+    question: "Kann ich Verhinderungspflege auch stundenweise in Frankfurt nutzen?",
+    answer: "Ja, stundenweise Verhinderungspflege (unter 8 Stunden pro Tag) ist möglich und hat den Vorteil, dass das Pflegegeld ungekürzt weitergezahlt wird. So können Sie z. B. regelmäßig Entlastung für wenige Stunden erhalten, ohne finanzielle Einbußen. AVYTA bietet flexible Modelle für Ihre Situation."
+  },
+  {
+    question: "Wird das Pflegegeld bei Verhinderungspflege gekürzt?",
+    answer: "Bei tageweiser Verhinderungspflege wird das Pflegegeld ab dem zweiten Tag um 50 % gekürzt. Bei stundenweiser Verhinderungspflege (unter 8 Stunden/Tag) wird das Pflegegeld jedoch ungekürzt weitergezahlt. Wir beraten Sie zur optimalen Gestaltung Ihrer Verhinderungspflege in Frankfurt."
   },
 ];
 
@@ -71,6 +85,12 @@ const Verhinderungspflege = () => {
           { name: "Verhinderungspflege", url: "https://www.avyta.de/leistungen/verhinderungspflege-frankfurt" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Verhinderungspflege Frankfurt am Main",
+          serviceDescription: "Professionelle Verhinderungspflege in Frankfurt: Flexible Vertretung für pflegende Angehörige, stundenweise oder tageweise, mit Kostenübernahme durch die Pflegekasse.",
+          serviceType: "Verhinderungspflege",
+          canonicalUrl: "https://www.avyta.de/leistungen/verhinderungspflege-frankfurt",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -94,6 +114,9 @@ const Verhinderungspflege = () => {
               </div>
             </div>
           </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Intro Content */}
           <section className="py-12 md:py-24">
