@@ -147,6 +147,9 @@ const DemenzWG = () => {
             </div>
           </section>
 
+          {/* Trust Badges */}
+          <TrustBadges />
+
           {/* Einleitung - SEO Textblock 1 */}
           <section className="py-12 md:py-20">
             <div className="container mx-auto px-4">

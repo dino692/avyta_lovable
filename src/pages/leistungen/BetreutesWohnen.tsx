@@ -174,6 +174,9 @@ const BetreutesWohnen = () => {
           </div>
         </section>
 
+        {/* Trust Badges */}
+        <TrustBadges />
+
         {/* Was ist Betreutes Wohnen */}
         <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
