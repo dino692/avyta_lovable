@@ -288,6 +288,9 @@ const Karriere = () => {
                 <Button variant="outline" asChild>
                   <Link to="/karriere/haushaltshilfe-frankfurt">Haushaltshilfe</Link>
                 </Button>
+                <Button variant="outline" asChild>
+                  <Link to="/karriere/fachbereichsleitung-frankfurt">Fachbereichsleitung</Link>
+                </Button>
               </div>
             </div>
           </section>
