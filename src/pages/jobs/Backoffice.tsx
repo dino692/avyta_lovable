@@ -91,6 +91,7 @@ const Backoffice = () => {
         <meta property="og:description" content="Bürokraft im Pflegedienst Frankfurt gesucht ✓ Verwaltung, Abrechnung, Tourenplanung ✓ 30 Urlaubstage ✓ Jetzt bewerben!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.avyta.de/karriere/backoffice-frankfurt" />
+        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Karriere", url: "https://www.avyta.de/karriere" },

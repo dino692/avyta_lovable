@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const vorteile = [
   {
@@ -145,6 +146,9 @@ const DemenzWG = () => {
               </div>
             </div>
           </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Einleitung - SEO Textblock 1 */}
           <section className="py-12 md:py-20">
