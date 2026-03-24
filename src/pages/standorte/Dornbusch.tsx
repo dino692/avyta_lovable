@@ -67,7 +67,7 @@ const Dornbusch = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt Dornbusch ✓ Ambulante Pflege | avyta.de</title>
+        <title>Pflegedienst Dornbusch ✓ Ambulante Pflege | avyta.de</title>
         <meta name="description" content="Pflegedienst Frankfurt Dornbusch ✓ Ambulante Pflege mit Herz ✓ Grundpflege, Behandlungspflege & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ Jetzt beraten lassen: 069 153 914 05" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/dornbusch" />
         <meta property="og:title" content="Pflegedienst Frankfurt Dornbusch ✓ Ambulante Pflege | avyta.de" />

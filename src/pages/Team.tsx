@@ -143,7 +143,7 @@ const Team = () => {
   return (
     <>
       <Helmet>
-        <title>AVYTA - Wir stellen uns vor | Ambulanter Pflegedienst Frankfurt</title>
+        <title>Über uns | AVYTA Pflegedienst Frankfurt</title>
         <meta name="description" content="Lernen Sie das AVYTA Team kennen. Erfahrene Pflegekräfte mit Herz in Frankfurt am Main. Rasche und unbürokratische Hilfe in schwierigen Betreuungssituationen." />
         <meta name="keywords" content="Pflegeteam Frankfurt, Ambulante Pflege Team, Pflegekräfte Frankfurt am Main" />
         <meta property="og:title" content="AVYTA - Wir stellen uns vor" />

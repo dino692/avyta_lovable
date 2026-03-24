@@ -138,7 +138,7 @@ const Frankfurt = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt ✅ 24/7 erreichbar | MDK 1,6 | avyta.de</title>
+        <title>Pflegedienst Frankfurt ✅ 24/7 | MDK 1,6 | avyta.de</title>
         <meta name="description" content="Pflegedienst Frankfurt ✓ MDK Bestnote 1,6 ✓ 5.0 Sterne Google ✓ 20+ Stadtteile ✓ Grund- & Behandlungspflege, Intensivpflege, 24h-Pflege ✓ Tel: 069 153 914 05 | avyta.de" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt" />
         <meta property="og:title" content="Pflegedienst Frankfurt ✅ 24/7 erreichbar | MDK Note 1,6" />

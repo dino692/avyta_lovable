@@ -67,7 +67,7 @@ const NiederEschbach = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt Nieder-Eschbach ✓ Ambulante Pflege | avyta.de</title>
+        <title>Pflegedienst Nieder-Eschbach ✓ Pflege | avyta.de</title>
         <meta name="description" content="Pflegedienst Frankfurt Nieder-Eschbach ✓ Zuverlässige ambulante Pflege im Frankfurter Norden ✓ Grundpflege, Behandlungspflege & Intensivpflege ✓ Tel: 069 153 914 05" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/nieder-eschbach" />
         <meta property="og:title" content="Pflegedienst Frankfurt Nieder-Eschbach ✓ Ambulante Pflege | avyta.de" />

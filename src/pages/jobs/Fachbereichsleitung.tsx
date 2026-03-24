@@ -132,7 +132,7 @@ const Fachbereichsleitung = () => {
   return (
     <>
       <Helmet>
-        <title>Fachbereichsleitung Intensivpflege Frankfurt ✅ Pflegeexperte gesucht | avyta.de</title>
+        <title>Fachbereichsleitung Intensivpflege Frankfurt ✅ avyta.de</title>
         <meta name="description" content="Fachbereichsleitung / Pflegeexperte Intensivpflege (m/w/d) in Frankfurt gesucht ✔ Außerklinische Beatmungspflege ✔ Übertarifliches Gehalt ✔ 30 Tage Urlaub ✔ Firmenwagen | Jetzt bewerben bei Avyta" />
         <meta name="keywords" content="Fachbereichsleitung Intensivpflege Frankfurt, Pflegeexperte Intensivpflege Frankfurt, außerklinische Intensivpflege Frankfurt Stellenangebote, Beatmungspflege Frankfurt, Intensivpflege Leitung Frankfurt, Pflegedienstleitung Intensivpflege Frankfurt, Fachkraft außerklinische Beatmung Frankfurt, leitende Pflegefachkraft Intensivpflege, Qualitätsmanagement Intensivpflege Frankfurt" />
         <link rel="canonical" href="https://www.avyta.de/karriere/fachbereichsleitung-frankfurt" />

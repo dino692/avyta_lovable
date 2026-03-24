@@ -12,7 +12,7 @@ const PflegegeldTabelle = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegegeld 2025: Aktuelle Tabelle & Höhe nach Pflegegrad | AVYTA</title>
+        <title>Pflegegeld 2025: Tabelle nach Pflegegrad | AVYTA</title>
         <meta name="description" content="Pflegegeld 2025: Aktuelle Beträge nach Pflegegrad 1-5. Erfahren Sie, wie viel Pflegegeld Ihnen zusteht und wie Sie es beantragen. Übersichtliche Tabelle + Tipps." />
         <meta name="keywords" content="Pflegegeld 2025, Pflegegeld Tabelle, Pflegegeld Höhe, Pflegegrad Geld, Pflegegeld beantragen" />
         <link rel="canonical" href="https://www.avyta.de/blog/pflegegeld-tabelle-2025" />
