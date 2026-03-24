@@ -197,7 +197,7 @@ const Fachbereichsleitung = () => {
                       Die <strong>außerklinische Intensivpflege in Frankfurt</strong> wächst kontinuierlich – immer mehr Patienten mit Beatmungsbedarf, Trachealkanüle oder schweren neurologischen Erkrankungen werden in ihrem häuslichen Umfeld versorgt. Als <strong>Pflegeexperte Intensivpflege</strong> bei Avyta gestalten Sie diesen wachsenden Fachbereich aktiv mit und übernehmen Verantwortung für ein spezialisiertes Team.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      Unser Pflegedienst betreut über <strong>2.500 zufriedene Patienten</strong> in mehr als 20 Frankfurter Stadtteilen. Mit einer <strong>MDK-Note von 1,6</strong> und <strong>5,0 Google-Sternen</strong> gehören wir zu den bestbewerteten Pflegediensten in Frankfurt. Die Intensivpflege ist dabei einer unserer am stärksten wachsenden Fachbereiche – werden Sie Teil dieses Erfolgs.
+                      Unser Pflegedienst hat bereits über <strong>2.500 zufriedene Patienten</strong> in mehr als 20 Frankfurter Stadtteilen betreut. Mit einer <strong>MDK-Note von 1,6</strong> und <strong>5,0 Google-Sternen</strong> gehören wir zu den bestbewerteten Pflegediensten in Frankfurt. Die Intensivpflege ist dabei einer unserer am stärksten wachsenden Fachbereiche – werden Sie Teil dieses Erfolgs.
                     </p>
                   </div>
 
