@@ -12,7 +12,7 @@ const KombinationsleistungPflege = () => {
   return (
     <>
       <Helmet>
-        <title>Kombinationsleistung Pflege: Pflegegeld + Sachleistungen kombinieren | AVYTA</title>
+        <title>Kombinationsleistung: Pflegegeld + Sachleistung | AVYTA</title>
         <meta name="description" content="Kombinationsleistung Pflege erklärt: So kombinieren Sie Pflegegeld und Pflegesachleistungen optimal. Berechnung, Beispiele und Tipps für mehr Flexibilität." />
         <meta name="keywords" content="Kombinationsleistung Pflege, Pflegegeld kombinieren, Pflegesachleistungen, Kombipflege, Pflegegeld und Pflegedienst" />
         <link rel="canonical" href="https://www.avyta.de/blog/kombinationsleistung-pflege" />

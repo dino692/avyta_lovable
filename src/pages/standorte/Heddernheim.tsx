@@ -67,7 +67,7 @@ const Heddernheim = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt Heddernheim ✓ Ambulante Pflege | avyta.de</title>
+        <title>Pflegedienst Heddernheim ✓ Ambulante Pflege | avyta.de</title>
         <meta name="description" content="Pflegedienst Frankfurt Heddernheim ✓ Zuverlässige ambulante Pflege ✓ Grundpflege, Behandlungspflege & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ Tel: 069 153 914 05" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/heddernheim" />
         <meta property="og:title" content="Pflegedienst Frankfurt Heddernheim ✓ Ambulante Pflege | avyta.de" />

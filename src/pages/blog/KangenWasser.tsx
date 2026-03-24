@@ -40,7 +40,7 @@ const KangenWasser = () => {
   return (
     <>
       <Helmet>
-        <title>Kangen Wasser: Erfahrungen, Vorteile & Anwendung im Alltag 2026 | AVYTA Blog</title>
+        <title>Kangen Wasser: Erfahrungen & Vorteile 2026 | AVYTA</title>
         <meta name="description" content="Kangen Wasser im Alltag: ✅ Erfahrungen & Vorteile ✅ Vielseitige Anwendung ✅ Japanische Qualität ✅ Nachhaltigkeit – Umfassender Ratgeber 2026." />
         <link rel="canonical" href="https://www.avyta.de/blog/kangen-wasser" />
         <meta property="og:title" content="Kangen Wasser: Erfahrungen, Vorteile & Anwendung im Alltag 2026" />

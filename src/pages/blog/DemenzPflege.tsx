@@ -13,7 +13,7 @@ const DemenzPflege = () => {
   return (
     <>
       <Helmet>
-        <title>10 Tipps für die häusliche Pflege von Demenzpatienten | AVYTA Blog</title>
+        <title>10 Tipps für Demenzpflege zu Hause | AVYTA</title>
         <meta name="description" content="Erfahren Sie, wie Sie den Alltag für Demenzpatienten sicherer und angenehmer gestalten können. Praktische Tipps von unseren Pflegeexperten." />
         <link rel="canonical" href="https://www.avyta.de/blog/demenz-pflege-tipps" />
         <meta property="og:title" content="10 Tipps für die häusliche Pflege von Demenzpatienten | AVYTA" />

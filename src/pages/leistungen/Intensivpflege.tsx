@@ -60,7 +60,7 @@ const Intensivpflege = () => {
   return (
     <>
       <Helmet>
-        <title>Ausserklinische Intensivpflege in Frankfurt am Main mit Avyta</title>
+        <title>Intensivpflege Frankfurt am Main | AVYTA</title>
         <meta name="description" content="Für alle medizinischen und sozialen Leistungen rund um die ✅ ausserklinische Intensivpflege in Frankfurt am Main ist Avyta Ihr kompetenter Partner." />
         <meta name="keywords" content="Intensivpflege Frankfurt, Ausserklinische Intensivpflege, Beatmungspflege Frankfurt, Heimbeatmung" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" />

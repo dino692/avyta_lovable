@@ -83,7 +83,7 @@ const Backoffice = () => {
   return (
     <>
       <Helmet>
-        <title>Bürokraft Pflegedienst Frankfurt ✅ Verwaltung & Sachbearbeitung | avyta.de</title>
+        <title>Bürokraft Pflegedienst Frankfurt ✅ Job | avyta.de</title>
         <meta name="description" content="Bürokraft im Pflegedienst Frankfurt gesucht ✓ Verwaltung, Abrechnung SGB V & XI, Tourenplanung ✓ 30 Urlaubstage ✓ Familiäres Team ✓ Jetzt als Bürofachkraft bewerben | avyta.de" />
         <meta name="keywords" content="Bürokraft Pflegedienst Frankfurt, Verwaltung Pflegedienst Frankfurt, Kauffrau Gesundheitswesen Frankfurt, Bürofachkraft Pflegedienst, Sachbearbeitung Pflege Frankfurt, Backoffice Pflege Frankfurt, Pflegeabrechnung Job Frankfurt" />
         <link rel="canonical" href="https://www.avyta.de/karriere/backoffice-frankfurt" />
