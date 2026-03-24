@@ -7,7 +7,7 @@ const YOUTUBE_VIDEO_ID = "ITIyAG6rOUY";
 
 const stats = [
   { value: 12, suffix: "+", label: "Jahre Erfahrung", delay: 0 },
-  { value: 2500, suffix: "+", label: "Betreute Patienten", delay: 0.2 },
+  { value: 2500, suffix: "+", label: "Bereits betreute Patienten", delay: 0.2 },
   { value: 98, suffix: "%", label: "Zufriedenheit", delay: 0.4 },
 ];
 

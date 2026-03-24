@@ -42,7 +42,7 @@ const contactInfo = [
 ];
 
 const stats = [
-  { icon: Users, value: "2500+", label: "Betreute Patienten" },
+  { icon: Users, value: "2500+", label: "Bereits betreute Patienten" },
   { icon: Star, value: "5,0", label: "Google Bewertung" },
   { icon: Shield, value: "12+", label: "Jahre Erfahrung" },
 ];

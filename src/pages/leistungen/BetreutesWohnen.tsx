@@ -462,7 +462,7 @@ const BetreutesWohnen = () => {
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Users className="h-4 w-4 text-primary" />
-                  <span>Über 2.500 betreute Kunden</span>
+                  <span>Über 2.500 bereits betreute Kunden</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Heart className="h-4 w-4 text-primary" />
