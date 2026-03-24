@@ -7,6 +7,7 @@ import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen } from "lucide-react
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import demenzPflegeImage from "@/assets/blog/demenz-pflege.jpg";
+import TrustBadges from "@/components/TrustBadges";
 
 const DemenzPflege = () => {
   return (
@@ -26,6 +27,7 @@ const DemenzPflege = () => {
           "datePublished": "2025-12-15",
           "author": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH"},
           "publisher": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": {"@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png"}},
+          "image": "https://www.avyta.de/images/avyta-logo.png",
           "mainEntityOfPage": "https://www.avyta.de/blog/demenz-pflege-tipps"
         })}</script>
         <script type="application/ld+json">{generateBreadcrumbSchema([
