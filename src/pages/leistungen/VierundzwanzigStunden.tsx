@@ -64,11 +64,23 @@ const faqs = [
   },
   {
     question: "Was zeichnet eine gute 24 Stunden Pflege in Frankfurt aus?",
-    answer: "Eine gute 24 Stunden Pflege in Frankfurt zeichnet sich immer durch Verlässlichkeit, Vertrauen, Kompetenz und Einfühlsamkeit aus. Mit mehr als 12 Jahren Erfahrung in der Pflege können wir von Avyta Ihnen genau das bieten. Von einfachen Hilfsleistungen bis hin zur Intensivpflege haben wir das nötige Know-how, um Ihnen rund um die Uhr zur Seite zu stehen."
+    answer: "Eine gute 24 Stunden Pflege in Frankfurt zeichnet sich durch Verlässlichkeit, Vertrauen, Kompetenz und Einfühlsamkeit aus. Mit über 12 Jahren Erfahrung und mehr als 2.500 bereits betreuten Patienten können wir von Avyta Ihnen genau das bieten. Unsere MDK-Note von 1,6 bestätigt unsere hohe Pflegequalität."
   },
   {
     question: "Was gehört zum Aufgabengebiet der 24 Stunden Pflege in Frankfurt?",
-    answer: "Dank unserer langjährigen Erfahrung stehen wir Ihnen bei allen Aufgaben rund um die Pflege zur Seite. Dazu gehören beispielsweise kleine Hilfen im Alltag, die Grund- und Behandlungspflege sowie die Intensivpflege mit komplexen medizinischen Leistungen oder die Heimbeatmung."
+    answer: "Dank unserer langjährigen Erfahrung stehen wir Ihnen bei allen Aufgaben rund um die Pflege zur Seite. Dazu gehören kleine Hilfen im Alltag, die Grund- und Behandlungspflege sowie die Intensivpflege mit komplexen medizinischen Leistungen oder die Heimbeatmung."
+  },
+  {
+    question: "Wie wird die 24 Stunden Pflege in Frankfurt finanziert?",
+    answer: "Die Finanzierung der 24 Stunden Pflege in Frankfurt erfolgt über verschiedene Bausteine: Pflegesachleistungen (bis 2.299 €/Monat bei PG 5), Pflegegeld, Verhinderungspflege und den Entlastungsbetrag. Bei medizinischen Leistungen übernimmt die Krankenkasse die Kosten. AVYTA berät Sie kostenlos zur optimalen Kombinationsleistung."
+  },
+  {
+    question: "Kann ich zwischen 24h-Pflege und Pflegeheim wählen?",
+    answer: "Ja, die 24 Stunden Pflege in Frankfurt ist eine echte Alternative zum Pflegeheim. Viele Patienten bevorzugen die vertraute Umgebung ihres Zuhauses. Mit AVYTA erhalten Sie professionelle Rund-um-die-Uhr-Versorgung – oft zu vergleichbaren Kosten wie ein Pflegeheimplatz, aber mit deutlich mehr Selbstbestimmung."
+  },
+  {
+    question: "Welche Pflegekräfte kommen bei der 24h-Pflege in Frankfurt zum Einsatz?",
+    answer: "Bei der 24 Stunden Pflege in Frankfurt setzt AVYTA examinierte Pflegefachkräfte, qualifizierte Pflegehelfer und Betreuungskräfte ein – je nach individuellem Bedarf. Unser mehrsprachiges Team (Deutsch, Englisch, Bosnisch, Kroatisch, Serbisch, Polnisch) kann auch Patienten betreuen, die kein oder wenig Deutsch sprechen."
   },
 ];
 
