@@ -14,6 +14,8 @@ import {
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const aufgaben = [
   "Fachliche Leitung und Steuerung der außerklinischen Intensivpflege im ambulanten Pflegedienst Frankfurt",
@@ -145,6 +147,13 @@ const Fachbereichsleitung = () => {
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
         <script type="application/ld+json">{jobPostingSchema}</script>
+        <script type="application/ld+json">{generateJobPostingSchema({
+          title: "Fachbereichsleitung / Pflegeexperte Intensivpflege (m/w/d)",
+          description: "Fachbereichsleitung für außerklinische Intensivpflege bei AVYTA Frankfurt gesucht. Fachliche Leitung, Qualitätssicherung, Anleitung von Pflegeteams. 30 Urlaubstage, Firmenwagen, übertarifliches Gehalt.",
+          datePosted: "2025-01-01",
+          employmentType: "FULL_TIME",
+          canonicalUrl: "https://www.avyta.de/karriere/fachbereichsleitung-frankfurt",
+        })}</script>
       </Helmet>
 
       <Header />
@@ -178,6 +187,9 @@ const Fachbereichsleitung = () => {
             </div>
           </div>
         </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
         {/* Content */}
         <section className="py-16">

@@ -93,6 +93,8 @@ const faqs = [
 
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const Stellenangebote = () => {
   return (
@@ -111,6 +113,13 @@ const Stellenangebote = () => {
           { name: "Stellenangebote", url: "https://www.avyta.de/karriere/stellenangebote-pflege-frankfurt" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
+        <script type="application/ld+json">{generateJobPostingSchema({
+          title: "Stellenangebote Pflege Frankfurt – AVYTA Pflegedienst",
+          description: "Aktuelle Stellenangebote in der ambulanten Pflege bei AVYTA Frankfurt: Pflegefachkraft, Pflegehelfer, Haushaltshilfe. Übertarifliches Gehalt, 30 Urlaubstage, Firmenwagen.",
+          datePosted: "2025-01-01",
+          employmentType: "FULL_TIME",
+          canonicalUrl: "https://www.avyta.de/karriere/stellenangebote-pflege-frankfurt",
+        })}</script>
       </Helmet>
 
       <Header />
@@ -139,6 +148,9 @@ const Stellenangebote = () => {
             </div>
           </div>
         </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
         {/* Content */}
         <section className="py-16">

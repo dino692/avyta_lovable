@@ -103,6 +103,8 @@ const faqs = [
 
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const Pflegehilfskraft = () => {
   return (
@@ -121,6 +123,13 @@ const Pflegehilfskraft = () => {
           { name: "Pflegehilfskraft", url: "https://www.avyta.de/karriere/pflegehilfskraft-frankfurt" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
+        <script type="application/ld+json">{generateJobPostingSchema({
+          title: "Pflegehilfskraft (m/w/d) – Ambulanter Pflegedienst Frankfurt",
+          description: "Pflegehilfskraft für den ambulanten Pflegedienst AVYTA in Frankfurt gesucht. Körperpflege, Nahrungsaufnahme, Mobilisation. 30 Urlaubstage, Firmenwagen, Zuschläge.",
+          datePosted: "2025-01-01",
+          employmentType: "FULL_TIME",
+          canonicalUrl: "https://www.avyta.de/karriere/pflegehilfskraft-frankfurt",
+        })}</script>
       </Helmet>
 
       <Header />
@@ -160,6 +169,9 @@ const Pflegehilfskraft = () => {
             </div>
           </div>
         </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
         {/* Content */}
         <section className="py-16">
