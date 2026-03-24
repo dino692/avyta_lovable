@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
 import ContactSection from "@/components/ContactSection";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const Kontakt = () => {
   return (

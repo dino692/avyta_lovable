@@ -17,6 +17,7 @@ import haushaltshilfeImg from "@/assets/services/haushaltshilfe.jpg";
 import vierundzwanzigImg from "@/assets/services/24-stunden-pflege.jpg";
 import pflegeberatungImg from "@/assets/services/pflegeberatung.jpg";
 import verhinderungspflegeImg from "@/assets/services/verhinderungspflege.jpg";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const services = [
   {
