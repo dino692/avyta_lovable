@@ -85,7 +85,7 @@ const HaushaltshilfeJob = () => {
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Karriere", url: "https://www.avyta.de/karriere" },
-          { name: "Haushaltshilfe", url: "https://www.avyta.de/karriere/haushhaltshilfe-frankfurt" },
+          { name: "Haushaltshilfe", url: "https://www.avyta.de/karriere/haushaltshilfe-frankfurt" },
         ])}</script>
         <script type="application/ld+json">{generateJobPostingSchema({
           title: "Haushaltshilfe (m/w/d) – Pflegedienst Frankfurt",
