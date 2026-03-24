@@ -85,6 +85,12 @@ const Verhinderungspflege = () => {
           { name: "Verhinderungspflege", url: "https://www.avyta.de/leistungen/verhinderungspflege-frankfurt" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Verhinderungspflege Frankfurt am Main",
+          serviceDescription: "Professionelle Verhinderungspflege in Frankfurt: Flexible Vertretung für pflegende Angehörige, stundenweise oder tageweise, mit Kostenübernahme durch die Pflegekasse.",
+          serviceType: "Verhinderungspflege",
+          canonicalUrl: "https://www.avyta.de/leistungen/verhinderungspflege-frankfurt",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
