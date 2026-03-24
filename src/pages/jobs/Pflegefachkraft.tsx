@@ -78,6 +78,8 @@ const faqs = [
 
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const Pflegefachkraft = () => {
   return (
@@ -96,6 +98,13 @@ const Pflegefachkraft = () => {
           { name: "Pflegefachkraft", url: "https://www.avyta.de/karriere/pflegefachkraft-frankfurt" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
+        <script type="application/ld+json">{generateJobPostingSchema({
+          title: "Pflegefachkraft (m/w/d) – Ambulanter Pflegedienst Frankfurt",
+          description: "Examinierte Pflegefachkraft für ambulanten Pflegedienst in Frankfurt gesucht. Medizinische Pflege, Patientenbetreuung, Notfallversorgung. 30 Urlaubstage, Firmenwagen, überdurchschnittliches Gehalt.",
+          datePosted: "2025-01-01",
+          employmentType: "FULL_TIME",
+          canonicalUrl: "https://www.avyta.de/karriere/pflegefachkraft-frankfurt",
+        })}</script>
       </Helmet>
 
       <Header />
@@ -129,6 +138,9 @@ const Pflegefachkraft = () => {
             </div>
           </div>
         </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
         {/* Content */}
         <section className="py-16">

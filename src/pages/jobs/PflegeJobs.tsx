@@ -14,6 +14,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const stellenangebote = [
   { title: "Pflegefachkraft in Frankfurt", href: "/karriere/pflegefachkraft-frankfurt", icon: Sparkles },
@@ -109,6 +111,13 @@ const PflegeJobs = () => {
           { name: "Karriere", url: "https://www.avyta.de/karriere" },
           { name: "Pflege Jobs", url: "https://www.avyta.de/karriere/pflege-jobs" },
         ])}</script>
+        <script type="application/ld+json">{generateJobPostingSchema({
+          title: "Pflege Jobs Frankfurt – Karriere bei AVYTA",
+          description: "Pflege Jobs in Frankfurt bei AVYTA: Pflegefachkräfte, Pflegehelfer, Haushaltshilfen gesucht. Übertarifliches Gehalt, Firmenwagen, 30 Urlaubstage.",
+          datePosted: "2025-01-01",
+          employmentType: "FULL_TIME",
+          canonicalUrl: "https://www.avyta.de/karriere/pflege-jobs",
+        })}</script>
       </Helmet>
 
       <Header />
@@ -137,6 +146,9 @@ const PflegeJobs = () => {
             </div>
           </div>
         </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
         {/* Content */}
         <section className="py-16">

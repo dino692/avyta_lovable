@@ -9,6 +9,8 @@ import { CheckCircle2, ArrowRight, Building2, Share2, ClipboardCopy, CheckCircle
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { useState } from "react";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const SHARE_URL = "https://www.avyta.de/karriere/backoffice-frankfurt";
 const SHARE_TEXT = "AVYTA Pflegedienst sucht Verstärkung im Backoffice! Verwaltungskraft (m/w/d) gesucht – Jetzt bewerben:";
@@ -94,6 +96,13 @@ const Backoffice = () => {
           { name: "Karriere", url: "https://www.avyta.de/karriere" },
           { name: "Bürokraft Pflegedienst Frankfurt", url: "https://www.avyta.de/karriere/backoffice-frankfurt" },
         ])}</script>
+        <script type="application/ld+json">{generateJobPostingSchema({
+          title: "Bürokraft / Verwaltungskraft (m/w/d) im Pflegedienst",
+          description: "Verwaltungskraft für den ambulanten Pflegedienst AVYTA in Frankfurt am Main gesucht. Aufgaben: Tourenplanung, Abrechnung, Personalverwaltung. Benefits: 24 Urlaubstage, Firmenfitness, ergonomischer Arbeitsplatz.",
+          datePosted: "2025-01-01",
+          employmentType: "FULL_TIME",
+          canonicalUrl: "https://www.avyta.de/karriere/backoffice-frankfurt",
+        })}</script>
       </Helmet>
 
       <Header />
@@ -159,6 +168,9 @@ const Backoffice = () => {
             </div>
           </div>
         </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
         {/* Aufgaben */}
         <section className="py-12 md:py-20">

@@ -14,6 +14,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const aufgaben = [
   "Unterstützung bei der Reinigung und Ordnung des Haushalts",
@@ -85,6 +87,13 @@ const HaushaltshilfeJob = () => {
           { name: "Karriere", url: "https://www.avyta.de/karriere" },
           { name: "Haushaltshilfe", url: "https://www.avyta.de/karriere/haushhaltshilfe-frankfurt" },
         ])}</script>
+        <script type="application/ld+json">{generateJobPostingSchema({
+          title: "Haushaltshilfe (m/w/d) – Pflegedienst Frankfurt",
+          description: "Haushaltshilfe für den ambulanten Pflegedienst AVYTA in Frankfurt gesucht. Hauswirtschaft, Mahlzeiten, Einkäufe, Begleitung. 30 Urlaubstage, Firmenwagen, Wellpass.",
+          datePosted: "2025-01-01",
+          employmentType: "FULL_TIME",
+          canonicalUrl: "https://www.avyta.de/karriere/haushaltshilfe-frankfurt",
+        })}</script>
       </Helmet>
 
       <Header />
@@ -113,6 +122,9 @@ const HaushaltshilfeJob = () => {
             </div>
           </div>
         </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
         {/* Content */}
         <section className="py-16">
