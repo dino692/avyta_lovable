@@ -35,7 +35,7 @@ const anforderungen = [
 
 const benefits = [
   { icon: Euro, title: "Attraktives Gehalt", description: "Je nach Qualifikation und Erfahrung" },
-  { icon: Calendar, title: "30 Urlaubstage", description: "Jährlich garantiert" },
+  { icon: Calendar, title: "24 Urlaubstage", description: "Jährlich garantiert" },
   { icon: Car, title: "Gute Verkehrsanbindung", description: "Büro zentral in Frankfurt" },
   { icon: Dumbbell, title: "Firmenfitness", description: "Wellpass-Mitgliedschaft" },
   { icon: Gift, title: "Prämien", description: "Urlaubsprämien und leistungsbasierte Prämien" },

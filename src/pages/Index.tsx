@@ -32,7 +32,7 @@ const Index = () => {
         <meta name="description" content="AVYTA Pflegedienst Frankfurt ✓ MDK Bestnote 1,6 ✓ 5.0 Sterne bei Google (36 Bewertungen) ✓ 2500+ zufriedene Patienten ✓ 24/7 erreichbar ✓ Seit 2013 | avyta.de" />
         <meta name="keywords" content="Pflegedienst Frankfurt, Ambulanter Pflegedienst Frankfurt, Pflegedienst Frankfurt am Main, Grundpflege, Behandlungspflege, Intensivpflege, 24 Stunden Pflege, Pflegeberatung Frankfurt" />
         <meta property="og:title" content="AVYTA Pflegedienst Frankfurt ✅ MDK Note 1,6 | 5.0 ★ Google" />
-        <meta property="og:description" content="Ambulanter Pflegedienst Frankfurt ✓ MDK Bestnote 1,6 ✓ 5.0 Sterne (36 Bewertungen) ✓ 2500+ betreute Patienten ✓ 24/7 erreichbar ✓ Seit 2013 in Frankfurt" />
+        <meta property="og:description" content="Ambulanter Pflegedienst Frankfurt ✓ MDK Bestnote 1,6 ✓ 5.0 Sterne (36 Bewertungen) ✓ 2500+ bereits betreute Patienten ✓ 24/7 erreichbar ✓ Seit 2013 in Frankfurt" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <link rel="canonical" href="https://www.avyta.de/" />
