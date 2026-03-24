@@ -64,6 +64,7 @@ const Pflegehilfskraft = lazy(() => import("./pages/jobs/Pflegehilfskraft"));
 const Pflegefachkraft = lazy(() => import("./pages/jobs/Pflegefachkraft"));
 const HaushaltshilfeJob = lazy(() => import("./pages/jobs/Haushaltshilfe"));
 const Backoffice = lazy(() => import("./pages/jobs/Backoffice"));
+const Fachbereichsleitung = lazy(() => import("./pages/jobs/Fachbereichsleitung"));
 const Broschuere = lazy(() => import("./pages/Broschuere"));
 const Leistungskatalog = lazy(() => import("./pages/Leistungskatalog"));
 const Ratgeber = lazy(() => import("./pages/Ratgeber"));
