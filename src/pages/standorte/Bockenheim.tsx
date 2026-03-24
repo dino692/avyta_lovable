@@ -13,6 +13,8 @@ import {
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateServiceSchema } from "@/lib/serviceSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const bockenheimFaqs = [
   {
@@ -80,6 +82,12 @@ const Bockenheim = () => {
           { name: "Bockenheim", url: "https://www.avyta.de/standorte/frankfurt/pflegedienst-bockenheim" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(bockenheimFaqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Ambulanter Pflegedienst Frankfurt Bockenheim",
+          serviceDescription: "Ambulanter Pflegedienst in Frankfurt Bockenheim: Grundpflege, Behandlungspflege und Intensivpflege zu Hause.",
+          serviceType: "Ambulanter Pflegedienst",
+          canonicalUrl: "https://www.avyta.de/standorte/frankfurt/pflegedienst-bockenheim",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -103,6 +111,9 @@ const Bockenheim = () => {
               </div>
             </div>
           </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Intro Section */}
           <section className="py-16">

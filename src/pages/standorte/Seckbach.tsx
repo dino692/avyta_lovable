@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateServiceSchema } from "@/lib/serviceSchema";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import {
   Accordion,
@@ -13,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import TrustBadges from "@/components/TrustBadges";
 
 const seckbachFaqs = [
   {
@@ -78,6 +80,12 @@ const Seckbach = () => {
           { name: "Seckbach", url: "https://www.avyta.de/standorte/frankfurt/seckbach" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(seckbachFaqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Ambulanter Pflegedienst Frankfurt Seckbach",
+          serviceDescription: "Ambulanter Pflegedienst in Frankfurt Seckbach: Grundpflege, Behandlungspflege und Intensivpflege zu Hause.",
+          serviceType: "Ambulanter Pflegedienst",
+          canonicalUrl: "https://www.avyta.de/standorte/frankfurt/seckbach",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -100,6 +108,9 @@ const Seckbach = () => {
               </div>
             </div>
           </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           <section className="py-16">
             <div className="container mx-auto px-4">

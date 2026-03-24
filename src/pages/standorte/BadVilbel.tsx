@@ -14,6 +14,8 @@ import {
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateServiceSchema } from "@/lib/serviceSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const badVilbelFaqs = [
   {
@@ -80,6 +82,12 @@ const BadVilbel = () => {
           { name: "Bad Vilbel", url: "https://www.avyta.de/standorte/bad-vilbel" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(badVilbelFaqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Ambulanter Pflegedienst Bad Vilbel",
+          serviceDescription: "Ambulanter Pflegedienst in Bad Vilbel: Grundpflege, Behandlungspflege, Intensivpflege und Haushaltshilfe. Seit 2013, MDK-Note 1,6.",
+          serviceType: "Ambulanter Pflegedienst",
+          canonicalUrl: "https://www.avyta.de/standorte/bad-vilbel",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -103,6 +111,9 @@ const BadVilbel = () => {
               </div>
             </div>
           </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Intro Section */}
           <section className="py-16">

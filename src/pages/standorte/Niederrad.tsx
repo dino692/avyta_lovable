@@ -13,6 +13,8 @@ import {
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateServiceSchema } from "@/lib/serviceSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const niederradFaqs = [
   {
@@ -81,6 +83,12 @@ const Niederrad = () => {
           { name: "Niederrad", url: "https://www.avyta.de/standorte/frankfurt/niederrad" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(niederradFaqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Ambulanter Pflegedienst Frankfurt Niederrad",
+          serviceDescription: "Ambulanter Pflegedienst in Frankfurt Niederrad: Grundpflege, Behandlungspflege und Intensivpflege zu Hause.",
+          serviceType: "Ambulanter Pflegedienst",
+          canonicalUrl: "https://www.avyta.de/standorte/frankfurt/niederrad",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -104,6 +112,9 @@ const Niederrad = () => {
               </div>
             </div>
           </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Intro Section */}
           <section className="py-16">
