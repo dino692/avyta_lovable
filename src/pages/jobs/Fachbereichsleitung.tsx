@@ -113,7 +113,7 @@ const Fachbereichsleitung = () => {
                     <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground">
                       Fachbereichsleitung / Pflegeexperte (m/w/d)
                     </h1>
-                    <span className="px-3 py-1 bg-rose-500/10 text-rose-600 text-sm font-medium rounded-full">
+                    <span className="px-3 py-1 bg-destructive/10 text-destructive text-sm font-medium rounded-full">
                       Neu
                     </span>
                   </div>
