@@ -36,6 +36,7 @@ const stellenangebote = [
   { name: "Pflegehelfer/Pflegehelferin", href: "/karriere/pflegehelfer-frankfurt" },
   { name: "Pflegehilfskraft in Frankfurt", href: "/karriere/pflegehilfskraft-frankfurt" },
   { name: "Haushaltshilfen in Frankfurt", href: "/karriere/haushaltshilfe-frankfurt" },
+  { name: "Fachbereichsleitung / Pflegeexperte", href: "/karriere/fachbereichsleitung-frankfurt" },
 ];
 
 const benefits = [
