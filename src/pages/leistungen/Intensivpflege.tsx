@@ -42,6 +42,18 @@ const faqs = [
     question: "Was kostet die ausserklinische Intensivpflege in Frankfurt am Main?",
     answer: "Wir bei Avyta wissen, dass es keinen pauschalen Patienten gibt. Genau so kann es auch keine pauschale Pflegeleistung geben. Wir schauen uns gemeinsam mit Ihnen Ihre individuelle Situation an und erstellen dann einen ebenso individuellen Pflegeplan mit einem Kostenvoranschlag für Sie. Dieser kann dann von der Kranken- oder Pflegekasse genehmigt und dort auch direkt abgerechnet werden."
   },
+  {
+    question: "Wer übernimmt die Kosten für ausserklinische Intensivpflege?",
+    answer: "Die Kosten für ausserklinische Intensivpflege in Frankfurt werden in der Regel vollständig von der Krankenkasse übernommen, da es sich um medizinisch notwendige Leistungen handelt. Sie benötigen eine ärztliche Verordnung. AVYTA kümmert sich um alle Formalitäten und rechnet direkt mit Ihrer Kasse ab."
+  },
+  {
+    question: "Kann die Intensivpflege auch kurzfristig in Frankfurt starten?",
+    answer: "Ja, bei dringenden Fällen – z. B. nach einer Krankenhausentlassung – können wir die ausserklinische Intensivpflege in Frankfurt oft innerhalb von 24–48 Stunden organisieren. Unser erfahrenes Team mit über 2.500 bereits betreuten Patienten seit 2013 ist auf schnelle Übernahme vorbereitet. Rufen Sie uns an: 069 153 914 05."
+  },
+  {
+    question: "Welche Voraussetzungen brauche ich für die Intensivpflege zu Hause?",
+    answer: "Grundsätzlich kann die ausserklinische Intensivpflege in jeder Wohnung in Frankfurt stattfinden. Wir prüfen bei einem kostenlosen Erstbesuch die räumlichen Gegebenheiten und beraten Sie zur benötigten Ausstattung. Oft können medizinische Hilfsmittel wie Beatmungsgeräte über die Krankenkasse gestellt werden."
+  },
 ];
 
 const Intensivpflege = () => {
