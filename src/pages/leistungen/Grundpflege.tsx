@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Home, Users, FileCheck, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import TrustBadges from "@/components/TrustBadges";
 import {
   Accordion,
   AccordionContent,
@@ -15,6 +16,8 @@ import {
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateServiceSchema } from "@/lib/serviceSchema";
+
 const leistungen = [
   {
     title: "Hilfe bei der Körperpflege",
@@ -40,16 +43,28 @@ const leistungen = [
 
 const faqs = [
   {
+    question: "Was kostet Grundpflege in Frankfurt am Main?",
+    answer: "Die Kosten für Grundpflege in Frankfurt werden bei anerkanntem Pflegegrad von der Pflegekasse übernommen. Je nach Pflegegrad stehen Ihnen Pflegesachleistungen von 761 € (PG 2) bis 2.299 € (PG 5) monatlich zu. AVYTA rechnet direkt mit Ihrer Pflegekasse ab – für Sie entstehen keine Vorleistungen."
+  },
+  {
+    question: "Ab welchem Pflegegrad bekomme ich Grundpflege in Frankfurt?",
+    answer: "Grundpflege in Frankfurt können Sie ab Pflegegrad 2 als Pflegesachleistung in Anspruch nehmen. Bei Pflegegrad 1 steht Ihnen der Entlastungsbetrag von 131 € monatlich zur Verfügung, mit dem ebenfalls pflegerische Unterstützung finanziert werden kann. Wir beraten Sie kostenlos zu Ihren Ansprüchen."
+  },
+  {
     question: "Wie wird die Grundpflege in Frankfurt finanziert?",
-    answer: "Die Leistungen der Grundpflege werden in der Regel über die Kranken- oder Pflegekasse abgerechnet. Die finanzielle Unterstützung hängt vom jeweiligen Pflegegrad ab. Wir unterstützen Sie gerne bei der Antragstellung und der finanziellen Planung Ihrer Grundpflege in Frankfurt."
+    answer: "Die Leistungen der Grundpflege werden über die Pflegekasse als Pflegesachleistungen abgerechnet. Die finanzielle Unterstützung hängt vom jeweiligen Pflegegrad ab. Sie können auch Pflegegeld und Sachleistungen kombinieren (Kombinationsleistung). Wir unterstützen Sie gerne bei der Antragstellung."
   },
   {
-    question: "Wie lange kann ich die Grundpflege in Frankfurt in Anspruch nehmen?",
-    answer: "Die Dauer der Grundpflege in Frankfurt kann je nach Pflegebedarf variieren. Wir passen unsere Pflegepläne flexibel an Ihre individuellen Bedürfnisse an und bieten Ihnen die notwendige Unterstützung so lange wie nötig."
+    question: "Welche Qualifikationen haben die Pflegekräfte für die Grundpflege?",
+    answer: "Unser Team bei AVYTA besteht aus examinierten Pflegefachkräften und qualifizierten Pflegehelfern. Alle Mitarbeiter werden regelmäßig fortgebildet. Mit einer MDK-Note von 1,6 und über 2.500 bereits betreuten Patienten seit 2013 stehen wir für höchste Qualität in der Grundpflege Frankfurt."
   },
   {
-    question: "Welche Qualifikationen haben die Pflegekräfte im Bereich der Grundpflege?",
-    answer: "Unser Team bei Avyta besteht aus hochqualifizierten Pflegefachkräften und Pflegehelfern, die über die erforderlichen Qualifikationen für die Grundpflege in Frankfurt verfügen. Wir stellen sicher, dass Ihre Angehörigen die bestmögliche Betreuung erhalten."
+    question: "Kann ich Grundpflege und Behandlungspflege in Frankfurt kombinieren?",
+    answer: "Ja, bei AVYTA erhalten Sie Grundpflege und Behandlungspflege aus einer Hand. Die Grundpflege wird über die Pflegekasse, die Behandlungspflege über die Krankenkasse finanziert. So können Sie beide Leistungen gleichzeitig in Anspruch nehmen – wir koordinieren alles für Sie."
+  },
+  {
+    question: "Wie schnell kann die Grundpflege in Frankfurt beginnen?",
+    answer: "Nach einem Erstgespräch und der Klärung der Finanzierung kann die Grundpflege in Frankfurt oft innerhalb weniger Tage starten. Bei dringendem Bedarf, z. B. nach einem Krankenhausaufenthalt, organisieren wir auch kurzfristige Einsätze. Rufen Sie uns an: 069 153 914 05."
   },
 ];
 
@@ -71,6 +86,12 @@ const Grundpflege = () => {
           { name: "Grundpflege", url: "https://www.avyta.de/leistungen/grundpflege" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Grundpflege Frankfurt am Main",
+          serviceDescription: "Professionelle Grundpflege in Frankfurt: Körperpflege, Mobilisation, Haushaltshilfe und soziale Betreuung durch qualifizierte Pflegekräfte.",
+          serviceType: "Grundpflege",
+          canonicalUrl: "https://www.avyta.de/leistungen/grundpflege",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -94,6 +115,9 @@ const Grundpflege = () => {
               </div>
             </div>
           </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Intro Content */}
           <section className="py-12 md:py-24">
@@ -238,7 +262,7 @@ const Grundpflege = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 md:mb-8 text-center">
-                  Häufige Fragen
+                  Häufige Fragen zur Grundpflege in Frankfurt
                 </h2>
                 <Accordion type="single" collapsible className="space-y-2 md:space-y-3">
                   {faqs.map((faq, index) => (
