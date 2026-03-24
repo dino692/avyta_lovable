@@ -74,6 +74,12 @@ const Intensivpflege = () => {
           { name: "Intensivpflege", url: "https://www.avyta.de/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Ausserklinische Intensivpflege Frankfurt am Main",
+          serviceDescription: "Ausserklinische Intensivpflege in Frankfurt: Beatmungspflege, Heimbeatmung, Tracheostomaversorgung und 24/7 Versorgung durch spezialisierte Pflegefachkräfte.",
+          serviceType: "Ausserklinische Intensivpflege",
+          canonicalUrl: "https://www.avyta.de/leistungen/ausserklinische-intensivpflege-frankfurt-am-main",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
