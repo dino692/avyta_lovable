@@ -62,6 +62,7 @@ const jobs = [
   { name: "Pflegehelfer", href: "/karriere/pflegehelfer-frankfurt", description: "Einstieg in die Pflege", icon: HeartHandshake },
   { name: "Haushaltshilfe", href: "/karriere/haushaltshilfe-frankfurt", description: "Unterstützung im Alltag", icon: Home },
   { name: "Bürokraft / Verwaltung", href: "/karriere/backoffice-frankfurt", description: "Backoffice im Pflegedienst", icon: Building2 },
+  { name: "Fachbereichsleitung", href: "/karriere/fachbereichsleitung-frankfurt", description: "Pflegeexperte & Leitung", icon: Award },
 ];
 
 const blogCategories = [

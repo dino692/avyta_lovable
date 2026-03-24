@@ -165,6 +165,7 @@ const App = () => (
               <Route path="/karriere/haushaltshilfe-frankfurt" element={<Navigate to="/karriere/haushhaltshilfe-frankfurt" replace />} />
               <Route path="/karriere/haushaltshilfen-frankfurt" element={<Navigate to="/karriere/haushhaltshilfe-frankfurt" replace />} />
               <Route path="/karriere/backoffice-frankfurt" element={<Backoffice />} />
+              <Route path="/karriere/fachbereichsleitung-frankfurt" element={<Fachbereichsleitung />} />
               <Route path="/broschuere" element={<Broschuere />} />
               <Route path="/leistungskatalog" element={<Leistungskatalog />} />
               <Route path="/ratgeber" element={<Ratgeber />} />
