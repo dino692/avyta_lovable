@@ -5,6 +5,7 @@ import avytaLogo from "@/assets/avyta-logo.png";
 import heroImg from "@/assets/ratgeber/hero-caring-hands.jpg";
 import beratungImg from "@/assets/ratgeber/beratung.jpg";
 import mobilitaetImg from "@/assets/ratgeber/mobilitaet.jpg";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 /* ─── Section Components ─── */
 

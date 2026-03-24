@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Home, Users, Briefcase, FileText, MapPin, Phone, Heart, Scale, Shield } from "lucide-react";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const sitemapData = [
   {

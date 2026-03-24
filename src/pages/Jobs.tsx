@@ -31,6 +31,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import JobCTADropdownButton from "@/components/JobCTADropdownButton";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const jobCategories = [
   {

@@ -25,6 +25,7 @@ import gkvLogo from "@/assets/partners/gkv-logo.svg";
 import pkvLogo from "@/assets/partners/pkv-logo.png";
 import mdkLogo from "@/assets/partners/mdk-logo.webp";
 import googleLogo from "@/assets/partners/google-logo.png";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const Broschuere = () => {
   return (

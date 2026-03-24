@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const Impressum = () => {
   return (

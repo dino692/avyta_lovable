@@ -13,6 +13,7 @@ import demenzImg from "@/assets/broschuere/demenz-betreuung.jpg";
 import vierundzwanzigImg from "@/assets/broschuere/24-stunden-pflege.jpg";
 import heroImg from "@/assets/broschuere/hero.jpg";
 import teamImg from "@/assets/broschuere/team-group.jpg";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const kategorien = [
   {
