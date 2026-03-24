@@ -63,6 +63,12 @@ const Pflegeberatung = () => {
           { name: "Pflegeberatung", url: "https://www.avyta.de/leistungen/pflegeberatung-frankfurt" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Pflegeberatung Frankfurt am Main",
+          serviceDescription: "Kostenlose Pflegeberatung in Frankfurt: Individuelle Pflegepläne, Hilfe bei Pflegegrad-Anträgen und umfassende Beratung für Angehörige und Pflegebedürftige.",
+          serviceType: "Pflegeberatung",
+          canonicalUrl: "https://www.avyta.de/leistungen/pflegeberatung-frankfurt",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
