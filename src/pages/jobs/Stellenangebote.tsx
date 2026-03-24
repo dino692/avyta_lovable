@@ -39,6 +39,12 @@ const stellenangebote = [
     icon: Home,
     description: "Unsere ambulante Pflege Stellenangebote für Frankfurt stehen auch für Haushaltshilfen ohne besondere Vorausbildung offen. Im ambulanten Einsatz tragen Sie mit der Erledigung von Haushaltsaufgaben wie Kochen, Wäsche waschen oder Reinigen zum Wohlbefinden von Pflegebedürftigen bei."
   },
+  { 
+    title: "Fachbereichsleitung / Pflegeexperte", 
+    href: "/karriere/fachbereichsleitung-frankfurt", 
+    icon: Award,
+    description: "Als Fachbereichsleitung übernehmen Sie die fachliche Steuerung eines Pflegebereichs. Sie sichern die Pflegequalität, leiten Pflegekräfte an und sind zentrale Ansprechperson für Ihr Team, Ärzte und Angehörige."
+  },
 ];
 
 const benefits = [

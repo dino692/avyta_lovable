@@ -8,6 +8,7 @@ const jobLinks = [
   { name: "Pflegehilfskraft", href: "/karriere/pflegehilfskraft-frankfurt", icon: Users },
   { name: "Pflegehelfer/in", href: "/karriere/pflegehelfer-frankfurt", icon: Heart },
   { name: "Haushaltshilfe", href: "/karriere/haushaltshilfe-frankfurt", icon: Home },
+  { name: "Fachbereichsleitung", href: "/karriere/fachbereichsleitung-frankfurt", icon: Sparkles },
 ];
 
 const JobsSidebar = () => {

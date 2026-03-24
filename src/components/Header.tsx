@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, HeartHandshake, Newspaper, Lightbulb, Scale, Activity, BookOpen, Stethoscope, HandHelping, HeartPulse, Home, Clock, MessageCircle, CalendarCheck, LucideIcon, Building2, MapPin, Mail, Calendar, Ambulance, ExternalLink } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Briefcase, FileText, Users, UserCheck, Heart, HeartHandshake, Newspaper, Lightbulb, Scale, Activity, BookOpen, Stethoscope, HandHelping, HeartPulse, Home, Clock, MessageCircle, CalendarCheck, LucideIcon, Building2, MapPin, Mail, Calendar, Ambulance, ExternalLink, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -62,6 +62,7 @@ const jobs = [
   { name: "Pflegehelfer", href: "/karriere/pflegehelfer-frankfurt", description: "Einstieg in die Pflege", icon: HeartHandshake },
   { name: "Haushaltshilfe", href: "/karriere/haushaltshilfe-frankfurt", description: "Unterstützung im Alltag", icon: Home },
   { name: "Bürokraft / Verwaltung", href: "/karriere/backoffice-frankfurt", description: "Backoffice im Pflegedienst", icon: Building2 },
+  { name: "Fachbereichsleitung", href: "/karriere/fachbereichsleitung-frankfurt", description: "Pflegeexperte & Leitung", icon: Award },
 ];
 
 const blogCategories = [
