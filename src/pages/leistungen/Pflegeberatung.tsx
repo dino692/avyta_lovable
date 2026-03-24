@@ -93,6 +93,9 @@ const Pflegeberatung = () => {
             </div>
           </section>
 
+          {/* Trust Badges */}
+          <TrustBadges />
+
           {/* Von Fall zu Fall */}
           <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">

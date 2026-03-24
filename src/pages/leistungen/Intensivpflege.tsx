@@ -104,6 +104,9 @@ const Intensivpflege = () => {
             </div>
           </section>
 
+          {/* Trust Badges */}
+          <TrustBadges />
+
           {/* Intro Content */}
           <section className="py-12 md:py-24">
             <div className="container mx-auto px-4">
