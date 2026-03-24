@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Stethoscope } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateServiceSchema } from "@/lib/serviceSchema";
 import {
   Accordion,
   AccordionContent,
@@ -13,6 +14,7 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/faqSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const roedelheimFaqs = [
   {
@@ -68,6 +70,12 @@ const Roedelheim = () => {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
         <script type="application/ld+json">{generateFAQSchema(roedelheimFaqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Ambulanter Pflegedienst Frankfurt Rödelheim",
+          serviceDescription: "Ambulanter Pflegedienst in Frankfurt Rödelheim: Grundpflege, Behandlungspflege und Intensivpflege zu Hause.",
+          serviceType: "Ambulanter Pflegedienst",
+          canonicalUrl: "https://www.avyta.de/standorte/frankfurt/pflegedienst-roedelheim",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -91,6 +99,9 @@ const Roedelheim = () => {
               </div>
             </div>
           </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Intro Section */}
           <section className="py-16">

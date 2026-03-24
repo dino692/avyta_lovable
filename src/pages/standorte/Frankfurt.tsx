@@ -14,6 +14,8 @@ import {
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateServiceSchema } from "@/lib/serviceSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const frankfurtFaqs = [
   {
@@ -149,6 +151,12 @@ const Frankfurt = () => {
           { name: "Frankfurt", url: "https://www.avyta.de/standorte/frankfurt" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(frankfurtFaqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Ambulanter Pflegedienst Frankfurt am Main",
+          serviceDescription: "Ambulanter Pflegedienst in Frankfurt am Main: Grundpflege, Behandlungspflege, Intensivpflege und 24h-Pflege in über 20 Stadtteilen. Seit 2013, MDK-Note 1,6.",
+          serviceType: "Ambulanter Pflegedienst",
+          canonicalUrl: "https://www.avyta.de/standorte/frankfurt",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -172,6 +180,9 @@ const Frankfurt = () => {
               </div>
             </div>
           </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Intro Section */}
           <section className="py-16 bg-card/50">

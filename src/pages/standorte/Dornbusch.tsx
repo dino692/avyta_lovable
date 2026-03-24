@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Heart, Shield, CheckCircle, HelpCircle, Users, Star } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateServiceSchema } from "@/lib/serviceSchema";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import {
   Accordion,
@@ -13,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import TrustBadges from "@/components/TrustBadges";
 
 const dornbuschFaqs = [
   {
@@ -78,6 +80,12 @@ const Dornbusch = () => {
           { name: "Dornbusch", url: "https://www.avyta.de/standorte/frankfurt/dornbusch" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(dornbuschFaqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "Ambulanter Pflegedienst Frankfurt Dornbusch",
+          serviceDescription: "Ambulanter Pflegedienst in Frankfurt Dornbusch: Grundpflege, Behandlungspflege und Intensivpflege zu Hause.",
+          serviceType: "Ambulanter Pflegedienst",
+          canonicalUrl: "https://www.avyta.de/standorte/frankfurt/dornbusch",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -101,6 +109,9 @@ const Dornbusch = () => {
               </div>
             </div>
           </section>
+
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Intro Section */}
           <section className="py-16">
