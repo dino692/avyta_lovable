@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const vorteile = [
   {
