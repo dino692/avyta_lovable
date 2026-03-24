@@ -6,6 +6,7 @@ import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, Euro, Calculator, CheckCircle, ArrowRight } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const KombinationsleistungPflege = () => {
   return (
@@ -27,6 +28,7 @@ const KombinationsleistungPflege = () => {
           "author": { "@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH" },
           "publisher": { "@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": { "@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png" } },
           "datePublished": "2024-12-20",
+          "image": "https://www.avyta.de/images/avyta-logo.png",
           "mainEntityOfPage": "https://www.avyta.de/blog/kombinationsleistung-pflege"
         })}</script>
         <script type="application/ld+json">{generateBreadcrumbSchema([

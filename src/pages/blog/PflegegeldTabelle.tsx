@@ -6,6 +6,7 @@ import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, Euro, Info, CheckCircle } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const PflegegeldTabelle = () => {
   return (
@@ -27,6 +28,7 @@ const PflegegeldTabelle = () => {
           "author": { "@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH" },
           "publisher": { "@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": { "@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png" } },
           "datePublished": "2025-01-01",
+          "image": "https://www.avyta.de/images/avyta-logo.png",
           "mainEntityOfPage": "https://www.avyta.de/blog/pflegegeld-tabelle-2025"
         })}</script>
         <script type="application/ld+json">{generateBreadcrumbSchema([

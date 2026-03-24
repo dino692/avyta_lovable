@@ -6,6 +6,7 @@ import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, Scale, CheckCircle2 } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const PflegegradBeantragen = () => {
   return (
@@ -25,6 +26,7 @@ const PflegegradBeantragen = () => {
           "datePublished": "2026-01-05",
           "author": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH"},
           "publisher": {"@type": "Organization", "name": "AVYTA Pflegegesellschaft mbH", "logo": {"@type": "ImageObject", "url": "https://www.avyta.de/images/avyta-logo.png"}},
+          "image": "https://www.avyta.de/images/avyta-logo.png",
           "mainEntityOfPage": "https://www.avyta.de/blog/pflegegrad-beantragen"
         })}</script>
         <script type="application/ld+json">{generateBreadcrumbSchema([
