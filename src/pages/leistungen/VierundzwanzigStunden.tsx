@@ -102,6 +102,12 @@ const VierundzwanzigStunden = () => {
           { name: "24 Stunden Pflege", url: "https://www.avyta.de/leistungen/24-stunden-pflege" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
+        <script type="application/ld+json">{generateServiceSchema({
+          serviceName: "24 Stunden Pflege Frankfurt am Main",
+          serviceDescription: "Professionelle 24 Stunden Pflege in Frankfurt: Rund-um-die-Uhr-Versorgung mit Grundpflege, Behandlungspflege und Intensivpflege durch erfahrene Pflegekräfte.",
+          serviceType: "24-Stunden-Pflege",
+          canonicalUrl: "https://www.avyta.de/leistungen/24-stunden-pflege",
+        })}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
