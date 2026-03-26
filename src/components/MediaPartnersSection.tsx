@@ -7,7 +7,7 @@ const partners = [
   { name: "katew.de - Medizinische Transporte", logo: katewLogo, url: "https://www.katew.de/" },
   { name: "LISA - Assisted Home Solutions", logo: lisaLogo, url: "https://lisa.assistedhome.de/" },
   { name: "Careboxx", logo: careboxxLogo, url: "https://www.careboxx.de/" },
-  { name: "PflegeWert Beratung", logo: pflegewertLogo, url: "https://www.pflegewert.de/" },
+  { name: "PflegeWert Beratung", logo: pflegewertLogo, url: "https://www.pflegewertberatung.de/" },
 ];
 
 const MediaPartnersSection = () => {
