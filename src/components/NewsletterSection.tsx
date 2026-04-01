@@ -11,6 +11,7 @@ const benefits = [
   { text: "Welche Leistungen Ihnen zustehen", icon: Gift },
   { text: "Tipps zur Entlastung pflegender Angehöriger", icon: Shield },
   { text: "Wichtige Kontakte und Anlaufstellen", icon: BookOpen },
+  { text: "Häufige Fehler bei Pflegeanträgen vermeiden", icon: FileText },
 ];
 
 const NewsletterSection = () => {
