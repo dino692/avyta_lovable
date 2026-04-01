@@ -308,8 +308,8 @@ const LocationsSection = () => {
 
         {/* Stadtteile Section */}
         <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="text-center mb-6 md:mb-10">
-            <h3 className="text-xl md:text-3xl font-display font-bold text-foreground mb-2 md:mb-3">
+          <div className="text-center mb-6 md:mb-8">
+            <h3 className="text-xl md:text-3xl font-display font-bold text-foreground mb-2">
               Frankfurter Stadtteile
             </h3>
             <p className="text-sm md:text-base text-muted-foreground">
@@ -317,39 +317,24 @@ const LocationsSection = () => {
             </p>
           </div>
           
-          {/* Interactive Stadtteil Grid */}
-          <div className="relative p-4 md:p-8 rounded-2xl md:rounded-3xl bg-gradient-to-br from-card via-card to-muted/30 border border-border">
-            {/* Decorative corner elements - hidden on mobile */}
-            <div className="hidden md:block absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-primary/30 rounded-tl-lg" />
-            <div className="hidden md:block absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-primary/30 rounded-tr-lg" />
-            <div className="hidden md:block absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-primary/30 rounded-bl-lg" />
-            <div className="hidden md:block absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-primary/30 rounded-br-lg" />
-            
-            <div className="flex flex-wrap justify-center gap-1.5 md:gap-3">
-              {stadtteile.map((stadtteil, index) => (
-                <Link 
-                  key={stadtteil.name} 
-                  to={stadtteil.link}
-                  onMouseEnter={() => setHoveredStadtteil(index)}
-                  onMouseLeave={() => setHoveredStadtteil(null)}
-                  className={`group relative px-3 py-2 md:px-5 md:py-3 rounded-lg md:rounded-xl transition-all duration-300 ${
-                    hoveredStadtteil === index
-                      ? 'bg-gradient-to-r from-primary to-accent text-white shadow-lg shadow-primary/20 scale-105 z-10'
-                      : 'bg-background border border-border text-foreground hover:border-primary/50'
-                  }`}
-                  style={{ 
-                    transitionDelay: `${index * 20}ms`,
-                  }}
-                >
-                  <div className="flex items-center gap-1.5 md:gap-2">
-                    <MapPin className={`w-3 h-3 md:w-3.5 md:h-3.5 transition-all duration-300 ${
-                      hoveredStadtteil === index ? 'text-white' : 'text-primary/50 group-hover:text-primary'
-                    }`} />
-                    <span className="font-medium text-xs md:text-sm whitespace-nowrap">{stadtteil.name}</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
+          {/* Stadtteil Grid - 4 columns on desktop */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-3">
+            {stadtteile.map((stadtteil, index) => (
+              <Link 
+                key={stadtteil.name} 
+                to={stadtteil.link}
+                className="group relative flex items-center gap-2.5 px-4 py-3 md:py-3.5 rounded-xl bg-card border border-border hover:border-primary/40 hover:bg-primary/5 hover:shadow-md hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-0.5"
+                style={{ transitionDelay: `${index * 20}ms` }}
+              >
+                <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <MapPin className="w-3.5 h-3.5 text-primary" />
+                </div>
+                <span className="font-medium text-sm text-foreground group-hover:text-primary transition-colors truncate">
+                  {stadtteil.name}
+                </span>
+                <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/0 group-hover:text-primary ml-auto flex-shrink-0 group-hover:translate-x-0.5 transition-all" />
+              </Link>
+            ))}
           </div>
         </div>
       </div>
