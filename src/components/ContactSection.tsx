@@ -116,7 +116,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-32 relative overflow-hidden" id="contact">
+    <section className="py-16 md:py-20 relative overflow-hidden" id="contact">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-accent" />
       
