@@ -188,7 +188,7 @@ const ContactSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-6 animate-fade-in">
             <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <MessageSquare className="w-4 h-4 text-white" />
