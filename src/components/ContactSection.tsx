@@ -207,7 +207,7 @@ const ContactSection = () => {
         </div>
 
         {/* Stats Bar */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-12 mb-16">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-12 mb-10">
           {stats.map((stat, index) => (
             <div 
               key={stat.label}
