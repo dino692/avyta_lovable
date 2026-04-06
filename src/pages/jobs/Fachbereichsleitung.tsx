@@ -88,42 +88,6 @@ const faqs = [
   },
 ];
 
-
-
-  "validThrough": "2026-12-31",
-  "employmentType": ["FULL_TIME", "PART_TIME"],
-  "hiringOrganization": {
-    "@type": "Organization",
-    "name": "AVYTA Pflegedienst",
-    "sameAs": "https://www.avyta.de",
-    "logo": "https://www.avyta.de/images/avyta-logo.png"
-  },
-  "jobLocation": {
-    "@type": "Place",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Eckenheimer Landstraße 93",
-      "addressLocality": "Frankfurt am Main",
-      "addressRegion": "Hessen",
-      "postalCode": "60318",
-      "addressCountry": "DE"
-    }
-  },
-  "baseSalary": {
-    "@type": "MonetaryAmount",
-    "currency": "EUR",
-    "value": {
-      "@type": "QuantitativeValue",
-      "minValue": 50000,
-      "maxValue": 68000,
-      "unitText": "YEAR"
-    }
-  },
-  "jobBenefits": "Übertarifliches Gehalt, 30 Urlaubstage, Firmenwagen zur privaten Nutzung, Wellpass-Mitgliedschaft, Intensivpflege-Weiterbildungen, Prämien",
-  "qualifications": "Examinierte Pflegefachkraft mit Erfahrung in der außerklinischen Intensivpflege oder Beatmungspflege",
-  "industry": "Außerklinische Intensivpflege / Ambulante Pflege / Gesundheitswesen"
-});
-
 const Fachbereichsleitung = () => {
   return (
     <>
