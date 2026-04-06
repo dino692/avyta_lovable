@@ -204,7 +204,7 @@ const Eckenheim = () => {
                       Intensivpflege vom Pflegedienst Frankfurt Eckenheim
                     </h3>
                     <p className="text-muted-foreground text-sm">
-                      Unser <strong>Pflegedienst in Frankfurt Eckenheim</strong> bietet auch Intensivpflege mit Heimbeatmung an. Unsere examinierten Pflegefachkräfte übernehmen die Überwachung und Vitalisierung, das Legen von Blasenkathetern, endotracheales Absaugen sowie Lagerungsbehandlungen und Mobilisation. Mehr zur <Link to="/leistungen/intensivpflege" className="text-primary hover:underline">Intensivpflege in Frankfurt</Link>.
+                      Unser <strong>Pflegedienst in Frankfurt Eckenheim</strong> bietet auch Intensivpflege mit Heimbeatmung an. Unsere examinierten Pflegefachkräfte übernehmen die Überwachung und Vitalisierung, das Legen von Blasenkathetern, endotracheales Absaugen sowie Lagerungsbehandlungen und Mobilisation. Mehr zur <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="text-primary hover:underline">Intensivpflege in Frankfurt</Link>.
                     </p>
                   </CardContent>
                 </Card>
@@ -223,14 +223,14 @@ const Eckenheim = () => {
                     <Users className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-display font-semibold text-foreground mb-1">Verhinderungspflege in Frankfurt</h3>
-                      <p className="text-sm text-muted-foreground">Wenn pflegende Angehörige Entlastung brauchen, übernimmt unser Pflegedienst in Frankfurt Eckenheim die <Link to="/leistungen/verhinderungspflege" className="text-primary hover:underline">Verhinderungspflege</Link>.</p>
+                      <p className="text-sm text-muted-foreground">Wenn pflegende Angehörige Entlastung brauchen, übernimmt unser Pflegedienst in Frankfurt Eckenheim die <Link to="/leistungen/verhinderungspflege-frankfurt" className="text-primary hover:underline">Verhinderungspflege</Link>.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Heart className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-display font-semibold text-foreground mb-1">Pflegeberatung in Frankfurt Eckenheim</h3>
-                      <p className="text-sm text-muted-foreground">Umfassende Beratung zu Pflegegraden und Leistungsansprüchen. Mehr zur <Link to="/leistungen/pflegeberatung" className="text-primary hover:underline">Pflegeberatung</Link>.</p>
+                      <p className="text-sm text-muted-foreground">Umfassende Beratung zu Pflegegraden und Leistungsansprüchen. Mehr zur <Link to="/leistungen/pflegeberatung-frankfurt" className="text-primary hover:underline">Pflegeberatung</Link>.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

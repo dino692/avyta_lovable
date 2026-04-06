@@ -153,7 +153,7 @@ const Ostend = () => {
                 Leistungen unseres Pflegedienstes in Frankfurt Ostend
               </h2>
               <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-                Der <strong>Pflegedienst Frankfurt Ostend</strong> bietet ein umfassendes Angebot – von der <Link to="/leistungen/grundpflege" className="text-primary hover:underline">Grundpflege</Link> über die <Link to="/leistungen/behandlungspflege" className="text-primary hover:underline">Behandlungspflege</Link> bis zur <Link to="/leistungen/intensivpflege" className="text-primary hover:underline">Intensivpflege</Link>.
+                Der <strong>Pflegedienst Frankfurt Ostend</strong> bietet ein umfassendes Angebot – von der <Link to="/leistungen/grundpflege" className="text-primary hover:underline">Grundpflege</Link> über die <Link to="/leistungen/behandlungspflege" className="text-primary hover:underline">Behandlungspflege</Link> bis zur <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="text-primary hover:underline">Intensivpflege</Link>.
               </p>
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <Card variant="elevated">
@@ -204,7 +204,7 @@ const Ostend = () => {
                       Intensivpflege vom Pflegedienst Frankfurt Ostend
                     </h3>
                     <p className="text-muted-foreground text-sm">
-                      Unser <strong>Pflegedienst in Frankfurt Ostend</strong> bietet auch Intensivpflege mit Heimbeatmung an. Unsere examinierten Pflegefachkräfte übernehmen die Überwachung und Vitalisierung, das Legen von Blasenkathetern, endotracheales Absaugen sowie Lagerungsbehandlungen und Mobilisation. Mehr zur <Link to="/leistungen/intensivpflege" className="text-primary hover:underline">Intensivpflege in Frankfurt</Link>.
+                      Unser <strong>Pflegedienst in Frankfurt Ostend</strong> bietet auch Intensivpflege mit Heimbeatmung an. Unsere examinierten Pflegefachkräfte übernehmen die Überwachung und Vitalisierung, das Legen von Blasenkathetern, endotracheales Absaugen sowie Lagerungsbehandlungen und Mobilisation. Mehr zur <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="text-primary hover:underline">Intensivpflege in Frankfurt</Link>.
                     </p>
                   </CardContent>
                 </Card>
@@ -223,14 +223,14 @@ const Ostend = () => {
                     <Users className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-display font-semibold text-foreground mb-1">Verhinderungspflege in Frankfurt</h3>
-                      <p className="text-sm text-muted-foreground">Entlastung für pflegende Angehörige im Ostend. Mehr zur <Link to="/leistungen/verhinderungspflege" className="text-primary hover:underline">Verhinderungspflege</Link>.</p>
+                      <p className="text-sm text-muted-foreground">Entlastung für pflegende Angehörige im Ostend. Mehr zur <Link to="/leistungen/verhinderungspflege-frankfurt" className="text-primary hover:underline">Verhinderungspflege</Link>.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Heart className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-display font-semibold text-foreground mb-1">Pflegeberatung in Frankfurt Ostend</h3>
-                      <p className="text-sm text-muted-foreground">Beratung zu Pflegegraden und Leistungsansprüchen. Mehr zur <Link to="/leistungen/pflegeberatung" className="text-primary hover:underline">Pflegeberatung</Link>.</p>
+                      <p className="text-sm text-muted-foreground">Beratung zu Pflegegraden und Leistungsansprüchen. Mehr zur <Link to="/leistungen/pflegeberatung-frankfurt" className="text-primary hover:underline">Pflegeberatung</Link>.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
