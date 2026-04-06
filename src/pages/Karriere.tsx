@@ -38,6 +38,7 @@ const stellenangebote = [
   { name: "Pflegehilfskraft in Frankfurt", href: "/karriere/pflegehilfskraft-frankfurt" },
   { name: "Haushaltshilfen in Frankfurt", href: "/karriere/haushaltshilfe-frankfurt" },
   { name: "Fachbereichsleitung / Pflegeexperte", href: "/karriere/fachbereichsleitung-frankfurt" },
+  { name: "Bürokraft / Verwaltung", href: "/karriere/backoffice-frankfurt" },
 ];
 
 const benefits = [
