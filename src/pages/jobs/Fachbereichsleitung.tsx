@@ -146,7 +146,6 @@ const Fachbereichsleitung = () => {
           { name: "Fachbereichsleitung Intensivpflege", url: "https://www.avyta.de/karriere/fachbereichsleitung-frankfurt" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
-        <script type="application/ld+json">{jobPostingSchema}</script>
         <script type="application/ld+json">{generateJobPostingSchema({
           title: "Fachbereichsleitung / Pflegeexperte Intensivpflege (m/w/d)",
           description: "Fachbereichsleitung für außerklinische Intensivpflege bei AVYTA Frankfurt gesucht. Fachliche Leitung, Qualitätssicherung, Anleitung von Pflegeteams. 30 Urlaubstage, Firmenwagen, übertarifliches Gehalt.",

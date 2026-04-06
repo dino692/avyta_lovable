@@ -111,6 +111,7 @@ const PflegeJobs = () => {
           { name: "Karriere", url: "https://www.avyta.de/karriere" },
           { name: "Pflege Jobs", url: "https://www.avyta.de/karriere/pflege-jobs" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
         <script type="application/ld+json">{generateJobPostingSchema({
           title: "Pflege Jobs Frankfurt – Karriere bei AVYTA",
           description: "Pflege Jobs in Frankfurt bei AVYTA: Pflegefachkräfte, Pflegehelfer, Haushaltshilfen gesucht. Übertarifliches Gehalt, Firmenwagen, 30 Urlaubstage.",

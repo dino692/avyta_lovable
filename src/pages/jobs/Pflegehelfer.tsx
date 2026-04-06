@@ -148,7 +148,7 @@ const Pflegehelfer = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl font-display font-bold text-foreground mb-4">
-                    Pflegehelfer/in (m/w/d)
+                    Pflegehelfer/in in Frankfurt (m/w/d)
                   </h1>
                   <p className="text-lg text-muted-foreground">
                     Ihre Karriere bei AVYTA in Frankfurt
