@@ -79,7 +79,7 @@ const Grundpflege = () => {
         <meta property="og:title" content="Grundpflege Frankfurt ✓ Pflege zu Hause | avyta.de" />
         <meta property="og:description" content="Professionelle Grundpflege in Frankfurt am Main. Körperpflege, Mobilisation, Haushaltshilfe. Würdevolle Pflege zu Hause." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Leistungen", url: "https://www.avyta.de/leistungen" },

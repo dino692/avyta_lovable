@@ -68,7 +68,7 @@ const Roedelheim = () => {
         <meta property="og:title" content="Pflegedienst Frankfurt Rödelheim ✓ Pflege | avyta.de" />
         <meta property="og:description" content="Der Avyta Pflegedienst in Rödelheim ermöglicht ein würdevolles Leben in jeder Lebenslage." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateFAQSchema(roedelheimFaqs)}</script>
         <script type="application/ld+json">{generateServiceSchema({
           serviceName: "Ambulanter Pflegedienst Frankfurt Rödelheim",

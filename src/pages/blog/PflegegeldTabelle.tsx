@@ -19,7 +19,7 @@ const PflegegeldTabelle = () => {
         <meta property="og:title" content="Pflegegeld 2025: Aktuelle Tabelle & Höhe nach Pflegegrad | AVYTA" />
         <meta property="og:description" content="Pflegegeld 2025: Aktuelle Beträge nach Pflegegrad 1-5. Erfahren Sie, wie viel Pflegegeld Ihnen zusteht und wie Sie es beantragen." />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",

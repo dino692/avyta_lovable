@@ -75,7 +75,7 @@ const Karriere = () => {
         <meta property="og:title" content="Karriere - Anforderungen und Tätigkeitsfelder bei uns" />
         <meta property="og:description" content="Sie möchten Teil eines tollen Teams werden. Bei uns herrscht ein angenehmes Betriebsklima mit flachen Hierarchien." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <link rel="canonical" href="https://www.avyta.de/karriere" />
         <script type="application/ld+json">{generateFAQSchema(karriereFaqs)}</script>
       </Helmet>

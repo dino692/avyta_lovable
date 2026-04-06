@@ -176,7 +176,7 @@ const Jobs = () => {
         <meta property="og:description" content="Die Wichtigkeit der Ambulanten Pflege steigt! Bewerben Sie sich jetzt bei AVYTA für ein familiäres Arbeitsumfeld mit flacher Hierarchie." />
         <link rel="canonical" href="https://www.avyta.de/karriere/uebersicht" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
       </Helmet>
 
       <Header />

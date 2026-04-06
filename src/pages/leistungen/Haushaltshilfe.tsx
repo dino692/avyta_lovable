@@ -62,7 +62,7 @@ const Haushaltshilfe = () => {
         <meta property="og:title" content="Haushaltshilfe Frankfurt | Hauswirtschaft & Alltagsbegleitung | AVYTA" />
         <meta property="og:description" content="Professionelle Haushaltshilfe in Frankfurt. Unterstützung im Haushalt, beim Einkaufen und Kochen. Entlastung für Senioren und pflegende Angehörige." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Leistungen", url: "https://www.avyta.de/leistungen" },

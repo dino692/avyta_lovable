@@ -223,7 +223,7 @@ const Leistungen = () => {
         <meta property="og:title" content="Unsere Leistungen | AVYTA Ambulanter Pflegedienst" />
         <meta property="og:description" content="Von der Grundpflege bis zur spezialisierten Intensivpflege – alle Leistungen aus einer Hand." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <link rel="canonical" href="https://www.avyta.de/leistungen" />
       </Helmet>
       

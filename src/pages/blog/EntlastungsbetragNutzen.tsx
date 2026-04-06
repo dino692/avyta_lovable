@@ -19,7 +19,7 @@ const EntlastungsbetragNutzen = () => {
         <meta property="og:title" content="Entlastungsbetrag 131 Euro: Wofür nutzen & beantragen | AVYTA" />
         <meta property="og:description" content="Der Entlastungsbetrag von 131 Euro monatlich steht allen Pflegebedürftigen ab Pflegegrad 1 zu. Erfahren Sie, wofür Sie ihn nutzen können." />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",

@@ -91,7 +91,7 @@ const Pflegefachkraft = () => {
         <meta property="og:title" content="Pflegefachkraft in Frankfurt – Karrierechancen bei Avyta" />
         <meta property="og:description" content="Pflegefachkraft in Frankfurt bei Avyta ✔ 30 Tage Urlaub ✔ Firmenwagen" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Karriere", url: "https://www.avyta.de/karriere" },

@@ -15,7 +15,7 @@ const Kontakt = () => {
         <meta property="og:title" content="Kontakt | AVYTA Ambulanter Pflegedienst Frankfurt" />
         <meta property="og:description" content="Kontaktieren Sie uns für eine kostenlose Pflegeberatung. AVYTA - Ihr ambulanter Pflegedienst in Frankfurt am Main." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <link rel="canonical" href="https://www.avyta.de/kontakt" />
       </Helmet>
       <Header />

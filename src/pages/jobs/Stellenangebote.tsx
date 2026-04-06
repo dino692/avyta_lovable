@@ -106,7 +106,7 @@ const Stellenangebote = () => {
         <meta property="og:title" content="Stellenangebote in der Pflege Frankfurt – Willkommen im Team" />
         <meta property="og:description" content="Wir suchen Helfer mit Herz! Werden Sie Teil des familiären Avyta Pflegeteams." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Karriere", url: "https://www.avyta.de/karriere" },

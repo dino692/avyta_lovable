@@ -116,7 +116,7 @@ const Pflegehilfskraft = () => {
         <meta property="og:title" content="Pflegehilfskraft in Frankfurt – Karriere bei Avyta" />
         <meta property="og:description" content="Pflegehilfskraft in Frankfurt ✔ 30 Tage Urlaub ✔ Firmenwagen ✔ Weiterbildungsmöglichkeiten" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Karriere", url: "https://www.avyta.de/karriere" },

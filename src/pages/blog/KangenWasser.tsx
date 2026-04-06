@@ -46,7 +46,7 @@ const KangenWasser = () => {
         <meta property="og:title" content="Kangen Wasser: Erfahrungen, Vorteile & Anwendung im Alltag 2026" />
         <meta property="og:description" content="Kangen Wasser im Alltag: Erfahrungen, vielseitige Anwendung und warum immer mehr Menschen auf ionisiertes Wasser setzen." />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
