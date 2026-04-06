@@ -30,8 +30,8 @@ const Index = () => {
     <>
       <BackofficePopup />
       <Helmet>
-        <title>Pflegedienst Frankfurt ✅ MDK 1,6 | 5.0 ★ | avyta.de</title>
-        <meta name="description" content="AVYTA – Ihr ambulanter Pflegedienst in Frankfurt am Main ✓ MDK-Bestnote 1,6 ✓ 5.0 Google-Sterne ✓ Grundpflege, Behandlungspflege, Intensivpflege & 24h-Betreuung ✓ 2500+ bereits betreute Patienten ✓ 24/7 erreichbar ✓ Jetzt kostenlos beraten lassen!" />
+        <title>Ambulanter Pflegedienst ✅ MDK 1,6 | 5.0 ★ | avyta.de</title>
+        <meta name="description" content="AVYTA – Ihr ambulanter Pflegedienst ✓ MDK 1,6 ✓ 5.0 Sterne (36 Bewertungen) ✓ 2.500+ bereits betreute Patienten ✓ 24/7 erreichbar ✓ Jetzt kostenlos beraten!" />
         <meta name="keywords" content="Pflegedienst Frankfurt, Ambulanter Pflegedienst Frankfurt, Pflegedienst Frankfurt am Main, Grundpflege, Behandlungspflege, Intensivpflege, 24 Stunden Pflege, Pflegeberatung Frankfurt" />
         <meta property="og:title" content="AVYTA Pflegedienst Frankfurt ✅ MDK Note 1,6 | 5.0 ★ Google" />
         <meta property="og:description" content="Ambulanter Pflegedienst Frankfurt ✓ MDK Bestnote 1,6 ✓ 5.0 Sterne (36 Bewertungen) ✓ 2500+ bereits betreute Patienten ✓ 24/7 erreichbar ✓ Seit 2013 in Frankfurt" />
