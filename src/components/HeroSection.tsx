@@ -104,7 +104,7 @@ const HeroSection = () => {
             {/* Eyebrow */}
             <div 
               className="animate-slide-up inline-flex items-center gap-2 md:gap-3 px-3 md:px-5 py-2 md:py-2.5 glass rounded-full shadow-lg mt-4 md:mt-6"
-              style={{ animationDelay: '0.1s' }}
+              style={{ animationDelay: '0.05s' }}
             >
               <span className="relative flex h-2 w-2 md:h-3 md:w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
@@ -117,7 +117,7 @@ const HeroSection = () => {
             </div>
 
             {/* Headline */}
-            <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <div className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-[1.1] text-foreground text-balance">
                 Liebevolle Pflege
                 <span className="block mt-1 md:mt-2 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient">
@@ -129,7 +129,7 @@ const HeroSection = () => {
             {/* Description */}
             <p 
               className="animate-slide-up text-base md:text-xl text-muted-foreground max-w-xl leading-relaxed"
-              style={{ animationDelay: '0.3s' }}
+              style={{ animationDelay: '0.15s' }}
             >
               Wir begleiten Sie und Ihre Angehörigen mit Herz, Kompetenz und 
               individueller Betreuung. Unser erfahrenes Team sorgt für ein 
@@ -139,7 +139,7 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <div 
               className="animate-slide-up flex flex-col sm:flex-row gap-3 md:gap-4"
-              style={{ animationDelay: '0.4s' }}
+              style={{ animationDelay: '0.2s' }}
             >
               <CTADropdownButton className="w-full sm:w-auto" />
             </div>
@@ -147,7 +147,7 @@ const HeroSection = () => {
             {/* Stats */}
             <div 
               className="animate-slide-up pt-2 md:pt-4"
-              style={{ animationDelay: '0.5s' }}
+              style={{ animationDelay: '0.25s' }}
             >
               <div className="glass rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg">
                 <div className="grid grid-cols-3 gap-2 md:gap-8">
@@ -170,7 +170,7 @@ const HeroSection = () => {
           {/* Video Section */}
           <div 
             className="animate-slide-in-right relative"
-            style={{ animationDelay: '0.3s' }}
+            style={{ animationDelay: '0.15s' }}
           >
             {/* Floating cards - above the slider */}
             <div className="hidden md:flex items-center justify-between mb-4">
@@ -287,7 +287,7 @@ const HeroSection = () => {
         </div>
 
         {/* Quick contact bar - mobile only */}
-        <div className="mt-8 md:mt-12 lg:hidden animate-slide-up" style={{ animationDelay: '0.6s' }}>
+        <div className="mt-8 md:mt-12 lg:hidden animate-slide-up" style={{ animationDelay: '0.3s' }}>
           <a 
             href="tel:+496915391405"
             className="flex items-center justify-center gap-2 md:gap-3 w-full p-3.5 md:p-4 bg-primary text-primary-foreground rounded-xl md:rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-shadow text-sm md:text-base"
