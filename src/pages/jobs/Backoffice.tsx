@@ -113,6 +113,7 @@ const Backoffice = () => {
           { name: "Karriere", url: "https://www.avyta.de/karriere" },
           { name: "Bürokraft Pflegedienst Frankfurt", url: "https://www.avyta.de/karriere/backoffice-frankfurt" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
         <script type="application/ld+json">{generateJobPostingSchema({
           title: "Bürokraft / Verwaltungskraft (m/w/d) im Pflegedienst",
           description: "Verwaltungskraft für den ambulanten Pflegedienst AVYTA in Frankfurt am Main gesucht. Aufgaben: Tourenplanung, Abrechnung, Personalverwaltung. Benefits: 24 Urlaubstage, Firmenfitness, ergonomischer Arbeitsplatz.",
