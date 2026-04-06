@@ -252,7 +252,7 @@ const LocationsSection = () => {
                         </div>
                         <div>
                           <div className="text-white/60 text-xs md:text-sm uppercase tracking-wider mb-0.5 md:mb-1">Standort</div>
-                          <h3 className="font-display font-bold text-2xl md:text-4xl">{locations[activeLocation].city}</h3>
+                          <div className="font-display font-bold text-2xl md:text-4xl" aria-hidden="true">{locations[activeLocation].city}</div>
                         </div>
                       </div>
                       <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
