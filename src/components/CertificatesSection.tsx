@@ -107,6 +107,8 @@ const CertificatesSection = () => {
                       src={partner.logo}
                       alt={partner.name}
                       loading="lazy"
+                      width={140}
+                      height={64}
                       className="max-h-16 max-w-[140px] object-contain grayscale-[30%] group-hover:grayscale-0 transition-all duration-300"
                     />
                   </div>
