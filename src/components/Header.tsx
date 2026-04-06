@@ -239,54 +239,69 @@ const Header = () => {
                     Leistungen
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[680px] p-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Unsere Leistungen</h3>
-                        <Link to="/leistungen" className="text-xs text-primary hover:underline font-medium">Alle anzeigen →</Link>
+                    <div className="w-[740px] p-0 overflow-hidden">
+                      {/* Header with gradient */}
+                      <div className="px-6 pt-5 pb-4 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 border-b border-border/50">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                              <FileText className="w-4 h-4 text-primary" />
+                            </div>
+                            <h3 className="text-sm font-bold text-foreground">Unsere Leistungen</h3>
+                          </div>
+                          <Link to="/leistungen" className="text-xs text-primary hover:text-primary/80 font-semibold flex items-center gap-1 group">
+                            Alle anzeigen 
+                            <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                          </Link>
+                        </div>
                       </div>
-                      <div className="grid grid-cols-3 gap-2">
-                        {leistungen.filter(l => l.name !== "Alle Leistungen").map((item) => 
-                          item.external ? (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/5 transition-all duration-200 group"
-                            >
-                              <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors flex items-center justify-center flex-shrink-0">
-                                <item.icon className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-sm font-medium text-foreground group-hover:text-primary flex items-center gap-1 truncate">
-                                  {item.name}
-                                  <ExternalLink className="w-3 h-3 flex-shrink-0" />
+                      <div className="p-5">
+                        <div className="grid grid-cols-3 gap-1.5">
+                          {leistungen.filter(l => l.name !== "Alle Leistungen").map((item) => 
+                            item.external ? (
+                              <a
+                                key={item.name}
+                                href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 p-3 rounded-xl hover:bg-gradient-to-r hover:from-primary/5 hover:to-accent/5 transition-all duration-300 group relative overflow-hidden"
+                              >
+                                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                                <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-primary/15 to-accent/15 text-primary group-hover:from-primary group-hover:to-accent group-hover:text-primary-foreground transition-all duration-300 flex items-center justify-center flex-shrink-0 group-hover:shadow-lg group-hover:shadow-primary/20 group-hover:scale-105">
+                                  <item.icon className="w-4 h-4" />
                                 </div>
-                                <div className="text-[11px] text-muted-foreground mt-0.5 truncate">
-                                  {item.description}
+                                <div className="relative min-w-0">
+                                  <div className="text-sm font-semibold text-foreground group-hover:text-primary flex items-center gap-1 truncate transition-colors">
+                                    {item.name}
+                                    <ExternalLink className="w-3 h-3 flex-shrink-0 opacity-50" />
+                                  </div>
+                                  <div className="text-[11px] text-muted-foreground/80 mt-0.5 truncate">
+                                    {item.description}
+                                  </div>
                                 </div>
-                              </div>
-                            </a>
-                          ) : (
-                            <Link
-                              key={item.name}
-                              to={item.href}
-                              className="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/5 transition-all duration-200 group"
-                            >
-                              <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors flex items-center justify-center flex-shrink-0">
-                                <item.icon className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-sm font-medium text-foreground group-hover:text-primary truncate">
-                                  {item.name}
+                              </a>
+                            ) : (
+                              <Link
+                                key={item.name}
+                                to={item.href}
+                                className="flex items-center gap-3 p-3 rounded-xl hover:bg-gradient-to-r hover:from-primary/5 hover:to-accent/5 transition-all duration-300 group relative overflow-hidden"
+                              >
+                                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                                <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-primary/15 to-accent/15 text-primary group-hover:from-primary group-hover:to-accent group-hover:text-primary-foreground transition-all duration-300 flex items-center justify-center flex-shrink-0 group-hover:shadow-lg group-hover:shadow-primary/20 group-hover:scale-105">
+                                  <item.icon className="w-4 h-4" />
                                 </div>
-                                <div className="text-[11px] text-muted-foreground mt-0.5 truncate">
-                                  {item.description}
+                                <div className="relative min-w-0">
+                                  <div className="text-sm font-semibold text-foreground group-hover:text-primary truncate transition-colors">
+                                    {item.name}
+                                  </div>
+                                  <div className="text-[11px] text-muted-foreground/80 mt-0.5 truncate">
+                                    {item.description}
+                                  </div>
                                 </div>
-                              </div>
-                            </Link>
-                          )
-                        )}
+                              </Link>
+                            )
+                          )}
+                        </div>
                       </div>
                     </div>
                   </NavigationMenuContent>
@@ -298,35 +313,48 @@ const Header = () => {
                     Standorte
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[580px] p-6">
-                      <div className="mb-5">
-                        <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">Hauptstandorte</h3>
-                        <div className="flex gap-3">
-                          {standorte.hauptstandorte.map((item) => (
-                            <Link
-                              key={item.name}
-                              to={item.href}
-                              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary/10 text-primary font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                            >
-                              <Building2 className="w-4 h-4" />
-                              {item.name}
-                            </Link>
-                          ))}
+                    <div className="w-[620px] p-0 overflow-hidden">
+                      {/* Header */}
+                      <div className="px-6 pt-5 pb-4 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 border-b border-border/50">
+                        <div className="flex items-center gap-2">
+                          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                            <MapPin className="w-4 h-4 text-primary" />
+                          </div>
+                          <h3 className="text-sm font-bold text-foreground">Unsere Standorte</h3>
                         </div>
                       </div>
-                      <div>
-                        <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">Frankfurt Stadtteile</h3>
-                        <div className="grid grid-cols-4 gap-1">
-                          {standorte.frankfurtStadtteile.map((item) => (
-                            <Link
-                              key={item.name}
-                              to={item.href}
-                              className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm hover:bg-primary/5 text-foreground hover:text-primary transition-all duration-200 group"
-                            >
-                              <MapPin className="w-3.5 h-3.5 text-primary/50 group-hover:text-primary transition-colors flex-shrink-0" />
-                              {item.name}
-                            </Link>
-                          ))}
+                      <div className="p-5">
+                        {/* Hauptstandorte */}
+                        <div className="mb-5">
+                          <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest mb-3">Hauptstandorte</p>
+                          <div className="flex gap-3">
+                            {standorte.hauptstandorte.map((item) => (
+                              <Link
+                                key={item.name}
+                                to={item.href}
+                                className="flex items-center gap-2.5 px-5 py-3 rounded-xl bg-gradient-to-r from-primary/10 to-accent/10 text-primary font-semibold hover:from-primary hover:to-accent hover:text-primary-foreground transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-[1.02]"
+                              >
+                                <Building2 className="w-4 h-4" />
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                        {/* Stadtteile */}
+                        <div>
+                          <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest mb-3">Frankfurt Stadtteile</p>
+                          <div className="grid grid-cols-4 gap-0.5">
+                            {standorte.frankfurtStadtteile.map((item) => (
+                              <Link
+                                key={item.name}
+                                to={item.href}
+                                className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-foreground hover:text-primary hover:bg-primary/5 transition-all duration-200 group"
+                              >
+                                <MapPin className="w-3 h-3 text-primary/40 group-hover:text-primary group-hover:scale-110 transition-all flex-shrink-0" />
+                                <span className="truncate">{item.name}</span>
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -339,31 +367,68 @@ const Header = () => {
                     Karriere
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[600px] p-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Karriere & Stellenangebote</h3>
-                        <Link to="/karriere" className="text-xs text-primary hover:underline font-medium">Übersicht →</Link>
-                      </div>
-                      <div className="grid grid-cols-3 gap-2">
-                        {jobs.filter(j => j.name !== "Karriere Übersicht").map((item) => (
-                          <Link
-                            key={item.name}
-                            to={item.href}
-                            className="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/5 transition-all duration-200 group"
-                          >
-                            <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors flex items-center justify-center flex-shrink-0">
-                              <item.icon className="w-4 h-4" />
+                    <div className="w-[660px] p-0 overflow-hidden">
+                      {/* Header with gradient */}
+                      <div className="px-6 pt-5 pb-4 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 border-b border-border/50">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                              <Briefcase className="w-4 h-4 text-primary" />
                             </div>
-                            <div className="min-w-0">
-                              <div className="text-sm font-medium text-foreground group-hover:text-primary truncate">
-                                {item.name}
-                              </div>
-                              <div className="text-[11px] text-muted-foreground mt-0.5 truncate">
-                                {item.description}
-                              </div>
+                            <div>
+                              <h3 className="text-sm font-bold text-foreground">Karriere & Stellenangebote</h3>
+                              <p className="text-[11px] text-muted-foreground">Werden Sie Teil unseres Teams</p>
                             </div>
+                          </div>
+                          <Link to="/karriere" className="text-xs bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground px-3 py-1.5 rounded-lg font-semibold transition-all duration-200 flex items-center gap-1 group">
+                            Übersicht
+                            <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                           </Link>
-                        ))}
+                        </div>
+                      </div>
+                      <div className="p-5">
+                        {/* Featured: Pflege Jobs & Stellenangebote */}
+                        <div className="grid grid-cols-2 gap-3 mb-4">
+                          {jobs.filter(j => j.name === "Pflege Jobs" || j.name === "Stellenangebote").map((item) => (
+                            <Link
+                              key={item.name}
+                              to={item.href}
+                              className="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/10 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 group hover:scale-[1.01]"
+                            >
+                              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-accent text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-md group-hover:shadow-lg group-hover:shadow-primary/30 transition-all">
+                                <item.icon className="w-5 h-5" />
+                              </div>
+                              <div>
+                                <div className="text-sm font-bold text-foreground group-hover:text-primary transition-colors">{item.name}</div>
+                                <div className="text-[11px] text-muted-foreground">{item.description}</div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                        {/* Individual positions */}
+                        <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest mb-3">Offene Positionen</p>
+                        <div className="grid grid-cols-3 gap-1.5">
+                          {jobs.filter(j => !["Karriere Übersicht", "Pflege Jobs", "Stellenangebote"].includes(j.name)).map((item) => (
+                            <Link
+                              key={item.name}
+                              to={item.href}
+                              className="flex items-center gap-3 p-3 rounded-xl hover:bg-gradient-to-r hover:from-primary/5 hover:to-accent/5 transition-all duration-300 group relative overflow-hidden"
+                            >
+                              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                              <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-primary/15 to-accent/15 text-primary group-hover:from-primary group-hover:to-accent group-hover:text-primary-foreground transition-all duration-300 flex items-center justify-center flex-shrink-0 group-hover:shadow-lg group-hover:shadow-primary/20 group-hover:scale-105">
+                                <item.icon className="w-4 h-4" />
+                              </div>
+                              <div className="relative min-w-0">
+                                <div className="text-sm font-semibold text-foreground group-hover:text-primary truncate transition-colors">
+                                  {item.name}
+                                </div>
+                                <div className="text-[11px] text-muted-foreground/80 mt-0.5 truncate">
+                                  {item.description}
+                                </div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </NavigationMenuContent>
