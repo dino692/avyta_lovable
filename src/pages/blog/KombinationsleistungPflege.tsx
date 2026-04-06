@@ -19,7 +19,7 @@ const KombinationsleistungPflege = () => {
         <meta property="og:title" content="Kombinationsleistung Pflege: Pflegegeld + Sachleistungen kombinieren | AVYTA" />
         <meta property="og:description" content="Kombinationsleistung Pflege erklärt: So kombinieren Sie Pflegegeld und Pflegesachleistungen optimal." />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",

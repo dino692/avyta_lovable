@@ -73,7 +73,7 @@ const NiederEschbach = () => {
         <meta property="og:title" content="Pflegedienst Frankfurt Nieder-Eschbach ✓ Ambulante Pflege | avyta.de" />
         <meta property="og:description" content="Pflegedienst Frankfurt Nieder-Eschbach – zuverlässige ambulante Pflege im Frankfurter Norden." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },

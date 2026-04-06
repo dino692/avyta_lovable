@@ -18,7 +18,7 @@ const VerhinderungspflegeNutzen = () => {
         <meta property="og:title" content="Verhinderungspflege richtig nutzen | AVYTA Blog" />
         <meta property="og:description" content="So nutzen Sie die Verhinderungspflege optimal. Bis zu 3.539 Euro jährlich (flexibles Budget ab 07/2025) für Entlastung pflegender Angehöriger." />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",

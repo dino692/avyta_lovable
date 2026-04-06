@@ -76,7 +76,7 @@ const Niederrad = () => {
         <meta property="og:title" content="Pflegedienst Frankfurt Niederrad ✓ Pflege | avyta.de" />
         <meta property="og:description" content="In Frankfurt Niederrad sind wir für Sie präsent und rund um die Uhr erreichbar." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },

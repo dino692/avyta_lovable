@@ -81,7 +81,7 @@ const HaushaltshilfeJob = () => {
         <meta property="og:title" content="Haushaltshilfe Frankfurt | Jobs bei AVYTA Pflegedienst" />
         <meta property="og:description" content="Werden Sie Haushaltshilfe bei AVYTA in Frankfurt. Überdurchschnittliches Gehalt, 30 Tage Urlaub, Firmenwagen." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Karriere", url: "https://www.avyta.de/karriere" },

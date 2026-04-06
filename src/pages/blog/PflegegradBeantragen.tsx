@@ -18,7 +18,7 @@ const PflegegradBeantragen = () => {
         <meta property="og:title" content="Pflegegrad beantragen: Schritt für Schritt erklärt | AVYTA" />
         <meta property="og:description" content="Alles was Sie wissen müssen, um erfolgreich einen Pflegegrad zu beantragen. Von der Antragstellung bis zur Begutachtung." />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",

@@ -95,7 +95,7 @@ const VierundzwanzigStunden = () => {
         <meta property="og:title" content="24 Stunden Pflege Frankfurt ✓ Rund um die Uhr | avyta.de" />
         <meta property="og:description" content="Mit einer 24 Stunden Pflege in Frankfurt sind Sie rund um die Uhr versorgt. Avyta hilft Ihnen auch in schweren Fällen mit Herz und Erfahrung." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Leistungen", url: "https://www.avyta.de/leistungen" },

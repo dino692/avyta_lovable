@@ -56,7 +56,7 @@ const Pflegeberatung = () => {
         <meta property="og:title" content="Pflegeberatung in Frankfurt – Avyta mit Herz an Ihrer Seite" />
         <meta property="og:description" content="Jeder Mensch braucht manchmal eine helfende Hand mit Herz. In unserer Avyta Pflegeberatung in Frankfurt planen wir Pflege nach Ihren Bedürfnissen." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Leistungen", url: "https://www.avyta.de/leistungen" },

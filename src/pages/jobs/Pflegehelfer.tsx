@@ -116,7 +116,7 @@ const Pflegehelfer = () => {
         <meta property="og:title" content="Pflegehelfer in Frankfurt gesucht für unser Team von Avyta" />
         <meta property="og:description" content="Ihr Job als ambulanter Pflegehelfer in Frankfurt – sicher, herzlich und vielfältig." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Karriere", url: "https://www.avyta.de/karriere" },

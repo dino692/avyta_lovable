@@ -102,7 +102,7 @@ const Sitemap = () => {
         <meta property="og:title" content="Sitemap | AVYTA Pflegegesellschaft mbH" />
         <meta property="og:description" content="Sitemap der AVYTA Pflegegesellschaft mbH - Übersicht aller Seiten unserer Website." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <link rel="canonical" href="https://www.avyta.de/sitemap" />
       </Helmet>
       <Header />

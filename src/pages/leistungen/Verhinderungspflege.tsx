@@ -78,7 +78,7 @@ const Verhinderungspflege = () => {
         <meta property="og:title" content="Verhinderungspflege in Frankfurt unkompliziert beantragen" />
         <meta property="og:description" content="Verhinderungspflege in Frankfurt für mehr Flexibilität. Der Avyta Pflegedienst übernimmt die Versorgung von Angehörigen, wenn Sie mal verhindert sind." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
           { name: "Leistungen", url: "https://www.avyta.de/leistungen" },

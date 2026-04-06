@@ -120,7 +120,7 @@ const BetreutesWohnen = () => {
         <meta property="og:title" content="Betreutes Wohnen Frankfurt & Bad Vilbel ✅ AVYTA Pflegegesellschaft" />
         <meta property="og:description" content="Betreutes Wohnen in Frankfurt & Bad Vilbel. Selbstbestimmt leben mit individueller Pflege und Betreuung. Jetzt kostenlos beraten lassen!" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/betreutes-wohnen-frankfurt" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>

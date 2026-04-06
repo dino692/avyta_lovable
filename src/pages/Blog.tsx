@@ -182,7 +182,7 @@ const Blog = () => {
         <meta property="og:title" content="Blog | AVYTA Pflegegesellschaft mbH" />
         <meta property="og:description" content="Aktuelle Artikel zu Pflege, Gesundheit, Recht und Finanzen. Tipps und Empfehlungen für pflegende Angehörige." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
+        <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
       </Helmet>
 
       <Header />
