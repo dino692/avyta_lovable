@@ -67,7 +67,7 @@ const sitemapData = [
       { name: "Pflegefachkraft", href: "/karriere/pflegefachkraft-frankfurt" },
       { name: "Pflegehelfer", href: "/karriere/pflegehelfer-frankfurt" },
       { name: "Pflegehilfskraft", href: "/karriere/pflegehilfskraft-frankfurt" },
-      { name: "Haushaltshilfe", href: "/karriere/haushhaltshilfe-frankfurt" },
+      { name: "Haushaltshilfe", href: "/karriere/haushaltshilfe-frankfurt" },
     ],
   },
   {

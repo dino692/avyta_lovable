@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 const ReviewsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [rating, setRating] = useState(0);
+  const [rating] = useState(5.0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -18,25 +18,6 @@ const ReviewsSection = () => {
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
-
-  // Animate rating number
-  useEffect(() => {
-    if (!isVisible) return;
-    const duration = 1500;
-    const steps = 30;
-    const increment = 5.0 / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= 5.0) {
-        setRating(5.0);
-        clearInterval(timer);
-      } else {
-        setRating(current);
-      }
-    }, duration / steps);
-    return () => clearInterval(timer);
-  }, [isVisible]);
 
   return (
     <section ref={sectionRef} className="py-28 relative overflow-hidden">
