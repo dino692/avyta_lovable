@@ -9,6 +9,7 @@ import { CheckCircle2, ArrowRight, Building2, Share2, ClipboardCopy, CheckCircle
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { useState } from "react";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
 import TrustBadges from "@/components/TrustBadges";
 
@@ -44,6 +45,21 @@ const benefits = [
   { icon: Users, title: "Familiäres Team", description: "Flache Hierarchien und angenehmes Betriebsklima" },
   { icon: Shirt, title: "Moderne Ausstattung", description: "Ergonomischer Arbeitsplatz" },
   { icon: Laptop, title: "Digitales Arbeiten", description: "Größtenteils papierlos" },
+];
+
+const faqs = [
+  {
+    question: "Welche Aufgaben hat eine Bürokraft im Pflegedienst Frankfurt?",
+    answer: "Als Bürokraft im Pflegedienst Frankfurt übernehmen Sie die Koordination von Pflegeeinsätzen, Tourenplanung, Abrechnung von Pflegeleistungen nach SGB V und XI, Kommunikation mit Krankenkassen sowie die Personalverwaltung und Dokumentation."
+  },
+  {
+    question: "Welche Qualifikation braucht man als Verwaltungskraft im Pflegedienst?",
+    answer: "Für die Verwaltung im Pflegedienst benötigen Sie eine kaufmännische Ausbildung oder vergleichbare Qualifikation. Erfahrung im Gesundheitswesen ist von Vorteil, aber nicht zwingend. Wichtig sind Organisationstalent, MS-Office-Kenntnisse und Deutschkenntnisse auf muttersprachlichem Niveau."
+  },
+  {
+    question: "Wie viele Urlaubstage gibt es als Bürokraft bei AVYTA?",
+    answer: "Als Bürokraft bei AVYTA erhalten Sie 24 Urlaubstage jährlich, dazu kommen Firmenfitness (Wellpass), Prämien und ein moderner, ergonomischer Arbeitsplatz zentral in Frankfurt."
+  },
 ];
 
 const shareLinks = [
@@ -97,6 +113,7 @@ const Backoffice = () => {
           { name: "Karriere", url: "https://www.avyta.de/karriere" },
           { name: "Bürokraft Pflegedienst Frankfurt", url: "https://www.avyta.de/karriere/backoffice-frankfurt" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
         <script type="application/ld+json">{generateJobPostingSchema({
           title: "Bürokraft / Verwaltungskraft (m/w/d) im Pflegedienst",
           description: "Verwaltungskraft für den ambulanten Pflegedienst AVYTA in Frankfurt am Main gesucht. Aufgaben: Tourenplanung, Abrechnung, Personalverwaltung. Benefits: 24 Urlaubstage, Firmenfitness, ergonomischer Arbeitsplatz.",

@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
 import TrustBadges from "@/components/TrustBadges";
 
@@ -87,6 +88,7 @@ const HaushaltshilfeJob = () => {
           { name: "Karriere", url: "https://www.avyta.de/karriere" },
           { name: "Haushaltshilfe", url: "https://www.avyta.de/karriere/haushaltshilfe-frankfurt" },
         ])}</script>
+        <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
         <script type="application/ld+json">{generateJobPostingSchema({
           title: "Haushaltshilfe (m/w/d) – Pflegedienst Frankfurt",
           description: "Haushaltshilfe für den ambulanten Pflegedienst AVYTA in Frankfurt gesucht. Hauswirtschaft, Mahlzeiten, Einkäufe, Begleitung. 30 Urlaubstage, Firmenwagen, Wellpass.",
@@ -112,7 +114,7 @@ const HaushaltshilfeJob = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl font-display font-bold text-foreground mb-4">
-                    Haushaltshilfe (m/w/d)
+                    Haushaltshilfe in Frankfurt (m/w/d)
                   </h1>
                   <p className="text-lg text-muted-foreground">
                     Ihre Karriere bei AVYTA in Frankfurt

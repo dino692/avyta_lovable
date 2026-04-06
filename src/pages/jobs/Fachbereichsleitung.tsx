@@ -88,46 +88,6 @@ const faqs = [
   },
 ];
 
-const jobPostingSchema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "JobPosting",
-  "title": "Fachbereichsleitung Intensivpflege / Pflegeexperte (m/w/d) Frankfurt",
-  "description": "Als Fachbereichsleitung / Pflegeexperte Intensivpflege bei Avyta übernehmen Sie die fachliche Steuerung der außerklinischen Intensivpflege in Frankfurt. Verantwortung für beatmungspflichtige Patienten, Teamleitung und Qualitätsmanagement in der Beatmungspflege.",
-  "datePosted": "2026-03-24",
-  "validThrough": "2026-12-31",
-  "employmentType": ["FULL_TIME", "PART_TIME"],
-  "hiringOrganization": {
-    "@type": "Organization",
-    "name": "AVYTA Pflegedienst",
-    "sameAs": "https://www.avyta.de",
-    "logo": "https://www.avyta.de/images/avyta-logo.png"
-  },
-  "jobLocation": {
-    "@type": "Place",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Eckenheimer Landstraße 93",
-      "addressLocality": "Frankfurt am Main",
-      "addressRegion": "Hessen",
-      "postalCode": "60318",
-      "addressCountry": "DE"
-    }
-  },
-  "baseSalary": {
-    "@type": "MonetaryAmount",
-    "currency": "EUR",
-    "value": {
-      "@type": "QuantitativeValue",
-      "minValue": 50000,
-      "maxValue": 68000,
-      "unitText": "YEAR"
-    }
-  },
-  "jobBenefits": "Übertarifliches Gehalt, 30 Urlaubstage, Firmenwagen zur privaten Nutzung, Wellpass-Mitgliedschaft, Intensivpflege-Weiterbildungen, Prämien",
-  "qualifications": "Examinierte Pflegefachkraft mit Erfahrung in der außerklinischen Intensivpflege oder Beatmungspflege",
-  "industry": "Außerklinische Intensivpflege / Ambulante Pflege / Gesundheitswesen"
-});
-
 const Fachbereichsleitung = () => {
   return (
     <>
@@ -146,7 +106,6 @@ const Fachbereichsleitung = () => {
           { name: "Fachbereichsleitung Intensivpflege", url: "https://www.avyta.de/karriere/fachbereichsleitung-frankfurt" },
         ])}</script>
         <script type="application/ld+json">{generateFAQSchema(faqs)}</script>
-        <script type="application/ld+json">{jobPostingSchema}</script>
         <script type="application/ld+json">{generateJobPostingSchema({
           title: "Fachbereichsleitung / Pflegeexperte Intensivpflege (m/w/d)",
           description: "Fachbereichsleitung für außerklinische Intensivpflege bei AVYTA Frankfurt gesucht. Fachliche Leitung, Qualitätssicherung, Anleitung von Pflegeteams. 30 Urlaubstage, Firmenwagen, übertarifliches Gehalt.",

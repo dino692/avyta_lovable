@@ -88,15 +88,15 @@ const sidebarBenefits = [
 
 const faqs = [
   {
-    question: "Welche Aufgaben übernimmt eine Haushaltshilfe in Frankfurt?",
+    question: "Welche Aufgaben übernimmt eine Pflegehilfskraft in Frankfurt?",
     answer: "Als Pflegehilfskraft in Frankfurt unterstützen Sie Pflegefachkräfte bei der Betreuung und Versorgung von Patienten im häuslichen Umfeld. Ihre Aufgaben umfassen die Hilfe bei der Körperpflege, Unterstützung bei der Nahrungsaufnahme, Mobilisation der Patienten sowie hauswirtschaftliche Tätigkeiten wie das Reinigen der Wohnräume oder das Zubereiten von Mahlzeiten. Durch Ihre Arbeit ermöglichen Sie es den Patienten, so lange wie möglich in ihrer vertrauten Umgebung zu bleiben und tragen somit zur Erhaltung ihrer Lebensqualität bei."
   },
   {
-    question: "Wird die Stelle als Haushaltshilfe in Frankfurt auch als Teilzeitstelle angeboten?",
+    question: "Wird die Stelle als Pflegehilfskraft in Frankfurt auch als Teilzeitstelle angeboten?",
     answer: "Die Arbeitszeiten einer Pflegehilfskraft in Frankfurt orientieren sich am Schichtdienst, da die Pflege rund um die Uhr benötigt wird. Pflegehilfskräfte können je nach Bedarf in Vollzeit oder Teilzeit eingesetzt werden."
   },
   {
-    question: "Welche Vorteile bietet die Position als Haushaltshilfe in Frankfurt bei Avyta?",
+    question: "Welche Vorteile bietet die Position als Pflegehilfskraft in Frankfurt bei Avyta?",
     answer: "Als Pflegehilfskraft in Frankfurt haben Sie die Möglichkeit, sich beruflich weiterzuentwickeln. Durch den Besuch von Fortbildungen können Sie zusätzliche Qualifikationen erwerben und beispielsweise in die Position einer Pflegefachkraft aufsteigen. Einige Arbeitgeber bieten interne Schulungsprogramme an, die Ihnen den Erwerb von Fachwissen erleichtern. Zudem besteht die Möglichkeit, sich auf bestimmte Fachbereiche wie Demenzbetreuung oder Palliativpflege zu spezialisieren, was Ihre Einsatzmöglichkeiten erweitert."
   },
 ];

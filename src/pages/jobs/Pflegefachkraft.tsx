@@ -124,7 +124,7 @@ const Pflegefachkraft = () => {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <h1 className="text-4xl font-display font-bold text-foreground">
-                      Pflegefachkraft (m/w/d)
+                      Pflegefachkraft in Frankfurt (m/w/d)
                     </h1>
                     <span className="px-3 py-1 bg-rose-500/10 text-rose-600 text-sm font-medium rounded-full">
                       Dringend gesucht
