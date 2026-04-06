@@ -287,7 +287,7 @@ const Nordend = () => {
                       Übernimmt die Pflegekasse die Kosten für den Pflegedienst in Frankfurt Nordend?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Ja, bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten für unseren Pflegedienst in Frankfurt Nordend. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Lesen Sie auch unseren Ratgeber zur <Link to="/blog/pflegegeld-tabelle" className="text-primary hover:underline">Pflegegeld-Tabelle</Link>.
+                      Ja, bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten für unseren Pflegedienst in Frankfurt Nordend. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Lesen Sie auch unseren Ratgeber zur <Link to="/blog/pflegegeld-tabelle-2025" className="text-primary hover:underline">Pflegegeld-Tabelle</Link>.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-3" className="bg-card rounded-xl border border-border/50 px-6">

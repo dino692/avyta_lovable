@@ -303,7 +303,7 @@ const Preungesheim = () => {
                       Welche Kosten übernimmt die Pflegekasse für den Pflegedienst in Frankfurt Preungesheim?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse Sachleistungen für die Grundpflege. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Mehr Informationen finden Sie in unserem Ratgeber zur <Link to="/blog/pflegegeld-tabelle" className="text-primary hover:underline">Pflegegeld-Tabelle</Link>.
+                      Bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse Sachleistungen für die Grundpflege. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Mehr Informationen finden Sie in unserem Ratgeber zur <Link to="/blog/pflegegeld-tabelle-2025" className="text-primary hover:underline">Pflegegeld-Tabelle</Link>.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">

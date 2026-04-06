@@ -303,7 +303,7 @@ const Westend = () => {
                       Wie beantrage ich Pflegeleistungen für den Pflegedienst in Frankfurt Westend?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Unser Pflegedienst in Frankfurt Westend unterstützt Sie bei der Antragstellung. Wir helfen beim <Link to="/blog/pflegegrad-beantragen" className="text-primary hover:underline">Pflegegrad beantragen</Link> und beraten zu <Link to="/blog/pflegegeld-tabelle" className="text-primary hover:underline">Pflegegeld</Link>, Sachleistungen und <Link to="/blog/kombinationsleistung-pflege" className="text-primary hover:underline">Kombinationsleistungen</Link>.
+                      Unser Pflegedienst in Frankfurt Westend unterstützt Sie bei der Antragstellung. Wir helfen beim <Link to="/blog/pflegegrad-beantragen" className="text-primary hover:underline">Pflegegrad beantragen</Link> und beraten zu <Link to="/blog/pflegegeld-tabelle-2025" className="text-primary hover:underline">Pflegegeld</Link>, Sachleistungen und <Link to="/blog/kombinationsleistung-pflege" className="text-primary hover:underline">Kombinationsleistungen</Link>.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">

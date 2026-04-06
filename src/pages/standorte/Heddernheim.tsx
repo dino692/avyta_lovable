@@ -279,7 +279,7 @@ const Heddernheim = () => {
                       Was kostet der Pflegedienst Frankfurt Heddernheim?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Die Kosten für unseren Pflegedienst in Frankfurt Heddernheim werden größtenteils von der Pflegekasse übernommen. Wir erstellen Ihnen gerne einen individuellen Kostenvoranschlag und beraten Sie umfassend zu Ihren Ansprüchen auf <Link to="/blog/pflegegeld-tabelle" className="text-primary hover:underline">Pflegegeld</Link> und Sachleistungen.
+                      Die Kosten für unseren Pflegedienst in Frankfurt Heddernheim werden größtenteils von der Pflegekasse übernommen. Wir erstellen Ihnen gerne einen individuellen Kostenvoranschlag und beraten Sie umfassend zu Ihren Ansprüchen auf <Link to="/blog/pflegegeld-tabelle-2025" className="text-primary hover:underline">Pflegegeld</Link> und Sachleistungen.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-2" className="bg-card rounded-xl border border-border/50 px-6">
