@@ -6,7 +6,7 @@ import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, BookOpen, Droplets, CheckCircle2, Sparkles, Heart, Shield, Leaf } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
-import kangenWasserImage from "@/assets/blog/kangen-wasser.jpg";
+import kangenWasserImage from "@/assets/blog/kangen-wasser.webp";
 import TrustBadges from "@/components/TrustBadges";
 
 const KangenWasser = () => {

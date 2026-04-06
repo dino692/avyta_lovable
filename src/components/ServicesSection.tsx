@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { useRef, useState, useEffect, forwardRef } from "react";
 
 // Import service images
-import behandlungspflegeImg from "@/assets/services/behandlungspflege.jpg";
-import grundpflegeImg from "@/assets/services/grundpflege.jpg";
-import intensivpflegeImg from "@/assets/services/intensivpflege.jpg";
-import haushaltshilfeImg from "@/assets/services/haushaltshilfe.jpg";
-import vierundzwanzigStundenImg from "@/assets/services/24-stunden-pflege.jpg";
-import pflegeberatungImg from "@/assets/services/pflegeberatung.jpg";
-import verhinderungspflegeImg from "@/assets/services/verhinderungspflege.jpg";
+import behandlungspflegeImg from "@/assets/services/behandlungspflege.webp";
+import grundpflegeImg from "@/assets/services/grundpflege.webp";
+import intensivpflegeImg from "@/assets/services/intensivpflege.webp";
+import haushaltshilfeImg from "@/assets/services/haushaltshilfe.webp";
+import vierundzwanzigStundenImg from "@/assets/services/24-stunden-pflege.webp";
+import pflegeberatungImg from "@/assets/services/pflegeberatung.webp";
+import verhinderungspflegeImg from "@/assets/services/verhinderungspflege.webp";
 
 const services = [
   { 
@@ -161,8 +161,7 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
       
       {/* Dynamic gradient based on active service */}
       <div 
-        className={`absolute inset-0 bg-gradient-to-br ${activeService.bgGradient} transition-all duration-1000`}
-        style={{ opacity: 0.5 }}
+        className={`absolute inset-0 bg-gradient-to-br ${activeService.bgGradient} transition-all duration-1000 opacity-50`}
       />
       
       {/* Floating orbs - hidden on mobile for performance */}

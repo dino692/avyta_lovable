@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 
 // Import location images
-import frankfurtSkylineImg from "@/assets/locations/frankfurt-skyline.jpg";
-import badVilbelImg from "@/assets/locations/bad-vilbel.jpg";
+import frankfurtSkylineImg from "@/assets/locations/frankfurt-skyline.webp";
+import badVilbelImg from "@/assets/locations/bad-vilbel.webp";
 
 const locations = [
   { 

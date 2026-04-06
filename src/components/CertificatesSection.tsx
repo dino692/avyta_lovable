@@ -10,15 +10,15 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 // Import partner logos
-import bkkLogo from "@/assets/partners/bkk-logo.png";
-import dakLogo from "@/assets/partners/dak-logo.jpg";
-import frankfurtLogo from "@/assets/partners/frankfurt-logo.png";
+import bkkLogo from "@/assets/partners/bkk-logo.webp";
+import dakLogo from "@/assets/partners/dak-logo.webp";
+import frankfurtLogo from "@/assets/partners/frankfurt-logo.webp";
 import gkvLogo from "@/assets/partners/gkv-logo.svg";
-import barmerLogo from "@/assets/partners/barmer-logo.png";
+import barmerLogo from "@/assets/partners/barmer-logo.webp";
 import mdkLogo from "@/assets/partners/mdk-logo.webp";
-import aokLogo from "@/assets/partners/aok-logo.jpg";
-import vdekLogo from "@/assets/partners/vdek-logo.jpg";
-import pkvLogo from "@/assets/partners/pkv-logo.png";
+import aokLogo from "@/assets/partners/aok-logo.webp";
+import vdekLogo from "@/assets/partners/vdek-logo.webp";
+import pkvLogo from "@/assets/partners/pkv-logo.webp";
 
 const partners = [
   { name: "AOK", logo: aokLogo },

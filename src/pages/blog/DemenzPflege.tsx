@@ -6,7 +6,7 @@ import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
-import demenzPflegeImage from "@/assets/blog/demenz-pflege.jpg";
+import demenzPflegeImage from "@/assets/blog/demenz-pflege.webp";
 import TrustBadges from "@/components/TrustBadges";
 
 const DemenzPflege = () => {
