@@ -9,6 +9,7 @@ import { CheckCircle2, ArrowRight, Building2, Share2, ClipboardCopy, CheckCircle
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { useState } from "react";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
 import TrustBadges from "@/components/TrustBadges";
 

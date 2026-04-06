@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
 import TrustBadges from "@/components/TrustBadges";
 
