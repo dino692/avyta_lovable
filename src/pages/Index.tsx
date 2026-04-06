@@ -92,14 +92,14 @@ const Index = () => {
           ]
         })}</script>
         <script type="application/ld+json">{generateFAQSchema([
-          { question: "Welche Leistungen bietet AVYTA als ambulanter Pflegedienst in Frankfurt an?", answer: "Wir bieten Grundpflege (SGB XI), Behandlungspflege (SGB V), Intensivpflege, 24-Stunden-Betreuung, Verhinderungspflege, Haushaltshilfe sowie individuelle Pflegeberatung. Unser Team ist spezialisiert auf Demenz- und Diabetesversorgung." },
-          { question: "Wie beantrage ich einen Pflegegrad und welche Unterstützung bietet AVYTA dabei?", answer: "Wir unterstützen Sie kostenlos bei der Beantragung eines Pflegegrads – von der Antragstellung über die MDK-Vorbereitung bis zum Widerspruch bei Ablehnung." },
-          { question: "Übernimmt die Krankenkasse die Kosten für den ambulanten Pflegedienst?", answer: "Behandlungspflege (SGB V) wird vollständig von der Krankenkasse übernommen. Bei Grundpflege (SGB XI) richtet sich die Kostenübernahme nach Ihrem Pflegegrad." },
-          { question: "In welchen Stadtteilen von Frankfurt ist AVYTA tätig?", answer: "Wir versorgen Patienten in ganz Frankfurt am Main und Umgebung – darunter Bockenheim, Sachsenhausen, Nordend, Bornheim, Westend, Ostend, Dornbusch, Eckenheim, Eschersheim, Rödelheim, Höchst, Niederrad, Griesheim und Bad Vilbel." },
-          { question: "Wie schnell kann die Pflege bei AVYTA beginnen?", answer: "In dringenden Fällen innerhalb von 24 Stunden. Regulär vereinbaren wir ein kostenloses Erstgespräch bei Ihnen zu Hause. Wir sind 24/7 erreichbar unter 069 153 914 05." },
-          { question: "Welche Qualifikationen hat das Pflegepersonal von AVYTA?", answer: "Unser Team besteht aus examinierten Pflegefachkräften und spezialisierten Fachkräften für Demenz- und Diabetesversorgung. Unsere MDK-Note von 1,6 bestätigt die hohe Qualität." },
-          { question: "Was ist Verhinderungspflege und wie kann ich sie nutzen?", answer: "Verhinderungspflege springt ein, wenn Ihre reguläre Pflegeperson verhindert ist. Ab Pflegegrad 2 stehen Ihnen jährlich bis zu 1.612 € zu." },
-          { question: "Bietet AVYTA auch Betreuung bei Demenzerkrankungen an?", answer: "Ja, Demenzbetreuung ist einer unserer Schwerpunkte. Wir bieten ambulante Einzelbetreuung und Plätze in unserer Demenz-WG in Frankfurt." },
+          { question: "Welche Leistungen bietet ein ambulanter Pflegedienst an?", answer: "Ein ambulanter Pflegedienst bietet Grundpflege (SGB XI), Behandlungspflege (SGB V), Intensivpflege, 24-Stunden-Betreuung, Verhinderungspflege, Haushaltshilfe sowie individuelle Pflegeberatung." },
+          { question: "Wie beantrage ich einen Pflegegrad?", answer: "Den Pflegegrad beantragen Sie bei Ihrer Pflegekasse. Anschließend erfolgt eine Begutachtung durch den MDK. Ein guter Pflegedienst unterstützt Sie bei der Antragstellung und MDK-Vorbereitung." },
+          { question: "Übernimmt die Krankenkasse die Kosten für ambulante Pflege?", answer: "Behandlungspflege (SGB V) wird vollständig von der Krankenkasse übernommen. Bei Grundpflege (SGB XI) richtet sich die Kostenübernahme nach Ihrem Pflegegrad." },
+          { question: "Was ist der Unterschied zwischen Grundpflege und Behandlungspflege?", answer: "Grundpflege umfasst alltägliche Hilfen wie Körperpflege und Ernährung (SGB XI). Behandlungspflege beinhaltet medizinische Maßnahmen wie Wundversorgung und Injektionen (SGB V)." },
+          { question: "Was ist Verhinderungspflege und wer hat Anspruch darauf?", answer: "Verhinderungspflege springt ein, wenn die reguläre Pflegeperson verhindert ist. Ab Pflegegrad 2 stehen jährlich bis zu 1.612 € zu." },
+          { question: "Wie schnell kann ein ambulanter Pflegedienst starten?", answer: "In dringenden Fällen oft innerhalb von 24 Stunden. Üblicherweise wird zunächst ein kostenloses Erstgespräch geführt, um den individuellen Pflegebedarf zu ermitteln." },
+          { question: "Was ist der Entlastungsbetrag und wie kann ich ihn nutzen?", answer: "Der Entlastungsbetrag beträgt 125 € monatlich ab Pflegegrad 1 für Haushaltshilfe, Betreuung oder Tages-/Nachtpflege. Nicht genutzte Beträge können übertragen werden." },
+          { question: "Welche Qualifikationen sollte das Personal eines ambulanten Pflegedienstes haben?", answer: "Examinierte Pflegefachkräfte, Pflegehelfer und spezialisiertes Fachpersonal mit regelmäßigen Fortbildungen. Eine gute MDK-Bewertung ist ein Qualitätsindikator." },
         ])}</script>
       </Helmet>
       <div className="min-h-screen bg-background overflow-x-hidden">
