@@ -239,26 +239,30 @@ const Header = () => {
                     Leistungen
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[520px] p-4">
-                      <div className="grid grid-cols-2 gap-3">
-                        {leistungen.map((item) => 
+                    <div className="w-[680px] p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Unsere Leistungen</h3>
+                        <Link to="/leistungen" className="text-xs text-primary hover:underline font-medium">Alle anzeigen →</Link>
+                      </div>
+                      <div className="grid grid-cols-3 gap-2">
+                        {leistungen.filter(l => l.name !== "Alle Leistungen").map((item) => 
                           item.external ? (
                             <a
                               key={item.name}
                               href={item.href}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
+                              className="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/5 transition-all duration-200 group"
                             >
-                              <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                              <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors flex items-center justify-center flex-shrink-0">
                                 <item.icon className="w-4 h-4" />
                               </div>
-                              <div>
-                                <div className="font-medium text-foreground group-hover:text-primary flex items-center gap-1">
+                              <div className="min-w-0">
+                                <div className="text-sm font-medium text-foreground group-hover:text-primary flex items-center gap-1 truncate">
                                   {item.name}
-                                  <ExternalLink className="w-3 h-3" />
+                                  <ExternalLink className="w-3 h-3 flex-shrink-0" />
                                 </div>
-                                <div className="text-xs text-muted-foreground mt-0.5">
+                                <div className="text-[11px] text-muted-foreground mt-0.5 truncate">
                                   {item.description}
                                 </div>
                               </div>
@@ -267,16 +271,16 @@ const Header = () => {
                             <Link
                               key={item.name}
                               to={item.href}
-                              className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
+                              className="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/5 transition-all duration-200 group"
                             >
-                              <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                              <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors flex items-center justify-center flex-shrink-0">
                                 <item.icon className="w-4 h-4" />
                               </div>
-                              <div>
-                                <div className="font-medium text-foreground group-hover:text-primary">
+                              <div className="min-w-0">
+                                <div className="text-sm font-medium text-foreground group-hover:text-primary truncate">
                                   {item.name}
                                 </div>
-                                <div className="text-xs text-muted-foreground mt-0.5">
+                                <div className="text-[11px] text-muted-foreground mt-0.5 truncate">
                                   {item.description}
                                 </div>
                               </div>
@@ -294,15 +298,15 @@ const Header = () => {
                     Standorte
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[420px] p-4">
-                      <div className="mb-4">
-                        <div className="text-sm font-medium text-muted-foreground mb-3">Hauptstandorte</div>
+                    <div className="w-[580px] p-6">
+                      <div className="mb-5">
+                        <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">Hauptstandorte</h3>
                         <div className="flex gap-3">
                           {standorte.hauptstandorte.map((item) => (
                             <Link
                               key={item.name}
                               to={item.href}
-                              className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary/10 text-primary font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
+                              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary/10 text-primary font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                             >
                               <Building2 className="w-4 h-4" />
                               {item.name}
@@ -311,15 +315,15 @@ const Header = () => {
                         </div>
                       </div>
                       <div>
-                        <div className="text-sm font-medium text-muted-foreground mb-3">Frankfurt Stadtteile</div>
-                        <div className="grid grid-cols-3 gap-2">
+                        <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">Frankfurt Stadtteile</h3>
+                        <div className="grid grid-cols-4 gap-1">
                           {standorte.frankfurtStadtteile.map((item) => (
                             <Link
                               key={item.name}
                               to={item.href}
-                              className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm hover:bg-primary/5 text-foreground hover:text-primary transition-colors group"
+                              className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm hover:bg-primary/5 text-foreground hover:text-primary transition-all duration-200 group"
                             >
-                              <MapPin className="w-4 h-4 text-primary/60 group-hover:text-primary transition-colors flex-shrink-0" />
+                              <MapPin className="w-3.5 h-3.5 text-primary/50 group-hover:text-primary transition-colors flex-shrink-0" />
                               {item.name}
                             </Link>
                           ))}
@@ -335,22 +339,26 @@ const Header = () => {
                     Karriere
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[420px] p-4">
-                      <div className="grid gap-3">
-                        {jobs.map((item) => (
+                    <div className="w-[600px] p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Karriere & Stellenangebote</h3>
+                        <Link to="/karriere" className="text-xs text-primary hover:underline font-medium">Übersicht →</Link>
+                      </div>
+                      <div className="grid grid-cols-3 gap-2">
+                        {jobs.filter(j => j.name !== "Karriere Übersicht").map((item) => (
                           <Link
                             key={item.name}
                             to={item.href}
-                            className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group"
+                            className="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/5 transition-all duration-200 group"
                           >
-                            <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                              <item.icon className="w-5 h-5" />
+                            <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors flex items-center justify-center flex-shrink-0">
+                              <item.icon className="w-4 h-4" />
                             </div>
-                            <div>
-                              <div className="font-medium text-foreground group-hover:text-primary">
+                            <div className="min-w-0">
+                              <div className="text-sm font-medium text-foreground group-hover:text-primary truncate">
                                 {item.name}
                               </div>
-                              <div className="text-sm text-muted-foreground mt-0.5">
+                              <div className="text-[11px] text-muted-foreground mt-0.5 truncate">
                                 {item.description}
                               </div>
                             </div>
