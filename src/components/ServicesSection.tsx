@@ -161,8 +161,7 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
       
       {/* Dynamic gradient based on active service */}
       <div 
-        className={`absolute inset-0 bg-gradient-to-br ${activeService.bgGradient} transition-all duration-1000`}
-        style={{ opacity: 0.5 }}
+        className={`absolute inset-0 bg-gradient-to-br ${activeService.bgGradient} transition-all duration-1000 opacity-50`}
       />
       
       {/* Floating orbs - hidden on mobile for performance */}
