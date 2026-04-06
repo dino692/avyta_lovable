@@ -62,7 +62,7 @@ const faqs = [
   },
 ];
 
-
+const shareLinks = [
   {
     name: "WhatsApp",
     url: `https://wa.me/?text=${encodeURIComponent(`${SHARE_TEXT} ${SHARE_URL}`)}`,
