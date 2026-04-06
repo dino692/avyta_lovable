@@ -72,11 +72,11 @@ const Behandlungspflege = () => {
   return (
     <>
       <Helmet>
-        <title>Behandlungspflege in Frankfurt am Main | AVYTA Pflegedienst</title>
+        <title>Behandlungspflege Frankfurt ✓ Fachpflege | avyta.de</title>
         <meta name="description" content="Behandlungspflege Frankfurt ✓ Wundversorgung, Injektionen, Medikamentengabe ✓ Examinierte Fachkräfte ✓ Kostenübernahme durch Krankenkasse!" />
         <meta name="keywords" content="Behandlungspflege Frankfurt, Medizinische Pflege Frankfurt, Wundversorgung, Injektionen" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/behandlungspflege" />
-        <meta property="og:title" content="Behandlungspflege in Frankfurt am Main | AVYTA Pflegedienst" />
+        <meta property="og:title" content="Behandlungspflege Frankfurt ✓ Fachpflege | avyta.de" />
         <meta property="og:description" content="Professionelle Behandlungspflege in Frankfurt am Main. Wundversorgung, Injektionen, Verbandswechsel. Examinierte Pflegefachkräfte." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />

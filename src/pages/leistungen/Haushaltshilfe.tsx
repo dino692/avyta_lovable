@@ -56,7 +56,7 @@ const Haushaltshilfe = () => {
   return (
     <>
       <Helmet>
-        <title>Haushaltshilfe Frankfurt | Hauswirtschaft | AVYTA</title>
+        <title>Haushaltshilfe Frankfurt ✓ Hauswirtschaft | avyta.de</title>
         <meta name="description" content="Haushaltshilfe Frankfurt ✓ Unterstützung bei Einkauf, Kochen & Haushalt ✓ Entlastung für Senioren & Angehörige ✓ Jetzt beraten lassen!" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/haushaltshilfe" />
         <meta property="og:title" content="Haushaltshilfe Frankfurt | Hauswirtschaft & Alltagsbegleitung | AVYTA" />
