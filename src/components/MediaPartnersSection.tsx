@@ -1,7 +1,7 @@
 import lisaLogo from "@/assets/partners/lisa-logo.webp";
-import careboxxLogo from "@/assets/partners/careboxx-logo.png";
-import pflegewertLogo from "@/assets/partners/pflegewert-logo.jpg";
-import katewLogo from "@/assets/partners/katew-logo.png";
+import careboxxLogo from "@/assets/partners/careboxx-logo.webp";
+import pflegewertLogo from "@/assets/partners/pflegewert-logo.webp";
+import katewLogo from "@/assets/partners/katew-logo.webp";
 
 const partners = [
   { name: "katew.de - Medizinische Transporte", logo: katewLogo, url: "https://www.katew.de/" },

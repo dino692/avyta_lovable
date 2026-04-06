@@ -1,18 +1,18 @@
 import { Helmet } from "react-helmet-async";
 import { Printer, ArrowLeft, Phone, Mail, MapPin, Clock, Heart, Shield, Star, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import avytaLogo from "@/assets/avyta-logo.png";
+import avytaLogo from "@/assets/avyta-logo.webp";
 
 // Category images
-import grundpflegeImg from "@/assets/broschuere/grundpflege.jpg";
-import behandlungspflegeImg from "@/assets/broschuere/behandlungspflege.jpg";
-import haushaltshilfeImg from "@/assets/broschuere/haushaltshilfe.jpg";
-import pflegeberatungImg from "@/assets/broschuere/pflegeberatung.jpg";
-import intensivpflegeImg from "@/assets/broschuere/intensivpflege.jpg";
-import demenzImg from "@/assets/broschuere/demenz-betreuung.jpg";
-import vierundzwanzigImg from "@/assets/broschuere/24-stunden-pflege.jpg";
-import heroImg from "@/assets/broschuere/hero.jpg";
-import teamImg from "@/assets/broschuere/team-group.jpg";
+import grundpflegeImg from "@/assets/broschuere/grundpflege.webp";
+import behandlungspflegeImg from "@/assets/broschuere/behandlungspflege.webp";
+import haushaltshilfeImg from "@/assets/broschuere/haushaltshilfe.webp";
+import pflegeberatungImg from "@/assets/broschuere/pflegeberatung.webp";
+import intensivpflegeImg from "@/assets/broschuere/intensivpflege.webp";
+import demenzImg from "@/assets/broschuere/demenz-betreuung.webp";
+import vierundzwanzigImg from "@/assets/broschuere/24-stunden-pflege.webp";
+import heroImg from "@/assets/broschuere/hero.webp";
+import teamImg from "@/assets/broschuere/team-group.webp";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const kategorien = [

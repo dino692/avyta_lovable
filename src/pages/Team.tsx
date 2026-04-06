@@ -9,15 +9,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Helmet } from "react-helmet-async";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import teamGroupImage from "@/assets/team/team-group.jpg";
-import jasminaMuellerImage from "@/assets/team/jasmina-mueller-final.png";
+import teamGroupImage from "@/assets/team/team-group.webp";
+import jasminaMuellerImage from "@/assets/team/jasmina-mueller-final.webp";
 import prokuristImage from "@/assets/team/prokurist.webp";
 import assistenzImage from "@/assets/team/assistenz.webp";
 import stellvPdlImage from "@/assets/team/stellv-pdl.webp";
 import weihnachtsfeier01 from "@/assets/team/weihnachtsfeier-2023-01.webp";
 import weihnachtsfeier02 from "@/assets/team/weihnachtsfeier-2023-02.webp";
-import weihnachtsfeier2024_01 from "@/assets/team/weihnachtsfeier-2024-01.jpg";
-import meeting2026_01 from "@/assets/team/meeting-2026-01.jpg";
+import weihnachtsfeier2024_01 from "@/assets/team/weihnachtsfeier-2024-01.webp";
+import meeting2026_01 from "@/assets/team/meeting-2026-01.webp";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 interface GalleryImage {

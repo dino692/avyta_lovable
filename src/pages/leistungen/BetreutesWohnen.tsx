@@ -5,7 +5,7 @@ import NewsletterSection from "@/components/NewsletterSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Home, Users, FileCheck, Clock, Heart, Shield, Phone, MapPin, Star, Building2, Utensils, Accessibility, Flower2, HandHelping, Eye } from "lucide-react";
-import betreutesWohnenHeroImg from "@/assets/leistungen/betreutes-wohnen-hero.jpg";
+import betreutesWohnenHeroImg from "@/assets/leistungen/betreutes-wohnen-hero.webp";
 import { Link } from "react-router-dom";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import {

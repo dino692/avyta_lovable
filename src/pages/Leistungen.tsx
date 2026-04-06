@@ -10,13 +10,13 @@ import NewsletterSection from "@/components/NewsletterSection";
 import CTADropdownButton from "@/components/CTADropdownButton";
 
 // Service Images
-import behandlungspflegeImg from "@/assets/services/behandlungspflege.jpg";
-import grundpflegeImg from "@/assets/services/grundpflege.jpg";
-import intensivpflegeImg from "@/assets/services/intensivpflege.jpg";
-import haushaltshilfeImg from "@/assets/services/haushaltshilfe.jpg";
-import vierundzwanzigImg from "@/assets/services/24-stunden-pflege.jpg";
-import pflegeberatungImg from "@/assets/services/pflegeberatung.jpg";
-import verhinderungspflegeImg from "@/assets/services/verhinderungspflege.jpg";
+import behandlungspflegeImg from "@/assets/services/behandlungspflege.webp";
+import grundpflegeImg from "@/assets/services/grundpflege.webp";
+import intensivpflegeImg from "@/assets/services/intensivpflege.webp";
+import haushaltshilfeImg from "@/assets/services/haushaltshilfe.webp";
+import vierundzwanzigImg from "@/assets/services/24-stunden-pflege.webp";
+import pflegeberatungImg from "@/assets/services/pflegeberatung.webp";
+import verhinderungspflegeImg from "@/assets/services/verhinderungspflege.webp";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const services = [

@@ -1,30 +1,30 @@
 import { Helmet } from "react-helmet-async";
 import { Phone, Mail, Heart, Shield, Clock, Users, MapPin, Star, CheckCircle, Briefcase, Car, GraduationCap, Smile, Home, Stethoscope, AlertTriangle, Printer, ArrowLeft, Globe, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import avytaLogo from "@/assets/avyta-logo.png";
+import avytaLogo from "@/assets/avyta-logo.webp";
 
 // Brochure-specific images
-import broschuereHeroImg from "@/assets/broschuere/hero.jpg";
-import broschuereGrundpflegeImg from "@/assets/broschuere/grundpflege.jpg";
-import broschuereBehandlungspflegeImg from "@/assets/broschuere/behandlungspflege.jpg";
-import broschuereHaushaltshilfeImg from "@/assets/broschuere/haushaltshilfe.jpg";
-import broschuerePflegeberatungImg from "@/assets/broschuere/pflegeberatung.jpg";
-import broschuereVierundzwanzigImg from "@/assets/broschuere/24-stunden-pflege.jpg";
-import broschuereVerhinderungspflegeImg from "@/assets/broschuere/verhinderungspflege.jpg";
-import broschuereIntensivpflegeImg from "@/assets/broschuere/intensivpflege.jpg";
-import broschuereTeamGroupImg from "@/assets/broschuere/team-group.jpg";
-import broschuereDemenzImg from "@/assets/broschuere/demenz-betreuung.jpg";
+import broschuereHeroImg from "@/assets/broschuere/hero.webp";
+import broschuereGrundpflegeImg from "@/assets/broschuere/grundpflege.webp";
+import broschuereBehandlungspflegeImg from "@/assets/broschuere/behandlungspflege.webp";
+import broschuereHaushaltshilfeImg from "@/assets/broschuere/haushaltshilfe.webp";
+import broschuerePflegeberatungImg from "@/assets/broschuere/pflegeberatung.webp";
+import broschuereVierundzwanzigImg from "@/assets/broschuere/24-stunden-pflege.webp";
+import broschuereVerhinderungspflegeImg from "@/assets/broschuere/verhinderungspflege.webp";
+import broschuereIntensivpflegeImg from "@/assets/broschuere/intensivpflege.webp";
+import broschuereTeamGroupImg from "@/assets/broschuere/team-group.webp";
+import broschuereDemenzImg from "@/assets/broschuere/demenz-betreuung.webp";
 
 // Partner logos
-import aokLogo from "@/assets/partners/aok-logo.jpg";
-import barmerLogo from "@/assets/partners/barmer-logo.png";
-import dakLogo from "@/assets/partners/dak-logo.jpg";
-import bkkLogo from "@/assets/partners/bkk-logo.png";
-import vdekLogo from "@/assets/partners/vdek-logo.jpg";
+import aokLogo from "@/assets/partners/aok-logo.webp";
+import barmerLogo from "@/assets/partners/barmer-logo.webp";
+import dakLogo from "@/assets/partners/dak-logo.webp";
+import bkkLogo from "@/assets/partners/bkk-logo.webp";
+import vdekLogo from "@/assets/partners/vdek-logo.webp";
 import gkvLogo from "@/assets/partners/gkv-logo.svg";
-import pkvLogo from "@/assets/partners/pkv-logo.png";
+import pkvLogo from "@/assets/partners/pkv-logo.webp";
 import mdkLogo from "@/assets/partners/mdk-logo.webp";
-import googleLogo from "@/assets/partners/google-logo.png";
+import googleLogo from "@/assets/partners/google-logo.webp";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 const Broschuere = () => {

@@ -3,10 +3,10 @@ import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Import about images
-import teamFrauenImg from "@/assets/about/team-frauen.jpg";
-import demenzBetreuungImg from "@/assets/about/demenz-betreuung.jpg";
-import diabetesPflegeImg from "@/assets/about/diabetes-pflege.jpg";
-import nachtpflegeImg from "@/assets/about/nachtpflege.jpg";
+import teamFrauenImg from "@/assets/about/team-frauen.webp";
+import demenzBetreuungImg from "@/assets/about/demenz-betreuung.webp";
+import diabetesPflegeImg from "@/assets/about/diabetes-pflege.webp";
+import nachtpflegeImg from "@/assets/about/nachtpflege.webp";
 
 const features = [
   { 
