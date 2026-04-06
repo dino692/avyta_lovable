@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/NewsletterSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, Utensils } from "lucide-react";
+import { CheckCircle, ArrowRight, Utensils, Users, Clock, ShieldCheck, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import TrustBadges from "@/components/TrustBadges";
