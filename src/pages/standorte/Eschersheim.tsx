@@ -68,7 +68,7 @@ const Eschersheim = () => {
     <>
       <Helmet>
         <title>Pflegedienst Eschersheim ✓ Ambulante Pflege | avyta.de</title>
-        <meta name="description" content="Pflegedienst Frankfurt Eschersheim ✓ Kompetente häusliche Pflege ✓ Grundpflege, Behandlungspflege & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ Tel: 069 153 914 05" />
+        <meta name="description" content="Pflegedienst Eschersheim ✓ Kompetente häusliche Pflege ✓ Grund-, Behandlungs- & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ 069 153 914 05" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/eschersheim" />
         <meta property="og:title" content="Pflegedienst Frankfurt Eschersheim ✓ Ambulante Pflege | avyta.de" />
         <meta property="og:description" content="Pflegedienst Frankfurt Eschersheim – kompetente häusliche Pflege in familiärer Atmosphäre." />

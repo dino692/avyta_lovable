@@ -68,7 +68,7 @@ const Seckbach = () => {
     <>
       <Helmet>
         <title>Pflegedienst Seckbach ✓ Ambulante Pflege | avyta.de</title>
-        <meta name="description" content="Pflegedienst Frankfurt Seckbach ✓ Professionelle Pflege am Lohrberg ✓ Grundpflege, Behandlungspflege & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ Tel: 069 153 914 05" />
+        <meta name="description" content="Pflegedienst Seckbach ✓ Pflege am Lohrberg ✓ Grund-, Behandlungs- & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ Tel: 069 153 914 05" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/seckbach" />
         <meta property="og:title" content="Pflegedienst Frankfurt Seckbach ✓ Ambulante Pflege | avyta.de" />
         <meta property="og:description" content="Pflegedienst Frankfurt Seckbach – professionelle ambulante Pflege am Lohrberg." />

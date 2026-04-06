@@ -49,7 +49,7 @@ const Pflegeberatung = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegeberatung in Frankfurt – Avyta mit Herz an Ihrer Seite</title>
+        <title>Pflegeberatung Frankfurt ✓ Individuelle Hilfe | avyta.de</title>
         <meta name="description" content="Jeder Mensch braucht manchmal eine helfende Hand mit Herz. ✓ In unserer Avyta Pflegeberatung in Frankfurt planen wir Pflege nach Ihren Bedürfnissen." />
         <meta name="keywords" content="Pflegeberatung Frankfurt, Pflegeplanung, Häusliche Pflege Beratung" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/pflegeberatung-frankfurt" />

@@ -67,8 +67,8 @@ const Nordend = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt Nordend ✓ Ambulante Pflege | avyta.de</title>
-        <meta name="description" content="Pflegedienst Frankfurt Nordend ✓ Herzliche ambulante Pflege ✓ Grundpflege, Behandlungspflege & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ Jetzt beraten lassen: 069 153 914 05" />
+        <title>Pflegedienst Nordend ✓ Ambulante Pflege | avyta.de</title>
+        <meta name="description" content="Pflegedienst Nordend ✓ Herzliche ambulante Pflege ✓ Grund-, Behandlungs- & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ Tel: 069 153 914 05" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/nordend" />
         <meta property="og:title" content="Pflegedienst Frankfurt Nordend ✓ Ambulante Pflege | avyta.de" />
         <meta property="og:description" content="Pflegedienst Frankfurt Nordend – herzliche ambulante Pflege in Ihrem Stadtteil." />

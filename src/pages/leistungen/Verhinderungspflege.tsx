@@ -71,7 +71,7 @@ const Verhinderungspflege = () => {
   return (
     <>
       <Helmet>
-        <title>Verhinderungspflege in Frankfurt unkompliziert beantragen.</title>
+        <title>Verhinderungspflege Frankfurt ✓ Beantragen | avyta.de</title>
         <meta name="description" content="Verhinderungspflege in Frankfurt für mehr Flexibilität. ✓ Der Avyta Pflegedienst übernimmt die Versorgung von Angehörigen, wenn Sie mal verhindert sind." />
         <meta name="keywords" content="Verhinderungspflege Frankfurt, Kurzzeitpflege, Urlaubsvertretung Pflege" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/verhinderungspflege-frankfurt" />

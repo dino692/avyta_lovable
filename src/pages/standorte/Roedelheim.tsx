@@ -58,7 +58,7 @@ const Roedelheim = () => {
     <>
       <Helmet>
         <title>Pflegedienst in Rödelheim für die häusliche Pflege</title>
-        <meta name="description" content="Der Avyta Pflegedienst in Rödelheim ermöglicht ein würdevolles Leben in jeder Lebenslage. ✓ Von der Grundpflege bis zur Intensivpflege sind wir für Sie da." />
+        <meta name="description" content="Pflegedienst Rödelheim ✓ Würdevolles Leben zu Hause ✓ Grundpflege bis Intensivpflege ✓ Jetzt kostenlos beraten lassen!" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/pflegedienst-roedelheim" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
           { name: "Startseite", url: "https://www.avyta.de/" },
