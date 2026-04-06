@@ -100,11 +100,11 @@ const PflegeJobs = () => {
   return (
     <>
       <Helmet>
-        <title>Pflege Jobs Frankfurt | Karriere bei AVYTA Pflegedienst</title>
-        <meta name="description" content="Pflege Jobs Frankfurt bei AVYTA: Karriere als Pflegefachkraft, Pflegehelfer oder Haushaltshilfe. Übertarifliche Bezahlung, 30 Tage Urlaub, Firmenwagen. Jetzt bewerben!" />
+        <title>Pflege Jobs Frankfurt ✅ Alle Stellen | avyta.de</title>
+        <meta name="description" content="Pflege Jobs Frankfurt bei AVYTA ✓ Pflegefachkraft, Pflegehelfer, Haushaltshilfe ✓ Übertarifliches Gehalt ✓ 30 Urlaubstage ✓ Firmenwagen ✓ Jetzt bewerben" />
         <link rel="canonical" href="https://www.avyta.de/karriere/pflege-jobs" />
-        <meta property="og:title" content="Pflege Jobs Frankfurt | Karriere bei AVYTA Pflegedienst" />
-        <meta property="og:description" content="Pflege Jobs Frankfurt bei AVYTA: Karriere als Pflegefachkraft, Pflegehelfer oder Haushaltshilfe." />
+        <meta property="og:title" content="Pflege Jobs Frankfurt ✅ Alle Stellen | avyta.de" />
+        <meta property="og:description" content="Pflege Jobs Frankfurt bei AVYTA ✓ Pflegefachkraft, Pflegehelfer, Haushaltshilfe ✓ Jetzt bewerben" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([

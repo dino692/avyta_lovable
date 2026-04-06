@@ -100,11 +100,11 @@ const Stellenangebote = () => {
   return (
     <>
       <Helmet>
-        <title>Stellenangebote in der Pflege Frankfurt – Willkommen im Team</title>
-        <meta name="description" content="Wir suchen Helfer mit Herz! Werden Sie Teil des familiären Avyta Pflegeteams und arbeiten Sie ambulant an verschiedenen Einsatzorten in Frankfurt." />
+        <title>Stellenangebote Pflege Frankfurt ✅ | avyta.de</title>
+        <meta name="description" content="Stellenangebote Pflege Frankfurt ✓ Pflegefachkraft, Pflegehelfer, Haushaltshilfe ✓ Übertarifliches Gehalt ✓ 30 Urlaubstage ✓ Firmenwagen ✓ Jetzt bewerben" />
         <link rel="canonical" href="https://www.avyta.de/karriere/stellenangebote-pflege-frankfurt" />
-        <meta property="og:title" content="Stellenangebote in der Pflege Frankfurt – Willkommen im Team" />
-        <meta property="og:description" content="Wir suchen Helfer mit Herz! Werden Sie Teil des familiären Avyta Pflegeteams." />
+        <meta property="og:title" content="Stellenangebote Pflege Frankfurt ✅ | avyta.de" />
+        <meta property="og:description" content="Aktuelle Stellenangebote Pflege Frankfurt ✓ Pflegefachkraft, Pflegehelfer, Haushaltshilfe ✓ Jetzt bewerben" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
