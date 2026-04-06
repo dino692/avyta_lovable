@@ -88,8 +88,8 @@ const faqs = [
   },
 ];
 
-  "description": "Als Fachbereichsleitung / Pflegeexperte Intensivpflege bei Avyta übernehmen Sie die fachliche Steuerung der außerklinischen Intensivpflege in Frankfurt. Verantwortung für beatmungspflichtige Patienten, Teamleitung und Qualitätsmanagement in der Beatmungspflege.",
-  "datePosted": "2026-03-24",
+
+
   "validThrough": "2026-12-31",
   "employmentType": ["FULL_TIME", "PART_TIME"],
   "hiringOrganization": {
