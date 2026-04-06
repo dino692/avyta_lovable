@@ -128,13 +128,13 @@ const Index = () => {
             <CertificatesSection />
           </Suspense>
           <Suspense fallback={<SectionFallback />}>
-            <FAQSection />
-          </Suspense>
-          <Suspense fallback={<SectionFallback />}>
             <NewsletterSection />
           </Suspense>
           <Suspense fallback={<SectionFallback />}>
             <ContactSection />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <FAQSection />
           </Suspense>
         </main>
         <Footer />
