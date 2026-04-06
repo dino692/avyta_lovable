@@ -47,7 +47,22 @@ const benefits = [
   { icon: Laptop, title: "Digitales Arbeiten", description: "Größtenteils papierlos" },
 ];
 
-const shareLinks = [
+const faqs = [
+  {
+    question: "Welche Aufgaben hat eine Bürokraft im Pflegedienst Frankfurt?",
+    answer: "Als Bürokraft im Pflegedienst Frankfurt übernehmen Sie die Koordination von Pflegeeinsätzen, Tourenplanung, Abrechnung von Pflegeleistungen nach SGB V und XI, Kommunikation mit Krankenkassen sowie die Personalverwaltung und Dokumentation."
+  },
+  {
+    question: "Welche Qualifikation braucht man als Verwaltungskraft im Pflegedienst?",
+    answer: "Für die Verwaltung im Pflegedienst benötigen Sie eine kaufmännische Ausbildung oder vergleichbare Qualifikation. Erfahrung im Gesundheitswesen ist von Vorteil, aber nicht zwingend. Wichtig sind Organisationstalent, MS-Office-Kenntnisse und Deutschkenntnisse auf muttersprachlichem Niveau."
+  },
+  {
+    question: "Wie viele Urlaubstage gibt es als Bürokraft bei AVYTA?",
+    answer: "Als Bürokraft bei AVYTA erhalten Sie 24 Urlaubstage jährlich, dazu kommen Firmenfitness (Wellpass), Prämien und ein moderner, ergonomischer Arbeitsplatz zentral in Frankfurt."
+  },
+];
+
+
   {
     name: "WhatsApp",
     url: `https://wa.me/?text=${encodeURIComponent(`${SHARE_TEXT} ${SHARE_URL}`)}`,
