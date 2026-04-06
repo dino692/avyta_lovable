@@ -19,31 +19,39 @@ import TrustBadges from "@/components/TrustBadges";
 
 const frankfurtFaqs = [
   {
-    question: "Welche Kompetenzen bringt der Avyta Pflegedienst in Frankfurt mit?",
-    answer: "Beim Avyta Pflegedienst in Frankfurt können wir von der Grundpflege bis zur Intensivpflege alle Stufen übernehmen und die Leistungen genau auf Ihre Bedürfnisse zuschneiden. Mit mehr als 12 Jahren Erfahrung im Bereich der Pflege können Sie uns beruhigt Ihr Vertrauen schenken."
+    question: "Welche Leistungen bietet ein Pflegedienst in Frankfurt an?",
+    answer: "Ein Pflegedienst in Frankfurt bietet Grundpflege (SGB XI), Behandlungspflege (SGB V), Intensivpflege mit Heimbeatmung, 24-Stunden-Betreuung, Verhinderungspflege, Haushaltshilfe sowie Pflegeberatung. AVYTA deckt alle diese Leistungen ab und ist zusätzlich auf Demenz- und Diabetesversorgung spezialisiert."
   },
   {
-    question: "Welche Kosten erwarten mich beim Avyta Pflegedienst in Frankfurt am Main?",
-    answer: "Die Kosten für unseren Pflegedienst richten sich nach dem individuellen Pflegebedarf und dem Pflegegrad. Wir beraten Sie gerne ausführlich zu den Kosten und möglichen Finanzierungswegen über die Pflegekasse."
+    question: "Was kostet ein ambulanter Pflegedienst in Frankfurt?",
+    answer: "Die Kosten richten sich nach dem individuellen Pflegebedarf und dem Pflegegrad. Behandlungspflege (SGB V) wird vollständig von der Krankenkasse übernommen. Grundpflege (SGB XI) wird je nach Pflegegrad bezuschusst – bei Pflegegrad 2 z. B. mit bis zu 761 € monatlich an Sachleistungen. Wir beraten Sie kostenlos zu Ihren Ansprüchen."
   },
   {
-    question: "Wie kann ein Pflegedienst in Frankfurt beantragt werden?",
-    answer: "Kontaktieren Sie uns für ein unverbindliches Erstgespräch. Wir helfen Ihnen bei allen notwendigen Anträgen und der Kommunikation mit Ihrer Pflegekasse."
+    question: "Wie beantrage ich einen Pflegegrad in Frankfurt?",
+    answer: "Den Pflegegrad beantragen Sie bei Ihrer Pflegekasse – formlos per Telefon oder Schreiben. Anschließend erfolgt eine Begutachtung durch den MD (ehemals MDK). Unser Pflegedienst in Frankfurt unterstützt Sie kostenlos bei der Antragstellung, bereitet Sie auf den Begutachtungstermin vor und hilft bei einem Widerspruch."
   },
-,
   {
-    question: "In welchen Stadtteilen ist der Pflegedienst Frankfurt tätig?",
-    answer: "Unser Pflegedienst ist in allen Frankfurter Stadtteilen tätig – von Bockenheim und Sachsenhausen über Nordend und Bornheim bis nach Höchst, Niederrad und Bad Vilbel. Mit über 12 Jahren Erfahrung in Frankfurt sind wir flächendeckend für Sie da."
+    question: "In welchen Frankfurter Stadtteilen ist der Pflegedienst tätig?",
+    answer: "Unser Pflegedienst versorgt Patienten in über 20 Frankfurter Stadtteilen – darunter Bockenheim, Sachsenhausen, Nordend, Bornheim, Westend, Ostend, Dornbusch, Eckenheim, Eschersheim, Rödelheim, Höchst, Niederrad, Griesheim und Seckbach. Zusätzlich betreuen wir Patienten in Bad Vilbel."
+  },
+  {
+    question: "Was ist der Entlastungsbetrag und wie nutze ich ihn in Frankfurt?",
+    answer: "Der Entlastungsbetrag beträgt 125 € monatlich und steht allen Pflegebedürftigen ab Pflegegrad 1 zu. Er kann für Haushaltshilfe, Betreuungsangebote oder Tages-/Nachtpflege eingesetzt werden. Nicht genutzte Beträge können bis zum 30. Juni des Folgejahres übertragen werden. Unser Pflegedienst in Frankfurt rechnet direkt mit Ihrer Pflegekasse ab."
   },
   {
     question: "Bietet der Pflegedienst Frankfurt auch Intensivpflege zu Hause an?",
-    answer: "Ja, unser Pflegedienst in Frankfurt bietet außerklinische Intensivpflege mit Heimbeatmung an. Unsere spezialisierten Pflegefachkräfte betreuen Beatmungspatienten professionell und individuell in ihrem Zuhause in Frankfurt."
+    answer: "Ja, unser Pflegedienst in Frankfurt bietet außerklinische Intensivpflege mit Heimbeatmung an. Unsere spezialisierten Pflegefachkräfte betreuen Beatmungspatienten professionell und individuell in ihrem Zuhause – rund um die Uhr."
+  },
+  {
+    question: "Wie kann ich Verhinderungspflege in Frankfurt nutzen?",
+    answer: "Verhinderungspflege steht Ihnen ab Pflegegrad 2 zu, wenn Ihre reguläre Pflegeperson verhindert ist – z. B. durch Urlaub oder Krankheit. Jährlich stehen bis zu 1.612 € zur Verfügung. Unser Pflegedienst in Frankfurt übernimmt die Vertretung und rechnet direkt mit Ihrer Kasse ab."
   },
   {
     question: "Ist der Pflegedienst Frankfurt auch am Wochenende und nachts erreichbar?",
     answer: "Ja, unser Pflegedienst in Frankfurt ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05."
   }
 ];
+
 const stadtteile = [
   { name: "Bockenheim", href: "/standorte/frankfurt/pflegedienst-bockenheim" },
   { name: "Bornheim", href: "/standorte/frankfurt/bornheim" },
@@ -80,12 +88,12 @@ const vorteile = [
   {
     icon: Shield,
     title: "Gesicherte Pflegequalität",
-    description: "Durch hochqualifizierte Mitarbeiter und einen permanenten Prozess zur Qualitätssicherung kann Ihnen unser Ambulanter Pflegedienst Frankfurt eine hohe Qualität garantieren."
+    description: "Durch hochqualifizierte Mitarbeiter und einen permanenten Prozess zur Qualitätssicherung kann Ihnen unser Pflegedienst Frankfurt eine hohe Qualität garantieren."
   },
   {
     icon: Stethoscope,
-    title: "Angebotsvielfalt für Intensivpflege",
-    description: "Nach jedem Unfall oder plötzlicher Pflegebedürftigkeit geht es um eine optimale Versorgungsqualität. Die Verfügbarkeit individueller Wohnformen für die Intensivpflege ist sehr reichhaltig."
+    title: "Intensivpflege zu Hause",
+    description: "Nach jedem Unfall oder plötzlicher Pflegebedürftigkeit geht es um eine optimale Versorgungsqualität. Wir bieten Intensivpflege mit Heimbeatmung direkt bei Ihnen zu Hause."
   },
   {
     icon: Heart,
@@ -169,10 +177,13 @@ const Frankfurt = () => {
                   <MapPin className="w-10 h-10 text-primary" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-                  AVYTA - Ihr Ambulanter Pflegedienst in Frankfurt
+                  Pflegedienst Frankfurt – Ihr ambulanter Pflegedienst seit 2013
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Falls Sie einen hochqualifizierten Pflegedienst in Frankfurt am Main und Umgebung suchen, sind Sie hier richtig! Wir von der Avyta Pflegegesellschaft mbH bieten eine ganzheitliche Betreuung für Pflegebedürftige an.
+                  AVYTA ist Ihr erfahrener <strong>Pflegedienst in Frankfurt am Main</strong> mit MDK-Bestnote 1,6 und 5.0 Google-Sternen. 
+                  Seit 2013 betreuen wir über 2.500 Patienten in mehr als 20 Stadtteilen – von der <Link to="/leistungen/grundpflege-frankfurt" className="text-primary hover:underline">Grundpflege</Link> bis 
+                  zur <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="text-primary hover:underline">Intensivpflege</Link>. 
+                  24/7 erreichbar unter <a href="tel:+496915391405" className="text-primary hover:underline font-semibold">069 153 914 05</a>.
                 </p>
                 <div className="flex justify-center">
                   <CTADropdownButton />
@@ -190,7 +201,18 @@ const Frankfurt = () => {
               <div className="max-w-4xl mx-auto">
                 <div className="prose prose-lg max-w-none text-muted-foreground">
                   <p className="mb-6">
-                    Wir sind spezialisiert darauf, auch in den schwierigsten Situationen gemeinsam mit Ihnen Lösungen zu erarbeiten. Falls Sie oder einer Ihrer Angehörigen pflegebedürftig wird, sind wir mit all unserer Erfahrung und Überzeugung voll für Sie da. Gemeinsam mit Ihnen erstellen wir einen Hilfsplan, der zu Ihren Anforderungen passt und Sie in Ihrem täglichen Leben bestmöglich unterstützt.
+                    Als <strong>ambulanter Pflegedienst in Frankfurt</strong> sind wir darauf spezialisiert, auch in den schwierigsten Situationen gemeinsam mit Ihnen Lösungen zu erarbeiten. 
+                    Falls Sie oder einer Ihrer Angehörigen pflegebedürftig wird, sind wir mit all unserer Erfahrung und Überzeugung voll für Sie da. 
+                    Gemeinsam erstellen wir einen individuellen Pflegeplan, der zu Ihren Anforderungen passt und Sie in Ihrem täglichen Leben bestmöglich unterstützt.
+                  </p>
+                  <p className="mb-6">
+                    Unser <strong>Pflegedienst Frankfurt</strong> bietet Ihnen das gesamte Spektrum ambulanter Pflege: 
+                    von der <Link to="/leistungen/grundpflege-frankfurt" className="text-primary hover:underline">Grundpflege</Link> über 
+                    die <Link to="/leistungen/behandlungspflege-frankfurt" className="text-primary hover:underline">Behandlungspflege</Link> bis 
+                    zur <Link to="/leistungen/verhinderungspflege-frankfurt" className="text-primary hover:underline">Verhinderungspflege</Link> und 
+                    der <Link to="/leistungen/haushaltshilfe-frankfurt" className="text-primary hover:underline">Haushaltshilfe</Link>. 
+                    Zusätzlich sind wir auf <Link to="/leistungen/demenz-wg-frankfurt" className="text-primary hover:underline">Demenz-Betreuung</Link> und 
+                    Diabetes-Versorgung spezialisiert.
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center my-8">
                     <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
@@ -212,28 +234,29 @@ const Frankfurt = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-3xl font-display font-bold text-foreground mb-6 text-center">
-                  Wozu brauchen Sie einen Ambulanten Pflegedienst in Frankfurt?
+                  Ambulanter Pflegedienst Frankfurt – so unterstützen wir Sie
                 </h2>
                 <div className="bg-card rounded-2xl p-8 border border-border/50 mb-8">
                   <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                    Das macht der Ambulante Pflegedienst
+                    Das leistet ein ambulanter Pflegedienst
                   </h3>
                   <p className="text-muted-foreground mb-4">
-                    Früher oder später kann es bei jeder Person passieren, dass Sie auf Pflege angewiesen ist. In Folge von Krankheiten, durch Unfälle oder altersbedingt kann der Alltag nicht mehr allein bewältigt werden.
+                    Früher oder später kann es bei jeder Person passieren, dass sie auf Pflege angewiesen ist. In Folge von Krankheiten, durch Unfälle oder altersbedingt kann der Alltag nicht mehr allein bewältigt werden.
                   </p>
                   <p className="text-muted-foreground mb-4">
-                    Sie können sich selbst um Ihre pflegebedürftigen Angehörigen kümmern oder aber diese Aufgabe delegieren. Der große Vorzug am ambulanten Pflegedienst ist, dass dieser sich um die Versorgung der Pflegebedürftigen in deren häuslichem Umfeld kümmert.
+                    Sie können sich selbst um Ihre pflegebedürftigen Angehörigen kümmern oder aber diese Aufgabe an einen professionellen Pflegedienst delegieren. Der große Vorteil am ambulanten Pflegedienst: Die Versorgung findet im häuslichen Umfeld statt.
                   </p>
                   <p className="text-muted-foreground">
-                    Somit bleiben Selbstständigkeit und die gewohnte Umgebung nach Möglichkeit beibehalten und die Lebensqualität der betroffenen Personen fällt höher aus.
+                    Somit bleiben Selbstständigkeit und die gewohnte Umgebung erhalten – die Lebensqualität der betroffenen Personen bleibt deutlich höher als bei stationärer Unterbringung.
                   </p>
                 </div>
                 <div className="bg-primary/5 rounded-2xl p-8 border border-primary/20">
                   <h3 className="text-xl font-display font-semibold text-foreground mb-4">
-                    Der Ambulante Pflegedienst Frankfurt – geeignet in vielen Fällen
+                    Pflegedienst Frankfurt – für wen ist ambulante Pflege geeignet?
                   </h3>
                   <p className="text-muted-foreground">
-                    Als Faustregel lässt sich sagen, dass der Ambulante Pflegedienst immer dann für Personen geeignet ist, wenn diese ihre alltäglichen Aufgaben nicht mehr allein bewältigen können. Dies kann nach Unfällen, im Alter sowie bei geistigen Einschränkungen der Fall sein. Sollte gleichzeitig der Wunsch nach einem Verbleib in der häuslichen Umgebung gegeben sein, ist der Ambulante Pflegedienst in Frankfurt die beste Wahl.
+                    Ein ambulanter Pflegedienst in Frankfurt ist immer dann die richtige Wahl, wenn alltägliche Aufgaben nicht mehr allein bewältigt werden können – nach Unfällen, im Alter oder bei geistigen Einschränkungen. 
+                    Gleichzeitig bleibt der Wunsch bestehen, in der vertrauten häuslichen Umgebung zu leben. Mit der <Link to="/leistungen/pflegeberatung-frankfurt" className="text-primary hover:underline">kostenlosen Pflegeberatung</Link> von AVYTA finden wir gemeinsam die passende Lösung.
                   </p>
                 </div>
               </div>
@@ -244,10 +267,10 @@ const Frankfurt = () => {
           <section className="py-20 bg-gradient-hero">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-display font-bold text-foreground mb-4 text-center">
-                Das macht AVYTA für Sie besonders vielversprechend
+                Pflegedienst Frankfurt – warum AVYTA?
               </h2>
               <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-                Es gibt viele Pflegedienste in Frankfurt am Main. Was spricht für die Avyta Pflegegesellschaft mbH?
+                Es gibt viele Pflegedienste in Frankfurt am Main. Was spricht für AVYTA? MDK-Bestnote 1,6, 5.0 Google-Sterne und über 12 Jahre Erfahrung.
               </p>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 {vorteile.map((vorteil, index) => (
@@ -273,7 +296,7 @@ const Frankfurt = () => {
           <section className="py-20">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-display font-bold text-foreground mb-12 text-center">
-                Diese Leistungen bietet Ihnen unser Ambulanter Pflegedienst Frankfurt
+                Leistungen unseres Pflegedienstes in Frankfurt
               </h2>
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {/* Grundpflege */}
@@ -281,7 +304,7 @@ const Frankfurt = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-display font-semibold text-foreground mb-4 flex items-center gap-2">
                       <Heart className="w-5 h-5 text-primary" />
-                      Grundpflege
+                      <Link to="/leistungen/grundpflege-frankfurt" className="hover:text-primary transition-colors">Grundpflege</Link>
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
                       Mit der Grundpflege sind die Maßnahmen zur Versorgung des Körpers gemeint. Auch Handlungen zur Vorsorge zählen zur Grundpflege.
@@ -302,7 +325,7 @@ const Frankfurt = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-display font-semibold text-foreground mb-4 flex items-center gap-2">
                       <Stethoscope className="w-5 h-5 text-primary" />
-                      Behandlungspflege
+                      <Link to="/leistungen/behandlungspflege-frankfurt" className="hover:text-primary transition-colors">Behandlungspflege</Link>
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
                       Unter der Behandlungspflege sind medizinische Maßnahmen zu verstehen, die vom Arzt angeordnet werden.
@@ -323,7 +346,7 @@ const Frankfurt = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-display font-semibold text-foreground mb-4 flex items-center gap-2">
                       <Shield className="w-5 h-5 text-primary" />
-                      Intensivpflege mit Heimbeatmung
+                      <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="hover:text-primary transition-colors">Intensivpflege mit Heimbeatmung</Link>
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
                       Ein weiterer großer Bestandteil der Behandlungspflege ist die Intensivpflege mit Heimbeatmung.
@@ -367,7 +390,7 @@ const Frankfurt = () => {
           <section className="py-20 bg-card/50">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center">
-                Unsere Stadtteile in Frankfurt
+                Pflegedienst Frankfurt – unsere Stadtteile
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 {stadtteile.map((stadtteil) => (
@@ -391,73 +414,36 @@ const Frankfurt = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-3xl font-display font-bold text-foreground mb-6">
-                  Sie haben noch Fragen?
+                  Pflegedienst Frankfurt – jetzt kostenlos beraten lassen
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Der Ambulante Pflegedienst in Frankfurt ist eine sehr attraktive und beliebte Lösung. Hier stehen Aktivität, Lebensqualität und Wohlfühlfaktor bei den betreuten Personen an erster Stelle. Rufen Sie uns an und vereinbaren Sie einen unverbindlichen Termin - gerne bei Ihnen zu Hause.
+                  Der ambulante Pflegedienst ist eine attraktive Lösung, bei der Aktivität, Lebensqualität und Wohlfühlfaktor an erster Stelle stehen. 
+                  Rufen Sie uns an und vereinbaren Sie einen unverbindlichen Termin – gerne bei Ihnen zu Hause.
                 </p>
                 <CTADropdownButton />
               </div>
             </div>
           </section>
 
-          {/* FAQ Section */}
+          {/* FAQ Section - rendered from array */}
           <section className="py-20">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-3xl font-display font-bold text-foreground mb-8 text-center flex items-center justify-center gap-3">
                   <HelpCircle className="w-8 h-8 text-primary" />
-                  Häufige Fragen
+                  Häufige Fragen zum Pflegedienst Frankfurt
                 </h2>
                 <Accordion type="single" collapsible className="space-y-4">
-                  <AccordionItem value="item-1" className="bg-card rounded-xl border border-border/50 px-6">
-                    <AccordionTrigger className="text-left font-display font-semibold">
-                      Welche Kompetenzen bringt der Avyta Pflegedienst in Frankfurt mit?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
-                      Beim Avyta Pflegedienst in Frankfurt können wir von der Grundpflege bis zur Intensivpflege alle Stufen übernehmen und die Leistungen genau auf Ihre Bedürfnisse zuschneiden. Mit mehr als 12 Jahren Erfahrung im Bereich der Pflege können Sie uns beruhigt Ihr Vertrauen schenken.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-2" className="bg-card rounded-xl border border-border/50 px-6">
-                    <AccordionTrigger className="text-left font-display font-semibold">
-                      Welche Kosten erwarten mich beim Avyta Pflegedienst in Frankfurt am Main?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
-                      Die Kosten für unseren Pflegedienst richten sich nach dem individuellen Pflegebedarf und dem Pflegegrad. Wir beraten Sie gerne ausführlich zu den Kosten und möglichen Finanzierungswegen über die Pflegekasse.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-3" className="bg-card rounded-xl border border-border/50 px-6">
-                    <AccordionTrigger className="text-left font-display font-semibold">
-                      Wie kann ein Pflegedienst in Frankfurt beantragt werden?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
-                      Kontaktieren Sie uns für ein unverbindliches Erstgespräch. Wir helfen Ihnen bei allen notwendigen Anträgen und der Kommunikation mit Ihrer Pflegekasse.
-                    </AccordionContent>
-                  </AccordionItem>
-                                  <AccordionItem value="item-4" className="bg-card rounded-xl border border-border/50 px-6">
-                    <AccordionTrigger className="text-left font-display font-semibold">
-                      In welchen Stadtteilen ist der Pflegedienst Frankfurt tätig?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
-                      Unser Pflegedienst ist in allen Frankfurter Stadtteilen tätig – von Bockenheim und Sachsenhausen über Nordend und Bornheim bis nach Höchst, Niederrad und Bad Vilbel. Mit über 12 Jahren Erfahrung in Frankfurt sind wir flächendeckend für Sie da.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-5" className="bg-card rounded-xl border border-border/50 px-6">
-                    <AccordionTrigger className="text-left font-display font-semibold">
-                      Bietet der Pflegedienst Frankfurt auch Intensivpflege zu Hause an?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
-                      Ja, unser Pflegedienst in Frankfurt bietet außerklinische Intensivpflege mit Heimbeatmung an. Unsere spezialisierten Pflegefachkräfte betreuen Beatmungspatienten professionell und individuell in ihrem Zuhause in Frankfurt.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-6" className="bg-card rounded-xl border border-border/50 px-6">
-                    <AccordionTrigger className="text-left font-display font-semibold">
-                      Ist der Pflegedienst Frankfurt auch am Wochenende und nachts erreichbar?
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
-                      Ja, unser Pflegedienst in Frankfurt ist an 365 Tagen im Jahr für Sie da – auch an Wochenenden und Feiertagen. Bei Notfällen erreichen Sie uns rund um die Uhr unter 069 153 914 05.
-                    </AccordionContent>
-                  </AccordionItem>
+                  {frankfurtFaqs.map((faq, index) => (
+                    <AccordionItem key={index} value={`faq-${index}`} className="bg-card rounded-xl border border-border/50 px-6">
+                      <AccordionTrigger className="text-left font-display font-semibold">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
                 </Accordion>
               </div>
             </div>
