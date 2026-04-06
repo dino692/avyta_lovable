@@ -157,9 +157,9 @@ const HowItWorksSection = () => {
                       Schritt {step.number}
                     </span>
                   </div>
-                  <h3 className="font-display font-semibold text-base md:text-lg text-foreground mb-0.5 md:mb-1">
+                  <div className="font-display font-semibold text-base md:text-lg text-foreground mb-0.5 md:mb-1" aria-hidden="true">
                     {step.title}
-                  </h3>
+                  </div>
                   <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
