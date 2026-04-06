@@ -67,7 +67,7 @@ const Ostend = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt Ostend ✓ Ambulante Pflege | avyta.de</title>
+        <title>Pflegedienst Ostend ✓ Ambulante Pflege | avyta.de</title>
         <meta name="description" content="Pflegedienst Frankfurt Ostend ✓ Professionelle ambulante Pflege ✓ Grundpflege, Behandlungspflege & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ Tel: 069 153 914 05" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/ostend" />
         <meta property="og:title" content="Pflegedienst Frankfurt Ostend ✓ Ambulante Pflege | avyta.de" />
