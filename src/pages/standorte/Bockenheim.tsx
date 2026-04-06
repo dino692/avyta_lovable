@@ -69,10 +69,10 @@ const Bockenheim = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Bockenheim - gesundheitliche Unterstützung</title>
+        <title>Pflegedienst Frankfurt Bockenheim ✓ Pflege | avyta.de</title>
         <meta name="description" content="Wenn Sie in der Region Frankfurt Bockenheim zuhause sind und Pflegeleistungen benötigen, dann sind wir zur Stelle. Mehr Informationen auf | avyta.de" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/pflegedienst-bockenheim" />
-        <meta property="og:title" content="Pflegedienst Bockenheim - gesundheitliche Unterstützung" />
+        <meta property="og:title" content="Pflegedienst Frankfurt Bockenheim ✓ Pflege | avyta.de" />
         <meta property="og:description" content="Pflegedienst in Frankfurt Bockenheim. Wir sind zur Stelle wenn Sie Pflegeleistungen benötigen." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />

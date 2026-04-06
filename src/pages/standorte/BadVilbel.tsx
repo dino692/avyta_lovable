@@ -69,10 +69,10 @@ const BadVilbel = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Bad Vilbel - der richtige Ansprechpartner</title>
+        <title>Pflegedienst Bad Vilbel ✓ Ambulante Pflege | avyta.de</title>
         <meta name="description" content="Ihr ambulanter Pflegedienst in Bad Vilbel. Wir sind täglich für Sie da und helfen Ihnen im Alltag, ohne dass Sie Ihren Wohnort verlassen müssen. | avyta.de" />
         <link rel="canonical" href="https://www.avyta.de/standorte/bad-vilbel" />
-        <meta property="og:title" content="Pflegedienst Bad Vilbel - der richtige Ansprechpartner" />
+        <meta property="og:title" content="Pflegedienst Bad Vilbel ✓ Ambulante Pflege | avyta.de" />
         <meta property="og:description" content="Ihr ambulanter Pflegedienst in Bad Vilbel. Wir sind täglich für Sie da." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />

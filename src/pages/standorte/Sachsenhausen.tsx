@@ -70,10 +70,10 @@ const Sachsenhausen = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt Sachsenhausen für Bedürftige</title>
+        <title>Pflegedienst Frankfurt Sachsenhausen ✓ | avyta.de</title>
         <meta name="description" content="Im Bezirk Frankfurt Sachsenhausen sind wir Ihr Pflegedienst des Vertrauens . Grundpflege ✓ Behandlungspflege ✓ Intensivpflege ✓ Mehr auf | avyta.de" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/pflegedienst-frankfurt-sachsenhausen" />
-        <meta property="og:title" content="Pflegedienst Frankfurt Sachsenhausen für Bedürftige" />
+        <meta property="og:title" content="Pflegedienst Frankfurt Sachsenhausen ✓ | avyta.de" />
         <meta property="og:description" content="Im Bezirk Frankfurt Sachsenhausen sind wir Ihr Pflegedienst des Vertrauens." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
