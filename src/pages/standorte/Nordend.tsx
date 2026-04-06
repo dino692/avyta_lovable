@@ -153,7 +153,7 @@ const Nordend = () => {
                 Leistungen unseres Pflegedienstes in Frankfurt Nordend
               </h2>
               <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-                Der <strong>Pflegedienst Frankfurt Nordend</strong> bietet ein umfassendes Spektrum – von der <Link to="/leistungen/grundpflege" className="text-primary hover:underline">Grundpflege</Link> über die <Link to="/leistungen/behandlungspflege" className="text-primary hover:underline">Behandlungspflege</Link> bis zur <Link to="/leistungen/intensivpflege" className="text-primary hover:underline">Intensivpflege</Link>.
+                Der <strong>Pflegedienst Frankfurt Nordend</strong> bietet ein umfassendes Spektrum – von der <Link to="/leistungen/grundpflege" className="text-primary hover:underline">Grundpflege</Link> über die <Link to="/leistungen/behandlungspflege" className="text-primary hover:underline">Behandlungspflege</Link> bis zur <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="text-primary hover:underline">Intensivpflege</Link>.
               </p>
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <Card variant="elevated">
@@ -204,7 +204,7 @@ const Nordend = () => {
                       Intensivpflege vom Pflegedienst Frankfurt Nordend
                     </h3>
                     <p className="text-muted-foreground text-sm">
-                      Unser <strong>Pflegedienst in Frankfurt Nordend</strong> bietet auch Intensivpflege mit Heimbeatmung an. Unsere examinierten Pflegefachkräfte übernehmen die Überwachung und Vitalisierung, das Legen von Blasenkathetern, endotracheales Absaugen sowie Lagerungsbehandlungen und Mobilisation. Mehr zur <Link to="/leistungen/intensivpflege" className="text-primary hover:underline">Intensivpflege in Frankfurt</Link>.
+                      Unser <strong>Pflegedienst in Frankfurt Nordend</strong> bietet auch Intensivpflege mit Heimbeatmung an. Unsere examinierten Pflegefachkräfte übernehmen die Überwachung und Vitalisierung, das Legen von Blasenkathetern, endotracheales Absaugen sowie Lagerungsbehandlungen und Mobilisation. Mehr zur <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="text-primary hover:underline">Intensivpflege in Frankfurt</Link>.
                     </p>
                   </CardContent>
                 </Card>
@@ -223,14 +223,14 @@ const Nordend = () => {
                     <Users className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-display font-semibold text-foreground mb-1">Verhinderungspflege in Frankfurt</h3>
-                      <p className="text-sm text-muted-foreground">Entlastung für pflegende Angehörige im Nordend. Mehr zur <Link to="/leistungen/verhinderungspflege" className="text-primary hover:underline">Verhinderungspflege</Link>.</p>
+                      <p className="text-sm text-muted-foreground">Entlastung für pflegende Angehörige im Nordend. Mehr zur <Link to="/leistungen/verhinderungspflege-frankfurt" className="text-primary hover:underline">Verhinderungspflege</Link>.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Heart className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-display font-semibold text-foreground mb-1">Pflegeberatung in Frankfurt Nordend</h3>
-                      <p className="text-sm text-muted-foreground">Beratung zu Pflegegraden und Ansprüchen. Mehr zur <Link to="/leistungen/pflegeberatung" className="text-primary hover:underline">Pflegeberatung</Link>.</p>
+                      <p className="text-sm text-muted-foreground">Beratung zu Pflegegraden und Ansprüchen. Mehr zur <Link to="/leistungen/pflegeberatung-frankfurt" className="text-primary hover:underline">Pflegeberatung</Link>.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -287,7 +287,7 @@ const Nordend = () => {
                       Übernimmt die Pflegekasse die Kosten für den Pflegedienst in Frankfurt Nordend?
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Ja, bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten für unseren Pflegedienst in Frankfurt Nordend. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Lesen Sie auch unseren Ratgeber zur <Link to="/blog/pflegegeld-tabelle" className="text-primary hover:underline">Pflegegeld-Tabelle</Link>.
+                      Ja, bei Vorliegen eines Pflegegrades übernimmt die Pflegekasse einen Großteil der Kosten für unseren Pflegedienst in Frankfurt Nordend. Behandlungspflege wird über ärztliche Verordnung von der Krankenkasse finanziert. Lesen Sie auch unseren Ratgeber zur <Link to="/blog/pflegegeld-tabelle-2025" className="text-primary hover:underline">Pflegegeld-Tabelle</Link>.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-3" className="bg-card rounded-xl border border-border/50 px-6">

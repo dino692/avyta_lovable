@@ -181,7 +181,7 @@ const Frankfurt = () => {
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
                   AVYTA ist Ihr erfahrener <strong>Pflegedienst in Frankfurt am Main</strong> mit MDK-Bestnote 1,6 und 5.0 Google-Sternen. 
-                  Seit 2013 betreuen wir über 2.500 Patienten in mehr als 20 Stadtteilen – von der <Link to="/leistungen/grundpflege-frankfurt" className="text-primary hover:underline">Grundpflege</Link> bis 
+                  Seit 2013 betreuen wir über 2.500 Patienten in mehr als 20 Stadtteilen – von der <Link to="/leistungen/grundpflege" className="text-primary hover:underline">Grundpflege</Link> bis 
                   zur <Link to="/leistungen/ausserklinische-intensivpflege-frankfurt-am-main" className="text-primary hover:underline">Intensivpflege</Link>. 
                   24/7 erreichbar unter <a href="tel:+496915391405" className="text-primary hover:underline font-semibold">069 153 914 05</a>.
                 </p>
@@ -207,10 +207,10 @@ const Frankfurt = () => {
                   </p>
                   <p className="mb-6">
                     Unser <strong>Pflegedienst Frankfurt</strong> bietet Ihnen das gesamte Spektrum ambulanter Pflege: 
-                    von der <Link to="/leistungen/grundpflege-frankfurt" className="text-primary hover:underline">Grundpflege</Link> über 
-                    die <Link to="/leistungen/behandlungspflege-frankfurt" className="text-primary hover:underline">Behandlungspflege</Link> bis 
+                    von der <Link to="/leistungen/grundpflege" className="text-primary hover:underline">Grundpflege</Link> über 
+                    die <Link to="/leistungen/behandlungspflege" className="text-primary hover:underline">Behandlungspflege</Link> bis 
                     zur <Link to="/leistungen/verhinderungspflege-frankfurt" className="text-primary hover:underline">Verhinderungspflege</Link> und 
-                    der <Link to="/leistungen/haushaltshilfe-frankfurt" className="text-primary hover:underline">Haushaltshilfe</Link>. 
+                    der <Link to="/leistungen/haushaltshilfe" className="text-primary hover:underline">Haushaltshilfe</Link>. 
                     Zusätzlich sind wir auf <Link to="/leistungen/demenz-wg-frankfurt" className="text-primary hover:underline">Demenz-Betreuung</Link> und 
                     Diabetes-Versorgung spezialisiert.
                   </p>
@@ -304,7 +304,7 @@ const Frankfurt = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-display font-semibold text-foreground mb-4 flex items-center gap-2">
                       <Heart className="w-5 h-5 text-primary" />
-                      <Link to="/leistungen/grundpflege-frankfurt" className="hover:text-primary transition-colors">Grundpflege</Link>
+                      <Link to="/leistungen/grundpflege" className="hover:text-primary transition-colors">Grundpflege</Link>
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
                       Mit der Grundpflege sind die Maßnahmen zur Versorgung des Körpers gemeint. Auch Handlungen zur Vorsorge zählen zur Grundpflege.
@@ -325,7 +325,7 @@ const Frankfurt = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-display font-semibold text-foreground mb-4 flex items-center gap-2">
                       <Stethoscope className="w-5 h-5 text-primary" />
-                      <Link to="/leistungen/behandlungspflege-frankfurt" className="hover:text-primary transition-colors">Behandlungspflege</Link>
+                      <Link to="/leistungen/behandlungspflege" className="hover:text-primary transition-colors">Behandlungspflege</Link>
                     </h3>
                     <p className="text-muted-foreground mb-4 text-sm">
                       Unter der Behandlungspflege sind medizinische Maßnahmen zu verstehen, die vom Arzt angeordnet werden.
