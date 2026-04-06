@@ -68,7 +68,7 @@ const Eckenheim = () => {
     <>
       <Helmet>
         <title>Pflegedienst Eckenheim ✓ Ambulante Pflege | avyta.de</title>
-        <meta name="description" content="Pflegedienst Frankfurt Eckenheim ✓ Persönliche ambulante Pflege ✓ Grundpflege, Behandlungspflege & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ Tel: 069 153 914 05" />
+        <meta name="description" content="Pflegedienst Eckenheim ✓ Persönliche ambulante Pflege ✓ Grund-, Behandlungs- & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ 069 153 914 05" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/eckenheim" />
         <meta property="og:title" content="Pflegedienst Frankfurt Eckenheim ✓ Ambulante Pflege | avyta.de" />
         <meta property="og:description" content="Pflegedienst Frankfurt Eckenheim – persönliche ambulante Pflege für Ihr Wohlbefinden. Grundpflege, Behandlungspflege & Intensivpflege." />

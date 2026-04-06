@@ -68,7 +68,7 @@ const Preungesheim = () => {
     <>
       <Helmet>
         <title>Pflegedienst Preungesheim ✓ Ambulante Pflege | avyta.de</title>
-        <meta name="description" content="Pflegedienst Frankfurt Preungesheim ✓ Liebevolle ambulante Pflege ✓ Grundpflege, Behandlungspflege & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ Tel: 069 153 914 05" />
+        <meta name="description" content="Pflegedienst Preungesheim ✓ Liebevolle ambulante Pflege ✓ Grund-, Behandlungs- & Intensivpflege ✓ 12+ Jahre Erfahrung ✓ 069 153 914 05" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/preungesheim" />
         <meta property="og:title" content="Pflegedienst Frankfurt Preungesheim ✓ Ambulante Pflege | avyta.de" />
         <meta property="og:description" content="Pflegedienst Frankfurt Preungesheim – liebevolle ambulante Pflege in Ihrem Stadtteil." />

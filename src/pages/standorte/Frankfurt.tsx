@@ -147,7 +147,7 @@ const Frankfurt = () => {
     <>
       <Helmet>
         <title>Pflegedienst Frankfurt ✅ 24/7 | MDK 1,6 | avyta.de</title>
-        <meta name="description" content="Pflegedienst Frankfurt ✓ MDK Bestnote 1,6 ✓ 5.0 Sterne Google ✓ 20+ Stadtteile ✓ Grund- & Behandlungspflege, Intensivpflege, 24h-Pflege ✓ Tel: 069 153 914 05 | avyta.de" />
+        <meta name="description" content="Pflegedienst Frankfurt ✓ MDK 1,6 ✓ 5.0 Sterne ✓ 20+ Stadtteile ✓ Grund-, Behandlungs- & Intensivpflege ✓ Tel: 069 153 914 05" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt" />
         <meta property="og:title" content="Pflegedienst Frankfurt ✅ 24/7 erreichbar | MDK Note 1,6" />
         <meta property="og:description" content="Pflegedienst Frankfurt in 20+ Stadtteilen ✓ MDK Bestnote 1,6 ✓ 5.0 Sterne Google ✓ Grund- & Behandlungspflege, Intensivpflege, 24h-Pflege" />

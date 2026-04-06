@@ -85,7 +85,7 @@ const DemenzWG = () => {
     <>
       <Helmet>
         <title>Demenz WG Frankfurt ✅ Wohngemeinschaft | avyta.de</title>
-        <meta name="description" content="Demenz WG in Frankfurt & Bad Vilbel ✓ 24/7 Betreuung ✓ Familiäre Atmosphäre ✓ Speziell geschultes Personal ✓ Kostenübernahme durch Pflegekasse. Jetzt kostenlos beraten lassen!" />
+        <meta name="description" content="Demenz WG Frankfurt & Bad Vilbel ✓ 24/7 Betreuung ✓ Familiäre Atmosphäre ✓ Geschultes Personal ✓ Kostenübernahme Pflegekasse" />
         <meta name="keywords" content="Demenz WG Frankfurt, Demenz Wohngemeinschaft Frankfurt, Demenz WG Bad Vilbel, Demenz-WG Frankfurt am Main, betreute Wohngemeinschaft Demenz, ambulant betreute Wohngruppe Demenz Frankfurt" />
         <link rel="canonical" href="https://www.avyta.de/leistungen/demenz-wg-frankfurt" />
         <meta property="og:title" content="Demenz WG Frankfurt & Bad Vilbel – Wohngemeinschaft für Demenz | AVYTA" />

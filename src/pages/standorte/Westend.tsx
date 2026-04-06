@@ -68,7 +68,7 @@ const Westend = () => {
     <>
       <Helmet>
         <title>Pflegedienst Westend ✓ Ambulante Pflege | avyta.de</title>
-        <meta name="description" content="Pflegedienst Frankfurt Westend ✓ Erstklassige ambulante Pflege ✓ Grundpflege, Behandlungspflege & Intensivpflege ✓ Diskret & professionell ✓ Tel: 069 153 914 05" />
+        <meta name="description" content="Pflegedienst Westend ✓ Erstklassige ambulante Pflege ✓ Grund-, Behandlungs- & Intensivpflege ✓ Diskret & professionell ✓ 069 153 914 05" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/westend" />
         <meta property="og:title" content="Pflegedienst Frankfurt Westend ✓ Ambulante Pflege | avyta.de" />
         <meta property="og:description" content="Pflegedienst Frankfurt Westend – erstklassige ambulante Pflege, diskret und professionell." />

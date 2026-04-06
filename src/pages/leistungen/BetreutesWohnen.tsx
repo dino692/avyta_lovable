@@ -116,7 +116,7 @@ const BetreutesWohnen = () => {
     <>
       <Helmet>
         <title>Betreutes Wohnen Frankfurt ✅ Selbstbestimmt | avyta.de</title>
-        <meta name="description" content="Betreutes Wohnen in Frankfurt & Bad Vilbel ✓ Selbstbestimmt leben mit professioneller Pflege ✓ Individuelle Betreuung ✓ Alle Pflegegrade ✓ Kostenlose Beratung ▸ Jetzt informieren!" />
+        <meta name="description" content="Betreutes Wohnen Frankfurt & Bad Vilbel ✓ Selbstbestimmt leben ✓ Individuelle Betreuung ✓ Alle Pflegegrade ✓ Jetzt kostenlos beraten lassen!" />
         <meta property="og:title" content="Betreutes Wohnen Frankfurt & Bad Vilbel ✅ AVYTA Pflegegesellschaft" />
         <meta property="og:description" content="Betreutes Wohnen in Frankfurt & Bad Vilbel. Selbstbestimmt leben mit individueller Pflege und Betreuung. Jetzt kostenlos beraten lassen!" />
         <meta property="og:type" content="website" />
