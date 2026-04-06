@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 import BackofficePopup from "@/components/BackofficePopup";
+import { generateFAQSchema } from "@/lib/faqSchema";
 
 // Lazy load below-the-fold sections
 const HowItWorksSection = lazy(() => import("@/components/HowItWorksSection"));
@@ -13,6 +14,7 @@ const LocationsSection = lazy(() => import("@/components/LocationsSection"));
 const CertificatesSection = lazy(() => import("@/components/CertificatesSection"));
 const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
 const ReviewsSection = lazy(() => import("@/components/ReviewsSection"));
+const FAQSection = lazy(() => import("@/components/FAQSection"));
 const NewsletterSection = lazy(() => import("@/components/NewsletterSection"));
 const ContactSection = lazy(() => import("@/components/ContactSection"));
 const MediaPartnersSection = lazy(() => import("@/components/MediaPartnersSection"));
@@ -89,6 +91,16 @@ const Index = () => {
             "https://www.instagram.com/avyta_pflegedienst/"
           ]
         })}</script>
+        <script type="application/ld+json">{generateFAQSchema([
+          { question: "Welche Leistungen bietet AVYTA als ambulanter Pflegedienst in Frankfurt an?", answer: "Wir bieten Grundpflege (SGB XI), Behandlungspflege (SGB V), Intensivpflege, 24-Stunden-Betreuung, Verhinderungspflege, Haushaltshilfe sowie individuelle Pflegeberatung. Unser Team ist spezialisiert auf Demenz- und Diabetesversorgung." },
+          { question: "Wie beantrage ich einen Pflegegrad und welche Unterstützung bietet AVYTA dabei?", answer: "Wir unterstützen Sie kostenlos bei der Beantragung eines Pflegegrads – von der Antragstellung über die MDK-Vorbereitung bis zum Widerspruch bei Ablehnung." },
+          { question: "Übernimmt die Krankenkasse die Kosten für den ambulanten Pflegedienst?", answer: "Behandlungspflege (SGB V) wird vollständig von der Krankenkasse übernommen. Bei Grundpflege (SGB XI) richtet sich die Kostenübernahme nach Ihrem Pflegegrad." },
+          { question: "In welchen Stadtteilen von Frankfurt ist AVYTA tätig?", answer: "Wir versorgen Patienten in ganz Frankfurt am Main und Umgebung – darunter Bockenheim, Sachsenhausen, Nordend, Bornheim, Westend, Ostend, Dornbusch, Eckenheim, Eschersheim, Rödelheim, Höchst, Niederrad, Griesheim und Bad Vilbel." },
+          { question: "Wie schnell kann die Pflege bei AVYTA beginnen?", answer: "In dringenden Fällen innerhalb von 24 Stunden. Regulär vereinbaren wir ein kostenloses Erstgespräch bei Ihnen zu Hause. Wir sind 24/7 erreichbar unter 069 153 914 05." },
+          { question: "Welche Qualifikationen hat das Pflegepersonal von AVYTA?", answer: "Unser Team besteht aus examinierten Pflegefachkräften und spezialisierten Fachkräften für Demenz- und Diabetesversorgung. Unsere MDK-Note von 1,6 bestätigt die hohe Qualität." },
+          { question: "Was ist Verhinderungspflege und wie kann ich sie nutzen?", answer: "Verhinderungspflege springt ein, wenn Ihre reguläre Pflegeperson verhindert ist. Ab Pflegegrad 2 stehen Ihnen jährlich bis zu 1.612 € zu." },
+          { question: "Bietet AVYTA auch Betreuung bei Demenzerkrankungen an?", answer: "Ja, Demenzbetreuung ist einer unserer Schwerpunkte. Wir bieten ambulante Einzelbetreuung und Plätze in unserer Demenz-WG in Frankfurt." },
+        ])}</script>
       </Helmet>
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Header />
@@ -114,6 +126,9 @@ const Index = () => {
           </Suspense>
           <Suspense fallback={<SectionFallback />}>
             <CertificatesSection />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <FAQSection />
           </Suspense>
           <Suspense fallback={<SectionFallback />}>
             <NewsletterSection />
