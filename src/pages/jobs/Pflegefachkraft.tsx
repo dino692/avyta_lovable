@@ -85,11 +85,11 @@ const Pflegefachkraft = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegefachkraft in Frankfurt – Karrierechancen bei Avyta</title>
-        <meta name="description" content="Pflegefachkraft in Frankfurt bei Avyta ✔ 30 Tage Urlaub & Rentenversicherung ✔ Toyota Aygo zur privaten Nutzung ✔ Angenehmes Arbeitsumfeld" />
+        <title>Pflegefachkraft Frankfurt ✅ Job | avyta.de</title>
+        <meta name="description" content="Pflegefachkraft Frankfurt gesucht ✓ Übertarifliches Gehalt ✓ 30 Urlaubstage ✓ Firmenwagen ✓ Wellpass ✓ Jetzt als examinierte Pflegekraft bewerben | avyta.de" />
         <link rel="canonical" href="https://www.avyta.de/karriere/pflegefachkraft-frankfurt" />
-        <meta property="og:title" content="Pflegefachkraft in Frankfurt – Karrierechancen bei Avyta" />
-        <meta property="og:description" content="Pflegefachkraft in Frankfurt bei Avyta ✔ 30 Tage Urlaub ✔ Firmenwagen" />
+        <meta property="og:title" content="Pflegefachkraft Frankfurt ✅ Job | avyta.de" />
+        <meta property="og:description" content="Pflegefachkraft Frankfurt gesucht ✓ Übertarifliches Gehalt ✓ 30 Urlaubstage ✓ Firmenwagen ✓ Jetzt bewerben" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([

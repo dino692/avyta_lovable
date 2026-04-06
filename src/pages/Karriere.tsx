@@ -69,11 +69,11 @@ const Karriere = () => {
   return (
     <>
       <Helmet>
-        <title>Karriere - Anforderungen und Tätigkeitsfelder bei uns</title>
-        <meta name="description" content="Sie möchten Teil eines tollen Teams werden. ✅ Bei uns herrscht ein angenehmes Betriebsklima mit flachen Hierarchien. Ihren Job entdecken auf | avyta.de" />
+        <title>Karriere im Pflegedienst Frankfurt ✅ | avyta.de</title>
+        <meta name="description" content="Karriere bei AVYTA Frankfurt ✓ Pflegefachkraft, Pflegehelfer, Haushaltshilfe ✓ Übertarifliches Gehalt ✓ 30 Urlaubstage ✓ Firmenwagen ✓ Jetzt bewerben" />
         <meta name="keywords" content="Pflege Jobs Frankfurt, Pflegefachkraft Frankfurt, Pflegehelfer Frankfurt, Stellenangebote Pflege Frankfurt" />
-        <meta property="og:title" content="Karriere - Anforderungen und Tätigkeitsfelder bei uns" />
-        <meta property="og:description" content="Sie möchten Teil eines tollen Teams werden. Bei uns herrscht ein angenehmes Betriebsklima mit flachen Hierarchien." />
+        <meta property="og:title" content="Karriere im Pflegedienst Frankfurt ✅ | avyta.de" />
+        <meta property="og:description" content="Karriere bei AVYTA Frankfurt ✓ Pflegefachkraft, Pflegehelfer, Haushaltshilfe ✓ Übertarifliches Gehalt ✓ Jetzt bewerben" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <link rel="canonical" href="https://www.avyta.de/karriere" />

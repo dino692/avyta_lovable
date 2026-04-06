@@ -110,11 +110,11 @@ const Pflegehelfer = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegehelfer in Frankfurt gesucht für unser Team von Avyta</title>
-        <meta name="description" content="Ihr Job als ambulanter Pflegehelfer in Frankfurt – sicher, herzlich und vielfältig. Unterstützen Sie unser freundliches Team in Frankfurt und Umgebung." />
+        <title>Pflegehelfer Frankfurt ✅ Job | avyta.de</title>
+        <meta name="description" content="Pflegehelfer/in in Frankfurt gesucht ✓ Übertarifliches Gehalt ✓ 30 Urlaubstage ✓ Firmenwagen ✓ Wellpass ✓ Jetzt als Pflegehelfer bewerben | avyta.de" />
         <link rel="canonical" href="https://www.avyta.de/karriere/pflegehelfer-frankfurt" />
-        <meta property="og:title" content="Pflegehelfer in Frankfurt gesucht für unser Team von Avyta" />
-        <meta property="og:description" content="Ihr Job als ambulanter Pflegehelfer in Frankfurt – sicher, herzlich und vielfältig." />
+        <meta property="og:title" content="Pflegehelfer Frankfurt ✅ Job | avyta.de" />
+        <meta property="og:description" content="Pflegehelfer/in in Frankfurt gesucht ✓ Übertarifliches Gehalt ✓ 30 Urlaubstage ✓ Firmenwagen ✓ Jetzt bewerben" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
