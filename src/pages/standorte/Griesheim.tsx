@@ -70,10 +70,10 @@ const Griesheim = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Griesheim - flexibel und individuell</title>
+        <title>Pflegedienst Frankfurt Griesheim ✓ Pflege | avyta.de</title>
         <meta name="description" content="In Frankfurts Stadtteil Griesheim sind wir für Sie unterwegs. Als ambulanter Pflegedienst können wir Sie in Ihrem täglichen Leben unterstützen. | avyta.de" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/griesheim" />
-        <meta property="og:title" content="Pflegedienst Griesheim - flexibel und individuell" />
+        <meta property="og:title" content="Pflegedienst Frankfurt Griesheim ✓ Pflege | avyta.de" />
         <meta property="og:description" content="In Frankfurts Stadtteil Griesheim sind wir für Sie unterwegs." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />

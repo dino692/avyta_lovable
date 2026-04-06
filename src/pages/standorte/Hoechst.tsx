@@ -70,10 +70,10 @@ const Hoechst = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst Frankfurt Höchst - langjährige Erfahrung</title>
+        <title>Pflegedienst Frankfurt Höchst ✓ Pflege | avyta.de</title>
         <meta name="description" content="Alle Pflegebedürftigen rund um Frankfurt Höchst sind bei uns in guten Händen. Tägliche Versorgung möglich ✓ Rund um die Uhr erreichbar ✓ | avyta.de" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/hoechst" />
-        <meta property="og:title" content="Pflegedienst Frankfurt Höchst - langjährige Erfahrung" />
+        <meta property="og:title" content="Pflegedienst Frankfurt Höchst ✓ Pflege | avyta.de" />
         <meta property="og:description" content="Alle Pflegebedürftigen rund um Frankfurt Höchst sind bei uns in guten Händen." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />

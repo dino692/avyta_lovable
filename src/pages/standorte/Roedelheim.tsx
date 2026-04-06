@@ -57,7 +57,7 @@ const Roedelheim = () => {
   return (
     <>
       <Helmet>
-        <title>Pflegedienst in Rödelheim für die häusliche Pflege</title>
+        <title>Pflegedienst Frankfurt Rödelheim ✓ Pflege | avyta.de</title>
         <meta name="description" content="Pflegedienst Rödelheim ✓ Würdevolles Leben zu Hause ✓ Grundpflege bis Intensivpflege ✓ Jetzt kostenlos beraten lassen!" />
         <link rel="canonical" href="https://www.avyta.de/standorte/frankfurt/pflegedienst-roedelheim" />
         <script type="application/ld+json">{generateBreadcrumbSchema([
@@ -65,7 +65,7 @@ const Roedelheim = () => {
           { name: "Standorte", url: "https://www.avyta.de/standorte/frankfurt" },
           { name: "Rödelheim", url: "https://www.avyta.de/standorte/frankfurt/pflegedienst-roedelheim" },
         ])}</script>
-        <meta property="og:title" content="Pflegedienst in Rödelheim für die häusliche Pflege" />
+        <meta property="og:title" content="Pflegedienst Frankfurt Rödelheim ✓ Pflege | avyta.de" />
         <meta property="og:description" content="Der Avyta Pflegedienst in Rödelheim ermöglicht ein würdevolles Leben in jeder Lebenslage." />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/avyta-logo.png" />
