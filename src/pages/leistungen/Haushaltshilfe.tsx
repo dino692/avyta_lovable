@@ -191,7 +191,132 @@ const Haushaltshilfe = () => {
             </div>
           </section>
 
-          {/* FAQ */}
+          {/* Für wen geeignet */}
+          <section className="py-12 md:py-24 bg-secondary/30">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6 text-center">
+                  Für wen ist unsere Haushaltshilfe geeignet?
+                </h2>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-8 text-center max-w-2xl mx-auto">
+                  Unsere Haushaltshilfe richtet sich an alle Menschen in Frankfurt, die Unterstützung im Alltag benötigen – unabhängig von Alter oder Pflegegrad.
+                </p>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                  <Card variant="elevated">
+                    <CardContent className="p-4 md:p-6 text-center">
+                      <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Users className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="font-display font-semibold text-foreground mb-2 text-sm md:text-base">Senioren</h3>
+                      <p className="text-xs md:text-sm text-muted-foreground">Ältere Menschen, die selbstständig wohnen möchten, aber Hilfe im Haushalt benötigen.</p>
+                    </CardContent>
+                  </Card>
+                  <Card variant="elevated">
+                    <CardContent className="p-4 md:p-6 text-center">
+                      <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Heart className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="font-display font-semibold text-foreground mb-2 text-sm md:text-base">Pflegende Angehörige</h3>
+                      <p className="text-xs md:text-sm text-muted-foreground">Entlastung für Familienmitglieder, die sich um einen pflegebedürftigen Angehörigen kümmern.</p>
+                    </CardContent>
+                  </Card>
+                  <Card variant="elevated">
+                    <CardContent className="p-4 md:p-6 text-center">
+                      <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <ShieldCheck className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="font-display font-semibold text-foreground mb-2 text-sm md:text-base">Nach Operationen</h3>
+                      <p className="text-xs md:text-sm text-muted-foreground">Menschen nach Krankenhausaufenthalten oder Operationen, die vorübergehend Unterstützung brauchen.</p>
+                    </CardContent>
+                  </Card>
+                  <Card variant="elevated">
+                    <CardContent className="p-4 md:p-6 text-center">
+                      <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Clock className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="font-display font-semibold text-foreground mb-2 text-sm md:text-base">Chronisch Erkrankte</h3>
+                      <p className="text-xs md:text-sm text-muted-foreground">Personen mit chronischen Erkrankungen, die regelmäßige Unterstützung im Alltag benötigen.</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Ablauf */}
+          <section className="py-12 md:py-24">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6 text-center">
+                  So läuft die Haushaltshilfe bei AVYTA ab
+                </h2>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-8 text-center max-w-2xl mx-auto">
+                  Von der ersten Kontaktaufnahme bis zum regelmäßigen Einsatz – wir machen es Ihnen so einfach wie möglich.
+                </p>
+                <div className="grid md:grid-cols-4 gap-6">
+                  {[
+                    { step: "1", title: "Erstgespräch", desc: "Kostenlose und unverbindliche Beratung zu Ihrem individuellen Bedarf – telefonisch oder bei Ihnen zu Hause." },
+                    { step: "2", title: "Bedarfsermittlung", desc: "Gemeinsam legen wir fest, welche Aufgaben übernommen werden und wie oft die Haushaltshilfe kommen soll." },
+                    { step: "3", title: "Kostenklärung", desc: "Wir prüfen Ihre Ansprüche bei der Pflegekasse und klären die Finanzierung – z. B. über den Entlastungsbetrag." },
+                    { step: "4", title: "Start der Hilfe", desc: "Innerhalb weniger Tage beginnt Ihre persönliche Haushaltshilfe mit den vereinbarten Leistungen." },
+                  ].map((item) => (
+                    <div key={item.step} className="text-center">
+                      <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
+                        {item.step}
+                      </div>
+                      <h3 className="font-display font-semibold text-foreground mb-2 text-sm md:text-base">{item.title}</h3>
+                      <p className="text-xs md:text-sm text-muted-foreground">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Vorteile AVYTA */}
+          <section className="py-12 md:py-24 bg-gradient-hero">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 md:mb-6 text-center">
+                  Warum AVYTA als Haushaltshilfe in Frankfurt?
+                </h2>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-8 text-center max-w-2xl mx-auto">
+                  Seit über 12 Jahren vertrauen uns Familien in Frankfurt und Umgebung. Unsere Haushaltshilfe ist mehr als nur Putzen – wir schaffen Lebensqualität und ermöglichen ein selbstbestimmtes Leben zu Hause.
+                </p>
+                <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
+                  <div className="flex items-start gap-3 p-4 bg-background/80 rounded-xl">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-display font-semibold text-foreground text-sm md:text-base mb-1">Feste Ansprechpartner</h3>
+                      <p className="text-xs md:text-sm text-muted-foreground">Sie haben immer dieselbe Haushaltshilfe – für Vertrauen und Kontinuität in Ihrem Alltag.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 bg-background/80 rounded-xl">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-display font-semibold text-foreground text-sm md:text-base mb-1">Geschultes Personal</h3>
+                      <p className="text-xs md:text-sm text-muted-foreground">Unsere Mitarbeiter sind erfahren, zuverlässig und speziell für die Arbeit mit pflegebedürftigen Menschen geschult.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 bg-background/80 rounded-xl">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-display font-semibold text-foreground text-sm md:text-base mb-1">Alles aus einer Hand</h3>
+                      <p className="text-xs md:text-sm text-muted-foreground">Haushaltshilfe, Grundpflege, Behandlungspflege und mehr – bei AVYTA erhalten Sie alle Leistungen von einem Anbieter.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 bg-background/80 rounded-xl">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-display font-semibold text-foreground text-sm md:text-base mb-1">Kostenlose Beratung</h3>
+                      <p className="text-xs md:text-sm text-muted-foreground">Wir beraten Sie umfassend zu Finanzierungsmöglichkeiten und helfen bei der Antragstellung bei der Pflegekasse.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section className="py-12 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
