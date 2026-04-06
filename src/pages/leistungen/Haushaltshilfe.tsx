@@ -50,6 +50,14 @@ const faqs = [
     question: "Wie kann ich eine Haushaltshilfe in Frankfurt beauftragen?",
     answer: "Rufen Sie uns einfach unter 069 153 914 05 an oder nutzen Sie unser Kontaktformular. In einem kostenlosen Erstgespräch besprechen wir Ihren Bedarf und erstellen ein individuelles Angebot. Die Haushaltshilfe kann oft innerhalb weniger Tage bei Ihnen starten."
   },
+  {
+    question: "Übernimmt die Pflegekasse die Kosten für eine Haushaltshilfe?",
+    answer: "Ja, bei einem anerkannten Pflegegrad können die Kosten für eine Haushaltshilfe über verschiedene Leistungen der Pflegekasse finanziert werden. Dazu zählen der Entlastungsbetrag (131 €/Monat ab Pflegegrad 1), Pflegesachleistungen (ab Pflegegrad 2) oder die Verhinderungspflege. Auch eine Kombinationsleistung ist möglich. Wir beraten Sie kostenlos zu den besten Finanzierungsmöglichkeiten."
+  },
+  {
+    question: "Was ist der Unterschied zwischen Haushaltshilfe und Grundpflege?",
+    answer: "Die Haushaltshilfe umfasst hauswirtschaftliche Tätigkeiten wie Putzen, Kochen, Einkaufen und Wäschepflege. Die Grundpflege hingegen bezieht sich auf die körperbezogene Pflege wie Körperhygiene, An- und Auskleiden, Ernährung und Mobilität. Bei AVYTA bieten wir beides aus einer Hand an und erstellen einen individuellen Plan, der alle Ihre Bedürfnisse abdeckt."
+  },
 ];
 
 const Haushaltshilfe = () => {
