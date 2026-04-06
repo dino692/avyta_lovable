@@ -88,10 +88,6 @@ const faqs = [
   },
 ];
 
-const jobPostingSchema = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "JobPosting",
-  "title": "Fachbereichsleitung Intensivpflege / Pflegeexperte (m/w/d) Frankfurt",
   "description": "Als Fachbereichsleitung / Pflegeexperte Intensivpflege bei Avyta übernehmen Sie die fachliche Steuerung der außerklinischen Intensivpflege in Frankfurt. Verantwortung für beatmungspflichtige Patienten, Teamleitung und Qualitätsmanagement in der Beatmungspflege.",
   "datePosted": "2026-03-24",
   "validThrough": "2026-12-31",
