@@ -30,7 +30,7 @@ const Index = () => {
     <>
       <BackofficePopup />
       <Helmet>
-        <title>Ambulanter Pflegedienst ✅ MDK 1,6 | 5.0 ★ | avyta.de.</title>
+        <title>Ambulanter Pflegedienst ✅ MDK 1,6 | 5.0 ★ | avyta.de</title>
         <meta
           name="description"
           content="AVYTA – Ihr ambulanter Pflegedienst ✓ MDK 1,6 ✓ 5.0 Sterne (36 Bewertungen) ✓ 2.500+ bereits betreute Patienten ✓ 24/7 erreichbar ✓ Jetzt kostenlos beraten!"
@@ -152,6 +152,13 @@ const Index = () => {
             },
           ])}
         </script>
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PJP56QM');</script>
+<!-- End Google Tag Manager -->
       </Helmet>
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Header />
