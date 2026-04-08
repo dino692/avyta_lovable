@@ -30,77 +30,128 @@ const Index = () => {
     <>
       <BackofficePopup />
       <Helmet>
-        <title>Ambulanter Pflegedienst ✅ MDK 1,6 | 5.0 ★ | avyta.de</title>
-        <meta name="description" content="AVYTA – Ihr ambulanter Pflegedienst ✓ MDK 1,6 ✓ 5.0 Sterne (36 Bewertungen) ✓ 2.500+ bereits betreute Patienten ✓ 24/7 erreichbar ✓ Jetzt kostenlos beraten!" />
-        <meta name="keywords" content="Pflegedienst Frankfurt, Ambulanter Pflegedienst Frankfurt, Pflegedienst Frankfurt am Main, Grundpflege, Behandlungspflege, Intensivpflege, 24 Stunden Pflege, Pflegeberatung Frankfurt" />
+        <title>Ambulanter Pflegedienst ✅ MDK 1,6 | 5.0 ★ | avyta.de.</title>
+        <meta
+          name="description"
+          content="AVYTA – Ihr ambulanter Pflegedienst ✓ MDK 1,6 ✓ 5.0 Sterne (36 Bewertungen) ✓ 2.500+ bereits betreute Patienten ✓ 24/7 erreichbar ✓ Jetzt kostenlos beraten!"
+        />
+        <meta
+          name="keywords"
+          content="Pflegedienst Frankfurt, Ambulanter Pflegedienst Frankfurt, Pflegedienst Frankfurt am Main, Grundpflege, Behandlungspflege, Intensivpflege, 24 Stunden Pflege, Pflegeberatung Frankfurt"
+        />
         <meta property="og:title" content="AVYTA Pflegedienst Frankfurt ✅ MDK Note 1,6 | 5.0 ★ Google" />
-        <meta property="og:description" content="Ambulanter Pflegedienst Frankfurt ✓ MDK Bestnote 1,6 ✓ 5.0 Sterne (36 Bewertungen) ✓ 2500+ bereits betreute Patienten ✓ 24/7 erreichbar ✓ Seit 2013 in Frankfurt" />
+        <meta
+          property="og:description"
+          content="Ambulanter Pflegedienst Frankfurt ✓ MDK Bestnote 1,6 ✓ 5.0 Sterne (36 Bewertungen) ✓ 2500+ bereits betreute Patienten ✓ 24/7 erreichbar ✓ Seit 2013 in Frankfurt"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
         <link rel="canonical" href="https://www.avyta.de/" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "@id": "https://www.avyta.de",
-          "name": "AVYTA Pflegegesellschaft mbH",
-          "image": "https://www.avyta.de/images/avyta-logo.png",
-          "url": "https://www.avyta.de",
-          "telephone": "+496915391405",
-          "email": "info@avyta.de",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Allerheiligentor 2-4",
-            "addressLocality": "Frankfurt am Main",
-            "postalCode": "60311",
-            "addressCountry": "DE"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 50.1109,
-            "longitude": 8.6821
-          },
-          "openingHoursSpecification": [
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "@id": "https://www.avyta.de",
+            name: "AVYTA Pflegegesellschaft mbH",
+            image: "https://www.avyta.de/images/avyta-logo.png",
+            url: "https://www.avyta.de",
+            telephone: "+496915391405",
+            email: "info@avyta.de",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Allerheiligentor 2-4",
+              addressLocality: "Frankfurt am Main",
+              postalCode: "60311",
+              addressCountry: "DE",
+            },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: 50.1109,
+              longitude: 8.6821,
+            },
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                opens: "08:00",
+                closes: "12:00",
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                opens: "00:00",
+                closes: "23:59",
+                description: "Pflegedienst 24/7 erreichbar",
+              },
+            ],
+            areaServed: [
+              { "@type": "City", name: "Frankfurt am Main" },
+              { "@type": "City", name: "Bad Vilbel" },
+            ],
+            serviceType: [
+              "Grundpflege",
+              "Behandlungspflege",
+              "Intensivpflege",
+              "24-Stunden-Pflege",
+              "Verhinderungspflege",
+              "Haushaltshilfe",
+              "Pflegeberatung",
+            ],
+            numberOfEmployees: { "@type": "QuantitativeValue", minValue: 20 },
+            priceRange: "€€",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              reviewCount: "50",
+              bestRating: "5",
+            },
+            sameAs: ["https://www.instagram.com/avyta_pflegedienst/"],
+          })}
+        </script>
+        <script type="application/ld+json">
+          {generateFAQSchema([
             {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-              "opens": "08:00",
-              "closes": "12:00"
+              question: "Welche Leistungen bietet ein ambulanter Pflegedienst an?",
+              answer:
+                "Ein ambulanter Pflegedienst bietet Grundpflege (SGB XI), Behandlungspflege (SGB V), Intensivpflege, 24-Stunden-Betreuung, Verhinderungspflege, Haushaltshilfe sowie individuelle Pflegeberatung.",
             },
             {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-              "opens": "00:00",
-              "closes": "23:59",
-              "description": "Pflegedienst 24/7 erreichbar"
-            }
-          ],
-          "areaServed": [
-            {"@type": "City", "name": "Frankfurt am Main"},
-            {"@type": "City", "name": "Bad Vilbel"}
-          ],
-          "serviceType": ["Grundpflege","Behandlungspflege","Intensivpflege","24-Stunden-Pflege","Verhinderungspflege","Haushaltshilfe","Pflegeberatung"],
-          "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 20},
-          "priceRange": "€€",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "50",
-            "bestRating": "5"
-          },
-          "sameAs": [
-            "https://www.instagram.com/avyta_pflegedienst/"
-          ]
-        })}</script>
-        <script type="application/ld+json">{generateFAQSchema([
-          { question: "Welche Leistungen bietet ein ambulanter Pflegedienst an?", answer: "Ein ambulanter Pflegedienst bietet Grundpflege (SGB XI), Behandlungspflege (SGB V), Intensivpflege, 24-Stunden-Betreuung, Verhinderungspflege, Haushaltshilfe sowie individuelle Pflegeberatung." },
-          { question: "Wie beantrage ich einen Pflegegrad?", answer: "Den Pflegegrad beantragen Sie bei Ihrer Pflegekasse. Anschließend erfolgt eine Begutachtung durch den MDK. Ein guter Pflegedienst unterstützt Sie bei der Antragstellung und MDK-Vorbereitung." },
-          { question: "Übernimmt die Krankenkasse die Kosten für ambulante Pflege?", answer: "Behandlungspflege (SGB V) wird vollständig von der Krankenkasse übernommen. Bei Grundpflege (SGB XI) richtet sich die Kostenübernahme nach Ihrem Pflegegrad." },
-          { question: "Was ist der Unterschied zwischen Grundpflege und Behandlungspflege?", answer: "Grundpflege umfasst alltägliche Hilfen wie Körperpflege und Ernährung (SGB XI). Behandlungspflege beinhaltet medizinische Maßnahmen wie Wundversorgung und Injektionen (SGB V)." },
-          { question: "Was ist Verhinderungspflege und wer hat Anspruch darauf?", answer: "Verhinderungspflege springt ein, wenn die reguläre Pflegeperson verhindert ist. Ab Pflegegrad 2 stehen jährlich bis zu 1.612 € zu." },
-          { question: "Wie schnell kann ein ambulanter Pflegedienst starten?", answer: "In dringenden Fällen oft innerhalb von 24 Stunden. Üblicherweise wird zunächst ein kostenloses Erstgespräch geführt, um den individuellen Pflegebedarf zu ermitteln." },
-          { question: "Was ist der Entlastungsbetrag und wie kann ich ihn nutzen?", answer: "Der Entlastungsbetrag beträgt 125 € monatlich ab Pflegegrad 1 für Haushaltshilfe, Betreuung oder Tages-/Nachtpflege. Nicht genutzte Beträge können übertragen werden." },
-          { question: "Welche Qualifikationen sollte das Personal eines ambulanten Pflegedienstes haben?", answer: "Examinierte Pflegefachkräfte, Pflegehelfer und spezialisiertes Fachpersonal mit regelmäßigen Fortbildungen. Eine gute MDK-Bewertung ist ein Qualitätsindikator." },
-        ])}</script>
+              question: "Wie beantrage ich einen Pflegegrad?",
+              answer:
+                "Den Pflegegrad beantragen Sie bei Ihrer Pflegekasse. Anschließend erfolgt eine Begutachtung durch den MDK. Ein guter Pflegedienst unterstützt Sie bei der Antragstellung und MDK-Vorbereitung.",
+            },
+            {
+              question: "Übernimmt die Krankenkasse die Kosten für ambulante Pflege?",
+              answer:
+                "Behandlungspflege (SGB V) wird vollständig von der Krankenkasse übernommen. Bei Grundpflege (SGB XI) richtet sich die Kostenübernahme nach Ihrem Pflegegrad.",
+            },
+            {
+              question: "Was ist der Unterschied zwischen Grundpflege und Behandlungspflege?",
+              answer:
+                "Grundpflege umfasst alltägliche Hilfen wie Körperpflege und Ernährung (SGB XI). Behandlungspflege beinhaltet medizinische Maßnahmen wie Wundversorgung und Injektionen (SGB V).",
+            },
+            {
+              question: "Was ist Verhinderungspflege und wer hat Anspruch darauf?",
+              answer:
+                "Verhinderungspflege springt ein, wenn die reguläre Pflegeperson verhindert ist. Ab Pflegegrad 2 stehen jährlich bis zu 1.612 € zu.",
+            },
+            {
+              question: "Wie schnell kann ein ambulanter Pflegedienst starten?",
+              answer:
+                "In dringenden Fällen oft innerhalb von 24 Stunden. Üblicherweise wird zunächst ein kostenloses Erstgespräch geführt, um den individuellen Pflegebedarf zu ermitteln.",
+            },
+            {
+              question: "Was ist der Entlastungsbetrag und wie kann ich ihn nutzen?",
+              answer:
+                "Der Entlastungsbetrag beträgt 125 € monatlich ab Pflegegrad 1 für Haushaltshilfe, Betreuung oder Tages-/Nachtpflege. Nicht genutzte Beträge können übertragen werden.",
+            },
+            {
+              question: "Welche Qualifikationen sollte das Personal eines ambulanten Pflegedienstes haben?",
+              answer:
+                "Examinierte Pflegefachkräfte, Pflegehelfer und spezialisiertes Fachpersonal mit regelmäßigen Fortbildungen. Eine gute MDK-Bewertung ist ein Qualitätsindikator.",
+            },
+          ])}
+        </script>
       </Helmet>
       <div className="min-h-screen bg-background overflow-x-hidden">
         <Header />
