@@ -519,17 +519,10 @@ const Header = () => {
           isMenuOpen ? 'translate-y-0' : '-translate-y-4'
         }`}>
           <nav className="flex flex-col gap-1 p-5 pb-32">
-            {/* Quick Links Section */}
-            <div className="mb-4">
-              <div className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-3 px-2">
-                Navigation
-              </div>
-              
               <Link
                 to="/"
-                className="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300"
+                className="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300 mb-1"
                 onClick={() => setIsMenuOpen(false)}
-                style={{ animationDelay: '50ms' }}
               >
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Home className="w-5 h-5 text-primary" />
@@ -539,16 +532,14 @@ const Header = () => {
               
               <Link
                 to="/ueber-uns"
-                className="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300"
+                className="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 transition-all duration-300 mb-1"
                 onClick={() => setIsMenuOpen(false)}
-                style={{ animationDelay: '100ms' }}
               >
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-5 h-5 text-primary" />
                 </div>
                 <span className="font-medium text-foreground group-hover:text-primary transition-colors">Team</span>
               </Link>
-            </div>
 
             {/* Mobile Leistungen */}
             <div className="mb-1">
