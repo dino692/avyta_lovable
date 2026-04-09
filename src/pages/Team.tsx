@@ -76,9 +76,9 @@ const teamMembers = [
   {
     name: "Dino Lalic",
     role: "Prokurist",
-    subtitle: "Finanzen & Marketing",
+    subtitle: "Finanzen, Marketing, Digitalisierung, Innovation & Strategie",
     image: prokuristImage,
-    description: "Verantwortet die Finanzen und das Marketing von AVYTA.",
+    description: "Verantwortet Finanzen, Marketing, Digitalisierung, Innovation und Strategie bei AVYTA.",
     icon: Sparkles,
   },
   {
