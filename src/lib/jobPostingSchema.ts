@@ -6,6 +6,7 @@ interface JobPostingSchemaOptions {
   canonicalUrl: string;
   qualifications?: string[];
   responsibilities?: string[];
+  jobBenefits?: string;
 }
 
 export const generateJobPostingSchema = (options: JobPostingSchemaOptions): string => {
@@ -47,7 +48,7 @@ export const generateJobPostingSchema = (options: JobPostingSchemaOptions): stri
         "unitText": "MONTH"
       }
     },
-    "jobBenefits": "Firmenwagen zur Privatnutzung, 30 Urlaubstage, Firmenfitness (Wellpass), betriebliche Altersvorsorge, Prämien, Unterkunft bei Bedarf",
+    "jobBenefits": options.jobBenefits || "Firmenwagen zur Privatnutzung, 30 Urlaubstage, Firmenfitness (Wellpass), betriebliche Altersvorsorge, Prämien, Unterkunft bei Bedarf",
     "industry": "Gesundheitswesen / Ambulante Pflege",
     ...(options.qualifications && {
       "qualifications": options.qualifications.join("; ")
