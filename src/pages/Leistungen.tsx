@@ -311,7 +311,7 @@ const Leistungen = () => {
             </div>
 
             {/* Services Cards - Compact like Blog Categories */}
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12 md:mb-16">
+            <div className="flex md:flex-wrap md:justify-center gap-3 md:gap-4 mb-12 md:mb-16 overflow-x-auto pb-2 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide snap-x snap-mandatory">
               {services.map((service, index) => {
                 const Icon = service.icon;
                 const isSelected = selectedService.id === service.id;
