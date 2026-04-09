@@ -120,6 +120,7 @@ const Backoffice = () => {
           datePosted: "2025-01-01",
           employmentType: "FULL_TIME",
           canonicalUrl: "https://www.avyta.de/karriere/backoffice-frankfurt",
+          jobBenefits: "24 Urlaubstage, Firmenfitness (Wellpass), betriebliche Altersvorsorge, Prämien, ergonomischer Arbeitsplatz",
         })}</script>
       </Helmet>
 
