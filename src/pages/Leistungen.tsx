@@ -322,7 +322,7 @@ const Leistungen = () => {
                     onClick={() => setSelectedService(service)}
                     onMouseEnter={() => setHoveredCard(service.id)}
                     onMouseLeave={() => setHoveredCard(null)}
-                    className={`group relative transition-all duration-300 ${
+                    className={`group relative flex-shrink-0 snap-start transition-all duration-300 ${
                       isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                     }`}
                     style={{ transitionDelay: `${index * 50}ms` }}
