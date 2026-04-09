@@ -100,11 +100,11 @@ const Backoffice = () => {
     <>
       <Helmet>
         <title>Bürokraft Pflegedienst Frankfurt ✅ Job | avyta.de</title>
-        <meta name="description" content="Bürokraft Pflegedienst Frankfurt ✓ Verwaltung & Abrechnung SGB V/XI ✓ 30 Urlaubstage ✓ Familiäres Team ✓ Jetzt bewerben!" />
+        <meta name="description" <meta name="description" content="Bürokraft Pflegedienst Frankfurt ✓ Verwaltung & Abrechnung SGB V/XI ✓ 24 Urlaubstage ✓ Familiäres Team ✓ Jetzt bewerben!" /> />
         <meta name="keywords" content="Bürokraft Pflegedienst Frankfurt, Verwaltung Pflegedienst Frankfurt, Kauffrau Gesundheitswesen Frankfurt, Bürofachkraft Pflegedienst, Sachbearbeitung Pflege Frankfurt, Backoffice Pflege Frankfurt, Pflegeabrechnung Job Frankfurt" />
         <link rel="canonical" href="https://www.avyta.de/karriere/backoffice-frankfurt" />
         <meta property="og:title" content="Bürokraft Pflegedienst Frankfurt ✅ Verwaltung & Sachbearbeitung | avyta.de" />
-        <meta property="og:description" content="Bürokraft im Pflegedienst Frankfurt gesucht ✓ Verwaltung, Abrechnung, Tourenplanung ✓ 30 Urlaubstage ✓ Jetzt bewerben!" />
+        <meta property="og:description" content="Bürokraft im Pflegedienst Frankfurt gesucht ✓ Verwaltung, Abrechnung, Tourenplanung <meta property="og:description" content="Bürokraft im Pflegedienst Frankfurt gesucht ✓ Verwaltung, Abrechnung, Tourenplanung ✓ 24 Urlaubstage ✓ Jetzt bewerben!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.avyta.de/karriere/backoffice-frankfurt" />
         <meta property="og:image" content="https://www.avyta.de/images/og-image.jpg" />
