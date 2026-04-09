@@ -218,7 +218,7 @@ const Leistungen = () => {
     <>
       <Helmet>
         <title>Unsere Leistungen | Ambulante Pflege Frankfurt | AVYTA</title>
-        <meta name="description" content="Professionelle Pflegeleistungen in Frankfurt: Grundpflege, Behandlungspflege, Intensivpflege, 24-Stunden-Pflege, Verhinderungspflege, Haushaltshilfe und Pflegeberatung. Jetzt beraten lassen!" />
+        <meta name="description" content="Ambulante Pflege Frankfurt ✓ Grundpflege, Behandlungspflege, Intensivpflege, 24h-Pflege, Verhinderungspflege & Beratung. Jetzt informieren!" />
         <meta name="keywords" content="Ambulante Pflege Leistungen Frankfurt, Grundpflege, Behandlungspflege, Intensivpflege, 24 Stunden Pflege, Pflegeberatung" />
         <meta property="og:title" content="Unsere Leistungen | AVYTA Ambulanter Pflegedienst" />
         <meta property="og:description" content="Von der Grundpflege bis zur spezialisierten Intensivpflege – alle Leistungen aus einer Hand." />
