@@ -14,7 +14,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
-import TrustBadges from "@/components/TrustBadges";
 
 const dornbuschFaqs = [
   {
@@ -110,8 +109,6 @@ const Dornbusch = () => {
             </div>
           </section>
 
-          {/* Trust Badges */}
-          <TrustBadges />
 
           {/* Intro Section */}
           <section className="py-16">

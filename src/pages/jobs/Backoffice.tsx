@@ -11,7 +11,6 @@ import { useState } from "react";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
-import TrustBadges from "@/components/TrustBadges";
 
 const SHARE_URL = "https://www.avyta.de/karriere/backoffice-frankfurt";
 const SHARE_TEXT = "AVYTA Pflegedienst sucht Verstärkung im Backoffice! Verwaltungskraft (m/w/d) gesucht – Jetzt bewerben:";
@@ -188,8 +187,6 @@ const Backoffice = () => {
           </div>
         </section>
 
-          {/* Trust Badges */}
-          <TrustBadges />
 
         {/* Aufgaben */}
         <section className="py-12 md:py-20">

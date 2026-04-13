@@ -16,7 +16,6 @@ import {
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import { generateServiceSchema } from "@/lib/serviceSchema";
-import TrustBadges from "@/components/TrustBadges";
 
 const leistungen = [
   "Lagerungsbehandlung",
@@ -104,8 +103,6 @@ const Intensivpflege = () => {
             </div>
           </section>
 
-          {/* Trust Badges */}
-          <TrustBadges />
 
           {/* Intro Content */}
           <section className="py-12 md:py-24">
