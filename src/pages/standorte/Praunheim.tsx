@@ -14,7 +14,6 @@ import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import { generateServiceSchema } from "@/lib/serviceSchema";
-import TrustBadges from "@/components/TrustBadges";
 
 const praunheimFaqs = [
   {
@@ -123,8 +122,6 @@ const Praunheim = () => {
             </div>
           </section>
 
-          {/* Trust Badges */}
-          <TrustBadges />
 
           {/* Intro Section */}
           <section className="py-16">

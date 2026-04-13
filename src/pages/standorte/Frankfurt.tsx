@@ -15,7 +15,6 @@ import {
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import { generateServiceSchema } from "@/lib/serviceSchema";
-import TrustBadges from "@/components/TrustBadges";
 
 const frankfurtFaqs = [
   {
@@ -192,8 +191,6 @@ const Frankfurt = () => {
             </div>
           </section>
 
-          {/* Trust Badges */}
-          <TrustBadges />
 
           {/* Intro Section */}
           <section className="py-16 bg-card/50">

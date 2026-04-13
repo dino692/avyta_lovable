@@ -16,7 +16,6 @@ import {
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import { generateServiceSchema } from "@/lib/serviceSchema";
-import TrustBadges from "@/components/TrustBadges";
 
 const alltagshilfe = [
   "Hilfe beim Ausfüllen von Anträgen",
@@ -132,8 +131,6 @@ const VierundzwanzigStunden = () => {
             </div>
           </section>
 
-          {/* Trust Badges */}
-          <TrustBadges />
 
           {/* Intro Content */}
           <section className="py-12 md:py-24">

@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import { generateFAQSchema } from "@/lib/faqSchema";
-import TrustBadges from "@/components/TrustBadges";
 
 const roedelheimFaqs = [
   {
@@ -100,8 +99,6 @@ const Roedelheim = () => {
             </div>
           </section>
 
-          {/* Trust Badges */}
-          <TrustBadges />
 
           {/* Intro Section */}
           <section className="py-16">
