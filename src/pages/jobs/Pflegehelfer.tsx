@@ -104,6 +104,7 @@ const faqs = [
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const Pflegehelfer = () => {
   return (
@@ -158,6 +159,8 @@ const Pflegehelfer = () => {
           </div>
         </section>
 
+          {/* Trust Badges */}
+          <TrustBadges />
 
         {/* Content */}
         <section className="py-16">

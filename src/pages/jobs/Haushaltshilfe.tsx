@@ -16,6 +16,7 @@ import {
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const aufgaben = [
   "Unterstützung bei der Reinigung und Ordnung des Haushalts",
@@ -124,6 +125,8 @@ const HaushaltshilfeJob = () => {
           </div>
         </section>
 
+          {/* Trust Badges */}
+          <TrustBadges />
 
         {/* Content */}
         <section className="py-16">

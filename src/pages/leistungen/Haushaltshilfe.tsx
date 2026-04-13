@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Utensils, Users, Clock, ShieldCheck, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import CTADropdownButton from "@/components/CTADropdownButton";
+import TrustBadges from "@/components/TrustBadges";
 import {
   Accordion,
   AccordionContent,
@@ -107,6 +108,8 @@ const Haushaltshilfe = () => {
             </div>
           </section>
 
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Content */}
           <section className="py-12 md:py-24">

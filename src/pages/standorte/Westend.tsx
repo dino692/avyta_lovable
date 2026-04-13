@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import TrustBadges from "@/components/TrustBadges";
 
 const westendFaqs = [
   {
@@ -108,6 +109,8 @@ const Westend = () => {
             </div>
           </section>
 
+          {/* Trust Badges */}
+          <TrustBadges />
 
           <section className="py-16">
             <div className="container mx-auto px-4">

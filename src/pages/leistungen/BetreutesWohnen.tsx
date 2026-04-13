@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/accordion";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const vorteile = [
   {
@@ -173,6 +174,8 @@ const BetreutesWohnen = () => {
           </div>
         </section>
 
+        {/* Trust Badges */}
+        <TrustBadges />
 
         {/* Was ist Betreutes Wohnen */}
         <section className="py-16 md:py-24 bg-background">

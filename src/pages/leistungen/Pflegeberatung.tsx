@@ -16,6 +16,7 @@ import {
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import { generateServiceSchema } from "@/lib/serviceSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const faqs = [
   {
@@ -92,6 +93,8 @@ const Pflegeberatung = () => {
             </div>
           </section>
 
+          {/* Trust Badges */}
+          <TrustBadges />
 
           {/* Von Fall zu Fall */}
           <section className="py-12 md:py-24 bg-secondary/30">

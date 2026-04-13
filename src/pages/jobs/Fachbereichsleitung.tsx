@@ -15,6 +15,7 @@ import {
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const aufgaben = [
   "Fachliche Leitung und Steuerung der außerklinischen Intensivpflege im ambulanten Pflegedienst Frankfurt",
@@ -146,6 +147,8 @@ const Fachbereichsleitung = () => {
           </div>
         </section>
 
+          {/* Trust Badges */}
+          <TrustBadges />
 
         {/* Content */}
         <section className="py-16">

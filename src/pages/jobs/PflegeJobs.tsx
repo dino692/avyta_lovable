@@ -16,6 +16,7 @@ import {
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
 import { generateFAQSchema } from "@/lib/faqSchema";
 import { generateJobPostingSchema } from "@/lib/jobPostingSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const stellenangebote = [
   { title: "Pflegefachkraft in Frankfurt", href: "/karriere/pflegefachkraft-frankfurt", icon: Sparkles },
@@ -148,6 +149,8 @@ const PflegeJobs = () => {
           </div>
         </section>
 
+          {/* Trust Badges */}
+          <TrustBadges />
 
         {/* Content */}
         <section className="py-16">

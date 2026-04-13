@@ -6,6 +6,7 @@ import NewsletterSection from "@/components/NewsletterSection";
 import { ArrowLeft, Calendar, Clock, User, Euro, Calculator, CheckCircle, ArrowRight } from "lucide-react";
 import CTADropdownButton from "@/components/CTADropdownButton";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbSchema";
+import TrustBadges from "@/components/TrustBadges";
 
 const KombinationsleistungPflege = () => {
   return (
